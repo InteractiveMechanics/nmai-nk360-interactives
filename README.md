@@ -1,11 +1,8 @@
 # NMAI NK360 Interactives
 
 ### TODO
-* Add in details on project structure.
 * Set up a distribution process for production
-* Set up a system for data files for interactives that have multiple versions
-* Set up a system for theme switching between modules for interactives that have multiple versions
-
+* Configure dev/dist process for multiple versions and themes
 
 ### Getting started
 * Clone the repository
@@ -13,7 +10,13 @@
 
 
 ### Project structure
-Coming soon!
+Each project folder (see 5-news-article-creator for a sample) should follow the same structure:
+- css: automatically built by grunt
+- data: contains json data files
+- js: contains js files
+- sass: contains sass files
+- shared: symlink to shared directory
+- test: contains qUnit tests
 
 ##### Shared assets
 In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files.
