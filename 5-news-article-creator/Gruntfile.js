@@ -3,16 +3,27 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('../package.json'),
         
+        sass: {
+            dev: {
+                files: [{
+                    expand: true,
+                    cwd: 'sass',
+                    src: ['*.scss'],
+                    dest: '../css',
+                    ext: '.css'
+                }]
+            }
+        },
         watch: {
             css: {
                 files: ['**/*.scss'], 
-                tasks: ['sass'] 
+                tasks: ['sass:dev']
             }
 		},
         connect: {
             dev: {
                 options: {
-                    port: 8000,
+                    port: 4000,
                     debug: true,
                     open: true,
                     base: ['../shared', '.']
