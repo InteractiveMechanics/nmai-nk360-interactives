@@ -8,6 +8,9 @@
 * Clone the repository
 * Run `npm install` in the project directory
 
+##### Working with this repo
+There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `Shared` directory where possible to save time.
+
 
 ### Project structure
 Each project folder (see 5-news-article-creator for a sample) should follow the same structure:
