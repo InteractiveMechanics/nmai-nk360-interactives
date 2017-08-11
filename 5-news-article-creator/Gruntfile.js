@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: ['**/*.scss'], 
+                files: ['../**/*.scss'],
                 tasks: ['sass:dev']
             }
 		},
@@ -26,7 +26,23 @@ module.exports = function(grunt) {
                     port: 4000,
                     debug: true,
                     open: true,
-                    base: ['../shared', '.']
+                    base: ['shared', '.']
+                }
+            }
+        },
+        jshint: {
+            options: {
+                reporter: require('jshint-stylish')
+            },
+            build: ['js/**/*.js']
+        },
+        uglify: {
+            options: {
+                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+            },
+            build: {
+                files: {
+                    'js/magic.min.js': 'src/js/magic.js'
                 }
             }
         }
@@ -35,10 +51,13 @@ module.exports = function(grunt) {
     grunt.loadTasks('../node_modules/grunt-contrib-sass/tasks');
     grunt.loadTasks('../node_modules/grunt-contrib-watch/tasks');
     grunt.loadTasks('../node_modules/grunt-contrib-connect/tasks');
-    // grunt.loadTasks('../node_modules/grunt-contrib-qunit/tasks');
-    // grunt.loadTasks('../node_modules/grunt-contrib-concat/tasks');
-    // grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
+
+    grunt.loadTasks('../node_modules/grunt-contrib-jshint/tasks');
+
+    //grunt.loadTasks('../node_modules/grunt-contrib-clean/tasks');
+    //grunt.loadTasks('../node_modules/grunt-contrib-qunit/tasks');
+    //grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
     grunt.registerTask('dev', ['connect', 'watch']);
-    // grunt.registerTask('dist', ['sass', 'qunit', 'concat', 'uglify']);
+    //grunt.registerTask('dist', ['sass', 'uglify']);
 };

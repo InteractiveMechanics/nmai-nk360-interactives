@@ -1,0 +1,14 @@
+/**
+ * This file loads all Sass files to be compiled by Grunt.
+ * Include each file for this specific instance.
+*/
+
+@import '../shared/sass/base/variables';
+@import '../shared/sass/base/helpers';
+@import '../shared/sass/base/typography';
+@import '../shared/sass/base/mixins';
+
+@import '../shared/sass/components/layout';
+@import '../shared/sass/components/header';
+@import '../shared/sass/components/footer';
+@import '../shared/sass/components/instructions';

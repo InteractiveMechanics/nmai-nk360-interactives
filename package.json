@@ -5,11 +5,15 @@
   "devDependencies": {
     "sass": "latest",
     "grunt": "latest",
+    "jshint-stylish": "latest",
     "grunt-contrib-sass": "latest",
-    "grunt-contrib-concat": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-clean": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-qunit": "latest",
     "grunt-contrib-connect": "latest",
-    "grunt-contrib-uglify": "latest"
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-jshint": "latest"
   }
 }

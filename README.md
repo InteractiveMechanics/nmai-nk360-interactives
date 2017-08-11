@@ -7,14 +7,19 @@
 * Set up a system for theme switching between modules for interactives that have multiple versions
 
 
+### Getting started
+* Clone the repository
+* Run `npm install` in the project directory
+
+
 ### Project structure
 Coming soon!
 
 ##### Shared assets
-In the root project directory is a shared folder containing assets we can use for multiple interactives. This may include Sass files, images/assets, written content, or JavaScript files.
+In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files.
 
 ##### Grunt
-Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. During development, you can use the former majority of the time and navigate to your project's root.
+Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
 
 ##### Commenting
 As you go, be sure to comment your code to make sure it's clear. Write a short description of all functions (even if they seem obvious) and define each Sass file at the top of the file with a short description of what you might find in that folder. Use the following comment format where possible (include a short description of the function/file, and where appropriate, define the arguments and returned values):

@@ -1,3 +1,10 @@
-
+/**
+ * This file loads all Sass files to be compiled by Grunt.
+ * Include each file for this specific instance.
+*/
+footer {
+  height: 50px;
+  background: black;
+  background: rgba(0, 0, 0, 0.8); }
 
 /*# sourceMappingURL=main.css.map */
