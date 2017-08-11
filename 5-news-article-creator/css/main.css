@@ -2,9 +2,25 @@
  * This file loads all Sass files to be compiled by Grunt.
  * Include each file for this specific instance.
 */
+html,
+body {
+  background: #231f20;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
 footer {
-  height: 50px;
+  color: white;
+  height: 40px;
   background: black;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 0.7rem;
+  padding: 11px; }
+  footer.transparent {
+    background: transparent; }
+  footer ul li a {
+    color: white; }
+    footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+      color: white; }
 
 /*# sourceMappingURL=main.css.map */
