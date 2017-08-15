@@ -1,6 +1,9 @@
 # NMAI NK360 Interactives
 
 ### TODO
+* Add Slick for swiping slideshows
+* Add lightGallery for image lightboxes
+* Pull in shared tooltips and audio pronunciations
 * Set up a distribution process for production
 * Configure dev/dist process for multiple versions and themes
 
