@@ -50,3 +50,12 @@ We'll be setting up unit tests using [QUnit](http://qunitjs.com/) to confirm fun
 
 ##### Setting up tests
 In each interactive's project folder, there is a `test` directory. For each function/method, there should be a test HTML file that runs through each aspect of that function to ensure that any data or DOM manipulation still runs successfully. As you build project features, be sure to write your tests as you go.
+
+### Deployment
+We will use Grunt to generate the deployment/installation versions of the interactives. Each interactive will have a specific deploy script (coming soon) that will package that interactive up with its appropriate assets and data—relevant for the interactives that are built to be used as templates.
+
+##### What to send to NMAI for final delivery
+- Raw code based (repository)
+- Deployment versions of all interactives (12x)
+- Instructions for installation
+- Administrative or other documentation
