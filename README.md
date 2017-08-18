@@ -63,6 +63,14 @@ We're using Google Analytics for this project for analytics tracking. We'll use 
 ##### Common tracking functions
 There is a shared function file that can be used to call a simple `sendAnalyticsEvent` function and `sendAnalyticsTiming` function. See this file for detailed use.
 
+##### What do I track?
+We'll create specific events for most interactives, but track events for the following situations as a default:
+- When the screen changes
+- When users start or stop something
+- When users make an important action
+
+Track timing functions once when necessary. This could be for seeing how long a user spends on a specific section that isn't automagically tracked by the page.
+
 
 ### Unit testing
 We'll be setting up unit tests using [QUnit](http://qunitjs.com/) to confirm functionality continues to work as the interactives are built and changes are made. For an introduction to unit testing, please read QUnit's [Intro to Unit Testing](http://qunitjs.com/intro/) and the QUnit [Cookbook](http://qunitjs.com/cookbook/).
