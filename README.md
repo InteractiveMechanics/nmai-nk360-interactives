@@ -1,19 +1,29 @@
 # NMAI NK360 Interactives
 
 ### TODO
-* Add in details on project structure.
+* Add Slick for swiping slideshows
+* Add lightGallery for image lightboxes
+* Add WYSIWYG editor for News Article Creator
+* Pull in shared tooltips and audio pronunciations
 * Set up a distribution process for production
-* Set up a system for data files for interactives that have multiple versions
-* Set up a system for theme switching between modules for interactives that have multiple versions
-
+* Configure dev/dist process for multiple versions and themes
 
 ### Getting started
 * Clone the repository
 * Run `npm install` in the project directory
 
+##### Working with this repo
+There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `Shared` directory where possible to save time.
+
 
 ### Project structure
-Coming soon!
+Each project folder (see 5-news-article-creator for a sample) should follow the same structure:
+- css: automatically built by grunt
+- data: contains json data files
+- js: contains js files
+- sass: contains sass files
+- shared: symlink to shared directory
+- test: contains qUnit tests
 
 ##### Shared assets
 In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files.
@@ -40,3 +50,12 @@ We'll be setting up unit tests using [QUnit](http://qunitjs.com/) to confirm fun
 
 ##### Setting up tests
 In each interactive's project folder, there is a `test` directory. For each function/method, there should be a test HTML file that runs through each aspect of that function to ensure that any data or DOM manipulation still runs successfully. As you build project features, be sure to write your tests as you go.
+
+### Deployment
+We will use Grunt to generate the deployment/installation versions of the interactives. Each interactive will have a specific deploy script (coming soon) that will package that interactive up with its appropriate assets and data—relevant for the interactives that are built to be used as templates.
+
+##### What to send to NMAI for final delivery
+- Raw code based (repository)
+- Deployment versions of all interactives (12x)
+- Instructions for installation
+- Administrative or other documentation
