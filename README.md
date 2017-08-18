@@ -45,6 +45,25 @@ As you go, be sure to comment your code to make sure it's clear. Write a short d
 This project will be delivered to the web development team at NMAI for integration, so refactor often to clean out code cruft and improve code. Add comments in, clean up file structure. There should be no JavaScript or CSS in HTML files!
 
 
+### Google Analytics
+We're using Google Analytics for this project for analytics tracking. We'll use our local GA account for development for easier testing. Here is the tracking code:
+
+```
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28789452-3', 'auto');
+  ga('send', 'pageview');
+</script>
+```
+
+##### Common tracking functions
+There is a shared function file that can be used to call a simple `sendAnalyticsEvent` function and `sendAnalyticsTiming` function. See this file for detailed use.
+
+
 ### Unit testing
 We'll be setting up unit tests using [QUnit](http://qunitjs.com/) to confirm functionality continues to work as the interactives are built and changes are made. For an introduction to unit testing, please read QUnit's [Intro to Unit Testing](http://qunitjs.com/intro/) and the QUnit [Cookbook](http://qunitjs.com/cookbook/).
 

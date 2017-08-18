@@ -1,0 +1,204 @@
+/* Muscogee CSS
+ * --------------------------------------- */
+
+.module-menu-wrapper .abs {position:absolute;}
+.module-menu-wrapper .abs a {color:#FFF}
+.module-menu-wrapper .abs a:hover {color:#CF3}
+
+.module-menu-wrapper a.sidenav:link {color:rgba(255,255,255,0.5)}
+.module-menu-wrapper a.sidenav:hover {color:#FFF}
+.module-menu-wrapper a.sidenav:visited {color:rgba(255,255,255,0.5)}
+.module-menu-wrapper a.sidenav:active {color:#E60000}
+
+.module-menu-wrapper .dark a.sidenav:link {color:rgba(33,33,33,0.5)}
+.module-menu-wrapper .dark a.sidenav:hover {color:#FFF}
+.module-menu-wrapper .dark a.sidenav:visited {color:rgba(33,33,33,0.5)}
+.module-menu-wrapper .dark a.sidenav:active {color:#E60000}
+
+.module-menu-wrapper .left .sidenav {margin-left:10px}
+.module-menu-wrapper .right .sidenav {margin-right:3px }
+
+.module-menu-wrapper .top {top:0}
+.module-menu-wrapper .left {left:0}
+.module-menu-wrapper .right {right:0}
+.module-menu-wrapper .middle {top:45%}
+.module-menu-wrapper .bottom {bottom:0}
+.module-menu-wrapper .full-width {width:100%}
+.module-menu-wrapper .hidden {display:none}
+
+.module-menu-wrapper .loading {background:#333;color:#999}
+.module-menu-wrapper .text-center {text-align:center}
+
+.module-menu-wrapper .module-menu {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size:100%;
+	margin:10px 0 0 0;
+	padding-right:10px
+}
+/*11/12/16 this fix the display on removal stories */
+.module-menu-wrapper .module-menu svg {
+	height: auto;
+	width: auto;
+}
+
+.module-menu-wrapper .nk360-back-arrow {display:inline-block;background:rgba(0,0,0,0.75);padding:11px 7px 10px 30px}
+.module-menu-wrapper .nk360-back-arrow svg {position:relative;right:5px;top:1px;-webkit-transition:all .5s ease;transition:all .5s ease;}
+.module-menu-wrapper .nk360-back-arrow svg.rotated {
+	-webkit-transform:rotate(180deg) !important;
+	-ms-transform:rotate(180deg);transform:rotate(180deg) !important;
+}
+.module-menu-wrapper .nk360-logo {display:inline-block;position:relative;top:8px;left:8px}
+#showLeft {position:relative;z-index:1;}
+
+
+.module-menu-wrapper .next-chap {right:10px;display:none}
+.module-menu-wrapper .next-chap .linkage {padding:10px 12px 10px 20px}
+.module-menu-wrapper .next-chap a.linkage:link {border:#FFF solid 1px;color:#FFF}
+.module-menu-wrapper .next-chap a.linkage:hover {background:rgba(33,33,33,0.5);border:#afdefa solid 1px!important;color:#afdefa!important}
+.module-menu-wrapper .next-chap a.linkage:visited {border:#FFF solid 1px;color:#FFF}
+.module-menu-wrapper .next-chap a.linkage:active {border:#FFF solid 1px;color:#FFF}
+
+.module-menu-wrapper .scroll-hint {bottom:50px;text-align:center;}
+.module-menu-wrapper .scroll-hint h5 {color:#666666;font-size:11px;font-weight:normal;margin:0 0 0 3px}
+.module-menu-wrapper .scroll-hint-icons {}
+.module-menu-wrapper .st0{fill:#666666}
+.module-menu-wrapper .st1{fill:#666666}
+.module-menu-wrapper .st2{fill:none;stroke:#666666;stroke-width:1.5}
+.module-menu-wrapper .st3{fill:#FFFFFF;}
+
+
+/* Sliding Menu  */
+
+/* General styles for all menus */
+.module-menu-wrapper .cbp-spmenu {
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+}
+
+
+
+.module-menu-wrapper .cbp-spmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+	padding:0 20px;
+	margin: 0;
+	font-weight: 300;
+	background: rgba(0,0,0,0.3);
+}
+
+.module-menu-wrapper .cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+
+.module-menu-wrapper .cbp-spmenu a:hover {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+.module-menu-wrapper .cbp-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+.module-menu-wrapper .cbp-spmenu a.current {
+	background: #333;
+	color: #FFF;
+}
+/* Orientation-dependent styles for the content of the menu */
+
+.module-menu-wrapper .cbp-spmenu-vertical {
+	width: 240px;
+	height:auto;
+	top: 0;
+}
+
+.module-menu-wrapper .cbp-spmenu-vertical a {
+	border-bottom: 1px solid #000;
+	padding: 1em;
+}
+
+
+/* Vertical menu that slides from the right */
+
+.module-menu-wrapper .cbp-spmenu-right {
+	right: -240px;
+}
+
+.module-menu-wrapper .cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+.module-menu-wrapper .cbp-spmenu-left {
+	left: -240px;
+	padding-top:100px;
+}
+
+.module-menu-wrapper .cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.module-menu-wrapper .menu-items {
+top:10px;
+background:#000;
+background:rgba(0,0,0,0.9);
+width: 180px;
+padding:4.5em 1em 1em;
+	}
+
+.module-menu-wrapper .color-logo {display:none}
+.module-menu-wrapper .menu-items a {margin:0;padding:1.2em 0em 1.2em 1em;
+font-size: 10pt;
+	font-weight: 300;
+	border-bottom:#999 solid 1px;
+	}
+.module-menu-wrapper .menu-items a:last-child {border:none}
+.module-menu-wrapper .menu-items a svg, 
+.module-menu-wrapper .menu-items a div {display:inline-block;
+	vertical-align:middle;
+
+}
+.module-menu-wrapper .menu-items a svg {margin-right:10px} 
+.module-menu-wrapper .menu-items a div {margin:0;padding:0}
+
+.module-menu-wrapper .cbp-spmenu.menu-items a:hover {background:none;color:#afdefa; }
+.module-menu-wrapper .cbp-spmenu a:hover svg .st3 {fill:#afdefa}
+
+/* Transitions */
+
+.module-menu-wrapper .cbp-spmenu,
+.module-menu-wrapper .cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/*1/26/17 fix display in IE11*/
+.module-menu-wrapper .nk360-back-arrow svg {
+	width: 23px !important;
+	height: 41px !important;
+}
+.menu-items a svg {
+	width: 28px !important;
+	height: 26px !important;  		
+}
+
+/*fix side effects brought by bootstrap*/
+.module-menu-wrapper img {
+	vertical-align: initial;
+}
+
+.module-menu-wrapper a {
+	line-height: initial;
+}
+
+.module-menu-wrapper * {
+	display: initial;
+	-webkit-box-sizing: content-box;
+  box-sizing: content-box;	
+}
+
