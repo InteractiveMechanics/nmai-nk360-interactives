@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     /**
      * Sends a Google Analytics custom event

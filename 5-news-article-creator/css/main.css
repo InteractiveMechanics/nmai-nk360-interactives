@@ -23,4 +23,24 @@ footer {
     footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
       color: white; }
 
+[data-toggle="tooltip"] {
+  border-bottom: 1px dotted #231f20;
+  transition: all 0.5s; }
+  [data-toggle="tooltip"]:hover, [data-toggle="tooltip"]:focus, [data-toggle="tooltip"]:active {
+    border-bottom: 1px dotted #f1f2f2; }
+  [data-toggle="tooltip"].invert {
+    border-bottom: 1px dotted white; }
+    [data-toggle="tooltip"].invert:hover, [data-toggle="tooltip"].invert:focus, [data-toggle="tooltip"].invert:active {
+      border-bottom: 1px dotted #939598; }
+
+[data-pronounce] {
+  background-color: #f1f2f2;
+  transition: all 0.5s; }
+  [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
+    background-color: #939598; }
+  [data-pronounce].invert {
+    background-color: #231f20; }
+    [data-pronounce].invert:hover, [data-pronounce].invert:focus, [data-pronounce].invert:active {
+      background-color: #939598; }
+
 /*# sourceMappingURL=main.css.map */

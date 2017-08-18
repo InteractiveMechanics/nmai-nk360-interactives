@@ -28,6 +28,9 @@ Each project folder (see 5-news-article-creator for a sample) should follow the 
 ##### Shared assets
 In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files.
 
+###### Audio Pronunciation
+Apply a `data-pronounce` on any tag with the path to the audio clip, and it'll automagically make add the event listener and styling. For example: `<span data-pronounce="./path/to/audio-file.mp3">my text<span>`.
+
 ##### Grunt
 Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
 
