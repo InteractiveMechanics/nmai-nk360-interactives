@@ -5,6 +5,7 @@
 * ~~Add lightGallery for image lightboxes~~
 * ~~Add WYSIWYG editor for News Article Creator~~
 * ~~Pull in shared tooltips and audio pronunciations~~
+* ~~Document all the third-party libraries being used~~
 * Set up a distribution process for production
 * Configure dev/dist process for multiple versions and themes
 
@@ -28,6 +29,17 @@ Each project folder (see 5-news-article-creator for a sample) should follow the 
 ##### Shared assets
 In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files. Check the `shared/code` directory for all shared code with sample markup.
 
+##### Third-party libraries
+We're using a number of outside libraries for different features, including:
+- [Bootstrap](https://v4-alpha.getbootstrap.com) - for standard Bootstrap modules, includes Tether
+- [jQuery](http://jquery.com/) - for, you know, jQuery things
+- [jQuery UI](https://jqueryui.com/) - for draggable, droppable, etc.
+- [jsPDF](https://parall.ax/products/jspdf) - for generate PDFs on the client side
+- [jsRender](http://www.jsviews.com/#jsrender) - for templating
+- [lightGallery](http://sachinchoolur.github.io/lightGallery/) - for lightbox modals
+- [Quill](https://quilljs.com) - for client-side WYSIWYG editor
+- [qUnit](https://qunitjs.com) - for JavaScript unit testing
+- [Slick](http://kenwheeler.github.io/slick/) - for responsive slideshows
 
 ##### Grunt
 Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
