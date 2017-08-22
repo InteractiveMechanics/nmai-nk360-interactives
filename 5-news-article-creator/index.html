@@ -30,6 +30,8 @@
       ga('send', 'pageview');
     </script>
 
+
+    <!-- Common interactive elements -->
     <div class="module-menu-wrapper">
 	    <div class="abs top left module-menu">
     		<div id="showLeft">	
@@ -68,9 +70,15 @@
     		</nav>
     	</div>
     </div>
-
+    <div class="activity-menu-wrapper">
+        <div class="abs top right">
+            <a class="icon icon-home" title="Back to Home Screen"></a>
+            <a class="icon icon-print" title="Print this Activity"></a>
+            <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+        </div>
+    </div>
     <footer class="fixed-bottom d-flex justify-content-between transparent">
-        <img alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external">Terms of Use</a></li>
@@ -78,6 +86,32 @@
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
+    <div id="instructions" class="fade show">
+        <div class="container instructions-container">
+            <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
+            <h1>News Article Creator Instructions</h1>
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <img src="" alt="" title="" />
+                    <h2>Instruction title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="col">
+                    <img src="" alt="" title="" />
+                    <h2>Instruction title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <!-- Main interactive-specific content -->
+    <main></main>
+
+
     
     <!-- Include jquery, jquery ui, touchpunch -->
     <script src="./shared/js/jquery/jquery-3.2.1.min.js"></script>
@@ -97,9 +131,12 @@
 
     <!-- Include shared code -->
     <script src="./shared/code/analytics.js"></script>
-    <script src="./shared/code/audio.js"></script>
-    <script src="./shared/code/tooltips.js"></script>
+    <script src="./shared/code/audio/audio.js"></script>
+    <script src="./shared/code/tooltips/tooltips.js"></script>
+    <script src="./shared/code/instructions/instructions.js"></script>
+    <script src="./shared/code/lightbox/lightbox.js"></script>
     <script src="./shared/code/upperleftmenu/menu.js"></script>
+
 
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>

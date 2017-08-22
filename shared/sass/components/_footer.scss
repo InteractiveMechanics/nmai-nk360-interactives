@@ -1,6 +1,6 @@
 footer {
     color: white;
-    height: 40px;
+    height: 44px;
     background: black;
     background: rgba(0,0,0,0.8);
     font-size: 0.7rem;
@@ -10,8 +10,24 @@ footer {
         background: transparent;
     }
 
+    img {
+        height: 34px;
+        position: relative;
+        top: -8px;
+
+        @media screen and ($screen-xs) {
+            display: none;
+        }
+    }
+
     ul {
         li {
+            &:not(:last-child):after {
+                content: '|';
+                margin: 0 0 0 10px;
+                opacity: 0.5;
+            }
+
             a {
                 color: white;
 

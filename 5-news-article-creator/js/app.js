@@ -9,6 +9,7 @@ $(function(){
         data = response;
 
         Init.init();
+        Instructions.init();
 
     }, 'json');
 });

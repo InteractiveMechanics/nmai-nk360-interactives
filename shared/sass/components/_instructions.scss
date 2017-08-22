@@ -1,0 +1,20 @@
+#instructions {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: white;
+    z-index: 100;
+
+    .instructions-container {
+        z-index: 101;
+        position: relative;
+        text-align: center;
+        padding: 100px 20px;
+
+        @media screen and ($screen-xs) {
+            padding: 30px;
+        }
+    }
+}

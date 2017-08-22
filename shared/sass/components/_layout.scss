@@ -5,3 +5,23 @@ body {
     min-height: 100%;
     overflow: hidden;
 }
+
+.rel {
+    position: relative;
+}
+.abs {
+    position: absolute;
+
+    &.right {
+        right: 0;
+    }
+    &.left {
+        left: 0;
+    }
+    &.top {
+        top: 0;
+    }
+    &.bottom {
+        bottom: 0;
+    }
+}

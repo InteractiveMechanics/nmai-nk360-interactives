@@ -1,0 +1,19 @@
+.activity-menu-wrapper {
+    .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 99px;
+        margin: 10px 5px;
+        display: inline-block;
+
+        &.icon-info {
+            background-color: blue;
+        }
+        &.icon-home {
+            background-color: red;
+        }
+        &.icon-print {
+            background-color: yellow;
+        }
+    }   
+}
