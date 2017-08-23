@@ -11,12 +11,19 @@
     <link rel="stylesheet" href="./shared/css/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./shared/js/lightgallery/css/lightgallery.min.css" />
     <link rel="stylesheet" href="./shared/js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./shared/js/slick/slick-theme.css">
     <link rel="stylesheet" href="./shared/css/animate/animate.css" />
     
     <link rel="stylesheet" href="./shared/code/upperleftmenu/menu.css" />
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
+
+    <style type="text/css">
+        body {
+            background: #eee;
+        }
+    </style>
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -93,13 +100,17 @@
             <div class="row justify-content-md-center">
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Select your resource</h2>
+                    <p>
+                        Choose a historical text or image to annotate from the collection of source materials provided.
+                    </p>
                 </div>
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Add your annotations</h2>
+                    <p>
+                        Drag and drop theme icons onto the material where you wish to write your annotation. The different icons represent different themes that relate to the source materials
+                    </p>
                 </div>
             </div>
             <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
@@ -109,7 +120,51 @@
 
 
     <!-- Main interactive-specific content -->
-    <main></main>
+    <main>
+
+        <header class="text-center">
+            <p class="hidden-xs">
+                NORTHERN PLAINS HISTORY & CULTURE: CROW NATION
+            </p>
+
+            <h1>
+                <span class="dotted">Privileges</span> & <span class="dotted">Responsibilities</span>
+            </h1>
+        </header>
+        
+
+        <div class="annotation-screen">
+            
+            <div class="slide-item">
+
+                <div class="top">
+                    <div class="photo">
+
+                    </div>
+                </div>
+
+                <div class="bottom">
+                   
+                    <div class="body">
+                        <p>
+                            In this passage from <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt</em>, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.
+                        </p>
+                    </div>
+
+                    <div class="button">
+
+                        <a href="javascript:void(0);" class="btn btn-success">
+                            Annotate this material
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
 
 
     
