@@ -117,9 +117,39 @@
         <script id="detail-template" type="text/x-jQuery-tmpl"></script>
 
         <!-- Explore Template -->
-        <script id="detail-template" type="text/x-jQuery-tmpl"></script>
+        <script id="explore-template" type="text/x-jQuery-tmpl"></script>
 
-        <section id="selection" class="hidden"></section>
+        <section id="selection">
+            <div class="era-wrapper">
+
+                <div id="era-block-1">
+                    <div class="era-content-wrapper">
+                        <h1>Time Immemorial to 1974</h1>
+                        <button class="btn btn-lg start-timeline-btn"  data-timeline="1">Start This Timeline</button>
+                        <button class="btn btn-lg view-timeline-btn hidden"  data-timeline="1">View This Timeline</button>
+                    </div>
+                </div>
+
+                <div id="era-block-2">
+                    <div class="era-content-wrapper">
+                        <h1>1974 &mdash; 1979</h1>
+                        <button class="btn btn-lg start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
+                        <button class="btn btn-lg view-timeline-btn hidden"  data-timeline="2">View This Timeline</button>
+                    </div>
+                </div>
+
+                <div id="era-block-3">
+                    <div class="era-content-wrapper">
+                        <h1>1979 &mdash; present</h1>
+                        <button class="btn btn-lg start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
+                        <button class="btn btn-lg view-timeline-btn hidden" data-timeline="3">view This Timeline</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
         <section id="detail" class="hidden"></section>
         <section id="explore" class="hidden"></section>
 
@@ -155,5 +185,7 @@
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
+    <script src="./js/controllers/detail.js"></script>
+
 </body>
 </html>

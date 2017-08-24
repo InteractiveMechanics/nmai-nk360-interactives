@@ -1,0 +1,49 @@
+#selection {
+	height: 100vh;
+	width: 100vw;
+	background: blue;
+}
+
+.era-wrapper {
+	display: flex;
+}
+
+div[id^="era-block"] {
+	align-items: center;
+	flex: 1;
+	display: flex;
+	height: 100vh;
+	
+	.era-content-wrapper {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+
+#era-block-1 {
+	background-color: purple;
+}
+
+#era-block-2 {
+	background-color: orange;
+}
+
+#era-block-3 {
+	background-color: pink;
+}
+
+#detail {
+	background: green;
+	height: 300px;
+	width: 300px;
+}
+
+#explore {
+	background: yellow;
+	height: 300px;
+	width: 300px;
+}
+
+
+
