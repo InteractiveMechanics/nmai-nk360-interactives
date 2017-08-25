@@ -173,7 +173,7 @@ div[id^="era-block"] {
   background-color: pink; }
 
 #detail {
-  background: green;
+  background: rgba(0, 120, 0, 0.7);
   height: 100vh;
   width: 100vw; }
 
@@ -218,23 +218,23 @@ div[id^="era-block"] {
     .draggable-widget div p {
       margin-bottom: 0px; }
 
-.draggable-widget[data-draggable="1"] {
+.draggable-widget[data-timeline="1"] {
   left: 50px;
   top: 150px; }
 
-.draggable-widget[data-draggable="2"] {
+.draggable-widget[data-timeline="2"] {
   left: 450px;
   top: 150px; }
 
-.draggable-widget[data-draggable="3"] {
+.draggable-widget[data-timeline="3"] {
   left: 850px;
   top: 150px; }
 
-.draggable-widget[data-draggable="4"] {
+.draggable-widget[data-timeline="4"] {
   left: 200px;
   top: 300px; }
 
-.draggable-widget[data-draggable="5"] {
+.draggable-widget[data-timeline="5"] {
   left: 750px;
   top: 300px; }
 
