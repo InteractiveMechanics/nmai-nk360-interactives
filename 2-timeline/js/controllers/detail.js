@@ -16,6 +16,8 @@ Detail = (function() {
     	$(document).on('click tap', '.start-timeline-btn', displayDetailScreen);
     }
 
+    
+
 
 	return {
 
