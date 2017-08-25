@@ -6,8 +6,9 @@ Detail = (function() {
 
     var displayDetailScreen = function() {
     	$('#selection').addClass('hidden animated fadeOut');
-    	$('#detail-template').tmpl().appendTo('#detail');
+    	//$('#detail-template').tmpl().appendTo('#detail');
     	$('#detail').removeClass('hidden').addClass('animated fadeIn');
+        Init.isSelectionScreen();
     }
 
 

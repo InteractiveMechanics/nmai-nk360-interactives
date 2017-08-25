@@ -36,6 +36,7 @@ Init = (function() {
     }
     
     return {
-        init: init
+        init: init,
+        isSelectionScreen: isSelectionScreen
     }
 })();
