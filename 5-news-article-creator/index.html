@@ -109,7 +109,56 @@
 
 
     <!-- Main interactive-specific content -->
-    <main></main>
+    <main>
+        <section id="step-by-step-cards">
+            <div class="step step-intro" data-slide-id="1">
+                <h4></h4>
+                <h1></h1>
+                <div class="divider"></div>
+                <p></p>
+            </div>
+            <div class="step step-theme" data-slide-id="2">
+                <h4></h4>
+                <h1></h1>
+                <div class="divider"></div>
+                <a class="btn-theme" data-theme="traditional" title="Theme: Traditional"></a>
+                <a class="btn-theme" data-theme="modern" title="Theme: Modern"></a>
+            </div>
+            <div class="step step-masthead" data-slide-id="3">
+                <h4></h4>
+                <h1></h1>
+                <div class="divider"></div>
+                <input class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
+            </div>
+            <div class="step step-article-copy" data-slide-id="4">
+                <h4></h4>
+                <h1></h1>
+                <div class="divider"></div>
+                <textarea class="form-control"></textarea>
+                <span class="article-copy-count">0 words</span>
+            </div>
+        </section>
+        <div id="navigation">
+            <div class="nav-arrow nav-arrow-left">
+            <div class="nav-arrow nav-arrow-right">
+            <div class="nav-progress">
+                <ul class="progress-dots">
+                    <li data-slide-to-id="1" data-toggle="tooltip" title="Introduction"></li>
+                    <li data-slide-to-id="2" data-toggle="tooltip" title="Theme"></li>
+                    <li data-slide-to-id="3" data-toggle="tooltip" title="Masthead"></li>
+                    <li data-slide-to-id="4" data-toggle="tooltip" title="Article Copy"></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div id="print-preview" class="">
+        <div class="paper-preview">
+            
+        </div>
+        <div class="close-preview"></div>
+        <a id="print" class="btn btn-success btn-lg" title="Print your paper">Print your paper</a>
+        <div class="overlay"></div>
+    </div>
 
 
     
