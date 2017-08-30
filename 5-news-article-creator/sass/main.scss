@@ -18,5 +18,8 @@
 @import '../shared/sass/components/menu';
 @import '../shared/sass/components/gallery';
 
-@import '../sass/cards';
-@import '../sass/navigation';
+@import 'sass/layout';
+@import 'sass/helpers';
+@import 'sass/cards';
+@import 'sass/navigation';
+@import 'sass/preview';
