@@ -178,9 +178,10 @@ div[id^="era-block"] {
   width: 100vw; }
 
 #explore {
-  background: yellow;
-  height: 300px;
-  width: 300px; }
+  background: #0074D9;
+  height: 100vh;
+  position: relative;
+  width: 100vw; }
 
 #droppable-container {
   align-items: center;
@@ -197,6 +198,9 @@ div[id^="era-block"] {
   height: 75px;
   margin: 0px 10px;
   width: 75px; }
+
+[data-toggle="tooltip"] {
+  border-bottom: none; }
 
 .draggable-widget {
   background-color: white;
@@ -218,6 +222,20 @@ div[id^="era-block"] {
     .draggable-widget div p {
       margin-bottom: 0px; }
 
+.draggable-widget.dragged {
+  background-color: transparent;
+  border: none;
+  height: auto;
+  width: auto; }
+  .draggable-widget.dragged .draggable-text {
+    display: none; }
+  .draggable-widget.dragged .draggable-img {
+    border: none;
+    height: 72px;
+    width: 72px;
+    position: relative;
+    left: -2px; }
+
 .draggable-widget[data-timeline="1"] {
   left: 50px;
   top: 150px; }
@@ -237,5 +255,78 @@ div[id^="era-block"] {
 .draggable-widget[data-timeline="5"] {
   left: 750px;
   top: 300px; }
+
+.ui-draggable-dragging {
+  background-color: transparent;
+  height: auto;
+  width: auto; }
+  .ui-draggable-dragging .draggable-text {
+    display: none; }
+
+.transition-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw; }
+
+.transition-content-wrapper {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; }
+
+.timeline-wrapper {
+  position: absolute;
+  left: 5%;
+  height: 103%;
+  width: 100%;
+  overflow: auto; }
+
+.timeline-track {
+  border-bottom: 3px solid black;
+  bottom: 15%;
+  position: absolute;
+  width: calc(300px + 2100px + 250px); }
+
+.timeline-item {
+  background-color: #7FDBFF;
+  border-radius: 20px;
+  height: 100px;
+  position: absolute;
+  width: 300px; }
+
+.timeline-item[data-timeline="1"] {
+  left: 40px;
+  top: 400px; }
+
+.timeline-item[data-timeline="2"] {
+  left: 450px;
+  top: 200px; }
+
+.timeline-item[data-timeline="3"] {
+  left: 1100px;
+  top: 400px; }
+
+.timeline-item[data-timeline="4"] {
+  left: 1500px;
+  top: 200px; }
+
+.timeline-item[data-timeline="5"] {
+  left: 2100px;
+  top: 200px; }
+
+#prev-btn {
+  left: 1%;
+  position: absolute;
+  top: 50%; }
+
+#next-btn {
+  left: 93%;
+  position: absolute;
+  top: 50%; }
 
 /*# sourceMappingURL=main.css.map */

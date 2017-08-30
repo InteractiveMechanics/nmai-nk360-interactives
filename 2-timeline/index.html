@@ -152,18 +152,21 @@
         </section>
         <section id="detail" class="hidden">
 
-        <div class="draggable-widget" data-timeline="1">
+        <div class="draggable-widget" data-timeline="1" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="this is a tooltip">
+            <img class="draggable-img" src="https://placekitten.com/g/200/200">
+            <div class="draggable-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
+            </div>
+            
+        </div>
+       
+        <div class="draggable-widget" data-timeline="2" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="this is a tooltip">
             <img class="draggable-img" src="https://placekitten.com/g/200/200">
             <div class="draggable-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
             </div>
         </div>
-        <div class="draggable-widget" data-timeline="2">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
-            </div>
-        </div>
+
         <div class="draggable-widget" data-timeline="3">
             <img class="draggable-img" src="https://placekitten.com/g/200/200">
             <div class="draggable-text">
@@ -196,10 +199,69 @@
             
             <h3 id="era-label-end">1974</h3>
         </div>
+
         </section>
-        <section id="explore" class="hidden"></section>
+        <section id="explore" class="hidden">
+
+            <div class="transition-overlay">
+                <div class="transition-content-wrapper">
+                    <h5>Time Immemorial to 1974</h5>
+                    <h1>Timeline Complete</h1>
+                    <p>You've completed this timeline segment. Explore the entries in order for all the selections you've completed so far.Once you've finished, return to the lesson module to continue learning about the Fish Wars.</p>
+                    <button class="btn btn-lg" id="back-to-module-btn">Back to Module</button>
+                    <button class="btn btn-lg" id="explore-btn">Explore Timeline</button>
+                </div>
+            </div>
+
+            <div class="timeline-wrapper">
+
+                <div class="timeline-track"></div>
+
+                <button class="timeline-item" data-timeline="1">
+                    <p>1 here's some text</p>
+                </button>
+                <button class="timeline-item" data-timeline="2">
+                    <p>2 here's some text</p>
+                </button>
+                <button class="timeline-item" data-timeline="3">
+                    <p>3 here's some text</p>
+                </button>
+                <button class="timeline-item" data-timeline="4">
+                    <p>4 here's some text</p>
+                </button>
+                <button class="timeline-item" data-timeline="5">
+                    <p>5 here's some text</p>
+                </button>
+
+            </div>
+
+            <button id="prev-btn" class="btn">Prev</button>
+            <button id="next-btn" class="btn">Next</button>
+        </section>
 
     </main>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="correct-answer" data-timeline="1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+              
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+              
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
     
@@ -232,6 +294,7 @@
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
     <script src="./js/controllers/detail.js"></script>
+    <script src="./js/controllers/explore.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,83 @@
+
+
+
+.transition-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+}
+
+.transition-content-wrapper {
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timeline-wrapper {
+    position: absolute;
+    left: 5%;
+    height: 103%;
+    width: 100%;
+    overflow: auto;
+}
+
+
+
+.timeline-track {
+    border-bottom: 3px solid black;
+    bottom: 15%;
+    position: absolute;
+    width: calc(#{$timeline-item-width} + #{$last-of-timeline-item-left} + 250px); // can we make this a calc?
+
+}
+
+.timeline-item {
+    background-color: #7FDBFF;
+    border-radius: 20px;
+    height: 100px;
+    position: absolute;
+    width: $timeline-item-width;
+}
+
+.timeline-item[data-timeline="1"] {
+    left: 40px;
+    top: 400px;
+}
+
+.timeline-item[data-timeline="2"] {
+    left: 450px;
+    top: 200px;
+}
+
+.timeline-item[data-timeline="3"] {
+    left: 1100px;
+    top: 400px;
+}
+
+.timeline-item[data-timeline="4"] {
+    left: 1500px;
+    top: 200px;
+}
+
+.timeline-item[data-timeline="5"] {
+    left: $last-of-timeline-item-left;
+    top: 200px
+}
+
+#prev-btn {
+    left: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+#next-btn {
+    left: 93%;
+    position: absolute;
+    top: 50%;
+}

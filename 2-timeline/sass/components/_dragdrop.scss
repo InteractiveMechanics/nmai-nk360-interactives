@@ -18,11 +18,15 @@
 	width: 75px;
 }
 
+[data-toggle="tooltip"] {
+	border-bottom: none;
+}
+
 .draggable-widget {
-	background-color: white;
-	height: 100px;
+	background-color: white; //white
+	height: 100px; //100px
 	position: absolute;
-	width: 350px;
+	width: 350px; //350px
 
 	display: flex;
     align-items: center;
@@ -41,6 +45,25 @@
 		p {
 			margin-bottom: 0px;
 		}
+	}
+}
+
+.draggable-widget.dragged {
+	background-color: transparent;
+	border: none;
+	height: auto;
+	width: auto;
+
+	.draggable-text {
+		display: none;
+	}
+
+	.draggable-img {
+		border: none;
+		height: 72px;
+    	width: 72px;
+    	position: relative;
+    	left: -2px;
 	}
 }
 
@@ -68,5 +91,17 @@
 	left: 750px;
 	top: 300px;
 }
+
+//active class for draggable
+.ui-draggable-dragging {
+	background-color: transparent;
+	height: auto;
+	width: auto;
+
+	.draggable-text {
+		display: none;
+	}
+}
+
 
 
