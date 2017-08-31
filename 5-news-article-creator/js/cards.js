@@ -3,6 +3,9 @@
  */
 Cards = (function() {
     var editor;
+    var theme;
+    var masthead;
+    var headline;
 
     var init = function() {
         $('#step-by-step-cards').slick({
@@ -21,7 +24,7 @@ Cards = (function() {
             }
         });
         Cards.editor = new Quill('#text-editor', {
-            debug: 'info',
+            debug: false,
             theme: 'snow',
             placeholder: 'Lorem ipsum sit dolor amet',
             modules: {
@@ -36,6 +39,26 @@ Cards = (function() {
     }
     var bindEvents = function() {
         Cards.editor.on('text-change', updateWordCount);
+
+        $('body').on('click tap', '.btn-theme', setTheme);
+        $('#masthead').on('change', setMasthead);
+        $('#headline').on('change', setHeadline);
+
+        // Initialize tooltips again
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+
+    var setTheme = function() {
+        $('.btn-theme').removeClass('active');
+        $(this).addClass('active');
+        Cards.theme = $(this).data('theme');
+        Print.activatePrintPreview();
+    }
+    var setMasthead = function() {
+        Cards.masthead = $(this).val();
+    }
+    var setHeadline = function() {
+        Cards.headline = $(this).val();
     }
 
     var getEditorContents = function() {
@@ -45,6 +68,15 @@ Cards = (function() {
         var text = Cards.editor.getText();
         return text.split(" ").length;
     }
+    var getTheme = function() {
+        return Cards.theme;
+    }
+    var getMasthead = function() {
+        return Cards.masthead;
+    }
+    var getHeadline = function() {
+        return Cards.headline;
+    }
 
     var updateWordCount = function() {
         var count = getEditorTextLength();
@@ -53,6 +85,9 @@ Cards = (function() {
     
     return {
         init: init,
-        getEditorContents: getEditorContents
+        getEditorContents: getEditorContents,
+        getTheme: getTheme,
+        getMasthead: getMasthead,
+        getHeadline: getHeadline
     }
 })();
