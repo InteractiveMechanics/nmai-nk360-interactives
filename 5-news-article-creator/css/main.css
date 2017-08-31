@@ -3,7 +3,7 @@
  * Include each file for this specific instance.
 */
 .overlay {
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.65);
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ body {
 
 footer {
   color: white;
-  height: 44px;
+  height: 50px;
   background: black;
   background: rgba(0, 0, 0, 0.8);
   font-size: 0.7rem;
@@ -58,18 +58,20 @@ footer {
   footer img {
     height: 34px;
     position: relative;
-    top: -8px; }
+    top: -4px; }
     @media screen and (max-width: 767px) {
       footer img {
         display: none; } }
-  footer ul li:not(:last-child):after {
-    content: '|';
-    margin: 0 0 0 10px;
-    opacity: 0.5; }
-  footer ul li a {
-    color: white; }
-    footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+  footer ul {
+    margin-top: 6px; }
+    footer ul li:not(:last-child):after {
+      content: '|';
+      margin: 0 0 0 10px;
+      opacity: 0.5; }
+    footer ul li a {
       color: white; }
+      footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+        color: white; }
 
 #instructions {
   position: fixed;
@@ -78,7 +80,7 @@ footer {
   left: 0;
   height: 100%;
   color: white;
-  z-index: 100; }
+  z-index: 1000; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -122,6 +124,8 @@ footer {
     border-color: white;
     color: #231f20 !important; }
 
+.activity-menu-wrapper > div {
+  z-index: 100; }
 .activity-menu-wrapper .icon {
   width: 44px;
   height: 44px;
@@ -145,5 +149,98 @@ footer {
   position: absolute;
   bottom: 10px;
   right: 10px; }
+
+html,
+body {
+  background: #f1f2f2; }
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#static-ui .guiding-question {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  pointer-events: none; }
+#static-ui .print-preview-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 30px; }
+
+#step-by-step-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit; }
+  #step-by-step-cards .step {
+    position: relative;
+    height: 100%; }
+    #step-by-step-cards .step .step-container {
+      width: 540px;
+      margin: 100px auto 0px;
+      background: white;
+      padding: 40px; }
+      #step-by-step-cards .step .step-container.step-container-lg {
+        width: 960px; }
+
+#navigation .nav-arrow {
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 99px;
+  opacity: 1;
+  transition: 0.5s all; }
+  #navigation .nav-arrow.slick-disabled {
+    opacity: 0.4; }
+  #navigation .nav-arrow.nav-arrow-left {
+    left: 20px; }
+  #navigation .nav-arrow.nav-arrow-right {
+    right: 20px; }
+
+.slick-dots {
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .slick-dots > li {
+    display: inline-block; }
+    .slick-dots > li.slick-active > a {
+      background-color: orange; }
+    .slick-dots > li > a {
+      display: block;
+      background: #939598;
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      margin: 0 2px;
+      border-radius: 99px; }
+
+#print-preview {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+  overflow: auto; }
+  #print-preview .print-preview-container {
+    width: 960px;
+    margin: 100px auto;
+    position: relative;
+    background: white;
+    padding: 50px;
+    z-index: 10; }
 
 /*# sourceMappingURL=main.css.map */

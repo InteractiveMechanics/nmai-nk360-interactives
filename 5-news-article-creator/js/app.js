@@ -9,7 +9,9 @@ $(function(){
         data = response;
 
         Init.init();
+        Cards.init();
         Instructions.init();
+        Print.init();
 
     }, 'json');
 });

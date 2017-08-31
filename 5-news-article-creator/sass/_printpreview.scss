@@ -1,0 +1,18 @@
+#print-preview {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+
+    .print-preview-container {
+        width: 960px;
+        margin: 100px auto;
+        position: relative;
+        background: white;
+        padding: 50px;
+        z-index: 10;
+    }
+}

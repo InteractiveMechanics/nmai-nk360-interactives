@@ -1,0 +1,26 @@
+#step-by-step-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+
+    .step {
+        position: relative;
+        height: 100%;
+
+        .step-container {
+            width: 540px;
+            margin: 100px auto 0px;
+            background: white;
+            padding: 40px;
+        
+            h4 {}
+            h1 {}
+    
+            &.step-container-lg {
+                width: 960px;
+            }
+        }
+    }
+}
