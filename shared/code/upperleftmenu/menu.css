@@ -1,6 +1,7 @@
 /* Muscogee CSS
  * --------------------------------------- */
 
+.module-menu-wrapper {position: relative;z-index: 10;}
 .module-menu-wrapper .abs {position:absolute;}
 .module-menu-wrapper .abs a {color:#FFF}
 .module-menu-wrapper .abs a:hover {color:#CF3}

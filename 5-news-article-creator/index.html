@@ -10,6 +10,7 @@
     <!-- Include shared stylesheets -->
     <link rel="stylesheet" href="./shared/css/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./shared/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="./shared/js/quilljs/quill.snow.css" />
     <link rel="stylesheet" href="./shared/js/slick/slick.css" />
     <link rel="stylesheet" href="./shared/css/animate/animate.css" />
     
@@ -72,12 +73,11 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
-    <footer class="fixed-bottom d-flex justify-content-between transparent">
+    <footer class="fixed-bottom d-flex justify-content-between">
         <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
@@ -117,50 +117,86 @@
     <!-- Main interactive-specific content -->
     <main>
         <section id="step-by-step-cards">
-            <div class="step step-intro" data-slide-id="1">
-                <h4></h4>
-                <h1></h1>
-                <div class="divider"></div>
-                <p></p>
+            <div class="step step-intro" data-title="Introduction">
+                <div class="step-container">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                    <p></p>
+                </div>
             </div>
-            <div class="step step-theme" data-slide-id="2">
-                <h4></h4>
-                <h1></h1>
-                <div class="divider"></div>
-                <a class="btn-theme" data-theme="traditional" title="Theme: Traditional"></a>
-                <a class="btn-theme" data-theme="modern" title="Theme: Modern"></a>
+            <div class="step step-theme" data-title="Theme">
+                <div class="step-container">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                    <a class="btn-theme" data-theme="traditional" title="Theme: Traditional"></a>
+                    <a class="btn-theme" data-theme="modern" title="Theme: Modern"></a>
+                </div>
             </div>
-            <div class="step step-masthead" data-slide-id="3">
-                <h4></h4>
-                <h1></h1>
-                <div class="divider"></div>
-                <input class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
+            <div class="step step-masthead" data-title="Masthead">
+                <div class="step-container">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                    <input class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
+                </div>
             </div>
-            <div class="step step-article-copy step-lg" data-slide-id="4">
-                <h4></h4>
-                <h1></h1>
-                <div class="divider"></div>
-                <textarea class="form-control"></textarea>
-                <span class="article-copy-count">0 words</span>
+            <div class="step step-article-copy" data-title="Article Copy">
+                <div class="step-container step-container-lg">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                    <div id="text-editor"></div>
+                    <span class="article-word-count">0 words</span>
+                </div>
+            </div>
+            <div class="step step-images" data-title="Images">
+                <div class="step-container step-container-lg">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="step step-image-captions" data-title="Image Captions">
+                <div class="step-container step-container-lg">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="step step-quotes" data-title="Quotes">
+                <div class="step-container step-container-lg">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="step step-headline" data-title="Headline">
+                <div class="step-container">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="step step-review" data-title="Review">
+                <div class="step-container">
+                    <h4>Step 1</h4>
+                    <h1></h1>
+                    <div class="divider"></div>
+                </div>
             </div>
         </section>
         <nav id="navigation">
-            <div class="nav-arrow nav-arrow-left">
-            <div class="nav-arrow nav-arrow-right">
-            <div class="nav-progress">
-                <ul class="progress-dots">
-                    <li data-slide-to-id="1" data-toggle="tooltip" title="Introduction"></li>
-                    <li data-slide-to-id="2" data-toggle="tooltip" title="Theme"></li>
-                    <li data-slide-to-id="3" data-toggle="tooltip" title="Masthead"></li>
-                    <li data-slide-to-id="4" data-toggle="tooltip" title="Article Copy"></li>
-                </ul>
-            </div>
+            <div class="nav-arrow nav-arrow-left"></div>
+            <div class="nav-arrow nav-arrow-right"></div>
+            <a id="print-your-paper-btn" class="btn btn-success btn-lg hidden-xs">Preview Your Paper</a>
         </nav>
     </main>
-    <div id="print-preview" class="">
-        <div class="paper-preview">
-            
-        </div>
+
+    <div id="print-preview" class="fade hidden">
+        <div class="paper-preview"></div>
+
         <div class="close-preview"></div>
         <a id="print" class="btn btn-success btn-lg" title="Print your paper">Print your paper</a>
         <div class="overlay"></div>
@@ -181,6 +217,9 @@
     <!-- Include lightGallery -->
     <script src="./shared/js/lightgallery/js/lightgallery-all.min.js"></script>
 
+    <!-- Include Quill -->
+    <script src="./shared/js/quilljs/quill.min.js"></script>
+
     <!-- Include slick -->
     <script src="./shared/js/slick/slick.min.js"></script>
 
@@ -196,5 +235,7 @@
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/print.js"></script>
 </body>
 </html>

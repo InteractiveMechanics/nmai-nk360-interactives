@@ -1,6 +1,6 @@
 footer {
     color: white;
-    height: 44px;
+    height: 50px;
     background: black;
     background: rgba(0,0,0,0.8);
     font-size: 0.7rem;
@@ -13,7 +13,7 @@ footer {
     img {
         height: 34px;
         position: relative;
-        top: -8px;
+        top: -5px;
 
         @media screen and ($screen-xs) {
             display: none;
@@ -21,6 +21,8 @@ footer {
     }
 
     ul {
+        margin-top: 6px;
+
         li {
             &:not(:last-child):after {
                 content: '|';
