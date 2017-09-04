@@ -5,36 +5,58 @@ Detail = (function() {
     }
 
     var displayDetailScreen = function() {
+        var id = $(this).attr('data-timeline');
+        console.log(id);
     	$('#selection').addClass('hidden animated fadeOut');
+        $("#detail").html($.templates("#detail-template").render(data.eras[id-1]));
     	//$('#detail-template').tmpl().appendTo('#detail');
-    	$('#detail').removeClass('hidden').addClass('animated fadeIn');
+    	$('#detail').removeClass('hidden fadeOut').addClass('animated fadeIn');
         Init.isSelectionScreen();
-        buildGame();
+        buildGame(id);
     }
 
     var countDroppedEls = function() {
-        var numberDropped = $('.dropped').length;
-        console.log(numberDropped);
-        if (numberDropped == 5) {
-            setTimeout(function() { displayExploreScreen(); }, 2000);
+        if (!$('#detail').hasClass('hidden')) {
+            var era = $('#droppable-container').attr('data-era');
+            var numberDropped = $('.dropped').length;
+            console.log(numberDropped);
+
+            if (numberDropped == 5) {
+                $('.era-block[data-era="' + era + '"]').addClass('completed');
+                setTimeout(function() { displayExploreScreen(era); }, 2000);
+            }
         }
     }
 
-    var displayExploreScreen = function() {
+    var displayExploreScreen = function(era) {
+        if (era !== null && typeof era === 'object') {
+            var booger = $(this).attr('data-timeline');
+            $('#explore').html($.templates("#explore-template").render(data.eras[booger-1]));
+            $('.transition-overlay').addClass('hidden');
+            console.log(booger);
+        } else {
+            console.log('era is defined. it is ' + era);
+            $('#explore').html($.templates("#explore-template").render(data.eras[era-1]));
+        }
         $('#explore').removeClass('animated fadeIn hidden');
+        $('#selection').addClass('fadeOut hidden');
         $('#detail').addClass('fadeOut hidden');
+    
     }
 
 
 
-    var displayModal = function() {
-         $('#correct-answer').modal('show');
+
+
+    var displayModal = function(era, moment) {
+        $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1]));
+        $('#correct-answer').modal('show');
     }
 
     
 
 
-    var buildGame = function() {
+    var buildGame = function(id) {
         $('[data-toggle=tooltip]').tooltip('hide');
         $('.draggable-widget').draggable({
             tolerance: 'touch',
@@ -57,11 +79,11 @@ Detail = (function() {
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
                         ui.draggable.addClass('dragged');
 
-                        alert('the thing is dropped!');
+                        //alert('the thing is dropped!');
 
                         ui.draggable.addClass('dragged');
                         $(this).addClass('dropped');
-                        displayModal();
+                        displayModal(id, droppableNumber);
 
 
                         ui.draggable.position({
@@ -94,7 +116,8 @@ Detail = (function() {
     }
 
     var bindEvents = function() {
-        $(document).on('click tap', '.start-timeline-btn', displayDetailScreen);
+        $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);
+        $(document).on('click tap', '.view-timeline-btn[data-timeline]', displayExploreScreen);
         $(document).on('hidden.bs.modal', countDroppedEls);
     }
 

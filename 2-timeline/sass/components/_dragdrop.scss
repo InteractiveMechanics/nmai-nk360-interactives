@@ -3,10 +3,19 @@
 	bottom: 0px;
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+	padding: 60px;
 	position: absolute;
 	width: 100%;
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+	}
 
+}
+
+#era-label-start {
+	width: 125px;
+	text-align: right;
 }
 
 
@@ -24,9 +33,10 @@
 
 .draggable-widget {
 	background-color: white; //white
-	height: 100px; //100px
+	height: 85px; //100px
 	position: absolute;
 	width: 350px; //350px
+	border-radius: 65px;
 
 	display: flex;
     align-items: center;

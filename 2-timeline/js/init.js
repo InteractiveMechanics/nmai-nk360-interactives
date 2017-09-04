@@ -8,7 +8,9 @@ Init = (function() {
 
     var displaySelectionScreen = function() {
     	if ($('#selection').hasClass('hidden')) {
-    		$('#selection').removeClass('hidden');
+    		$('#selection').removeClass('hidden fadeOut').addClass('fadeIn');
+            displayEra2();
+            displayEra3();
     	}
 
     	if (!$('#detail').hasClass('hidden')) {
@@ -23,11 +25,27 @@ Init = (function() {
     var isSelectionScreen = function() {
     	if ($('#selection').hasClass('hidden')) {
     		$('.icon-home').removeClass('hidden');
+
     	} else {
     		$('.icon-home').addClass('hidden');
     	}
     }
 
+    var displayEra2 = function() {
+        if ($('.era-block[data-era="1"]').hasClass('completed')) {
+            $('.completed').find('.start-timeline-btn').addClass('hidden');
+            $('.completed').find('.view-timeline-btn').removeClass('hidden'); 
+            $('.era-block[data-era="2"]').find('.start-timeline-btn').removeClass('hidden');
+        }
+    }
+
+    var displayEra3 = function() {
+        if ($('.era-block[data-era="2"]').hasClass('completed')) {
+            $('.completed').find('.start-timeline-btn').addClass('hidden');
+            $('.completed').find('.view-timeline-btn').removeClass('hidden'); 
+            $('.era-block[data-era="3"]').find('.start-timeline-btn').removeClass('hidden');
+        }
+    }
     
 
     var bindEvents = function() {

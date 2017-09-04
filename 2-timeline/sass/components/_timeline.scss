@@ -1,8 +1,7 @@
 
 
-
 .transition-overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100vh;
     width: 100vw;
 }
@@ -14,9 +13,19 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     text-align: center;
+    h1 {
+        margin: 20px;
+    }
+    .btn-wrapper {
+        display: flex;
+        margin-top: 60px;
+        .btn {
+            margin: 20px;
+        }
+    }
 }
 
 .timeline-wrapper {
@@ -28,7 +37,6 @@
 }
 
 
-
 .timeline-track {
     border-bottom: 3px solid black;
     bottom: 15%;
@@ -38,11 +46,12 @@
 }
 
 .timeline-item {
-    background-color: #7FDBFF;
+    background-color: #dedede;
     border-radius: 20px;
     height: 100px;
     position: absolute;
     width: $timeline-item-width;
+    border-radius: 65px;
 }
 
 .timeline-item[data-timeline="1"] {
@@ -70,6 +79,13 @@
     top: 200px
 }
 
+.timeline-btn-img {
+    height: 75px;
+    width: 75px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
 #prev-btn {
     left: 1%;
     position: absolute;
@@ -80,4 +96,15 @@
     left: 93%;
     position: absolute;
     top: 50%;
+}
+
+.lg-label-wrapper {
+    position: absolute;
+    bottom: 40px;
+    li {
+        display: inline;
+        h2 {
+            display: inline;
+        }
+    }
 }

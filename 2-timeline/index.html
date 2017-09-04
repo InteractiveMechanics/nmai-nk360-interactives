@@ -111,18 +111,120 @@
     <!-- Main interactive-specific content -->
     <main>
         <!-- Selection Template -->
-        <script id="selection-template" type="text/x-jQuery-tmpl"></script>
+        <script id="selection-template" type="text/x-jsrender">
+
+        </script>
 
         <!-- Detail Template -->
-        <script id="detail-template" type="text/x-jQuery-tmpl"></script>
+        <script id="detail-template" type="text/x-jsrender">
+
+
+        {{for Moments}}
+        <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
+            <img class="draggable-img" src="{{:thumbnail}}">
+            <div class="draggable-text">
+                <p>{{:excerpt}}</p>
+            </div>
+            
+        </div>
+        {{/for}}
+       
+        
+
+            
+        <div id="droppable-container" data-era='{{:Id}}'>
+            <h3 id="era-label-start">{{:StartDate}}</h3>
+            
+            <div class="droppable-widget" data-timeline="1"></div>
+            <div class="droppable-widget" data-timeline="2"></div>
+            <div class="droppable-widget" data-timeline="3"></div>
+            <div class="droppable-widget" data-timeline="4"></div>
+            <div class="droppable-widget" data-timeline="5"></div>
+            
+            <h3 id="era-label-end">{{:EndDate}}</h3>
+        </div>
+
+        </script>
+
+        <!-- Modal Template -->
+        <script id="modal-template" type="text/x-jsrender">
+
+                <div class="modal-dialog" role="document" data-timeline="{{:id}}">
+                    <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h6 class="modal-year">{{:date}}</h6>
+                                <h3 class="modal-title">{{:title}}</h3>
+                            </div>
+                      
+                            <div class="modal-body">
+                                <figure class="modal-photo-wrapper">
+                                    <img src="{{:image}}" alt="placeholder kitty">
+                                    <figcaption>{{:caption}}</figcaption>
+                                </figure>
+                               
+                                <p>{{:description}}</p>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+
+        </script>
 
         <!-- Explore Template -->
-        <script id="explore-template" type="text/x-jQuery-tmpl"></script>
+        <script id="explore-template" type="text/x-jsrender">
+             <div class="transition-overlay">
+                <div class="transition-content-wrapper">
+                    <h6>Time Immemorial to 1974</h6>
+                    <h1>Timeline Complete</h1>
+                    <p>You've completed this timeline segment. Explore the entries in order for all the selections you've completed so far.Once you've finished, return to the lesson module to continue learning about the Fish Wars.</p>
+                    <div class="btn-wrapper">
+                        <button class="btn btn-lg" id="back-to-module-btn">Back to Module</button>
+                        <button class="btn btn-lg" id="explore-btn">Explore Timeline</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-wrapper" data-era="{{:Id}}">
+                <div class="timeline-labels">
+                    <ul class="lg-label-wrapper">
+                        <li><h2 class="lg-label-1">{{:StartDate}}</h2></li>
+                        <li><h2 class="lg-label-2">{{:Milestone1}}</h2></li>
+                        <li><h2 class="lg-label-3">{{:Milestone2}}</h2></li>
+                        <li><h2 class="lg-label-4">{{:Milestone3}}</h2></li>
+                    </ul>
+
+                    <div class="sm-lable-wrapper">
+                        <h4 class="sm-label-1">{{:StartDate}}</h4>
+                    </div>
+                    
+
+                </div>
+                <div class="timeline-track"></div>
+
+                {{for Moments}}
+
+                    <button class="timeline-item" data-timeline="{{:id}}">
+                        <img class="timeline-btn-img" src="{{:thumbnail}}" alt="thumbnail">
+                        <h6>{{:title}}</h6>
+                        <p>{{:excerpt}}</p>
+                    </button>
+        
+
+                {{/for}}
+
+            </div>
+                <button id="prev-btn" class="btn">Prev</button>
+                <button id="next-btn" class="btn">Next</button>
+
+
+        </script>
 
         <section id="selection">
             <div class="era-wrapper">
 
-                <div id="era-block-1">
+                <div id="era-block-1" class="era-block" data-era="1">
                     <div class="era-content-wrapper">
                         <h1>Time Immemorial to 1974</h1>
                         <button class="btn btn-lg start-timeline-btn"  data-timeline="1">Start This Timeline</button>
@@ -130,7 +232,7 @@
                     </div>
                 </div>
 
-                <div id="era-block-2">
+                <div id="era-block-2" class="era-block" data-era="2">
                     <div class="era-content-wrapper">
                         <h1>1974 &mdash; 1979</h1>
                         <button class="btn btn-lg start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
@@ -138,7 +240,7 @@
                     </div>
                 </div>
 
-                <div id="era-block-3">
+                <div id="era-block-3" class="era-block" data-era="3">
                     <div class="era-content-wrapper">
                         <h1>1979 &mdash; present</h1>
                         <button class="btn btn-lg start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
@@ -150,118 +252,14 @@
 
 
         </section>
-        <section id="detail" class="hidden">
-
-        <div class="draggable-widget" data-timeline="1" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="this is a tooltip">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
-            </div>
-            
-        </div>
-       
-        <div class="draggable-widget" data-timeline="2" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="this is a tooltip">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
-            </div>
-        </div>
-
-        <div class="draggable-widget" data-timeline="3">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
-            </div>
-        </div>
-        <div class="draggable-widget" data-timeline="4">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam. </p>
-            </div>
-        </div>
-        <div class="draggable-widget" data-timeline="5">
-            <img class="draggable-img" src="https://placekitten.com/g/200/200">
-            <div class="draggable-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum placerat lacus eget mollis aliquam.</p>
-            </div>
-        </div>
+        <section id="detail" class="hidden"></section>
 
 
-            
-        <div id="droppable-container">
-            <h3 id="era-label-start">Time Immemorial</h3>
-            
-            <div class="droppable-widget" data-timeline="1"></div>
-            <div class="droppable-widget" data-timeline="2"></div>
-            <div class="droppable-widget" data-timeline="3"></div>
-            <div class="droppable-widget" data-timeline="4"></div>
-            <div class="droppable-widget" data-timeline="5"></div>
-            
-            <h3 id="era-label-end">1974</h3>
-        </div>
-
-        </section>
-        <section id="explore" class="hidden">
-
-            <div class="transition-overlay">
-                <div class="transition-content-wrapper">
-                    <h5>Time Immemorial to 1974</h5>
-                    <h1>Timeline Complete</h1>
-                    <p>You've completed this timeline segment. Explore the entries in order for all the selections you've completed so far.Once you've finished, return to the lesson module to continue learning about the Fish Wars.</p>
-                    <button class="btn btn-lg" id="back-to-module-btn">Back to Module</button>
-                    <button class="btn btn-lg" id="explore-btn">Explore Timeline</button>
-                </div>
-            </div>
-
-            <div class="timeline-wrapper">
-
-                <div class="timeline-track"></div>
-
-                <button class="timeline-item" data-timeline="1">
-                    <p>1 here's some text</p>
-                </button>
-                <button class="timeline-item" data-timeline="2">
-                    <p>2 here's some text</p>
-                </button>
-                <button class="timeline-item" data-timeline="3">
-                    <p>3 here's some text</p>
-                </button>
-                <button class="timeline-item" data-timeline="4">
-                    <p>4 here's some text</p>
-                </button>
-                <button class="timeline-item" data-timeline="5">
-                    <p>5 here's some text</p>
-                </button>
-
-            </div>
-
-            <button id="prev-btn" class="btn">Prev</button>
-            <button id="next-btn" class="btn">Next</button>
-        </section>
+        <section id="explore" class="hidden"></section>
 
     </main>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="correct-answer" data-timeline="1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Modal title</h4>
-                    </div>
-              
-                    <div class="modal-body">
-                        <p>One fine body&hellip;</p>
-                    </div>
-              
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="correct-answer" data-timeline="1"></div>
 
 
     
