@@ -195,8 +195,10 @@
                         <li><h2 class="lg-label-4">{{:Milestone3}}</h2></li>
                     </ul>
 
-                    <div class="sm-lable-wrapper">
-                        <h4 class="sm-label-1">{{:StartDate}}</h4>
+                    <div class="sm-label-wrapper">
+                        {{for Moments}}
+                        <h4 class="sm-label" data-timeline="{{:id}}">{{:year}}</h4>
+                        {{/for}}
                     </div>
                     
 
@@ -207,8 +209,10 @@
 
                     <button class="timeline-item" data-timeline="{{:id}}">
                         <img class="timeline-btn-img" src="{{:thumbnail}}" alt="thumbnail">
-                        <h6>{{:title}}</h6>
-                        <p>{{:excerpt}}</p>
+                        <div class="timeline-btn-text-wrapper">
+                            <h6>{{:title}}</h6>
+                            <p>{{:excerpt}}</p>
+                        </div>
                     </button>
         
 

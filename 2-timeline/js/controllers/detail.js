@@ -78,6 +78,8 @@ Detail = (function() {
               
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
                         ui.draggable.addClass('dragged');
+                        ui.draggable.draggable('option', 'revert', 'invalid');
+
 
                         //alert('the thing is dropped!');
 
