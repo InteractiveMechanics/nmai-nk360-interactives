@@ -88,18 +88,18 @@
     </footer>
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
-            <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
+            <h4 class="all-caps letter-spacing-1">How to Play</h4>
             <h1>Drag-and-Drop Puzzle Instructions</h1>
             <div class="row justify-content-md-center">
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Explore the Cards</h2>
+                    <p>Turn over the statement cards and explore the hidden content.</p>
                 </div>
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Uncover the Image</h2>
+                    <p>Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth.</p>
                 </div>
             </div>
             <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
@@ -109,7 +109,53 @@
 
 
     <!-- Main interactive-specific content -->
-    <main></main>
+    <main>
+    
+    <!-- puzzle template -->
+
+    <div id="intro" class="animated fadeIn">
+        <div class="intro-overlay"></div>
+        <div class="intro-card hidden">
+            <div class="header-wrapper">
+                <ul class="subheader">
+                    <li>Homelands</li>
+                    <li>Kinship</li>
+                    <li>Nationhood</li>
+                </ul>
+                <h1>How do Native people and Nations experience belonging?</h1>
+            </div>
+            <div class="text-wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
+                <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="puzzle" class="hidden">
+        <section class="header-wrapper">
+            <ul class="subheader">
+                <li>Homelands</li>
+                <li>Kinship</li>
+                <li>Nationhood</li>
+            </ul>
+            <h1>How do Native people and Nations experience belonging?</h1>
+        </section>
+
+        <section class="puzzle-wrapper">
+            <div class="puzzle-img-wrapper">
+                <img class="puzzle-img" src="assets/placeholder_luna.jpg">
+            </div>
+            <div class="draggable-widget" data-card="1"></div>
+            <div class="draggable-widget" data-card="2"></div>
+            <div class="draggable-widget" data-card="3"></div>
+            <div class="draggable-widget" data-card="4"></div>
+        </section>
+
+        <section class="droppable-wrapper">
+        </section>
+
+
+    </main>
 
 
     

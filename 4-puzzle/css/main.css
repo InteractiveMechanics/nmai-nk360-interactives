@@ -3,7 +3,7 @@
  * Include each file for this specific instance.
 */
 .overlay {
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.65);
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ body {
 
 footer {
   color: white;
-  height: 44px;
+  height: 50px;
   background: black;
   background: rgba(0, 0, 0, 0.8);
   font-size: 0.7rem;
@@ -58,18 +58,20 @@ footer {
   footer img {
     height: 34px;
     position: relative;
-    top: -8px; }
+    top: -4px; }
     @media screen and (max-width: 767px) {
       footer img {
         display: none; } }
-  footer ul li:not(:last-child):after {
-    content: '|';
-    margin: 0 0 0 10px;
-    opacity: 0.5; }
-  footer ul li a {
-    color: white; }
-    footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+  footer ul {
+    margin-top: 6px; }
+    footer ul li:not(:last-child):after {
+      content: '|';
+      margin: 0 0 0 10px;
+      opacity: 0.5; }
+    footer ul li a {
       color: white; }
+      footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+        color: white; }
 
 #instructions {
   position: fixed;
@@ -78,7 +80,7 @@ footer {
   left: 0;
   height: 100%;
   color: white;
-  z-index: 100; }
+  z-index: 1000; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -122,6 +124,8 @@ footer {
     border-color: white;
     color: #231f20 !important; }
 
+.activity-menu-wrapper > div {
+  z-index: 100; }
 .activity-menu-wrapper .icon {
   width: 44px;
   height: 44px;
@@ -145,5 +149,108 @@ footer {
   position: absolute;
   bottom: 10px;
   right: 10px; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.fade-in {
+  -webkit-animation: fadeIn 1s 1 forwards;
+  -moz-animation: fadeIn 1s 1 forwards;
+  -o-animation: fadeIn 1s 1 forwards;
+  animation: fadeIn 1s 1 forwards; }
+
+#intro {
+  background-color: orange;
+  height: 100vh;
+  width: 100vw; }
+
+#puzzle {
+  background-color: #dedede;
+  height: 100vh;
+  width: 100vw; }
+
+#intro {
+  background: #ddd;
+  height: 100vh;
+  width: 100vw; }
+
+.intro-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0px;
+  padding: 40px;
+  position: absolute;
+  top: 0px;
+  width: 100%; }
+
+.intro-card {
+  background-color: white;
+  border-radius: 15px;
+  height: 80%;
+  left: 33%;
+  position: absolute;
+  top: 10%;
+  width: 33%;
+  padding: 25px; }
+  .intro-card .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px; }
+    .intro-card .header-wrapper h1 {
+      font-size: 26px;
+      line-height: 1.4; }
+    .intro-card .header-wrapper:after {
+      content: '';
+      border-bottom: 3px solid #ddd;
+      width: 33%;
+      bottom: -10px;
+      position: relative;
+      left: 33%; }
+
+.subheader {
+  padding-left: 0px; }
+  .subheader li {
+    display: inline;
+    font-size: 14px;
+    text-transform: uppercase; }
+
+#puzzle .header-wrapper {
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  position: relative;
+  margin-top: 0px;
+  padding: 10px; }
+  #puzzle .header-wrapper h1 {
+    font-size: 26px;
+    font-weight: 600; }
+
+.puzzle-img-wrapper {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  top: 25%;
+  height: 50%; }
+  .puzzle-img-wrapper img {
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=main.css.map */
