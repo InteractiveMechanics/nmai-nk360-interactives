@@ -9,6 +9,7 @@ Init = (function() {
     var displayPuzzleScreen = function() {
     	$('#intro').addClass('hidden animated fadeOut');
     	$('#puzzle').removeClass('hidden').addClass('animated fadeIn');
+        Puzzle.buildGame();
     }
 
  

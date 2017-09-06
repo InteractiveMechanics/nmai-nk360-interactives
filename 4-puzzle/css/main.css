@@ -240,17 +240,133 @@ footer {
   margin-top: 0px;
   padding: 10px; }
   #puzzle .header-wrapper h1 {
-    font-size: 26px;
-    font-weight: 600; }
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: 0.5px; }
 
 .puzzle-img-wrapper {
   position: relative;
-  left: 10%;
-  width: 80%;
-  top: 25%;
-  height: 50%; }
+  left: 25%;
+  width: 50%;
+  margin-top: 23px; }
   .puzzle-img-wrapper img {
     width: 100%;
-    height: auto; }
+    height: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); }
+
+.card {
+  width: 200px;
+  height: 300px;
+  background: url("../../assets/placeholder_card_print.png");
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  position: absolute; }
+
+.card[data-card="1"] {
+  top: 100px;
+  left: 400px;
+  transform: rotate(7deg); }
+
+.card[data-card="2"] {
+  top: 200px;
+  left: 800px;
+  transform: rotate(17deg); }
+
+.card[data-card="3"] {
+  top: 350px;
+  left: 500px;
+  transform: rotate(-40deg); }
+
+.card[data-card="4"] {
+  top: 300px;
+  left: 500px;
+  transform: rotate(30deg); }
+
+.card[data-card="5"] {
+  top: 100px;
+  left: 700px;
+  transform: rotate(-10deg); }
+
+.card[data-card="6"] {
+  top: 100px;
+  left: 700px;
+  transform: rotate(32deg); }
+
+.card[data-card="7"] {
+  top: 200px;
+  left: 500px;
+  transform: rotate(-64deg); }
+
+.card[data-card="8"] {
+  top: 230px;
+  left: 430px;
+  transform: rotate(55deg); }
+
+.droppable-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  left: 10%;
+  position: relative;
+  margin-top: 35px;
+  z-index: 1052; }
+
+.droppable-widget {
+  font-weight: 600;
+  border: 3px solid black;
+  width: 25%;
+  text-align: center;
+  padding: 6px; }
+
+.draggable-widget {
+  transition: all 0.5s; }
+
+.ui-draggable-dragging {
+  transform: scale(0.65, 0.65) !important;
+  opacity: 0.9; }
+
+.modal {
+  top: 20px; }
+
+.modal-content {
+  height: 550px; }
+
+.modal-dialog {
+  max-width: 400px; }
+
+.modal-header {
+  flex-direction: column;
+  border-bottom: none;
+  padding: 40px 20px 20px;
+  cursor: move; }
+  .modal-header:after {
+    content: "";
+    border: 2px solid #DDDDDD;
+    margin-top: 15px;
+    width: 50px; }
+
+.modal-body small {
+  font-style: italic;
+  text-align: center;
+  display: block;
+  font-size: 65%; }
+.modal-body p {
+  margin-top: 40px; }
+
+.close[data-dismiss="modal"] {
+  position: absolute;
+  left: 110%;
+  top: 0%; }
+  .close[data-dismiss="modal"] span {
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: none;
+    font-weight: initial; }
 
 /*# sourceMappingURL=main.css.map */

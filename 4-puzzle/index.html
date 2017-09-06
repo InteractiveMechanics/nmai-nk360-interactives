@@ -113,6 +113,29 @@
     
     <!-- puzzle template -->
 
+    <!-- modal template -->
+     <script id="modal-template" type="text/x-jsrender">
+       
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">&ldquo; &rdquo;</h1>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+          
+                <div class="modal-body">
+                    <small>Marilyn Hudson, Three Afflicted Tribes of Fort Berthold. NMAI Interview</small>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis blandit augue ac viverra. Pellentesque hendrerit facilisis faucibus. Morbi sed fringilla lorem. Duis vulputate mi ac nunc vestibulum, id eleifend ante aliquet.</p>
+                </div>
+        
+       
+
+    </script>
+
     <div id="intro" class="animated fadeIn">
         <div class="intro-overlay"></div>
         <div class="intro-card hidden">
@@ -145,17 +168,30 @@
             <div class="puzzle-img-wrapper">
                 <img class="puzzle-img" src="assets/placeholder_luna.jpg">
             </div>
-            <div class="draggable-widget" data-card="1"></div>
-            <div class="draggable-widget" data-card="2"></div>
-            <div class="draggable-widget" data-card="3"></div>
-            <div class="draggable-widget" data-card="4"></div>
+            <button class="card" data-card="1">1</button>
+            <button class="card" data-card="2">2</button>
+            <button class="card" data-card="3">3</button>
+            <button class="card" data-card="4">4</button>
+            <button class="card" data-card="5">5</button>
+            <button class="card" data-card="6">6</button>
+            <button class="card" data-card="7">7</button>
+            <button class="card" data-card="8">8</button>
+
         </section>
 
         <section class="droppable-wrapper">
+            <div class="droppable-widget" data-theme="1">Homelands</div>
+            <div class="droppable-widget" data-theme="2">Kinship</div>
+            <div class="droppable-widget" data-theme="3">Nationhood</div>
         </section>
 
 
     </main>
+
+    <div class="modal fade" id="card-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog draggable-widget" data-theme="1" role="document">
+         </div>
+    </div> <!-- /.modal -->
 
 
     
@@ -187,5 +223,6 @@
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
+    <script src="./js/puzzle.js"></script>
 </body>
 </html>
