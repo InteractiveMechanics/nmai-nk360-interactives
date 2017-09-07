@@ -1,0 +1,88 @@
+.game {
+  height: 100vh;
+  width: 17840px;
+  position: relative;
+  overflow: hidden;
+
+  .game-world {
+    height: 100vh;
+    min-width: 100vh;
+    width: 17840px !important;
+    overflow: hidden;
+    position: relative;
+
+    .game-world__background, .game-world__midground, .game-world__foreground {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: url(../assets/bkgr.png) no-repeat;
+      z-index: 1;
+      background-size: cover;
+    }
+
+    .game-world__foreground {
+      background: url(../assets/foregr.png) no-repeat;
+      z-index: 3;
+      background-size: cover;
+    }
+
+    .game-world__midground {
+      background: url(../assets/midgr.png) no-repeat;
+      z-index: 2;
+      background-size: cover;
+    }
+  }
+}
+
+
+.salmon {
+  background: #fff;
+  width: 5em;
+  height: 2em;
+  margin-top: 50vh;
+  position: fixed;
+  top: -1em;
+  margin-left: 1em;
+  z-index: 10;
+}
+.hotspot {
+  width: 87px;
+  height: 87px;
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9;
+  background: url(../assets/randomHS.png) no-repeat;
+}
+
+
+#select-fish {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+  z-index: 90;
+
+  .select-fish-container {
+    z-index: 91;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+
+    @media screen and (max-width: 767px) {
+      padding:30px;
+    }
+  }
+}
