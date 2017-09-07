@@ -11,6 +11,7 @@ $(function(){
         Init.init();
         Instructions.init();
         Detail.init();
+        Explore.init();
 
     }, 'json');
 });

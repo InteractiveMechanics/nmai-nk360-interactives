@@ -5,11 +5,12 @@
 
 var data = function() {};
 $(function(){
-    $.get('./data/m4a1.json', function(response) {
+    $.get('./data/m1a1.json', function(response) {
         data = response;
 
         Init.init();
         Instructions.init();
+        Puzzle.init();
 
     }, 'json');
 });

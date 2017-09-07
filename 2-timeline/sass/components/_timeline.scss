@@ -1,0 +1,159 @@
+
+
+.transition-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+}
+
+.transition-content-wrapper {
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+        margin: 20px;
+    }
+    .btn-wrapper {
+        display: flex;
+        margin-top: 60px;
+        .btn {
+            margin: 20px;
+        }
+    }
+}
+
+.timeline-wrapper {
+    position: absolute;
+    left: 5%;
+    height: 103%;
+    width: 100%;
+    overflow: auto;
+}
+
+
+.timeline-track {
+    border-bottom: 1px solid #717171;
+    bottom: 17%;
+    position: absolute;
+    width: calc(#{$timeline-item-width} + #{$last-of-timeline-item-left} + 250px); // can we make this a calc?
+
+}
+
+.timeline-item {
+    background-color: #dedede;
+    border: none;
+    border-radius: 37px;
+    display: flex;
+    position: absolute;
+    text-align: initial;
+    width: $timeline-item-width;
+}
+
+.timeline-item[data-timeline="1"] {
+    left: 40px;
+    top: 400px;
+}
+
+.timeline-item[data-timeline="2"] {
+    left: 450px;
+    top: 200px;
+}
+
+.timeline-item[data-timeline="3"] {
+    left: 1100px;
+    top: 400px;
+}
+
+.timeline-item[data-timeline="4"] {
+    left: 1500px;
+    top: 200px;
+}
+
+.timeline-item[data-timeline="5"] {
+    left: $last-of-timeline-item-left;
+    top: 200px
+}
+
+.timeline-btn-img {
+    height: 75px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin: 2px -2px;
+    width: 75px;
+}
+
+.timeline-btn-text-wrapper {
+    padding: 10px;
+    h6 {
+        font-weight: 700;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+
+#prev-btn {
+    left: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+#next-btn {
+    left: 93%;
+    position: absolute;
+    top: 50%;
+}
+
+.lg-label-wrapper {
+    position: absolute;
+    bottom: 40px;
+    width: calc(#{$timeline-item-width} + #{$last-of-timeline-item-left} + 250px); // identical to .timeline-track
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    li {
+        display: inline;
+        h2 {
+            color: #777;
+            display: inline;
+            font-weight: 700;
+        }
+    }
+}
+
+.sm-label-wrapper {
+    bottom: 90px;
+    position: absolute;
+    h4 {
+        display: inline;
+        position: relative;
+    }   
+}
+
+.sm-label[data-timeline="1"] {
+     left: 40px;
+}
+
+.sm-label[data-timeline="2"] {
+     left: 450px;
+}
+
+.sm-label[data-timeline="3"] {
+     left: 1100px;
+}
+
+.sm-label[data-timeline="4"] {
+     left: 1500px;
+}
+
+.sm-label[data-timeline="5"] {
+     left: $last-of-timeline-item-left;
+}
+
