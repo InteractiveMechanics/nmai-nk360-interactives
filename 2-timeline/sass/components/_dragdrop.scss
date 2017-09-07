@@ -3,10 +3,19 @@
 	bottom: 0px;
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+	padding: 60px;
 	position: absolute;
 	width: 100%;
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+	}
 
+}
+
+#era-label-start {
+	width: 125px;
+	text-align: right;
 }
 
 
@@ -18,11 +27,16 @@
 	width: 75px;
 }
 
+[data-toggle="tooltip"] {
+	border-bottom: none;
+}
+
 .draggable-widget {
-	background-color: white;
-	height: 100px;
+	background-color: white; //white
+	height: 85px; //100px
 	position: absolute;
-	width: 350px;
+	width: 350px; //350px
+	border-radius: 65px;
 
 	display: flex;
     align-items: center;
@@ -44,29 +58,60 @@
 	}
 }
 
-.draggable-widget[data-draggable="1"] {
+.draggable-widget.dragged {
+	background-color: transparent;
+	border: none;
+	height: auto;
+	width: auto;
+
+	.draggable-text {
+		display: none;
+	}
+
+	.draggable-img {
+		border: none;
+		height: 72px;
+    	width: 72px;
+    	position: relative;
+    	left: -2px;
+	}
+}
+
+.draggable-widget[data-timeline="1"] {
 	left: 50px;
 	top: 150px;
 }
 
-.draggable-widget[data-draggable="2"] {
+.draggable-widget[data-timeline="2"] {
 	left: 450px;
 	top: 150px;
 }
 
-.draggable-widget[data-draggable="3"] {
+.draggable-widget[data-timeline="3"] {
 	left: 850px;
 	top: 150px;
 }
 
-.draggable-widget[data-draggable="4"] {
+.draggable-widget[data-timeline="4"] {
 	left: 200px;
 	top: 300px;
 }
 
-.draggable-widget[data-draggable="5"] {
+.draggable-widget[data-timeline="5"] {
 	left: 750px;
 	top: 300px;
 }
+
+//active class for draggable
+.ui-draggable-dragging {
+	background-color: transparent;
+	height: auto;
+	width: auto;
+
+	.draggable-text {
+		display: none;
+	}
+}
+
 
 

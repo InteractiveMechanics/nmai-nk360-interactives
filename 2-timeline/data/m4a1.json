@@ -4,5 +4,246 @@
         "title": "Pacific Northwest Fish Wars Lesson",
         "url": "http://nmai.si.edu/nk360"
     },
-    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
+    "eras": [
+        {
+            "Id": 1,
+            "StartDate": "Time Immemorial",
+            "Milestone1": "1800s",
+            "Milestone2": "1900s",
+            "Milestone3": "1974",
+            "EndDate": "1974",
+            "Moments": [
+                {
+                    "id": 1,
+                    "date": "Time Immemorial",
+                    "year": "Time Immemorial",
+                    "title": "Era 1, Moment 1", 
+                    "description": "Here is the description text for Era 1, moment 1",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 1",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 1",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": "incorrect message E1:M1"
+                },
+                {
+                    "id": 2,
+                    "date": "1856",
+                    "year": "1865",
+                    "title": "Era 1, Moment 2", 
+                    "description": "Here is the description text for Era 1, moment 2",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 2",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 2",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": "incorrect message E1:M2"
+                },
+                {
+                    "id": 3,
+                    "date": "January 1917",
+                    "year": "1917",
+                    "title": "Here is a Moment with a Longer Title", 
+                    "description": "Here is the description text for Era 1, moment 3",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 3",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 1. It may be a bit longer than the others",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": "incorrect message E1:M3"
+                },
+                {
+                    "id": 4,
+                    "date": "1963-1968",
+                    "year": "1963",
+                    "title": "Title of Moderate Length", 
+                    "description": "Here is the description text for Era 1, moment 4",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 4",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 4",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": "incorrect message E1:M4"
+                },
+                 {
+                    "id": 5,
+                    "date": "December 31, 1973",
+                    "year": "1973",
+                    "title": "Era 1, Moment 5", 
+                    "description": "Here is the description text for Era 1, moment 1",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 1",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 5",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": "incorrect message E1:M5"
+                }
+
+            ]
+        },
+        {
+            "Id": 2,
+            "StartDate": "1974",
+            "EndDate": "1979",
+            "Moments": [
+                {
+                    "id": 1,
+                    "date": "January 1974",
+                    "year": "1974",
+                    "title": "Era 2, Moment 1", 
+                    "description": "Here is the description text for Era 2, moment 1",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 2, Moment 1",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 2, moment 1",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 2,
+                    "date": "March 1975",
+                    "year": "1975",
+                    "title": "Era 2, Moment 2", 
+                    "description": "Here is the description text for Era 2, moment 2",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 2, Moment 2",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 2, moment 2",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 3,
+                    "date": "August 3, 1975",
+                    "year": "1975",
+                    "title": "Here is a Moment with a Longer Title", 
+                    "description": "Here is the description text for Era 2, moment 3",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 2, Moment 3",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 2, moment 3. It may be a bit longer than the others",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 4,
+                    "date": "March 1976 - November 1978",
+                    "year": "1978",
+                    "title": "Title of Moderate Length", 
+                    "description": "Here is the description text for Era 2, moment 4",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 1, Moment 1",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 1, moment 4",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                 {
+                    "id": 5,
+                    "date": "December 31, 1979",
+                    "year": "1979",
+                    "title": "Era 2, Moment 5", 
+                    "description": "Here is the description text for Era 2, moment 5",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 2, Moment 5",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 2, moment 5",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                }
+
+            ]
+        },
+        {
+            "Id": 3,
+            "StartDate": "1979",
+            "EndDate": "Present",
+            "Moments": [
+                {
+                    "id": 1,
+                    "date": "1981-1989",
+                    "year": "1989",
+                    "title": "Era 3, Moment 1", 
+                    "description": "Here is the description text for Era 3, moment 1",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 3, Moment 1",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 3, moment 1",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 2,
+                    "date": "May 26, 1992",
+                    "year": "1992",
+                    "title": "Era 3, Moment 2", 
+                    "description": "Here is the description text for Era 3, moment 2",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 3, Moment 2",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 3, moment 2",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 3,
+                    "date": "2001-2008",
+                    "year": "2001",
+                    "title": "Here is a Moment with a Longer Title", 
+                    "description": "Here is the description text for Era 3, moment 3",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 3, Moment 3",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 3, moment 1. It may be a bit longer than the others",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                {
+                    "id": 4,
+                    "date": "September 10, 2010 - April 23, 2014",
+                    "year": "2010",
+                    "title": "Title of Moderate Length", 
+                    "description": "Here is the description text for Era 3, moment 4",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 3, Moment 4",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 3, moment 4",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                },
+                 {
+                    "id": 5,
+                    "date": "November 6, 2016",
+                    "year": "2016",
+                    "title": "Era 3, Moment 5", 
+                    "description": "Here is the description text for Era 3, moment 5",
+                    "image": "../assets/placeholder_luna_sm.jpg",
+                    "caption": "image caption for Era 3, Moment 5",
+                    "quote": "",
+                    "credit": "",
+                    "excerpt": "Here is the excerpt for Era 3, moment 5",
+                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "incorrect": ""
+                }
+
+            ]
+        }
+            
+           
+    ]
 }

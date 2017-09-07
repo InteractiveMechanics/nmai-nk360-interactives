@@ -17,3 +17,15 @@
 @import '../shared/sass/components/buttons';
 @import '../shared/sass/components/menu';
 @import '../shared/sass/components/gallery';
+
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/mixins';
+
+@import 'components/layout';
+@import 'components/intro';
+@import 'components/puzzle';
+@import 'components/dragdrop';
+@import 'components/modal';
+

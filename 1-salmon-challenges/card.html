@@ -1,0 +1,235 @@
+<html>
+<head>
+	<title></title>
+
+	<!-- Include shared stylesheets -->
+    <link rel="stylesheet" href="./shared/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./shared/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="./shared/js/slick/slick.css" />
+    <link rel="stylesheet" href="./shared/css/animate/animate.css" />
+    
+    <link rel="stylesheet" href="./shared/code/upperleftmenu/menu.css" />
+
+    <!-- Include project stylesheets -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+	<style type="text/css">
+		body {
+			background: #aaa;
+			padding: 100px;
+		}
+
+		.card {
+		  background: #FFFFFF;
+		  max-width: 500px;
+		  margin: 100px auto;
+		  border-radius: 12px;
+		  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		  box-sizing: border-box;
+		  padding: 20px 48px;
+		  min-height: 600px;
+		}
+
+		.card h3 {
+			font-size: 1.5em;
+			line-height: 35px;
+		}
+
+		.card:before {
+			background: #CABDB6;
+		    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+		    left: -5px;
+		    top: 4px;
+		    transform: rotate(-2.5deg);
+		}
+
+
+		.card-wrapper {
+		  z-index: 30;
+		  position: relative;
+		  /*width: 350px;
+		  height: 250px;
+		  position: relative;
+		  z-index: 30;
+		  position: relative;*/
+		}
+		 
+		.card-wrapper > .card {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  -webkit-transition: top 0.3s ease, left 0.3s ease;
+		  -moz-transition: top 0.3s ease, left 0.3s ease;
+		  -o-transition: top 0.3s ease, left 0.3s ease;
+		  -ms-transition: top 0.3s ease, left 0.3s ease;
+		  transition: top 0.3s ease, left 0.3s ease;
+		  width: 550px;
+		  margin: auto;
+		  position: absolute;
+		  left: 0; 
+		  right: 0;
+		}
+
+		.card-wrapper .card-before {
+		  opacity: .3;
+		  -webkit-transform: rotate(-2deg);
+		  -moz-transform: rotate(-2deg);
+		  -o-transform: rotate(-2deg);
+		  -ms-transform: rotate(-2deg);
+		  transform: rotate(-2deg);
+		}
+		 
+		.card-wrapper .card-after {
+		    left: 0px;
+		    background: white;
+		    top: 0px;
+		    opacity: .3;
+		    -webkit-transform: rotate(2deg);
+		    -moz-transform: rotate(2deg);
+		    -o-transform: rotate(2deg);
+		    -ms-transform: rotate(2deg);
+		    transform: rotate(2deg);
+		}
+
+		.card-wrapper > .card:hover {
+		  -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+		  box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+		}
+	</style>
+
+
+    <!-- Include jquery, jquery ui, touchpunch -->
+    <script src="./shared/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./shared/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="./shared/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="./shared/js/jsrender/jsrender.min.js"></script>
+
+    <!-- Include bootstrap -->
+    <script src="./shared/js/tether/tether.min.js"></script>
+    <script src="./shared/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Include lightGallery -->
+    <script src="./shared/js/lightgallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Include slick -->
+    <script src="./shared/js/slick/slick.min.js"></script>
+
+    <!-- Include shared code -->
+    <script src="./shared/code/analytics.js"></script>
+    <script src="./shared/code/audio/audio.js"></script>
+    <script src="./shared/code/tooltips/tooltips.js"></script>
+    <script src="./shared/code/instructions/instructions.js"></script>
+    <script src="./shared/code/lightbox/lightbox.js"></script>
+    <script src="./shared/code/upperleftmenu/menu.js"></script>
+
+
+</head>
+<body>
+
+	<div class="slider-wrappar">
+
+
+		<div class="card-wrapper">
+	 
+		  <div class="card card-before">
+		    <p></p>
+		  </div>
+		 
+		  <div class="card card-after">
+		    <p></p>
+		  </div>
+		  
+		  <div class="card suitclubs">
+
+		  	<div class="slider">
+
+		  		<!--<div>
+		  			<p class="text-center">The Return Upstream</p>
+					<h2 class="text-center">Salmon Challenges</h2>
+
+					<p class="image-credit">
+						Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
+					</p>
+
+					<p>
+						Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
+					</p>
+
+					<p class="text-center">
+						<a href="javascript: void(0);"  onclick="getStarted();">Ready to get started?</a>
+					</p>
+		  		</div>-->
+
+		  		<div class="text-center">
+		  			<p class="all-caps">You've encountered an obstacle</p>
+		  			<h2 class="">Manmade Dam</h2>
+		  			<hr style="width:25%" />
+
+		  			<h3>The dam is blocking your path. <br /> How will you make it past?</h3>
+		  			<p class="all-caps">
+		  				Pick one option to proceed
+		  			</p>
+
+		  			<div class="quiz-options btn-group-vertical" role="group" data-answered="false">
+
+			    		<button type="button" class="btn btn-default right-answer">
+			    			Use the fish ladder
+			    		</button>
+
+
+			    		<button type="button" class="btn btn-default wrong-answer">
+			    			Try to find another way around
+			    		</button>
+
+
+			    		<button type="button" class="btn btn-default wrong-answer">
+			    			Swim through the dam
+			    		</button>
+
+			    	</div>
+
+			    	<p class="hidden">
+			    		Oh no! You try to find your way past the dam, but you're not able to make it through safely/
+			    	</p>
+
+			    	<p class="hidden">
+			    		<strong>
+			    			You lose one fish.
+			    		</strong>
+			    	</p>
+		  		</div>
+
+		  	</div>
+
+		  </div>
+		 
+		</div>
+
+		<div class="overlay"></div>
+
+	</div>
+
+	<script type="text/javascript">
+		$('body').on('click tap', '.quiz-options button', quizHandler);
+
+		function quizHandler() {
+			var isAlreadyAnswered = $('.quiz-options').data('answered');
+
+			if(!isAlreadyAnswered) {
+				var isRightAnswer = $(this).hasClass('right-answer');
+
+				if(isRightAnswer) {
+ 					$(this).addClass('correct');
+				} else {
+					$(this).addClass('wrong');
+					$('.right-answer').addClass('correct');
+				}
+
+				$('.quiz-options').data('answered', true);
+				$('.quiz-options').addClass('quiz-answered');
+			}
+		}
+	</script>
+
+</body>
+</html>
