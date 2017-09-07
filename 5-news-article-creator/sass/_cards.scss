@@ -23,4 +23,21 @@
             }
         }
     }
+
+    .card-slider {
+        .card-slider-container {
+            .step {
+                &.selected {
+                    .selected-overlay {
+                        opacity: 1;
+                    }
+                }
+
+                .selected-overlay {
+                    display: block;
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }

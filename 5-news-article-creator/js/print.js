@@ -6,7 +6,7 @@ Print = (function() {
         bindEvents();
     }
     var bindEvents = function() {
-        $('.print-preview-btn').on('click tap', openPrintPreview);
+        $(document).on('click tap', '.print-preview-btn', openPrintPreview);
     }
 
     var openPrintPreview = function() {

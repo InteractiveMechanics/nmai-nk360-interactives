@@ -3,10 +3,18 @@ $(function() {
      * Universal function to activate the lightGallery
      */
 
-    $('body').on('click tap', '[data-gallery]', function(){
+    $(document).on('click tap', '[data-gallery]', function(){
+        var credit = '';
+        var caption = '';
+
         var image = $(this).data('gallery-image');
-        var credit = $(this).data('gallery-credit');
-        var caption = $(this).data('gallery-caption');
+
+        if ($(this).data('gallery-credit')) {
+            credit = $(this).data('gallery-credit');
+        }
+        if ($(this).data('gallery-caption')) {
+            caption = $(this).data('gallery-caption');
+        }
 
         $(this).lightGallery({
             download: true,

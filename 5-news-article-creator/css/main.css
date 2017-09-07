@@ -188,6 +188,11 @@ main {
       padding: 40px; }
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px; }
+  #step-by-step-cards .card-slider .card-slider-container .step.selected .selected-overlay {
+    opacity: 1; }
+  #step-by-step-cards .card-slider .card-slider-container .step .selected-overlay {
+    display: block;
+    opacity: 0; }
 
 #navigation .nav-arrow {
   position: fixed;

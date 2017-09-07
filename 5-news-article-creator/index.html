@@ -109,8 +109,33 @@
 
 
     <!-- Main interactive templates -->
-    <script>
-        
+    <script id="imageTemplate" type="text/x-jsrender">
+        <div class="image-step step" data-id="{{:#index}}">
+            <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
+            <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
+            <div class="selected-overlay">Selected!</div>
+        </div>
+    </script>
+
+    <script id="quoteTemplate" type="text/x-jsrender">
+        <div class="quote-step step" data-id="{{:#index}}">
+            <p>"{{:text}}" 
+                <small>{{:source}}</small>
+            </p>
+            <div class="selected-overlay">Selected!</div>
+        </div>
+    </script>
+    
+    <script id="imageCaptionTemplate" type="text/x-jsrender">
+        <div class="image-caption-step step" data-id="{{:id}}">
+            <div class="image-caption-container">
+                <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
+                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
+            </div>
+            <div class="image-caption-form">
+                <textarea class="image-caption-text" placeholder="Write your caption here!"></textarea>
+            </div>
+        </div>
     </script>
 
 
@@ -161,6 +186,13 @@
                     <h1 class="text-center">What images support your article?</h1>
                     <div class="divider"></div>
                     <p>Select at least one image to use in your news article to help support your argument. You'll write captions for these images next.</p>
+                    <div id="image-selector" class="card-slider">
+                        <div class="card-slider-container"></div>
+                        <div class="card-slider-nav">
+                            <div class="nav-arrow nav-arrow-left"></div>
+                            <div class="nav-arrow nav-arrow-right"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="step step-image-captions" data-title="Image Captions">
@@ -169,6 +201,14 @@
                     <h1 class="text-center">Describe your images</h1>
                     <div class="divider"></div>
                     <p>Write a caption for your selected images and describe how they tie into your article. Star the image if you would like it to be your featured image.</p>
+                    <div id="image-captioning" class="card-slider">
+                        <h2 class="text-center">No images selected, yet!</h2>
+                        <div class="card-slider-container hidden"></div>
+                        <div class="card-slider-nav hidden">
+                            <div class="nav-arrow nav-arrow-left"></div>
+                            <div class="nav-arrow nav-arrow-right"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="step step-quotes" data-title="Quotes">
@@ -177,6 +217,13 @@
                     <h1 class="text-center">What's the word on the street?</h1>
                     <div class="divider"></div>
                     <p>Select at least one quote to use in your news article to help support your case. Think about including statements from different perspectives to tell your story.</p>
+                    <div id="quote-selector" class="card-slider">
+                        <div class="card-slider-container"></div>
+                        <div class="card-slider-nav">
+                            <div class="nav-arrow nav-arrow-left"></div>
+                            <div class="nav-arrow nav-arrow-right"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="step step-headline" data-title="Headline">
