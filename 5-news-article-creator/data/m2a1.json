@@ -1,0 +1,71 @@
+{
+    "title": "News Article Creator",
+    "returnTo": {
+        "title": "Northern Plains Treaties",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
+    "question": "What kinds of actions can lead to justice?",
+    "images": [
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "credit": ""
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "credit": ""
+        }
+    ],
+    "quotes": [
+        {
+            "text": "When Indians gave their word and smoked the pipe, they sent the smoke to the Creator. It was sacred, and the treaty was good in the eyes of all. The white men had to go back and ask other white men if they could keep their promises and make good on their word.",
+            "source": "Vine Deloria Jr., quoted in the introduction to <em>Nation to Nation: Treaties Between the United States and American Indian Nations</em>, ed. Suzan Shown Harjo (Washington, D.C. and New York: Smithsonian Institution, 2014), 3"
+        },
+        {
+            "text": "“The man who came was from the government. He wanted to make a treaty with us, and to give us presents, blankets and guns, flint and steel, and knives. The Head Chief told him that we needed none of these things. He said, “We have our buffalo and corn. These things the Ruler gave to us, and they are all we need…We do not want your presents, and we do not want you to come into our country."",
+            "source": "Curly Chief, “Keep Your Presents” in Native American Testimony, ed. Peter Nabokov (New York: Penguin Books, 1999)"
+        }
+        {
+            "text": "“The United States, then, have unequivocally acceded to that great and broad rule [Discovery] by which its civilized inhabitants now hold this country. They hold, and assert in themselves, the title by which it was acquired. They maintain, as all others have maintained, that discovery gave an exclusive right to extinguish the Indian title of occupancy, either by purchase or by conquest.”" ,
+            "source": "Johnson v. M’Intosh, 21 U.S. (8 Wheat) 543 (1823)"
+        }
+        {
+            "text": "“I think by 1851 our tribes are still in a state of shock and recovery. The loss of buffalo, the encroachment by that time—westward expansion was occurring. Forts were being established. The fur trade was thriving. Life was changing for them; no longer were they able to go to their hunting grounds and bring home enough buffalo.”",
+            "source": "Marilyn Hudson (Mandan/Hidatsa), NMAI Interview, August 2016"
+        }
+        {
+            "text": "“Our people would talk about certain things that they wanted in those treaties. For instance, in that 1851 treaty they wanted to keep the miners and the settlers and the trappers and the traders and the ranchers out of our land. And they asked for protection, they said, ‘Keep them out of our land…’ And that was the main point that they wanted. And they thought they got it.”",
+            "source": "Grant Bull Tail, (Crow) NMAI Interview, August 2016"
+        }
+        {
+            "text": "“. . . it will be expected that each nation will be held responsible for depredations committed within its territory, unless it can be clearly shown that the people of some other nation committed them, and then that nation will be held responsible.”",
+            "source": "Commissioner David D. Mitchell, quoted in a newspaper account of the treaty proceedings published in a St. Louis newspaper, the Missouri Republican, October 27, 1851"
+        }
+        {
+            "text": "“. . . In doing this it is not intended to take any of your lands away from you, or to destroy your rights to hunt, or fish, or pass over the country, as heretofore.”",
+            "source": "Commissioner David D. Mitchell, quoted in a newspaper account of the treaty proceedings published in a St. Louis newspaper, the Missouri Republican, October 27, 1851"
+        }
+        {
+            "text": "“I have thought and observed much on this subject, and have no hesitation in saying, that an intermixture with the Anglo-Saxon race is the only means by which the Indians of this continent can be partially civilized.”",
+            "source": "Commissioner David D. Mitchell, quoted from the 1851 Annual Report of the Secretary of the Interior, December 2, 1851"
+        }
+        {
+            "text": "“When I reached out to Washington the Great Father explained to me what the treaty was, and showed me that the interpreters had deceived me. All I want is right and justice.”",
+            "source": "Red Cloud, in a speech at a reception in his honor at the Cooper Union “The Great Chief: Red Cloud Meets His White Brethren at Cooper Institute,” New York Times, June 17, 1870"
+        }
+        {
+            "text": "“. . . officials still hoped to effect an arrangement whereby, in return for cash payment and other considerations, the Sioux would cede the Black Hills or at least consent to the presence of American citizens on their land.”",
+            "source": "Wayne R. Kline, ed., The Black Hills Journals of Colonel Richard Irving Dodge (Norman: University of Oklahoma Press), 10"
+        }
+        {
+            "text": "“I do not want to sell or lease any land to the government—not even as much as this.”",
+            "source": "Peter Cozzens, “President Grant’s Uncivil War,” Smithsonian Magazine, November 2016"
+        }
+        {
+            "text": "“Under the Fort Laramie Treaty of 1868, the United States pledged that the Great Sioux Reservation, including the Black Hills, would be ‘set apart for the absolute and undisturbed use and occupation’ of the Sioux Nation.”",
+            "source": "United States v. Sioux Nation of Indians, 448 U.S. 371 (1980) No. 79-639. Argued: March 24, 1980 Decided: June 30, 1980"
+        }
+    ]
+}
