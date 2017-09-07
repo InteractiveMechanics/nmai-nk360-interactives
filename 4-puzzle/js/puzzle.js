@@ -64,10 +64,8 @@ Puzzle = (function() {
 
                     } else {
                         ui.draggable.draggable('option', 'revert', 'valid');
-                        setTimeout(function() {   ui.draggable.tooltip('show'); }, 1000);
-
-                        setTimeout(function() {   ui.draggable.tooltip('hide'); }, 3000);
-                       
+                        $(this).css('border', '3px solid red');
+                        setTimeout(function() {  $('.droppable-widget').css('border', '3px solid black'); }, 1000);
                        
                     }
             
