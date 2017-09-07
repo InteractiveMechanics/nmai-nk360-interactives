@@ -176,6 +176,10 @@ footer {
   -o-animation: fadeIn 1s 1 forwards;
   animation: fadeIn 1s 1 forwards; }
 
+.disabled-link {
+  pointer-events: none;
+  cursor: default; }
+
 #intro {
   background-color: orange;
   height: 100vh;
@@ -186,12 +190,14 @@ footer {
   height: 100vh;
   width: 100vw; }
 
-#intro {
+#intro,
+#learning-points {
   background: #ddd;
   height: 100vh;
   width: 100vw; }
 
-.intro-overlay {
+.intro-overlay,
+.learning-points-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   left: 0px;
@@ -200,7 +206,8 @@ footer {
   top: 0px;
   width: 100%; }
 
-.intro-card {
+.intro-card,
+.learning-points-card {
   background-color: white;
   border-radius: 15px;
   height: 80%;
@@ -209,21 +216,29 @@ footer {
   top: 10%;
   width: 33%;
   padding: 25px; }
-  .intro-card .header-wrapper {
+  .intro-card .header-wrapper,
+  .learning-points-card .header-wrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 40px; }
-    .intro-card .header-wrapper h1 {
+    .intro-card .header-wrapper h1,
+    .learning-points-card .header-wrapper h1 {
       font-size: 26px;
       line-height: 1.4; }
-    .intro-card .header-wrapper:after {
+    .intro-card .header-wrapper:after,
+    .learning-points-card .header-wrapper:after {
       content: '';
       border-bottom: 3px solid #ddd;
       width: 33%;
       bottom: -10px;
       position: relative;
       left: 33%; }
+  .intro-card .text-wrapper h6,
+  .learning-points-card .text-wrapper h6 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px; }
 
 .subheader {
   padding-left: 0px; }
@@ -244,15 +259,17 @@ footer {
     font-weight: 600;
     letter-spacing: 0.5px; }
 
-.puzzle-img-wrapper {
+.puzzle-img-wrapper,
+.lg-wrapper {
   position: relative;
   left: 25%;
   width: 50%;
   margin-top: 23px; }
-  .puzzle-img-wrapper img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); }
+
+.puzzle-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); }
 
 .card {
   width: 200px;
@@ -302,6 +319,47 @@ footer {
   left: 430px;
   transform: rotate(55deg); }
 
+#complete-overlay {
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.65); }
+  #complete-overlay .text-wrapper {
+    color: white;
+    width: 40%;
+    left: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    #complete-overlay .text-wrapper h1 {
+      font-size: 50px;
+      letter-spacing: 2px;
+      margin-bottom: 40px; }
+    #complete-overlay .text-wrapper p {
+      margin-bottom: 80px; }
+  #complete-overlay .btn-wrapper button {
+    margin: 15px;
+    color: white; }
+
+.zoom-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: 15px; }
+
+.read-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+
 .droppable-wrapper {
   width: 80%;
   display: flex;
@@ -321,7 +379,8 @@ footer {
 .draggable-widget {
   transition: all 0.5s; }
 
-.ui-draggable-dragging {
+.ui-draggable-dragging,
+.ui-draggable .dragged {
   transform: scale(0.65, 0.65) !important;
   opacity: 0.9; }
 

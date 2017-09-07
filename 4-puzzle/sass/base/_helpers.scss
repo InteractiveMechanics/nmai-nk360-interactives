@@ -24,3 +24,8 @@
     -o-animation: fadeIn 1s 1 forwards;
     animation: fadeIn 1s 1 forwards; 
 }
+
+.disabled-link {
+   pointer-events: none;
+   cursor: default;
+}

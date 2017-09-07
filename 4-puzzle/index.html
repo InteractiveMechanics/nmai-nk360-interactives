@@ -150,6 +150,28 @@
             <div class="text-wrapper">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
                 <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
+
+                <h6>Ready to get started?</h6>
+            </div>
+        </div>
+    </div>
+
+    <div id="learning-points" class="hidden">
+        <div class="learning-points-overlay"></div>
+        <div class="learning-points-card hidden">
+            <div class="header-wrapper">
+                <ul class="subheader">
+                    <li>Homelands</li>
+                    <li>Kinship</li>
+                    <li>Nationhood</li>
+                </ul>
+                <h1>How do Native people and Nations experience belonging?</h1>
+            </div>
+            <div class="text-wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
+                <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
+
+                
             </div>
         </div>
     </div>
@@ -165,8 +187,15 @@
         </section>
 
         <section class="puzzle-wrapper">
-            <div class="puzzle-img-wrapper">
-                <img class="puzzle-img" src="assets/placeholder_luna.jpg">
+            <div id="caption" style="display:none">
+                <h4>Caption for Placeholder Image</p>
+            </div>  
+            
+            <div class="puzzle-img-wrapper">    
+                <a href="assets/placeholder_luna.jpg" data-sub-html="#caption" class="lg-link disabled-link">
+                    <img class="puzzle-img" src="assets/placeholder_luna.jpg">
+                    <span class="zoom-icon hidden">&#x1F50D;</span>
+                </a>
             </div>
             <button class="card" data-card="1">1</button>
             <button class="card" data-card="2">2</button>
@@ -179,12 +208,36 @@
 
         </section>
 
+        <section class="read-more hidden">
+            <button class="btn btn-lg" id="read-more-btn">Read more about this image</button>
+        </section>
+
         <section class="droppable-wrapper">
             <div class="droppable-widget" data-theme="1">Homelands</div>
             <div class="droppable-widget" data-theme="2">Kinship</div>
             <div class="droppable-widget" data-theme="3">Nationhood</div>
         </section>
 
+        <section id="complete-overlay" class="hidden">
+            <div class="text-wrapper">
+
+                <ul class="subheader">
+                    <li>Homelands</li>
+                    <li>Kinship</li>
+                    <li>Nationhood</li>
+                </ul>
+
+                 <h1>Puzzle Complete</h1>
+
+                 <p>You've completed this puzzle. Explore and save the iconic image you've uncovered. Once you're finished, return to the lesson module to continue learning about Northern Plains history and culture.</p>
+
+                 <div class="btn-wrapper">
+                    <button class="btn btn-lg">Back to Module</button>
+                    <button id="explore-img-btn" class="btn btn-lg">Explore Image</button>
+                 </div>
+
+             </div>
+        </section>
 
     </main>
 

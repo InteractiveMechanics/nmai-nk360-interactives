@@ -1,10 +1,12 @@
-#intro {
+#intro,
+#learning-points {
 	background: #ddd;
 	height: 100vh;
 	width: 100vw;
 }
 
-.intro-overlay {
+.intro-overlay,
+.learning-points-overlay {
 	background-color: rgba(0, 0, 0, 0.7);
 	height: 100%;
 	left: 0px;
@@ -14,7 +16,8 @@
 	width: 100%;
 }
 
-.intro-card {
+.intro-card,
+.learning-points-card {
 	background-color: white;
 	border-radius: 15px;
 	height: 80%;
@@ -41,6 +44,14 @@
 			position: relative;
 			left: 33%;
 		}
+	}
+	.text-wrapper {
+		h6 {
+			text-align: center;
+    		font-weight: 600;
+    		margin-top: 50px;
+		}
+		
 	}
 
 }

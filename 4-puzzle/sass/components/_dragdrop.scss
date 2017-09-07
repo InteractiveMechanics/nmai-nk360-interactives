@@ -22,7 +22,8 @@
 
 
 //active class for draggable
-.ui-draggable-dragging {
+.ui-draggable-dragging,
+.ui-draggable .dragged {
 	transform: scale(0.65, 0.65) !important;
 	opacity: 0.9;
 }

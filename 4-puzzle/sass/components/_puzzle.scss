@@ -14,16 +14,18 @@
 	}
 }
 
-.puzzle-img-wrapper {
+.puzzle-img-wrapper,
+.lg-wrapper {
 	position: relative;
 	left: 25%;
     width: 50%;
     margin-top: 23px;
-	img {
-		width: 100%;
-		height: auto;
-		box-shadow: 0px 0px 15px rgba(0,0,0, 0.9);
-	}
+}
+
+.puzzle-img {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 15px rgba(0,0,0, 0.9);
 }
 
 .card {
@@ -83,3 +85,53 @@
 	transform: rotate(55deg);
 }
 
+#complete-overlay {
+	height: 100vh;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.65);
+	.text-wrapper {
+		color: white;
+		width: 40%;
+		left: 30%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    	height: 100%;
+    	h1 {
+    		font-size: 50px;
+    		letter-spacing: 2px;
+    		margin-bottom: 40px;
+    	}
+    	p {
+    		margin-bottom: 80px;
+    	}
+	}
+	.btn-wrapper {
+		button {
+			margin: 15px; 
+			color: white;
+		}
+	}
+
+}
+
+.zoom-icon {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
+
+.read-more {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
