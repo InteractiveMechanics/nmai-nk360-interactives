@@ -15,4 +15,14 @@
         padding: 50px;
         z-index: 10;
     }
+    .close-preview {
+        width: 44px;
+        height: 44px;
+        display: block;
+        background-image: url(../shared/images/icon-close.svg);
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        right: -60px;
+    }
 }

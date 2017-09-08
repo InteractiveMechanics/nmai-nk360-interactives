@@ -7,6 +7,7 @@ Print = (function() {
     }
     var bindEvents = function() {
         $(document).on('click tap', '.print-preview-btn', openPrintPreview);
+        $(document).on('click tap', '.close-preview', closePrintPreview);
     }
 
     var openPrintPreview = function() {
@@ -19,7 +20,7 @@ Print = (function() {
     var closePrintPreview = function() {
         $('#print-preview').removeClass('show');
         setTimeout(function() {
-            that.addClass('hidden');
+            $('#print-preview').addClass('hidden');
         }, 500);
     }
     var activatePrintPreview = function() {

@@ -127,17 +127,24 @@ footer {
 .activity-menu-wrapper > div {
   z-index: 100; }
 .activity-menu-wrapper .icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 99px;
+  width: 36px;
+  height: 36px;
   margin: 10px 5px;
-  display: inline-block; }
+  display: inline-block;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all;
+  cursor: pointer; }
+  .activity-menu-wrapper .icon:last-of-type {
+    margin-right: 15px; }
+  .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
+    opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-color: blue; }
+    background-image: url(../images/icon-info.svg); }
   .activity-menu-wrapper .icon.icon-home {
-    background-color: red; }
+    background-image: url(../images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
-    background-color: yellow; }
+    background-image: url(../images/icon-print.svg); }
 
 [data-gallery] {
   width: 32px;
@@ -247,5 +254,14 @@ main {
     background: white;
     padding: 50px;
     z-index: 10; }
+  #print-preview .close-preview {
+    width: 44px;
+    height: 44px;
+    display: block;
+    background-image: url(../shared/images/icon-close.svg);
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    right: -60px; }
 
 /*# sourceMappingURL=main.css.map */
