@@ -195,6 +195,10 @@ main {
       padding: 40px; }
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px; }
+  #step-by-step-cards .featured {
+    background: red;
+    width: 44px;
+    height: 44px; }
   #step-by-step-cards .card-slider .card-slider-container .step.selected .selected-overlay {
     opacity: 1; }
   #step-by-step-cards .card-slider .card-slider-container .step .selected-overlay {

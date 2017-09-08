@@ -12,6 +12,7 @@ Cards = (function() {
     var totalCount;
     var imageCount;
     var quoteCount;
+    var featured;
 
     var init = function() {
         Cards.images = new Array();
@@ -98,6 +99,7 @@ Cards = (function() {
         $(document).on('click tap', '.btn-theme', setTheme);
         $(document).on('click tap', '.image-step', toggleImage);
         $(document).on('click tap', '.quote-step', toggleQuote);
+        $(document).on('click tap', '.featured', toggleFeatured);
 
         $(document).on('change', '.image-caption-text', setCaption);
 
@@ -234,6 +236,28 @@ Cards = (function() {
     var getQuotes = function() {
         return Cards.quotes;
     }
+    var getFeatured = function() {
+        return Cards.featured;
+    }
+
+
+    var toggleFeatured = function() {
+        var id = $(this).parent().parent().data('id');
+
+        if (!Cards.featured) {
+            $(this).addClass('active');
+            Cards.featured = id;
+        } else {
+            if (Cards.featured == id) {
+                $(this).removeClass('active');
+                Cards.featured = null;
+            } else {
+                $('.featured').removeClass('active');
+                $(this).addClass('active');
+                Cards.featured = id;
+            }
+        }
+    }
     
 
     var updateWordCount = function() {
@@ -272,6 +296,7 @@ Cards = (function() {
         getMasthead: getMasthead,
         getHeadline: getHeadline,
         getImages: getImages,
-        getQuotes: getQuotes
+        getQuotes: getQuotes,
+        getFeatured: getFeatured
     }
 })();

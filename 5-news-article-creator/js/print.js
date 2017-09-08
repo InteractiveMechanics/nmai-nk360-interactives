@@ -33,12 +33,43 @@ Print = (function() {
         var theme = Cards.getTheme();
         var masthead = Cards.getMasthead();
         var headline = Cards.getHeadline();
+        var images = Cards.getImages();
+        var quotes = Cards.getQuotes();
+        var featured = Cards.getFeatured();
 
         // Then generate the newspaper
         $('.paper-preview-container').addClass(theme);
         $('.paper-preview-article').html(article);
         $('.paper-preview-masthead .byline').text(masthead);
         $('.paper-preview-headline').text(headline);
+        
+        $.each(images, function(key, val){
+            var html = '';
+            if (featured){
+                html += '<figure class="featured">';
+            }
+            else {
+                html += '<figure>';
+            }
+            html += '<img src="' + val.url + '" alt="' + val.credit + '" title="' + val.credit + '" />';
+            html += '<figcaption>';
+            if (val.caption){
+                html += val.caption + ' ';
+            }
+            html += '<em>' + val.credit + '</em></figcaption>';
+            html += '</figure>';
+
+            $('.paper-preview-article').append(html);
+        });
+        $.each(quotes, function(key, val){
+            var html = '';
+            html += '<blockquote class="blockquote">';
+            html += '<p>' + val.text + '</p>';
+            html += '<footer class="blockquote-footer">' + val.source + ' </footer>';
+            html += '</blockquote>';
+
+            $('.paper-preview-article').append(html);
+        });
     }
     var buildArticleCopy = function(articleArray) {
         var html = '<p>';
