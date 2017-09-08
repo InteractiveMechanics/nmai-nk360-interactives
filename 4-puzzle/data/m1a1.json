@@ -4,5 +4,110 @@
         "title": "Northern Plains Treaties Lesson",
         "url": "http://nmai.si.edu/nk360"
     },
-    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
+
+	"puzzles": [
+        {
+            "Id": 1,
+            "Title": "How do Native people and Nations experience belonging?",
+            "Image": "../assets/placeholder_luna.jpg",
+            "Caption": "1900s",
+            "Intro": "Text for the introduction card",
+            "IntroPrompt": "Ready to get started?",
+            "LearningPoints": "This is text for learning points.",
+            "Themes": [
+                {
+                    "id": 1,
+                    "title": "Homelands", 
+                    "definition": "Definition of Homelands"
+                },
+                {
+                    "id": 2,
+                    "title": "Kindship", 
+                    "definition": "Definition of Kinship"
+                },
+                {
+                    "id": 3,
+                    "title": "Nationhood", 
+                    "definition": "Definition of Nationhood"
+                }
+            ],
+            "Cards": [
+                {
+                    "id": 1,
+                    "title": "Card 1",
+                    "subtitle": "Subtitle for Card 1",
+                    "image": "",
+                    "caption": "Caption for Card 1",
+                    "body": "Body text for Card 1",
+                    "themes": [1]
+                },
+                {
+                    "id": 2,
+                    "title": "Card 2",
+                    "subtitle": "Subtitle for Card 2",
+                    "image": "",
+                    "caption": "Caption for Card 2",
+                    "body": "Body text for Card 2",
+                    "themes": [2]
+                },
+                {
+                    "id": 3,
+                    "title": "Card 3",
+                    "subtitle": "Subtitle for Card 3",
+                    "image": "",
+                    "caption": "Caption for Card 3",
+                    "body": "Body text for Card 3",
+                    "themes": [3]
+                },
+                {
+                    "id": 4,
+                    "title": "Card 4",
+                    "subtitle": "Subtitle for Card 4",
+                    "image": "",
+                    "caption": "Caption for Card 4",
+                    "body": "Body text for Card 4",
+                    "themes": [2]
+                },
+                {
+                    "id": 5,
+                    "title": "Card 5",
+                    "subtitle": "Subtitle for Card 5",
+                    "image": "",
+                    "caption": "Caption for Card 5",
+                    "body": "Body text for Card 5",
+                    "themes": [1]
+                },
+                {
+                    "id": 6,
+                    "title": "Card 6",
+                    "subtitle": "Subtitle for Card 6",
+                    "image": "",
+                    "caption": "Caption for Card 6",
+                    "body": "Body text for Card 6",
+                    "themes": [3]
+                },
+                  {
+                    "id": 7,
+                    "title": "Card ",
+                    "subtitle": "Subtitle for Card 7",
+                    "image": "",
+                    "caption": "Caption for Card 7",
+                    "body": "Body text for Card 7",
+                    "themes": [1]
+                },
+                {
+                    "id": 8,
+                    "title": "Card 8",
+                    "subtitle": "Subtitle for Card 8",
+                    "image": "",
+                    "caption": "Caption for Card 8",
+                    "body": "Body text for Card 8",
+                    "themes": [2]
+                }
+
+            ]
+        }          
+           
+    ]
 }

@@ -9,6 +9,10 @@ Init = (function() {
     var displayPuzzleScreen = function() {
     	$('#intro').addClass('hidden animated fadeOut');
     	$('#puzzle').removeClass('hidden').addClass('animated fadeIn');
+        $('#puzzle-header').html($.templates("#puzzle-header-template").render(data.puzzles[0]));
+        $('#puzzle-wrapper').html($.templates('#puzzle-wrapper-template').render(data.puzzles[0]));
+        $('#droppable-wrapper').html($.templates('#droppable-template').render(data.puzzles[0]));
+        $('#learning-points').html($.templates('#learning-points-template').render(data.puzzles[0]));
         Puzzle.buildGame();
     }
 

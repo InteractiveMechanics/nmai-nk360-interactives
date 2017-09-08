@@ -280,44 +280,44 @@ footer {
   position: absolute; }
 
 .card[data-card="1"] {
-  top: 100px;
-  left: 400px;
+  top: 116px;
+  left: 347px;
   transform: rotate(7deg); }
 
 .card[data-card="2"] {
-  top: 200px;
-  left: 800px;
-  transform: rotate(17deg); }
+  top: 122px;
+  left: 543px;
+  transform: rotate(-27deg); }
 
 .card[data-card="3"] {
-  top: 350px;
-  left: 500px;
-  transform: rotate(-40deg); }
+  top: 150px;
+  left: 657px;
+  transform: rotate(22deg); }
 
 .card[data-card="4"] {
   top: 300px;
-  left: 500px;
-  transform: rotate(30deg); }
+  left: 423px;
+  transform: rotate(-12deg); }
 
 .card[data-card="5"] {
-  top: 100px;
-  left: 700px;
-  transform: rotate(-10deg); }
+  top: 127px;
+  left: 793px;
+  transform: rotate(-18deg); }
 
 .card[data-card="6"] {
-  top: 100px;
-  left: 700px;
-  transform: rotate(32deg); }
+  top: 309px;
+  left: 318px;
+  transform: rotate(-20deg); }
 
 .card[data-card="7"] {
-  top: 200px;
-  left: 500px;
+  top: 343px;
+  left: 590px;
   transform: rotate(-64deg); }
 
 .card[data-card="8"] {
-  top: 230px;
-  left: 430px;
-  transform: rotate(55deg); }
+  top: 313px;
+  left: 804px;
+  transform: rotate(16deg); }
 
 #complete-overlay {
   height: 100vh;
@@ -360,7 +360,7 @@ footer {
   justify-content: center;
   padding: 20px; }
 
-.droppable-wrapper {
+#droppable-wrapper {
   width: 80%;
   display: flex;
   justify-content: space-between;
