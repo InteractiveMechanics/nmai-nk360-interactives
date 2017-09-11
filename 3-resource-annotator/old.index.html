@@ -132,89 +132,8 @@
             max-height: 350px; 
             overflow: hidden;
             margin-bottom: 30px;
-            position: relative;
             
         }
-
-        /*Test Code **/
-        .annotation--main,
-    .annotation--responsibilities {
-      height: 40px;
-      margin: 10px;
-    }
-
-    .js--pin {
-      top: 0;
-      left: 0;
-      display: block;
-      width: 40px;
-    }
-
-    .pin__image {
-      position: relative;
-      z-index: 2;
-    }
-
-    .pin__text {    
-      padding: 10px;
-      background: #ddd;
-      border: thin solid #ccc;
-      border-radius: 3px;
-      position: absolute;
-      top: 0;
-      left: -7em;
-      width: 10em;
-      transform: translateY(-4.5em);
-      display: none;
-    }
-
-    .pin__text textarea {
-      border-radius: 3px;
-      border: thin solid #ccc;
-      width: 100%;
-      padding: 7px;
-    }
-
-    button {
-      padding: 7px;
-      font-size: 12px;
-      background: tomato;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    .photo .caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: 12px;
-      color: white;
-      background: rgba(0,0,0,.25);
-      padding-top: 20px;
-    }
-
-    .photo .caption  p {
-      text-align: center;
-    }
-
-    #lost-progress {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  color: white;
-  z-index: 100; }
-  #lost-progress .instructions-container {
-    z-index: 101;
-    position: relative;
-    text-align: center;
-    padding: 100px 20px; }
-    @media screen and (max-width: 767px) {
-      #lost-progress .instructions-container {
-        padding: 30px; } }
     </style>
 </head>
 <body>
@@ -285,21 +204,20 @@
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
-
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
             <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
             <h1>Resource Annotator Instructions</h1>
             <div class="row justify-content-md-center">
                 <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Select your resource" title="Select your resource" />
+                    <img src="https://unsplash.it/400/250" alt="Select your resource" title="Select your resource" />
                     <h2>Select your resource</h2>
                     <p>
                         Choose a historical text or image to annotate from the collection of source materials provided.
                     </p>
                 </div>
                 <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Add your annotations" title="Add your annotations" />
+                    <img src="https://unsplash.it/400/250" alt="Add your annotations" title="Add your annotations" />
                     <h2>Add your annotations</h2>
                     <p>
                         Drag and drop theme icons onto the material where you wish to write your annotation. The different icons represent different themes that relate to the source materials
@@ -307,23 +225,6 @@
                 </div>
             </div>
             <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
-        </div>
-        <div class="overlay"></div>
-    </div>
-
-    <div id="lost-progress" class="fade hidden">
-        <div class="container instructions-container">
-            <h2 class="all-caps letter-spacing-1">
-              Are you sure you want to <br /> choose another resource? 
-            </h2>
-
-            <h2 class="all-caps letter-spacing-1" style="margin:20px 0">
-              Your work will not be saved.
-            </h2>
-
-            <a class="btn btn-success btn-lg" onclick="reloadPage()" title="Choose another resource">Choose another resource</a>
-            <br /><br />
-            <a class="btn btn-success btn-lg" style="border:none;" onclick="hideLostProgress()" id="close-porgess" title="Cancel">Cancel</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -338,13 +239,7 @@
             </p>
 
             <h1>
-                <span class="dotted" data-toggle="tooltip"  title="Privileges are special benefits.">
-                  Privileges
-                </span>
-                 & 
-                 <span class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties.">
-                  Responsibilities
-                </span>
+                <span class="dotted">Privileges</span> & <span class="dotted">Responsibilities</span>
             </h1>
         </header>
 
@@ -362,7 +257,7 @@
                       
                       <div class="top">
                         <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
+                            <img src="https://i.ytimg.com/vi/TimVprO6opE/maxresdefault.jpg" class="img-fluid">
                         </div>
                     </div>
 
@@ -398,7 +293,7 @@
                       
                       <div class="top">
                         <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
+                            <img src="https://image.pbs.org/video-assets/pbs/war/213948/images/mezzanine_436.jpg" class="img-fluid">
                         </div>
                     </div>
 
@@ -434,7 +329,7 @@
                       
                       <div class="top">
                         <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
+                            <img src="http://dailyshareweb.com/wp-content/uploads/2016/04/enhanced-buzz-wide-3614-1459728929-7.jpg" class="img-fluid">
                         </div>
                     </div>
 
@@ -466,33 +361,8 @@
                 <div>
                   
                   <div class="annotation-item">
-                    <div class="col-12 col-no-padding">
-                      
-                      <div class="top">
-                        <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                       
-                        <div class="body">
-                            <p>
-                               The compact seeks to resolve more than three decades of controversy, ensure safe drinking water for the resercation, and provide for the regabilitation of the Crow Irrigation Project.
-                            </p>
-                        </div>
-
-                        <div class="button">
-
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Annotate this material
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
+                    <div class="col-3">
+                      test
                     </div>
                   </div>
 
@@ -517,9 +387,8 @@
                   
                   <div class="original-text">
 
-                    <div style="height: auto; position: relative;">
-                        <img src="http://via.placeholder.com/1280x720" class="img-fluid" />
-                        <div data-gallery data-gallery-image="http://via.placeholder.com/1280x720" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
+                    <div class="photo">
+                      <img src="https://i.pinimg.com/originals/91/c4/f5/91c4f58370bc9848f9818d716505060a.jpg" class="img-fluid">
                     </div>
 
                     <div class="info">
@@ -534,8 +403,6 @@
 
                       <p class="original-text-info">
                         "Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                        <br /> However, these two nations understood the bundle's import, which included a pipe.
                       </p>
 
                     </div>
@@ -583,19 +450,7 @@
                       </div>
 
                       <div class="row">
-
                         <div class="col-6">
-                          <div class="annotation--main">
-                            </div>
-                          <div class="annotation-pin" style="position: absolute; top: 0; left: 40px;">
-                            <div class="pin-text">
-                              <p class="dotted" data-toggle="tooltip" title="Privileges are special benefits.">Privileges</p>
-                              <p><span class="js--pin-available">5</span> Available</p>
-                            </div>
-                          </div>
-                        </div>  
-
-                        <!--<div class="col-6">
                           <div class="annotation-pin">
 
                             <div class="pin-image">
@@ -608,7 +463,7 @@
                             </div>
 
                           </div>
-                        </div>-->
+                        </div>  
 
                         <div class="col-6">
                           <div class="annotation-pin">
@@ -617,9 +472,7 @@
                             </div>
 
                             <div class="pin-text">
-                              <p class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties/">
-                                Responsibilities
-                              </p>
+                              <p class="dotted">Responsibilities</p>
                               <p>3 Available</p>
                             </div>
                           </div>
@@ -724,20 +577,8 @@
           });
 
         $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
-        $('body').on('click tap', '.icon-home', showLostProgress);
-        //$( ".pin-image" ).draggable({containment: ".original-text-info", scroll:true});
+        $( ".pin-image" ).draggable({containment: ".original-text-info", scroll:true});
 
-        function showLostProgress() {
-          $('#lost-progress').removeClass('hidden').addClass('show');
-        }
-
-        function hideLostProgress() {
-          $('#lost-progress').removeClass('show').addClass('hidden');
-        }
-
-        function reloadPage() {
-          location.reload();
-        }
 
         function openNotesScreen() {
             //var annotationID = $(this).data('annotationid');
@@ -747,101 +588,6 @@
                   $('.annotation-notes-screen').removeClass('hidden').addClass('show');  
             });
         }
-
-
-        $(document).ready(function() {
-            
-
-            $('[data-toggle="tooltip"]').tooltip()
-
-        });
-
     </script>
-
-
-<!--div id="lightgallery" class="photo">
-                      <a href="http://via.placeholder.com/1280x720" data-sub-html=".caption">
-                          <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-
-                          <div class="caption">
-                            <p>Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx</p>
-                          </div>
-                      </a>
-                    </div>-->
-    <script type="text/javascript">
-    var pin = '<div class="js--pin">' +
-      '<div class="pin__image">' +
-      '<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/pin-icon.png" width="40" />' +
-      '</div>' +
-      '<div class="pin__text">' +
-      '<textarea placeholder="Lorem"></textarea>' +
-      '<button class="js--delete-pin">Delete</button>' +
-      '</div>' +
-      '</div>'
-    var MAX = 5;
-    var counter = MAX;
-
-    $('body').on('click', '.js--pin .pin__image', function() {
-      var $pinText = $(this).parents('.js--pin').find('.pin__text')
-      if ($pinText.is(':hidden')) {
-        $('.pin__text').slideUp()
-      }
-      $pinText.stop().slideToggle()
-    });
-    
-    $('body').on('click', '.js--delete-pin', function() {
-      $(this).parents('.js--pin').remove();
-      addNewPin();
-      counter++;
-      updateCounter();
-    })
-
-    function updateCounter() {
-      $('.js--pin-available').text(counter);
-    }
-
-    function addNewPin($place) {
-      $place = $place || $('.annotation--main')
-
-      var $pin = $(pin)
-      .appendTo($place)
-      .draggable({ 
-        containment: ".original-text",
-        scroll: true,
-        stop: function(e) {
-          var $pin = $(e.target)
-          var $pinText = $pin.find('.pin__text')
-
-          $('.pin__text').not($pinText).slideUp()
-          $pinText.stop().slideDown();
-
-          if (!$pin.data('placed')) {
-            counter--;
-            updateCounter()
-          }
-
-          $pin.data('placed', true)
-        }
-      })
-      $pin.css({
-        'top': $pin.position().top + 'px',
-        'left': $pin.position().left + 'px',
-        'position': 'absolute'
-      })
-    }
-
-    $(function() {
-      const MAX = 5
-      for (var i = 1; i <= MAX; i++) {
-        addNewPin()
-      }
-
-      addNewPin($('.annotation--responsibilities'))
-    })
-
-    $('body').on('input', '.js--pin textarea', function() {
-      $(this).parents('.js--pin').attr('data-text', $(this).val().trim())
-    })
-  </script>
 </body>
 </html>
