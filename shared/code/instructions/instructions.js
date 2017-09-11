@@ -6,8 +6,8 @@ Instructions = (function() {
         bindEvents();
     }
     var bindEvents = function() {
-        $('body').on('click tap', '#instructions', closeInstructions);
-        $('body').on('click tap', '#show-instructions', openInstructions);
+        $(document).on('click tap', '#instructions', closeInstructions);
+        $(document).on('click tap', '#show-instructions', openInstructions);
     }
     var openInstructions = function() {
         $('#instructions').removeClass('hidden');

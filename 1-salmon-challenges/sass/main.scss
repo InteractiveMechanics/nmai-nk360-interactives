@@ -17,3 +17,9 @@
 @import '../shared/sass/components/buttons';
 @import '../shared/sass/components/menu';
 @import '../shared/sass/components/gallery';
+
+@import 'layout';
+@import 'helper';
+
+@import 'objects/card';
+@import 'objects/slider';

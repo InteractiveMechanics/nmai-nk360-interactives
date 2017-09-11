@@ -1,0 +1,21 @@
+// Colors
+$primary:           #677c4a;    // Green
+$secondary:         #eeb14f;    // Yellow
+$accent:            #73cce4;    // Blue
+
+$lightaccent:       #e4dcce;    // Light beige
+$midaccent:         #a39e90;    // Mid beige
+
+
+
+// Typography
+@font-face {
+    src: url('../shared/fonts/ludicrous/Ludicrous.eot');
+    font-family: "Ludicrous";
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$headline:          'Geared Slab', serif;
+$headline-accent:   'Open Sans', serif;

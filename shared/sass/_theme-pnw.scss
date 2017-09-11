@@ -1,0 +1,21 @@
+// Colors
+$primary:           #006986;    // Blue-green darker
+$secondary:         #a8bd46;    // Green
+$accent:            #ec5343;    // Red-orange
+
+$lightaccent:       #d4edea;    // Light blue
+$midaccent:         #9eb2c1;    // Mid blue-gray
+
+
+
+// Typography
+@font-face {
+    src: url('../shared/fonts/ludicrous/Ludicrous.eot');
+    font-family: "Ludicrous";
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$headline:          'Ludicrous', serif;
+$headline-accent:   'Archer Pro', serif;

@@ -4,20 +4,30 @@
     }
 
     .icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 99px;
+        width: 36px;
+        height: 36px;
         margin: 10px 5px;
         display: inline-block;
+        background-size: cover;
+        opacity: 1;
+        transition: 0.5s all;
+        cursor: pointer;
+
+        &:last-of-type {
+            margin-right: 15px;
+        }
+        &:hover, &:focus, &:active {
+            opacity: 0.5;
+        }
 
         &.icon-info {
-            background-color: blue;
+            background-image: url(../images/icon-info.svg);
         }
         &.icon-home {
-            background-color: red;
+            background-image: url(../images/icon-home.svg);
         }
         &.icon-print {
-            background-color: yellow;
+            background-image: url(../images/icon-print.svg);
         }
     }   
 }
