@@ -38,14 +38,14 @@ Print = (function() {
         var featured = Cards.getFeatured();
 
         // Then generate the newspaper
-        $('.paper-preview-container').addClass(theme);
+        $('.print-preview-container').addClass(theme);
         $('.paper-preview-article').html(article);
         $('.paper-preview-masthead .byline').text(masthead);
         $('.paper-preview-headline').text(headline);
         
         $.each(images, function(key, val){
             var html = '';
-            if (featured){
+            if (featured == val.id){
                 html += '<figure class="featured">';
             }
             else {

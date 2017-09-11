@@ -14,6 +14,47 @@
         background: white;
         padding: 50px;
         z-index: 10;
+
+        &.traditional {
+            .paper-preview-headline {
+                font-weight: bold;
+                font-style: italic;
+                font-family: 'Times New Roman';
+                font-size: 46px;
+                line-height: 1.1;
+            }
+            .paper-preview-byline {
+                font-family: 'Times New Roman', serif;
+            }
+        }
+        &.modern {
+            .paper-preview-headline {
+                font-family: 'Open Sans Condensed';
+                font-weight: bold;
+                font-size: 46px;
+                line-height: 1.1;
+            }
+            .paper-preview-byline {
+                font-family: 'Open Sans', serif;
+            }
+        }
+    }
+
+    .paper-preview-header {
+        height: 100px;
+        background: gray;
+        margin-bottom: 20px;
+    }
+    .paper-preview-headline {
+        height: 96px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+    .paper-preview-byline {
+        margin-bottom: 10px;
+        font-style: italic;
     }
     .close-preview {
         width: 44px;

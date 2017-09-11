@@ -18,6 +18,7 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -93,13 +94,13 @@
             <div class="row justify-content-md-center">
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Design and write</h2>
+                    <p>Write headlines, article copy, and your byline, and select images and quotes. Pick a theme that fits your style of newspaper.</p>
                 </div>
                 <div class="col">
                     <img src="" alt="" title="" />
-                    <h2>Instruction title</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>Preview, then print</h2>
+                    <p>Once you've finished your newspaper, you can save it as a PDF or print it out to distribute it to the masses!</p>
                 </div>
             </div>
             <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
@@ -111,30 +112,36 @@
     <!-- Main interactive templates -->
     <script id="imageTemplate" type="text/x-jsrender">
         <div class="image-step step" data-id="{{:#index}}">
-            <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
-            <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
-            <div class="selected-overlay">Selected!</div>
+            <div class="step-container-inner">
+                <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
+                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
+                <div class="selected-overlay">Selected!</div>
+            </div>
         </div>
     </script>
 
     <script id="quoteTemplate" type="text/x-jsrender">
         <div class="quote-step step" data-id="{{:#index}}">
-            <p>"{{:text}}" 
-                <small>{{:source}}</small>
-            </p>
-            <div class="selected-overlay">Selected!</div>
+            <div class="step-container-inner">
+                <p>"{{:text}}" 
+                    <small>{{:source}}</small>
+                </p>
+                <div class="selected-overlay">Selected!</div>
+            </div>
         </div>
     </script>
     
     <script id="imageCaptionTemplate" type="text/x-jsrender">
         <div class="image-caption-step step" data-id="{{:id}}">
-            <div class="image-caption-container">
-                <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
-                <div class="featured"></div>
-                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
-            </div>
-            <div class="image-caption-form">
-                <textarea class="image-caption-text" placeholder="Write your caption here!"></textarea>
+            <div class="step-container-inner">
+                <div class="image-caption-container">
+                    <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
+                    <div class="featured"></div>
+                    <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
+                </div>
+                <div class="image-caption-form">
+                    <textarea class="image-caption-text" placeholder="Write your caption here!"></textarea>
+                </div>
             </div>
         </div>
     </script>
@@ -145,7 +152,7 @@
         <section id="step-by-step-cards">
             <div class="step step-intro" data-title="Introduction">
                 <div class="step-container">
-                    <h4 class="text-center">Create Your Own News Article</h4>
+                    <h4 class="text-center all-caps">Create Your Own News Article</h4>
                     <h1 class="text-center">You're on the clock, Reporter!</h1>
                     <div class="divider"></div>
                     <p class="large guiding-question"></p>
@@ -154,7 +161,7 @@
             </div>
             <div class="step step-theme" data-title="Theme">
                 <div class="step-container">
-                    <h4 class="text-center">Pick Your Newspaper Theme</h4>
+                    <h4 class="text-center all-caps">Pick Your Newspaper Theme</h4>
                     <h1 class="text-center">What theme do you like?</h1>
                     <div class="divider"></div>
                     <p>The theme of your newspaper will change the look and feel. Do you like an old-timey newspaper design or something more modern and sleek?</p>
@@ -164,16 +171,16 @@
             </div>
             <div class="step step-masthead" data-title="Masthead">
                 <div class="step-container">
-                    <h4 class="text-center">Write Your Masthead</h4>
+                    <h4 class="text-center all-caps">Write Your Byline</h4>
                     <h1 class="text-center">What's your name?</h1>
                     <div class="divider"></div>
-                    <p>Every article needs a masthead, or byline, to tell the reader who wrote this piece&mdash;that's you! Add your name or names to the article.</p>
+                    <p>Every article needs a byline to tell the reader who wrote this piece&mdash;that's you! Add your name or names to the article.</p>
                     <input id="masthead" class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
                 </div>
             </div>
             <div class="step step-article-copy" data-title="Article Copy">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center">Build Your Case</h4>
+                    <h4 class="text-center all-caps">Build Your Case</h4>
                     <h1 class="text-center">What's the scoop?</h1>
                     <div class="divider"></div>
                     <p>Let's get down to brass tacks and lay out the facts for your readers. Think carefully about the best way to summarize and support your answer to the guiding question. Remember, your editor only gave you 250 words to write your article!</p>
@@ -183,7 +190,7 @@
             </div>
             <div class="step step-images" data-title="Images">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center">Hit the Light Box</h4>
+                    <h4 class="text-center all-caps">Hit the Light Box</h4>
                     <h1 class="text-center">What images support your article?</h1>
                     <div class="divider"></div>
                     <p>Select at least one image to use in your news article to help support your argument. You'll write captions for these images next.</p>
@@ -198,7 +205,7 @@
             </div>
             <div class="step step-image-captions" data-title="Image Captions">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center">Write Your Captions</h4>
+                    <h4 class="text-center all-caps">Write Your Captions</h4>
                     <h1 class="text-center">Describe your images</h1>
                     <div class="divider"></div>
                     <p>Write a caption for your selected images and describe how they tie into your article. Star the image if you would like it to be your featured image.</p>
@@ -214,7 +221,7 @@
             </div>
             <div class="step step-quotes" data-title="Quotes">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center">Support Quote</h4>
+                    <h4 class="text-center all-caps">Support Quote</h4>
                     <h1 class="text-center">What's the word on the street?</h1>
                     <div class="divider"></div>
                     <p>Select at least one quote to use in your news article to help support your case. Think about including statements from different perspectives to tell your story.</p>
@@ -229,7 +236,7 @@
             </div>
             <div class="step step-headline" data-title="Headline">
                 <div class="step-container">
-                    <h4 class="text-center">Write Your Headline</h4>
+                    <h4 class="text-center all-caps">Write Your Headline</h4>
                     <h1 class="text-center">Extra! Extra! Read all about it!</h1>
                     <div class="divider"></div>
                     <p>Every article needs an eye-catching, but informative, headline to summarize your argument and draw in your readers. Be thoughtful, you only have two lines!</p>
@@ -238,7 +245,7 @@
             </div>
             <div class="step step-review" data-title="Review">
                 <div class="step-container">
-                    <h4 class="text-center">Check Your Proof</h4>
+                    <h4 class="text-center all-caps">Check Your Proof</h4>
                     <h1 class="text-center">Is your article ready to go?</h1>
                     <div class="divider"></div>
                     <a class="btn btn-success btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
@@ -260,8 +267,8 @@
         <div class="print-preview-container">
             <div class="close-preview"></div>
             <div class="paper-preview-header"></div>
-            <div class="paper-preview-headline"></div>
-            <div class="paper-preview-masthead">Written and Edited by <span class="byline"></span></div>
+            <div class="paper-preview-headline">Lorem Ipsum Sit Dolor Amet Lorem ipsum dolor sit amet, consectetur elit</div>
+            <div class="paper-preview-masthead">Written and Edited by <span class="byline">Joe Journalist</span></div>
             <div class="paper-preview-article"></div>
         </div>
 

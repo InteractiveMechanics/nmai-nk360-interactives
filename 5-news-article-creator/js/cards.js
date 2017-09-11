@@ -187,7 +187,9 @@ Cards = (function() {
         Cards.quotes[id] = quote;
     }
     var removeQuoteFromArray = function(id) {
-        var index = Cards.quotes.indexOf(id);
+        var index = Cards.quotes.indexOf();
+
+        console.log(index);
         if (index > -1) {
             Cards.quotes.splice(index, 1);
         }
@@ -208,7 +210,7 @@ Cards = (function() {
     }
     var setCaption = function() {
         var text = $(this).val();
-        var id = $(this).parent().parent().data('id');
+        var id = $(this).parent().parent().parent().data('id');
 
         Cards.images[id].caption = text;
     }
