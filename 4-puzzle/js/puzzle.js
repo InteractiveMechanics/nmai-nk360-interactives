@@ -7,8 +7,9 @@ Puzzle = (function() {
         var numberDropped = $('.answered').length;
         console.log(numberDropped);
         if (numberDropped == 8) {
-            $('.droppable-wrapper').addClass('hidden animated fadeOut');
+            $('#droppable-wrapper').addClass('hidden animated fadeOut');
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
+            $('#puzzle-download').removeClass('hidden');
         }
     }
     
@@ -66,7 +67,11 @@ Puzzle = (function() {
                     } else {
                         ui.draggable.draggable('option', 'revert', 'valid');
                         $(this).css('border', '3px solid red');
-                        setTimeout(function() {  $('.droppable-widget').css('border', '3px solid black'); }, 1000);
+                        $(this).tooltip('show');
+                        setTimeout(function() {  
+                            $('.droppable-widget').css('border', '3px solid black').tooltip('hide');
+                        }, 2000);
+
                        
                     }
             
@@ -106,7 +111,7 @@ Puzzle = (function() {
 
 
     var showLearningPts = function() {
-        alert('showLearningPts is working');
+        //alert('showLearningPts is working');
         $('#learning-points').removeClass('hidden');
         if ($('#learning-points').hasClass('animated fadeOut')) {
             $('#learning-points').removeClass('animated fadeOut');

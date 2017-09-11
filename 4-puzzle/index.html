@@ -75,6 +75,7 @@
             <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+            <a href="../assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between transparent">
@@ -153,7 +154,7 @@
 
         {{for Themes}}
 
-        <div class="droppable-widget" data-theme="{{:id}}">{{:title}}</div>
+        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="remediation message">{{:title}}</div>
 
         {{/for}}
 
