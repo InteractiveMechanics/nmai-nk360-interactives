@@ -75,6 +75,7 @@
             <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+            <a href="../assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between transparent">
@@ -111,12 +112,62 @@
     <!-- Main interactive-specific content -->
     <main>
     
-    <!-- puzzle template -->
+    <!-- puzzle header template -->
+    <script id="puzzle-header-template" type="text/x-jsrender">
+        <ul class="subheader">
+
+             {{for Themes}}
+
+                <li data-theme="{{:id}}" data-toggle="tooltip" title="{{:definition}}">{{:title}}</li>
+
+            {{/for}}
+
+        </ul>
+        <h1>{{:Title}}</h1>
+    </script>
+
+
+    <!-- puzzle image and cards template -->
+    <script id="puzzle-wrapper-template" type="text/x-jsrender">
+
+            <div id="caption" style="display:none">
+                <h4>{{:Caption}}</p>
+            </div>  
+            
+            <div class="puzzle-img-wrapper">    
+                <a href="{{:Image}}" data-sub-html="#caption" class="lg-link disabled-link">
+                    <img class="puzzle-img" src="{{:Image}}">
+                    <span class="zoom-icon hidden">&#x1F50D;</span>
+                </a>
+            </div>
+
+            {{for Cards}}
+
+            <button class="card" data-card="{{:id}}">{{:id}}</button>
+
+            {{/for}}
+
+    </script>
+
+    <!-- puzzle droppable elements (themes) template -->
+    <script id="droppable-template" type="text/x-jsrender">
+
+        {{for Themes}}
+
+        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="remediation message">{{:title}}</div>
+
+        {{/for}}
+
+    </script>
+
 
     <!-- modal template -->
-     <script id="modal-template" type="text/x-jsrender">
+    <script id="modal-template" type="text/x-jsrender">
        
-            <div class="modal-content">
+        
+
+            <div class="modal-content" data-card={{:id}} data-theme={{:themes}}>
+                
                 <div class="modal-header">
                     <h1 class="modal-title">&ldquo; &rdquo;</h1>
 
@@ -127,12 +178,41 @@
                 </div>
           
                 <div class="modal-body">
-                    <small>Marilyn Hudson, Three Afflicted Tribes of Fort Berthold. NMAI Interview</small>
+                    <small>{{:caption}}</small>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis blandit augue ac viverra. Pellentesque hendrerit facilisis faucibus. Morbi sed fringilla lorem. Duis vulputate mi ac nunc vestibulum, id eleifend ante aliquet.</p>
+                    <p>{{:body}}</p>
                 </div>
-        
+
+            </div>
+
        
+
+    </script>
+
+    <!-- learning points template -->
+    <script id="learning-points-template" type="text/x-jsrender">
+
+        <div class="learning-points-overlay"></div>
+        
+        <div class="learning-points-card hidden">
+
+            <div class="header-wrapper">
+                <ul class="subheader">
+
+                    {{for Themes}}
+                    
+                    <li data-themes="{{:id}}">{{:title}}</li>
+                    
+                    {{/for}}
+                </ul>
+                <h1>{{:Title}}</h1>
+            </div>
+
+            <div class="text-wrapper">
+                <p>{{:LearningPoints}}</p>
+            </div>
+
+        </div>
 
     </script>
 
@@ -156,69 +236,18 @@
         </div>
     </div>
 
-    <div id="learning-points" class="hidden">
-        <div class="learning-points-overlay"></div>
-        <div class="learning-points-card hidden">
-            <div class="header-wrapper">
-                <ul class="subheader">
-                    <li>Homelands</li>
-                    <li>Kinship</li>
-                    <li>Nationhood</li>
-                </ul>
-                <h1>How do Native people and Nations experience belonging?</h1>
-            </div>
-            <div class="text-wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
-                <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
-
-                
-            </div>
-        </div>
-    </div>
+    <div id="learning-points" class="hidden"></div>
 
     <div id="puzzle" class="hidden">
-        <section class="header-wrapper">
-            <ul class="subheader">
-                <li>Homelands</li>
-                <li>Kinship</li>
-                <li>Nationhood</li>
-            </ul>
-            <h1>How do Native people and Nations experience belonging?</h1>
-        </section>
+        <section id="puzzle-header" class="header-wrapper"></section>
 
-        <section class="puzzle-wrapper">
-            <div id="caption" style="display:none">
-                <h4>Caption for Placeholder Image</p>
-            </div>  
-            
-            <div class="puzzle-img-wrapper">    
-                <a href="assets/placeholder_luna.jpg" data-sub-html="#caption" class="lg-link disabled-link">
-                    <img class="puzzle-img" src="assets/placeholder_luna.jpg">
-                    <span class="zoom-icon hidden">&#x1F50D;</span>
-                </a>
-            </div>
-            <button class="card" data-card="1">1</button>
-            <button class="card" data-card="2">2</button>
-            <button class="card" data-card="3">3</button>
-            <button class="card" data-card="4">4</button>
-            <button class="card" data-card="5">5</button>
-            <button class="card" data-card="6">6</button>
-            <button class="card" data-card="7">7</button>
-            <button class="card" data-card="8">8</button>
-
-
-
-        </section>
+        <section id="puzzle-wrapper"></section>
 
         <section class="read-more hidden">
             <button class="btn btn-lg" id="read-more-btn">Read more about this image</button>
         </section>
 
-        <section class="droppable-wrapper">
-            <div class="droppable-widget" data-theme="1" data-toggle="tooltip">Homelands</div>
-            <div class="droppable-widget" data-theme="2" data-toggle="tooltip">Kinship</div>
-            <div class="droppable-widget" data-theme="3" data-toggle="tooltip">Nationhood</div>
-        </section>
+        <section id="droppable-wrapper"></section>
 
         <section id="complete-overlay" class="hidden">
             <div class="text-wrapper">
@@ -244,8 +273,8 @@
     </main>
 
     <div class="modal fade" id="card-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog draggable-widget" data-theme="1" role="document">
-         </div>
+        <div class="modal-dialog draggable-widget" data-theme="{{:themes}}" role="document">
+        </div>
     </div> <!-- /.modal -->
 
 

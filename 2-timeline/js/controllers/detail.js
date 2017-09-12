@@ -19,9 +19,10 @@ Detail = (function() {
         if (!$('#detail').hasClass('hidden')) {
             var era = $('#droppable-container').attr('data-era');
             var numberDropped = $('.dropped').length;
+            var numberDroppable = $('.droppable-widget').length;
             console.log(numberDropped);
 
-            if (numberDropped == 5) {
+            if (numberDropped == numberDroppable) {
                 $('.era-block[data-era="' + era + '"]').addClass('completed');
                 setTimeout(function() { displayExploreScreen(era); }, 2000);
             }
