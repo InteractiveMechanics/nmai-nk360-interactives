@@ -126,8 +126,10 @@
 	height: 42px;
 	border-radius: 50%;
 	position: absolute;
-	left: 15px;
-	bottom: 15px;
+	right: 15px;
+    bottom: 15px;
+    border: 1px solid grey;
+    background: grey;
 }
 
 .read-more {

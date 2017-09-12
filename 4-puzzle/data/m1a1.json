@@ -43,7 +43,7 @@
                     "image": "",
                     "caption": "Caption for Card 1",
                     "body": "Body text for Card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien. Integer congue pharetra fringilla. Aenean bibendum semper arcu eget placerat.",
-                    "themes": [1]
+                    "themes": [1, 2]
                 },
                 {
                     "id": 2,
@@ -52,7 +52,7 @@
                     "image": "",
                     "caption": "Caption for Card 2",
                     "body": "Body text for Card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante. <p>Ut ac finibus libero, eu porta sem. Nulla malesuada est vel aliquam ultrices. Vivamus tempor sit amet purus non dignissim. Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien.</p>",
-                    "themes": [2]
+                    "themes": [2, 3]
                 },
                 {
                     "id": 3,
@@ -61,7 +61,7 @@
                     "image": "",
                     "caption": "Caption for Card 3",
                     "body": "Body text for Card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.<p>Aenean eu nibh facilisis, hendrerit nisi quis, imperdiet mi. Duis non purus nec dui pretium porta. Morbi auctor velit sed condimentum elementum. Aenean volutpat diam et purus dictum, id ultricies ante consectetur. </p>",
-                    "themes": [3]
+                    "themes": [3, 1]
                 },
                 {
                     "id": 4,
@@ -79,7 +79,7 @@
                     "image": "",
                     "caption": "Caption for Card 5",
                     "body": "Body text for Card 5. ellentesque sit amet leo tincidunt, tempus libero nec, semper nunc. Quisque ornare quam et orci bibendum tincidunt. Nulla tincidunt tellus a aliquet porta. Praesent a justo vitae libero malesuada euismod. Proin at ipsum sed nibh sagittis vestibulum. Nam elementum porttitor ligula nec facilisis. Quisque libero urna, efficitur nec pretium at, lobortis eget dolor.",
-                    "themes": [1]
+                    "themes": [1, 2]
                 },
                 {
                     "id": 6,
@@ -97,7 +97,7 @@
                     "image": "",
                     "caption": "Caption for Card 7",
                     "body": "Body text for Card 7.liquam nec urna sit amet mi posuere dictum sed vitae elit. <p>Ut laoreet, est sed ullamcorper condimentum, mi nisi vestibulum velit, in consectetur urna metus sit amet sapien.</p><p> Vivamus lacus nibh, gravida eget aliquam posuere, tempor et velit. Maecenas ex ligula, dapibus vel dapibus sit amet, lobortis at urna. Morbi eget convallis neque.</p>",
-                    "themes": [1]
+                    "themes": [1, 2]
                 },
                 {
                     "id": 8,

@@ -10,8 +10,38 @@ Puzzle = (function() {
             $('#droppable-wrapper').addClass('hidden animated fadeOut');
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
             $('#puzzle-download').removeClass('hidden');
+            $('.zoom-icon').removeClass('hidden');
         }
     }
+
+   
+    var contains = function(needle) {
+    // Per spec, the way to identify NaN is that it is not equal to itself
+    var findNaN = needle !== needle;
+    var indexOf;
+
+    if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+        indexOf = Array.prototype.indexOf;
+    } else {
+        indexOf = function(needle) {
+            var i = -1, index = -1;
+
+            for(i = 0; i < this.length; i++) {
+                var item = this[i];
+
+                if((findNaN && item !== item) || item === needle) {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        };
+    }
+
+    return indexOf.call(this, needle) > -1;
+
+    };
     
 
     var buildGame = function() {
@@ -31,11 +61,17 @@ Puzzle = (function() {
                 var droppableNumber = $(this).data('theme');
                 var originalLeft = $(this).css('left');
                 var originalTop = $(this).css('top');
-                var poop = ui.draggable.find('.modal-content');
+                var draggableEl = ui.draggable.find('.modal-content');
+                var draggableElThemes = draggableEl.attr('data-theme');
+                var draggableElArray =  draggableElThemes.split(',').map(Number);
+                console.log(Array.isArray(draggableElArray));
+                /*works for one value
+                poop.is('[data-theme="' + droppableNumber + '"]')
+                */
 
               
               
-                    if(poop.is('[data-theme="' + droppableNumber + '"]')) {
+                    if(contains.call(draggableElArray, droppableNumber)) {
                         ui.draggable.addClass('dragged');
                         ui.draggable.draggable('option', 'revert', 'invalid');
                         var cardNumber = ui.draggable.data('card');
