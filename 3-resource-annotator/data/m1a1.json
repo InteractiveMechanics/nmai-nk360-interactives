@@ -1,5 +1,54 @@
 {
     "title": "Resource Annotator",
+    "page_title": "Northern Plains History & Culture: Crow Nation",
+	"themes": [
+	    {
+	    	"title": "Privileges",
+	    	"tooltip_text": "Privileges are special benefits.",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    },
+	    {
+	    	"title": "Responsibilities",
+	    	"tooltip_text": "Responsibilities are moral duties..",
+	    	"count": 2,
+			"highlight_color": "#0000FF"
+	    }
+    ],
+	"sources": [
+		{
+			"id": 1,
+		    "title": "Title #1",
+		    "image_url": "http://via.placeholder.com/1280x720",
+		    "image_caption": "Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx Test",
+		    "image_credit": "Raymond J. DeMallie, ed., The Sixth Grandfather: Black Elks Teaching Given to John G. Neihardt (Lincoln: University of Nebraska Press, 1984), 83.",
+		    "body": "Secretary Salazar of the U.S. Department of the Interior joined Crow Tribe (Apsáalooke Nation) Chairman Cedric Black Eagle and Montana Governor Brian Schweitzer for the signing of a Crow Tribe-Montana Water Rights Compact. The compact seeks to resolve more than three decades of controversy, ensure safe drinking water for the resercation, and provide for the regabilitation of the Crow Irrigation Project.",
+		    "source": "example glossary",
+		    "caption": "In this passage from The Sixth Grandfather: Black Elks Teaching Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.",
+		    "audio_url": "https://www.google.com/",
+		    "video_url": "https://www.google.com/",
+		    "source_type": "Photograph",
+		    "excerpt": "example glossary",
+		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "question_text": "According to this story, why is the pipe significant to the Arapahoe and Crow Nations? <br /> How did the Crow and Arapahoe practice diplomacy in this story?"
+		},
+		{
+			"id": 2,
+		    "title": "Title #2",
+		    "image_url": "http://via.placeholder.com/1280x720",
+		    "image_caption": "Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx Test",
+		    "image_credit": "Raymond J. DeMallie, ed., The Sixth Grandfather: Black Elks Teaching Given to John G. Neihardt (Lincoln: University of Nebraska Press, 1984), 83.",
+		    "body": "Secretary Salazar of the U.S. Department of the Interior joined Crow Tribe (Apsáalooke Nation) Chairman Cedric Black Eagle and Montana Governor Brian Schweitzer for the signing of a Crow Tribe-Montana Water Rights Compact. The compact seeks to resolve more than three decades of controversy, ensure safe drinking water for the resercation, and provide for the regabilitation of the Crow Irrigation Project.",
+		    "source": "example glossary",
+		    "caption": "In this passage from The Sixth Grandfather: Black Elks Teaching Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.",
+		    "audio_url": "https://www.google.com/",
+		    "video_url": "https://www.google.com/",
+		    "source_type": "Photograph",
+		    "excerpt": "example glossary",
+		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "question_text": "According to this story, why is the pipe significant to the Arapahoe and Crow Nations? <br /> How did the Crow and Arapahoe practice diplomacy in this story?"
+		}
+	],
     "returnTo": {
         "title": "Northern Plains Culture Lesson",
         "url": "http://nmai.si.edu/nk360"
