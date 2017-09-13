@@ -1,6 +1,14 @@
 $(function() {
 
     /**
+     * Sends a Google Analytics screen change
+     * @param {string} screen     The name of the screen view, when it changes
+     */
+    function sendAnalyticsScreen(screen) {
+        ga('send', 'screenview', { screenName: screen });
+    }
+
+    /**
      * Sends a Google Analytics custom event
      * @param {string} category     Typically the object that was interacted with (e.g. 'Video')
      * @param {string} action       The type of interaction (e.g. 'play')
