@@ -42,9 +42,23 @@ Puzzle = (function() {
     return indexOf.call(this, needle) > -1;
 
     };
+
+    var positionCards = function() {
+    
+        $( '.card' ).each(function( index ) {
+            $(this).css({
+               
+                left : Math.random() * ($('.puzzle-img-wrapper').width() - $(this).width()),
+                top : Math.random() * ($('.puzzle-img-wrapper').height() - $(this).height())
+            });
+
+        });
+    }
     
 
     var buildGame = function() {
+        positionCards();
+
          $('.draggable-widget').draggable({
             snap: '.droppable-widget',
             revert: 'invalid',

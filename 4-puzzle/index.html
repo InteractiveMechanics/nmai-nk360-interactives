@@ -139,13 +139,18 @@
                     <img class="puzzle-img" src="{{:Image}}">
                     <span class="zoom-icon hidden"></span>
                 </a>
+            
+
+                {{for Cards}}
+
+                <button class="card" data-card="{{:id}}">{{:id}}</button>
+
+
+                {{/for}}
+
             </div>
 
-            {{for Cards}}
-
-            <button class="card" data-card="{{:id}}">{{:id}}</button>
-
-            {{/for}}
+           
 
     </script>
 
@@ -169,7 +174,14 @@
             <div class="modal-content" data-card={{:id}} data-theme={{:themes}}>
                 
                 <div class="modal-header">
-                    <h1 class="modal-title">&ldquo; &rdquo;</h1>
+                    {{if image}}
+                    <h1 class="modal-title">image icon goes here?</h1>
+                    {{/if}}
+
+                    {{if body}}
+                     <h1 class="modal-title">quote icons</h1>
+                    {{/if}}
+
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -178,9 +190,18 @@
                 </div>
           
                 <div class="modal-body">
+
+                    {{if body}}
                     <small>{{:caption}}</small>
 
                     <p>{{:body}}</p>
+                    {{/if}}
+
+                    {{if image}}
+                    <img src="{{:image}}" alt="">
+                    <small>{{:caption}}<small>
+                    {{/if}}
+
                 </div>
 
             </div>
