@@ -1,88 +1,98 @@
 {
     "title": "Resource Annotator",
-    "page_title": "Northern Plains History & Culture: Crow Nation",
+    "page_title": "Pacific Northwest Fish Wars and Boldt Decision",
 	"themes": [
 	    {
-	    	"title": "Rights",
-	    	"tooltip_text": "Rights are special benefits",
+	    	"title": "Backlash",
+	    	"tooltip_text": "A strong public reaction against something",
 	    	"count": 5,
 			"highlight_color": "#FF0000"
-	    },
-	    {
-	    	"title": "Responsibilities",
-	    	"tooltip_text": "Responsibilities are moral duties",
-	    	"count": 2,
-			"highlight_color": "#0000FF"
 	    }
     ],
 	"sources": [
 		{
 			"id": 1,
-		    "title": "Darrin Old Coyote (Crow)",
+		    "title": "Sportsmen Protest Decision",
 		    "image_url": "",
 		    "image_caption": "",
-		    "image_credit": "",
-		    "body": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition. It wasn’t about, one day they woke up and said, from now on we’re going to be warriors . . . they wanted to protect their homeland from being invaded by whoever it was—whether it be Blackfeet to the north or the Arapahos and Sioux—and so they basically had to train themselves to become warriors. And for Indian people, warriors meant protecting. Protecting the family, protecting the home. And they would be the front lines, protecting their homeland and what they believed in. And they never backed down.”",
-		    "source": "Darrin Old Coyote (Crow), NMAI Interview, August 2016",
-		    "caption": "Darrin Old Coyote was the twenty-first chairman of the Crow Nation. His Apsáalooke name is Ishbilxe Itche and he is a member of the Piegan clan and a child of the Ties in a Bundle and Whistling Water clans. As a tribal chairman, Mr. Old Coyote has a deep commitment to building the tribal economy and strengthening Crow sovereignty.",
+		    "image_credit": "Don Hannula, “Sportsmen Protest Decision,” Seattle Times, March 5, 1974",
+		    "body": "[Article excerpt Text]Tacoma — More than 700 sportsmen marched around the Federal Courthouse here today protesting an Indian fishing-rights decision by United States District Court Judge George H. Boldt. Three trailered boats were parked in front of the courthouse and sportsmen carrying signs, fishing poles, nets, and American flags demonstrated peacefully against the decision that was highly favorable to the Indians. Chartered buses carried sportsmen from Southwest Washington and Everett. Others came from as far away as Wenatchee and Spokane by car. The protest was held as three scheduled days of post-trial motions began in the case. Both the State Fisheries and Game Departments have said they will appeal Judge Boldt’s decision. Judge Boldt upheld the rights of members of several Western Washington Indian tribes to fish with nets off reservation in accordance with terms of treaties signed in the 1850s. A key thrust of the decision said that Indians should be treated as equals in the taking of salmon and steelhead. He said he understood this to mean 50 percent for Indians and 50 percent for non-Indians. Fisheries and Game Department officials have said it would be necessary to cut back on non-Indian commercial and sports fishing to provide for the Indian’s shares under the decision. During the demonstration, leaders used a bullhorn to shout questions eliciting pep rally type responses. Sportsmen—including some women, some children and a few blacks and Asians—carried an array of signs in today’s demonstration. One said: “Sportsmen’s rights torn to a shred, screwed by a Boldt, without any thread.” Other signs said “Equal rights for All Citizens,”  “Fish for all,” “What about our sons?,” “This is 1974, not 1854.” The demonstration was organized by the Northwest Steelheader’s council of Trout Unlimited but was supported by numerous fishing and hunting organizations. Gary Ellis, Tacoma, president of the Northwest Steelheaders, said the turnout exceeded expectations. “When all these guys take a day off work, it shows they are concerned,” Ellis said. “I doubt that it would alter the decision but it certainly shows the concern sportsmen have for the resource. We certainly hope the Supreme Court will alter the decision.”",
+		    "source": "Don Hannula, “Sportsmen Protest Decision,” Seattle Times, March 5, 1974",
+		    "caption": "Major opponents to treaty fishing rights were hunting and fishing organizations, not just the state of Washington's fisheries and game departments.",
 		    "audio_url": "",
 		    "video_url": "",
-		    "source_type": "Quote",
-		    "excerpt": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition.”",
+		    "source_type": "Image/Article",
+		    "excerpt": "Major opponents to treaty fishing rights were hunting and fishing organizations, not just the state of Washington's fisheries and game departments.",
 		    "thumbnail_image": "http://via.placeholder.com/1280x720",
-		    "question_text": "According to Darrin Old Coyote, what qualities do Crow Nation leaders exhibit?"
+		    "question_text": "<p>What was at stake for the sport fishers as a result of the Boldt Decision?</p><p>How might education about treaty rights impact the viewpoints of the non-Indian fishers in this article?</p>"
 		},
 		{
 			"id": 2,
-		    "title": "Crow Fair",
-		    "image_url": "http://via.placeholder.com/1280x720",
-		    "image_caption": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
-		    "image_credit": "Crow Nation women on horseback at Crow Fair (above); Honor Guard of Crow Nation Veterans (below). Photographs by Tina Pelletier, courtesy of Pasqua First Nation and Métis community of Ste. Madelaine",
-		    "body": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
-		    "source": "",
-		    "caption": "",
+		    "title": "Hank Adams",
+		    "image_url": "",
+		    "image_caption": "",
+		    "image_credit": "",
+		    "body": "“Well, fish buyers who had pretended to have good relations with such fisheries as the Tulalips and the Lummis . . . , they said. . . , ‘We aren't going to sell your fishermen gasoline anymore from our docks. We aren't going to supply ice for the fish that you take into the hulls of your boats.’ And so there was all these things and the state of Washington stood behind them on that, saying, ‘Well, the Boldt Decision isn't really in effect until the Supreme Court upholds it.’”",
+		    "source": "Hank Adams  (Assiniboine-Sioux of Fort Peck Tribes), NMAI Interview, July 2016",
+		    "caption": "The type of discrimination described here was common before, during, and after the Boldt Decision.",
 		    "audio_url": "",
 		    "video_url": "",
-		    "source_type": "Image",
-		    "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "source_type": "Quote",
+		    "excerpt": "‘We aren't going to sell your fishermen gasoline anymore from our docks. We aren't going to supply ice for the fish that you take into the hulls of your boats.’ And so there was all these things and the state of Washington stood behind them on that, saying, ‘Well, the Boldt Decision isn't really in effect until the Supreme Court upholds it.”",
 		    "thumbnail_image": "http://via.placeholder.com/1280x720",
-		    "question_text": "Why might the Crow Nation choose to honor veterans so prominently at Crow Fair?"
-		}
+		    "question_text": "Does the state of Washington have an obligation to prevent discriminatory actions such as the one described here? Why or why not?"
+		},
 		{
 			"id": 3,
-		    "title": "Dr. Joseph Medicine Crow",
-		    "image_url": "http://via.placeholder.com/1280x720",
-		    "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
-		    "image_credit": "Dr. Joseph Medicine Crow shows a drum to President Barack Obama and First Lady Michelle Obama during a reception for recipients and their families in the Blue Room of the White House, August 12, 2009. Photograph by Pete Souza",
-		    "body": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
+		    "title": "Indian Voice",
+		    "image_url": "",
+		    "image_caption": "Indian Voice, published by the Small Tribes Organization of Western Washington in Federal Way, raised the alarm about the backlash, as did other Native publications. This cartoon is from the November 1977 issue. "Belloni" refers to Robert C. Belloni, the federal court judge who reaffirmed treaty fishing rights and ruled that tribes were guaranteed to their 'fair share' in his 1968 ruling in Sohappy v. Smith.",
+		    "image_credit": "Cartoon courtesy of Indian Voice, November 1977",
+		    "body": "Indian Voice, published by the Small Tribes Organization of Western Washington in Federal Way, raised the alarm about the backlash, as did other Native publications. This cartoon is from the November 1977 issue. "Belloni" refers to Robert C. Belloni, the federal court judge who reaffirmed treaty fishing rights and ruled that tribes were guaranteed to their 'fair share' in his 1968 ruling in Sohappy v. Smith.",
 		    "source": "",
 		    "caption": "",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Image",
-		    "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
+		    "excerpt": "Indian Voice, published by the Small Tribes Organization of Western Washington in Federal Way, raised the alarm about the backlash, as did other Native publications. This cartoon is from the November 1977 issue. "Belloni" refers to Robert C. Belloni, the federal court judge who reaffirmed treaty fishing rights and ruled that tribes were guaranteed to their 'fair share' in his 1968 ruling in Sohappy v. Smith.",
 		    "thumbnail_image": "http://via.placeholder.com/1280x720",
-		    "question_text": "<p>What responsibilities and values are reflected in the four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
-		}
+		    "question_text": "<p>What does the cartoon imply about the impact of tribal vs. commercial fishing?</p><p>What is the central message of the cartoon?</p>"
+		},
 		{
 			"id": 4,
-		    "title": "Pipe",
-		    "image_url": "http://via.placeholder.com/1280x720",
+		    "title": "Mel Moon",
+		    "image_url": "",
 		    "image_caption": "",
-		    "image_credit": "Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI 012599",
-		    "body": "<p>“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe’s intent was to retrieve horses some Crows had taken from them.</p><p>However, these two nations understood the bundle’s import, which included a pipe:</p><p>He [Sharp Nose] had a [piece of] red flannel and mixed the tobacco and willow bark and tallow [fat] and put it in a dried bladder and then in the red flannel. That is a “sacred bundle.” All tribes respect that....This sacred bundle is used to make peace and to make relationships among the Indians.</p><p>In an elaborate welcoming ceremony that followed Sharp Nose’s and Big Plume’s initial contact with the Crow, the Crow leadership supplied the two Arapahoe with meaningful gifts and nourishment. Thereafter, the Crow offered them a pipe, asking, ‘What are you? Where did you come from? What business have you? Why do you bring this sacred bundle? Tell us nothing but the truth. You have smoked the peace pipe and must tell the truth.’</p><p> The two Arapahoe explained their purpose for coming into Crow country. They had risked their lives coming to the Crow Nation but the sacred bundle and pipe signaled to everyone the Arapahoe peaceful intention. The Crow not only returned the horses but they also reciprocated the gesture. . . and when the welcome concluded, an Arapahoe leader extended his hand in friendship to the Crow man, gave him the pipe of peace and said, ‘Hereafter we will be friends.’”</p>",
-		    "source": "Raymond J. DeMallie, ed., The Sixth Grandfather: Black Elk’s Teaching Given to John G. Neihardt (Lincoln: University of Nebraska Press, 1984), 83.",
-		    "caption": "In this passage from The Sixth Grandfather: Black Elk’s Teachings Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.",
+		    "image_credit": "",
+		    "body": "“Yeah, well, the Boldt Decision, it was very difficult because there was just this intensity of hate. People would spit on you. And yell at you, and call you names.” Mel Moon (Quileute), NMAI Interview, July 2016",
+		    "source": "Mel Moon (Quileute), NMAI Interview, July 2016",
+		    "caption": "Racism took many forms during this time. Mel Moon, a citizen of the Quileute Nation, reflects on the treatment he received from non-Indians following the Boldt Decision.",
 		    "audio_url": "",
 		    "video_url": "",
-		    "source_type": "Image/Passage",
-		    "excerpt": "“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared.”",
+		    "source_type": "Quote",
+		    "excerpt": "“Yeah, well, the Boldt Decision, it was very difficult because there was just this intensity of hate. People would spit on you. And yell at you, and call you names.”",
 		    "thumbnail_image": "http://via.placeholder.com/1280x720",
-		    "question_text": "<p>According to this story, why is the pipe significant to the Arapahoe and Crow Nations?</p><p>How did the Crow and Arapahoe practice diplomacy in this story?</p>"
+		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect? </p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>"
+		},
+		{
+			"id": 5,
+		    "title": "Boldt Effigy",
+		    "image_url": "",
+		    "image_caption": "Hatred and outrage were expressed in a variety of ways and in a variety of places. The Boldt effigy was hung outside the federal courthouse where Judge Boldt presided.",
+		    "image_credit": "Photograph by staff photographer Matt McVay, courtesy of Seattle Times, September 11, 1977",
+		    "body": "Hatred and outrage were expressed in a variety of ways and in a variety of places. The Boldt effigy was hung outside the federal courthouse where Judge Boldt presided.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "Hatred and outrage were expressed in a variety of ways and in a variety of places. The Boldt effigy was hung outside the federal courthouse where Judge Boldt presided.",
+		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect?</p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>"
 		}
 	],
     "returnTo": {
-        "title": "Northern Plains Culture Lesson",
+        "title": "Pacific Northwest Lesson",
         "url": "http://nmai.si.edu/nk360"
     },
     "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
