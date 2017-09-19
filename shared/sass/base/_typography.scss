@@ -3,7 +3,7 @@
 }
 
 h1 {
-    
+    font-size: 3.6rem;
 }
 h2 {
 
@@ -22,9 +22,28 @@ h6 {
 }
 
 
+.header {
+    max-width: 540px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+}
+
+
 .all-caps {
     text-transform: uppercase;
 }
 .letter-spacing-1 {
     letter-spacing: 1px;
+}
+.underline {
+    border-bottom: 3px solid #F7B029;
+    padding-bottom: 5px;
+    display: inline-block;
 }

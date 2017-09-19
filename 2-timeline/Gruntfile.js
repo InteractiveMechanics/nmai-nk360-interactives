@@ -5,13 +5,11 @@ module.exports = function(grunt) {
         
         sass: {
             dev: {
-                files: [{
-                    expand: true,
-                    cwd: 'sass',
-                    src: ['*.scss'],
-                    dest: 'css',
-                    ext: '.css'
-                }]
+                files: {
+                    'css/main.css': 'sass/main.scss',
+                    '../shared/css/theme-pnw.css': '../shared/sass/theme-pnw.scss',
+                    '../shared/css/theme-np.css': '../shared/sass/theme-np.scss'
+                }
             }
         },
         watch: {
