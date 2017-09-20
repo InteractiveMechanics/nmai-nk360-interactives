@@ -47,28 +47,54 @@ Detail = (function() {
 
 
 
-
-
     var displayModal = function(era, moment) {
         $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1]));
         $('#correct-answer').modal('show');
     }
 
     
+    var hideText = function(id) {
+       var id = $(this).attr('data-timeline');
+       $('.draggable-text[data-timeline="' + id + '"]').addClass('active');
+       $('.draggable-widget[data-timeline="' + id + '"]').addClass('active');
+    }
 
+
+    var showText = function(id) {
+        var id = $(this).attr('data-timeline');
+        if ($(this).hasClass('dragged')) {
+            $('.draggable-text[data-timeline="' + id + '"]').addClass('active');
+            $('.draggable-widget[data-timeline="' + id + '"]').addClass('active');
+        } else {
+            $('.draggable-text[data-timeline="' + id + '"]').removeClass('active');
+            $('.draggable-widget[data-timeline="' + id + '"]').removeClass('active');
+        }
+
+    }
+
+    var positionMoments = function() {
+        var max = $('.draggable-widget').length;
+        var parent = $('#detail-template');
+        var draggables = parent.children();
+        while (draggables.length) {
+            parent.append(draggables.splice(Math.floor(Math.random() * draggables.length), 1)[0]);
+        }
+    }
 
     var buildGame = function(id) {
+        positionMoments();
         $('[data-toggle=tooltip]').tooltip('hide');
-        $('.draggable-widget').draggable({
+        $('.draggable-img').draggable({
             tolerance: 'touch',
             snap: '.droppable-widget',
             revert: 'invalid',
             snapMode: 'interior',
-            snapTolerance: 10,
-            //cursorAt: {top: 10, left: 10}
+            snapTolerance: 10
+            //cursorAt: {top: 0, left: 10}
         });
 
         $('.droppable-widget').droppable({
+
             drop: function( event, ui ) {
                 
 
@@ -80,7 +106,7 @@ Detail = (function() {
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
                         ui.draggable.addClass('dragged');
                         ui.draggable.draggable('option', 'revert', 'invalid');
-
+                       
 
                         //alert('the thing is dropped!');
 
@@ -105,9 +131,8 @@ Detail = (function() {
 
                     } else {
                         ui.draggable.draggable('option', 'revert', 'valid');
-                        setTimeout(function() {   ui.draggable.tooltip('show'); }, 1000);
-
-                        setTimeout(function() {   ui.draggable.tooltip('hide'); }, 3000);
+                        setTimeout(function() {   ui.draggable.parent().tooltip('show'); }, 1000);
+                        setTimeout(function() {   ui.draggable.parent().tooltip('hide'); }, 3000);
                        
                        
                     }
@@ -122,6 +147,8 @@ Detail = (function() {
         $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);
         $(document).on('click tap', '.view-timeline-btn[data-timeline]', displayExploreScreen);
         $(document).on('hidden.bs.modal', countDroppedEls);
+        $(document).on('dragstart', '.draggable-img[data-timeline]', hideText);
+        $(document).on('dragstop', '.draggable-img[data-timeline]', showText);
     }
 
     

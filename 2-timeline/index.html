@@ -118,17 +118,17 @@
         <!-- Detail Template -->
         <script id="detail-template" type="text/x-jsrender">
 
-
+       
         {{for Moments}}
         <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
-            <img class="draggable-img" src="{{:thumbnail}}">
-            <div class="draggable-text">
+            <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}">
+            <div class="draggable-text" data-timeline={{:id}}>
                 <p>{{:excerpt}}</p>
             </div>
             
         </div>
         {{/for}}
-       
+      
         
 
             

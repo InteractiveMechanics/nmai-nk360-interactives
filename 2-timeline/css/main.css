@@ -27,7 +27,7 @@ h4 {
 
 html,
 body {
-  background: #231f20;
+  background: #2e3742;
   height: 100%;
   min-height: 100%;
   overflow: hidden; }
@@ -91,24 +91,24 @@ footer {
         padding: 30px; } }
 
 [data-toggle="tooltip"] {
-  border-bottom: 1px dotted #231f20;
+  border-bottom: 1px dotted #2e3742;
   transition: all 0.5s; }
   [data-toggle="tooltip"]:hover, [data-toggle="tooltip"]:focus, [data-toggle="tooltip"]:active {
     border-bottom: 1px dotted #f1f2f2; }
   [data-toggle="tooltip"].invert {
     border-bottom: 1px dotted white; }
     [data-toggle="tooltip"].invert:hover, [data-toggle="tooltip"].invert:focus, [data-toggle="tooltip"].invert:active {
-      border-bottom: 1px dotted #939598; }
+      border-bottom: 1px dotted #9eb2c1; }
 
 [data-pronounce] {
   background-color: #f1f2f2;
   transition: all 0.5s; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
-    background-color: #939598; }
+    background-color: #9eb2c1; }
   [data-pronounce].invert {
-    background-color: #231f20; }
+    background-color: #2e3742; }
     [data-pronounce].invert:hover, [data-pronounce].invert:focus, [data-pronounce].invert:active {
-      background-color: #939598; }
+      background-color: #9eb2c1; }
 
 .btn {
   background-color: transparent;
@@ -122,22 +122,29 @@ footer {
   .btn:hover, .btn:focus, .btn:active {
     background-color: white;
     border-color: white;
-    color: #231f20 !important; }
+    color: #2e3742 !important; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
 .activity-menu-wrapper .icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 99px;
+  width: 36px;
+  height: 36px;
   margin: 10px 5px;
-  display: inline-block; }
+  display: inline-block;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all;
+  cursor: pointer; }
+  .activity-menu-wrapper .icon:last-of-type {
+    margin-right: 15px; }
+  .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
+    opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-color: blue; }
+    background-image: url(../images/icon-info.svg); }
   .activity-menu-wrapper .icon.icon-home {
-    background-color: red; }
+    background-image: url(../images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
-    background-color: yellow; }
+    background-image: url(../images/icon-print.svg); }
 
 [data-gallery] {
   width: 32px;
@@ -222,6 +229,9 @@ div[id^="era-block"] {
 [data-toggle="tooltip"] {
   border-bottom: none; }
 
+#draggable-wrapper {
+  position: relative; }
+
 .draggable-widget {
   background-color: white;
   height: 85px;
@@ -236,10 +246,14 @@ div[id^="era-block"] {
     width: 75px;
     border: 3px solid black;
     border-radius: 50%;
-    margin-left: 5px; }
+    margin-left: 5px;
+    cursor: hand;
+    cursor: -webkit-grab;
+    cursor: grab; }
   .draggable-widget div {
     font-size: 14px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    flex: 1; }
     .draggable-widget div p {
       margin-bottom: 0px; }
 
@@ -278,10 +292,20 @@ div[id^="era-block"] {
   top: 300px; }
 
 .ui-draggable-dragging {
+  cursor: hand;
+  cursor: grabbing;
+  cursor: -webkit-grabbing !important; }
+
+.draggable-text.active {
+  display: none; }
+
+.draggable-widget.active {
   background-color: transparent;
-  height: auto;
-  width: auto; }
-  .ui-draggable-dragging .draggable-text {
+  border: none; }
+
+.dragged {
+  background-color: transparent; }
+  .dragged p {
     display: none; }
 
 .transition-overlay {
