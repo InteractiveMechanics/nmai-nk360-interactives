@@ -119,19 +119,29 @@
 
         </script>
 
+        <!-- Draggable Template -->
+        <script id="draggable-template" type="text/x-jsrender">
+            
+            <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
+                <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}">
+                <div class="draggable-text" data-timeline={{:id}}>
+                    <p>{{:excerpt}}</p>
+                </div>
+            
+            </div>
+
+        </script>
+
+
         <!-- Detail Template -->
         <script id="detail-template" type="text/x-jsrender">
-
-       
-        {{for Moments}}
-        <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
-            <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}">
-            <div class="draggable-text" data-timeline={{:id}}>
-                <p>{{:excerpt}}</p>
-            </div>
-            
+        <div class="heading-wrapper">
+             <img src="../shared/images/pnw/splash-01.svg">
+            <h1>{{:StartDate}} to {{:EndDate}}</h1>
         </div>
-        {{/for}}
+
+       <div id="draggable-wrapper"></div> 
+       
       
         
 
@@ -234,8 +244,10 @@
 
                 <div id="era-block-1" class="era-block" data-era="1">
                     <div class="era-content-wrapper">
-                        <img src="../shared/images/pnw/splash-01.svg">
-                        <h1>Time Immemorial to 1974</h1>
+                        <div class="heading-wrapper" data-era="1">
+                             <img src="../shared/images/pnw/splash-01.svg">
+                            <h1>Time Immemorial to 1974</h1>
+                        </div>
                         <button class="btn btn-lg btn-white start-timeline-btn"  data-timeline="1">Start This Timeline</button>
                         <button class="btn btn-lg btn-white view-timeline-btn hidden"  data-timeline="1">View This Timeline</button>
                     </div>
@@ -243,7 +255,10 @@
 
                 <div id="era-block-2" class="era-block" data-era="2">
                     <div class="era-content-wrapper">
-                        <h1>1974 &mdash; 1979</h1>
+                        <div class="heading-wrapper" data-era="2">
+                            <img src="../shared/images/pnw/splash-02.svg">
+                            <h1>1974 &mdash; 1979</h1>
+                        </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
                         <button class="btn btn-lg btn-white view-timeline-btn hidden"  data-timeline="2">View This Timeline</button>
                     </div>
@@ -251,7 +266,10 @@
 
                 <div id="era-block-3" class="era-block" data-era="3">
                     <div class="era-content-wrapper">
-                        <h1>1979 &mdash; present</h1>
+                        <div class="heading-wrapper" data-era="3">
+                            <img src="../shared/images/pnw/splash-03.svg">
+                            <h1>1979 &mdash; present</h1>
+                        </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
                         <button class="btn btn-lg btn-white view-timeline-btn hidden" data-timeline="3">view This Timeline</button>
                     </div>

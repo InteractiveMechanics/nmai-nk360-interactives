@@ -36,6 +36,8 @@ Init = (function() {
             $('.completed').find('.start-timeline-btn').addClass('hidden');
             $('.completed').find('.view-timeline-btn').removeClass('hidden'); 
             $('.era-block[data-era="2"]').find('.start-timeline-btn').removeClass('hidden');
+            $('.era-block[data-era="2"]').addClass('active');
+
         }
     }
 
@@ -44,6 +46,8 @@ Init = (function() {
             $('.completed').find('.start-timeline-btn').addClass('hidden');
             $('.completed').find('.view-timeline-btn').removeClass('hidden'); 
             $('.era-block[data-era="3"]').find('.start-timeline-btn').removeClass('hidden');
+            $('.era-block[data-era="3"]').addClass('active');
+
         }
     }
     

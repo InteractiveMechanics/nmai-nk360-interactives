@@ -10,9 +10,21 @@ Detail = (function() {
     	$('#selection').addClass('hidden animated fadeOut');
         $("#detail").html($.templates("#detail-template").render(data.eras[id-1]));
     	//$('#detail-template').tmpl().appendTo('#detail');
+        var newMoments = randomMoments(data.eras[id-1].Moments);
+        $("#draggable-wrapper").html($.templates("#draggable-template").render(newMoments));
     	$('#detail').removeClass('hidden fadeOut').addClass('animated fadeIn');
         Init.isSelectionScreen();
         buildGame(id);
+    }
+
+    var randomMoments = function(moments) {
+        var newMoments = [];
+        $.each(moments, function(key, val){
+            var random = Math.floor(Math.random() * newMoments.length);
+            newMoments.splice(random, 0, val);
+        });
+        console.log(newMoments);
+        return newMoments;
     }
 
     var countDroppedEls = function() {
