@@ -28,7 +28,7 @@
 			"add_fish": false
 		}
 	],
-	"obstacles": [
+	"forced": [
 	    {
 	    	"trigger_location": 2000,
 	    	"cards": 
@@ -71,21 +71,22 @@
 		    		"title": "Manmade Dam",
 		    		"heading": "The dam is blocking your path. <br /> How will you make it past?",
 		    		"correct_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"neutral_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
 		    		"incorrect_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
 		    		"lose_fish": false,
 		    		"add_fish": true,
 		    		"quiz_options": [
 		    			{
 		    				"options": "Use the fish ladder",
-		    				"correct_answer": false
+		    				"answer": "correct"
 		    			},
 		    			{
 		    				"options": "Try to find anothe way around",
-		    				"correct_answer": true
+		    				"answer": "incorrect"
 		    			},
 		    			{
 		    				"options": "Swim through the dam",
-		    				"correct_answer": false
+		    				"answer": "neutral"
 		    			}
 		    		]
 	    		},
@@ -105,9 +106,9 @@
 	    	]
 	    }
     ],
-    "ecounters": [
+    "random": [
     	{
-	    	"location": "",
+	    	"location": "city",
 	    	"cards": 
 	    	[
 	    		{
