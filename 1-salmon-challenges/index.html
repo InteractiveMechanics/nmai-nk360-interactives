@@ -18,7 +18,7 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- <link rel="stylesheet" href="./shared/css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./shared/css/theme-pnw.css" /> 
     <!-- <link rel="stylesheet" href="./shared/css/theme-np.css" /> -->
 
     <style type="text/css">
@@ -260,18 +260,18 @@
     
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
-            <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
+            <h4 class="all-caps letter-spacing-1">How to Play</h4>
             <h1>Salmon Challenges Instructions</h1>
             <div class="row justify-content-md-center">
-                <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Salmon" title="Salmon" />
+                <div class="col-6">
+                    <img src="./assets/instructions-01@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="50%" />
                     <h2>Keep your salmon alive</h2>
                     <p>
                       Guide your salmon upstream to spawn, and help them make important decisions and avoid dangerous obstacles along the way.
                     </p>
                 </div>
-                <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Salmon" title="Salmon" />
+                <div class="col-6">
+                    <img src="./assets/instructions-02@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="50%" />
                     <h2>Explore and learn</h2>
                     <p>
                       Encounter (tap or click) animated objects as they float down the river to learn about salmon&mdash;maybe even find more fish to join you on your journey to spawn!
@@ -283,6 +283,31 @@
         <div class="overlay"></div>
     </div>
 
+    <div id="instructions" class="fade show">
+        <div class="container instructions-container">
+            <h4 class="all-caps letter-spacing-1">Congratulations</h4>
+            <h1>You made it!</h1>
+            <p>
+              
+              You survived your long journey upstream with 
+              <strong><span class="fishes-left">1</span> salmon</strong> 
+              left after 
+              <br /> 
+              encountering 
+              <strong><span class="obstacles-hit">6</span> obstacles</strong> 
+              and 
+              <strong><span class="encounters-hit">16</span> random</strong> 
+              encounters along the way.
+
+            </p>
+
+            <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="75%" />
+
+            <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue this activity</a>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
     <div id="select-fish" class="fade hidden">
         <div class="container select-fish-container">
             <p class="all-caps letter-spacing-1">The Return Upstream</p>
@@ -290,7 +315,7 @@
             <div class="row justify-content-md-center fish-row">
                 
                 <div class="col cursor-pointer faded" data-fish="Sockeye">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="50%" />
                     <h2>Sockeye</h2>
                     <p>
                       Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
@@ -298,7 +323,7 @@
                 </div>
                 
                 <div class="col cursor-pointer faded" data-fish="Steelhead">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="50%" />
                     <h2>Steelhead</h2>
                     <p>
                       Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
@@ -306,7 +331,7 @@
                 </div>
                 
                 <div class="col cursor-pointer faded" data-fish="Chinook">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="50%" />
                     <h2>Chinook</h2>
                     <p>
                       Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
@@ -382,7 +407,7 @@
     <script src="./js/init.js"></script>
 
     <script type="text/javascript">
-
+      Game.init();
     </script>
 </body>
 </html>
