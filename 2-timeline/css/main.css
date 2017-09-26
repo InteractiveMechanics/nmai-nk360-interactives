@@ -265,7 +265,8 @@ div[id^="era-block"] {
   background: url("../../assets/bkgr-pnw@2x.png");
   background-size: cover;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  text-align: center; }
   #detail .heading-wrapper {
     position: relative;
     top: 17px; }
@@ -279,25 +280,29 @@ div[id^="era-block"] {
 #droppable-container {
   align-items: center;
   bottom: 0px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  padding: 60px;
-  position: absolute;
-  width: 100%; }
-  #droppable-container h3 {
-    font-size: 16px;
-    font-weight: 700; }
+  padding: 10px;
+  background: #006986;
+  border-radius: 52px;
+  box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2); }
 
 #era-label-start {
   width: 125px;
   text-align: right; }
 
 .droppable-widget {
-  border: 3px solid black;
+  border: 3px solid white;
   border-radius: 50%;
-  height: 75px;
+  height: 82px;
   margin: 0px 10px;
-  width: 75px; }
+  width: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d6d6d6;
+  font-size: 13px;
+  text-align: center; }
 
 [data-toggle="tooltip"] {
   border-bottom: none; }
@@ -307,7 +312,7 @@ div[id^="era-block"] {
   display: flex;
   width: 90%;
   left: 5%;
-  height: 50%;
+  height: 56%;
   flex-wrap: wrap;
   justify-content: center; }
 
@@ -320,37 +325,70 @@ div[id^="era-block"] {
   align-items: center;
   overflow: hidden;
   z-index: 2;
-  margin: 0px 20px; }
+  margin: 0px 20px;
+  padding: 20px 33px 20px 0px;
+  text-align: left;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
   .draggable-widget img {
-    height: 75px;
-    width: 75px;
-    border: 3px solid black;
+    height: 82px;
+    width: 82px;
+    border: 3px solid white;
     border-radius: 50%;
-    margin-left: 5px;
+    margin-left: 3px;
     cursor: hand;
     cursor: -webkit-grab;
     cursor: grab; }
   .draggable-widget div {
-    font-size: 14px;
-    margin-left: 5px;
+    font-size: 13px;
+    margin-left: 88px;
     flex: 1; }
     .draggable-widget div p {
       margin-bottom: 0px; }
 
+.draggable-img {
+  height: 82px;
+  width: 82px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-left: 3px;
+  cursor: hand;
+  cursor: -webkit-grab;
+  cursor: grab;
+  z-index: 3; }
+
+.draggable-img-wrapper {
+  left: 18px;
+  top: -83px;
+  height: 82px;
+  width: 82px; }
+
+.draggable-overlay {
+  background: #a8bd46;
+  opacity: 0.7;
+  height: 82px;
+  width: 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid white;
+  border-radius: 50%; }
+  .draggable-overlay:after {
+    content: url("../../shared/images/icon-checkmark.svg");
+    height: 82px;
+    width: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
 .draggable-widget.dragged {
   background-color: transparent;
+  box-shadow: none;
   border: none;
   height: auto;
   width: auto;
   z-index: -1; }
   .draggable-widget.dragged .draggable-text {
     display: none; }
-  .draggable-widget.dragged .draggable-img {
-    border: none;
-    height: 72px;
-    width: 72px;
-    position: relative;
-    left: -2px; }
 
 .ui-draggable-dragging {
   cursor: hand;
@@ -364,12 +402,18 @@ div[id^="era-block"] {
 
 .draggable-widget.active {
   background-color: transparent;
-  border: none; }
+  border: none;
+  box-shadow: none; }
 
-.dragged {
-  background-color: transparent; }
-  .dragged p {
-    display: none; }
+.dragged .draggable-img {
+  margin-left: 0px; }
+
+.tooltip-inner {
+  background-color: #ec5343;
+  border-radius: 0.15rem;
+  font-weight: 300; }
+  .tooltip-inner::before {
+    border-bottom-color: #ec5343 !important; }
 
 .transition-overlay {
   background-color: rgba(0, 0, 0, 0.7);
@@ -496,42 +540,45 @@ div[id^="era-block"] {
 .sm-label[data-timeline="5"] {
   left: 2100px; }
 
+.modal-backdrop {
+  opacity: 0.7 !important; }
+
 .modal-dialog {
-  max-width: 400px; }
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px; }
 
 .modal-header {
   flex-direction: column;
   border-bottom: none;
   padding: 40px 20px 20px; }
-  .modal-header:after {
-    content: "";
-    border: 2px solid #DDDDDD;
-    margin-top: 15px;
-    width: 50px; }
+
+.modal-content {
+  background: url("../../assets/text-card-pnw@2x.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .modal-body {
-  padding: 20px 20px 40px; }
+  padding: 0px 30px 40px; }
+  .modal-body p {
+    font-size: 14px; }
+
+.modal-year {
+  font-size: 0.75em;
+  letter-spacing: 1px; }
 
 .modal-photo-wrapper img {
   max-width: 100%; }
 .modal-photo-wrapper figcaption {
-  font-size: 14px;
-  font-style: italic; }
+  font-size: 13px;
+  font-style: italic;
+  color: #2e3742;
+  margin-top: 10px; }
 
 .close[data-dismiss="modal"] {
   position: absolute;
-  left: 110%;
+  left: 105%;
   top: 0%; }
-  .close[data-dismiss="modal"] span {
-    color: white;
-    border: 1px solid white;
-    border-radius: 50%;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    text-shadow: none;
-    font-weight: initial; }
 
 /*# sourceMappingURL=main.css.map */

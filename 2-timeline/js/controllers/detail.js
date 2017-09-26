@@ -84,19 +84,12 @@ Detail = (function() {
 
     }
 
-    var positionMoments = function() {
-        var max = $('.draggable-widget').length;
-        var parent = $('#detail-template');
-        var draggables = parent.children();
-        while (draggables.length) {
-            parent.append(draggables.splice(Math.floor(Math.random() * draggables.length), 1)[0]);
-        }
-    }
+   
 
     var buildGame = function(id) {
-        positionMoments();
         $('[data-toggle=tooltip]').tooltip('hide');
-        $('.draggable-img').draggable({
+        $('.draggable-img-wrapper').draggable({
+            appendTo: 'body',
             tolerance: 'touch',
             snap: '.droppable-widget',
             revert: 'invalid',
@@ -117,6 +110,7 @@ Detail = (function() {
               
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
                         ui.draggable.addClass('dragged');
+                        ui.draggable.find('.draggable-overlay').removeClass('hidden');
                         ui.draggable.draggable('option', 'revert', 'invalid');
                        
 
@@ -137,14 +131,17 @@ Detail = (function() {
                         });
 
                         ui.draggable.draggable('option', 'disabled', true);
+
                        
                        
 
 
                     } else {
                         ui.draggable.draggable('option', 'revert', 'valid');
-                        setTimeout(function() {   ui.draggable.parent().tooltip('show'); }, 1000);
-                        setTimeout(function() {   ui.draggable.parent().tooltip('hide'); }, 3000);
+                        var draggableNumber = ui.draggable.attr('data-timeline');
+                        var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
+                        setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);
+                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 3000);
                        
                        
                     }
@@ -159,8 +156,8 @@ Detail = (function() {
         $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);
         $(document).on('click tap', '.view-timeline-btn[data-timeline]', displayExploreScreen);
         $(document).on('hidden.bs.modal', countDroppedEls);
-        $(document).on('dragstart', '.draggable-img[data-timeline]', hideText);
-        $(document).on('dragstop', '.draggable-img[data-timeline]', showText);
+        $(document).on('dragstart', '.draggable-img-wrapper[data-timeline]', hideText);
+        $(document).on('dragstop', '.draggable-img-wrapper[data-timeline]', showText);
     }
 
     
