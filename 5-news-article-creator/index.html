@@ -18,8 +18,15 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- For development only -->
     <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
     <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+    /build -->
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -310,6 +317,13 @@
     <script src="./shared/code/lightbox/lightbox.js"></script>
     <script src="./shared/code/upperleftmenu/menu.js"></script>
 
+    <!-- For development only -->
+    <!-- <script>var jsondata = './data/m2a1.json';</script> -->
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
 
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>

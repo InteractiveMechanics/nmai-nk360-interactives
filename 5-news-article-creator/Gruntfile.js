@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
-
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('../package.json'),
-        
+
         sass: {
-            dev: {
+            default: {
                 files: {
                     'css/main.css': 'sass/main.scss',
                     'css/theme-pnw.css': 'sass/theme-pnw.scss',
@@ -34,14 +34,37 @@ module.exports = function(grunt) {
             },
             build: ['js/**/*.js']
         },
-        uglify: {
+        copy: {
+            dist: {
+                files: [
+                    {expand: true, src: ['css/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['js/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['assets/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['data/**'], dest: 'dist/' + grunt.option('dir')},
+                ]
+            },
+        },
+        processhtml: {
             options: {
-                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+                process: true,
+                data: {
+                    json: grunt.option('json'),
+                    theme: grunt.option('theme')
+                }
+            },
+            dist: {
+                files: [
+                    {expand: true, src: ['*.html'], dest: 'dist/' + grunt.option('dir') + '/', ext: '.html'},
+                ]
+            },
+        },
+        symlink: {
+            options: {
+                overwrite: true
             },
             build: {
-                files: {
-                    'js/magic.min.js': 'src/js/magic.js'
-                }
+                src: '../shared',
+                dest: 'dist/' + grunt.option('dir') + '/shared'
             }
         }
     });
@@ -52,10 +75,10 @@ module.exports = function(grunt) {
 
     grunt.loadTasks('../node_modules/grunt-contrib-jshint/tasks');
 
-    //grunt.loadTasks('../node_modules/grunt-contrib-clean/tasks');
-    //grunt.loadTasks('../node_modules/grunt-contrib-qunit/tasks');
-    //grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-copy/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-symlink/tasks');
+    grunt.loadTasks('../node_modules/grunt-processhtml/tasks');
     
     grunt.registerTask('dev', ['connect', 'watch']);
-    //grunt.registerTask('dist', ['sass', 'uglify']);
+    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'symlink']);
 };
