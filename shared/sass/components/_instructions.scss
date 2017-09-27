@@ -16,5 +16,16 @@
         @media screen and ($screen-xs) {
             padding: 30px;
         }
+
+        h2 {
+            color: white !important;
+        }
+        img {
+            max-width: 300px;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
     }
 }

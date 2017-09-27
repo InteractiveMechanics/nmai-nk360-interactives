@@ -1,6 +1,7 @@
 html,
 body {
-    background: $lightgray;
+    background: url('../assets/background@2x.jpg');
+    background-size: cover;
 }
 
 main {
@@ -12,15 +13,6 @@ main {
 }
 
 #static-ui {
-
-    .guiding-question {
-        position: fixed;
-        top: 20px;
-        width: 100%;
-        text-align: center;
-        pointer-events: none;
-    }
-
     .print-preview-btn {
         position: absolute;
         bottom: 80px;

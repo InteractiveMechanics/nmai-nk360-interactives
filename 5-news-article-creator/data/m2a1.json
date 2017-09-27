@@ -5,17 +5,51 @@
         "url": "http://nmai.si.edu/nk360"
     },
     "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
-    "question": "What kinds of actions can lead to justice?",
+    "question": "Is a treaty intended to be forever?",
+    "paperTitle": "",
+    "paperImage": "",
     "images": [
         {
             "thumb": "path/to/image",
             "url": "path/to/image",
-            "credit": ""
+            "caption": "George A. Crofutt, “American Progress,” ca. 1873.",
+            "credit": "Chromolithograph after an 1872 oil painting by John Gast, courtesy of the Library of Congress, LC-DIG-ppmsca-09855"
         },
         {
             "thumb": "path/to/image",
             "url": "path/to/image",
-            "credit": ""
+            "caption": "Bison skulls, ca. 1890.",
+            "credit": "Photograph courtesy of the Burton Historical Collection, Detroit Public Library."
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "caption": "Map of the Louisiana Purchase Territory; 1903.",
+            "credit": "Records of the Bureau of Land Management, Record Group 49."
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "caption": "Map of the upper Great Plains and Rocky Mountains region.",
+            "credit": "Map by Pierre-Jean De Smet, 1801-1873. Library of Congress, Geography and Map Division."
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "credit": "Photo courtesy of the Library of Congress. LOT 12885.",
+            "caption": "Portrait of Red Cloud, 1880-1909."
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "credit": "Custer’s Black Hills Expedition in Castle Creek Valley, 1874. Photograph by William H. Illingworth, courtesy of the National Anthropological Archives : NAA Photo Lot 2000-12",
+            "caption": "Custer’s Black Hills Expedition in Castle Creek Valley, 1874."
+        },
+        {
+            "thumb": "path/to/image",
+            "url": "path/to/image",
+            "credit": "Photo by Alexander Gardner, 1868. NMAI P01259",
+            "caption": "U S. army commissioners in council with Native leaders at Fort Laramie."
         }
     ],
     "quotes": [

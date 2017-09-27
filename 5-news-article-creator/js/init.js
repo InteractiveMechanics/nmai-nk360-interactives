@@ -4,13 +4,17 @@
 Init = (function() {
     var init = function() {
         generateGuidingQuestion();
+        generatePaperTitle();
         generateReturnTo();
     }
     
     var generateGuidingQuestion = function() {
         var question = data.question;
-
         $('.guiding-question').text(question);
+    }
+    var generatePaperTitle = function() {
+        var paperTitle = data.paperTitle;
+        $('.paper-title').text(paperTitle);
     }
     
     var generateReturnTo = function() {

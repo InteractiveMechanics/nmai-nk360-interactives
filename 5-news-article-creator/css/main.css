@@ -107,6 +107,12 @@ footer {
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
         padding: 30px; } }
+    #instructions .instructions-container h2 {
+      color: white !important; }
+    #instructions .instructions-container img {
+      max-width: 300px; }
+    #instructions .instructions-container .row {
+      margin-bottom: 20px; }
 
 [data-toggle="tooltip"] {
   border-bottom: 1px dotted #2e3742;
@@ -190,7 +196,8 @@ footer {
 
 html,
 body {
-  background: #f1f2f2; }
+  background: url("../assets/background@2x.jpg");
+  background-size: cover; }
 
 main {
   position: absolute;
@@ -199,12 +206,6 @@ main {
   width: 100%;
   height: 100%; }
 
-#static-ui .guiding-question {
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-  pointer-events: none; }
 #static-ui .print-preview-btn {
   position: absolute;
   bottom: 80px;
