@@ -9,3 +9,12 @@
 .cursor-pointer {
 	cursor:pointer;
 }
+
+.btn {
+	border-color:white !important;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+	background-color:white !important;
+	color:#2e3742 !important;
+}

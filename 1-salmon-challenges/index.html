@@ -82,8 +82,6 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-home" title="Back to Home Screen"></a>
-            <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -201,7 +199,7 @@
           <p></p>
         </div>
           
-        <div class="card suitclubs">
+        <div class="card slider-card">
           <section class="intro-slider">
             
             <div>
@@ -315,24 +313,24 @@
             <h1>Pick your salmon</h1>
             <div class="row justify-content-md-center fish-row">
                 
-                <div class="col cursor-pointer faded" data-fish="Sockeye">
-                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="50%" />
+                <div class="col cursor-pointer" data-fish="Sockeye">
+                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
                     <h2>Sockeye</h2>
                     <p>
                       Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
                     </p>
                 </div>
                 
-                <div class="col cursor-pointer faded" data-fish="Steelhead">
-                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="50%" />
+                <div class="col cursor-pointer" data-fish="Steelhead">
+                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
                     <h2>Steelhead</h2>
                     <p>
                       Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
                     </p>
                 </div>
                 
-                <div class="col cursor-pointer faded" data-fish="Chinook">
-                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="50%" />
+                <div class="col cursor-pointer" data-fish="Chinook">
+                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
                     <h2>Chinook</h2>
                     <p>
                       Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
@@ -360,13 +358,16 @@
             <div class="game-world__midground"></div>
             <div class="game-world__foreground"></div>
 
-            <div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
-            </div>
+            <div class="encounters">
 
-            <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
-            </div>
+              <div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
+              </div>
 
-            <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot">
+              <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
+              </div>
+
+              <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot"></div>
+
             </div>
 
           </div>
@@ -374,6 +375,47 @@
         </div>
 
     </main>
+
+    <script id="hotspotTemplate" type="text/x-jsrender">
+      <div data-location="{{:location}}" data-hotspot="{{:hotspot_index}}" style="bottom: {{:bottom}}px; left: {{:left}}px;" class="hotspot"></div>
+    </script>
+
+     <script id="introSliderTemplate" type="text/x-jsrender">
+        <div>
+
+          {{if sub_title}}
+            <p class="text-center all-caps">{{:sub_title}}</p>
+          {{/if}}
+
+          {{if title}}
+            <h2 class="text-center">{{:title}}</h2>
+          {{/if}}
+
+          {{if heading}}
+            <h1>{{:heading}}</h1>
+          {{/if}}
+
+          {{if image}}
+
+            <div class="card-image">
+              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+            </div>
+            <p class="image-credit">
+              {{:credit}}
+            </p>
+
+          {{/if}}
+
+          {{if body}}
+            <p>
+              {{:body}}
+            </p>
+          {{/if}}
+        </div>
+    </script>
+
+
+    
 
 
     
@@ -408,7 +450,7 @@
     <script src="./js/init.js"></script>
 
     <script type="text/javascript">
-      Game.init();
+      //Game.init();
     </script>
 </body>
 </html>

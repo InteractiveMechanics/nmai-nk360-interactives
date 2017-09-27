@@ -10,6 +10,7 @@ $(function(){
 
         Init.init();
         Instructions.init();
+		Game.init(data);
 
     }, 'json');
 });
