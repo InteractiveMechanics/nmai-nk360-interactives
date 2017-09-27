@@ -8,17 +8,18 @@ Explore = (function() {
         $('.transition-overlay').addClass('animated fadeOut hidden');
     }
 
+    //TODO try window.innerwidth as value for scrollLeft
     var advancePrevBtn = function() {
         event.preventDefault();
         $('.timeline-wrapper').animate({
-            scrollLeft: "-=200px"
+            scrollLeft: "-=500px"
         }, "fast");
     }
 
     var advanceNextBtn = function() {
         event.preventDefault();
         $('.timeline-wrapper').animate({
-            scrollLeft: "+=200px"
+            scrollLeft: "+=500px"
         }, "fast");
     }
 

@@ -187,6 +187,21 @@ footer {
   bottom: 10px;
   right: 10px; }
 
+@font-face {
+  font-family: "Ludicrous";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../fonts/ludicrous/Ludicrous.woff") format("woff"), url("../fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 #selection {
   height: 100vh;
   width: 100vw;
@@ -415,8 +430,11 @@ div[id^="era-block"] {
   .tooltip-inner::before {
     border-bottom-color: #ec5343 !important; }
 
+.timeline-bkgr {
+  height: 100%; }
+
 .transition-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   height: 100vh;
   width: 100vw; }
 
@@ -427,118 +445,148 @@ div[id^="era-block"] {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  padding: 0px 25px; }
   .transition-content-wrapper h1 {
-    margin: 20px; }
+    margin: 20px 0px;
+    font-family: "Archer Pro", serif;
+    font-size: 4.0em; }
+  .transition-content-wrapper h6 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .transition-content-wrapper p {
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 1.9;
+    padding: 0px 25px; }
   .transition-content-wrapper .btn-wrapper {
     display: flex;
     margin-top: 60px; }
     .transition-content-wrapper .btn-wrapper .btn {
-      margin: 20px; }
+      margin: 20px;
+      font-weight: 400; }
 
 .timeline-wrapper {
   position: absolute;
-  left: 5%;
   height: 103%;
   width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  background: url("../../assets/timeline-full@2x.jpg");
+  background-size: cover; }
 
 .timeline-track {
-  border-bottom: 1px solid #717171;
+  border-bottom: 1px solid #deded1;
   bottom: 17%;
+  left: 5%;
   position: absolute;
-  width: calc(300px + 2100px + 250px); }
+  width: calc(366px + 1691px + 250px); }
+
+.timeline-item-wrapper {
+  position: absolute; }
 
 .timeline-item {
-  background-color: #dedede;
+  background-color: white;
   border: none;
   border-radius: 37px;
   display: flex;
   position: absolute;
   text-align: initial;
-  width: 300px; }
+  width: 366px;
+  height: 85px;
+  z-index: 3; }
 
-.timeline-item[data-timeline="1"] {
-  left: 40px;
-  top: 400px; }
+.timeline-item-wrapper[data-timeline="1"] {
+  left: 5%;
+  top: 521px; }
 
-.timeline-item[data-timeline="2"] {
-  left: 450px;
-  top: 200px; }
+.timeline-item-wrapper[data-timeline="2"] {
+  left: 805px;
+  top: 521px; }
 
-.timeline-item[data-timeline="3"] {
-  left: 1100px;
-  top: 400px; }
+.timeline-item-wrapper[data-timeline="3"] {
+  left: 1144px;
+  top: 355px; }
 
-.timeline-item[data-timeline="4"] {
-  left: 1500px;
-  top: 200px; }
+.timeline-item-wrapper[data-timeline="4"] {
+  left: 1238px;
+  top: 521px; }
 
-.timeline-item[data-timeline="5"] {
-  left: 2100px;
-  top: 200px; }
+.timeline-item-wrapper[data-timeline="5"] {
+  left: 1691px;
+  top: 521px; }
 
 .timeline-btn-img {
-  height: 75px;
-  border: 3px solid black;
+  height: 82px;
+  border: 3px solid white;
   border-radius: 50%;
   margin: 2px -2px;
-  width: 75px; }
+  width: 82px; }
 
-.timeline-btn-text-wrapper {
-  padding: 10px; }
-  .timeline-btn-text-wrapper h6 {
-    font-weight: 700; }
-  .timeline-btn-text-wrapper p {
-    font-size: 14px; }
+.timeline-btn-text-wrapper h6 {
+  font-weight: 700; }
+.timeline-btn-text-wrapper p {
+  font-size: 14px; }
 
-#prev-btn {
-  left: 1%;
+#prev-btn, #next-btn {
+  left: 12px;
   position: absolute;
-  top: 50%; }
+  top: 50%;
+  border: none;
+  z-index: 3;
+  transition: 0.5 opacity ease-in-out; }
+  #prev-btn:hover, #next-btn:hover, #prev-btn:active, #next-btn:active, #prev-btn:focus, #next-btn:focus {
+    background: transparent !important;
+    opacity: 0.7; }
 
 #next-btn {
-  left: 93%;
-  position: absolute;
-  top: 50%; }
+  right: 12px;
+  left: auto; }
 
 .lg-label-wrapper {
   position: absolute;
   bottom: 40px;
-  width: calc(300px + 2100px + 250px);
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0px; }
+  width: calc(366px + 1691px + 250px);
+  padding-left: 0px;
+  left: 5%; }
   .lg-label-wrapper li {
     display: inline; }
     .lg-label-wrapper li h2 {
-      color: #777;
+      color: #deded1;
       display: inline;
-      font-weight: 700; }
+      font-family: "Ludicrous", serif;
+      position: relative; }
+
+.sm-label {
+  font-family: "Archer Pro", serif;
+  position: relative;
+  top: 28px;
+  left: -4px;
+  color: #deded1; }
 
 .sm-label-wrapper {
-  bottom: 90px;
-  position: absolute; }
+  position: relative;
+  height: 150px;
+  border-left: 2px dotted #deded1;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 2px;
+  top: 42px; }
   .sm-label-wrapper h4 {
     display: inline;
-    position: relative; }
+    position: relative;
+    font-family: "Archer Pro", serif; }
 
-.sm-label[data-timeline="1"] {
-  left: 40px; }
+.sm-label-wrapper[data-timeline="3"] {
+  height: 314px; }
 
-.sm-label[data-timeline="2"] {
-  left: 450px; }
+.lg-label-2 {
+  left: 285px; }
 
-.sm-label[data-timeline="3"] {
-  left: 1100px; }
-
-.sm-label[data-timeline="4"] {
-  left: 1500px; }
-
-.sm-label[data-timeline="5"] {
-  left: 2100px; }
+.leg-label-3 {
+  left: 786px; }
 
 .modal-backdrop {
   opacity: 0.7 !important; }
@@ -557,7 +605,8 @@ div[id^="era-block"] {
   background: url("../../assets/text-card-pnw@2x.png");
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  min-height: 550px; }
 
 .modal-body {
   padding: 0px 30px 40px; }

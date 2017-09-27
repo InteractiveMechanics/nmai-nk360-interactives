@@ -36,7 +36,7 @@ Detail = (function() {
 
             if (numberDropped == numberDroppable) {
                 $('.era-block[data-era="' + era + '"]').addClass('completed');
-                setTimeout(function() { displayExploreScreen(era); }, 2000);
+                setTimeout(function() { displayExploreScreen(era); }, 750);
             }
         }
     }
