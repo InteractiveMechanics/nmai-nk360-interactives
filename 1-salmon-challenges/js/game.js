@@ -1,15 +1,23 @@
 Game = (function() {
 
     var settings = {
-      speed: 100,
+      speed: 7,
       position: 0,
       fishSelection: null,
       pause: true,
       started: false
     };
 
-    var init = function() {
+    var randomEncounters = [];
+    var oceanEncounters = [];
+    var wildernessEncounters = [];
+    var cityEncounters = [];
+
+    var init = function(data) {
+        gameData = data;
+        
         bindEvents();
+        setData();
     }
     var bindEvents = function() {
         $('body').on('click tap', '#show-instructions', showIntro);
@@ -28,8 +36,54 @@ Game = (function() {
         initGame();
     }
 
+    var setData = function() {
+      setIntroCard();
+      setObstacles();
+      setRandomEncounters();
+    }
+
+    var setIntroCard = function() {
+
+      var sliderTemplate = $.templates("#introSliderTemplate");
+      var sliderTemplateHTMLOutput = sliderTemplate.render(gameData.intro_cards);
+      $(".intro-slider").html(sliderTemplateHTMLOutput);
+    }
+
+    var setObstacles = function() {
+      console.log(gameData.forced);
+    }
+
+    var setRandomEncounters = function() {
+      var encounters = gameData.random;
+
+      for (var i = 0; i < encounters.length; i++) {
+        switch (encounters[i].location) {
+
+          case 'city':
+            cityEncounters.push(encounters[i]);
+            break;
+
+          case 'ocean':
+            oceanEncounters.push(encounters[i]);
+            break;
+
+          case 'wilderness':
+            wildernessEncounters.push(encounters[i]);
+            break;
+
+          default:
+            randomEncountersrandomEncounters
+        }
+      };
+
+      console.log(cityEncounters);
+      console.log(oceanEncounters);
+      console.log(wildernessEncounters);
+
+    }
+
     var closeCongratsScreen = function() {
-      
+
     }
 
 
@@ -74,6 +128,8 @@ Game = (function() {
       _this.removeClass('faded');
 
       $('#close-select-fish').removeClass('faded');
+      $('.salmon').addClass(settings.fishSelection + "-0");
+
     }
 
     var hotspotClicked = function() {

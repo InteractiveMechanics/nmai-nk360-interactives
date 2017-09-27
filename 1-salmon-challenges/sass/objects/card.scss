@@ -29,6 +29,8 @@
     transform: rotate(-2.5deg);
 }
 
+
+
 .card-wrapper {
   z-index: 30;
   position: relative;
@@ -38,13 +40,15 @@
   z-index: 30;
   position: relative;*/
 
+  
+
   & > {
   	.card {
 		position: absolute;
 		top: 0;
 		left: 0;
 		transition: top 0.3s ease, left 0.3s ease;
-		width: 550px;
+		width: 430px;
 		margin: auto;
 		position: absolute;
 		left: 0; 
@@ -146,4 +150,10 @@
 			background: red !important;
 		}
 	}
+}
+
+.slider-card {
+	background: url(../assets/text-card-pnw@2x.png) white !important;
+    background-size: 400px 600px !important;
+    background-repeat:no-repeat;
 }

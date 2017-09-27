@@ -1,6 +1,6 @@
 .slick-slide {
     margin: 0px 20px;
-	width: 500px;
+	width: 390px;
 
 	img {
 		width: 100%;
@@ -23,7 +23,7 @@
 
 .slick-dots {
 	z-index: 50;
-	bottom: -310px;
+	bottom: -80px;
 
 	li {
 		@include screen-ltmd {
