@@ -70,3 +70,26 @@
     @media screen and (max-width: 767px) {
       #select-fish .select-fish-container {
         padding: 30px; } }
+
+#congrats-instructions {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+  z-index: 90; }
+  #congrats-instructions .select-fish-container {
+    z-index: 91;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; }
+    @media screen and (max-width: 767px) {
+      #congrats-instructions .select-fish-container {
+        padding: 30px; } }
+
+.fish-row {
+  .img-fluid {
+    margin: 50px 0;
+  }
+}
