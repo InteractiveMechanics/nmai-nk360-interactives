@@ -631,21 +631,40 @@
     ],
     "random": [
     	{
-	    	"location": "city",
+	    	"location": "city, wilderness",
 	    	"cards": 
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
+		    		"sub_title": "You’ve Found . . .",
+		    		"title": "Trash Floating in the River",
 		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by U.S. Environmental Protection Agency",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "Somebody had dumped a lot of trash in the river. Almost any kind of trash you can imagine can make its way into a river system. This pollution creates poor water quality and that means bad habitat for salmon.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	   },
+	    {
+	    	"location": "wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve Encountered an Obstacle",
+		    		"title": "Man-made Dam",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Doug McMains, July 2016",
+		    		"caption": "",
+		    		"body": "You’ve reached a dam that was created to generate hydroelectric power. The route to your spawning grounds is blocked.",
+		    		"result": "You lose 2 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
 	    },
@@ -655,211 +674,231 @@
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
+		    		"sub_title": "You’ve encountered",
+		    		"title": "A dam with a fish ladder",
 		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Portland Corps, July 2010</br> https://creativecommons.org/licenses/by/2.0/</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/portlandcorps/11997850005/in/album-72157654873269070/",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "You’ve reached a dam that has a fish ladder built on the side for migrating fish. The dam is really big and the fish ladder is small. You get confused and are unable to find the fish ladder.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
 	    },
 	    {
+	    	"location": "city, wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Siltation",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by U.S. Fish and Wildlife Service [Public domain], via Wikimedia Commons",
+		    		"caption": "",
+		    		"body": "A lot of logging is going on in this area. All of the trees have been cut down and it creates soil erosion. The loose soil runs into the river when it rains. Some of it is suspended in the water making the water murky and unhealthy for fish. Some of the silt settles on the river bottom where it chokes the water plants and covers up the gravelly spawning grounds that salmon need.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	    	    {
+	    	"location": "city, wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Invasive species",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Kat Daned, August 6, 2008</br>https://www.flickr.com/photos/katdaned/3307797558/in/photolist-63ijYo-5uQwpe</br>https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://creativecommons.org/licenses/by-nc-nd/2.0/",
+		    		"caption": "",
+		    		"body": "Somebody has placed a non-native species of fish (pike) into the river for sport fishing. Although they are not in their native environment, pike thrive in this river and compete with the native species for resources. Pike are voracious and predatory and they like to eat other fish.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	   {
+	    	"location": "city, wildnerness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Warmer water",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Clearcut, April 2008</br>https://creativecommons.org/licenses/by-sa/2.0/ </br>https://creativecommons.org/licenses/by-sa/2.0/legalcode </br>https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT",
+		    		"caption": "",
+		    		"body": "Trees and brush have been removed from the riverbank to make way for a new development. Salmon rely on trees and brush to keep the water nice and cool. The habitat is now compromised.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	    {
+	    	"location": "city, wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "No place to rest",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "",
+		    		"caption": "",
+		    		"body": "People have removed log jams from the river to allow safe passage for boats. While boats can now travel on the river without fear of running into a log jam, salmon have lost a crucial resting place along their difficult journey to spawn. Without the cool deep pools created by log jams, salmon must keep swimming even though they are fatigued.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	        {
+	    	"location": "city",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Factory pollution",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Ingrid Taylar, February 2011</br> https://creativecommons.org/licenses/by/2.0/</br>  https://creativecommons.org/licenses/by/2.0/legalcode</br>https://www.flickr.com/photos/taylar/5441017986/in/album-72157608726346297/",
+		    		"caption": "",
+		    		"body": "A nearby factory dumps its untreated wastewater into the river. This leaves dangerous and unhealthy deposits of chemicals and metals in the water and creates a polluted and unsafe habitat for salmon.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	          {
+	    	"location": "city, wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "City runoff",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by KOMUNews, June 2010</br>https://creativecommons.org/licenses/by/2.0/legalcode</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/komunews/4683128554/in/album-72157624232753326/",
+		    		"caption": "",
+		    		"body": "The city has a drainage system that carries runoff from the streets into the river. When it rains everything that people dump into the streets can enter the storm drains and be carried into the river. Pollutants like motor oil, detergents, lawn fertilizers, and many kinds of trash create an unsafe and unhealthy habitat for salmon.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	              {
+	    	"location": "wilderness",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Agricultural pollution",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Oregon Department of Agriculture, April 2010</br> https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://www.flickr.com/photos/oragriculture/8071194360/in/album-72157631731617650/",
+		    		"caption": "",
+		    		"body": "There is a beautiful fruit orchard near the river. Unfortunately, when it rains the water carries remnants of pesticides and fertilizers into the river. Such chemicals degrade are dangerous for fish and degrade the habitat making it even harder for salmon to survive their spawning migration.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
+	    		}
+	    	]
+	    },
+	    	              {
 	    	"location": "ocean",
 	    	"cards": 
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Commercial fishing",
 		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Fishing for Salmon, August 2013</br> https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode </br>https://creativecommons.org/licenses/by-nc-nd/2.0/ </br>https://www.flickr.com/photos/fletchersgonefishing/11283955544/in/album-72157638498987043/",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "People love to eat salmon and that means there is a lot of commercial fishing going on in many locations salmon pass through during the migrations that are part of their lifecycle. With many salmon endangered and threatened with extinction, commercial fishing represents a serious obstacle to salmon wellbeing. ",
+		    		"result": "You lose 2 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
 	    },
-	    {
-	    	"location": "city",
-	    	"cards": 
-	    	[
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		}
-	    	]
-	    },
-	    {
+	                 {
 	    	"location": "wilderness",
 	    	"cards": 
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Sport fishers",
 		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Tom Maliery, July 2010</br>https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode</br>https://www.flickr.com/photos/mag3737/5160057927/in/album-72157625345562872/",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "Sport fishing is a recreational activity that many people around the world enjoy. It is also an enjoyable source of food. Salmon are a favorite species of sport fishers. With so many different kinds of forces at work against the salmon, sport fishing is viewed as yet another obstacle in their survival.",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
 	    },
-	    {
+	                  {
 	    	"location": "ocean",
 	    	"cards": 
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
+		    		"sub_title": "You’ve encountered an obstacle",
+		    		"title": "Natural predator",
 		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Photograph by Shawn Kinkade, August 2010</br> https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode</br>https://www.flickr.com/photos/wsk/4873692887/in/album-72157624559428235/",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "Magnificent Orca whales swim the cold waters of the northern Pacific Ocean. They are a voracious natural predator of salmon. Pods of whales follow the migrating salmon and feast on them. Orcas are large animals weighing up to 12,000 pounds. One adult Orca can eat up to 375 pounds of food in one day. That’s a lot of salmon!",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
 	    },
-	    {
-	    	"location": "wilderness",
-	    	"cards": 
-	    	[
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		}
-	    	]
-	    },
-	    {
+	    	                  {
 	    	"location": "city",
 	    	"cards": 
 	    	[
 	    		{
 		    		"type": "information",
-		    		"sub_title": "You've found",
+		    		"sub_title": "You’ve encountered an obstacle",
 		    		"title": "Zooplankton",
 		    		"heading": "",
-		    		"image": "",
+		    		"image": "http://via.placeholder.com/400x250",
 		    		"credit": "",
 		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
-	    		},
-	    		{
-		    		"type": "information",
-		    		"sub_title": "You've found",
-		    		"title": "Zooplankton",
-		    		"heading": "",
-		    		"image": "",
-		    		"credit": "",
-		    		"caption": "",
-		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
-		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
-		    		"lose_fish": false,
-		    		"add_fish": true
+		    		"body": "",
+		    		"result": "You lose 1 fish",
+		    		"lose_fish": true,
+		    		"add_fish": false
 	    		}
 	    	]
-	    }
+	    },
+	   
+	]
+	
 
 
     ],
