@@ -7,8 +7,8 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     'css/main.css': 'sass/main.scss',
-                    '../shared/css/theme-pnw.css': '../shared/sass/theme-pnw.scss',
-                    '../shared/css/theme-np.css': '../shared/sass/theme-np.scss'
+                    'css/theme-pnw.css': 'sass/theme-pnw.scss',
+                    'css/theme-np.css': 'sass/theme-np.scss'
                 }
             }
         },
