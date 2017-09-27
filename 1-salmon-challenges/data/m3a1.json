@@ -1,5 +1,133 @@
 {
-    "title": "Salmon Challenges",
+	"title": "Salmon Challenges",
+	"intro_cards": [
+		{
+			"type": "information",
+			"sub_title": "The return upstream",
+			"title": "Salmon Challenges",
+			"heading": "",
+			"image": "http://via.placeholder.com/400x250",
+			"credit": "Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson",
+			"caption": "",
+			"body": "Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		},
+		{
+			"type": "information",
+			"sub_title": "The return upstream",
+			"title": "Salmon Challenges",
+			"heading": "",
+			"image": "",
+			"credit": "Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson",
+			"caption": "",
+			"body": "Salmon face a life filled with challenges caused by several yada yada yada <br /> After time at sea, the adult salmon yada yada yada.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		}
+	],
+	"forced": [
+	    {
+	    	"trigger_location": 2000,
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You've found",
+		    		"title": "Zooplankton",
+		    		"heading": "",
+		    		"image": "",
+		    		"credit": "",
+		    		"caption": "",
+		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
+		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true
+	    		}
+	    	]
+	    },
+	    {
+	    	"trigger_location": 2000,
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You've encountered an obstacle",
+		    		"title": "Manmade Dam",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Credit to the dam, 2001. Photo by Beaver.",
+		    		"caption": "",
+		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
+		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true
+	    		},
+	    		{
+		    		"type": "quiz",
+		    		"sub_title": "You've encountered an obstacle",
+		    		"title": "Manmade Dam",
+		    		"heading": "The dam is blocking your path. <br /> How will you make it past?",
+		    		"correct_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"neutral_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"incorrect_result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true,
+		    		"quiz_options": [
+		    			{
+		    				"options": "Use the fish ladder",
+		    				"answer": "correct"
+		    			},
+		    			{
+		    				"options": "Try to find anothe way around",
+		    				"answer": "incorrect"
+		    			},
+		    			{
+		    				"options": "Swim through the dam",
+		    				"answer": "neutral"
+		    			}
+		    		]
+	    		},
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You've encountered an obstacle",
+		    		"title": "Manmade Dam",
+		    		"heading": "",
+		    		"image": "http://via.placeholder.com/400x250",
+		    		"credit": "Credit to the dam, 2001. Photo by Beaver.",
+		    		"caption": "",
+		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
+		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true
+	    		}
+	    	]
+	    }
+    ],
+    "random": [
+    	{
+	    	"location": "city",
+	    	"cards": 
+	    	[
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You've found",
+		    		"title": "Zooplankton",
+		    		"heading": "",
+		    		"image": "",
+		    		"credit": "",
+		    		"caption": "",
+		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
+		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true
+	    		}
+	    	]
+	    }
+    ],
+
     "returnTo": {
         "title": "Pacific Northwest Culture Lesson",
         "url": "http://nmai.si.edu/nk360"

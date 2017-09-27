@@ -2,6 +2,7 @@
  * This file loads all Sass files to be compiled by Grunt.
  * Include each file for this specific instance.
 */
+
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.65);

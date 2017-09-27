@@ -1,7 +1,7 @@
 Game = (function() {
 
     var settings = {
-      speed: 6,
+      speed: 100,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -20,6 +20,7 @@ Game = (function() {
         $('body').on('click tap', '.hotspot', hotspotClicked);
         $('body').on('click tap', '.quiz-options button', quizHandler);
         $('body').on('click tap', '.close-icon', closePopup);
+        $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
@@ -27,15 +28,20 @@ Game = (function() {
         initGame();
     }
 
+    var closeCongratsScreen = function() {
+      
+    }
+
 
     var updateWorld = function() {
-        console.log(settings.pause);
         if(settings.pause) {
-          if (-settings.position < $('.game-world').outerWidth() - window.innerWidth) {
+          if (-settings.position < 15840) {
               settings.position -= settings.speed;
               $('.game-world').css('left', settings.position + 'px');
+              requestAnimationFrame(updateWorld);
+          } else {
+            console.log('game-complete');
           }
-          requestAnimationFrame(updateWorld);
         }
     };
 
