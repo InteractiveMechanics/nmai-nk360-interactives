@@ -235,32 +235,92 @@ footer {
 .steelhead-0 {
   width: 141px;
   height: 54px;
-  background: url(https://image.ibb.co/cezyR5/steelhead_0.png);
+  background: url(../assets/sprite-sheets/steelhead-0.png);
   animation: one-fish-swimming 1s steps(14) infinite; }
 
 .steelhead-1 {
   width: 230px;
   height: 74px;
-  background: url(https://image.ibb.co/cizodk/steelhead_2.png);
+  background: url(../assets/sprite-sheets/steelhead-1.png);
   animation: two-fish-swimming 1s steps(14) infinite; }
 
 .steelhead-2 {
   width: 141px;
   height: 54px;
-  background: url(https://image.ibb.co/cezyR5/steelhead_0.png);
-  animation: one-fish-swimming 1s steps(14) infinite; }
+  background: url(../assets/sprite-sheets/steelhead-2.png);
+  animation: three-fish-swimming 1s steps(14) infinite; }
 
 .steelhead-3 {
   width: 141px;
   height: 54px;
-  background: url(https://image.ibb.co/cezyR5/steelhead_0.png);
-  animation: one-fish-swimming 1s steps(14) infinite; }
+  background: url(../assets/sprite-sheets/steelhead-3.png);
+  animation: four-fish-swimming 1s steps(14) infinite; }
 
 .steelhead-4 {
   width: 141px;
   height: 54px;
-  background: url(https://image.ibb.co/cezyR5/steelhead_0.png);
+  background: url(../assets/sprite-sheets/steelhead-4.png);
+  animation: five-fish-swimming 1s steps(14) infinite; }
+
+.chinook-0 {
+  width: 148px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/chinook-0.png);
   animation: one-fish-swimming 1s steps(14) infinite; }
+
+.chinook-1 {
+  width: 230px;
+  height: 74px;
+  background: url(../assets/sprite-sheets/chinook-1.png);
+  animation: two-fish-swimming 1s steps(14) infinite; }
+
+.chinook-2 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/chinook-2.png);
+  animation: three-fish-swimming 1s steps(14) infinite; }
+
+.chinook-3 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/chinook-3.png);
+  animation: four-fish-swimming 1s steps(14) infinite; }
+
+.chinook-4 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/chinook-4.png);
+  animation: five-fish-swimming 1s steps(14) infinite; }
+
+.sockeye-0 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/sockeye-0.png);
+  animation: one-fish-swimming 1s steps(14) infinite; }
+
+.sockeye-1 {
+  width: 230px;
+  height: 74px;
+  background: url(../assets/sprite-sheets/sockeye-1.png);
+  animation: two-fish-swimming 1s steps(14) infinite; }
+
+.sockeye-2 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/sockeye-2.png);
+  animation: three-fish-swimming 1s steps(14) infinite; }
+
+.sockeye-3 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/sockeye-3.png);
+  animation: four-fish-swimming 1s steps(14) infinite; }
+
+.sockeye-4 {
+  width: 141px;
+  height: 54px;
+  background: url(../assets/sprite-sheets/sockeye-4.png);
+  animation: five-fish-swimming 1s steps(14) infinite; }
 
 @keyframes one-fish-swimming {
   100% {
