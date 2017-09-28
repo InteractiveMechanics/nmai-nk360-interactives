@@ -29,11 +29,29 @@ Game = (function() {
         $('body').on('click tap', '.quiz-options button', quizHandler);
         $('body').on('click tap', '.close-icon', closePopup);
         $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
+        $('body').on('click tap', '#restart', restartSalmonChallenges);
+        $('body').on('click tap', '#pause-icon', hitPause);
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
 
         initGame();
+    }
+
+    var hitPause = function() {
+      var isPlaying = $('#pause-icon').hasClass('icon-play');
+
+      if(isPlaying) {
+        settings.pause = true;
+        $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
+      } else {
+        settings.pause = true;
+        $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
+      }
+    }
+
+    var restartSalmonChallenges = function() {
+      window.location.reload();
     }
 
     var setData = function() {
@@ -43,14 +61,12 @@ Game = (function() {
     }
 
     var setIntroCard = function() {
-
       var sliderTemplate = $.templates("#introSliderTemplate");
       var sliderTemplateHTMLOutput = sliderTemplate.render(gameData.intro_cards);
       $(".intro-slider").html(sliderTemplateHTMLOutput);
     }
 
     var setObstacles = function() {
-      console.log(gameData.forced);
     }
 
     var setRandomEncounters = function() {
@@ -60,26 +76,54 @@ Game = (function() {
         switch (encounters[i].location) {
 
           case 'city':
+            encounters[i].hotspot_index = cityEncounters.length;
             cityEncounters.push(encounters[i]);
             break;
 
           case 'ocean':
+            encounters[i].hotspot_index = oceanEncounters.length;
             oceanEncounters.push(encounters[i]);
             break;
 
           case 'wilderness':
+            encounters[i].hotspot_index = wildernessEncounters.length;
             wildernessEncounters.push(encounters[i]);
             break;
 
           default:
-            randomEncountersrandomEncounters
+            encounters[i].hotspot_index = randomEncounters.length;
+            randomEncounters.push(encounters[i]);
         }
       };
 
-      console.log(cityEncounters);
-      console.log(oceanEncounters);
-      console.log(wildernessEncounters);
 
+      var x = getRandomValue(400, 12000);
+      var y = getRandomValue(150, window.innerHeight - 200);
+      
+      cityEncounters[0].left = 1000;//x;
+      cityEncounters[0].bottom = y;
+      
+      var encounter = cityEncounters[0];
+      var hotspotHTML = createHotspotHTML(encounter);
+
+      console.log(hotspotHTML);
+      $('.encounters').html(hotspotHTML);
+    }
+
+    var createHotspotHTML = function(encounter) {
+      var hotspotTemplate = $.templates("#hotspotTemplate");
+      var hotSpotHTMLOutput = hotspotTemplate.render(encounter);
+      //$(".intro-slider").html(sliderTemplateHTMLOutput);
+
+      return hotSpotHTMLOutput;
+    }
+
+    var createCityEncounters = function() {
+
+    }
+
+    var getRandomValue = function(min,max) {
+      return Math.floor(Math.random()*(max-min+1)+min);
     }
 
     var closeCongratsScreen = function() {
@@ -133,11 +177,82 @@ Game = (function() {
     }
 
     var hotspotClicked = function() {
+
+      var isSliderShowing = $('.slider-wrapper').hasClass('show');
+      if(isSliderShowing) {
+        return;
+      }
+
       var _this = $(this);
-      var hotspotID = _this.data('hotspot');
+      var hotspot_index = _this.data('hotspot');
+      var location = _this.data('location');
+
       settings.pause = false;
 
+      if(location == 'city') {
+        createEncounterSlider( cityEncounters[hotspot_index] );
+      }
+
+      if(location == 'city') {
+
+      }
+
+      if(location == 'city') {
+
+      }
+
       $('.slider-wrapper').removeClass('hidden').addClass('show');
+    }
+
+    var createEncounterSlider = function(encounter) {
+      var sliderHTML = "";
+      var cards = encounter.cards;
+      for (var i = 0; i < cards.length; i++) {
+        
+        if(cards[i].type == 'quiz') {
+          sliderHTML += getQuizCardHTML(cards[i]);
+        }
+
+        if(cards[i].type == 'information') {
+          sliderHTML += getInformationCardHTML(cards[i]);
+        }
+
+      };
+
+      $('.slider').html(sliderHTML);
+      console.log(sliderHTML);
+
+      //Slick slider call if multiple slides
+      if(cards.length > 1) {
+
+        $(".slider").slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 1,
+          variableWidth: true
+        });
+
+        $('.slider').on('afterChange', function(e, slick, currentSlide){
+            if(slick.slideCount == currentSlide + 1) {
+              $('.close-icon').removeClass('faded');
+            }
+        });
+
+      }
+    }
+
+    var getInformationCardHTML = function(card) {
+      var template = $.templates("#informationSlideTemplate");
+      var output = template.render(card);
+
+      return output;
+    }
+
+    var getQuizCardHTML = function(card) {
+      var template = $.templates("#hotspotTemplate");
+      var output = template.render(card);
+
+      return output;
     }
 
     var showPopup = function (htmlData){
@@ -160,11 +275,7 @@ Game = (function() {
             dots: true,
             infinite: false,
             slidesToShow: 1,
-            variableWidth: true,
-            afterChange: function(slick, currentSlide) {
-              console.log(currentSlide);
-              console.log(slick.count);
-            }
+            variableWidth: true
           });
 
           $('.intro-slider').on('afterChange', function(e, slick, currentSlide){
@@ -225,8 +336,13 @@ Game = (function() {
 
     var closePopup = function () {
       var isVisible = $(".slider-wrapper").is(":visible");
-      if(isVisible) {
+      var isFaded = $(this).hasClass('faded');
+      if(isVisible && !isFaded) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
+        settings.pause = true;
+        requestAnimationFrame(updateWorld);
+
+        $('.salmon').removeClass('steelhead-0').addClass('steelhead-1')
       }
     }
 

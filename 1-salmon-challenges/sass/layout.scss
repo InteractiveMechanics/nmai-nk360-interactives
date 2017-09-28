@@ -55,10 +55,10 @@
 }
 
 .steelhead-1 {
-  width: 244px;
+  width: 230px;
   height:74px;
   background: url(https://image.ibb.co/cizodk/steelhead_2.png);
-  animation: one-fish-swimming 1s steps(14) infinite;
+  animation: two-fish-swimming 1s steps(14) infinite;
 }
 
 .steelhead-2 {
@@ -164,3 +164,12 @@
     background-image: url(../images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
     background-image: url(../images/icon-print.svg); }
+  .activity-menu-wrapper .icon.icon-restart {
+    background-image: url(../images/icon-restart.svg); }
+  .activity-menu-wrapper .icon.icon-pause {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png); }
+  .activity-menu-wrapper .icon.icon-play {
+    background-image: url(https://image.flaticon.com/icons/svg/26/26025.svg); }
+
+    
+    
