@@ -140,7 +140,7 @@ footer {
   border-radius: 0;
   border-width: 3px;
   padding: .75rem 1.25rem .85rem;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   color: #4BADA6; }
   .btn:hover, .btn:focus, .btn:active {
@@ -219,15 +219,30 @@ main {
   width: inherit; }
   #step-by-step-cards > .slick-dots {
     position: fixed;
-    bottom: 60px; }
+    bottom: 70px; }
   #step-by-step-cards .step {
     position: relative;
     height: 100%; }
     #step-by-step-cards .step .step-container {
+      position: relative;
       width: 540px;
-      margin: 100px auto 0px;
+      margin: 150px auto 0px;
       background: white;
-      padding: 40px; }
+      padding: 40px;
+      box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35); }
+      #step-by-step-cards .step .step-container:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #f1f2f2;
+        -o-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg); }
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px; }
   #step-by-step-cards .card-slider {
@@ -302,18 +317,29 @@ main {
   position: fixed;
   top: 50%;
   margin-top: -25px;
-  width: 50px;
-  height: 50px;
-  background: black;
-  border-radius: 99px;
+  width: 75px;
+  height: 75px;
+  background-size: contain;
   opacity: 1;
   transition: 0.5s all; }
   #navigation .nav-arrow.slick-disabled {
     opacity: 0.4; }
+    #navigation .nav-arrow.slick-disabled:hover, #navigation .nav-arrow.slick-disabled:active, #navigation .nav-arrow.slick-disabled:focus {
+      filter: drop-shadow(0 0 0 transparent);
+      cursor: default; }
+  #navigation .nav-arrow:hover, #navigation .nav-arrow:active, #navigation .nav-arrow:focus {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    cursor: pointer; }
   #navigation .nav-arrow.nav-arrow-left {
-    left: 20px; }
+    left: 20px;
+    background-image: url("../shared/images/icon-prev.svg"); }
+    #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
+      left: 10px; }
   #navigation .nav-arrow.nav-arrow-right {
-    right: 20px; }
+    right: 20px;
+    background-image: url("../shared/images/icon-next.svg"); }
+    #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
+      right: 10px; }
 
 .slick-dots {
   width: 100%;
@@ -325,19 +351,26 @@ main {
     display: inline-block; }
     .slick-dots > li.slick-active > a,
     .slick-dots > li.slick-active > button {
-      background-color: orange; }
+      background-color: orange;
+      cursor: default; }
     .slick-dots > li > a,
     .slick-dots > li > button {
       display: block;
       background: #9eb2c1;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       text-indent: -99999px;
       padding: 0;
       margin: 0 2px;
-      border: none;
+      border: 1px solid white !important;
       border-radius: 99px;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
+      .slick-dots > li > a:hover, .slick-dots > li > a:active, .slick-dots > li > a:focus,
+      .slick-dots > li > button:hover,
+      .slick-dots > li > button:active,
+      .slick-dots > li > button:focus {
+        background: #7f99ad; }
 
 #print-preview {
   position: fixed;

@@ -28,7 +28,7 @@ h4 {
 
 .header {
   max-width: 540px;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 10px 0 20px;
   background-image: url("../images/np/decoration-np.svg");
   background-position: center bottom;
@@ -60,5 +60,15 @@ h4 {
       color: #311D18 !important;
       background-color: white;
       border-color: white; }
+
+#step-by-step-cards .step .step-container {
+  background-image: url("../shared/images/np/text-card-np@2x.png");
+  background-size: 75%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.slick-dots > li.slick-active > a,
+.slick-dots > li.slick-active > button {
+  background-color: #677c4a; }
 
 /*# sourceMappingURL=theme-np.css.map */

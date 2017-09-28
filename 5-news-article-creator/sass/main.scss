@@ -20,8 +20,8 @@
 @import '../shared/sass/components/menu';
 @import '../shared/sass/components/gallery';
 
-@import 'layout';
-@import 'helpers';
-@import 'cards';
-@import 'navigation';
-@import 'printpreview';
+@import 'default/layout';
+@import 'default/helpers';
+@import 'default/cards';
+@import 'default/navigation';
+@import 'default/printpreview';
