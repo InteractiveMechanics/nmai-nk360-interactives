@@ -67,4 +67,14 @@ h4 {
       background-color: white;
       border-color: white; }
 
+#step-by-step-cards .step .step-container {
+  background-image: url("../shared/images/np/text-card-np@2x.png");
+  background-size: 75%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.slick-dots > li.slick-active > a,
+.slick-dots > li.slick-active > button {
+  background-color: #006986; }
+
 /*# sourceMappingURL=theme-pnw.css.map */

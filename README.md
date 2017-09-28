@@ -44,6 +44,8 @@ We're using a number of outside libraries for different features, including:
 ##### Grunt
 Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
 
+For distribution, you can run `grunt dist` with several variables: `--json=m#a#`, `--dir=name-of-directory`, `--theme=theme-acronym`. For example, if you want to generate/build Module 1's (Pacific Northwest) Activity 1, and the directory provided by NMAI is "pnw-fishwars-markup", you can should run `grunt dist --json=m1a1 --dir=pnw-fishwars-markup --theme=pnw`. This will build a `dist` directory with the built folder for that activity processed for deployment. To see the full list of directory names from NMAI, go here: [https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit](https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit)
+
 ##### Commenting
 As you go, be sure to comment your code to make sure it's clear. Write a short description of all functions (even if they seem obvious) and define each Sass file at the top of the file with a short description of what you might find in that folder. Use the following comment format where possible (include a short description of the function/file, and where appropriate, define the arguments and returned values):
 

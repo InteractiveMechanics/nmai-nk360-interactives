@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('../package.json'),
 
         sass: {
-            default: {
+            dist: {
                 files: {
                     'css/main.css': 'sass/main.scss',
                     'css/theme-pnw.css': 'sass/theme-pnw.scss',
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['../**/*.scss'],
-                tasks: ['sass:dev']
+                tasks: ['sass:dist']
             }
 		},
         connect: {
@@ -66,6 +66,18 @@ module.exports = function(grunt) {
                 src: '../shared',
                 dest: 'dist/' + grunt.option('dir') + '/shared'
             }
+        },
+        uglify: {
+            options: {
+			    mangle: false
+		    },
+            dist: {
+                files: [{
+                    cwd: 'js',
+                    src: '**/*.js',
+                    dest: 'dist/' + grunt.option('dir') + '/js'
+                }]
+            }
         }
     });
     
@@ -78,7 +90,8 @@ module.exports = function(grunt) {
     grunt.loadTasks('../node_modules/grunt-contrib-copy/tasks');
     grunt.loadTasks('../node_modules/grunt-contrib-symlink/tasks');
     grunt.loadTasks('../node_modules/grunt-processhtml/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
     grunt.registerTask('dev', ['connect', 'watch']);
-    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'symlink']);
+    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'uglify', 'symlink']);
 };

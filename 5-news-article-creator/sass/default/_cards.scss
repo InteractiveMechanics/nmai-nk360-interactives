@@ -7,7 +7,7 @@
 
     > .slick-dots {
         position: fixed;
-        bottom: 60px;
+        bottom: 70px;
     }
 
     .step {
@@ -15,13 +15,35 @@
         height: 100%;
 
         .step-container {
+            position: relative;
             width: 540px;
-            margin: 100px auto 0px;
+            margin: 150px auto 0px;
             background: white;
             padding: 40px;
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background-color: $lightgray;
+                -o-transform: rotate(-2deg);
+                -moz-transform: rotate(-2deg);
+                -webkit-transform: rotate(-2deg);
+                transform: rotate(-2deg);
+            }
         
-            h4 {}
-            h1 {}
+            h4 {
+                font-size: 0.8rem;
+                margin-bottom: 15px;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
     
             &.step-container-lg {
                 width: 960px;
