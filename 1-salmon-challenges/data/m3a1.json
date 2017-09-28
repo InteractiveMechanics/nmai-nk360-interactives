@@ -124,6 +124,19 @@
 		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
 		    		"lose_fish": false,
 		    		"add_fish": true
+	    		},
+	    		{
+		    		"type": "information",
+		    		"sub_title": "You've found",
+		    		"title": "Zooplankton",
+		    		"heading": "",
+		    		"image": "",
+		    		"credit": "",
+		    		"caption": "",
+		    		"body": "For two to five years after salmon is spawn, they feed on zooplankton and small fish. They must grow rapidly and gain strength for the long journey that lies ahead <br /> In a saltwater habitat to survive at sea, young salmon must find abundant sources of food. The zooplankton and bait-fish they feed on require a narrow range of ocean surface temperatures rises more than a few degrees above normal, zooplankton production is reduced and salmon survival may decline significantly.",
+		    		"result": "Zooplankton are a vital food source for salmon. You gain one fish!",
+		    		"lose_fish": false,
+		    		"add_fish": true
 	    		}
 	    	]
 	    },
