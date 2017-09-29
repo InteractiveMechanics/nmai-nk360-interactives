@@ -16,14 +16,32 @@
 * {
   font-family: "Open Sans", sans-serif; }
 
+h1 {
+  font-size: 3.6rem; }
+
 h4 {
   font-size: 1rem; }
 
+.header {
+  max-width: 540px;
+  margin: 0 auto; }
+  .header h1 {
+    font-size: 1.8rem;
+    font-weight: bold; }
+  .header h2 {
+    font-size: 0.8rem; }
+
 .all-caps {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 400; }
 
 .letter-spacing-1 {
   letter-spacing: 1px; }
+
+.underline {
+  border-bottom: 3px solid #F7B029;
+  padding-bottom: 5px;
+  display: inline-block; }
 
 html,
 body {
@@ -80,7 +98,8 @@ footer {
   left: 0;
   height: 100%;
   color: white;
-  z-index: 1000; }
+  z-index: 1000;
+  overflow: auto; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -88,7 +107,13 @@ footer {
     padding: 100px 20px; }
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
-        padding: 30px; } }
+        padding: 30px 30px 100px; } }
+    #instructions .instructions-container h2 {
+      color: white !important; }
+    #instructions .instructions-container img {
+      max-width: 300px; }
+    #instructions .instructions-container .row {
+      margin-bottom: 20px; }
 
 [data-toggle="tooltip"] {
   border-bottom: 1px dotted #2e3742;
@@ -112,17 +137,30 @@ footer {
 
 .btn {
   background-color: transparent;
-  border-color: white;
+  border-color: #4BADA6;
   border-radius: 0;
-  border-width: 2px;
+  border-width: 3px;
   padding: .75rem 1.25rem .85rem;
-  cursor: pointer; }
-  .btn.btn-lg {
-    padding: 1rem 1.75rem 1.1rem; }
+  font-weight: 500;
+  cursor: pointer;
+  color: #4BADA6; }
   .btn:hover, .btn:focus, .btn:active {
-    background-color: white;
+    background-color: #4BADA6;
+    border-color: #4BADA6;
+    color: white !important; }
+  .btn.btn-lg {
+    padding: 1rem 1.75rem 1.1rem;
+    border-width: 4px; }
+  .btn.btn-white {
     border-color: white;
-    color: #2e3742 !important; }
+    color: white;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+    .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
+      color: #4BADA6 !important;
+      background-color: white;
+      border-color: white;
+      text-shadow: none; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -145,6 +183,9 @@ footer {
     background-image: url(../images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
     background-image: url(../images/icon-print.svg); }
+  .activity-menu-wrapper .icon.disabled {
+    opacity: 0.4;
+    cursor: default; }
 
 [data-gallery] {
   width: 32px;
@@ -187,13 +228,39 @@ footer {
   pointer-events: none;
   cursor: default; }
 
+@font-face {
+  font-family: "Geared Slab";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/geared-slab/GearedSlab.eot?") format("eot"), url("../fonts/geared-slab/GearedSlab.woff") format("woff"), url("../fonts/geared-slab/GearedSlab.ttf") format("truetype"); }
+@font-face {
+  font-family: "Geared Slab";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/geared-slab/GearedSlab-Bold.eot?") format("eot"), url("../fonts/geared-slab/GearedSlab-Bold.woff") format("woff"), url("../fonts/geared-slab/GearedSlab-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Ludicrous";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../fonts/ludicrous/Ludicrous.woff") format("woff"), url("../fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 #intro {
   background-color: orange;
   height: 100vh;
   width: 100vw; }
 
 #puzzle {
-  background-color: #dedede;
+  background: url("../../shared/images/pnw/bkgr-pnw@2x.png");
+  background-size: cover;
   height: 100vh;
   width: 100vw; }
 
@@ -254,28 +321,21 @@ footer {
   padding-left: 0px; }
   .subheader li {
     display: inline;
-    font-size: 14px;
-    text-transform: uppercase; }
+    font-size: 16px;
+    color: white;
+    font-family: "Archer Pro", serif; }
 
 #puzzle .header-wrapper {
-  width: 80%;
-  left: 10%;
-  text-align: center;
-  position: relative;
-  margin-top: 0px;
-  padding: 10px; }
-  #puzzle .header-wrapper h1 {
-    font-size: 29px;
-    font-weight: 600;
-    letter-spacing: 0.5px; }
+  width: 100%;
+  text-align: center; }
 
 .puzzle-img-wrapper,
 .lg-wrapper {
   position: relative;
-  left: 25%;
-  width: 660px;
+  left: 30%;
+  width: 40%;
   height: 495px;
-  margin-top: 23px; }
+  margin-top: 80px; }
 
 .puzzle-img {
   width: 100%;
@@ -285,7 +345,8 @@ footer {
 .card {
   width: 200px;
   height: 300px;
-  background: url("../assets/placeholder_card_print.png");
+  background: url("../../assets/card-pnw@2x.png");
+  background-size: cover;
   background-color: #eaeaea;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
   border-radius: 10px;

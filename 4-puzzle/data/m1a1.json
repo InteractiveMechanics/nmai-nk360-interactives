@@ -9,8 +9,8 @@
 	"puzzles": [
         {
             "Id": 1,
-            "Title": "How do Native people and Nations experience belonging?",
-            "Image": "./assets/placeholder_luna.jpg",
+            "Title": "How do Native people and Nations Experience Belonging?",
+            "Image": "./assets/imgs/pnw/pnw-puzzle-image.jpg",
             "Caption": "1900s",
             "Intro": "Text for the introduction card",
             "IntroPrompt": "Ready to get started?",
