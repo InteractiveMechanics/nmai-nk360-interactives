@@ -42,6 +42,8 @@ Detail = (function() {
     }
 
     var displayExploreScreen = function(era) {
+        
+        
         if (era !== null && typeof era === 'object') {
             var era = $(this).attr('data-timeline');
             $('#explore').html($.templates("#explore-template").render(data));
