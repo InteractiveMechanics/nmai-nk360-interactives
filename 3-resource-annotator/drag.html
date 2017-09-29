@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Resource Annotator - Native Knowledge 360&deg;</title>
+  
+    <style type="text/css">
+        body {
+            background: #bbb;
+        }
+
+        .annotation-screen {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .slider {
+
+        }
+
+        .slick-slide {
+          margin: 0px 20px;
+        }
+
+        .slick-slide img {
+          width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-dots {
+            z-index: 50;
+            bottom: -35px;
+        }
+        
+        .slick-dots li button:before {
+            font-size: 15px;
+            color: #ffffff;
+            opacity: 0.5;
+        }
+
+        .slick-dots li button.slick-active:before {
+            pacity: 1.0;
+        }
+
+        .annotation-screen {
+          height: 75vh;
+        }
+
+        .annotation-item {
+          height: 75vh;
+          background: #ddd;
+          width: 100%;
+        }
+
+        .annotation-item .top {
+          height: 30vh;
+        }
+
+        .annotation-item .top .photo img{
+          height: 30vh;
+        }
+
+        .annotation-item .bottom {
+          padding: 20px 8% 0;
+          height: 45vh;
+        }
+
+        .annotation-item .bottom .button {
+          position: absolute;
+          bottom: 25px;
+          margin: 0 auto;
+          width: 250px;
+          left: 0;
+          right: 0;
+        }
+
+        .annotation-item .bottom .button a {
+          width: 250px;
+        }
+
+        .annotation-item .col-no-padding {
+          padding: 0;
+        }
+
+        .pin-image {
+          display: inline-block;
+          vertical-align: top;
+          padding-top: 7px;
+        }
+
+        .pin-text {
+          display: inline-block;
+          margin-left: 15px;
+          margin-bottom: 20px;
+        }
+
+        .pin-text p {
+          margin:0;
+        }
+
+        .dotted {
+          font-weight: bold;
+        }
+
+        .original-text {
+            background: #eee;
+            padding: 25px;
+            height: 80vh;
+        }
+
+        .original-text .photo {
+            max-height: 350px; 
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+            
+        }
+
+        /*Test Code **/
+        .annotation--main,
+    .annotation--responsibilities {
+      height: 40px;
+      margin: 10px;
+    }
+
+    .js--pin {
+      top: 0;
+      left: 0;
+      display: block;
+      width: 40px;
+    }
+
+    .pin__image {
+      position: relative;
+      z-index: 2;
+    }
+
+    .pin__text {    
+      padding: 10px;
+      background: #ddd;
+      border: thin solid #ccc;
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: -7em;
+      width: 10em;
+      transform: translateY(-4.5em);
+      display: none;
+    }
+
+    .pin__text textarea {
+      border-radius: 3px;
+      border: thin solid #ccc;
+      width: 100%;
+      padding: 7px;
+    }
+
+    button {
+      padding: 7px;
+      font-size: 12px;
+      background: tomato;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .photo .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 12px;
+      color: white;
+      background: rgba(0,0,0,.25);
+      padding-top: 20px;
+    }
+
+    .photo .caption  p {
+      text-align: center;
+    }
+
+    #lost-progress {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+  z-index: 100; }
+  #lost-progress .instructions-container {
+    z-index: 101;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; }
+    @media screen and (max-width: 767px) {
+      #lost-progress .instructions-container {
+        padding: 30px; } }
+
+
+.scrollbar-design::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.scrollbar-design::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar-design::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+
+.marker {
+  cursor: pointer;
+}
+    </style>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+
+    <!-- Main interactive-specific content -->
+    <main>
+
+        <header class="text-center">
+            <p class="hidden-xs">
+                Title
+            </p>
+
+            <h1>
+                <span class="dotted" data-toggle="tooltip">
+                  Title
+                </span>
+                 & 
+                 <span class="dotted" data-toggle="tooltip">
+                  Second Title
+                </span>
+            </h1>
+        </header>
+
+        <section class="annotation-screen">
+          
+          
+            <!-- notes screen starts here -->
+
+            <div class="annotation-notes-screen">
+
+              <div class="row">
+
+                <div class="col-7">
+                  
+                  <div class="original-text">
+
+                    <div class="content-height scrollbar-design" style="max-height: 70vh; overflow-y: scroll; padding:25px;">
+
+                      <p>
+                        <a href="javascript:void(0);">Summary Text</a>
+                      </p> 
+
+                      <div style="height: auto; position: relative;">
+                          <img src="http://via.placeholder.com/1280x720" class="img-fluid" />
+                          <div data-gallery data-gallery-image="http://via.placeholder.com/1280x720" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
+                      </div>
+
+                      <div class="info">
+
+                        <p class="copyright">
+                            Raymond J. DeMallie, ed., <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt </em> (Lincoln: University of Nebraska Press, 1984), 83.
+                        </p>
+
+                        <h3>
+                          Original Text
+                        </h3>
+
+                        <p class="original-text-info">
+                          Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
+
+                          <br /><br /> However, these two nations understood the bundle's import, which included a pipe.
+                        </p>
+
+
+                        <p class="original-text-info">
+                           After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
+
+                          <br /><br /> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-5">
+
+                  <div class="original-text-detail">
+
+                    <div class="original-text-right" style="background:#FFF;">
+                      <div class="row">
+
+                        <div class="col-12">
+                           <div class="top" style="padding:25px;">
+                              <p class="all-caps"><strong>Caption:</strong></p>
+                              <p>
+                                In this passage from The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.
+                              </p>
+                           </div>
+
+                           <div class="bottom" style="background:skyblue; padding:25px;">
+                              <p>Drag and drop the markers to add an annotation</p>
+                              <ul class="list-inline" style="margin-bottom:0;">
+                                
+                                <li class="list-inline-item">
+                                  <div class="marker">
+                                    <img src="./assets/marker-01@2x.png" width="60%" />
+                                  </div>
+                                  <div class="theme">
+                                    Privileges
+                                  </div>
+                                  <div class="markers-remaining">
+                                    3 remaining
+                                  </div>
+                                </li>
+
+                                <li class="list-inline-item">
+                                  <div class="marker">
+                                    <img src="./assets/marker-02@2x.png" width="60%" />
+                                  </div>
+                                  <div class="theme">
+                                    Responibilities
+                                  </div>
+                                  <div class="markers-remaining">
+                                    5 remaining
+                                  </div>
+                                </li>
+
+                                <li class="list-inline-item">
+                                  <div class="marker">
+                                    <img src="./assets/marker-03@2x.png" width="60%" />
+                                  </div>
+                                  <div class="theme">
+                                    Theme 3
+                                  </div>
+                                  <div class="markers-remaining">
+                                    2 remaining
+                                  </div>
+                                </li>
+
+                              </ul>
+                           </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!--<div class="detail">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <p class="all-caps"><strong>Annotation Markers:</strong></p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+
+                        <div class="col-6">
+                          <div class="annotation--main">
+                            </div>
+                          <div class="annotation-pin" style="position: absolute; top: 0; left: 40px;">
+                            <div class="pin-text">
+                              <p class="dotted" data-toggle="tooltip" title="Privileges are special benefits.">Privileges</p>
+                              <p><span class="js--pin-available">5</span> Available</p>
+                            </div>
+                          </div>
+                        </div>  
+
+                        <div class="col-6">
+                          <div class="annotation-pin">
+                            <div class="pin-image">
+                              <img src="https://maxcdn.icons8.com/office/PNG/512/Programming/pin_80-512.png" width="40" />
+                            </div>
+
+                            <div class="pin-text">
+                              <p class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties/">
+                                Responsibilities
+                              </p>
+                              <p>3 Available</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>-->
+
+                    <div class="detail">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <p class="all-caps"><strong>External Links to Additional Content:</strong></p>
+                          <a href="javascript:void(0);" class="btn btn-success">
+                                Audio
+                            </a>
+                            <a href="javascript:void(0);" class="btn btn-success">
+                                Video
+                            </a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- note screens ends -->
+
+
+
+        </section>
+
+    </main>
+
+
+</body>
+</html>

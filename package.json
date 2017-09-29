@@ -7,13 +7,13 @@
     "grunt": "latest",
     "jshint-stylish": "latest",
     "grunt-contrib-sass": "latest",
-    "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-htmlmin": "latest",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-clean": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-connect": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-processhtml": "latest",
+    "grunt-contrib-symlink": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-jshint": "latest"
+    "grunt-contrib-concat": "latest"
   }
 }

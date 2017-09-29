@@ -87,9 +87,3 @@
     @media screen and (max-width: 767px) {
       #congrats-instructions .select-fish-container {
         padding: 30px; } }
-
-.fish-row {
-  .img-fluid {
-    margin: 50px 0;
-  }
-}

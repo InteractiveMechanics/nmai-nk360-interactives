@@ -18,8 +18,8 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./shared/css/theme-pnw.css" /> 
-    <!-- <link rel="stylesheet" href="./shared/css/theme-np.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" /> 
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <style type="text/css">
 
@@ -82,8 +82,8 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-home" title="Back to Home Screen"></a>
-            <a class="icon icon-print" title="Print this Activity"></a>
+            <a class="icon icon-play" title="Pause Salmon Challenges" id="pause-icon"></a>
+            <a class="icon icon-restart" title="Restart Salmon Challenges" id="restart"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -112,30 +112,9 @@
         
         <div class="card">
 
-          <div class="close-icon">
+          <div class="close-icon faded">
             <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/55049-200.png" width="70">  
           </div>
-
-          <!--<div class="slider">
-
-            <div>
-              <p class="text-center">The Return Upstream</p>
-            <h2 class="text-center">Salmon Challenges</h2>
-
-            <p class="image-credit">
-              Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
-            </p>
-
-            <p>
-              Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
-            </p>
-
-            <p class="text-center">
-              <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
-            </p>
-            </div>
-
-          </div>-->
 
           <div class="slider">
 
@@ -201,7 +180,7 @@
           <p></p>
         </div>
           
-        <div class="card suitclubs">
+        <div class="card slider-card">
           <section class="intro-slider">
             
             <div>
@@ -315,24 +294,24 @@
             <h1>Pick your salmon</h1>
             <div class="row justify-content-md-center fish-row">
                 
-                <div class="col cursor-pointer faded" data-fish="Sockeye">
-                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="50%" />
+                <div class="col cursor-pointer" data-fish="Sockeye">
+                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
                     <h2>Sockeye</h2>
                     <p>
                       Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
                     </p>
                 </div>
                 
-                <div class="col cursor-pointer faded" data-fish="Steelhead">
-                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="50%" />
+                <div class="col cursor-pointer" data-fish="Steelhead">
+                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
                     <h2>Steelhead</h2>
                     <p>
                       Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
                     </p>
                 </div>
                 
-                <div class="col cursor-pointer faded" data-fish="Chinook">
-                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="50%" />
+                <div class="col cursor-pointer" data-fish="Chinook">
+                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
                     <h2>Chinook</h2>
                     <p>
                       Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
@@ -350,7 +329,7 @@
     <!-- Main interactive-specific content -->
     <main>
 
-        <div class="salmon"></div>
+        <div id="SelectedSalmon"></div>
 
         <div class="game">
 
@@ -360,13 +339,16 @@
             <div class="game-world__midground"></div>
             <div class="game-world__foreground"></div>
 
-            <div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
-            </div>
+            <div class="encounters">
 
-            <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
-            </div>
+              <div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
+              </div>
 
-            <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot">
+              <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
+              </div>
+
+              <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot"></div>
+
             </div>
 
           </div>
@@ -374,6 +356,126 @@
         </div>
 
     </main>
+
+    <script id="hotspotTemplate" type="text/x-jsrender">
+      <div data-location="{{:location}}" data-hotspot="{{:hotspot_index}}" style="bottom: {{:bottom}}px; left: {{:left}}px;" class="hotspot"></div>
+    </script>
+
+     <script id="introSliderTemplate" type="text/x-jsrender">
+        <div>
+
+          {{if sub_title}}
+            <p class="text-center all-caps">{{:sub_title}}</p>
+          {{/if}}
+
+          {{if title}}
+            <h2 class="text-center">{{:title}}</h2>
+          {{/if}}
+
+          {{if heading}}
+            <h1>{{:heading}}</h1>
+          {{/if}}
+
+          {{if image}}
+
+            <div class="card-image">
+              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+            </div>
+            <p class="image-credit">
+              {{:credit}}
+            </p>
+
+          {{/if}}
+
+          {{if body}}
+            <p>
+              {{:body}}
+            </p>
+          {{/if}}
+        </div>
+    </script>
+
+    <script id="informationSlideTemplate" type="text/x-jsrender">
+        <div>
+
+          {{if sub_title}}
+            <p class="text-center all-caps">{{:sub_title}}</p>
+          {{/if}}
+
+          {{if title}}
+            <h2 class="text-center">{{:title}}</h2>
+          {{/if}}
+
+          {{if heading}}
+            <h1>{{:heading}}</h1>
+          {{/if}}
+
+          {{if image}}
+
+            <div class="card-image">
+              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+            </div>
+            <p class="image-credit">
+              {{:credit}}
+            </p>
+
+          {{/if}}
+
+          {{if body}}
+            <p>
+              {{:body}}
+            </p>
+          {{/if}}
+        </div>
+    </script>
+
+    <script id="quizSlideTemplate" type="text/x-jsrender">
+
+        <div>
+          <div class="text-center">
+            
+            {{if sub_title}}
+              <p class="text-center all-caps">{{:sub_title}}</p>
+            {{/if}}
+
+            {{if title}}
+              <h2 class="text-center">{{:title}}</h2>
+            {{/if}}
+
+            <hr style="width:25%" />
+
+            <h3>{{:heading}}</h3>
+
+            <p class="all-caps">
+              Pick one option to proceed
+            </p>
+
+            <div class="quiz-options btn-group-vertical" role="group" data-answered="false">
+
+
+              {{for allClients}}
+                <button type="button" class="btn btn-default" data-losefish="{{:lose_fish}}" data-addfish="{{:add_fish}}" data-result="{{:result}}">
+                  {{:options}}
+                </button>
+              {{/for}}
+
+            </div>
+
+            <p class="hidden quiz-detail">
+            
+            </p>
+
+            <p class="hidden quiz-solution">
+              <strong class="solution-text">
+                You lose one fish.
+              </strong>
+            </p>
+          </div>
+        </div>
+    </script>
+
+
+    
 
 
     
@@ -408,7 +510,7 @@
     <script src="./js/init.js"></script>
 
     <script type="text/javascript">
-      Game.init();
+      //Game.init();
     </script>
 </body>
 </html>

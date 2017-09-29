@@ -1,21 +1,21 @@
 module.exports = function(grunt) {
-
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('../package.json'),
-        
+
         sass: {
-            dev: {
+            dist: {
                 files: {
                     'css/main.css': 'sass/main.scss',
-                    '../shared/css/theme-pnw.css': '../shared/sass/theme-pnw.scss',
-                    '../shared/css/theme-np.css': '../shared/sass/theme-np.scss'
+                    'css/theme-pnw.css': 'sass/theme-pnw.scss',
+                    'css/theme-np.css': 'sass/theme-np.scss'
                 }
             }
         },
         watch: {
             css: {
                 files: ['../**/*.scss'],
-                tasks: ['sass:dev']
+                tasks: ['sass:dist']
             }
 		},
         connect: {
@@ -34,14 +34,49 @@ module.exports = function(grunt) {
             },
             build: ['js/**/*.js']
         },
-        uglify: {
+        copy: {
+            dist: {
+                files: [
+                    {expand: true, src: ['css/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['js/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['assets/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['data/**'], dest: 'dist/' + grunt.option('dir')},
+                ]
+            },
+        },
+        processhtml: {
             options: {
-                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+                process: true,
+                data: {
+                    json: grunt.option('json'),
+                    theme: grunt.option('theme')
+                }
+            },
+            dist: {
+                files: [
+                    {expand: true, src: ['*.html'], dest: 'dist/' + grunt.option('dir') + '/', ext: '.html'},
+                ]
+            },
+        },
+        symlink: {
+            options: {
+                overwrite: true
             },
             build: {
-                files: {
-                    'js/magic.min.js': 'src/js/magic.js'
-                }
+                src: '../shared',
+                dest: 'dist/' + grunt.option('dir') + '/shared'
+            }
+        },
+        uglify: {
+            options: {
+			    mangle: false
+		    },
+            dist: {
+                files: [{
+                    cwd: 'js',
+                    src: '**/*.js',
+                    dest: 'dist/' + grunt.option('dir') + '/js'
+                }]
             }
         }
     });
@@ -52,10 +87,11 @@ module.exports = function(grunt) {
 
     grunt.loadTasks('../node_modules/grunt-contrib-jshint/tasks');
 
-    //grunt.loadTasks('../node_modules/grunt-contrib-clean/tasks');
-    //grunt.loadTasks('../node_modules/grunt-contrib-qunit/tasks');
-    //grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-copy/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-symlink/tasks');
+    grunt.loadTasks('../node_modules/grunt-processhtml/tasks');
+    grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
     grunt.registerTask('dev', ['connect', 'watch']);
-    //grunt.registerTask('dist', ['sass', 'uglify']);
+    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'uglify', 'symlink']);
 };
