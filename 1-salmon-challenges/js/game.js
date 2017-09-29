@@ -1,7 +1,7 @@
 Game = (function() {
 
     var settings = {
-      speed: 7,
+      speed: 2,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -335,15 +335,21 @@ Game = (function() {
     }
 
     var closePopup = function () {
-      var isVisible = $(".slider-wrapper").is(":visible");
+      //var isVisible = $(".slider-wrapper").is(":visible");
       var isFaded = $(this).hasClass('faded');
-      if(isVisible && !isFaded) {
+      if(!isFaded) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
         requestAnimationFrame(updateWorld);
 
         $('.salmon').removeClass('steelhead-0').addClass('steelhead-1')
       }
+
+      $('.slider-wrapper').removeClass('show').addClass('hidden');
+        settings.pause = true;
+        requestAnimationFrame(updateWorld);
+
+        $('.salmon').removeClass('steelhead-0').addClass('steelhead-1')
     }
 
     
