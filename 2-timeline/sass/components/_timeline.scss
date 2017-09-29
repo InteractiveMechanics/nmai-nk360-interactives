@@ -49,19 +49,27 @@
 .timeline-wrapper {
     position: absolute;
     height: 103%;
-    width: 100%;
+    width: 1743px;
     overflow: auto;
     background: url('../../assets/timeline-full@2x.jpg');
     background-size: cover;
 }
 
-
 .timeline-track {
     border-bottom: 1px solid #deded1;
-    bottom: 17%;
-    left: 5%;
+    bottom: 137px; //17%
     position: absolute;
-    width: calc(#{$moment-width} + #{$last-of-timeline-item-left} + 250px); // can we make this a calc?
+}
+
+
+.timeline-track[data-era="1"] {
+    width: 95%;
+    left: 5%;
+}
+
+.timeline-track[data-era="2"],
+.timeline-track[data-era="3"] {
+    width: 100%;
 
 }
 
@@ -69,43 +77,115 @@
     position: absolute;
 }
 
+.era-container {
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    width: 1600px;
+}
+
+
+.era-container[data-era="1"] {
+    left: 0px;
+}
+
+.era-container[data-era="2"] {
+    left: 1734px;
+}
+
+.era-container[data-era="3"] {
+    left: 3334px;
+}
+
+
+
+
 .timeline-item {
     background-color: white;
     border: none;
     border-radius: 37px;
     display: flex;
-    position: absolute;
     text-align: initial;
     width: $moment-width;
     height: 85px;
     z-index: 3;
 }
 
-.timeline-item-wrapper[data-timeline="1"] {
+.timeline-item-wrapper[data-era="1"][data-timeline="1"] {
     left: 5%;
-    top: $timeline-top;
+    bottom: $timeline-bottom;
+    z-index: 5
 }
 
-.timeline-item-wrapper[data-timeline="2"] {
+.timeline-item-wrapper[data-era="1"][data-timeline="2"] {
     left: 805px;
-    top: $timeline-top;
+    bottom: $timeline-bottom;
+    z-index: 4;
 
 }
 
-.timeline-item-wrapper[data-timeline="3"] {
+.timeline-item-wrapper[data-era="1"][data-timeline="3"] {
     left: 1144px;
-    top: $timeline-top-alt;
+    bottom: $timeline-bottom-alt;
+    z-index: 3;
 }
 
-.timeline-item-wrapper[data-timeline="4"] {
+.timeline-item-wrapper[data-era="1"][data-timeline="4"] {
     left: 1238px;
-    top: $timeline-top;
+    bottom: $timeline-bottom;
+    z-index: 2;
 }
 
-.timeline-item-wrapper[data-timeline="5"] {
-    left: $last-of-timeline-item-left;
-    top: $timeline-top;
+.timeline-item-wrapper[data-era="1"][data-timeline="5"] {
+   left: 1367px;
+   bottom: 532px;
+   z-index: 1;
 }
+
+.timeline-item-wrapper[data-era="2"][data-timeline="1"] {
+    left: 20px;
+    bottom: $timeline-bottom;
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="2"] {
+   left: 263px;
+   bottom: $timeline-bottom-alt;
+
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="3"] {
+    left: 776px;
+    bottom: $timeline-bottom;
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="4"] {
+    left: 1062px;
+    bottom: $timeline-bottom;
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="1"] {
+    left: 100px;
+    bottom: $timeline-bottom;
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="2"] {
+    left: 391px;
+    bottom: $timeline-bottom-alt;
+
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="3"] {
+    left: 1002px;
+    bottom: $timeline-bottom;
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="4"] {
+    left: 1230px;
+    bottom: $timeline-bottom;
+}
+
+
 
 .timeline-btn-img {
     height: 82px;
@@ -147,9 +227,8 @@
 .lg-label-wrapper {
     position: absolute;
     bottom: 40px;
-    width: calc(#{$moment-width} + #{$last-of-timeline-item-left} + 250px); // identical to .timeline-track
+    width: 100%;
     padding-left: 0px;
-    left: 5%;
     li {
         display: inline;
         h2 {
@@ -172,13 +251,14 @@
 }
 
 .sm-label-wrapper {
-    position: relative;
+    position: absolute;
     height: 150px;
     border-left: 2px dotted #deded1;
     display: flex;
     align-items: flex-end;
     padding-left: 2px;
     top: 42px;
+    left: 0px;
     h4 {
         display: inline;
         position: relative;
@@ -186,35 +266,68 @@
     }   
 }
 
-.sm-label-wrapper[data-timeline="3"] {
+.sm-label-wrapper[data-era="1"][data-timeline="3"] {
     height: 314px;
 }
 
-// .sm-label[data-timeline="1"] {
-//      left: 0px;
-// }
+.sm-label-wrapper[data-era="1"][data-timeline="5"] {
+    height: 450px;
+}
 
-// .sm-label[data-timeline="2"] {
-//      left: 450px;
-// }
+.lg-label-1[data-era="1"] {
+    left: 5%;
+}
 
-// .sm-label[data-timeline="3"] {
-//      left: 1100px;
-// }
-
-// .sm-label[data-timeline="4"] {
-//      left: 1500px;
-// }
-
-// .sm-label[data-timeline="5"] {
-//      left: $last-of-timeline-item-left;
-// }
-
-.lg-label-2 {
+.lg-label-2[data-era="1"] {
     left: 285px;
 }
 
-.leg-label-3 {
+.lg-label-3[data-era="1"] {
     left: 786px;
+}
+
+.lg-label-4[data-era="1"] {
+    left: 1228px;
+}
+
+
+.lg-label-1[data-era="2"] {
+    left: 2000px
+}
+
+.lg-label-2[data-era="2"] {
+    left: 2300px;
+}
+
+.lg-label-3[data-era="2"] {
+    left: 2700px;
+}
+
+.lg-label-4[data-era="2"] {
+    left: 3000px;
+}
+
+.lg-label-5[data-era="2"] {
+    left: 3400px;
+}
+
+.lg-label-1[data-era="3"] {
+    left: 3000px
+}
+
+.lg-label-2[data-era="3"] {
+    left: 3400px;
+}
+
+.lg-label-3[data-era="3"] {
+    left: 3700px;
+}
+
+.lg-label-4[data-era="3"] {
+    left: 4000px;
+}
+
+.lg-label-5[data-era="3"] {
+    left: 4400px;
 }
 

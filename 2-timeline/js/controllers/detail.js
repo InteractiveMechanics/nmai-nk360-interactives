@@ -43,13 +43,31 @@ Detail = (function() {
 
     var displayExploreScreen = function(era) {
         if (era !== null && typeof era === 'object') {
-            var booger = $(this).attr('data-timeline');
-            $('#explore').html($.templates("#explore-template").render(data.eras[booger-1]));
+            var era = $(this).attr('data-timeline');
+            $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').addClass('hidden');
-            console.log(booger);
+             if (era == 1) {
+                $('.era-container[data-era="2"]').addClass('hidden');
+                $('.era-container[data-era="3"]').addClass('hidden');
+            } else if (era == 2) {
+                $('.era-container[data-era="3"]').addClass('hidden');
+                $('.timeline-wrapper').css('width', '3200px');
+            } else {
+                $('.timeline-wrapper').css('width', '4800px');
+            }
+            console.log(era);
         } else {
             console.log('era is defined. it is ' + era);
-            $('#explore').html($.templates("#explore-template").render(data.eras[era-1]));
+            $('#explore').html($.templates("#explore-template").render(data));
+            if (era == 1) {
+                $('.era-container[data-era="2"]').addClass('hidden');
+                $('.era-container[data-era="3"]').addClass('hidden');
+            } else if (era == 2) {
+                $('.era-container[data-era="3"]').addClass('hidden');
+                $('.timeline-wrapper').css('width', '3200px');
+            } else {
+                $('.timeline-wrapper').css('width', '4800px');
+            }
         }
         $('#explore').removeClass('animated fadeIn hidden');
         $('#selection').addClass('fadeOut hidden');
@@ -84,9 +102,13 @@ Detail = (function() {
 
     }
 
+    
    
 
     var buildGame = function(id) {
+        $('#lightgallery').lightGallery({
+            subHtmlSelectorRelative: true
+        });
         $('[data-toggle=tooltip]').tooltip('hide');
         $('.draggable-img-wrapper').draggable({
             appendTo: 'body',

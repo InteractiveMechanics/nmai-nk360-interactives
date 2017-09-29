@@ -1,3 +1,4 @@
+
 .modal-backdrop {
   opacity: 0.7 !important;
 }
@@ -35,6 +36,7 @@
 }
 
 .modal-photo-wrapper {
+	position: relative;
 	img {
 		max-width: 100%;
 	}
@@ -50,17 +52,12 @@
 	position: absolute;
 	left: 105%;
 	top: 0%;
-	// span {
-	// 	color: white;
-	//     border: 1px solid white;
-	//     border-radius: 50%;
-	//     display: flex;
-	//     height: 40px;
-	//     width: 40px;
-	//     justify-content: center;
-	//     align-items: center;
-	//     text-shadow: none;
-	//     font-weight: initial;
-	// }
+}
 
+.zoom {
+	position: absolute;
+    right: 0px;
+    top: 218px;
+    background: transparent;
+    border: none;
 }

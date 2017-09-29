@@ -8,23 +8,45 @@ Explore = (function() {
         $('.transition-overlay').addClass('animated fadeOut hidden');
     }
 
-    //TODO try window.innerwidth as value for scrollLeft
+    //TODO account for window resize
     var advancePrevBtn = function() {
         event.preventDefault();
-        $('.timeline-wrapper').animate({
-            scrollLeft: "-=500px"
-        }, "fast");
+        var timelineWidth = $('.timeline-wrapper').width();
+        var scrollWidthPrev = $('.timeline-wrapper').scrollLeft();
+        var windowWidth = $(window).width();
+        if (scrollWidthPrev > 0) {
+            $('.timeline-wrapper').animate({
+                scrollLeft: "-=" + windowWidth + "px"
+            }, "fast");
+        }
+        console.log("prev scrollWidth " + scrollWidthPrev);
     }
 
     var advanceNextBtn = function() {
         event.preventDefault();
-        $('.timeline-wrapper').animate({
-            scrollLeft: "+=500px"
-        }, "fast");
+        var timelineWidth = $('.timeline-wrapper').width();
+        var scrolled = $('.timeline-wrapper').scrollLeft();
+        var windowWidth = $(window).width();
+        var roomToScroll = timelineWidth - windowWidth;
+        if (roomToScroll > scrolled && roomToScroll >= windowWidth) {
+           
+            $('.timeline-wrapper').animate({
+                scrollLeft: "+=" + windowWidth + "px"
+            }, "fast");
+        } else if (roomToScroll > scrolled && roomToScroll < windowWidth) {
+            $('.timeline-wrapper').animate({
+                scrollLeft: "+=" + roomToScroll + "px"
+            }, "fast");
+        } else {
+           
+        }
+         console.log("next scrollWidth " + scrolled);
+        
+        
     }
 
     var getMomentDetails = function() {
-        var era = $('.timeline-wrapper').attr('data-era');
+        var era = $(this).attr('data-era');
         var moment = $(this).attr('data-timeline');
         console.log('the era is ' + era + 'the moment is ' + moment);
         Detail.displayModal(era, moment);

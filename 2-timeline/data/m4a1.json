@@ -90,6 +90,9 @@
         {
             "Id": 2,
             "StartDate": "1974",
+            "Milestone1": "1975",
+            "Milestone2": "1977s",
+            "Milestone3": "1979",
             "EndDate": "1979",
             "Moments": [
                 {
@@ -154,6 +157,9 @@
         {
             "Id": 3,
             "StartDate": "1979",
+            "Milestone1": "1985",
+            "Milestone2": "1995",
+            "Milestone3": "2005",
             "EndDate": "Present",
             "Moments": [
                 {
