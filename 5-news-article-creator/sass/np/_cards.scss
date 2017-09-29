@@ -7,4 +7,12 @@
             background-repeat: no-repeat;
         }
     }
+    .step-intro {
+        .guiding-question.large {
+            font-family: $headline;
+            font-size: 3.6rem;
+            line-height: 1.2;
+            color: $primary;
+        }
+    }
 }

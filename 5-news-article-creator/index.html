@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/main.css" />
 
     <!-- For development only, comment for distribution -->
-    <link rel="stylesheet" href="./css/theme-np.css" />
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
     <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
 
     <!-- For production build -->
@@ -83,7 +83,7 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print disabled" title="Print this Activity" disabled></a>
+            <a class="icon icon-print disabled" disabled title="Print this Activity" disabled></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -122,8 +122,8 @@
     <script id="imageTemplate" type="text/x-jsrender">
         <div class="image-step step" data-id="{{:#index}}">
             <div class="step-container-inner">
-                <img src="{{:thumb}}" alt="{{:credit}}" title="{{:credit}}" />
-                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
+                <img src="{{:thumb}}" alt="{{:caption}}" title="{{:caption}}" />
+                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}" data-gallery-caption="{{:caption}}"></div>
                 <div class="selected-overlay">Selected!</div>
             </div>
         </div>
@@ -164,7 +164,7 @@
                     <h4 class="text-center all-caps">Create your own news article</h4>
                     <h1 class="text-center">Tell the story</h1>
                     <div class="divider"></div>
-                    <p class="large guiding-question"></p>
+                    <p class="large guiding-question text-center"></p>
                     <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process. </p>
                 </div>
             </div>
@@ -181,7 +181,7 @@
             <div class="step step-masthead" data-title="Byline">
                 <div class="step-container">
                     <h4 class="text-center all-caps">Write your byline</h4>
-                    <h1 class="text-center">What’s your name?</h1>
+                    <h1 class="text-center">What's your name?</h1>
                     <div class="divider"></div>
                     <p>Every article needs a byline to tell the reader who wrote the piece. Add your name or names to the article. </p>
                     <input id="masthead" class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
@@ -202,7 +202,7 @@
                     <h4 class="text-center all-caps">Select your images</h4>
                     <h1 class="text-center">What images support your argument?</h1>
                     <div class="divider"></div>
-                    <p>Pick at least one image to use in your article that supports your argument. You’ll write captions for these images next.</p>
+                    <p>Pick at least one image to use in your article that supports your argument. You'll write captions for these images next.</p>
                     <div id="image-selector" class="card-slider">
                         <div class="card-slider-container"></div>
                         <div class="card-slider-nav">
@@ -267,7 +267,7 @@
                 <h2 class="letter-spacing-1 all-caps">News Article Creator</h2>
                 <h1 class="guiding-question">How Do Native People and Nations Experience Belonging?</h1>
             </header>
-            <a class="btn btn-success btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
+            <a class="btn btn-white btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
         </div>
         <nav id="navigation">
             <div class="nav-arrow nav-arrow-left"></div>
@@ -318,7 +318,7 @@
     <script src="./shared/code/upperleftmenu/menu.js"></script>
 
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m2a1.json';</script>
+    <script>var jsondata = './data/m4a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

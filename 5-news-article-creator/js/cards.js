@@ -32,7 +32,7 @@ Cards = (function() {
         $("#image-selector .card-slider-container").html(imageTemplateHTMLOutput);
         $("#quote-selector .card-slider-container").html(quoteTemplateHTMLOutput);
 
-        $("#image-selector .card-slider-container").slick({
+        $("#image-selector img").slick({
             accessibility: false,
             autoplay: false,
             prevArrow: $('#image-selector .nav-arrow-left'),

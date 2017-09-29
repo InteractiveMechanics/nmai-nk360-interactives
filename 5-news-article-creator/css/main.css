@@ -108,7 +108,7 @@ footer {
     padding: 100px 20px; }
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
-        padding: 30px; } }
+        padding: 30px 30px 100px; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {
@@ -184,6 +184,9 @@ footer {
     background-image: url(../images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
     background-image: url(../images/icon-print.svg); }
+  .activity-menu-wrapper .icon.disabled {
+    opacity: 0.4;
+    cursor: default; }
 
 [data-gallery] {
   width: 32px;
@@ -211,7 +214,8 @@ main {
 #static-ui .print-preview-btn {
   position: absolute;
   bottom: 80px;
-  right: 30px; }
+  right: 30px;
+  color: white; }
 
 #step-by-step-cards {
   position: absolute;
@@ -249,7 +253,7 @@ main {
         font-size: 0.8rem;
         margin-bottom: 15px; }
       #step-by-step-cards .step .step-container h1 {
-        font-size: 2.4rem; }
+        font-size: 2.1rem; }
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px; }
   #step-by-step-cards .card-slider {
@@ -319,6 +323,8 @@ main {
         width: 240px;
         height: 120px;
         margin: 0; }
+  #step-by-step-cards .step-intro .guiding-question.large {
+    font-size: 3.6rem; }
 
 #navigation .nav-arrow {
   position: fixed;
@@ -423,13 +429,18 @@ main {
     margin-bottom: 10px;
     font-style: italic; }
   #print-preview .close-preview {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
     display: block;
     background-image: url(../shared/images/icon-close.svg);
     background-size: 100%;
     position: absolute;
     top: 0;
-    right: -60px; }
+    right: -60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s all; }
+    #print-preview .close-preview:hover, #print-preview .close-preview:focus, #print-preview .close-preview:active {
+      opacity: 0.65; }
 
 /*# sourceMappingURL=main.css.map */

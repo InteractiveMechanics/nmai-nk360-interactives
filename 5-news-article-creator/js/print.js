@@ -7,6 +7,7 @@ Print = (function() {
     }
     var bindEvents = function() {
         $(document).on('click tap', '.print-preview-btn', openPrintPreview);
+        $(document).on('click tap', '.icon-print', openPrintPreview);
         $(document).on('click tap', '.close-preview', closePrintPreview);
     }
 
@@ -25,6 +26,7 @@ Print = (function() {
     }
     var activatePrintPreview = function() {
         $('.print-preview-btn').removeClass('disabled').attr('disabled', false);
+        $('.icon-print').removeClass('disabled').attr('disabled', false);
     }
     var buildPrintView = function() {
         // Get all of the data from the activity first

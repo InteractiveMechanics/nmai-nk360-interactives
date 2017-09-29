@@ -57,13 +57,20 @@
         font-style: italic;
     }
     .close-preview {
-        width: 44px;
-        height: 44px;
+        width: 45px;
+        height: 45px;
         display: block;
         background-image: url(../shared/images/icon-close.svg);
         background-size: 100%;
         position: absolute;
         top: 0;
         right: -60px;
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.5s all;
+        
+        &:hover, &:focus, &:active {
+            opacity: 0.65;
+        }
     }
 }
