@@ -5,7 +5,7 @@
 
 var data = function() {};
 $(function(){
-    $.get('./data/m1a1.json', function(response) {
+    $.get(jsondata, function(response) {
         data = response;
 
         Init.init();
