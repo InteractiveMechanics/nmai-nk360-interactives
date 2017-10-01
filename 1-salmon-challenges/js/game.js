@@ -172,7 +172,7 @@ Game = (function() {
       _this.removeClass('faded');
 
       $('#close-select-fish').removeClass('faded');
-      $('.salmon').addClass(settings.fishSelection + "-0");
+      $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + "-0");
 
     }
 
