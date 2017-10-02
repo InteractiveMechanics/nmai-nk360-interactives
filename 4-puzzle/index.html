@@ -17,9 +17,21 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/theme-pnw.css" />
     <!-- <link rel=“stylesheet” href=“./css/theme-np.css” /> -->
 
+=======
+
+    <!-- For development only, comment for distribution -->
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+    /build -->
+>>>>>>> d66f722534c6312913c2f77c4b61cb635bff0cd7
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -323,6 +335,13 @@
     <script src="./shared/code/lightbox/lightbox.js"></script>
     <script src="./shared/code/upperleftmenu/menu.js"></script>
 
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = './data/m1a1.json';</script>
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
 
     <!-- Include project specific code/files -->
     <script src="./js/app.js"></script>

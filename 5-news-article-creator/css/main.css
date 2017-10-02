@@ -223,6 +223,8 @@ main {
   left: 0;
   height: inherit;
   width: inherit; }
+  #step-by-step-cards > .slick-list {
+    overflow: visible; }
   #step-by-step-cards > .slick-dots {
     position: fixed;
     bottom: 70px; }

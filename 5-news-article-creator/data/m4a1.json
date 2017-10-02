@@ -29,7 +29,9 @@
         },
         {
             "thumb": "path/to/image",
-            "url": "path/to/image"
+            "url": "path/to/image",
+            "caption": "Indian Civil Rights Hearings, November 1977.",
+            "credit": "Cartoon by Indian Voice, Small Tribes Organization of Western Washington. <a href='http://depts.washington.edu/civilr/CRcommission.htm' target='_blank'>Source</a>"
         },
         {
             "thumb": "path/to/image",
