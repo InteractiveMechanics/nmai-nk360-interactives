@@ -1,128 +1,173 @@
 {
     "title": "Drag-and-Drop Puzzle",
     "returnTo": {
-        "title": "Northern Plains Treaties Lesson",
+        "title": "Pacific Northwest Lesson",
         "url": "http://nmai.si.edu/nk360"
     },
     "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
 
-	"puzzles": [
+    "puzzles": [
         {
             "Id": 1,
-            "Title": "How do Native people and Nations Experience Belonging?",
-            "Image": "./assets/imgs/pnw/pnw-puzzle-image.jpg",
-            "Caption": "1900s",
-            "Intro": "Text for the introduction card",
-            "IntroPrompt": "Ready to get started?",
-            "LearningPoints": "This is text for learning points.",
+            "Title": "Why do the foods we eat matter?",
+            "Image": "assets/imgs/pnw/pnw-puzzle-image.jpg",
+            "Caption": "Celilo means “echo of water on rocks” in the Sahaptin language. Indians fishing at Celilo Falls, ca. 1900. NMAI P23273",
+            "Intro": "At this point in the inquiry, you have examined sources that show the many reasons that salmon are important to Pacific Northwest Native Nations. You’ve seen that threats to Native cultures and lifeways take many forms and include new challenges that persist today. Yet, despite adversity Native Nations of the Pacific Northwest continue to protect salmon, exercise sovereignty, and maintain their cultural identity.",
+            "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to it’s corresponding theme and reveal an iconic image.",
+            "LearningPoints": "Salmon is not just a critical food source for Native peoples of the Pacific Northwest; it also reflects their histories and cultures. Organized actions on the part of Native Nations of the Pacific Northwest show agency and ensure cultural survival.",
+            "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Themes": [
                 {
                     "id": 1,
-                    "title": "Homelands", 
-                    "definition": "Definition of Homelands",
-                    "incorrect": "remediation for homelands"
+                    "title": "Cultures", 
+                    "definition": "Shared beliefs, traditions, and practices of a group.",
+                    "incorrect": "remediation"
                 },
                 {
                     "id": 2,
-                    "title": "Kinship", 
-                    "definition": "Definition of Kinship",
-                    "incorrect": "remediation for kinship"
+                    "title": "Threats", 
+                    "definition": "Many man-made changes have devastating and lasting effects on the survival of salmon and impact Native peoples and Nations of the Pacific Northwest.",
+                    "incorrect": "remediation"
                 },
                 {
                     "id": 3,
-                    "title": "Nationhood", 
-                    "definition": "Definition of Nationhood",
-                    "incorrect": "remediation for nationhood"
+                    "title": "Actions", 
+                    "definition": "The innovative and culture based steps taken by Native Nations of the Pacific Northwest to rebuild salmon populations and protect their homelands.",
+                    "incorrect": "remediation"
                 }
             ],
             "Cards": [
                 {
                     "id": 1,
-                    "title": "Card 1",
-                    "subtitle": "Subtitle for Card 1",
-                    "image": "",
-                    "caption": "",
-                    "body": "Body text for Card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien. Integer congue pharetra fringilla. Aenean bibendum semper arcu eget placerat.",
-                    "credit": "Credit for Card 1",
-                    "incorrect": "",
-                    "themes": [1, 2]
+                    "title": "Quileute Hook",
+                    "subtitle": "",
+                    "image": "assets/imgs/pnw/pnw-card-1.jpg",
+                    "caption": "Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.",
+                    "body": "",
+                    "credit": "Quileute iron salmon hook, ca.1890. NMAI 057591",
+                    "incorrect": "Try again. Read the caption and think about the significance of this object to Pacific Northwest Native peoples.",
+                    "themes": [1]
                 },
-                {
+                                {
                     "id": 2,
-                    "title": "Card 2",
-                    "subtitle": "Subtitle for Card 2",
-                    "image": "",
-                    "caption": "",
-                    "body": "Body text for Card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante. <p>Ut ac finibus libero, eu porta sem. Nulla malesuada est vel aliquam ultrices. Vivamus tempor sit amet purus non dignissim. Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien.</p>",
-                    "credit": "Credit for Card 2",
-                    "incorrect": "",
-                    "themes": [2, 3]
-                },
-                {
-                    "id": 3,
-                    "title": "Card 3",
-                    "subtitle": "Subtitle for Card 3",
-                    "image": "",
-                    "caption": "",
-                    "body": "Body text for Card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.<p>Aenean eu nibh facilisis, hendrerit nisi quis, imperdiet mi. Duis non purus nec dui pretium porta. Morbi auctor velit sed condimentum elementum. Aenean volutpat diam et purus dictum, id ultricies ante consectetur. </p>",
-                    "credit": "Credit for Card 3",
-                    "incorrect": "",
-                    "themes": [3, 1]
-                },
-                {
-                    "id": 4,
-                    "title": "Card 4",
-                    "subtitle": "Subtitle for Card 4",
-                    "image": "",
-                    "caption": "",
-                    "body": "Body text for Card 4. Fusce laoreet, odio sed ornare malesuada, mauris neque pellentesque turpis, non rhoncus sapien velit eget libero. Pellentesque lacinia nibh mi, nec sodales mi bibendum volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce velit magna, venenatis sed justo in, sodales placerat diam. ",
-                    "credit": "Credit for Card 4",
-                    "incorrect": "",
-                    "themes": [2]
-                },
-                {
-                    "id": 5,
-                    "title": "Card 5",
-                    "subtitle": "Subtitle for Card 5",
-                    "image": "",
-                    "caption": "",
-                    "body": "Body text for Card 5. ellentesque sit amet leo tincidunt, tempus libero nec, semper nunc. Quisque ornare quam et orci bibendum tincidunt. Nulla tincidunt tellus a aliquet porta. Praesent a justo vitae libero malesuada euismod. Proin at ipsum sed nibh sagittis vestibulum. Nam elementum porttitor ligula nec facilisis. Quisque libero urna, efficitur nec pretium at, lobortis eget dolor.",
-                    "credit": "Credit for Card 5",
-                    "incorrect": "",
-                    "themes": [1, 2]
-                },
-                {
-                    "id": 6,
-                    "title": "Card 6",
+                    "title": "Lisa Wilson Cook",
                     "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 6",
-                    "body": "Body text for Card 6. Nam auctor justo non eros consequat fermentum. Cras felis elit, lacinia non metus ornare, euismod gravida odio. Nunc laoreet at odio quis pharetra. Integer nunc ex, ornare eget lacus ut, porta feugiat elit. Morbi vel ultrices turpis. Praesent eleifend, est ut volutpat vehicula, neque augue sagittis libero, ut efficitur mauris ante quis risus. Maecenas nisl nisi, convallis id venenatis consectetur, bibendum ut elit. Morbi convallis velit nibh, id consectetur neque pulvinar vel.",
-                    "credit": "Credit for Card 6",
-                    "incorrect": "",
+                    "caption": "",
+                    "body": "“My dad instilled in me how important the fish was. We spent many hours out on the water, and that is how I related to myself, as a strong person through fishing . . . I know that I’m the person that I am today because of fishing.”",
+                    "credit": "Lisa Wilson Cook (Lummi), NMAI Interview, 2016",
+                    "incorrect": "Try again. Think about what Lisa Cook says about the importance of fishing to her and her family.",
+                    "themes": [1]
+                },
+                                {
+                    "id": 3,
+                    "title": "Michael Marchand",
+                    "subtitle": "",
+                    "image": "",
+                    "caption": "",
+                    "body": "“Salmon has always been essential to our life. We all had jobs to do and most of them centered around salmon. . . . [Salmon] provided everything they needed to live. . . . All their religion and food was salmon. It was the basis for everything.”",
+                    "credit": "Michael Marchand (Confederated Tribes of Colville Reservation), NMAI Interview, July 2016",
+                    "incorrect": "Try again. What does Michael Marchand tell you about the role of salmon for his community?",
+                    "themes": [1]
+                },
+                                {
+                    "id": 4,
+                    "title": "Makah Days",
+                    "subtitle": "",
+                    "image": "assets/imgs/pnw/pnw-card-4.jpg",
+                    "caption": "Makah Days in the mid-1950s. Native Nations of the Pacific Northwest use cedar skewers to pierce, roast, and smoke salmon filets over open pit fires.",
+                    "body": "",
+                    "credit": "Makah Feast Day, Salmon Bake, ca. 1955. Photograph credited to the Makah Tribe, <a target='_blank' href='http://exotichikes.com/wp-content/uploads/2013/12/makahfeastday_salmon-bake-c1955.jpg'>Source</a>",
+                    "incorrect": "Try again. What does this convey about the importance of Native food practices?",
+                    "themes": [1]
+                },
+                                {
+                    "id": 5,
+                    "title": "Carol Craig",
+                    "subtitle": "",
+                    "image": "",
+                    "caption": "",
+                    "body": "“On March 7, 1957, they [the Army Corps of Engineers] closed the concrete gates and the tribal people stood on the side of the hills dressed in regalia and mourning the loss of Celilo Falls. It took seven to eight hours before it was completely flooded over. . .  It was devastating. They thought, after that, that we would lay down our fishing equipment and walk away.”",
+                    "credit": "Carol Craig (Yakama), NMAI Interview, August 2016",
+                    "incorrect": "Try again. Think about the event that Carol Craig is referencing. How did that event impact the communities of Celilo Falls?",
+                    "themes": [2]
+                },
+                                {
+                    "id": 6,
+                    "title": "Dalles Dam",
+                    "subtitle": "",
+                    "image": "assets/imgs/pnw/pnw-card-6.jpg",
+                    "caption": "Construction of dams requires explosive forces. This blast used more than twenty tons of explosive powder and removed 60,000 cubic yards of basalt.",
+                    "body": "",
+                    "credit": "The Dalles Dam Blast. Photo by Ray Atkeson",
+                    "incorrect": "Try again. What are possible consequences for salmon of using explosive forces? ",
+                    "themes": [2]
+                },
+                                {
+                    "id": 7,
+                    "title": "Valerie Segrest",
+                    "subtitle": "",
+                    "image": "",
+                    "caption": "",
+                    "body": "“A reality for many tribal communities is the access to food that we need to be able to heal ourselves from and prevent diseases like diabetes and heart disease is challenging.”",
+                    "credit": "Valerie Segrest (Muckleshoot), NMAI Interview, August 2016",
+                    "incorrect": "Try again. How does limited access to healthy foods impact individuals and communities?",
+                    "themes": [2]
+                },
+                                {
+                    "id": 8,
+                    "title": "Logging",
+                    "subtitle": "",
+                    "image": "assets/imgs/pnw/pnw-card-8.jpg",
+                    "caption": "Clear cutting of timber damages salmon habitat in numerous ways. Without the shade and root systems provided by the trees, the water of spawning grounds overheats and silt and runoff damage or destroy spawning areas.",
+                    "body": "",
+                    "credit": "A Kelly-Springfield logging truck hauls a large fir log along a track-like wooden logging road. Behind the truck are acres of cutover land. Photo by J. Wilbur Sandison, ca. 1925. Photo courtesy of the PEMCO and Stevens Collection, Museum of History and Industry, Seattle. 1983.10.3675.10",
+                    "incorrect": "Try again. Read the caption. What does clear cutting do to salmon habitats?",
+                    "themes": [2]
+                },
+                                {
+                    "id": 9,
+                    "title": "Fishing Commissions",
+                    "subtitle": "",
+                    "image": "",
+                    "caption": "Member nations of intertribal fishing commissions coordinate with state and federal agencies to ensure fair harvesting practices between tribal and nontribal fishers. A key component of their work is educating the general public and policy makers on salmon restoration, treaty fishing rights, and tribal culture.",
+                    "body": "",
+                    "credit": "Seal of the Columbia River Inter-Tribal Fish Commission (CRITFC). Courtesy of Jeremy Five Crows; Seal of the Northwest Indian Fisheries Commission (NWIFC), courtesy of NWIFC.",
+                    "incorrect": "Try again. Think about the significance of educating people about salmon restoration, treaty rights, and tribal cultures.",
                     "themes": [3]
                 },
-                  {
-                    "id": 7,
-                    "title": "Card ",
-                    "subtitle": "Subtitle for Card 7",
+                                {
+                    "id": 10,
+                    "title": "Mel Moon",
+                    "subtitle": "",
                     "image": "",
                     "caption": "",
-                    "body": "Body text for Card 7.liquam nec urna sit amet mi posuere dictum sed vitae elit. <p>Ut laoreet, est sed ullamcorper condimentum, mi nisi vestibulum velit, in consectetur urna metus sit amet sapien.</p><p> Vivamus lacus nibh, gravida eget aliquam posuere, tempor et velit. Maecenas ex ligula, dapibus vel dapibus sit amet, lobortis at urna. Morbi eget convallis neque.</p>",
-                    "credit": "Credit for Card 7",
-                    "incorrect": "",
-                    "themes": [1, 2]
+                    "body": "“Every time we have a governor come and go, or a senator come and go, they come back and they talk to us, and every one of them said, ‘We couldn't have taken care of the resource as good as we did without the tribes.’. . . The tribes have brought a different element of what needs to be done in terms of management.”",
+                    "credit": "Mel Moon (Quileute), NMAI Interview, July 2016",
+                    "incorrect": "Try again. What is Mel Moon saying about the role Native Nations play in resource management?",
+                    "themes": [3]
                 },
-                {
-                    "id": 8,
-                    "title": "Card 8",
-                    "subtitle": "Subtitle for Card 8",
+                                {
+                    "id": 11,
+                    "title": "Carol Craig",
+                    "subtitle": "",
                     "image": "",
                     "caption": "",
-                    "body": "Body text for Card 8. Praesent imperdiet velit tempor, venenatis massa sed, efficitur magna. Ut quis nunc diam. Quisque porta porttitor dictum. Aenean eget quam ut sapien bibendum vestibulum eget vitae lacus. Aliquam lobortis commodo augue vel iaculis. Duis interdum, lectus ac aliquet maximus, orci mauris viverra lectus, in fringilla diam tortor sit amet tellus.",
-                    "credit": "Credit for Card 8",
-                    "incorrect": "",
-                    "themes": [2]
+                    "body": "“We planted baby fish, they left, they started coming back in numbers. People could not believe it. This was for everybody. Tribal and nontribal people could fish in the Yakima River.”",
+                    "credit": "Carol Craig (Yakama), NMAI Interview, August 2016",
+                    "incorrect": "Try again. Why did salmon begin to return to the Yakima River?",
+                    "themes": [3]
+                },
+                                {
+                    "id": 12,
+                    "title": "Nancy Shippentower",
+                    "subtitle": "",
+                    "image": "",
+                    "caption": "",
+                    "body": "“It’s the tribes that are putting the fish back in the waters. It’s our people doing that to make sure our livelihood will carry on, that our children will have this opportunity to get into a boat and go fishing so they can eat what they need.”",
+                    "credit": "Nancy Shippentower (Puyallup), NMAI Interview, July 2016",
+                    "incorrect": "Try again. Who is taking responsibility for restoring salmon and why is that significant?",
+                    "themes": [3]
                 }
 
             ]

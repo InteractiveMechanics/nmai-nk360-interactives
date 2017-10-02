@@ -17,21 +17,17 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/theme-pnw.css" />
-    <!-- <link rel=“stylesheet” href=“./css/theme-np.css” /> -->
-
-=======
+    
 
     <!-- For development only, comment for distribution -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
         <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
     /build -->
->>>>>>> d66f722534c6312913c2f77c4b61cb635bff0cd7
+
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -127,7 +123,21 @@
 
     <!-- Main interactive-specific content -->
     <main>
-    
+
+    <script id="intro-template" type="text/x-jsrender">
+         <div class="intro-overlay"></div>
+        <div class="intro-card hidden">
+            <div class="header-wrapper header">
+                <h1>{{:Title}}</h1>
+            </div>
+            <div class="text-wrapper">
+                <p>{{:Intro}}</p>
+
+                <h6>{{:IntroPrompt}}</h6>
+            </div>
+        </div>
+
+    </script>    
     <!-- puzzle header template -->
     <script id="puzzle-header-template" type="text/x-jsrender">
         <ul class="subheader">
@@ -191,16 +201,16 @@
                 
                 <div class="modal-header">
                     {{if image}}
-                    <h1 class="modal-title">image icon goes here?</h1>
+                    <h1 class="modal-title">{{:title}}</h1>
                     {{/if}}
 
                     {{if body}}
-                     <h1 class="modal-title">quote icons</h1>
+                     <h1 class="modal-title">{{:title}}</h1>
                     {{/if}}
 
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true"><img src="../shared/images/icon-close.svg" alt="close" title="close"></span>
                     </button>
 
                 </div>
@@ -208,19 +218,21 @@
                 <div class="modal-body">
 
                     {{if body}}
-                    <small>{{:caption}}</small>
+                    <small class="modal-credit">{{:credit}}</small>
 
                     <p>{{:body}}</p>
                     {{/if}}
 
                     {{if image}}
-                    <img src="{{:image}}" alt="">
-                    <small>{{:caption}}<small>
+                    <img class="modal-img" src="{{:image}}" alt="">
+                    <small class="modal-caption">{{:caption}}<small>
                     {{/if}}
+
+                    <p class="modal-footer-message">Drag the card to the appropriate theme below</p>
 
                 </div>
 
-            </div>
+            </div><!-- /.modal-content -->
 
        
 
@@ -253,20 +265,7 @@
 
     </script>
 
-    <div id="intro" class="animated fadeIn">
-        <div class="intro-overlay"></div>
-        <div class="intro-card hidden">
-            <div class="header-wrapper header">
-                <h1>How do Native People and Nations Experience Belonging?</h1>
-            </div>
-            <div class="text-wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
-                <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
-
-                <h6>Ready to get started?</h6>
-            </div>
-        </div>
-    </div>
+    <div id="intro" class="animated fadeIn"></div>
 
     <div id="learning-points" class="hidden"></div>
 
@@ -279,7 +278,7 @@
             <button class="btn btn-lg" id="read-more-btn">Read more about this image</button>
         </section>
 
-        <section id="droppable-wrapper"></section>
+        <section id="droppable-wrapper" class="hidden"></section>
 
         <section id="complete-overlay" class="hidden">
             <div class="text-wrapper">

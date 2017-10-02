@@ -67,4 +67,20 @@ h4 {
       background-color: white;
       border-color: white; }
 
+.card {
+  background: url("../../assets/card-pnw@2x.png");
+  background-size: contain;
+  background-color: #eaeaea; }
+
+.modal-content {
+  background: url("../../shared/images/pnw/text-card-pnw@2x.png");
+  background-color: white;
+  background-size: 90%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.modal-title {
+  font-family: "Archer Pro", serif;
+  font-size: 1.7em; }
+
 /*# sourceMappingURL=theme-pnw.css.map */

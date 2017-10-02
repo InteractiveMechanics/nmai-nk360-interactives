@@ -65,4 +65,16 @@ h4 {
       background-color: white;
       border-color: white; }
 
+.card {
+  background: url("../../assets/card-np@2x.png");
+  background-size: contain;
+  background-color: #eaeaea; }
+
+.modal-content {
+  background: url("../../shared/images/pnw/text-card-pw@2x.png");
+  background-color: white;
+  background-size: 90%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 /*# sourceMappingURL=theme-np.css.map */

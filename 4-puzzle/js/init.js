@@ -18,6 +18,7 @@ Init = (function() {
 
  
     var displayIntroModal = function() {
+        $('#intro').html($.templates('#intro-template').render(data.puzzles[0]));
     	if ($('.intro-card').hasClass('hidden')) {
     		$('.intro-card').removeClass('hidden').addClass('animated slideInDown');
     	}

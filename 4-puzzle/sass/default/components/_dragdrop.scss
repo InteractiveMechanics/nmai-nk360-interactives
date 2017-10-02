@@ -10,12 +10,13 @@
 
 .droppable-widget {
 	font-weight: 600;
-    border: 3px solid black;
+    color: white;
+    border: 3px solid white;
    	width: 25%;
     text-align: center;
     padding: 6px;
     &:hover {
-        border: 3px solid black;
+        border: 3px solid white;
     }
 }
 

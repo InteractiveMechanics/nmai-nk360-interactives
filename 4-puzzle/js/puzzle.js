@@ -43,21 +43,10 @@ Puzzle = (function() {
 
     };
 
-    var positionCards = function() {
     
-        $( '.card' ).each(function( index ) {
-            $(this).css({
-               
-                left : Math.random() * ($('.puzzle-img-wrapper').width() - $(this).width()),
-                top : Math.random() * ($('.puzzle-img-wrapper').height() - $(this).height())
-            });
-
-        });
-    }
     
 
     var buildGame = function() {
-        positionCards();
 
          $('.draggable-widget').draggable({
             snap: '.droppable-widget',
@@ -133,6 +122,7 @@ Puzzle = (function() {
    
 
     var showModal = function() {
+        $('#droppable-wrapper').removeClass('hidden fadeOut').addClass('animated fadeIn');
         var id = $(this).attr('data-card');
         $('.modal-dialog').html();
         $(".modal-dialog").html($.templates("#modal-template").render(data.puzzles[0].Cards[id-1]));
@@ -174,12 +164,18 @@ Puzzle = (function() {
     var hideLearningPts = function() {
         $('#learning-points').addClass('hidden animated fadeOut');
     }
+
+    var hideDroppables = function() {
+        console.log('hide droppables is running');
+        $('#droppable-wrapper').addClass('hidden animated fadeOut').removeClass('fadeIn');
+    }
     
     var bindEvents = function() {
         $(document).on('click tap', '.card[data-card]', showModal);
         $(document).on('click tap', '#explore-img-btn', exploreImg);
     	$(document).on('click tap', '#read-more-btn', showLearningPts);
         $(document).on('click tap', '#learning-points', hideLearningPts);
+        $(document).on('hidden.bs.modal', hideDroppables);
     }
     
     return {

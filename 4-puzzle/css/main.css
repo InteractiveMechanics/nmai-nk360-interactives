@@ -343,38 +343,103 @@ footer {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); }
 
 .card {
-  width: 200px;
-  height: 300px;
-  background: url("../../assets/card-pnw@2x.png");
-  background-size: cover;
+  width: 175px;
+  height: 250px;
+  background: url("../../assets/card-generic@2x.png");
+  background-size: contain;
   background-color: #eaeaea;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  position: absolute; }
+  border-radius: 5px;
+  position: absolute;
+  transition: 0.5s all ease-in-out; }
+  .card:hover {
+    z-index: 2;
+    box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5); }
 
 .card[data-card="1"] {
-  transform: rotate(7deg); }
+  top: 0px;
+  left: 0px;
+  transition: 0.5s all ease-in-out;
+  transform: rotate(-11deg); }
+  .card[data-card="1"]:hover {
+    transform: rotate(-11deg) scale(1.15, 1.15); }
 
 .card[data-card="2"] {
-  transform: rotate(-27deg); }
+  top: -15px;
+  left: 133px;
+  transform: rotate(56deg); }
+  .card[data-card="2"]:hover {
+    transform: rotate(56deg) scale(1.15, 1.15); }
 
 .card[data-card="3"] {
-  transform: rotate(22deg); }
+  top: -39px;
+  left: 292px;
+  transform: rotate(90deg); }
+  .card[data-card="3"]:hover {
+    transform: rotate(90deg) scale(1.15, 1.15); }
 
 .card[data-card="4"] {
-  transform: rotate(-12deg); }
+  top: -31px;
+  left: 412px;
+  transform: rotate(-39deg); }
+  .card[data-card="4"]:hover {
+    transform: rotate(-39deg) scale(1.15, 1.15); }
 
 .card[data-card="5"] {
-  transform: rotate(-18deg); }
+  top: 165px;
+  left: 407px;
+  transform: rotate(18deg); }
+  .card[data-card="5"]:hover {
+    transform: rotate(18deg) scale(1.15, 1.15); }
 
 .card[data-card="6"] {
-  transform: rotate(-20deg); }
+  top: 206px;
+  left: 212px;
+  transform: rotate(90deg); }
+  .card[data-card="6"]:hover {
+    transform: rotate(90deg) scale(1.15, 1.15); }
 
 .card[data-card="7"] {
-  transform: rotate(-64deg); }
+  transform: rotate(-70deg);
+  top: 93px;
+  left: 207px; }
+  .card[data-card="7"]:hover {
+    transform: rotate(-70deg) scale(1.15, 1.15); }
 
 .card[data-card="8"] {
-  transform: rotate(16deg); }
+  top: 154px;
+  left: -6px;
+  transform: rotate(-17deg); }
+  .card[data-card="8"]:hover {
+    transform: rotate(-17deg) scale(1.15, 1.15); }
+
+.card[data-card="9"] {
+  top: -50px;
+  left: 425px;
+  transform: rotate(-18deg); }
+  .card[data-card="9"]:hover {
+    transform: rotate(-18deg) scale(1.15, 1.15); }
+
+.card[data-card="10"] {
+  top: -86px;
+  left: 29px;
+  transform: rotate(109deg); }
+  .card[data-card="10"]:hover {
+    transform: rotate(109deg) scale(1.15, 1.15); }
+
+.card[data-card="11"] {
+  top: 253px;
+  left: 390px;
+  transform: rotate(46deg); }
+  .card[data-card="11"]:hover {
+    transform: rotate(46deg) scale(1.15, 1.15); }
+
+.card[data-card="12"] {
+  top: 253px;
+  left: -23px;
+  transform: rotate(-60deg); }
+  .card[data-card="12"]:hover {
+    transform: rotate(-60deg) scale(1.15, 1.15); }
 
 #complete-overlay {
   height: 100vh;
@@ -430,12 +495,13 @@ footer {
 
 .droppable-widget {
   font-weight: 600;
-  border: 3px solid black;
+  color: white;
+  border: 3px solid white;
   width: 25%;
   text-align: center;
   padding: 6px; }
   .droppable-widget:hover {
-    border: 3px solid black; }
+    border: 3px solid white; }
 
 .draggable-widget {
   transition: all 0.5s; }
@@ -444,6 +510,9 @@ footer {
 .ui-draggable .dragged {
   transform: scale(0.65, 0.65) !important;
   opacity: 0.9; }
+
+.modal-backdrop {
+  opacity: 0.65 !important; }
 
 .modal {
   top: 20px; }
@@ -459,34 +528,35 @@ footer {
   border-bottom: none;
   padding: 40px 20px 20px;
   cursor: move; }
-  .modal-header:after {
-    content: "";
-    border: 2px solid #DDDDDD;
-    margin-top: 15px;
-    width: 50px; }
 
-.modal-body small {
-  font-style: italic;
-  text-align: center;
-  display: block;
-  font-size: 65%; }
-.modal-body p {
-  margin-top: 40px; }
+.modal-body {
+  padding: 15px 30px; }
+  .modal-body small {
+    font-style: italic;
+    display: block; }
+  .modal-body p {
+    margin-top: 40px; }
 
 .close[data-dismiss="modal"] {
   position: absolute;
-  left: 110%;
+  left: 105%;
   top: 0%; }
-  .close[data-dismiss="modal"] span {
-    color: white;
-    border: 1px solid white;
-    border-radius: 50%;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    text-shadow: none;
-    font-weight: initial; }
+
+.modal-img {
+  max-width: 100%; }
+
+.modal-caption {
+  text-align: left; }
+
+.modal-footer-message {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  left: 0px;
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
