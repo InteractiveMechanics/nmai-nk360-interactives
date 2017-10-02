@@ -3,8 +3,8 @@
     "page_title": "Pacific Northwest History and Cultures: Coastal Region",
 	"themes": [
 	    {
-	    	"title": "Community",
-	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group",
+	    	"title": "Identity",
+	    	"tooltip_text": "The qualities and beliefs of an individual",
 	    	"count": 5,
 			"highlight_color": "#FF0000"
 	    },
@@ -15,8 +15,8 @@
 			"highlight_color": "#0000FF"
 	    },
 	    {
-	    	"title": "Identity",
-	    	"tooltip_text": "The qualities and beliefs of an individual",
+	    	"title": "A sense of community",
+	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group",
 	    	"count": 2,
 			"highlight_color": "#0000FF"
 	    }
@@ -28,7 +28,7 @@
 		    "image_url": "",
 		    "image_caption": "",
 		    "image_credit": "<p>Image 1: Salmon grilling over a fire pit, 27th August, 2005. Neah Bay, Makah Indian Reservation, Washington, USA. Photo courtesy of Konrad Wothe/ imageBROKER/Alamy Stock Photo</p><p>Image 2: Makah Feast Day, Salmon Bake, ca. 1955. Photograph credited to Makah Tribe, http://exotichikes.com/wp-content/uploads/2013/12/makahfeastday_salmon-bake-c1955.jpg</p>",
-		    "body": "<p>Image 1: Salmon roasting at Makah Days, a period of celebration during which Makah citizens gather to honor thousands of years of customs and traditions as well as the anniversary of becoming United States citizens in 1924 under the American Indian Citizenship Act.</p><p>Image 2: Makah Days in the mid-1950s. Native Nations of the Pacific Northwest use cedar skewers to pierce, roast, and smoke salmon filets over open pit fires.</p>",
+		    "body": "<p>Image 1: Salmon roasting at <span data-pronounce=“../shared/audio/PNW_Makah.mp3”>Makah</span> Days, a period of celebration during which Makah citizens gather to honor thousands of years of customs and traditions as well as the anniversary of becoming United States citizens in 1924 under the <span data-toggle=“tooltip” title=“An Act passed by the U.S. Congress on June 2, 1924, granting citizenship to all American Indians  born in the U.S. But, even after that, in some states American Indians still were not allowed to vote.”>American Indian Citizenship Act</span>.</p><p>Image 2: <span data-pronounce=“../shared/audio/PNW_Makah.mp3”>Makah</span> Days in the mid-1950s. Native Nations of the Pacific Northwest use cedar skewers to pierce, roast, and smoke salmon filets over open pit fires.</p>",
 		    "source": "",
 		    "caption": "<p>Image 1: Salmon roasting at Makah Days, a period of celebration during which Makah citizens gather to honor thousands of years of customs and traditions as well as the anniversary of becoming United States citizens in 1924 under the American Indian Citizenship Act.</p><p>Image 2: Makah Days in the mid-1950s. Native Nations of the Pacific Northwest use cedar skewers to pierce, roast, and smoke salmon filets over open pit fires.</p>",
 		    "audio_url": "",
@@ -42,9 +42,9 @@
 			"id": 2,
 		    "title": "Fishing",
 		    "image_url": "",
-		    "image_caption": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
+		    "image_caption": "",
 		    "image_credit": "<p>Image 1: Quileute iron salmon hook, ca.1890. NMAI 057591</p><p>Image 2: Quileute drift net for catching salmon, collected in 1916. Washington. NMAI 057870</p>",
-		    "body": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
+		    "body": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The <span data-toggle=“tooltip” title=“Fishing with a hook at the end of a line or pole.”>hook-and-line method</span> reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to <span data-toggle=“tooltip” title=“The act of reproduction in fish when females deposit eggs and males fertilize them with sperm.”>spawn</span> and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small <span data-pronounce=“../shared/audio/PNW_Quileute.mp3”>Quileute</span> set net, however, was made to target specific types and sizes of fish.</p>",
 		    "source": "",
 		    "caption": "",
 		    "audio_url": "",
@@ -62,7 +62,7 @@
 		    "image_credit": "",
 		    "body": "“We’ve been out on boats all our lives; my dad was a fisherman when he was young; . . . we grew up here on the water, we grew up on boats. It seemed like we were fishing everywhere we went. We’d always throw a hook in the water somewhere, whether it’s in a lake or along the river, or wherever we went.”",
 		    "source": "Ronnie Wilson (Makah), NMAI Interview, July 2016",
-		    "caption": "Ronnie Wilson’s family has fished in the Pacific Ocean for generations. Salmon and other types of fishing define his identity as a Makah citizen and maintain the continuity of thousands of years of cultural traditions.",
+		    "caption": "Ronnie Wilson’s family has fished in the Pacific Ocean for generations. Salmon and other types of fishing define his identity as a <span data-pronounce=“../shared/audio/PNW_Makah.mp3”>Makah</span> citizen and maintain the continuity of thousands of years of cultural traditions.",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Quote",
