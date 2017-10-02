@@ -6,8 +6,8 @@
 * ~~Add WYSIWYG editor for News Article Creator~~
 * ~~Pull in shared tooltips and audio pronunciations~~
 * ~~Document all the third-party libraries being used~~
-* Set up a distribution process for production
-* Configure dev/dist process for multiple versions and themes
+* ~~Set up a distribution process for production~~
+* ~~Configure dev/dist process for multiple versions and themes~~
 
 ### Getting started
 * Clone the repository
@@ -45,6 +45,25 @@ We're using a number of outside libraries for different features, including:
 Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
 
 For distribution, you can run `grunt dist` with several variables: `--json=m#a#`, `--dir=name-of-directory`, `--theme=theme-acronym`. For example, if you want to generate/build Module 1's (Pacific Northwest) Activity 1, and the directory provided by NMAI is "pnw-fishwars-markup", you can should run `grunt dist --json=m1a1 --dir=pnw-fishwars-markup --theme=pnw`. This will build a `dist` directory with the built folder for that activity processed for deployment. To see the full list of directory names from NMAI, go here: [https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit](https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit)
+
+Here are all of the `grunt dist` commands you will need to run (by activty):
+- #1: `grunt dist --dir=pnw-history-culture-salmon --theme=pnw --json=m3a1`
+
+- #2: `grunt dist --dir=pnw-fish-wars-timeline --theme=pnw --json=m4a1`
+
+- #3: `grunt dist --dir=plains-belonging-markup-1 --theme=np --json=m1a1`
+- #3: `grunt dist --dir=plains-belonging-markup-2 --theme=np --json=m1a2`
+- #3: `grunt dist --dir=plains-treaty-markup --theme=np --json=m2a1`
+- #3: `grunt dist --dir=pnw-history-culture-markup --theme=pnw --json=m3a1`
+- #3: `grunt dist --dir=pnw-fish-wars-markup-1 --theme=pnw --json=m4a1`
+- #3: `grunt dist --dir=pnw-fish-wars-markup-2 --theme=pnw --json=m4a2`
+
+- #4: `grunt dist --dir=plains-belonging-puzzle --theme=np --json=m1a1`
+- #4: `grunt dist --dir=pnw-history-culture-puzzle --theme=pnw --json=m3a1`
+
+- #5: `grunt dist --dir=plains-treaty-news --theme=np --json=m2a1`
+- #5: `grunt dist --dir=pnw-fish-wars-news --theme=pnw --json=m4a1`
+
 
 ##### Commenting
 As you go, be sure to comment your code to make sure it's clear. Write a short description of all functions (even if they seem obvious) and define each Sass file at the top of the file with a short description of what you might find in that folder. Use the following comment format where possible (include a short description of the function/file, and where appropriate, define the arguments and returned values):

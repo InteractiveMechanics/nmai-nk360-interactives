@@ -6,8 +6,9 @@
     },
     "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
     "question": "What kinds of actions can lead to justice?",
-    "paperTitle": "",
-    "paperImage": "",
+    "paperTitle": "The Independent Observer",
+    "paperImageTraditional": "./assets/header/masthead-traditional.png",
+    "paperImageModern": "./assets/header/masthead-modern.png",
     "images": [
         {
             "thumb": "path/to/image",
