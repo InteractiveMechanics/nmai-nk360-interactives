@@ -161,6 +161,16 @@ footer {
       background-color: white;
       border-color: white;
       text-shadow: none; }
+  .btn.active {
+    border-color: #4BADA6;
+    background-color: #4BADA6;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #4BADA6;
+      border-color: #4BADA6;
+      opacity: 0.65; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -228,7 +238,7 @@ small, .small {
   font-weight: 100; }
 
 .annotation-screen {
-  width: 90%;
+  width: 100%;
   margin: 50px auto;
   height: 75vh; }
   .annotation-screen .annotation-item {

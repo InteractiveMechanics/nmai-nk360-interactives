@@ -66,3 +66,13 @@ h4 {
       color: #311d18 !important;
       background-color: white;
       border-color: white; }
+  .btn.active {
+    border-color: #311d18;
+    background-color: #311d18;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #311d18;
+      border-color: #311d18;
+      opacity: 0.65; }

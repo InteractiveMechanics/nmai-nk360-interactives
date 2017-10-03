@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 2,
+      speed: 1,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -14,7 +14,16 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 1
+      salmonCount: 1,
+      backgroundSpeed: .5,
+      midgroundSpeed: 1,
+      foregroundSpeed: 1.5,
+      $background: $('.game-world .game-world__background'),
+      $midground: $('.game-world .game-world__midground'),
+      $foreground: $('.game-world .game-world__foreground'),
+      backgroundPosition: 0,
+      midgroundPosition: 0,
+      foregroundPosition: 0
     };
 
     var lastCard = null;
@@ -162,6 +171,13 @@ Game = (function() {
               settings.position -= settings.speed;
               $('.game-world').css('left', settings.position + 'px');
               
+              /*(settings.backgroundPosition -= settings.backgroundSpeed;
+              settings.midgroundPosition -= settings.midgroundSpeed;
+              settings.foregroundPosition -= settings.foregroundSpeed;
+              settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
+              settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
+              settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
+*/
               settings.positions.forEach(function(pos, index) {
                   if (0 === pos) {
                       pos = (window.innerWidth / 2);

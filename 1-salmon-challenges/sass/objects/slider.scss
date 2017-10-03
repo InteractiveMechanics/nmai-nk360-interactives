@@ -1,6 +1,9 @@
 .slick-slide {
     margin: 0px 20px;
 	width: 390px;
+	@media (max-width: 767px) { 
+	    width:310px;
+	}
 
 	img {
 		width: 100%;
