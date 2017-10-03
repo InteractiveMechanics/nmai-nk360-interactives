@@ -1,0 +1,66 @@
+.progress-wrapper {
+    position: absolute;
+    z-index: 80;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 85%;
+    height: 6px;
+    background-color: #fff;
+}
+
+.fish-outline {
+  background: url('../assets/prog-bar-fish@2x.png') no-repeat center center;
+  background-size: 98px 61px;
+  position: absolute;
+  top: -43px;
+  right: -48px;
+  width: 98px;
+  height: 61px;
+  z-index: 50;
+}
+
+.progressb {
+    position: relative;
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+}
+
+.position-progress {
+  position: absolute;
+  top: calc(-50% + 3px - 60px);
+  width: 127px;
+  height: 121px;
+  z-index: 87;
+  opacity: 0.2;
+}
+
+.position-1-progress {
+    background: url('../assets/prog-bar-ocean@2x.png') no-repeat center center;
+    opacity: 1;
+    left: 0;
+}
+
+.position-2-progress {
+    background: url('../assets/prog-bar-city@2x.png') no-repeat center center;
+    left: 0;
+}
+
+.position-3-progress {
+    background: url('../assets/prog-bar-rural@2x.png') no-repeat center center;
+    left: 0;
+}
+
+.position-4-progress {
+    background: url('../assets/prog-bar-spawn@2x.png') no-repeat center center;
+    left: 0;
+}
+
+.position-1-progress.highlight,
+.position-2-progress.highlight,
+.position-3-progress.highlight,
+.position-4-progress.highlight {
+    opacity: 1;
+}

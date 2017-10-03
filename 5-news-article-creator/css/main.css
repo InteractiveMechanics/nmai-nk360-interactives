@@ -162,6 +162,16 @@ footer {
       background-color: white;
       border-color: white;
       text-shadow: none; }
+  .btn.active {
+    border-color: #4BADA6;
+    background-color: #4BADA6;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #4BADA6;
+      border-color: #4BADA6;
+      opacity: 0.65; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -405,28 +415,52 @@ main {
     #print-preview .print-preview-container.traditional .paper-preview-headline {
       font-weight: bold;
       font-style: italic;
-      font-family: 'Times New Roman';
-      font-size: 46px;
-      line-height: 1.1; }
+      font-family: 'Times New Roman'; }
     #print-preview .print-preview-container.traditional .paper-preview-byline {
       font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional .paper-preview-date,
+    #print-preview .print-preview-container.traditional .paper-preview-cost {
+      font-family: 'Times New Roman', serif;
+      font-style: italic; }
     #print-preview .print-preview-container.modern .paper-preview-headline {
       font-family: 'Open Sans Condensed';
-      font-weight: bold;
-      font-size: 46px;
-      line-height: 1.1; }
+      font-weight: bold; }
     #print-preview .print-preview-container.modern .paper-preview-byline {
       font-family: 'Open Sans', serif; }
+    #print-preview .print-preview-container.modern .paper-preview-date,
+    #print-preview .print-preview-container.modern .paper-preview-cost {
+      font-family: 'Open Sans', serif;
+      text-transform: uppercase; }
   #print-preview .paper-preview-header {
     height: 100px;
-    background: gray;
-    margin-bottom: 20px; }
+    margin-bottom: 15px; }
+    #print-preview .paper-preview-header .paper-preview-title {
+      max-height: 60px;
+      margin: 0 auto 8px;
+      display: block; }
+    #print-preview .paper-preview-header .paper-preview-date {
+      font-size: 0.8rem;
+      display: block;
+      float: left; }
+    #print-preview .paper-preview-header .paper-preview-cost {
+      font-size: 0.8rem;
+      display: block;
+      float: right; }
+    #print-preview .paper-preview-header hr:first-of-type {
+      margin: 5px 0; }
+    #print-preview .paper-preview-header hr:last-of-type {
+      margin: 30px 0; }
   #print-preview .paper-preview-headline {
     height: 96px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%; }
+    width: 100%;
+    font-size: 46px;
+    line-height: 1.1; }
+    #print-preview .paper-preview-headline.large {
+      font-size: 68px;
+      height: 76px; }
   #print-preview .paper-preview-byline {
     margin-bottom: 10px;
     font-style: italic; }

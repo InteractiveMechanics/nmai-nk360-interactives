@@ -1,12 +1,23 @@
 Game = (function() {
-
+    //positions: [0, 4320, 8640, -1],
     var settings = {
       speed: 2,
       position: 0,
       fishSelection: null,
       pause: true,
-      started: false
+      started: false,
+      $world: $('.game-world'),
+      positions: [0, 5320, 9640, -1],
+      leg: 0,
+      $progress: $('.progressb'),
+      scaling: 0,
+      sectionLength: 0,
+      sectionOffset: 0,
+      position: 0,
+      salmonCount: 1
     };
+
+    var lastCard = null;
 
     var randomEncounters = [];
     var oceanEncounters = [];
@@ -18,6 +29,19 @@ Game = (function() {
         
         bindEvents();
         setData();
+
+        settings.scaling = $('.progress-wrapper').width() / (settings.$world.width() - window.innerWidth);
+        settings.sectionLength = $('.progress-wrapper').width() / (settings.positions.length - 1);
+        settings.sectionOffset = (window.innerWidth) * settings.scaling;
+        settings.positions.forEach(function(pos, index) {
+            if (0 === pos) {
+                pos = (window.innerWidth / 2);
+            }
+          if (-1 === pos) {
+              pos = (settings.$world.width() - (window.innerWidth / 2));
+          }
+          $('.position-'+String(index + 1)+'-progress').css("left", (index * settings.sectionLength) - ($('.position-'+String(index + 1)+'-progress').width() / 2));
+        });
     }
     var bindEvents = function() {
         $('body').on('click tap', '#show-instructions', showIntro);
@@ -105,9 +129,9 @@ Game = (function() {
       
       var encounter = cityEncounters[0];
       var hotspotHTML = createHotspotHTML(encounter);
-
-      console.log(hotspotHTML);
       $('.encounters').html(hotspotHTML);
+
+
     }
 
     var createHotspotHTML = function(encounter) {
@@ -127,18 +151,39 @@ Game = (function() {
     }
 
     var closeCongratsScreen = function() {
-
+      $('#congrats-instructions').removeClass('show').addClass('hidden');
     }
 
 
     var updateWorld = function() {
+        var totalPos = 0, prevPos = 0;
         if(settings.pause) {
-          if (-settings.position < 15840) {
+          if (-settings.position < 12840) {
               settings.position -= settings.speed;
               $('.game-world').css('left', settings.position + 'px');
+              
+              settings.positions.forEach(function(pos, index) {
+                  if (0 === pos) {
+                      pos = (window.innerWidth / 2);
+                  }
+                  if (-1 === pos) {
+                      pos = (settings.$world.width() - (window.innerWidth / 2));
+                  }
+                  if (index > 0) {
+                      if ((-1 * settings.position + (window.innerWidth / 2)) >= pos) {
+                        totalPos += settings.sectionLength;
+                        $('.position-'+String(index + 1)+'-progress').addClass("highlight");
+                      } else if ((-1 * settings.position + (window.innerWidth / 2)) > prevPos) {
+                          totalPos += (((-1 * settings.position + (window.innerWidth / 2)) - prevPos) / (pos - prevPos)) * settings.sectionLength;
+                      }
+                  }
+                  prevPos = pos;
+              });
+              settings.$progress.css("width", totalPos);
               requestAnimationFrame(updateWorld);
           } else {
             console.log('game-complete');
+            $('#congrats-instructions').removeClass('hidden').addClass('show');
           }
         }
     };
@@ -172,7 +217,7 @@ Game = (function() {
       _this.removeClass('faded');
 
       $('#close-select-fish').removeClass('faded');
-      $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + "-0");
+      $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);
 
     }
 
@@ -191,14 +236,15 @@ Game = (function() {
 
       if(location == 'city') {
         createEncounterSlider( cityEncounters[hotspot_index] );
+        lastCard = cityEncounters[hotspot_index];
       }
 
-      if(location == 'city') {
-
+      if(location == 'ocean') {
+        lastCard = cityEncounters[hotspot_index]
       }
 
-      if(location == 'city') {
-
+      if(location == 'wilderness') {
+        lastCard = cityEncounters[hotspot_index]
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
@@ -239,6 +285,30 @@ Game = (function() {
         });
 
       }
+    }
+
+    var addFish = function() {
+      if(settings.salmonCount < 6) {
+        updateFish(1);
+      }
+    }
+
+    var loseFish = function() {
+      if(settings.salmonCount < 0) {
+        
+      } else {
+        updateFish(1);
+      }
+    }
+
+    var updateFish = function(value) {
+      var val = settings.salmonCount + value;
+      var fishType = settings.fishSelection + '-';
+      var removedClass = fishType + settings.salmonCount;
+      var addedClass = fishType + val;
+
+      $('#SelectedSalmon').removeClass(removedClass).addClass(addedClass);
+      settings.salmonCount = val;
     }
 
     var getInformationCardHTML = function(card) {
@@ -342,14 +412,23 @@ Game = (function() {
         settings.pause = true;
         requestAnimationFrame(updateWorld);
 
-        $('.salmon').removeClass('steelhead-0').addClass('steelhead-1')
+        $('.salmon').removeClass('steelhead-0').addClass('steelhead-1');
       }
 
       $('.slider-wrapper').removeClass('show').addClass('hidden');
-        settings.pause = true;
-        requestAnimationFrame(updateWorld);
+      settings.pause = true;
+      requestAnimationFrame(updateWorld);
+      $('.salmon').removeClass('steelhead-0').addClass('steelhead-1');
 
-        $('.salmon').removeClass('steelhead-0').addClass('steelhead-1')
+      if(lastCard) {
+        if(lastCard.cards[0].lose_fish) {
+          loseFish();
+        }
+
+        if(lastCard.cards[0].add_fish) {
+          addFish();
+        }
+      }
     }
 
     
