@@ -53,7 +53,7 @@ Detail = (function() {
                 $('.era-container[data-era="3"]').addClass('hidden');
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
-                $('.timeline-wrapper').css('width', '3200px');
+                $('.timeline-wrapper').css('width', '3500px');
             } else {
                 $('.timeline-wrapper').css('width', '4800px');
             }
@@ -66,7 +66,7 @@ Detail = (function() {
                 $('.era-container[data-era="3"]').addClass('hidden');
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
-                $('.timeline-wrapper').css('width', '3200px');
+                $('.timeline-wrapper').css('width', '3500px');
             } else {
                 $('.timeline-wrapper').css('width', '4800px');
             }

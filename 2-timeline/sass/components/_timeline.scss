@@ -49,7 +49,7 @@
 .timeline-wrapper {
     position: absolute;
     height: 103%;
-    width: 1743px;
+    width: 2143px;
     overflow: auto;
     background: url('../../assets/timeline-full@2x.jpg');
     background-size: cover;
@@ -64,7 +64,7 @@
 
 .timeline-track[data-era="1"] {
     width: 95%;
-    left: 5%;
+    left: 60px;
 }
 
 .timeline-track[data-era="2"],
@@ -82,106 +82,109 @@
     height: 100vh;
     position: absolute;
     top: 0px;
-    width: 1600px;
 }
+
 
 
 .era-container[data-era="1"] {
     left: 0px;
+    width: 2140px;
 }
 
 .era-container[data-era="2"] {
-    left: 1734px;
+    left: 1780px;
+    width: 1720px;
 }
 
 .era-container[data-era="3"] {
-    left: 3334px;
+    left: 3340px;
+    width: 1460px;
 }
 
 
 
 
 .timeline-item {
-    background-color: white;
+    background-color: #678da0;
     border: none;
-    border-radius: 37px;
+    border-radius: 0px;
     display: flex;
     text-align: initial;
     width: $moment-width;
-    height: 85px;
+    height: $moment-height;
     z-index: 3;
 }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="1"] {
-    left: 5%;
+    left: 60px;
     bottom: $timeline-bottom;
     z-index: 5
 }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="2"] {
-    left: 805px;
+    left: 750px;
     bottom: $timeline-bottom;
     z-index: 4;
 
 }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="3"] {
-    left: 1144px;
+    left: 1000px;
     bottom: $timeline-bottom-alt;
     z-index: 3;
 }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="4"] {
-    left: 1238px;
+    left: 1430px;
     bottom: $timeline-bottom;
     z-index: 2;
 }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="5"] {
-   left: 1367px;
+   left: 1715px;
    bottom: 532px;
    z-index: 1;
 }
 
 .timeline-item-wrapper[data-era="2"][data-timeline="1"] {
-    left: 20px;
+    left: 65px;
     bottom: $timeline-bottom;
 }
 
 .timeline-item-wrapper[data-era="2"][data-timeline="2"] {
-   left: 263px;
+   left: 340px;
    bottom: $timeline-bottom-alt;
 
 }
 
 .timeline-item-wrapper[data-era="2"][data-timeline="3"] {
-    left: 776px;
+    left: 825px;
     bottom: $timeline-bottom;
 }
 
 .timeline-item-wrapper[data-era="2"][data-timeline="4"] {
-    left: 1062px;
+    left: 1320px;
     bottom: $timeline-bottom;
 }
 
 .timeline-item-wrapper[data-era="3"][data-timeline="1"] {
-    left: 100px;
+    left: 90px;
     bottom: $timeline-bottom;
 }
 
 .timeline-item-wrapper[data-era="3"][data-timeline="2"] {
-    left: 391px;
+    left: 505px;
     bottom: $timeline-bottom-alt;
 
 }
 
 .timeline-item-wrapper[data-era="3"][data-timeline="3"] {
-    left: 1002px;
+    left: 935px;
     bottom: $timeline-bottom;
 }
 
 .timeline-item-wrapper[data-era="3"][data-timeline="4"] {
-    left: 1230px;
+    left: 1270px;
     bottom: $timeline-bottom;
 }
 
@@ -191,14 +194,17 @@
     height: 82px;
     border: 3px solid white;
     border-radius: 50%;
-    margin: 2px -2px;
+    margin: 0px;
     width: 82px;
+    position: absolute;
+    top: 0px;
+    left: -33px;
+    z-index: 2;
 }
 
 .timeline-btn-text-wrapper {
-    h6 {
-        font-weight: 700;
-    }
+    font-weight: 300;
+    color: white;
     p {
         font-size: 14px;
     }
@@ -235,7 +241,8 @@
             color: #deded1;
             display: inline;
             font-family: $headline;
-            position: relative;
+            position: absolute;
+            bottom: 0px;
 
         }
     }
@@ -252,7 +259,7 @@
 
 .sm-label-wrapper {
     position: absolute;
-    height: 150px;
+    height: 182px;
     border-left: 2px dotted #deded1;
     display: flex;
     align-items: flex-end;
@@ -267,40 +274,40 @@
 }
 
 .sm-label-wrapper[data-era="1"][data-timeline="3"] {
-    height: 314px;
+    height: 346px;
 }
 
 .sm-label-wrapper[data-era="1"][data-timeline="5"] {
     height: 450px;
 }
 
-.lg-label-1[data-era="1"] {
-    left: 5%;
+.lg-label-1 {
+    left: 60px;
 }
 
-.lg-label-2[data-era="1"] {
-    left: 285px;
+.lg-label-2 {
+    left: 475px;
 }
 
-.lg-label-3[data-era="1"] {
-    left: 786px;
+.lg-label-3 {
+    left: 940px;
 }
 
-.lg-label-4[data-era="1"] {
-    left: 1228px;
+.lg-label-4 {
+    left: 1845px;
 }
 
 
-.lg-label-1[data-era="2"] {
-    left: 2000px
+.lg-label-5 {
+    left: 3100px;
 }
 
-.lg-label-2[data-era="2"] {
-    left: 2300px;
+.lg-label-6 {
+    left: 4275px;
 }
 
-.lg-label-3[data-era="2"] {
-    left: 2700px;
+.lg-label-7{
+    left: 4625px;
 }
 
 .lg-label-4[data-era="2"] {

@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="./css/main.css" />
 
   
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
-
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+   <!--  <link rel="stylesheet" href="./css/theme-np.css" />
+ -->
 
     <!-- For development only, comment for distribution -->
     <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" />
+ -->
     <!-- For production build -->
     <!-- build:template:dist 
         <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
@@ -137,7 +137,7 @@
             
             <div class="draggable-holder">
 
-                <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
+                <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="{{:incorrect}}">
                     <div class="draggable-text" data-timeline={{:id}}>
                         <p>{{:excerpt}}</p>
                     </div>
@@ -247,18 +247,21 @@
 
             <div class="timeline-wrapper">
             <img class="timeline-bkgr" src="../assets/timeline-full@2x.jpg" alt="timeline background">
-
+                <div class="timeline-labels">
+                    <ul class="lg-label-wrapper">
+                                <li><h2 class="lg-label-1">Time Immemorial</h2></li>
+                                <li><h2 class="lg-label-2">1800s</h2></li>
+                                <li><h2 class="lg-label-3">1900s</h2></li>
+                                <li><h2 class="lg-label-4">1974</h2></li>
+                                <li><h2 class="lg-label-5">1979</h2></li>
+                                <li><h2 class="lg-label-6">2000s</h2></li>
+                                <li><h2 class="lg-label-7">Present</h2></li>
+                    </ul>
+                </div>
                
                 {{for eras}}
                     <div class="era-container" data-era="{{:Id}}">
-                        <div class="timeline-labels">
-                            <ul class="lg-label-wrapper">
-                                <li><h2 class="lg-label-1" data-era="{{:Id}}">{{:StartDate}}</h2></li>
-                                <li><h2 class="lg-label-2" data-era="{{:Id}}">{{:Milestone1}}</h2></li>
-                                <li><h2 class="lg-label-3" data-era="{{:Id}}">{{:Milestone2}}</h2></li>
-                                <li><h2 class="lg-label-4" data-era="{{:Id}}">{{:Milestone3}}</h2></li>
-                            </ul>
-                        </div>
+                       
                         <div class="timeline-track" data-era="{{:Id}}"></div>
 
                         {{for Moments ~eraId=Id}}

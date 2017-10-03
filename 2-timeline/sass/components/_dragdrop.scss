@@ -4,9 +4,11 @@
     display: inline-flex;
     justify-content: center;
     padding: 10px;
-    background: $primary;
+    color: $primary;
+    background-color: rgba(9, 74, 113, 0.35);
     border-radius: 52px;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
+
 }
 
 #era-label-start {
@@ -16,7 +18,7 @@
 
 
 .droppable-widget {
-	border: 3px solid white;
+	border: 1px solid $primary;
 	border-radius: 50%;
 	height: 82px;
 	margin: 0px 10px;
@@ -24,14 +26,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #d6d6d6;
+	color: $primary;
 	font-size: 13px;
 	text-align: center;
-
 }
 
 [data-toggle="tooltip"] {
 	border-bottom: none;
+}
+
+.draggable-holder {
+	margin-left: 20px;
 }
 
 #draggable-wrapper {
@@ -45,31 +50,30 @@
 }
 
 .draggable-widget {
-	background-color: white;
-    height: 85px;
+	background-color: rgba(9, 74, 113, 0.5);
+    height: $moment-height;
     width: $moment-width;
-    border-radius: 65px;
     display: flex;
     align-items: center;
     overflow: hidden;
     z-index: 2;
     margin: 0px 20px;
-    padding: 20px 33px 20px 0px;
+    padding: 15px 15px 15px 52px;
     text-align: left;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 300;
 	img {
 		height: 82px;
 		width: 82px;
 		border: 3px solid white;
 		border-radius: 50%;
-		margin-left: 3px;
 		cursor: hand;
   		cursor: -webkit-grab;
   		cursor: grab;
 	}
 	div {
-		font-size: 13px; 
-		margin-left: 88px;
+		font-size: 13px;
 		flex: 1;
 		-webkit-touch-callout: none; /* iOS Safari */
     	-webkit-user-select: none; /* Safari */
@@ -97,8 +101,8 @@
 }
 
 .draggable-img-wrapper {
-	left: 18px;
-	top: -83px;
+	left: -23px;
+	top: -$moment-height;
 	height: 82px;
 	width: 82px;
 }

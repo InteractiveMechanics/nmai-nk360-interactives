@@ -28,19 +28,21 @@ Explore = (function() {
         var scrolled = $('.timeline-wrapper').scrollLeft();
         var windowWidth = $(window).width();
         var roomToScroll = timelineWidth - windowWidth;
-        if (roomToScroll > scrolled && roomToScroll >= windowWidth) {
-           
+        var leftToScroll = timelineWidth - scrolled;
+
+        if (leftToScroll >= windowWidth) {
+            console.log('if statement: left to scroll is' + leftToScroll + ' and scrolled is' + scrolled + " room to scrolll is " + roomToScroll);
             $('.timeline-wrapper').animate({
                 scrollLeft: "+=" + windowWidth + "px"
             }, "fast");
-        } else if (roomToScroll > scrolled && roomToScroll < windowWidth) {
-            $('.timeline-wrapper').animate({
-                scrollLeft: "+=" + roomToScroll + "px"
-            }, "fast");
         } else {
+            console.log('else statement: left to scroll is ' + leftToScroll + ' room to scroll is ' + roomToScroll);
+            $('.timeline-wrapper').animate({
+                scrollLeft: "+=" + leftToScroll + "px"
+            }, "fast");
            
-        }
-         console.log("next scrollWidth " + scrolled);
+        } 
+         console.log("left to scroll is " + leftToScroll + " scrolled is " + scrolled + " room to scroll is " + roomToScroll);
         
         
     }
