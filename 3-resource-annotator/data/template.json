@@ -1,0 +1,42 @@
+{
+    "title": "Resource Annotator",
+    "page_title": "Northern Plains History & Culture: Crow Nation",
+	"themes": [
+	    {
+	    	"title": "Rights",
+	    	"tooltip_text": "Rights are special benefits",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    },
+	    {
+	    	"title": "Responsibilities",
+	    	"tooltip_text": "Responsibilities are moral duties",
+	    	"count": 2,
+			"highlight_color": "#0000FF"
+	    }
+    ],
+	"sources": [
+		{
+			"id": 1,
+			"title": "",
+			"image_url": "",
+			"image_caption": "",
+			"image_credit": "",
+			"body": "",
+			"paraphrase": "",
+			"source": "",
+			"caption": "",
+			"audio_url": "",
+			"video_url": "",
+			"source_type": "",
+			"excerpt": "",
+			"thumbnail_image": "http://via.placeholder.com/1280x720",
+			"question_text": ""
+		}
+	],
+    "returnTo": {
+        "title": "Northern Plains Culture Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+}
