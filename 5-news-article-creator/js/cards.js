@@ -262,6 +262,12 @@ Cards = (function() {
     var updateWordCount = function() {
         var count = getEditorTextLength();
         $('.article-word-count').text(count + ' words');
+
+        if (count > 250) {
+            $('.article-word-count').addClass('error');
+        } else {
+            $('.article-word-count').removeClass('error');
+        }
     }
     var updateImageCaptions = function(id, addTo) {
         var captionTemplate = $.templates("#imageCaptionTemplate");

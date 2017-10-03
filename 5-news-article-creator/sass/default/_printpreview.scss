@@ -92,15 +92,22 @@
         font-style: italic;
     }
     .paper-preview-article {
-        display: table;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        position: relative;
 
         > * {
-            display: table-cell;
             width: 32%;
-            margin-left: 1%
+            margin-right: 1%;
         }
-        
-        p:empty {
+        > .featured {
+            width: 66%;
+            margin-right: 0;
+        }
+        > p:empty {
             display: none;
         }
     }

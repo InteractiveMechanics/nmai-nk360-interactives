@@ -585,12 +585,19 @@ main {
     margin-bottom: 10px;
     font-style: italic; }
   #print-preview .paper-preview-article {
-    display: table; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative; }
     #print-preview .paper-preview-article > * {
-      display: table-cell;
       width: 32%;
-      margin-left: 1%; }
-    #print-preview .paper-preview-article p:empty {
+      margin-right: 1%; }
+    #print-preview .paper-preview-article > .featured {
+      width: 66%;
+      margin-right: 0; }
+    #print-preview .paper-preview-article > p:empty {
       display: none; }
   #print-preview .close-preview {
     width: 45px;
@@ -638,7 +645,10 @@ main {
   font-size: 0.7rem;
   text-align: right;
   display: block;
-  margin-top: 8px; }
+  margin-top: 8px;
+  color: #9eb2c1; }
+  .article-word-count.error {
+    color: #ec5343; }
 
 @media print {
   .module-menu-wrapper,

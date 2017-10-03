@@ -62,7 +62,11 @@ Print = (function() {
             html += '<em>' + val.caption + '</em> ' + val.credit + '</figcaption>';
             html += '</figure>';
 
-            $('.paper-preview-article').prepend(html);
+            if (featured == val.id){
+                $('.paper-preview-article').first('p').prepend(html);
+            } else {
+                $('.paper-preview-article').append(html);
+            }
         });
         $.each(quotes, function(key, val){
             var html = '';
