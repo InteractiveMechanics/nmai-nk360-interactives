@@ -64,6 +64,16 @@ h4 {
       color: #311D18 !important;
       background-color: white;
       border-color: white; }
+  .btn.active {
+    border-color: #311D18;
+    background-color: #311D18;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #311D18;
+      border-color: #311D18;
+      opacity: 0.65; }
 
 #step-by-step-cards .step .step-container {
   background-image: url("../shared/images/np/text-card-np@2x.png");

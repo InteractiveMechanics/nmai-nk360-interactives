@@ -149,7 +149,7 @@
                     <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
                 </div>
                 <div class="image-caption-form">
-                    <textarea class="image-caption-text" placeholder="Write your caption here!"></textarea>
+                    <textarea class="image-caption-text" name="Image Caption" placeholder="Write your caption here!"></textarea>
                 </div>
             </div>
         </div>
@@ -161,8 +161,8 @@
         <section id="step-by-step-cards">
             <div class="step step-intro" data-title="Introduction">
                 <div class="step-container">
-                    <h4 class="text-center all-caps">Create your own news article</h4>
-                    <h1 class="text-center">Tell the story</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Create your own news article</h4>
+                    <h1 class="text-center">Inform your readers</h1>
                     <div class="divider"></div>
                     <p class="large guiding-question text-center"></p>
                     <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process. </p>
@@ -170,26 +170,28 @@
             </div>
             <div class="step step-theme" data-title="Design">
                 <div class="step-container">
-                    <h4 class="text-center all-caps">Pick your newspaper style</h4>
-                    <h1 class="text-center">What design works best?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Pick your newspaper style</h4>
+                    <h1 class="text-center">What style works best?</h1>
                     <div class="divider"></div>
                     <p>The design of your paper will change the look and feel. Consider your audience, the subject matter, and mood you want to create.</p>
-                    <a class="btn btn-success btn-theme" data-theme="traditional" title="Theme: Traditional">Traditional</a>
-                    <a class="btn btn-success btn-theme" data-theme="modern" title="Theme: Modern">Modern</a>
+                    <div class="row">
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="traditional" title="Theme: Traditional">Traditional</a></div>
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="modern" title="Theme: Modern">Modern</a></div>
+                    </div>
                 </div>
             </div>
             <div class="step step-masthead" data-title="Byline">
                 <div class="step-container">
-                    <h4 class="text-center all-caps">Write your byline</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Write your byline (name)</h4>
                     <h1 class="text-center">What's your name?</h1>
                     <div class="divider"></div>
                     <p>Every article needs a byline to tell the reader who wrote the piece. Add your name or names to the article. </p>
-                    <input id="masthead" class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Joe Journalist" />
+                    <input id="masthead" name="Byline" class="form-control form-control-lg" type="text" title="Write your byline" maxlength="140" placeholder="e.g. Joe Journalist" />
                 </div>
             </div>
             <div class="step step-article-copy" data-title="Article">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps">Construct your argument</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Construct your argument (article)</h4>
                     <h1 class="text-center">How will you address the compelling question?</h1>
                     <div class="divider"></div>
                     <p>Remember to use evidence from multiple sources that support your claims and refute counter-claims. Keep it clear and brief: you only have 250 words!</p>
@@ -199,10 +201,10 @@
             </div>
             <div class="step step-images" data-title="Images">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps">Select your images</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Select your images</h4>
                     <h1 class="text-center">What images support your argument?</h1>
                     <div class="divider"></div>
-                    <p>Pick at least one image to use in your article that supports your argument. You'll write captions for these images next.</p>
+                    <p>Pick one to three images that support your argument. You'll write captions for these images next.</p>
                     <div id="image-selector" class="card-slider">
                         <div class="card-slider-container"></div>
                         <div class="card-slider-nav">
@@ -214,7 +216,7 @@
             </div>
             <div class="step step-image-captions" data-title="Image Captions">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps">Write captions</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Write image captions</h4>
                     <h1 class="text-center">Describe your images</h1>
                     <div class="divider"></div>
                     <p>Describe how the selected images support your argument. Star the image if you would like it to be your largest featured image. </p>
@@ -230,10 +232,10 @@
             </div>
             <div class="step step-quotes" data-title="Quotes">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps">Select your quote</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Select a quote</h4>
                     <h1 class="text-center">What quotes support your argument?</h1>
                     <div class="divider"></div>
-                    <p>Select at least one quote. Consider including statements from different perspectives to tell a more complete story.</p>
+                    <p>Select one to three quotes. Consider including statements from different perspectives to tell a more complete story.</p>
                     <div id="quote-selector" class="card-slider">
                         <div class="card-slider-container"></div>
                         <div class="card-slider-nav">
@@ -245,27 +247,27 @@
             </div>
             <div class="step step-headline" data-title="Headline">
                 <div class="step-container">
-                    <h4 class="text-center all-caps">Write Your headline</h4>
-                    <h1 class="text-center">How will you get your reader’s attention?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Write Your headline (title)</h4>
+                    <h1 class="text-center">How will you get your reader's attention?</h1>
                     <div class="divider"></div>
                     <p>Every article needs an eye-catching but informative headline to summarize the article and draw in readers. Be thoughtful, you only have two lines!</p>
-                    <input id="headline" class="form-control" type="text" title="Write your Masthead" placeholder="e.g. Your headline here" />
+                    <input id="headline" name="headline" class="form-control form-control-lg" type="text" title="Write your headline" maxlength="72" placeholder="e.g. Your headline here" />
                 </div>
             </div>
             <div class="step step-review" data-title="Review">
                 <div class="step-container">
-                    <h4 class="text-center all-caps">Check the proof</h4>
+                    <h4 class="text-center all-caps letter-spacing-1">Check the proof (draft)</h4>
                     <h1 class="text-center">Is your article ready to go?</h1>
                     <div class="divider"></div>
                     <a class="btn btn-success btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
-                    <p>Preview your proof and make sure your article doesn’t need any changes. If you want to go back and edit any content, use the progress bar below.</p>
+                    <p>Preview your proof and make sure your article doesn't need any changes. If you want to go back and edit any content, use the progress bar below.</p>
                 </div>
             </div>
         </section>
         <div id="static-ui">
             <header class="header text-center">
                 <h2 class="letter-spacing-1 all-caps">News Article Creator</h2>
-                <h1 class="guiding-question">How Do Native People and Nations Experience Belonging?</h1>
+                <h1 class="guiding-question"></h1>
             </header>
             <a class="btn btn-white btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
         </div>
@@ -280,7 +282,7 @@
             <div class="close-preview"></div>
             <div class="paper-preview-header"></div>
             <div class="paper-preview-headline">Lorem Ipsum Sit Dolor Amet Lorem ipsum dolor sit amet, consectetur elit</div>
-            <div class="paper-preview-masthead">Written and Edited by <span class="byline">Joe Journalist</span></div>
+            <div class="paper-preview-masthead all-caps letter-spacing-1">Written and Edited by <span class="byline">Joe Journalist</span></div>
             <div class="paper-preview-article"></div>
         </div>
 

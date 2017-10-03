@@ -32,7 +32,7 @@ Cards = (function() {
         $("#image-selector .card-slider-container").html(imageTemplateHTMLOutput);
         $("#quote-selector .card-slider-container").html(quoteTemplateHTMLOutput);
 
-        $("#image-selector img").slick({
+        $("#image-selector .card-slider-container").slick({
             accessibility: false,
             autoplay: false,
             prevArrow: $('#image-selector .nav-arrow-left'),
@@ -97,7 +97,7 @@ Cards = (function() {
         Cards.editor.on('text-change', updateWordCount);
 
         $(document).on('click tap', '.btn-theme', setTheme);
-        $(document).on('click tap', '.image-step', toggleImage);
+        $(document).on('click tap', '.image-step img', toggleImage);
         $(document).on('click tap', '.quote-step', toggleQuote);
         $(document).on('click tap', '.featured', toggleFeatured);
 

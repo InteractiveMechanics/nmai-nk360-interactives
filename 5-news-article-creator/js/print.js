@@ -40,10 +40,11 @@ Print = (function() {
         var featured = Cards.getFeatured();
 
         // Then generate the newspaper
+        buildMasthead(theme);
         $('.print-preview-container').addClass(theme);
         $('.paper-preview-article').html(article);
         $('.paper-preview-masthead .byline').text(masthead);
-        $('.paper-preview-headline').text(headline);
+        buildHeadline(headline);
         
         $.each(images, function(key, val){
             var html = '';
@@ -119,6 +120,40 @@ Print = (function() {
             return newStr;
         } else {
             return str;
+        }
+    }
+    var buildMasthead = function(theme) {
+        var img;
+        var cost;
+        var html = '';
+
+        var today = new Date();
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var date = monthNames[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
+
+        if (theme == 'traditional') {
+            img = data.paperImageTraditional;
+            cost = 'Twenty Five Cents';
+        } else {
+            img = data.paperImageModern;
+            cost = '$2.65';
+        }
+
+        html += '<img class="paper-preview-title" src="' + img + '" alt="' + data.paperTitle + '" title="' + data.paperTitle + '" />';
+        html += '<hr/>';
+        html += '<span class="pull-left paper-preview-date">' + date + '&nbsp;&nbsp;&nbsp;Issue 1</span>';
+        html += '<span class="pull-right paper-preview-cost">' + cost + '</span>';
+        html += '<hr/>';
+
+        $('.paper-preview-header').html(html);
+    }
+    var buildHeadline = function(headline) {
+        var length = headline.length;
+
+        if (length <= 26) {
+            $('.paper-preview-headline').addClass('large').text(headline);
+        } else {
+            $('.paper-preview-headline').text(headline);
         }
     }
 

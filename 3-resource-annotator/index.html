@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="./css/theme-pnw.css" />
     <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
     <link rel="stylesheet" href="./css/print.css" />
+    
+    <!-- For development only, comment for distribution -->
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+    /build -->
 
     <style type="text/css">
         .marker-in-text.pin-hidden {
@@ -550,6 +559,13 @@
 
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = './data/m1a1.json';</script>
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
 
     <!-- Include project specific code/files -->
     <script src="./js/annotator.js"></script>

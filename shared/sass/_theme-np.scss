@@ -103,4 +103,17 @@ h6 {
             border-color: white;
         }
     }
+    &.active {
+        border-color: $btnaccent;
+        background-color: $btnaccent;
+        color: white !important;
+        opacity: 1;
+
+        &:hover, &:focus, &:active {
+            color: white !important;
+            background-color: $btnaccent;
+            border-color: $btnaccent;
+            opacity: 0.65;
+        }
+    }
 }

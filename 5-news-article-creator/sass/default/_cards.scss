@@ -5,6 +5,9 @@
     height: inherit;
     width: inherit;
 
+    > .slick-list {
+        overflow: visible;
+    }
     > .slick-dots {
         position: fixed;
         bottom: 70px;
