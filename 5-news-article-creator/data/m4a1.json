@@ -11,14 +11,14 @@
     "paperImageModern": "./assets/header/masthead-modern.png",
     "images": [
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "http://via.placeholder.com/350x300",
+            "url": "http://via.placeholder.com/350x300",
             "caption": "Muckleshoot Protest",
             "credit": "Photograph by Larry Dion, 1966, courtesy of Seattle Times"
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "http://via.placeholder.com/200x600",
+            "url": "http://via.placeholder.com/200x600",
             "caption": "Billy Frank, Jr. fishing the Nisqually River in 1973 in an act of civil disobedience.",
             "credit": "Photograph by Tom Thompson, NWIFC."
         },

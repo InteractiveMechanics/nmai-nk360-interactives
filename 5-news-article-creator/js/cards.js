@@ -50,7 +50,8 @@ Cards = (function() {
             dots: true,
             infinite: false,
             swipe: true,
-            touchMove: true
+            touchMove: true,
+            centerMode: true
         });
         $("#quote-selector .card-slider-container").slick({
             accessibility: false,
@@ -116,14 +117,14 @@ Cards = (function() {
         var id = $(this).data('id');
 
         // If the image is not selected already
-        if ($(this).hasClass('selected')){
+        if ($(this).parent().parent().hasClass('selected')){
             // and the totalCount and imageCount are above zero
             if ((Cards.totalCount > 0) && (Cards.imageCount > 0)){
                 // Increment down by one each
                 Cards.imageCount -= 1;
                 Cards.totalCount -= 1;
 
-                $(this).removeClass('selected');
+                $(this).parent().parent().removeClass('selected');
                 removeImageFromArray(id);
             }
             
@@ -134,10 +135,11 @@ Cards = (function() {
                 Cards.imageCount += 1;
                 Cards.totalCount += 1;
 
-                $(this).addClass('selected');
+                $(this).parent().parent().addClass('selected');
                 addImageToArray(id);
             }
         }
+        $(window).trigger('resize');
     }
     var addImageToArray = function(id) {
         var image = data.images[id];
@@ -244,20 +246,15 @@ Cards = (function() {
 
 
     var toggleFeatured = function() {
-        var id = $(this).parent().parent().data('id');
+        var id = $(this).parent().parent().parent().data('id');
+        console.log(Cards.featured, id);
 
-        if (!Cards.featured) {
+        $('.featured').removeClass('active');
+        if (parseInt(Cards.featured) == id) {
+            Cards.featured = null;
+        } else {
             $(this).addClass('active');
             Cards.featured = id;
-        } else {
-            if (Cards.featured == id) {
-                $(this).removeClass('active');
-                Cards.featured = null;
-            } else {
-                $('.featured').removeClass('active');
-                $(this).addClass('active');
-                Cards.featured = id;
-            }
         }
     }
     

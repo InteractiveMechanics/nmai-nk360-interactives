@@ -91,6 +91,19 @@
         margin-bottom: 10px;
         font-style: italic;
     }
+    .paper-preview-article {
+        display: table;
+
+        > * {
+            display: table-cell;
+            width: 32%;
+            margin-left: 1%
+        }
+        
+        p:empty {
+            display: none;
+        }
+    }
     .close-preview {
         width: 45px;
         height: 45px;

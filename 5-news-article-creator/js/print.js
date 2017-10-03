@@ -59,10 +59,10 @@ Print = (function() {
             if (val.caption){
                 html += val.caption + ' ';
             }
-            html += '<em>' + val.credit + '</em></figcaption>';
+            html += '<em>' + val.caption + '</em> ' + val.credit + '</figcaption>';
             html += '</figure>';
 
-            $('.paper-preview-article').append(html);
+            $('.paper-preview-article').prepend(html);
         });
         $.each(quotes, function(key, val){
             var html = '';
@@ -114,8 +114,10 @@ Print = (function() {
         if (splitStr.length > 1) {
             var newStr = '';
             $.each(splitStr, function( index, value ) {
-                newStr += value;
-                newStr += '<br />'
+                if (value.length > 1){
+                    newStr += value;
+                    newStr += '</p><p>';
+                }
             });
             return newStr;
         } else {
@@ -148,12 +150,14 @@ Print = (function() {
         $('.paper-preview-header').html(html);
     }
     var buildHeadline = function(headline) {
-        var length = headline.length;
-
-        if (length <= 26) {
-            $('.paper-preview-headline').addClass('large').text(headline);
-        } else {
-            $('.paper-preview-headline').text(headline);
+        if (headline){
+            var length = headline.length;
+    
+            if (length <= 26) {
+                $('.paper-preview-headline').addClass('large').text(headline);
+            } else {
+                $('.paper-preview-headline').text(headline);
+            }
         }
     }
 

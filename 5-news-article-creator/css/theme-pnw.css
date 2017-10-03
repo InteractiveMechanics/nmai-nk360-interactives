@@ -79,7 +79,7 @@ h4 {
 
 #step-by-step-cards .step .step-container {
   background-image: url("../shared/images/pnw/text-card-pnw@2x.png");
-  background-size: 75%;
+  background-size: 400px;
   background-position: top center;
   background-repeat: no-repeat; }
   #step-by-step-cards .step .step-container h1 {
@@ -97,5 +97,10 @@ h4 {
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #006986; }
+
+.form-control:hover {
+  border: 2px solid #006986; }
+.form-control:focus, .form-control:active {
+  border: 2px solid #006986; }
 
 /*# sourceMappingURL=theme-pnw.css.map */
