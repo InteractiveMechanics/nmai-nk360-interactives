@@ -18,205 +18,15 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
     <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
+    <link rel="stylesheet" href="./css/print.css" />
 
     <style type="text/css">
-        body {
-            background: #bbb;
+        .marker-in-text.pin-hidden {
+          width: 0 !important;
+          height: 0 !important;
         }
-
-        .annotation-screen {
-            width: 90%;
-            margin: 50px auto;
-        }
-
-        .slider {
-
-        }
-
-        .slick-slide {
-          margin: 0px 20px;
-        }
-
-        .slick-slide img {
-          width: 100%;
-        }
-
-        .slick-prev:before,
-        .slick-next:before {
-            color: black;
-        }
-
-        .slick-dots {
-            z-index: 50;
-            bottom: -35px;
-        }
-        
-        .slick-dots li button:before {
-            font-size: 15px;
-            color: #ffffff;
-            opacity: 0.5;
-        }
-
-        .slick-dots li button.slick-active:before {
-            pacity: 1.0;
-        }
-
-        .annotation-screen {
-          height: 75vh;
-        }
-
-        .annotation-item {
-          height: 75vh;
-          background: #ddd;
-          width: 100%;
-        }
-
-        .annotation-item .top {
-          height: 30vh;
-        }
-
-        .annotation-item .top .photo img{
-          height: 30vh;
-        }
-
-        .annotation-item .bottom {
-          padding: 20px 8% 0;
-          height: 45vh;
-        }
-
-        .annotation-item .bottom .button {
-          position: absolute;
-          bottom: 25px;
-          margin: 0 auto;
-          width: 250px;
-          left: 0;
-          right: 0;
-        }
-
-        .annotation-item .bottom .button a {
-          width: 250px;
-        }
-
-        .annotation-item .col-no-padding {
-          padding: 0;
-        }
-
-        .pin-image {
-          display: inline-block;
-          vertical-align: top;
-          padding-top: 7px;
-        }
-
-        .pin-text {
-          display: inline-block;
-          margin-left: 15px;
-          margin-bottom: 20px;
-        }
-
-        .pin-text p {
-          margin:0;
-        }
-
-        .dotted {
-          font-weight: bold;
-        }
-
-        .original-text {
-            background: #eee;
-            padding: 50px;
-            height: 80vh;
-            overflow-y: auto;
-        }
-
-        .original-text .photo {
-            max-height: 350px; 
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: relative;
-            
-        }
-
-        /*Test Code **/
-        .annotation--main,
-    .annotation--responsibilities {
-      height: 40px;
-      margin: 10px;
-    }
-
-    .js--pin {
-      top: 0;
-      left: 0;
-      display: block;
-      width: 40px;
-    }
-
-    .pin__image {
-      position: relative;
-      z-index: 2;
-    }
-
-    .pin__text {    
-      padding: 10px;
-      background: #ddd;
-      border: thin solid #ccc;
-      border-radius: 3px;
-      position: absolute;
-      top: 0;
-      left: -7em;
-      width: 10em;
-      transform: translateY(-4.5em);
-      display: none;
-    }
-
-    .pin__text textarea {
-      border-radius: 3px;
-      border: thin solid #ccc;
-      width: 100%;
-      padding: 7px;
-    }
-
-    button {
-      padding: 7px;
-      font-size: 12px;
-      background: tomato;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    .photo .caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: 12px;
-      color: white;
-      background: rgba(0,0,0,.25);
-      padding-top: 20px;
-    }
-
-    .photo .caption  p {
-      text-align: center;
-    }
-
-    #lost-progress {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  color: white;
-  z-index: 100; }
-  #lost-progress .instructions-container {
-    z-index: 101;
-    position: relative;
-    text-align: center;
-    padding: 100px 20px; }
-    @media screen and (max-width: 767px) {
-      #lost-progress .instructions-container {
-        padding: 30px; } }
     </style>
 </head>
 <body>
@@ -274,8 +84,9 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
+            <a class="icon icon-home" title="Back to Home Screen"></a>
+            
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -289,20 +100,67 @@
         </ul>
     </footer>
 
+
+    <!--intro slider-->
+    <div class="intro-slider-wrapper hidden">
+    
+      <div class="card-wrapper">
+        
+        <div class="card card-before">
+          <p></p>
+        </div>
+         
+        <div class="card card-after">
+          <p></p>
+        </div>
+          
+        <div class="card slider-card">
+
+          <div class="close-icon faded">
+            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/55049-200.png" width="70">  
+          </div>
+
+          <section class="intro-slider">
+            
+            <div>
+              <p class="text-center">The Return Upstream</p>
+              <h2 class="text-center">Privileges and Responsibilities</h2>
+
+              <p class="image-credit">
+                Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
+              </p>
+
+              <p>
+                Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
+              </p>
+
+              <p class="text-center">
+                <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
+              </p>
+            </div>
+            
+          </section>
+        </div>
+
+      </div>
+
+      <div class="overlay"></div>
+    </div>
+
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
             <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
             <h1>Resource Annotator Instructions</h1>
             <div class="row justify-content-md-center">
-                <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Select your resource" title="Select your resource" />
+                <div class="col-6">
+                    <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
                     <h2>Select your resource</h2>
                     <p>
                         Choose a historical text or image to annotate from the collection of source materials provided.
                     </p>
                 </div>
-                <div class="col">
-                    <img src="http://via.placeholder.com/400x250" alt="Add your annotations" title="Add your annotations" />
+                <div class="col-6">
+                    <img src="./assets/instructions-02@2x.png" width="75%" alt="Add your annotations" title="Add your annotations" />
                     <h2>Add your annotations</h2>
                     <p>
                         Drag and drop theme icons onto the material where you wish to write your annotation. The different icons represent different themes that relate to the source materials
@@ -317,16 +175,18 @@
     <div id="lost-progress" class="fade hidden">
         <div class="container instructions-container">
             <h2 class="all-caps letter-spacing-1">
-              Are you sure you want to <br /> choose another resource? 
+              Are you sure you want to choose another resource? 
             </h2>
 
             <h2 class="all-caps letter-spacing-1" style="margin:20px 0">
               Your work will not be saved.
             </h2>
 
-            <a class="btn btn-success btn-lg" onclick="reloadPage()" title="Choose another resource">Choose another resource</a>
-            <br /><br />
-            <a class="btn btn-success btn-lg" style="border:none;" onclick="hideLostProgress()" id="close-porgess" title="Cancel">Cancel</a>
+            <div class="text-center progress-options">
+              <a class="btn btn-success btn-lg" onclick="reloadPage()" title="Choose another resource">Choose another resource</a>
+              <a class="btn btn-success btn-lg" title="Review your notes">Review your notes</a>
+              <a class="btn btn-success btn-lg" onclick="hideLostProgress()" id="close-porgess" title="Cancel">Cancel</a>
+            </div>
         </div>
         <div class="overlay"></div>
     </div>
@@ -351,156 +211,94 @@
             </h1>
         </header>
 
+        <section class="print-view">
+
+          <div class="row">
+
+            <div class="col-12">
+
+              <div class="">
+
+                <h3>Caption</h3>
+                <p class="caption-text">
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                </p>
+
+                <h3>Discussion Questions</h3>
+                <p class="discussion-text">
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                </p>
+              </div>
+
+              <div class="photo-container"></div>
+              <div class="print-info" style="overflow:visible;"></div>
+
+
+              <div class="" style="overflow:visible;">
+
+                <h3 class="yellow-underline">
+                  Paraphrased Text
+                </h3>
+
+                <p class="original-text-info">
+                  Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br> However, these two nations understood the bundle's import, which included a pipe.
+
+                  <br><br> However, these two nations understood the bundle's import, which included a pipe.
+                </p>
+
+
+                <p class="original-text-info">
+                   After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br> However, these two nations understood the bundle's import, which included a pipe.
+
+                  <br><br> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
+                </p>
+              </div>
+              <div class="" style="overflow:visible;">
+
+                  <h3 class="yellow-underline">
+                    Themes
+                  </h3>
+
+                  <ul class="theme-print-view">
+
+                  </ul>
+
+
+              </div>
+
+
+              <div class="print-notes" style="overflow:visible;">
+                  <h3 class="yellow-underline">
+                    Notes
+                  </h3>
+                  <ul>
+
+                  </ul>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </section>
+
+
         <section class="annotation-screen">
           
           <!-- Slider starts here -->
 
-            <div class="annotation-slider-screen">
+            <div class="annotation-slider-screen show">
 
-              <section class="regular slider">
-                <div>
-                  
-                  <div class="annotation-item">
-                    <div class="col-12 col-no-padding">
-                      
-                      <div class="top">
-                        <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                       
-                        <div class="body">
-                            <p>
-                                In this passage from <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt</em>, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.
-                            </p>
-                        </div>
-
-                        <div class="button">
-
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Annotate this material
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    </div>
-                  </div>
-
-
-                </div>
-
-                <div>
-                  
-                  <div class="annotation-item">
-                    <div class="col-12 col-no-padding">
-                      
-                      <div class="top">
-                        <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                       
-                        <div class="body">
-                            <p>
-                               The late Joseph Medicine Crow was his tribe's historian of distinction. Mr. Medicine Crow performe the four deeds necessary to become a Crow Chief during World Wat II: He captured a well-guarded horse; took an enemy's weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.
-                            </p>
-                        </div>
-
-                        <div class="button">
-
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Annotate this material
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    </div>
-                  </div>
-
-
-                </div>
-
-                <div>
-                  
-                  <div class="annotation-item">
-                    <div class="col-12 col-no-padding">
-                      
-                      <div class="top">
-                        <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                       
-                        <div class="body">
-                            <p>
-                               Secretary Salazar of the U.S. Department of the Interior joined Crow Tribe (Apsáalooke Nation) Chairman Cedric Black Eagle and Montana Governor Brian Schweitzer for the signing of a Crow Tribe-Montana Water Rights Compact. The compact seeks to resolve more than three decades of controversy, ensure safe drinking water for the resercation, and provide for the regabilitation of the Crow Irrigation Project.
-                            </p>
-                        </div>
-
-                        <div class="button">
-
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Annotate this material
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    </div>
-                  </div>
-
-
-                </div>
-
-                <div>
-                  
-                  <div class="annotation-item">
-                    <div class="col-12 col-no-padding">
-                      
-                      <div class="top">
-                        <div class="photo">
-                            <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                       
-                        <div class="body">
-                            <p>
-                               The compact seeks to resolve more than three decades of controversy, ensure safe drinking water for the resercation, and provide for the regabilitation of the Crow Irrigation Project.
-                            </p>
-                        </div>
-
-                        <div class="button">
-
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Annotate this material
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    </div>
-                  </div>
-
-
-                </div>
+              <section id="annotation-slider" class="regular slider">
+                
 
               </section>
 
@@ -516,133 +314,68 @@
 
               <div class="row">
 
-                <div class="col-7">
-                  
-                  <div class="original-text">
+                <div class="col-4">
 
-                    <div style="height: auto; position: relative;">
-                        <img src="http://via.placeholder.com/1280x720" class="img-fluid" />
-                        <div data-gallery data-gallery-image="http://via.placeholder.com/1280x720" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
-                    </div>
+                  <div id="item-left" class="original-text-detail">
 
-                    <div class="info">
+                  </div>
 
-                      <p class="copyright">
-                          Raymond J. DeMallie, ed., <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt </em> (Lincoln: University of Nebraska Press, 1984), 83.
-                      </p>
+                  <div class="text-center print-button">
 
-                      <h3>
-                        Original Text
-                      </h3>
-
-                      <p class="original-text-info">
-                        "Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                        <br /> However, these two nations understood the bundle's import, which included a pipe.
-                      </p>
-
-                    </div>
+                    <a class="btn btn-success btn-lg" id="print-notes" title="Print your notes">Print Your Notes</a>
 
                   </div>
 
                 </div>
 
-                <div class="col-5">
+                <div class="col-8">
+                  
+                  <div class="original-text">
 
-                  <div class="original-text-detail">
-                    
-                    <div class="detail">
+                    <div class="content-height scrollbar-design">
 
-                      <div class="row">
-                        <div class="col-12">
-                          <p class="all-caps"><strong>Caption:</strong></p>
-                          <p>
-                            In this passage from The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.
-                          </p>
-                        </div>
+                      <h3>
+                        <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
+                      </h3> 
+
+                      <div class="photo-container">
+                          <img src="http://via.placeholder.com/640x320" class="img-fluid" />
+                          <div data-gallery data-gallery-image="http://via.placeholder.com/1280x480" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
                       </div>
 
-                    </div>
+                      <div class="info">
 
-                    <div class="detail">
+                        <p class="copyright">
+                            Raymond J. DeMallie, ed., <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt </em> (Lincoln: University of Nebraska Press, 1984), 83.
+                        </p>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <p class="all-caps"><strong>Discussion Questions:</strong></p>
-                          <p>
-                            In this passage from The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.
-                          </p>
-                        </div>
+                        <h3 class="yellow-underline">
+                          Original Text
+                        </h3>
+
+                        <p class="original-text-info">
+                          Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
+
+                          <br /><br /> However, these two nations understood the bundle's import, which included a pipe.
+                        </p>
+
+
+                        <p class="original-text-info">
+                           After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
+
+                          <br /><br /> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
+                        </p>
+
                       </div>
 
-                    </div>
+                      <div id="paraphrased">
+                        <h3 class="yellow-underline">
+                          Paraphrased Text
+                        </h3>
 
-                    <div class="detail">
-
-                      <div class="row">
-                        <div class="col-12">
-                          <p class="all-caps"><strong>Annotation Markers:</strong></p>
-                        </div>
-                      </div>
-
-                      <div class="row">
-
-                        <div class="col-6">
-                          <div class="annotation--main">
-                            </div>
-                          <div class="annotation-pin" style="position: absolute; top: 0; left: 40px;">
-                            <div class="pin-text">
-                              <p class="dotted" data-toggle="tooltip" title="Privileges are special benefits.">Privileges</p>
-                              <p><span class="js--pin-available">5</span> Available</p>
-                            </div>
-                          </div>
-                        </div>  
-
-                        <!--<div class="col-6">
-                          <div class="annotation-pin">
-
-                            <div class="pin-image">
-                              <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/pin-icon.png" width="40" />
-                            </div>
-
-                            <div class="pin-text">
-                              <p class="dotted">Privileges</p>
-                              <p>5 Available</p>
-                            </div>
-
-                          </div>
-                        </div>-->
-
-                        <div class="col-6">
-                          <div class="annotation-pin">
-                            <div class="pin-image">
-                              <img src="https://maxcdn.icons8.com/office/PNG/512/Programming/pin_80-512.png" width="40" />
-                            </div>
-
-                            <div class="pin-text">
-                              <p class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties/">
-                                Responsibilities
-                              </p>
-                              <p>3 Available</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <div class="detail">
-
-                      <div class="row">
-                        <div class="col-12">
-                          <p class="all-caps"><strong>External Links to Additional Content:</strong></p>
-                          <a href="javascript:void(0);" class="btn btn-success">
-                                Audio
-                            </a>
-                            <a href="javascript:void(0);" class="btn btn-success">
-                                Video
-                            </a>
-                        </div>
+                        <p class="original-text-info">
+                          After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
+                        </p>
                       </div>
 
                     </div>
@@ -662,6 +395,132 @@
         </section>
 
     </main>
+
+    <script id="itemLeftTemplate" type="text/x-jsrender">
+        
+        <div class="original-text-right">
+          <div class="row">
+
+            <div class="col-12">
+              <div class="outer-top">
+               <div class="top scrollbar-design">
+
+                    {{if caption}}
+                      <h3 >Caption</h3>
+                      <p>
+                        {{:caption}}
+                      </p>
+                    {{/if}}
+
+                    {{if question_text}}
+                      <h3>Discussion Questions</h3>
+                      <p>
+                        {{:question_text}}
+                      </p>
+                    {{/if}}
+
+
+                    {{if audio_url && video_url}}
+
+                      <h3>External Links</h3>
+                      <h3>
+                        {{if audio_url}}
+                        <a href="{{:audio_url}}" class="link-color">
+                          Listen to Passage
+                        </a>
+                        {{/if}}
+
+                        {{if video_url}}
+                          <a href="{{:video_url}}" class="link-color">
+                            Watch the Video
+                          </a>
+                        {{/if}}
+                      </h3>
+
+                    {{/if}}
+               </div>
+             </div>
+
+               <div class="bottom markers-container">
+                  <h3>
+                    Drag and drop to add annotation
+                  </h3>
+
+                  <ul class="list-inline" style="margin-bottom:0;">
+
+                      {{for themes}}
+
+                        <li id="{{:title}}" class="list-inline-item">
+                          <div class="marker">
+                            <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
+                          </div>
+                          <div class="theme">
+                            {{:title}}
+                          </div>
+                          <div class="markers-remaining"></div>
+                        </li>
+
+                      {{/for}}
+
+                    </ul>
+               </div>
+            </div>
+
+          </div>
+        </div>
+    </script>
+
+    <script id="printListItems" type="text/x-jsrender">
+
+      {{for themes}}
+
+        <li >
+          <div class="marker">
+            <img src="{{:marker_image}}"/>
+          </div>
+          <div class="theme">
+            {{:title}}
+          </div>
+        </li>
+
+      {{/for}}
+    </script>
+
+    <script id="sliderTemplate" type="text/x-jsrender">
+      <div>    
+        <div class="annotation-item">
+          <div class="col-12 col-no-padding">
+            
+            <div class="top">
+              <div class="photo">
+                  <img src="{{:image_url}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
+              </div>
+          </div>
+
+          <div class="bottom">
+             
+              <div class="body">
+                  <p>
+                     {{:body}}
+                  </p>
+              </div>
+
+              <div class="button">
+
+                  <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
+                      Annotate this material
+                  </a>
+
+              </div>
+
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+  </script>
+
 
 
     
@@ -689,162 +548,17 @@
     <script src="./shared/code/lightbox/lightbox.js"></script>
     <script src="./shared/code/upperleftmenu/menu.js"></script>
 
+    <!-- Third Party Code -->
+    <script src="./js/findAndReplaceDOMText.js"></script>
 
     <!-- Include project specific code/files -->
+    <script src="./js/annotator.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
 
-    <script type="text/javascript">
-        $(".regular").slick({
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          });
+<script type="text/javascript">
+  
 
-        $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
-        $('body').on('click tap', '.icon-home', showLostProgress);
-        //$( ".pin-image" ).draggable({containment: ".original-text-info", scroll:true});
-
-        function showLostProgress() {
-          $('#lost-progress').removeClass('hidden').addClass('show');
-        }
-
-        function hideLostProgress() {
-          $('#lost-progress').removeClass('show').addClass('hidden');
-        }
-
-        function reloadPage() {
-          location.reload();
-        }
-
-        function openNotesScreen() {
-            //var annotationID = $(this).data('annotationid');
-            $('.annotation-slider-screen').addClass('animated fadeOut');
-            $('.annotation-slider-screen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                  $('.annotation-slider-screen').addClass('hidden');
-                  $('.annotation-notes-screen').removeClass('hidden').addClass('show');  
-            });
-        }
-
-
-        $(document).ready(function() {
-            
-
-            $('[data-toggle="tooltip"]').tooltip()
-
-        });
-
-    </script>
-
-
-<!--div id="lightgallery" class="photo">
-                      <a href="http://via.placeholder.com/1280x720" data-sub-html=".caption">
-                          <img src="http://via.placeholder.com/1280x720" class="img-fluid">
-
-                          <div class="caption">
-                            <p>Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx</p>
-                          </div>
-                      </a>
-                    </div>-->
-    <script type="text/javascript">
-    var pin = '<div class="js--pin">' +
-      '<div class="pin__image">' +
-      '<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/pin-icon.png" width="40" />' +
-      '</div>' +
-      '<div class="pin__text">' +
-      '<textarea placeholder="Lorem"></textarea>' +
-      '<button class="js--delete-pin">Delete</button>' +
-      '</div>' +
-      '</div>'
-    var MAX = 5;
-    var counter = MAX;
-
-    $('body').on('click', '.js--pin .pin__image', function() {
-      var $pinText = $(this).parents('.js--pin').find('.pin__text')
-      if ($pinText.is(':hidden')) {
-        $('.pin__text').slideUp()
-      }
-      $pinText.stop().slideToggle()
-    });
-    
-    $('body').on('click', '.js--delete-pin', function() {
-      $(this).parents('.js--pin').remove();
-      addNewPin();
-      counter++;
-      updateCounter();
-    })
-
-    function updateCounter() {
-      $('.js--pin-available').text(counter);
-    }
-
-    function addNewPin($place) {
-      $place = $place || $('.annotation--main')
-
-      var $pin = $(pin)
-      .appendTo($place)
-      .draggable({ 
-        containment: ".original-text",
-        scroll: true,
-        stop: function(e) {
-          var $pin = $(e.target)
-          var $pinText = $pin.find('.pin__text')
-
-          $('.pin__text').not($pinText).slideUp()
-          $pinText.stop().slideDown();
-
-          if (!$pin.data('placed')) {
-            counter--;
-            updateCounter()
-          }
-
-          $pin.data('placed', true)
-        }
-      })
-      $pin.css({
-        'top': $pin.position().top + 'px',
-        'left': $pin.position().left + 'px',
-        'position': 'absolute'
-      })
-    }
-
-    $(function() {
-      const MAX = 5
-      for (var i = 1; i <= MAX; i++) {
-        addNewPin()
-      }
-
-      addNewPin($('.annotation--responsibilities'))
-    })
-
-    $('body').on('input', '.js--pin textarea', function() {
-      $(this).parents('.js--pin').attr('data-text', $(this).val().trim())
-    })
-  </script>
+</script>
 </body>
 </html>
