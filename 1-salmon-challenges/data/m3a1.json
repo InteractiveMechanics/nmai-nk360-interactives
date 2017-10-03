@@ -54,7 +54,7 @@
 		}
 	],
 	"forced": [{
-			"trigger_location": 2000,
+			"trigger_location": 500,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered an Obstacle",
@@ -75,20 +75,20 @@
 					"heading": "How do warmer water temperatures affect you?",
 					"quiz_options": [{
 							"options": "Salmon stress",
-							"result": "Correct. Salmon have to swim further to look for cooler water which tires them out.",
+							"result": "Correct. Salmon have to swim further to look for cooler water which tires them out. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Increased mortality",
-							"result": "Correct. Warmer water leads to an increase in diseases and death in salmon.",
+							"result": "Correct. Warmer water leads to an increase in diseases and death in salmon. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Lost ability to spawn",
-							"result": "Incorrect. Warmer water temperatures don’t make it impossible for salmon to spawn; they just make it harder.",
-							"lose_fish": false,
+							"result": "Incorrect. Warmer water temperatures don’t make it impossible for salmon to spawn; they just make it harder. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
@@ -96,14 +96,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 1700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve entered a healthy habitat",
 					"title": "Inlet/Estuary",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "By BlueCanoe (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons",
+					"credit": "By BlueCanoe (Own work) [CC BY-SA 3.0 <a target='_blank' href='http://creativecommons.org/licenses/by-sa/3.0'>Creative Commons</a> or <a target='_blank' href='http://www.gnu.org/copyleft/fdl.html'>GFDL</a>], via Wikimedia Commons",
 					"caption": "",
 					"body": "You’ve just reached an estuary. This is an area of water where the saltwater of the ocean mingles with the freshwater of a river.",
 					"result": "",
@@ -117,35 +117,35 @@
 					"heading": "Why do you like reaching the estuary?",
 					"quiz_options": [{
 							"options": "Time to spawn",
-							"result": "Incorrect. No, the estuary is not where salmon spawn.",
-							"lose_fish": false,
+							"result": "Incorrect. No, the estuary is not where salmon spawn. Lose 1 fish. ",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Time to rest and eat",
-							"result": "Correct. This is nutrient-rich water with lots of salmon food and places to rest.",
-							"lose_fish": false,
+							"result": "Correct. This is nutrient-rich water with lots of salmon food and places to rest. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Transition - salt to freshwater",
-							"result": "Correct. This is a good transition zone where you can adapt from saltwater to freshwater.",
+							"result": "Correct. This is a good transition zone where you can adapt from saltwater to freshwater. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						}
 					]
 				}
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 3100,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve encountered an obstacle",
 					"title": "Overfishing",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "https://creativecommons.org/licenses/by/2.0/</br>https://creativecommons.org/licenses/by/2.0/legalcode</br>https://www.flickr.com/photos/taylar/10752577115/in/photolist-hofaXR-hobBcZ-hoaLyB",
+					"credit": "<a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/taylar/10752577115/in/photolist-hofaXR-hobBcZ-hoaLyB'>Source</a>",
 					"caption": "",
 					"body": "Many people love to eat wild salmon and that means there is a lot of commercial fishing. That’s bad news for you because instead of making it to your spawning ground you will become somebody’s meal.",
 					"result": "",
@@ -159,35 +159,35 @@
 					"heading": "How can you avoid being caught by the commercial fishers?",
 					"quiz_options": [{
 							"options": "Stop swimming",
-							"result": "Incorrect. You’re a salmon; you can’t stop swimming and wait for the fishing fleet to pass.",
-							"lose_fish": false,
+							"result": "Incorrect. You’re a salmon; you can’t stop swimming and wait for the fishing fleet to pass. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Hide",
-							"result": "Incorrect. Hiding is not a good option. The nets are hard to see and avoid.",
-							"lose_fish": false,
+							"result": "Incorrect. Hiding is not a good option. The nets are hard to see and avoid. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Keep swimming",
-							"result": "Correct. Just keep swimming and hope that you avoid the fishing nets.",
+							"result": "Correct. Just keep swimming and hope that you avoid the fishing nets. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						}
 					]
 				}
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 4300,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve entered a healthy habitat",
 					"title": "Freshwater",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Photograph by Bureau of Land Management, August 2015</br>https://creativecommons.org/licenses/by/2.0/ </br>https://creativecommons.org/licenses/by/2.0/legalcode </br>https://www.flickr.com/photos/blmoregon/32123540133/in/album-72157629309844181/",
+					"credit": "Photograph by Bureau of Land Management, August 2015 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/blmoregon/32123540133/in/album-72157629309844181/'>Source</a>",
 					"caption": "",
 					"body": "Salmon are born in the fresh cool water of streams and rivers. They migrate to the saltwater of the ocean and live their as adults. Eventually, they return to the same freshwaters they were born in to complete their life cycle and spawn.",
 					"result": "",
@@ -201,19 +201,19 @@
 					"heading": "Why do you like migrating into the freshwater of a river?",
 					"quiz_options": [{
 							"options": "Closer to spawning grounds",
-							"result": "Correct. You are getting closer to the waters where you were born and the area where you will spawn",
+							"result": "Correct. You are getting closer to the waters where you were born and the area where you will spawn. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Time to spawn now",
-							"result": "Incorrect. You’re not at the location of your spawning grounds yet, but you’re getting closer.",
-							"lose_fish": false,
+							"result": "Incorrect. You’re not at the location of your spawning grounds yet, but you’re getting closer. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Safer and easier now",
-							"result": "Incorrect. You still have a tiring and dangerous journey ahead of you in the river.",
+							"result": "Incorrect. You still have a tiring and dangerous journey ahead of you in the river. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						}
@@ -222,14 +222,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 5050,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve encountered an obstacle",
 					"title": "Poor habitat",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Photograph by KOMUNews, June 2010</br>https://creativecommons.org/licenses/by/2.0/legalcode</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/komunews/4683128554/in/album-72157624232753326/",
+					"credit": "Photograph by KOMUNews, June 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/komunews/4683128554/in/album-72157624232753326/'>Source</a>",
 					"caption": "",
 					"body": "You’ve reached an area where the river you’re swimming in passes through a city. Although cities are important places for human life, cities generate a lot of hazards that have an impact on the wellbeing of salmon.",
 					"result": "",
@@ -243,19 +243,19 @@
 					"heading": "Which of the following city hazards must you survive in order to keep going?",
 					"quiz_options": [{
 							"options": "Sewage",
-							"result": "Correct. Some sewage treatment plants deposit human waste materials in rivers.",
+							"result": "Correct. Some sewage treatment plants deposit human waste materials in rivers. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Storm drain runoff",
-							"result": "Correct. City storm drains carry pollutants like motor oils and trash into rivers.",
-							"lose_fish": false,
+							"result": "Correct. City storm drains carry pollutants like motor oils and trash into rivers. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Predatory sharks",
-							"result": "Incorrect. Some sharks are saltwater predators, but they don’t follow salmon upriver.",
+							"result": "Incorrect. Some sharks are saltwater predators, but they don’t follow salmon upriver. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						}
@@ -264,14 +264,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 5900,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You've encountered an obstacle",
 					"title": "Overfishing",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Salmon Fishing, Stave River, BC October 2010</br>https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://www.flickr.com/photos/roaming-the-planet/5091952337/in/album-72157624407953315/",
+					"credit": "Salmon Fishing, Stave River, BC October 2010 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/roaming-the-planet/5091952337/in/album-72157624407953315/'>Source</a>",
 					"caption": "",
 					"body": "You’ve just reached an area of the river where sport fishers like to try and catch salmon. Sport fishers don’t catch as many fish as commercial fishers do but when there are many fishers it has an impact on the salmon population.",
 					"result": "",
@@ -285,35 +285,35 @@
 					"heading": "How will you get by the sport fishers?",
 					"quiz_options": [{
 							"options": "Take the bait",
-							"result": "Incorrect. Taking the bait is a bad idea. There is a good chance you will be hooked.",
-							"lose_fish": false,
+							"result": "Incorrect. Taking the bait is a bad idea. There is a good chance you will be hooked. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Swim in the middle",
-							"result": "Incorrect. The middle is no safer than other parts of the river",
+							"result": "Incorrect. The middle is no safer than other parts of the river. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Avoid the bait",
-							"result": "Correct. You swim by lots of baited hooks, but you don’t go for them. You made it through.",
+							"result": "Correct. You swim by lots of baited hooks, but you don’t go for them. You made it through. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						}
 					]
 				}
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 6600,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You've encountered an obstacle",
 					"title": "Temperature Increase",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Photograph by NPS/USBR/USGS Elwha Restoration Project Imagery, 2013</br>https://www.flickr.com/photos/usgs_elwhacams/8572465353/</br>https://creativecommons.org/licenses/by-sa/2.0/</br>https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode",
+					"credit": "Photograph by NPS/USBR/USGS Elwha Restoration Project Imagery, 2013 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/>License</a>, <a target='_blank' href='https://www.flickr.com/photos/usgs_elwhacams/8572465353/'>Source</a>",
 					"caption": "",
 					"body": "Here you are on a nice cool river and you feel the water getting warmer. That’s not supposed to happen. Salmon like cool clear water on their spawning journeys.",
 					"result": "",
@@ -327,20 +327,20 @@
 					"heading": "What could be causing the river water temperature to rise?",
 					"quiz_options": [{
 							"options": "Damaged habitat",
-							"result": "Correct. Land was cleared to make a farm, including all the trees and shrubs that shaded the river.",
+							"result": "Correct. Land was cleared to make a farm, including all the trees and shrubs that shaded the river. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Hotter sun",
-							"result": "Incorrect. The sun is not hotter on this part of the river. It’s just that the shade is gone.",
+							"result": "Incorrect. The sun is not hotter on this part of the river. It’s just that the land was cleared to make a farm and shade is gone. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Higher elevation",
-							"result": "Incorrect. A higher elevation does not mean warmer water temperatures. In fact, it’s usually the opposite.",
-							"lose_fish": false,
+							"result": "Incorrect. A higher elevation does not mean warmer water temperatures. In fact, it’s usually the opposite. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
@@ -348,7 +348,7 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 7200,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve entered a healthy habitat",
@@ -369,20 +369,20 @@
 					"heading": "What are the conditions that enable you to rest in this part of the river?",
 					"quiz_options": [{
 							"options": "Flat terrain",
-							"result": "Incorrect. Water moves slower on flat terrain but its not a good resting area unless other conditions exist.",
+							"result": "Incorrect. Water moves slower on flat terrain but its not a good resting area unless other conditions exist. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Deep calm shaded pools",
-							"result": "Correct. Bushes and trees along the river bank provide shade and keep deep pools cool",
+							"result": "Correct. Bushes and trees along the river bank provide shade and keep deep pools cool. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Official rest stop",
-							"result": "Incorrect. There is no such thing as an official salmon rest stop.",
-							"lose_fish": false,
+							"result": "Incorrect. There is no such thing as an official salmon rest stop. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
@@ -390,7 +390,7 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 7600,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You've encountered an obstacle",
@@ -411,19 +411,19 @@
 					"heading": "How will you get past the dam?",
 					"quiz_options": [{
 							"options": "Find another way",
-							"result": "Incorrect. Unfortunately, there is no other waterway around a dam.",
-							"lose_fish": false,
+							"result": "Incorrect. Unfortunately, there is no other waterway around a dam. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Use a fish ladder",
-							"result": "Correct. Fish ladders have been installed at many dams. They help some salmon continue their migration.",
+							"result": "Correct. Fish ladders have been installed at many dams. They help some salmon continue their migration. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Spawn now",
-							"result": "Incorrect. Spawning now is not an option. You need to get upriver to the area where you were born.",
+							"result": "Incorrect. Spawning now is not an option. You need to get upriver to the area where you were born. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						}
@@ -432,14 +432,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 8000,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You have reached a man-made solution",
 					"title": "Fish Ladder",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Photograph by Janet Lindenmuth, July 2008</br> https://creativecommons.org/licenses/by-nc/2.0/</br>https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://www.flickr.com/photos/j3net/2681180722/",
+					"credit": "Photograph by Janet Lindenmuth, July 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-nc/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/j3net/2681180722/'>Source</a>",
 					"caption": "",
 					"body": "Fish ladders are constructed to help migrating fish get past dams. They are step-like structures with water cascading down them. This allows the fish to jump and swim from step to step, up and over the dam where they reach the reservoir on the other side.",
 					"result": "",
@@ -453,35 +453,35 @@
 					"heading": "What is your biggest challenge related to using a fish ladder?",
 					"quiz_options": [{
 							"options": "Jumping/swimming to the top",
-							"result": "Incorrect. Jumping and swimming to the top is tiring but it’s not the biggest challenge.",
+							"result": "Incorrect. Jumping and swimming to the top is tiring but it’s not the biggest challenge. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Low water levels",
-							"result": "Incorrect. Low water levels can be a make it difficult but it’s not the biggest challenge.",
-							"lose_fish": false,
+							"result": "Incorrect. Low water levels can be a make it difficult but it’s not the biggest challenge. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Finding the fish ladder",
-							"result": "Correct. Just finding the ladder can be a major challenge. Many fish don’t.",
+							"result": "Correct. Just finding the ladder can be a major challenge. Many fish don’t. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						}
 					]
 				}
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 8400,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You've encountered an obstacle",
 					"title": "Reservoir",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Grand Coluee Dam and Franklin D. Roosevelt Lake (Grant and Okanogan Counties, Washington), 2014</br> https://creativecommons.org/licenses/by-nc/2.0/</br> https://creativecommons.org/licenses/by-nc/2.0/legalcode</br>https://www.flickr.com/photos/21953562@N07/17183649978/",
+					"credit": "Grand Coluee Dam and Franklin D. Roosevelt Lake (Grant and Okanogan Counties, Washington), 2014 <a target='_blank' href='https://creativecommons.org/licenses/by-nc/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/21953562@N07/17183649978/'>Source</a>",
 					"caption": "",
 					"body": "You’ve reached a large body of water behind the dam. It is a lake (reservoir) that is created when a river is dammed. The water is deep and has little or no current. Reservoirs create additional problems for migrating salmon. Eventually, if they keep swimming, salmon will reach the river again.",
 					"result": "",
@@ -495,20 +495,20 @@
 					"heading": "What is your biggest challenge in making your way out of the reservoir?",
 					"quiz_options": [{
 							"options": "Swimming in the right direction",
-							"result": "Correct. The size of a reservoir and the lack of the usual river current make it difficult for salmon to find their way out.",
+							"result": "Correct. The size of a reservoir and the lack of the usual river current make it difficult for salmon to find their way out. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Thinking this is the spawning ground",
-							"result": "Incorrect. Salmon aren’t fooled into thinking a reservoir is their spawning ground.",
+							"result": "Incorrect. Salmon aren’t fooled into thinking a reservoir is their spawning ground. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Being caught by a sport fisher",
-							"result": "Incorrect. Salmon are at risk of being caught by a sport fisher but it’s not the greatest challenge.",
-							"lose_fish": false,
+							"result": "Incorrect. Salmon are at risk of being caught by a sport fisher but it’s not the greatest challenge. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
@@ -516,14 +516,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 9700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You've encountered an obstacle",
 					"title": "Poor Habitat",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Clearcut, 2006 </br>https://creativecommons.org/licenses/by-sa/2.0/ </br>https://creativecommons.org/licenses/by-sa/2.0/legalcode </br>https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT",
+					"credit": "Clearcut, 2006 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT'>Source</a>",
 					"caption": "",
 					"body": "You’ve reached an area where there is a lot of logging, An entire mountainside next to the river has been clearcut. This means that every single tree has been cut down to make lumber.",
 					"result": "",
@@ -537,20 +537,20 @@
 					"heading": "How has clearcut logging altered your habitat?",
 					"quiz_options": [{
 							"options": "Wood in the river",
-							"result": "Incorrect. Some loose sticks and branches might find their way into the river, but it’s not a big problem.",
+							"result": "Incorrect. Some loose sticks and branches might find their way into the river, but it’s not a big problem. No fish lost, no fish gained.",
 							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Siltation",
-							"result": "Correct. There are no trees and other plants to hold the mountain’s soil in place. Rain carries the soil into the river.",
+							"result": "Correct. There are no trees and other plants to hold the mountain’s soil in place. Rain carries the soil into the river. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						},
 						{
 							"options": "Unattractive scenery",
-							"result": "Incorrect. It’s true the mountain is not as beautiful as it was when forested, but that’s not a problem for salmon.",
-							"lose_fish": false,
+							"result": "Incorrect. It’s true the mountain is not as beautiful as it was when forested, but that’s not a problem for salmon. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
@@ -558,14 +558,14 @@
 			]
 		},
 		{
-			"trigger_location": 2000,
+			"trigger_location": 12900,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve entered a healthy habitat",
 					"title": "Rest Area",
 					"heading": "",
 					"image": "http://via.placeholder.com/400x250",
-					"credit": "Natural Logjam, Photograph by Sam Beebe, 2009</br>https://creativecommons.org/licenses/by-sa/2.0/legalcode</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/sbeebe/3951837750/in/album-72157622317599831/",
+					"credit": "Natural Logjam, Photograph by Sam Beebe, 2009 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/sbeebe/3951837750/in/album-72157622317599831/'><Source</a>",
 					"caption": "",
 					"body": "You’ve reached an area where there is an opportunity to rest. Log jams are formed when many fallen trees get stuck together in the river. They can occur naturally or can be man-made as an effort to restore salmon habitat.",
 					"result": "",
@@ -579,21 +579,21 @@
 					"heading": "What is the benefit of a log jam to salmon?",
 					"quiz_options": [{
 							"options": "Abundance of sunlight",
-							"result": "Incorrect. Abundant sunlight would not be important to migrating salmon.",
-							"lose_fish": false,
+							"result": "Incorrect. Abundant sunlight would not be important to migrating salmon. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Warmer water",
-							"result": "Incorrect. Salmon like cold water.",
-							"lose_fish": false,
+							"result": "Incorrect. Salmon like cold water. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						},
 						{
 							"options": "Deep calm pools",
-							"result": "Correct. Log jams create deep pools of calm water that allow salmon to rest.",
+							"result": "Correct. Log jams create deep pools of calm water that allow salmon to rest. Gain 1 fish.",
 							"lose_fish": false,
-							"add_fish": false
+							"add_fish": true
 						}
 					]
 				}
@@ -602,7 +602,7 @@
 
 	],
 	"random": [{
-			"location": "city, wilderness",
+			"location": "city",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve Found . . .",
@@ -612,7 +612,23 @@
 				"credit": "Photograph by U.S. Environmental Protection Agency",
 				"caption": "",
 				"body": "Somebody had dumped a lot of trash in the river. Almost any kind of trash you can imagine can make its way into a river system. This pollution creates poor water quality and that means bad habitat for salmon.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve Found . . .",
+				"title": "Trash Floating in the River",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by U.S. Environmental Protection Agency",
+				"caption": "",
+				"body": "Somebody had dumped a lot of trash in the river. Almost any kind of trash you can imagine can make its way into a river system. This pollution creates poor water quality and that means bad habitat for salmon.",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -628,7 +644,7 @@
 				"credit": "Photograph by Doug McMains, July 2016",
 				"caption": "",
 				"body": "You’ve reached a dam that was created to generate hydroelectric power. The route to your spawning grounds is blocked.",
-				"result": "You lose 2 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -641,16 +657,16 @@
 				"title": "A dam with a fish ladder",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Portland Corps, July 2010</br> https://creativecommons.org/licenses/by/2.0/</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/portlandcorps/11997850005/in/album-72157654873269070/",
+				"credit": "Photograph by Portland Corps, July 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/portlandcorps/11997850005/in/album-72157654873269070/'>Source</a>",
 				"caption": "",
 				"body": "You’ve reached a dam that has a fish ladder built on the side for migrating fish. The dam is really big and the fish ladder is small. You get confused and are unable to find the fish ladder.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
 		},
 		{
-			"location": "city, wilderness",
+			"location": "city",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
@@ -660,45 +676,93 @@
 				"credit": "Photograph by U.S. Fish and Wildlife Service [Public domain], via Wikimedia Commons",
 				"caption": "",
 				"body": "A lot of logging is going on in this area. All of the trees have been cut down and it creates soil erosion. The loose soil runs into the river when it rains. Some of it is suspended in the water making the water murky and unhealthy for fish. Some of the silt settles on the river bottom where it chokes the water plants and covers up the gravelly spawning grounds that salmon need.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
 		},
 		{
-			"location": "city, wilderness",
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Siltation",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by U.S. Fish and Wildlife Service [Public domain], via Wikimedia Commons",
+				"caption": "",
+				"body": "A lot of logging is going on in this area. All of the trees have been cut down and it creates soil erosion. The loose soil runs into the river when it rains. Some of it is suspended in the water making the water murky and unhealthy for fish. Some of the silt settles on the river bottom where it chokes the water plants and covers up the gravelly spawning grounds that salmon need.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "city",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
 				"title": "Invasive species",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Kat Daned, August 6, 2008</br>https://www.flickr.com/photos/katdaned/3307797558/in/photolist-63ijYo-5uQwpe</br>https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://creativecommons.org/licenses/by-nc-nd/2.0/",
+				"credit": "Photograph by Kat Daned, August 6, 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/katdaned/3307797558/in/photolist-63ijYo-5uQwpe'>Source</a>",
 				"caption": "",
 				"body": "Somebody has placed a non-native species of fish (pike) into the river for sport fishing. Although they are not in their native environment, pike thrive in this river and compete with the native species for resources. Pike are voracious and predatory and they like to eat other fish.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
 		},
 		{
-			"location": "city, wildnerness",
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Invasive species",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by Kat Daned, August 6, 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/katdaned/3307797558/in/photolist-63ijYo-5uQwpe'>Source</a>",
+				"caption": "",
+				"body": "Somebody has placed a non-native species of fish (pike) into the river for sport fishing. Although they are not in their native environment, pike thrive in this river and compete with the native species for resources. Pike are voracious and predatory and they like to eat other fish.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "city",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
 				"title": "Warmer water",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Clearcut, April 2008</br>https://creativecommons.org/licenses/by-sa/2.0/ </br>https://creativecommons.org/licenses/by-sa/2.0/legalcode </br>https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT",
+				"credit": "Clearcut, April 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT'>Source</a>",
 				"caption": "",
 				"body": "Trees and brush have been removed from the riverbank to make way for a new development. Salmon rely on trees and brush to keep the water nice and cool. The habitat is now compromised.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
 		},
 		{
-			"location": "city, wilderness",
+			"location": "wildnerness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Warmer water",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Clearcut, April 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/pfly/133918642/in/photolist-cQnm7-cZc8o-cZhE2-cQsaT'>Source</a>",
+				"caption": "",
+				"body": "Trees and brush have been removed from the riverbank to make way for a new development. Salmon rely on trees and brush to keep the water nice and cool. The habitat is now compromised.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "city",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
@@ -708,7 +772,23 @@
 				"credit": "",
 				"caption": "",
 				"body": "People have removed log jams from the river to allow safe passage for boats. While boats can now travel on the river without fear of running into a log jam, salmon have lost a crucial resting place along their difficult journey to spawn. Without the cool deep pools created by log jams, salmon must keep swimming even though they are fatigued.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "No place to rest",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "",
+				"caption": "",
+				"body": "People have removed log jams from the river to allow safe passage for boats. While boats can now travel on the river without fear of running into a log jam, salmon have lost a crucial resting place along their difficult journey to spawn. Without the cool deep pools created by log jams, salmon must keep swimming even though they are fatigued.",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -721,16 +801,48 @@
 				"title": "Factory pollution",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Ingrid Taylar, February 2011</br> https://creativecommons.org/licenses/by/2.0/</br>  https://creativecommons.org/licenses/by/2.0/legalcode</br>https://www.flickr.com/photos/taylar/5441017986/in/album-72157608726346297/",
+				"credit": "Photograph by Ingrid Taylar, February 2011 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/taylar/5441017986/in/album-72157608726346297/'>Source</a>",
 				"caption": "",
 				"body": "A nearby factory dumps its untreated wastewater into the river. This leaves dangerous and unhealthy deposits of chemicals and metals in the water and creates a polluted and unsafe habitat for salmon.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
 		},
 		{
-			"location": "city, wilderness",
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Factory pollution",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by Ingrid Taylar, February 2011 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/taylar/5441017986/in/album-72157608726346297/'>Source</a>",
+				"caption": "",
+				"body": "A nearby factory dumps its untreated wastewater into the river. This leaves dangerous and unhealthy deposits of chemicals and metals in the water and creates a polluted and unsafe habitat for salmon.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "city",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "City runoff",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by KOMUNews, June 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/komunews/4683128554/in/album-72157624232753326/'>Source</a>",
+				"caption": "",
+				"body": "The city has a drainage system that carries runoff from the streets into the river. When it rains everything that people dump into the streets can enter the storm drains and be carried into the river. Pollutants like motor oil, detergents, lawn fertilizers, and many kinds of trash create an unsafe and unhealthy habitat for salmon.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
@@ -740,7 +852,7 @@
 				"credit": "Photograph by KOMUNews, June 2010</br>https://creativecommons.org/licenses/by/2.0/legalcode</br>https://creativecommons.org/licenses/by/2.0/</br>https://www.flickr.com/photos/komunews/4683128554/in/album-72157624232753326/",
 				"caption": "",
 				"body": "The city has a drainage system that carries runoff from the streets into the river. When it rains everything that people dump into the streets can enter the storm drains and be carried into the river. Pollutants like motor oil, detergents, lawn fertilizers, and many kinds of trash create an unsafe and unhealthy habitat for salmon.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -753,10 +865,10 @@
 				"title": "Agricultural pollution",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Oregon Department of Agriculture, April 2010</br> https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode</br>https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://www.flickr.com/photos/oragriculture/8071194360/in/album-72157631731617650/",
+				"credit": "Photograph by Oregon Department of Agriculture, April 2010 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/oragriculture/8071194360/in/album-72157631731617650/'>Source</a>",
 				"caption": "",
 				"body": "There is a beautiful fruit orchard near the river. Unfortunately, when it rains the water carries remnants of pesticides and fertilizers into the river. Such chemicals degrade are dangerous for fish and degrade the habitat making it even harder for salmon to survive their spawning migration.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fishh",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -769,10 +881,10 @@
 				"title": "Commercial fishing",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Fishing for Salmon, August 2013</br> https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode </br>https://creativecommons.org/licenses/by-nc-nd/2.0/ </br>https://www.flickr.com/photos/fletchersgonefishing/11283955544/in/album-72157638498987043/",
+				"credit": "Fishing for Salmon, August 2013 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/fletchersgonefishing/11283955544/in/album-72157638498987043/'>Source</a>",
 				"caption": "",
 				"body": "People love to eat salmon and that means there is a lot of commercial fishing going on in many locations salmon pass through during the migrations that are part of their lifecycle. With many salmon endangered and threatened with extinction, commercial fishing represents a serious obstacle to salmon wellbeing. ",
-				"result": "You lose 2 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -785,10 +897,10 @@
 				"title": "Sport fishers",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Tom Maliery, July 2010</br>https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode</br>https://www.flickr.com/photos/mag3737/5160057927/in/album-72157625345562872/",
+				"credit": "Photograph by Tom Maliery, July 2010 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/mag3737/5160057927/in/album-72157625345562872/'><Source</a>",
 				"caption": "",
 				"body": "Sport fishing is a recreational activity that many people around the world enjoy. It is also an enjoyable source of food. Salmon are a favorite species of sport fishers. With so many different kinds of forces at work against the salmon, sport fishing is viewed as yet another obstacle in their survival.",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -801,10 +913,42 @@
 				"title": "Natural predator",
 				"heading": "",
 				"image": "http://via.placeholder.com/400x250",
-				"credit": "Photograph by Shawn Kinkade, August 2010</br> https://creativecommons.org/licenses/by-nc-nd/2.0/</br>https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode</br>https://www.flickr.com/photos/wsk/4873692887/in/album-72157624559428235/",
+				"credit": "Photograph by Shawn Kinkade, August 2010 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/wsk/4873692887/in/album-72157624559428235/'>Source</a>",
 				"caption": "",
 				"body": "Magnificent Orca whales swim the cold waters of the northern Pacific Ocean. They are a voracious natural predator of salmon. Pods of whales follow the migrating salmon and feast on them. Orcas are large animals weighing up to 12,000 pounds. One adult Orca can eat up to 375 pounds of food in one day. That’s a lot of salmon!",
-				"result": "You lose 1 fish",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "ocean",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Natural predator",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "",
+				"caption": "Photograph by Oregon Department of Fish and Wildlife, May 2016 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/odfw/35281910502/in/album-72157630625001364/'>Source</a>",
+				"body": "Sea lions are a native species of the Pacific Northwest and natural predators that love to feast on salmon. As salmon populations diminish it affects the behaviors of other species. In recent years sea lions are extending their habitat range and becoming increasingly aggressive in their quest to find salmon to eat.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Bears",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "",
+				"caption": "Photograph by Christopher Strassler, July 2013 <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/christoph_straessler/10141983933/in/album-72157636297168395/'>Source</a>",
+				"body": "Bears usually live along the smaller rivers and streams that are the upper reaches of the salmon migration path. As a natural predator, bears know when salmon are on their spawning migrations in the rivers. They position themselves in the water where they can use their long sharp claws to snatch fish.",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
 			}]
@@ -814,15 +958,239 @@
 			"cards": [{
 				"type": "information",
 				"sub_title": "You’ve encountered an obstacle",
-				"title": "Zooplankton",
+				"title": "Low water levels",
 				"heading": "",
-				"image": "http://via.placeholder.com/400x250",
+				"image": "",
 				"credit": "",
 				"caption": "",
-				"body": "",
-				"result": "You lose 1 fish",
+				"body": "Low water levels can make the spawning migration even more difficult. This condition can be caused by many different factors. Extended periods of drought, or low rainfall and decreased winter snows create low water levels in rivers. The people who manage dams also have the ability to affect the water levels in rivers. Water is generally released from dams to keep an acceptable flow in the river. However, when drought conditions exist there may not be enough water in the reservoir to release into the river below. Low water levels can keep salmon from reaching their spawning grounds, which are often located in normally shallow waters. Lower levels also result in lower water temperatures, another hazard for salmon.",
+				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered an obstacle",
+				"title": "Low water levels",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Low water levels can make the spawning migration even more difficult. This condition can be caused by many different factors. Extended periods of drought, or low rainfall and decreased winter snows create low water levels in rivers. The people who manage dams also have the ability to affect the water levels in rivers. Water is generally released from dams to keep an acceptable flow in the river. However, when drought conditions exist there may not be enough water in the reservoir to release into the river below. Low water levels can keep salmon from reaching their spawning grounds, which are often located in normally shallow waters. Lower levels also result in lower water temperatures, another hazard for salmon.",
+				"result": "Lose 1 fish",
+				"lose_fish": true,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Sustainable logging practiced here",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Timber companies that observe sustainable logging practices contribute to the wellbeing of salmon habitat. They remove only some of the trees from the ecologically fragile hillsides, leaving enough trees and undergrowth to keep the topsoil from eroding into the river. These practices help the water to stay clear and cool.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "city",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Natural log jam",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by Sam Beebe, 2009 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/sbeebe/3951837750/in/album-72157622317599831/'>Source</a>",
+				"caption": "",
+				"body": "Fallen trees find their way into rivers for many reasons. As they float downriver they sometimes get stuck on rocks, sandbars, or other natural features. When one tree gets stuck, other trees eventually float down and also get stuck behind. This mass of of stuck trees is known as a log jam. Log jams affect the river current, creating deep slow moving pools where salmon can rest and feed.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Natural log jam",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by Sam Beebe, 2009 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/sbeebe/3951837750/in/album-72157622317599831/'>Source</a>",
+				"caption": "",
+				"body": "Fallen trees find their way into rivers for many reasons. As they float downriver they sometimes get stuck on rocks, sandbars, or other natural features. When one tree gets stuck, other trees eventually float down and also get stuck behind. This mass of of stuck trees is known as a log jam. Log jams affect the river current, creating deep slow moving pools where salmon can rest and feed.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Dam removed here",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "In recent years some obsolete dams have been removed when they no longer serve a useful purpose or their environmental impact is too great. Many scientists and environmental groups believe this is beneficial for salmon recovery efforts but it is not a total solution. Habitat restoration and other activities need to occur to keep salmon populations thriving.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a solution to a problem",
+				"title": "Fish ladder",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "Photograph by Janet Lindenmuth, July 2008 <a target='_blank' href='https://creativecommons.org/licenses/by-nc/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/j3net/2681180722/'>Source</a>",
+				"caption": "",
+				"body": "Fish ladders are constructed to solve the problem created when dams are built on rivers where fish migrate to spawn. This solution helps some fish get past the dam but it is not perfect. Dams are huge structures and fish ladders are relatively small. When migrating salmon arrive at dams they can become confused and it can be difficult for them to find the fish ladders.",
+				"result": "No fish lost, no fish gained",
+				"lose_fish": false,
+				"add_fish": false
+			}]
+		},
+		{
+			"location": "city",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a safer habitat",
+				"title": "Fishing restrictions in place",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Native Nations, state, and international governments all work together to support the fragile and challenged salmon population. Scientists monitor the numbers of salmon that return to spawn and this helps agencies determine how many and when fish can be caught in any given year. If restrictions were not imposed on salmon fishing, the species would not be able to survive.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a safer habitat",
+				"title": "Fishing restrictions in place",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Native Nations, state, and international governments all work together to support the fragile and challenged salmon population. Scientists monitor the numbers of salmon that return to spawn and this helps agencies determine how many and when fish can be caught in any given year. If restrictions were not imposed on salmon fishing, the species would not be able to survive.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "ocean",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a safer habitat",
+				"title": "Fishing restrictions in place",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Native Nations, state, and international governments all work together to support the fragile and challenged salmon population. Scientists monitor the numbers of salmon that return to spawn and this helps agencies determine how many and when fish can be caught in any given year. If restrictions were not imposed on salmon fishing, the species would not be able to survive.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "city",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Riparian habitat restored",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "U.S. Coast Guard Base Kodiak crew opening access for salmon, May 2017. Photograph by Lisa Hupp. <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/usfws_alaska/35011258393/'>Source</a>",
+				"caption": "",
+				"body": "Local Native Nations and other partners have worked to restore damaged tree and plant habitat along streams and rivers. Keeping the habitat in good shape is especially important in the riparian zone—the area where the land and water meet. Trees, shrubs, and other kinds of plants in this zone keep the water cool and help to control soil erosion.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Riparian habitat restored",
+				"heading": "",
+				"image": "http://via.placeholder.com/400x250",
+				"credit": "U.S. Coast Guard Base Kodiak crew opening access for salmon, May 2017. Photograph by Lisa Hupp. <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/usfws_alaska/35011258393/'>Source</a>",
+				"caption": "",
+				"body": "Local Native Nations and other partners have worked to restore damaged tree and plant habitat along streams and rivers. Keeping the habitat in good shape is especially important in the riparian zone—the area where the land and water meet. Trees, shrubs, and other kinds of plants in this zone keep the water cool and help to control soil erosion.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+		{
+			"location": "city",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Sources of pollution managed",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Pollution has long been recognized as a threat to most animal species. Salmon suffer from a variety of pollution sources, including those generated in both urban and rural settings. However, salmon benefit from the laws and efforts of people to generate less pollution. Recycling, wastewater management, modern sewage treatment, and pesticide-free farming are just a few examples of the ways that pollution is being managed today in many locations that affect salmon.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+				{
+			"location": "wilderness",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Sources of pollution managed",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Pollution has long been recognized as a threat to most animal species. Salmon suffer from a variety of pollution sources, including those generated in both urban and rural settings. However, salmon benefit from the laws and efforts of people to generate less pollution. Recycling, wastewater management, modern sewage treatment, and pesticide-free farming are just a few examples of the ways that pollution is being managed today in many locations that affect salmon.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
+			}]
+		},
+				{
+			"location": "ocean",
+			"cards": [{
+				"type": "information",
+				"sub_title": "You’ve encountered a healthy habitat",
+				"title": "Sources of pollution managed",
+				"heading": "",
+				"image": "",
+				"credit": "",
+				"caption": "",
+				"body": "Pollution has long been recognized as a threat to most animal species. Salmon suffer from a variety of pollution sources, including those generated in both urban and rural settings. However, salmon benefit from the laws and efforts of people to generate less pollution. Recycling, wastewater management, modern sewage treatment, and pesticide-free farming are just a few examples of the ways that pollution is being managed today in many locations that affect salmon.",
+				"result": "Gain 1 fish",
+				"lose_fish": false,
+				"add_fish": true
 			}]
 		}
 

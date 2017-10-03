@@ -1,0 +1,394 @@
+body {
+    background: url('../images/pnw/bkgr-pnw@2x.png');
+
+    p {
+      font-family: "Archer Pro", serif;
+    }
+
+    a {
+      font-family: "Archer Pro", serif;
+
+      &.link-color {
+        color:#53afa8;
+        text-decoration:underline;
+        font-size:75%;
+        display:inine-block;
+        padding-right:25px;
+      }
+    }
+
+    h3 {
+      color:#006986;
+
+      &.yellow-underline {
+        display: inline-block;
+        border-bottom: 3px solid #f6b851;
+        padding-bottom: 5px;
+      }
+    }
+}
+
+.photo-container {
+  text-align: center;
+  background: #636365; 
+  height: auto; 
+  position: relative;
+}
+
+small, .small {
+  font-size:55%;
+  font-weight:100;
+}
+
+.annotation-screen {
+    width: 100%;
+    margin: 50px auto;
+    height: 75vh;
+
+  .annotation-item {
+    height: 75vh;
+    background: #FFF;
+    width: 100%;
+    box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, .3);
+
+    .top {
+      height: 25vh;
+
+      .photo {
+        img {
+          height: 25vh;
+        }
+      }
+    }
+
+    .bottom {
+      padding: 20px 8% 0;
+      height: 50vh;
+
+      .body {
+        height: 37vh;
+        overflow-y: scroll;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 25px;
+        margin: 0 auto;
+        width: 250px;
+        left: 0;
+        right: 0;
+
+        a {
+          width: 250px;
+        }
+      }
+
+    }
+
+    .col-no-padding {
+      padding: 0;
+    }
+  }
+
+  .copyright {
+    color:#888;
+    margin:12px 0;
+  }
+}
+
+.theme {
+  font-style: bold;
+  color: black;
+  letter-spacing: .5px;
+  font-size:85%;
+  margin-top:15px;
+}
+
+.markers-remaining {
+  font-family: "Archer Pro", serif;
+  color:black;
+  letter-spacing: .5px;
+  text-align:center;
+}
+
+.pin-image {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 7px;
+}
+
+.pin-text {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.pin-text p {
+  margin:0;
+}
+
+.dotted {
+  font-weight: bold;
+}
+
+.original-text {
+    background: #eee;
+    padding: 25px;
+    height: 80vh;
+
+    .content-height {
+      max-height: 70vh; 
+      overflow-y: scroll; 
+      padding: 0 25px 25px;
+    }
+}
+
+.markers-container {
+  padding:25px;
+  background:rgba(255,255,255,.5);
+}
+
+.original-text .photo {
+    max-height: 350px; 
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+
+.print-button {
+  margin-top:40px;
+}
+
+.original-text-detail {
+  box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, .3);
+
+  h3 {
+    color:black;
+  }
+  .outer-top {
+    padding:25px;
+    background:white;
+  }
+  .top {
+    height: 22vh;
+    overflow-y: scroll;
+    background:white;
+  }
+}
+.dotted {
+  font-weight: bold;
+}
+
+.print-view {
+  display: none;
+}
+
+.original-text {
+    background: #eee;
+    padding: 50px;
+    height: 77vh;
+    box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, .3);
+
+    .photo {
+      max-height: 350px; 
+      overflow: hidden;
+      margin-bottom: 30px;
+      position: relative;
+      
+  }
+
+  a {
+    text-decoration:underline;
+  }
+}
+
+.photo .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  color: white;
+  background: rgba(0,0,0,.25);
+  padding-top: 20px;
+
+  p {
+    text-align: center;
+  }
+}
+
+.instructions-container {
+  .btn-lg {
+    border-color:white;
+    margin-bottom:40px;
+
+    &:hover {
+      color:#2e3742 !important;
+      border-color:white;
+      background:white;
+    }
+  }
+}
+
+#lost-progress {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+  z-index: 100; 
+
+  h2 {
+    color:white;
+  }
+
+  .instructions-container {
+    z-index: 101;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; 
+  }
+  
+  .progress-options {
+    margin: 100px auto 0;
+    width: 325px;
+    
+    .btn-lg {
+      width:325px;
+      border-color:white;
+      display:block;
+      margin-bottom:40px;
+
+      &:hover {
+        color:#2e3742 !important;
+        border-color:white;
+        background:white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #lost-progress .instructions-container {
+    padding: 30px; 
+  }
+}
+.marker {
+  cursor: pointer;
+
+  img {
+    height:75px;
+
+  }
+}
+
+.list-inline {
+  margin:30px 0 45px;
+
+  .list-inline-item {
+      display: inline-block;
+      margin-right: 25px;
+      width: 100px;
+      text-align: center;
+  }
+}
+
+.btn-lg {
+  width:325px;
+}
+
+/** Pins **/
+
+.pin-drop.ui-droppable-hover {
+  background: yellow;
+}
+
+.pin-drop {
+  position: relative;
+  display: inline-block;
+}
+
+.marker-in-text {
+  position: absolute;
+  padding: 10px;
+  background: #ddd; /* Must match Js */
+  border: thin solid #ccc; /* Must match Js */
+  border-radius: 3px;
+  width: 320px; /* Must match Js */
+  height: 200px;
+  z-index: 2;
+  bottom: 40px;
+  left: 0;
+  font-size: 15px;
+}
+
+.marker-in-text.visible {
+  z-index: 3;
+}
+
+.marker-in-text img {
+  width: 30px;
+  height: auto;
+  bottom: -30px;
+  position: absolute;
+  opacity: .5;
+  cursor: pointer;
+  left: 0;
+}
+
+.marker-in-text textarea {
+  border-radius: 3px;
+  border: thin solid #ccc;
+  width: 100%;
+  padding: 7px;
+  height: 100%;
+  float: left;
+  width: 250px;
+}
+
+.marker-in-text .delete-btn {
+  float: right;
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-image: url('https://maxcdn.icons8.com/Share/icon/p1em/Editing//trash11600.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.delete-pin {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .7);
+  margin-top: -10px;
+  margin-left: -10px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.delete-pin span {
+  display: block;
+  margin-top: 30px;
+}
+
+
+.delete-pin {
+  .btn {
+    border-color:white;
+    margin: 10px 15px 0 15px;
+    color:white;
+    font-weight:bold;
+
+    &:hover {
+      color:#2e3742 !important;
+      border-color:white;
+      background:white;
+    }
+  }
+}

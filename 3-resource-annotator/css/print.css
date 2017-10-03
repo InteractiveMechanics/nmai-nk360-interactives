@@ -1,0 +1,114 @@
+@media print {
+ /* styles go here */
+@page
+{
+    size: auto;   /* auto is the initial value */
+
+    /* this affects the margin in the printer settings */
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+body,
+html {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+body {
+	background: white !important;
+	margin: 0;
+}
+
+ .module-menu-wrapper {
+ 	display: none;
+ }
+
+ .print-view {
+ 	display: block !important;
+ }
+
+ .activity-menu-wrapper {
+ 	display: none;
+ }
+
+ header {
+ 	display: none;
+ }
+
+ footer {
+ 	display: none !important;
+ }
+
+ .fixed-bottom {
+ 	display: none;
+ }
+
+ .fixed-bottom img {
+ 	display: none;
+ }
+
+ .fixed-bottom ul {
+ 	display: none;
+ }
+
+ #instructions {
+ 	display: none;
+ }
+
+ #lost-progress {
+ 	display: none;
+ }
+
+ .annotation-screen {
+ 	display: none;
+ }
+
+.photo-container .marker-in-text {
+   left: 50% !important;
+}
+
+
+.photo-container .marker-in-text > img {
+  left: 0 !important;
+}
+
+.photo-container .marker-in-text .number {
+   left: 12px !important;
+}
+
+.print-notes ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.theme-print-view {
+	margin: 30px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.theme-print-view li {
+	list-style: none;
+	display: inline-block;
+	width: 180px;
+	text-align: center;
+}
+
+.print-notes ul li{
+	list-style: none;
+}
+
+.note-pin {
+	width: 100px;
+	float: left;
+}
+
+.note-text {
+	width: 600px;
+	float: left;
+}
+
+.note-area {
+	margin: 20px 0;
+}

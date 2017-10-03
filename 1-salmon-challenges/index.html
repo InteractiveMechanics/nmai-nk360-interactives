@@ -191,48 +191,8 @@
           <section class="intro-slider">
             
             <div>
-              <p class="text-center">The Return Upstream</p>
-              <h2 class="text-center">Salmon Challenges</h2>
-
-              <p class="image-credit">
-                Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
-              </p>
-
               <p>
                 Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
-              </p>
-
-              <p class="text-center">
-                <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
-              </p>
-            </div>
-
-            <div>
-              <p>
-                Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
-              </p>
-            </div>
-
-            <div>
-              <p class="text-center">The Return Upstream</p>
-              <h2 class="text-center">Salmon Challenges</h2>
-
-              <p class="text-center">
-                <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
-              </p>
-            </div>
-
-            <div>
-              <p class="image-credit">
-                Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
-              </p>
-
-              <p>
-                Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
-              </p>
-
-              <p class="text-center">
-                <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
               </p>
             </div>
             
@@ -287,7 +247,7 @@
 
             </p>
             <div>
-              <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="50%" />
+              <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="75%" />
             </div>
 
             <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue this activity</a>
@@ -302,27 +262,51 @@
             <div class="row justify-content-md-center fish-row">
                 
                 <div class="col cursor-pointer" data-fish="Sockeye">
-                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
-                    <h2>Sockeye</h2>
-                    <p>
-                      Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
-                    </p>
+                    
+                    <div class="fish-photo">
+                      <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Sockeye</h2>
+                      <p>
+                        Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
+                      </p>
+                    </div>
+
+                    <br style="clear:left;" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Steelhead">
-                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
-                    <h2>Steelhead</h2>
-                    <p>
-                      Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
-                    </p>
+
+                    <div class="fish-photo">
+                      <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Steelhead</h2>
+                      <p>
+                        Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
+                      </p>
+                    </div>
+                    
+                    <br style="clear:left;" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Chinook">
-                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
-                    <h2>Chinook</h2>
-                    <p>
-                      Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
-                    </p>
+
+                    <div class="fish-photo">
+                      <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Chinook</h2>
+                      <p>
+                        Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
+                      </p>
+                    </div>
+
+                    <br style="clear:left;" />
                 </div>
 
             </div>
@@ -359,6 +343,17 @@
             </div>
 
           </div>
+
+           <div class="progress-wrapper">
+              <div class="progressb">
+                  <div class="fish-outline"></div>
+                  <div class="position-progress position-1-progress"></div>
+                  <div class="position-progress position-2-progress"></div>
+                  <div class="position-progress position-3-progress"></div>
+                  <div class="position-progress position-4-progress"></div>
+              </div>
+          </div>
+
 
         </div>
 
@@ -432,6 +427,14 @@
             <p>
               {{:body}}
             </p>
+          {{/if}}
+
+          {{if result}}
+            <div class="result-area text-center">
+              <p>
+                {{:result}}
+              </p>
+            </div>
           {{/if}}
         </div>
     </script>

@@ -1,0 +1,36 @@
+
+.slider {
+
+}
+
+.slick-slide {
+  margin: 0px 20px;
+  @media (max-width: 767px) { 
+    width:310px;
+  }
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-dots {
+    z-index: 50;
+    bottom: -35px;
+}
+
+.slick-dots li button:before {
+    font-size: 15px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.slick-dots li button.slick-active:before {
+    opacity: 1.0;
+}
+
