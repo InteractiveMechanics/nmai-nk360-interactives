@@ -12,17 +12,40 @@
 }
 
 .slick-prev {
-	left: -105px;
+	left: -130px;
 }
 
 .slick-next {
-	right: -75px;
+	right: -50px;
 }
 
 .slick-prev:before,
 .slick-next:before {
-	color: black;
-	font-size:50px;
+	font-size:100px;
+}
+
+.slick-prev:before {
+    font-family: 'slick';
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url('../images/icon-prev.svg') no-repeat;
+    color: transparent;
+    background-size:contain;
+}
+
+
+.slick-next:before {
+    font-family: 'slick';
+    line-height: 1;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url('../images/icon-next.svg') no-repeat;
+    color: transparent;
+    background-size:contain;
 }
 
 .slick-dots {
