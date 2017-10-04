@@ -161,6 +161,16 @@ footer {
       background-color: white;
       border-color: white;
       text-shadow: none; }
+  .btn.active {
+    border-color: #4BADA6;
+    background-color: #4BADA6;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #4BADA6;
+      border-color: #4BADA6;
+      opacity: 0.65; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -455,7 +465,7 @@ div[id^="era-block"] {
   border-radius: 0.15rem;
   font-weight: 300; }
   .tooltip-inner::before {
-    border-bottom-color: #ec5343 !important; }
+    border-top-color: #ec5343 !important; }
 
 .timeline-bkgr {
   height: 100%; }
@@ -618,7 +628,8 @@ div[id^="era-block"] {
 
 .timeline-btn-text-wrapper {
   font-weight: 300;
-  color: white; }
+  color: white;
+  padding: 15px 15px 15px 52px; }
   .timeline-btn-text-wrapper p {
     font-size: 14px; }
 
