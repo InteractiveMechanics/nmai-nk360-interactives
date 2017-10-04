@@ -1,5 +1,7 @@
 Detail = (function() {
 
+    var timelineWidth = 2143;
+
 	 var init = function() {
         bindEvents();
     }
@@ -66,9 +68,9 @@ Detail = (function() {
                 $('.era-container[data-era="3"]').addClass('hidden');
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
-                $('.timeline-wrapper').css('width', '3500px');
+                timelineWidth = 3500;
             } else {
-                $('.timeline-wrapper').css('width', '4800px');
+                timlineWidth = 4800;
             }
         }
         $('#explore').removeClass('animated fadeIn hidden');
@@ -191,7 +193,8 @@ Detail = (function() {
 
 		init: init,
         displayExploreScreen: displayExploreScreen,
-        displayModal: displayModal
+        displayModal: displayModal,
+        timelineWidth: timelineWidth
 	
 	}
 

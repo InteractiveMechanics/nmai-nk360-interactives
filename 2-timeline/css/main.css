@@ -509,7 +509,7 @@ div[id^="era-block"] {
 .timeline-wrapper {
   position: absolute;
   height: 103%;
-  width: 2143px;
+  width: 4800px;
   overflow: auto;
   background: url("../../assets/timeline-full@2x.jpg");
   background-size: cover; }
