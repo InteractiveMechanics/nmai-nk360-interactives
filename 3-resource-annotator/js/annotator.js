@@ -351,7 +351,7 @@ Annotator = (function() {
     }
 
     var deletePin = function(pin) {
-      pin.append('<div class="delete-pin"><span>Delete annotation?</span><button class="confirm-delete">Yes</button><button class="undo-delete">No</button></div>');
+      pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Yes</button><button class="btn btn-white undo-delete">No</button></div>');
 
       pin.find('.confirm-delete').click(function() {
         var id = pin.data('marker');
@@ -419,8 +419,21 @@ Annotator = (function() {
 
       setTimeout(function(){
         $('.markers-container').addClass('animated pulse');
+        
       }, 1800);
+      
+      $('.markers-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        for(var i = 0; i < markersInJSON.length; i++) {
+          var id = markersInJSON[i].theme_id;
+          var count = i + 1;
+          //$('#' + id).delay( 500 * count ).addClass('animated bounce');
 
+          $('#' + id + ' img').delay(500 * count).queue(function(next) {
+            $(this).addClass('animated bounce');
+            next();
+          });
+        }   
+      });
   }
 
     var getItemByAnnotationId = function(id) {

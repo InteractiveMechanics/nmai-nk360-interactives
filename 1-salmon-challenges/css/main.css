@@ -93,10 +93,9 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  height: 100%;
   color: white;
   z-index: 1000;
   overflow: auto; }
@@ -188,11 +187,11 @@ footer {
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../images/icon-info.svg); }
+    background-image: url("../shared/images/icon-info.svg"); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../images/icon-home.svg); }
+    background-image: url("../shared/images/icon-home.svg"); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../images/icon-print.svg); }
+    background-image: url("../shared/images/icon-print.svg"); }
   .activity-menu-wrapper .icon.disabled {
     opacity: 0.4;
     cursor: default; }
@@ -203,10 +202,18 @@ footer {
   border-radius: 99px;
   margin: 10px 5px;
   display: inline-block;
-  background-color: red;
   position: absolute;
   bottom: 10px;
-  right: 10px; }
+  right: 10px;
+  background-image: url("../shared/images/icon-zoom.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  transition: 0.5s all; }
+  [data-gallery]:focus, [data-gallery]:hover, [data-gallery]:active {
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
 .game {
   height: 100vh;
@@ -271,7 +278,7 @@ footer {
   width: 366px;
   height: 97px;
   background: url(http://dev.interactivemechanics.com/sprites/steelhead-4.png) no-repeat;
-  animation: three-fish-swimming 1s steps(14) infinite; }
+  animation: three-steelhead-fish-swimming 1s steps(14) infinite; }
 
 .chinook-1 {
   width: 146px;
@@ -457,10 +464,10 @@ footer {
   background-image: url(../images/icon-restart.svg); }
 
 .activity-menu-wrapper .icon.icon-pause {
-  background-image: url(https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png); }
+  background-image: url(../images/icon-pause.svg); }
 
 .activity-menu-wrapper .icon.icon-play {
-  background-image: url(https://image.flaticon.com/icons/svg/26/26025.svg); }
+  background-image: url(../images/icon-play.svg); }
 
 #congrats-instructions {
   position: fixed;
@@ -522,7 +529,20 @@ footer {
   background-color: white !important;
   color: #2e3742 !important; }
 
+.quiz-options .btn {
+  border-color: white !important; }
+.quiz-options .btn:hover {
+  background-color: white !important;
+  border: 3px solid grey !important;
+  color: grey !important; }
+.quiz-options .btn:focus, .quiz-options .btn:active {
+  background-color: white !important;
+  color: #2e3742 !important; }
+
 .intro-slider-wrapper .overlay {
+  z-index: 20; }
+
+.spawn-death-slider-wrapper .overlay {
   z-index: 20; }
 
 .card {
@@ -570,7 +590,7 @@ footer {
     top: 0;
     left: 0;
     transition: top 0.3s ease, left 0.3s ease;
-    width: 430px;
+    width: 393px;
     margin: auto;
     position: absolute;
     left: 0;
@@ -651,7 +671,7 @@ footer {
 
 .slick-slide {
   margin: 0px 20px;
-  width: 390px; }
+  width: 342px; }
   @media (max-width: 767px) {
     .slick-slide {
       width: 310px; } }
