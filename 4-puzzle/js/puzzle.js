@@ -141,6 +141,7 @@ Puzzle = (function() {
         var id = $(this).attr('data-card');
         $('.modal-dialog').html();
         $(".modal-dialog").html($.templates("#modal-template").render(data.puzzles[0].Cards[id-1]));
+        $(".droppable-widget").attr('data-content', data.puzzles[0].Cards[id-1].incorrect);
         if ($('.modal-dialog').hasClass('dragged')) {
             $('.modal-dialog').removeClass('dragged animated fadeOutDown');
             $('.modal-dialog').css('left', '0').css('top', '0');
