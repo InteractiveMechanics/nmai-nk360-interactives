@@ -1,6 +1,16 @@
+.slider-wrapper {
+	.slick-dots {
+		bottom:-150px;
+	}
+}
+
 .intro-slider-wrapper {
 	.overlay {
 		z-index:20;
+	}
+
+	.slick-dots {
+		bottom:-150px;
 	}
 }
 
@@ -130,10 +140,12 @@
 
 		&:focus {
 			outline:0;
+			background: grey;
 		}
 
 		&:active {
 			outline:0;
+			background: grey;
 		}
 
 		&.correct {

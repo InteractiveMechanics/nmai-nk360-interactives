@@ -540,11 +540,16 @@ footer {
   border: 3px solid grey !important;
   color: grey !important; }
 .quiz-options .btn:focus, .quiz-options .btn:active {
-  background-color: white !important;
-  color: #2e3742 !important; }
+  background-color: grey !important;
+  color: white !important; }
+
+.slider-wrapper .slick-dots {
+  bottom: -150px; }
 
 .intro-slider-wrapper .overlay {
   z-index: 20; }
+.intro-slider-wrapper .slick-dots {
+  bottom: -150px; }
 
 .spawn-death-slider-wrapper .overlay {
   z-index: 20; }
@@ -641,9 +646,11 @@ footer {
     padding: 15px;
     margin: 5px 0 20px; }
     .quiz-options button:focus {
-      outline: 0; }
+      outline: 0;
+      background: grey; }
     .quiz-options button:active {
-      outline: 0; }
+      outline: 0;
+      background: grey; }
     .quiz-options button.correct {
       background: green; }
     .quiz-options button.wrong {
@@ -683,15 +690,35 @@ footer {
     width: 100%; }
 
 .slick-prev {
-  left: -105px; }
+  left: -130px; }
 
 .slick-next {
-  right: -75px; }
+  right: -50px; }
 
 .slick-prev:before,
 .slick-next:before {
-  color: black;
-  font-size: 50px; }
+  font-size: 100px; }
+
+.slick-prev:before {
+  font-family: 'slick';
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("../images/icon-prev.svg") no-repeat;
+  color: transparent;
+  background-size: contain; }
+
+.slick-next:before {
+  font-family: 'slick';
+  line-height: 1;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("../images/icon-next.svg") no-repeat;
+  color: transparent;
+  background-size: contain; }
 
 .slick-dots {
   z-index: 50;
