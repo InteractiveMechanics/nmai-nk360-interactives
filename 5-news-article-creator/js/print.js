@@ -19,6 +19,8 @@ Print = (function() {
         setTimeout(function() {
             $('#print-preview').addClass('show');
         }, 100);
+
+        sendAnalyticsEvent('Print preview', 'open');
     }
     var closePrintPreview = function() {
         $('#print-preview').removeClass('show');
@@ -26,9 +28,13 @@ Print = (function() {
         setTimeout(function() {
             $('#print-preview').addClass('hidden');
         }, 500);
+
+        sendAnalyticsEvent('Print preview', 'close');
     }
     var triggerPrint = function() {
         window.print();
+
+        sendAnalyticsEvent('Print preview', 'print');
     }
     var activatePrintPreview = function() {
         $('.print-preview-btn').removeClass('disabled').attr('disabled', false);
