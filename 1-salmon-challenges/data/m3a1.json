@@ -1,5 +1,72 @@
 {
 	"title": "Salmon Challenges",
+	"spawn_cards": [{
+			"type": "information",
+			"sub_title": "Salmon Challenges",
+			"title": "You’ve Reached Your Spawning Grounds!",
+			"heading": "",
+			"image": "",
+			"credit": "Photograph by Ryan Hagerty, U.S. Fish and Wildlife Service",
+			"caption": "",
+			"body": "When ready to spawn, female salmon build a gravel nest called a redd. One or more male salmon join her and fertilize the eggs she lays. Eggs hatch after about sixty days and a small larva (alevin) is born. Alevins continue to develop within the nest until spring when they emerge from the gravel as fry.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		},
+		{
+			"type": "information",
+			"sub_title": "Salmon Challenges",
+			"title": "Rearing",
+			"heading": "",
+			"image": "",
+			"credit": "Jumping Salmon Fry, July 2015 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/elfsternberg/2677122121/in/photolist-5E1VS4-55yX8X'>Source</a>",
+			"caption": "",
+			"body": "Only about 20 of 100 eggs laid by female salmon survive to become fry. Once they emerge from gravel the fry need to find a good habitat. Only about 10 out of every 100 fry find the water and food they need—the others do not survive.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		},
+		{
+			"type": "information",
+			"sub_title": "Salmon Challenges",
+			"title": "Threats to Salmon, Threats to People",
+			"heading": "",
+			"image": "",
+			"credit": "",
+			"caption": "",
+			"body": "For Native Nations of the Pacific Northwest, salmon is more than just a healthy source of food: salmon are considered relatives. Consider how threats to salmon also threaten the lifeways, cultures, and identities of Native peoples.",
+			"result": "Want to Try Again?",
+			"lose_fish": false,
+			"add_fish": false
+		}
+	],
+	"death_cards": [{
+			"type": "information",
+			"sub_title": "Salmon Challenges",
+			"title": "Your Salmon Died",
+			"heading": "",
+			"image": "",
+			"credit": "Dead Salmon, Ethan Ableman August 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/ethansphotosarecool/5817205588/in/album-72157626801973789/>Source</a>",
+			"caption": "",
+			"body": "There are many forces that threaten salmon during their life’s journey. While some of the threats are from natural predators or poor conditions human activities are the primary threats to salmon survival.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		},
+		{
+			"type": "information",
+			"sub_title": "Salmon Challenges",
+			"title": "Salmon Challenges",
+			"heading": "",
+			"image": "",
+			"credit": "",
+			"caption": "",
+			"body": "Play and learn what it’s like to be a salmon. The life cycle of salmon is both amazing and difficult. They are an anadromous species. This means that they are born in freshwater and migrate downriver to the ocean where they live most of their adult life. To reproduce (spawn), salmon migrate back to the river they were born in, then swim upstream to the area of their birth where they spawn and die.",
+			"result": "",
+			"lose_fish": false,
+			"add_fish": false
+		}
+	],
 	"intro_cards": [{
 			"type": "information",
 			"sub_title": "The Return Upstream",
@@ -1161,7 +1228,7 @@
 				"add_fish": true
 			}]
 		},
-				{
+		{
 			"location": "wilderness",
 			"cards": [{
 				"type": "information",
@@ -1177,7 +1244,7 @@
 				"add_fish": true
 			}]
 		},
-				{
+		{
 			"location": "ocean",
 			"cards": [{
 				"type": "information",

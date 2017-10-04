@@ -238,13 +238,13 @@ small, .small {
   font-weight: 100; }
 
 .annotation-screen {
-  width: 100%;
+  width: 90%;
   margin: 50px auto;
   height: 75vh; }
   .annotation-screen .annotation-item {
     height: 75vh;
     background: #FFF;
-    width: 100%;
+    width: 95%;
     box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.3); }
     .annotation-screen .annotation-item .top {
       height: 25vh; }
@@ -409,9 +409,9 @@ small, .small {
   .marker img {
     height: 75px; }
 
-.list-inline {
+.marker-container .list-inline {
   margin: 30px 0 45px; }
-  .list-inline .list-inline-item {
+  .marker-container .list-inline .list-inline-item {
     display: inline-block;
     margin-right: 25px;
     width: 100px;
@@ -513,7 +513,11 @@ small, .small {
   height: 10px; }
 
 .slick-slide {
-  margin: 0px 20px; }
+  margin: 0px 20px;
+  width: 342px; }
+  @media (max-width: 767px) {
+    .slick-slide {
+      width: 310px; } }
 
 .slick-slide img {
   width: 100%; }
@@ -573,7 +577,7 @@ small, .small {
     top: 0;
     left: 0;
     transition: top 0.3s ease, left 0.3s ease;
-    width: 430px;
+    width: 393px;
     margin: auto;
     position: absolute;
     left: 0;
