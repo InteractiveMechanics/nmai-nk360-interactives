@@ -112,7 +112,7 @@
 		{
 			"id": 7,
 		    "title": "American Progress",
-		    "image_url": "../assets/imgs/m1a1/med-source-7.jpg",
+		    "image_url": "../assets/imgs/m2a1/med-source-7.jpg",
 		    "image_caption": "",
 		    "image_credit": "George A. Crofutt, American Progress, ca. 1873. Chromolithograph after an 1872 oil painting by John Gast, courtesy of the Library of Congress, LC-DIG-ppmsca-09855",
 		    "body": "A romantic depiction of the <span data-toggle=“tooltip” title=“A system of ideas and ideals.”>ideology</span> of the <span data-toggle=“tooltip” title=“The concept used to support policies that invalidated or ignored Native possession of land in order to justify colonial or U.S. governments taking possession of that land.”>Doctrine of Discovery</span> and <span data-toggle=“tooltip” title=“A 19th-century belief that the expansion of the U.S. throughout the North American continent was both justified and inevitable.”>Manifest Destiny</span>.",
@@ -122,13 +122,13 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "A romantic depiction of the ideology of the Doctrine of Discovery and Manifest Destiny.",
-		    "thumbnail_image": "../assets/imgs/m1a1/thumbnail-source-7.jpg",
+		    "thumbnail_image": "../assets/imgs/m2a1/thumbnail-source-7.jpg",
 		    "question_text": "<p>What values about Manifest Destiny and the Doctrine of Discovery can be inferred from this painting?</p><p>What are the consequences of Manifest Destiny and the Doctrine of Discovery can be inferred from this photograph?</p>"
 		},
 		{
 			"id": 8,
 		    "title": "Bison Skulls",
-		    "image_url": "../assets/imgs/m1a1/med-source-8.jpg",
+		    "image_url": "../assets/imgs/m2a1/med-source-8.jpg",
 		    "image_caption": "",
 		    "image_credit": "Bison skulls, ca. 1890. Photograph courtesy of the Burton Historical Collection, Detroit Public Library, https://digitalcollections.detroitpubliclibrary.org/islandora/object/islandora%3A151477",
 		    "body": "Increased western settlement, a growing market for bison products, and the use of horses and firearms all contributed to the bison’s near extinction in the nineteenth century. By the late 1800s, the railroad industry had also taken its toll; bison were viewed as a barrier to advancing travel westward and this justified their decimation. They were also intentionally slaughtered to impact the major food source of Plains tribes.",
@@ -138,7 +138,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "Increased western settlement, a growing market for bison products, and the use of horses and firearms all contributed to the bison’s near extinction in the nineteenth century. By the late 1800s, the railroad industry had also taken its toll; bison were viewed as a barrier to advancing travel westward and this justified their decimation. They were also intentionally slaughtered to impact the major food source of Plains tribes.",
-		    "thumbnail_image": "../assets/imgs/m1a1/thumbnail-source-8.jpg",
+		    "thumbnail_image": "../assets/imgs/m2a1/thumbnail-source-8.jpg",
 		    "question_text": "<p>What values about Manifest Destiny and the Doctrine of Discovery can be inferred from this painting?</p><p>What are the consequences of Manifest Destiny and the Doctrine of Discovery can be inferred from this photograph?</p>"
 		}
 
