@@ -430,7 +430,7 @@ footer {
       .fish-row img {
         padding: 0; } }
     .fish-row img:hover {
-      background: red; }
+      background: url("selection-hover@2x.png") no-repeat; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }

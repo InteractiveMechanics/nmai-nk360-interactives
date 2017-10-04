@@ -83,7 +83,7 @@ Game = (function() {
       var isPlaying = $('#pause-icon').hasClass('icon-play');
 
       if(isPlaying) {
-        settings.pause = true;
+        settings.pause = false;
         $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
       } else {
         settings.pause = true;
