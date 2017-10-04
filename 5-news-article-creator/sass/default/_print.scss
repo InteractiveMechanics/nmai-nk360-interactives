@@ -3,7 +3,7 @@
     .activity-menu-wrapper,
     .fixed-bottom,
     .overlay,
-    footer,
+    #footer,
     #print,
     #static-ui,
     #navigation,
@@ -17,6 +17,7 @@
         background: white;
         overflow: auto;
         height: auto;
+        -webkit-print-color-adjust: exact;
     }
 
     #print-preview {
@@ -34,6 +35,39 @@
             background: white;
             padding: 0;
             z-index: 10;
+        }
+        .paper-preview-article {
+            max-height: 800px;
+    
+            > p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 1rem;
+    
+                p {
+                    font-size: 1rem;
+                    line-height: 1.4;
+                }
+                .blockquote-footer {
+                    font-size: 0.8rem;
+                    line-height: 1.4;
+                }
+            }
+    
+            figure {
+                .image-wrapper {
+                    img {
+                        max-height: 250px;
+                    }
+                }
+                figcaption {
+                    font-size: 0.65rem;
+                    margin-top: 5px;
+                }
+            }
         }
     }
 }

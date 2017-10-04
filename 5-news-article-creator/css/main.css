@@ -189,11 +189,11 @@ footer {
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../images/icon-info.svg); }
+    background-image: url("../shared/images/icon-info.svg"); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../images/icon-home.svg); }
+    background-image: url("../shared/images/icon-home.svg"); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../images/icon-print.svg); }
+    background-image: url("../shared/images/icon-print.svg"); }
   .activity-menu-wrapper .icon.disabled {
     opacity: 0.4;
     cursor: default; }
@@ -207,7 +207,7 @@ footer {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-image: url("../images/icon-zoom.svg");
+  background-image: url("../shared/images/icon-zoom.svg");
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -517,6 +517,14 @@ main {
       .slick-dots > li > button:focus {
         background: #7f99ad; }
 
+#print {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  color: white;
+  transition: 0.5s all;
+  z-index: 1001; }
+
 #print-preview {
   position: fixed;
   width: 100%;
@@ -536,16 +544,26 @@ main {
       font-weight: bold;
       font-style: italic;
       font-family: 'Times New Roman'; }
-    #print-preview .print-preview-container.traditional .paper-preview-byline {
+    #print-preview .print-preview-container.traditional .paper-preview-masthead {
       font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-date,
     #print-preview .print-preview-container.traditional .paper-preview-cost {
       font-family: 'Times New Roman', serif;
       font-style: italic; }
+    #print-preview .print-preview-container.traditional p {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional blockquote p {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional blockquote .blockquote-footer {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional figure figcaption {
+      font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional figure figcaption em {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.modern .paper-preview-headline {
       font-family: 'Open Sans Condensed';
       font-weight: bold; }
-    #print-preview .print-preview-container.modern .paper-preview-byline {
+    #print-preview .print-preview-container.modern .paper-preview-masthead {
       font-family: 'Open Sans', serif; }
     #print-preview .print-preview-container.modern .paper-preview-date,
     #print-preview .print-preview-container.modern .paper-preview-cost {
@@ -580,25 +598,52 @@ main {
     line-height: 1.1; }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
-      height: 76px; }
-  #print-preview .paper-preview-byline {
+      height: 76px;
+      overflow: visible; }
+  #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
     font-style: italic; }
   #print-preview .paper-preview-article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    position: relative; }
+    position: relative;
+    max-height: 1200px; }
     #print-preview .paper-preview-article > * {
-      width: 32%;
-      margin-right: 1%; }
-    #print-preview .paper-preview-article > .featured {
-      width: 66%;
-      margin-right: 0; }
+      width: 30%;
+      margin-right: 3%; }
     #print-preview .paper-preview-article > p:empty {
       display: none; }
+    #print-preview .paper-preview-article > p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      text-align: justify; }
+    #print-preview .paper-preview-article blockquote {
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      font-style: italic;
+      border: none; }
+      #print-preview .paper-preview-article blockquote p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 5px; }
+      #print-preview .paper-preview-article blockquote .blockquote-footer {
+        background: none;
+        padding: 0;
+        height: auto;
+        color: #9eb2c1; }
+    #print-preview .paper-preview-article figure .image-wrapper {
+      text-align: center;
+      background: #f1f2f2; }
+      #print-preview .paper-preview-article figure .image-wrapper img {
+        max-height: 400px;
+        max-width: 100%; }
+    #print-preview .paper-preview-article figure figcaption {
+      font-size: 0.8rem;
+      margin-top: 10px; }
   #print-preview .close-preview {
     width: 45px;
     height: 45px;
@@ -655,7 +700,7 @@ main {
   .activity-menu-wrapper,
   .fixed-bottom,
   .overlay,
-  footer,
+  #footer,
   #print,
   #static-ui,
   #navigation,
@@ -667,7 +712,8 @@ main {
   body {
     background: white;
     overflow: auto;
-    height: auto; }
+    height: auto;
+    -webkit-print-color-adjust: exact; }
 
   #print-preview {
     opacity: 1 !important;
@@ -682,6 +728,25 @@ main {
       position: relative;
       background: white;
       padding: 0;
-      z-index: 10; } }
+      z-index: 10; }
+    #print-preview .paper-preview-article {
+      max-height: 800px; }
+      #print-preview .paper-preview-article > p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        text-align: justify; }
+      #print-preview .paper-preview-article blockquote {
+        font-size: 1rem; }
+        #print-preview .paper-preview-article blockquote p {
+          font-size: 1rem;
+          line-height: 1.4; }
+        #print-preview .paper-preview-article blockquote .blockquote-footer {
+          font-size: 0.8rem;
+          line-height: 1.4; }
+      #print-preview .paper-preview-article figure .image-wrapper img {
+        max-height: 250px; }
+      #print-preview .paper-preview-article figure figcaption {
+        font-size: 0.65rem;
+        margin-top: 5px; } }
 
 /*# sourceMappingURL=main.css.map */

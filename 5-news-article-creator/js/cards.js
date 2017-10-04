@@ -149,10 +149,7 @@ Cards = (function() {
         updateImageCaptions(id, true);
     }
     var removeImageFromArray = function(id) {
-        var index = Cards.images.indexOf(id);
-        if (index > -1) {
-            Cards.images.splice(index, 1);
-        }
+        Cards.images.splice(id, 1);
         updateImageCaptions(id, false);
     }
 
@@ -189,12 +186,7 @@ Cards = (function() {
         Cards.quotes[id] = quote;
     }
     var removeQuoteFromArray = function(id) {
-        var index = Cards.quotes.indexOf();
-
-        console.log(index);
-        if (index > -1) {
-            Cards.quotes.splice(index, 1);
-        }
+        Cards.quotes.splice(id, 1);
     }
 
 
@@ -270,10 +262,9 @@ Cards = (function() {
         }
     }
     var updateImageCaptions = function(id, addTo) {
-        var captionTemplate = $.templates("#imageCaptionTemplate");
-        var captionTemplateHTMLOutput = captionTemplate.render(Cards.images[id]);
-
         if (addTo) {
+            var captionTemplate = $.templates("#imageCaptionTemplate");
+            var captionTemplateHTMLOutput = captionTemplate.render(Cards.images[id]);
             $("#image-captioning .card-slider-container").slick('slickAdd', captionTemplateHTMLOutput);
 
             if (Cards.imageCount > 0) {
