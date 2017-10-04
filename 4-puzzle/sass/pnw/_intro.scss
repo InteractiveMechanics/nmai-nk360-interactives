@@ -1,0 +1,12 @@
+.intro-card {
+	background: url('../../shared/images/pnw/text-card-pnw@2x.png');
+	background-size: 90%;
+	background-color: #eaeaea;
+	background-repeat: no-repeat;
+	background-position: center center;
+	.header-wrapper {
+		h1 {
+			font-family: $headline-accent;
+		}
+	}
+}

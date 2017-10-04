@@ -64,6 +64,16 @@ h4 {
       color: #311D18 !important;
       background-color: white;
       border-color: white; }
+  .btn.active {
+    border-color: #311D18;
+    background-color: #311D18;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #311D18;
+      border-color: #311D18;
+      opacity: 0.65; }
 
 .card {
   background: url("../../assets/card-np@2x.png");
@@ -76,5 +86,21 @@ h4 {
   background-size: 90%;
   background-position: center center;
   background-repeat: no-repeat; }
+
+.intro-card {
+  background: url("../../shared/images/np/text-card-np@2x.png");
+  background-size: 90%;
+  background-color: #eaeaea;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .intro-card .header-wrapper h1 {
+    font-family: "Open Sans", serif; }
+
+#complete-overlay .text-wrapper h1 {
+  font-family: "Open Sans", serif; }
+
+#puzzle {
+  background: url("../../shared/images/np/bkgr-np@2x.png");
+  background-size: cover; }
 
 /*# sourceMappingURL=theme-np.css.map */

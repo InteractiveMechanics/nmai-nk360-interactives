@@ -33,7 +33,7 @@ h4 {
 
 .header {
   max-width: 540px;
-  margin: 0 auto;
+  margin: 10px auto 0;
   background-image: url("../images/pnw/splash-04.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -47,8 +47,8 @@ h4 {
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
   .header h2 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
+    font-family: "Archer Pro", serif;
+    font-size: 0.8rem;
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
 
@@ -66,6 +66,16 @@ h4 {
       color: #2E3742 !important;
       background-color: white;
       border-color: white; }
+  .btn.active {
+    border-color: #2E3742;
+    background-color: #2E3742;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #2E3742;
+      border-color: #2E3742;
+      opacity: 0.65; }
 
 .card {
   background: url("../../assets/card-pnw@2x.png");
@@ -82,5 +92,29 @@ h4 {
 .modal-title {
   font-family: "Archer Pro", serif;
   font-size: 1.7em; }
+
+.dropped {
+  background: #a8bd46;
+  opacity: 0.6; }
+  .dropped:after {
+    content: url("../../shared/images/icon-checkmark.svg");
+    position: absolute;
+    left: 42%; }
+
+.intro-card {
+  background: url("../../shared/images/pnw/text-card-pnw@2x.png");
+  background-size: 90%;
+  background-color: #eaeaea;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .intro-card .header-wrapper h1 {
+    font-family: "Archer Pro", serif; }
+
+#complete-overlay .text-wrapper h1 {
+  font-family: "Archer Pro", serif; }
+
+#puzzle {
+  background: url("../../shared/images/pnw/bkgr-pnw@2x.png");
+  background-size: cover; }
 
 /*# sourceMappingURL=theme-pnw.css.map */

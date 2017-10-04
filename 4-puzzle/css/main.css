@@ -161,6 +161,16 @@ footer {
       background-color: white;
       border-color: white;
       text-shadow: none; }
+  .btn.active {
+    border-color: #4BADA6;
+    background-color: #4BADA6;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #4BADA6;
+      border-color: #4BADA6;
+      opacity: 0.65; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -254,12 +264,11 @@ footer {
   font-style: normal;
   src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 #intro {
-  background-color: orange;
   height: 100vh;
   width: 100vw; }
 
 #puzzle {
-  background: url("../../shared/images/pnw/bkgr-pnw@2x.png");
+  background: url("../../shared/images/default/bkgr-generic@2x.png");
   background-size: cover;
   height: 100vh;
   width: 100vw; }
@@ -292,7 +301,7 @@ footer {
   position: absolute;
   top: 10%;
   width: 33%;
-  padding: 25px; }
+  padding: 35px; }
   .intro-card .header-wrapper,
   .learning-points-card .header-wrapper {
     display: flex;
@@ -303,19 +312,17 @@ footer {
     .learning-points-card .header-wrapper h1 {
       font-size: 26px;
       line-height: 1.4; }
-    .intro-card .header-wrapper:after,
-    .learning-points-card .header-wrapper:after {
-      content: '';
-      border-bottom: 3px solid #ddd;
-      width: 33%;
-      bottom: -10px;
-      position: relative;
-      left: 33%; }
   .intro-card .text-wrapper h6,
   .learning-points-card .text-wrapper h6 {
     text-align: center;
     font-weight: 600;
-    margin-top: 50px; }
+    margin-top: 50px;
+    position: bottom;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: 0px;
+    padding: 0px 30px; }
 
 .subheader {
   padding-left: 0px; }
@@ -447,7 +454,7 @@ footer {
   position: absolute;
   top: 0px;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.65); }
+  background: rgba(0, 0, 0, 0.85); }
   #complete-overlay .text-wrapper {
     color: white;
     width: 40%;
@@ -463,7 +470,10 @@ footer {
       letter-spacing: 2px;
       margin-bottom: 40px; }
     #complete-overlay .text-wrapper p {
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      text-align: center;
+      line-height: 1.9;
+      font-weight: 300; }
   #complete-overlay .btn-wrapper button {
     margin: 15px;
     color: white; }
@@ -485,13 +495,15 @@ footer {
   padding: 20px; }
 
 #droppable-wrapper {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
-  left: 10%;
+  left: 15%;
   position: relative;
   margin-top: 35px;
-  z-index: 1052; }
+  z-index: 1052;
+  position: absolute;
+  bottom: 60px; }
 
 .droppable-widget {
   font-weight: 600;
@@ -499,26 +511,33 @@ footer {
   border: 3px solid white;
   width: 25%;
   text-align: center;
-  padding: 6px; }
-  .droppable-widget:hover {
+  padding: 6px;
+  background: transparent; }
+  .droppable-widget:hover, .droppable-widget:active, .droppable-widget:visited {
     border: 3px solid white; }
+  .droppable-widget:after {
+    content: ''; }
 
 .draggable-widget {
   transition: all 0.5s; }
 
 .ui-draggable-dragging,
-.ui-draggable .dragged {
-  transform: scale(0.65, 0.65) !important;
-  opacity: 0.9; }
+.dragged
+.answered {
+  transform: scale(0.5, 0.5) !important;
+  cursor: move; }
 
 .modal-backdrop {
-  opacity: 0.65 !important; }
+  opacity: 0.65 !important;
+  z-index: 1000;
+  position: fixed; }
 
 .modal {
   top: 20px; }
 
 .modal-content {
-  height: 550px; }
+  height: 550px;
+  cursor: move; }
 
 .modal-dialog {
   max-width: 400px; }
