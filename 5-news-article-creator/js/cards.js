@@ -80,6 +80,7 @@ Cards = (function() {
                 return '<a data-toggle="tooltip" title="' + title + '"></a>';
             }
         });
+
         Cards.editor = new Quill('#text-editor', {
             debug: false,
             theme: 'snow',
@@ -102,11 +103,18 @@ Cards = (function() {
         $(document).on('click tap', '.quote-step', toggleQuote);
         $(document).on('click tap', '.featured', toggleFeatured);
 
+        $(document).on('click tap', '#navigation .nav-arrow-right', function(){ sendAnalyticsEvent('Navigation', 'next'); });
+        $(document).on('click tap', '#navigation .nav-arrow-left', function(){ sendAnalyticsEvent('Navigation', 'previous'); });
+
         $(document).on('change', '.image-caption-text', setCaption);
 
         $('#masthead').on('change', setMasthead);
         $('#headline').on('change', setHeadline);
 
+        $('#step-by-step-cards').on('afterChange', function(event, slick, currentSlide){
+            var slide = $('.slick-track').children().eq(currentSlide).data('title');
+            sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
+        });
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();

@@ -14,6 +14,8 @@ Instructions = (function() {
         setTimeout(function() {
             $('#instructions').addClass('show');
         }, 100);
+
+        sendAnalyticsEvent('Instructions', 'open');
     }
     var closeInstructions = function() {
         var that = $(this);
@@ -21,6 +23,8 @@ Instructions = (function() {
         setTimeout(function() {
             that.addClass('hidden');
         }, 500);
+
+        sendAnalyticsEvent('Instructions', 'close');
     }
     
     return {

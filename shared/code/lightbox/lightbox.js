@@ -28,6 +28,10 @@ $(function() {
                 "subHtml": "<p>" + caption + " <em>" + credit + "</em></p>"
             }]
         });
+        $(this).on('onCloseAfter.lg',function(){
+            sendAnalyticsEvent('Lightbox', 'close');
+        });
         
+        sendAnalyticsEvent('Lightbox', 'open');
     });
 });

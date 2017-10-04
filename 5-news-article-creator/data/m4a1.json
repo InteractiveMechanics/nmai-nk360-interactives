@@ -11,47 +11,47 @@
     "paperImageModern": "./assets/header/masthead-modern.png",
     "images": [
         {
-            "thumb": "http://via.placeholder.com/350x300",
-            "url": "http://via.placeholder.com/350x300",
+            "thumb": "./assets/imgs/m4a1/sm-Muckleshoot_protest_.jpg",
+            "url": "./assets/imgs/m4a1/full-Muckleshoot_protest_.jpg",
             "caption": "Muckleshoot Protest",
             "credit": "Photograph by Larry Dion, 1966, courtesy of Seattle Times"
         },
         {
-            "thumb": "http://via.placeholder.com/200x600",
-            "url": "http://via.placeholder.com/200x600",
+            "thumb": "./assets/imgs/m4a1/sm-Fish-In.jpg",
+            "url": "./assets/imgs/m4a1/full-Fish-In.jpg",
             "caption": "Billy Frank, Jr. fishing the Nisqually River in 1973 in an act of civil disobedience.",
             "credit": "Photograph by Tom Thompson, NWIFC."
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-Marlon-Brando.jpg",
+            "url": "./assets/imgs/m4a1/full-Marlon-Brando.jpg",
             "caption": "Robert Satiacum and Marlon Brando, a well-known actor and celebrity, shortly before they were arrested in a 1964 protest.",
             "credit": "Photograph by Richard Heyza, courtesy of Seattle Times"
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-Indian-Voice-Cartoon.jpg",
+            "url": "./assets/imgs/m4a1/full-Indian-Voice-Cartoon.JPG",
             "caption": "Indian Civil Rights Hearings, November 1977.",
             "credit": "Cartoon by Indian Voice, Small Tribes Organization of Western Washington. <a href='http://depts.washington.edu/civilr/CRcommission.htm' target='_blank'>Source</a>"
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-Boldt-Effigy.jpg",
+            "url": "./assets/imgs/m4a1/full-Boldt-Effigy.jpg",
             "credit": "Photograph by staff photographer Matt McVay, Seattle Times, September 11, 1977"
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-nwifc-logo.jpg",
+            "url": "./assets/imgs/m4a1/full-nwifc-logo.jpg",
             "caption": "Seal of the Northwest Fisheries Commission."
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-CRITFC-Seal.jpg",
+            "url": "./assets/imgs/m4a1/full-CRITFC-Seal.jpg",
             "caption": "Seal of the Columbia Inter-Tribal Fish Commission."
         },
         {
-            "thumb": "path/to/image",
-            "url": "path/to/image",
+            "thumb": "./assets/imgs/m4a1/sm-Tulalip-Tribes.jpg",
+            "url": "./assets/imgs/m4a1/full-Tulalip-Tribes.jpg",
             "caption": "Tulalip youth drum during the First Salmon Ceremony, 2016.",
             "credit": "Photo courtesy of the NWIFC and the State of Our Watersheds Report from the Snohomish River Basin."
         }
