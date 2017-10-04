@@ -11,44 +11,44 @@
     "paperImageModern": "./assets/header/masthead-modern.png",
     "images": [
         {
-            "thumb": "../assets/imgs/m2a1/sm-American-Progress.jpg",
-            "url": "../assets/imgs/m2a1/full-American-Progress.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-American-Progress.jpg",
+            "url": "./assets/imgs/m2a1/full-American-Progress.jpg",
             "caption": "George A. Crofutt, “American Progress,” ca. 1873.",
             "credit": "Chromolithograph after an 1872 oil painting by John Gast, courtesy of the Library of Congress, LC-DIG-ppmsca-09855"
         },
         {
-            "thumb": "../assets/imgs/m2a1/sm-Bison_skull_pile-restored.jpg",
-            "url": "../assets/imgs/m2a1/full-Bison_skull_pile-restored.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-Bison_skull_pile-restored.jpg",
+            "url": "./assets/imgs/m2a1/full-Bison_skull_pile-restored.jpg",
             "caption": "Bison skulls, ca. 1890.",
             "credit": "Photograph courtesy of the Burton Historical Collection, Detroit Public Library."
         },
         {
-            "thumb": "../assets/imgs/m2a1/sm-LA-Purchase.jpg",
-            "url": "../assets/imgs/m2a1/full-LA-Purchase.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-LA-Purchase.jpg",
+            "url": "./assets/imgs/m2a1/full-LA-Purchase.jpg",
             "caption": "Map of the Louisiana Purchase Territory; 1903.",
             "credit": "Records of the Bureau of Land Management, Record Group 49."
         },
         {
-            "thumb": "../assets/imgs/m2a1/sm-De-Smet-Map.jpg",
-            "url": "../assets/imgs/m2a1/full-De-Smet-Map.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-De-Smet-Map.jpg",
+            "url": "./assets/imgs/m2a1/full-De-Smet-Map.jpg",
             "caption": "Map of the upper Great Plains and Rocky Mountains region.",
             "credit": "Map by Pierre-Jean De Smet, 1801-1873. Library of Congress, Geography and Map Division."
         },
         {
-            "thumb": "../assets/imgs/m2a1/sm-Red-Cloud.jpg",
-            "url": "../assets/imgs/m2a1/full-Red-Cloud.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-Red-Cloud.jpg",
+            "url": "./assets/imgs/m2a1/full-Red-Cloud.jpg",
             "credit": "Photo courtesy of the Library of Congress. LOT 12885.",
             "caption": "Portrait of Red Cloud, 1880-1909."
         },
         {
-            "thumb": "../assets/imgs/m2a1/sm-Custer's-Expedition-to-the-Black-Hills.jpg",
-            "url": "../assets/imgs/m2a1/full-Custer's-Expedition-to-the-Black-Hills.jpg",
+            "thumb": "./assets/imgs/m2a1/sm-Custer's-Expedition-to-the-Black-Hills.jpg",
+            "url": "./assets/imgs/m2a1/full-Custer's-Expedition-to-the-Black-Hills.jpg",
             "credit": "Custer’s Black Hills Expedition in Castle Creek Valley, 1874. Photograph by William H. Illingworth, courtesy of the National Anthropological Archives : NAA Photo Lot 2000-12",
             "caption": "Custer’s Black Hills Expedition in Castle Creek Valley, 1874."
         },
         {
-            "thumb": "../assets/imgs/sm-Ft.-Laramie.jpg",
-            "url": "../assets/imgs/full-Ft.-Laramie.jpg",
+            "thumb": "./assets/imgs/sm-Ft.-Laramie.jpg",
+            "url": "./assets/imgs/full-Ft.-Laramie.jpg",
             "credit": "Photo by Alexander Gardner, 1868. NMAI P01259",
             "caption": "U S. army commissioners in council with Native leaders at Fort Laramie."
         }

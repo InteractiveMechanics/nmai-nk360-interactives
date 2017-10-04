@@ -103,8 +103,8 @@ Cards = (function() {
         $(document).on('click tap', '.quote-step', toggleQuote);
         $(document).on('click tap', '.featured', toggleFeatured);
 
-        $(document).on('click tap', '.nav-arrow-right', function(){ sendAnalyticsEvent('Navigation', 'next'); });
-        $(document).on('click tap', '.nav-arrow-left', function(){ sendAnalyticsEvent('Navigation', 'previous'); });
+        $(document).on('click tap', '#navigation .nav-arrow-right', function(){ sendAnalyticsEvent('Navigation', 'next'); });
+        $(document).on('click tap', '#navigation .nav-arrow-left', function(){ sendAnalyticsEvent('Navigation', 'previous'); });
 
         $(document).on('change', '.image-caption-text', setCaption);
 
