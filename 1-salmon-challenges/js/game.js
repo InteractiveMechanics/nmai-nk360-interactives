@@ -426,7 +426,9 @@ Game = (function() {
       settings.fishSelection = fish.toLowerCase();
 
       $('.fish-row .col').addClass('faded');
+      $('.fish-row .col').removeClass('selected');
       _this.removeClass('faded');
+      _this.addClass('selected');
 
       $('#close-select-fish').removeClass('faded');
       $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);

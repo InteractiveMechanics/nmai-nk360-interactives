@@ -343,30 +343,39 @@ footer {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
+
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
+
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
+
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
+
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
+
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
+
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
+
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
+
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
+
 .hotspot {
   width: 87px;
   height: 87px;
@@ -421,7 +430,11 @@ footer {
       .fish-row img {
         padding: 0; } }
     .fish-row img:hover {
-      background: url("selection-hover@2x.png") no-repeat; }
+      background: url("../assets/selection-hover@2x.png") no-repeat;
+      background-size: contain; }
+  .fish-row .selected img {
+    background: url("../assets/selection-active@2x.png") no-repeat;
+    background-size: contain; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -814,5 +827,3 @@ footer {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
-
-/*# sourceMappingURL=main.css.map */
