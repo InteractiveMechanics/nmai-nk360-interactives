@@ -660,6 +660,13 @@ Game = (function() {
           //$('.solution-text').text('Lose 1 fish');
         }
 
+        if(!add_fish && !add_fish) {
+          $(this).addClass('wrong');
+          $('.answer-true').addClass('correct');
+
+          $('.quiz-detail').text(result);
+        }
+
         $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
