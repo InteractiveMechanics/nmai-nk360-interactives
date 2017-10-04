@@ -6,7 +6,7 @@
     width: inherit;
 
     > .slick-list {
-        overflow: visible;
+        padding-bottom: 20px;
     }
     > .slick-dots {
         position: fixed;
@@ -24,6 +24,10 @@
             background: white;
             padding: 40px;
             box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
+
+            @media screen and ($screen-ltmd) and ($screen-portrait) {
+                margin-top: 180px;
+            }
 
             &:after {
                 content: '';
@@ -51,6 +55,13 @@
             &.step-container-lg {
                 width: 960px;
                 padding: 40px 50px;
+
+                @media screen and ($screen-ltlg) {
+                    width: 800px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    width: 540px;
+                }
             }
         }
     }
@@ -122,6 +133,10 @@
                 background-image: url('../assets/icon-arrow-left.svg');
                 cursor: pointer;
 
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    left: 0;
+                }
+
                 &:not(.slick-disabled):hover, &:not(.slick-disabled):active, &:not(.slick-disabled):focus {
                     left: 10px;
                     opacity: 0.85;
@@ -132,6 +147,10 @@
                 right: 20px;
                 background-image: url('../assets/icon-arrow-right.svg');
                 cursor: pointer;
+
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    right: 0;
+                }
 
                 &:not(.slick-disabled):hover, &:not(.slick-disabled):active, &:not(.slick-disabled):focus {
                     right: 10px;
@@ -154,6 +173,14 @@
                 border: 2px solid black;
                 max-height: 400px;
                 width: auto;
+
+                @media screen and ($screen-ltlg) {
+                    max-height: 200px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    max-height: 320px;
+                    max-width: 280px;
+                }
             }
 
             &:before {
@@ -201,6 +228,13 @@
                 border: 2px solid black;
                 max-height: 240px;
                 width: auto;
+
+                @media screen and ($screen-ltlg) {
+                    max-height: 180px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    max-height: 240px;
+                }
             }
 
             &:before {
@@ -247,8 +281,7 @@
                 &.active {
                     background-image: url('../assets/icon-star-fill.svg');
                 }
-            
-}
+            }
             .image-caption-form {
                 display: inline-block;
                 padding: 20px;
@@ -260,6 +293,13 @@
                     height: 80px;
                     margin: 0;
                     display: inline-block;
+                        
+                    @media screen and ($screen-ltlg) {
+                        height: 60px;
+                    }
+                    @media screen and ($screen-ltmd) and ($screen-portrait) {
+                        height: 80px;
+                    }
                 }
             }
         }

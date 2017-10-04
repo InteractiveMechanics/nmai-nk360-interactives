@@ -15,14 +15,14 @@ Print = (function() {
     var openPrintPreview = function() {
         buildPrintView();
         $('#print-preview').removeClass('hidden');
-        $('.print-preview-btn').addClass('hidden');
+        $('#static-ui .print-preview-btn').addClass('hidden');
         setTimeout(function() {
             $('#print-preview').addClass('show');
         }, 100);
     }
     var closePrintPreview = function() {
         $('#print-preview').removeClass('show');
-        $('.print-preview-btn').removeClass('hidden');
+        $('#static-ui .print-preview-btn').removeClass('hidden');
         setTimeout(function() {
             $('#print-preview').addClass('hidden');
         }, 500);

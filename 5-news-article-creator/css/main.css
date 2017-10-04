@@ -94,10 +94,9 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  height: 100%;
   color: white;
   z-index: 1000;
   overflow: auto; }
@@ -220,7 +219,8 @@ footer {
 html,
 body {
   background: url("../assets/background@2x.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 main {
   position: absolute;
@@ -234,6 +234,12 @@ main {
   bottom: 80px;
   right: 30px;
   color: white; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    #static-ui .print-preview-btn {
+      bottom: 120px;
+      right: 50%;
+      width: 300px;
+      margin-right: -150px; } }
 
 .drop-letter-quote {
   font-size: 4.8rem;
@@ -263,7 +269,7 @@ main {
   height: inherit;
   width: inherit; }
   #step-by-step-cards > .slick-list {
-    overflow: visible; }
+    padding-bottom: 20px; }
   #step-by-step-cards > .slick-dots {
     position: fixed;
     bottom: 70px; }
@@ -277,6 +283,9 @@ main {
       background: white;
       padding: 40px;
       box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35); }
+      @media screen and (max-width: 991px) and (orientation: portrait) {
+        #step-by-step-cards .step .step-container {
+          margin-top: 180px; } }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
@@ -298,6 +307,12 @@ main {
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px;
         padding: 40px 50px; }
+        @media screen and (max-width: 1199px) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 800px; } }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 540px; } }
   #step-by-step-cards .card-slider {
     position: relative; }
     #step-by-step-cards .card-slider .card-slider-container {
@@ -346,6 +361,9 @@ main {
         left: 20px;
         background-image: url("../assets/icon-arrow-left.svg");
         cursor: pointer; }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left {
+            left: 0; } }
         #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):hover, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):active, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):focus {
           left: 10px;
           opacity: 0.85;
@@ -354,6 +372,9 @@ main {
         right: 20px;
         background-image: url("../assets/icon-arrow-right.svg");
         cursor: pointer; }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right {
+            right: 0; } }
         #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):hover, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):active, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):focus {
           right: 10px;
           opacity: 0.85;
@@ -365,6 +386,13 @@ main {
     border: 2px solid black;
     max-height: 400px;
     width: auto; }
+    @media screen and (max-width: 1199px) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-height: 200px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-height: 320px;
+        max-width: 280px; } }
   #step-by-step-cards .step-images .step-container-inner:before {
     content: '';
     position: absolute;
@@ -403,6 +431,12 @@ main {
       border: 2px solid black;
       max-height: 240px;
       width: auto; }
+      @media screen and (max-width: 1199px) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-height: 180px; } }
+      @media screen and (max-width: 991px) and (orientation: portrait) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-height: 240px; } }
     #step-by-step-cards .step-image-captions .image-caption-container:before {
       content: '';
       position: absolute;
@@ -449,6 +483,12 @@ main {
         height: 80px;
         margin: 0;
         display: inline-block; }
+        @media screen and (max-width: 1199px) {
+          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
+            height: 60px; } }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
+            height: 80px; } }
   #step-by-step-cards .step-quotes .quote-step p {
     padding: 20px 30px; }
     #step-by-step-cards .step-quotes .quote-step p small {
@@ -524,6 +564,12 @@ main {
   color: white;
   transition: 0.5s all;
   z-index: 1001; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    #print {
+      bottom: 80px;
+      right: 50%;
+      width: 300px;
+      margin-right: -150px; } }
 
 #print-preview {
   position: fixed;
@@ -540,12 +586,20 @@ main {
     background: white;
     padding: 50px;
     z-index: 10; }
+    @media screen and (max-width: 1199px) {
+      #print-preview .print-preview-container {
+        margin: 100px auto 175px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #print-preview .print-preview-container {
+        width: 720px; } }
     #print-preview .print-preview-container.traditional .paper-preview-headline {
       font-weight: bold;
       font-style: italic;
       font-family: 'Times New Roman'; }
     #print-preview .print-preview-container.traditional .paper-preview-masthead {
       font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional .paper-preview-masthead .byline {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-date,
     #print-preview .print-preview-container.traditional .paper-preview-cost {
       font-family: 'Times New Roman', serif;
@@ -658,6 +712,11 @@ main {
     transition: 0.5s all; }
     #print-preview .close-preview:hover, #print-preview .close-preview:focus, #print-preview .close-preview:active {
       opacity: 0.65; }
+    @media screen and (max-width: 1199px) {
+      #print-preview .close-preview {
+        top: -60px;
+        right: 0;
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); } }
 
 .form-control {
   padding: 1rem 1.25rem;
@@ -682,6 +741,9 @@ main {
   background: white;
   border-radius: 0 0 6px 6px;
   height: 200px; }
+  @media screen and (max-width: 1199px) {
+    .ql-container.ql-snow {
+      height: 150px; } }
 
 .ql-editor {
   font-size: 1.0rem; }

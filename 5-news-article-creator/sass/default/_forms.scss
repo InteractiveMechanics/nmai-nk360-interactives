@@ -25,6 +25,10 @@
     background: white;
     border-radius: 0 0 6px 6px;
     height: 200px;
+
+    @media screen and ($screen-ltlg) {
+        height: 150px;
+    }
 }
 .ql-editor {
     font-size: 1.0rem;
