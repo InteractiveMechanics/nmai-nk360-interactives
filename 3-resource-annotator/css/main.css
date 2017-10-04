@@ -93,10 +93,9 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  height: 100%;
   color: white;
   z-index: 1000;
   overflow: auto; }
@@ -188,11 +187,11 @@ footer {
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../images/icon-info.svg); }
+    background-image: url("../shared/images/icon-info.svg"); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../images/icon-home.svg); }
+    background-image: url("../shared/images/icon-home.svg"); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../images/icon-print.svg); }
+    background-image: url("../shared/images/icon-print.svg"); }
   .activity-menu-wrapper .icon.disabled {
     opacity: 0.4;
     cursor: default; }
@@ -203,10 +202,18 @@ footer {
   border-radius: 99px;
   margin: 10px 5px;
   display: inline-block;
-  background-color: red;
   position: absolute;
   bottom: 10px;
-  right: 10px; }
+  right: 10px;
+  background-image: url("../shared/images/icon-zoom.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  transition: 0.5s all; }
+  [data-gallery]:focus, [data-gallery]:hover, [data-gallery]:active {
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
 body {
   background: url("../images/pnw/bkgr-pnw@2x.png"); }
@@ -649,3 +656,5 @@ small, .small {
   background: url(../assets/text-card-pnw@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
+
+/*# sourceMappingURL=main.css.map */
