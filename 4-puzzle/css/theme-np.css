@@ -81,20 +81,37 @@ h4 {
   background-color: #eaeaea; }
 
 .modal-content {
-  background: url("../../shared/images/pnw/text-card-pw@2x.png");
+  background: url("../../shared/images/np/text-card-np@2x.png");
   background-color: white;
   background-size: 90%;
   background-position: center center;
   background-repeat: no-repeat; }
 
+.modal-title {
+  font-size: 30px;
+  margin-top: 25px; }
+
+.modal-footer-message {
+  bottom: 50px; }
+
+.dropped {
+  background: #677c4a;
+  opacity: 0.6; }
+  .dropped:after {
+    content: url("../../shared/images/icon-checkmark.svg");
+    position: absolute;
+    left: 42%; }
+
 .intro-card {
   background: url("../../shared/images/np/text-card-np@2x.png");
-  background-size: 90%;
+  background-size: 95%;
   background-color: #eaeaea;
   background-repeat: no-repeat;
   background-position: center center; }
   .intro-card .header-wrapper h1 {
-    font-family: "Open Sans", serif; }
+    font-family: "Geared Slab", serif;
+    font-size: 30px;
+    margin-top: 20px; }
 
 #complete-overlay .text-wrapper h1 {
   font-family: "Open Sans", serif; }

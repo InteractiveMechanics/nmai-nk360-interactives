@@ -6,7 +6,7 @@
 }
 
 .puzzle-img-wrapper,
-.lg-wrapper {
+.lg-puzzle-wrapper {
 	position: relative;
 	left: 30%;
     width: 40%;
@@ -188,12 +188,9 @@
 .zoom-icon {
 	width: 42px;
 	height: 42px;
-	border-radius: 50%;
 	position: absolute;
 	right: 15px;
     bottom: 15px;
-    border: 1px solid grey;
-    background: grey;
 }
 
 .read-more {
@@ -201,4 +198,6 @@
     display: flex;
     justify-content: center;
     padding: 20px;
+    position: absolute;
+    bottom: 60px;
 }

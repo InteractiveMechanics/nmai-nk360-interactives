@@ -101,13 +101,16 @@ h4 {
     position: absolute;
     left: 42%; }
 
-.intro-card {
+.intro-card,
+.learning-points-card {
   background: url("../../shared/images/pnw/text-card-pnw@2x.png");
   background-size: 90%;
   background-color: #eaeaea;
   background-repeat: no-repeat;
-  background-position: center center; }
-  .intro-card .header-wrapper h1 {
+  background-position: center center;
+  z-index: 2; }
+  .intro-card .header-wrapper h1,
+  .learning-points-card .header-wrapper h1 {
     font-family: "Archer Pro", serif; }
 
 #complete-overlay .text-wrapper h1 {

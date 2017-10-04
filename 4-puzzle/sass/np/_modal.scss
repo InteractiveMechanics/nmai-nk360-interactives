@@ -1,7 +1,26 @@
 .modal-content {
-	background: url('../../shared/images/pnw/text-card-pw@2x.png');
+	background: url('../../shared/images/np/text-card-np@2x.png');
 	background-color: white;
 	background-size: 90%;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+
+.modal-title {
+	font-size: 30px;
+    margin-top: 25px;
+}
+
+.modal-footer-message {
+	bottom: 50px;
+}
+
+.dropped {
+	background: $primary;
+    opacity: 0.6;
+    &:after {
+    	content: url('../../shared/images/icon-checkmark.svg');
+    	position: absolute;
+    	left: 42%;
+	}
 }

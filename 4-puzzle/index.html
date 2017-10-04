@@ -164,10 +164,12 @@
             </div>  
             
             <div class="puzzle-img-wrapper">    
-                <a href="{{:Image}}" data-sub-html="#caption" class="lg-link disabled-link">
-                    <img class="puzzle-img" src="{{:Image}}">
-                    <span class="zoom-icon hidden"></span>
-                </a>
+                <div class="lg-wrapper-puzzle">
+                    <a href="{{:Image}}" data-sub-html="#caption" class="lg-link disabled-link">
+                        <img class="puzzle-img" src="{{:Image}}" alt="" title="">
+                        <span class="zoom-icon hidden"><img src="../shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                    </a>
+                </div>
             
 
                 {{for Cards}}
@@ -228,8 +230,19 @@
                     {{/if}}
 
                     {{if image}}
-                    <img class="modal-img" src="{{:image}}" alt="">
-                    <small class="modal-caption">{{:caption}}<small>
+
+                    <div id="modal-img-caption" style="display:none">
+                        <h4>{{:Caption}}</p>
+                    </div> 
+
+                    <div class="lg-wrapper-card">
+                        <a href="{{:fullimage}}" data-sub-html="#modal-image-caption" class="lg-link">
+                            <img class="modal-img" src="{{:image}}" alt="">
+                            <span class="zoom-icon modal-zoom"><img src="../shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                        </a>
+                    </div>
+                        
+                    <small class="modal-caption">{{:caption}}</small>
                     {{/if}}
 
                     <p class="modal-footer-message">Drag the card to the appropriate theme below</p>
@@ -293,6 +306,10 @@
             </div>
 
         </div>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="../shared/images/icon-close.svg" alt="close" title="close"></span>
+        </button>
 
     </script>
 
