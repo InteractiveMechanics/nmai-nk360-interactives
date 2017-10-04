@@ -252,7 +252,15 @@
     cursor:pointer;
 
     &:hover {
-      background:red;
+      background:url('../assets/selection-hover@2x.png') no-repeat;
+      background-size:contain;
+    }
+  }
+
+  .selected {
+    img {
+      background:url('../assets/selection-active@2x.png') no-repeat;
+      background-size:contain;
     }
   }
 
