@@ -200,22 +200,6 @@
         <h1>Privileges & Responsibilities</h1>
       </header>
 
-        <!--<header class="text-center">
-            <p class="hidden-xs">
-                NORTHERN PLAINS HISTORY & CULTURE: CROW NATION
-            </p>
-
-            <h1>
-                <span class="dotted" data-toggle="tooltip"  title="Privileges are special benefits.">
-                  Privileges
-                </span>
-                 & 
-                 <span class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties.">
-                  Responsibilities
-                </span>
-            </h1>
-        </header>-->
-
         <section class="print-view">
 
           <div class="row">
@@ -341,49 +325,7 @@
 
                     <div class="content-height scrollbar-design">
 
-                      <h3>
-                        <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
-                      </h3> 
-
-                      <div class="photo-container" style="display:block;">
-                          <img src="http://via.placeholder.com/640x320" class="img-fluid" />
-                          <div data-gallery data-gallery-image="http://via.placeholder.com/1280x480" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
-                      </div>
-
-                      <div class="info">
-
-                        <p class="copyright">
-                            Raymond J. DeMallie, ed., <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt </em> (Lincoln: University of Nebraska Press, 1984), 83.
-                        </p>
-
-                        <h3 class="yellow-underline">
-                          Original Text
-                        </h3>
-
-                        <p class="original-text-info">
-                          Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                          <br /><br /> However, these two nations understood the bundle's import, which included a pipe.
-                        </p>
-
-
-                        <p class="original-text-info">
-                           After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                          <br /><br /> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
-                        </p>
-
-                      </div>
-
-                      <div id="paraphrased">
-                        <h3 class="yellow-underline">
-                          Paraphrased Text
-                        </h3>
-
-                        <p class="original-text-info">
-                          After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-                        </p>
-                      </div>
+                      
 
                     </div>
 
@@ -477,6 +419,54 @@
         </div>
     </script>
 
+    <script id="itemRightTemplate" type="text/x-jsrender">
+
+        {{if paraphrase}}
+        <h3>
+          <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
+        </h3> 
+        {{/if}}
+
+        {{if image_url}}
+        <div class="photo-container" style="display:block;">
+            <img src="{{:image_url}}" class="img-fluid" />
+            <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}"></div>
+        </div>
+        {{/if}}
+
+        <div class="info">
+
+          {{if image_credit}}
+          <p class="copyright">
+              {{:image_credit}}
+          </p>
+          {{/if}}
+
+          {{if body}}
+          <h3 class="yellow-underline">
+            Original Text
+          </h3>
+
+          <p class="original-text-info">
+            {{:body}}
+          </p>
+          {{/if}}
+
+        </div>
+
+        {{if paraphrase}}
+          <div id="paraphrased">
+            <h3 class="yellow-underline">
+              Paraphrased Text
+            </h3>
+
+            <p class="original-text-info">
+              {{:paraphrase}}
+            </p>
+          </div>
+        {{/if}}
+    </script>
+
     <script id="printListItems" type="text/x-jsrender">
 
       {{for themes}}
@@ -500,7 +490,7 @@
             
             <div class="top">
               <div class="photo">
-                  <img src="{{:image_url}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
+                  <img src="{{:thumbnail_image}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
               </div>
 
               <div class="photo-overlay"></div>
@@ -561,7 +551,7 @@
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m1a1.json';</script>
+    <script>var jsondata = './data/m1a2.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

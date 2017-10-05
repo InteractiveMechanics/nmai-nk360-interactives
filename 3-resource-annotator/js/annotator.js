@@ -402,9 +402,9 @@ Annotator = (function() {
       var itemLeftTemplateOutput = itemLeftTemplate.render(objItem);
       $("#item-left").html(itemLeftTemplateOutput);
 
-      /*var itemRightTemplate = $.templates("#itemRightTemplate");
+      var itemRightTemplate = $.templates("#itemRightTemplate");
       var itemRightTemplateOutput = itemRightTemplate.render(objItem);
-      $("#item-right").html(itemRightTemplateOutput);*/
+      $(".content-height").html(itemRightTemplateOutput);
 
       if(objItem) {
         $('.annotation-slider-screen').addClass('animated fadeOut');
