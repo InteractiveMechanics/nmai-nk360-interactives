@@ -352,30 +352,39 @@ body .image-credit {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
+
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
+
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
+
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
+
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
+
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
+
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
+
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
+
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
+
 .hotspot {
   width: 87px;
   height: 87px;
@@ -398,10 +407,13 @@ body .image-credit {
 @keyframes stretch {
   0% {
     transform: scale(1); }
+
   50% {
     transform: scale(0.8); }
+
   100% {
     transform: scale(1); } }
+
 #select-fish {
   position: fixed;
   width: 100%;
@@ -560,6 +572,8 @@ body .image-credit {
 
 .slider-wrapper .slick-dots {
   bottom: -155px; }
+.slider-wrapper .overlay {
+  z-index: 20; }
 
 .intro-slider-wrapper .overlay {
   z-index: 20; }
@@ -756,7 +770,7 @@ body .image-credit {
   outline: 0 !important; }
 
 .slider-card {
-  background: url(../assets/text-card-pnw@2x.png) white !important;
+  background: url(../shared/images/text-card-pnw@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
@@ -985,5 +999,3 @@ body .image-credit {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
-
-/*# sourceMappingURL=main.css.map */

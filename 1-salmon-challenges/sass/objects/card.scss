@@ -2,6 +2,10 @@
 	.slick-dots {
 		bottom:-155px;
 	}
+
+	.overlay {
+		z-index:20;
+	}
 }
 
 .intro-slider-wrapper {
@@ -288,7 +292,7 @@
 }
 
 .slider-card {
-	background: url(../assets/text-card-pnw@2x.png) white !important;
+	background: url(../shared/images/text-card-pnw@2x.png) white !important;
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
 
