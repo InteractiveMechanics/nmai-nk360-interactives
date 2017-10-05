@@ -48,7 +48,7 @@ Puzzle = (function() {
     
 
     var buildGame = function() {
-        
+
         $('.lg-wrapper-card').lightGallery({
             controls: true
         });
@@ -110,13 +110,13 @@ Puzzle = (function() {
 
 
                     } else {
+                        setPopover();
                         ui.draggable.draggable('option', 'revert', 'valid');
                         $(this).css('border', '3px solid white');
-                        $(this).tooltip('show');
-                        setTimeout(function() {  
-                            $('.droppable-widget').css('border', '3px solid white').tooltip('hide');
-                        }, 2000);
-
+                        $(this).popover('show');
+                        $('.droppable-widget').tooltip('hide');
+                        hidePopoverTimeout();
+                       
                        
                     }
             
@@ -126,16 +126,29 @@ Puzzle = (function() {
     }
 
 
-    var droppableTimeout; 
+    var droppableTimeout;
+    var popoverTimeout; 
    
 
     var hideDroppablesTimeout = function() {
         droppableTimeout = setTimeout(function() { hideDroppables(); }, 1000);
     }
 
+    var hidePopoverTimeout = function() {
+        popoverTimeout = setTimeout(function() { hidePopover(); }, 3000);
+    }
+
   
     var showModal = function() {
+        var numberDropped = $('.answered').length;
+        var numberCards = $('.card').length
+        console.log(numberDropped);
+        if (numberDropped < numberCards) {
+        showTooltip();
+        showModalCard();
         clearTimeout(droppableTimeout);
+        clearTimeout(hidePopoverTimeout);
+        hidePopover();
         resetDroppables();
         $('#droppable-wrapper').removeClass('hidden fadeOut').addClass('animated fadeIn');
         var id = $(this).attr('data-card');
@@ -149,6 +162,7 @@ Puzzle = (function() {
         //var id = $(this).attr('data-card');
         updateModal(id);
         $('#card-modal').modal('show').removeClass('fadeOut').addClass('animated fadeIn');
+        }
     }
 
 
@@ -185,6 +199,17 @@ Puzzle = (function() {
         console.log('hide droppables is running');
         $('#droppable-wrapper').removeClass('fadeIn').addClass('animated fadeOut');
         $('.droppable-widget').tooltip('hide');
+        clearTimeout(hidePopoverTimeout);
+        hidePopover();
+    }
+
+    
+    var hideModalCard = function() {
+        $('.modal-dialog').addClass('hidden animated fadeOut').removeClass('fadeIn');
+    } 
+
+    var showModalCard = function() {
+        $('.modal-dialog').removeClass('hidden fadeOut').addClass('fadeIn');
     }
 
     var animateDroppables = function() {
@@ -198,8 +223,34 @@ Puzzle = (function() {
         }
     }
 
-    
+    var showTooltip = function() {
+        $('.droppable-widget').tooltip({
+            trigger: 'hover focus'
+        });
+    }
 
+    var hideTooltip = function() {
+         $('.droppable-widget').tooltip('hide');
+    }
+
+    var setPopover = function() {
+        $('.droppable-widget').attr('data-toggle', 'popover');
+        $('.popover-title').html('');
+        $('.droppable-widget').popover({
+            placement: 'top',
+            trigger: 'manual'
+        })
+    }
+
+    var showPopover = function() {
+        $('.droppable-widget').popover('show');
+    }
+
+    var hidePopover = function() {
+        $('.droppable-widget').popover('hide');
+    }
+
+   
 
 
     var bindEvents = function() {
@@ -209,6 +260,8 @@ Puzzle = (function() {
         $(document).on('click tap', '#learning-points', hideLearningPts);
         $(document).on('hidden.bs.modal', hideDroppables);
         $(document).on('shown.bs.modal', animateDroppables);
+        $(document).on('onAfterOpen.lg', hideDroppables);
+        $(document).on('onCloseAfter.lg', showModal);
     }
 
     

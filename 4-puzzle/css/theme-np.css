@@ -102,6 +102,14 @@ h4 {
     position: absolute;
     left: 42%; }
 
+.popover {
+  background-color: #73cce4;
+  color: white; }
+
+.popover.popover-top::after,
+.popover.bs-tether-element-attached-bottom::after {
+  border-top-color: #73cce4; }
+
 .intro-card {
   background: url("../../shared/images/np/text-card-np@2x.png");
   background-size: 95%;

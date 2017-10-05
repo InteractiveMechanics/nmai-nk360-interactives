@@ -273,6 +273,20 @@ footer {
   height: 100vh;
   width: 100vw; }
 
+.icon-definition {
+  fill: white;
+  height: 18px;
+  position: relative;
+  bottom: -2px;
+  left: -11px; }
+
+[data-gallery] {
+  background: url("../../shared/images/icon-zoom.svg");
+  background-repeat: no-repeat; }
+
+.popover-title {
+  display: none; }
+
 #intro,
 #learning-points {
   background: #ddd;
