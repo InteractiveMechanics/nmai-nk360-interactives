@@ -11,27 +11,40 @@ Explore = (function() {
     //TODO account for window resize
     var advancePrevBtn = function() {
         event.preventDefault();
-        var timelineWidth = $('.timeline-wrapper').width();
-        var scrollWidthPrev = $('.timeline-wrapper').scrollLeft();
+        var timelineLeft = $('.timeline-wrapper').position().left;
         var windowWidth = $(window).width();
-        if (scrollWidthPrev > 0) {
+        if (timelineLeft < 0 && -timelineLeft >= windowWidth) {
             $('.timeline-wrapper').animate({
-                scrollLeft: "-=" + windowWidth + "px"
+                left: "+=" + windowWidth 
+            }, "fast");
+        } else {
+            $('.timeline-wrapper').animate({
+                left: "+=" + -timelineLeft 
             }, "fast");
         }
-        console.log("prev scrollWidth " + scrollWidthPrev);
+        console.log("left " + timelineLeft);
     }
 
     var advanceNextBtn = function() {
         event.preventDefault();
-        var translateX = $('.timeline-wrapper').css(); 
         var windowWidth = $(window).width(); // 1397px
-        if (scrollWidthPrev < Detail.timelineWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
+        var timelineLeft = $('.timeline-wrapper').position().left;
+        var leftToScroll = Detail.timelineWidth + timelineLeft - windowWidth;
+       
+        if (windowWidth < Detail.timelineWidth && leftToScroll >= windowWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
+            console.log(Detail.timelineWidth + " and " + timelineLeft + " left to Scroll is " + leftToScroll);
             $('.timeline-wrapper').animate({
-                transformX: "+=" + windowWidth + "px"
+                left: "-=" + windowWidth 
             }, "fast");
+        } else if (leftToScroll > 0) {
+            console.log(timelineLeft);
+            $('.timeline-wrapper').animate({
+                left: "-=" + leftToScroll
+            }, "fast");
+        } else {
+
         }
-        console.log("prev scrollWidth " + scrollWidthPrev);
+        //console.log("translateX is" + translateX);
        
         
     }
