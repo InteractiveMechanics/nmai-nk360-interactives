@@ -562,6 +562,11 @@ Game = (function() {
         $('.slider').on('afterChange', function(e, slick, currentSlide){
             if(slick.slideCount == currentSlide + 1) {
               $('.close-icon').removeClass('faded');
+              $('.slick-next').hide();
+            }
+
+            if(slick.slideCount > currentSlide + 1) {
+              $('.slick-next').show();
             }
         });
 
@@ -632,7 +637,12 @@ Game = (function() {
               if(slick.slideCount == currentSlide + 1) {
                 
                 $('.close-icon').removeClass('faded');
+                $('.slick-next').hide();
 
+              }
+
+              if(slick.slideCount > currentSlide + 1) {
+                $('.slick-next').show();
               }
           });
 
