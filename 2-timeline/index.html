@@ -24,8 +24,9 @@
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
+
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -96,23 +97,24 @@
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
+
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
             <h4 class="all-caps letter-spacing-1">How to Play</h4>
             <h1>Drag-and-Drop Timeline</h1>
             <div class="row justify-content-md-center">
                 <div class="col">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/instructions-01@2x.png" alt="drag and drop timlijne entries into each segment of the timeline into their appopriate order" title="Drag-and-drop timeline entries for each segment of the timeline into their appropriate order" />
                     <h2>Complete the Timeline</h2>
-                    <p>Drag-and-drop timeline entries for each segment of the timeline into their appropriate order.</p>
+                    <p>Drag and drop timeline entries for each segment of the timeline into the appropriate order.</p>
                 </div>
                 <div class="col">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/instructions-02@2x.png" alt="Learn more about the timeline entries, including images and videos" title="Learn more about the timeline entries, including images and videos" />
                     <h2>Explore in Detail</h2>
-                    <p>Learn more about the timeline entries, including images and videos.</p>
+                    <p>Learn more about the timeline entries, including videos and images.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
+            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue the activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -125,31 +127,66 @@
 
         </script>
 
+        <!-- Draggable Template -->
+        <script id="draggable-template" type="text/x-jsrender">
+            
+            <div class="draggable-holder">
+
+                <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="{{:incorrect}}">
+                    <div class="draggable-text" data-timeline={{:id}}>
+                        <p>{{:excerpt}}</p>
+                    </div>
+                </div>
+
+                <div class="draggable-img-wrapper" data-timeline={{:id}}>
+                    <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element" title="thumbnail image for this draggable element">
+                    <div class="draggable-overlay hidden" data-timeline={{:id}}></div>
+                </div>
+                
+            </div>
+
+
+
+        </script>
+
+
         <!-- Detail Template -->
         <script id="detail-template" type="text/x-jsrender">
-
-
-        {{for Moments}}
-        <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="{{:incorrect}}">
-            <img class="draggable-img" src="{{:thumbnail}}">
-            <div class="draggable-text">
-                <p>{{:excerpt}}</p>
-            </div>
-            
+        <div class="heading-wrapper">
+             <img src="../shared/images/pnw/splash-01.svg">
+            <h1>{{:StartDate}} to {{:EndDate}}</h1>
         </div>
-        {{/for}}
+
+       <div id="draggable-wrapper"></div> 
        
+      
         
 
             
         <div id="droppable-container" data-era='{{:Id}}'>
-            <h3 id="era-label-start">{{:StartDate}}</h3>
             
-            {{for Moments}}
-            <div class="droppable-widget" data-timeline="{{:id}}"></div>
+            
+           
+            {{for Moments ~startDate=StartDate ~endDate=EndDate}}
+        
+            {{if #index == 0}}         
+                 <div class="droppable-widget" data-timeline="{{:id}}">
+                   <small>{{:~startDate}}</small>
+                </div>
+            {{else #index+1 == #get("array").data.length}}
+                <div class="droppable-widget" data-timeline="{{:id}}">
+                   <small>{{:~endDate}}</small>
+                </div>
+            {{else}}
+                <div class="droppable-widget" data-timeline="{{:id}}">
+                </div>
+            {{/if}}
+
+            
+           
             {{/for}}
 
-            <h3 id="era-label-end">{{:EndDate}}</h3>
+            
         </div>
 
         </script>
@@ -161,7 +198,7 @@
                     <div class="modal-content">
 
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span></button>
                                 <h6 class="modal-year">{{:date}}</h6>
                                 <h3 class="modal-title">{{:title}}</h3>
                             </div>
@@ -169,10 +206,17 @@
                             <div class="modal-body">
                                 <figure class="modal-photo-wrapper">
                                     {{if image}}
-                                    <img src="{{:image}}" alt="placeholder kitty">
+                                    <a href="{{:imgage}}"  data-sub-html=".caption">
+                                        <img src="{{:image}}" alt="{{:caption}}" title={{:caption}}>
+                                        <button class="zoom" id="lightgallery"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></button>
+                                        <figcaption class="caption">{{:caption}}</figcaption>
+                                    </a>
+                                    {{else}}
+                                        <figcaption class="caption">{{:caption}}</figcaption>
                                     {{/if}}
-                                    <figcaption>{{:caption}}</figcaption>
                                 </figure>
+
+
                                
                                 <p>{{:description}}</p>
                             </div>
@@ -186,51 +230,64 @@
         <script id="explore-template" type="text/x-jsrender">
              <div class="transition-overlay">
                 <div class="transition-content-wrapper">
-                    <h6>Time Immemorial to 1974</h6>
+                    <h6>{{:StartDate}} to {{:EndDate}}</h6>
                     <h1>Timeline Complete</h1>
-                    <p>You've completed this timeline segment. Explore the entries in order for all the selections you've completed so far.Once you've finished, return to the lesson module to continue learning about the Fish Wars.</p>
+                    <p>You’ve completed this timeline segment. Explore the timeline entries in order for all the sections you’ve completed so far. Once you’re finished, go back and continue learning about the Fish Wars.</p>
                     <div class="btn-wrapper">
-                        <button class="btn btn-lg" id="back-to-module-btn">Back to Module</button>
-                        <button class="btn btn-lg" id="explore-btn">Explore Timeline</button>
+                        <button class="btn btn-lg btn-white" id="back-to-module-btn">Back to Module</button>
+                        <button class="btn btn-lg btn-white" id="explore-btn">Explore Timeline</button>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-wrapper" data-era="{{:Id}}">
+            <div class="timeline-wrapper">
                 <div class="timeline-labels">
                     <ul class="lg-label-wrapper">
-                        <li><h2 class="lg-label-1">{{:StartDate}}</h2></li>
-                        <li><h2 class="lg-label-2">{{:Milestone1}}</h2></li>
-                        <li><h2 class="lg-label-3">{{:Milestone2}}</h2></li>
-                        <li><h2 class="lg-label-4">{{:Milestone3}}</h2></li>
+                                <li><h2 class="lg-label-1">Time Immemorial</h2></li>
+                                <li><h2 class="lg-label-2">1800s</h2></li>
+                                <li><h2 class="lg-label-3">1900s</h2></li>
+                                <li><h2 class="lg-label-4">1974</h2></li>
+                                <li><h2 class="lg-label-5">1979</h2></li>
+                                <li><h2 class="lg-label-6">2000s</h2></li>
+                                <li><h2 class="lg-label-7">Present</h2></li>
                     </ul>
-
-                    <div class="sm-label-wrapper">
-                        {{for Moments}}
-                        <h4 class="sm-label" data-timeline="{{:id}}">{{:year}}</h4>
-                        {{/for}}
-                    </div>
-                    
-
                 </div>
-                <div class="timeline-track"></div>
+               
+                {{for eras}}
+                    <div class="era-container" data-era="{{:Id}}">
+                       
+                        <div class="timeline-track" data-era="{{:Id}}"></div>
 
-                {{for Moments}}
+                        {{for Moments ~eraId=Id}}
 
-                    <button class="timeline-item" data-timeline="{{:id}}">
-                        <img class="timeline-btn-img" src="{{:thumbnail}}" alt="thumbnail">
-                        <div class="timeline-btn-text-wrapper">
-                            <h6>{{:title}}</h6>
-                            <p>{{:excerpt}}</p>
-                        </div>
-                    </button>
-        
+
+                            <div class="timeline-item-wrapper" data-timeline={{:id}} data-era={{:~eraId}}>
+                                <button class="timeline-item" data-timeline="{{:id}}" data-era={{:~eraId}}>
+                                    <img class="timeline-btn-img" src="{{:thumbnail}}" alt="small image for this timeline entry" title="thumbnail image for this timeline entry">
+                                    <div class="timeline-btn-text-wrapper">
+                                        <p>{{:excerpt}}</p>
+                                    </div>
+                                     <div class="sm-label-wrapper" data-timeline={{:id}} data-era={{:~eraId}}>
+                                        <h4 class="sm-label" data-timeline="{{:id}}" data-era={{:~eraId}}>{{:year}}</h4>
+                                    </div>
+                                </button>
+
+                                
+                            </div>
+
+                        {{/for}}
+
+                    </div>
 
                 {{/for}}
 
             </div>
-                <button id="prev-btn" class="btn">Prev</button>
-                <button id="next-btn" class="btn">Next</button>
+                <button id="prev-btn" class="btn">
+                    <img src="./shared/images/icon-prev.svg" alt="prev" title="prev">
+                </button>
+                <button id="next-btn" class="btn">
+                    <img src="./shared/images/icon-next.svg" alt="next" title="next">
+                </button>
 
 
         </script>
@@ -240,25 +297,37 @@
 
                 <div id="era-block-1" class="era-block" data-era="1">
                     <div class="era-content-wrapper">
-                        <h1>Time Immemorial to 1974</h1>
-                        <button class="btn btn-lg start-timeline-btn"  data-timeline="1">Start This Timeline</button>
-                        <button class="btn btn-lg view-timeline-btn hidden"  data-timeline="1">View This Timeline</button>
+                        <div class="heading-wrapper" data-era="1">
+                            <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
+                             <img src="./shared/images/pnw/splash-01.svg" title="" alt="">
+                            <h1>Time Immemorial to 1974</h1>
+                        </div>
+                        <button class="btn btn-lg btn-white start-timeline-btn"  data-timeline="1">Start This Timeline</button>
+                        <button class="btn btn-lg btn-white view-timeline-btn hidden"  data-timeline="1">View This Timeline</button>
                     </div>
                 </div>
 
                 <div id="era-block-2" class="era-block" data-era="2">
                     <div class="era-content-wrapper">
-                        <h1>1974 &mdash; 1979</h1>
-                        <button class="btn btn-lg start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
-                        <button class="btn btn-lg view-timeline-btn hidden"  data-timeline="2">View This Timeline</button>
+                        <div class="heading-wrapper" data-era="2">
+                             <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
+                            <img src="./shared/images/pnw/splash-02.svg" title="" alt="">
+                            <h1>1974 &mdash; 1979</h1>
+                        </div>
+                        <button class="btn btn-lg btn-white start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
+                        <button class="btn btn-lg btn-white view-timeline-btn hidden"  data-timeline="2">View This Timeline</button>
                     </div>
                 </div>
 
                 <div id="era-block-3" class="era-block" data-era="3">
                     <div class="era-content-wrapper">
-                        <h1>1979 &mdash; present</h1>
-                        <button class="btn btn-lg start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
-                        <button class="btn btn-lg view-timeline-btn hidden" data-timeline="3">view This Timeline</button>
+                        <div class="heading-wrapper" data-era="3">
+                             <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
+                            <img src="./shared/images/pnw/splash-03.svg" title="" alt="">
+                            <h1>1979 &mdash; present</h1>
+                        </div>
+                        <button class="btn btn-lg btn-white start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
+                        <button class="btn btn-lg btn-white view-timeline-btn hidden" data-timeline="3">view This Timeline</button>
                     </div>
                 </div>
 

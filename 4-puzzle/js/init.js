@@ -12,12 +12,14 @@ Init = (function() {
         $('#puzzle-header').html($.templates("#puzzle-header-template").render(data.puzzles[0]));
         $('#puzzle-wrapper').html($.templates('#puzzle-wrapper-template').render(data.puzzles[0]));
         $('#droppable-wrapper').html($.templates('#droppable-template').render(data.puzzles[0]));
+        $('#complete-overlay').html($.templates('#complete-template').render(data.puzzles[0]));
         $('#learning-points').html($.templates('#learning-points-template').render(data.puzzles[0]));
         Puzzle.buildGame();
     }
 
  
     var displayIntroModal = function() {
+        $('#intro').html($.templates('#intro-template').render(data.puzzles[0]));
     	if ($('.intro-card').hasClass('hidden')) {
     		$('.intro-card').removeClass('hidden').addClass('animated slideInDown');
     	}

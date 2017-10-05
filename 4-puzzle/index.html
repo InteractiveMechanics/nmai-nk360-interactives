@@ -17,15 +17,17 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
+    
 
     <!-- For development only, comment for distribution -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
+
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -85,10 +87,10 @@
             <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
-            <a href="../assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
+            <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
         </div>
     </div>
-    <footer class="fixed-bottom d-flex justify-content-between transparent">
+    <footer class="fixed-bottom d-flex justify-content-between">
         <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
@@ -103,17 +105,17 @@
             <h1>Drag-and-Drop Puzzle Instructions</h1>
             <div class="row justify-content-md-center">
                 <div class="col">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/instructions-01@2x.png" alt="Turn over the statement cards and explore the hidden content" title="Turn over the statment cards and explore the hidden content." />
                     <h2>Explore the Cards</h2>
-                    <p>Turn over the statement cards and explore the hidden content.</p>
+                    <p>Turn over the statement cards and discover the hidden content..</p>
                 </div>
                 <div class="col">
-                    <img src="" alt="" title="" />
+                    <img src="./assets/instructions-02@2x.png" alt="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" title="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" />
                     <h2>Uncover the Image</h2>
-                    <p>Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth.</p>
+                    <p>Drag and drop the statement cards and sort them into the appropriate categories, revealing the hidden picture underneath.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
+            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue the activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -121,12 +123,29 @@
 
     <!-- Main interactive-specific content -->
     <main>
-    
-    <!-- puzzle header template -->
+
+
+    <!-- intro template -->
+    <script id="intro-template" type="text/x-jsrender">
+         <div class="intro-overlay"></div>
+        <div class="intro-card hidden">
+            <div class="header-wrapper">
+                <h1>{{:Title}}</h1>
+            </div>
+            <div class="text-wrapper">
+                <p>{{:Intro}}</p>
+
+                <h6>{{:IntroPrompt}}</h6>
+            </div>
+        </div>
+
+    </script>   
+
+    <!-- header template -->
     <script id="puzzle-header-template" type="text/x-jsrender">
         <ul class="subheader">
 
-             {{for Themes}}
+            {{for Themes}}
 
                 <li data-theme="{{:id}}" data-toggle="tooltip" title="{{:definition}}">{{:title}}</li>
 
@@ -145,26 +164,60 @@
             </div>  
             
             <div class="puzzle-img-wrapper">    
-                <a href="{{:Image}}" data-sub-html="#caption" class="lg-link disabled-link">
-                    <img class="puzzle-img" src="{{:Image}}">
-                    <span class="zoom-icon hidden">&#x1F50D;</span>
-                </a>
-            </div>
+                <div class="lg-wrapper-puzzle">
+                    <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
+                        <img class="puzzle-img" src="{{:Image}}" alt="" title="">
+                        <span class="zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                    </a>
+                </div>
+            
 
-            {{for Cards}}
+                {{for Cards}}
 
-            <button class="card" data-card="{{:id}}">{{:id}}</button>
+                <button class="card" data-card="{{:id}}"></button>
 
-            {{/for}}
+
+                {{/for}}
+
+            </div>    
 
     </script>
+
+
+   
 
     <!-- puzzle droppable elements (themes) template -->
     <script id="droppable-template" type="text/x-jsrender">
 
         {{for Themes}}
 
-        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="remediation message">{{:title}}</div>
+        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}">{{:title}}
+
+            <svg class="icon-definition" version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+         x="0px" y="0px" width="43.7px" height="51.7px" viewBox="0 0 43.7 51.7" style="enable-background:new 0 0 43.7 51.7;"
+         xml:space="preserve">
+            <defs>
+            </defs>
+            <g>
+                <path d="M5,8.1c0,0.8,0.6,1.4,1.4,1.4H34v35.7c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4V8.1c0-0.8-0.6-1.4-1.4-1.4h-29
+                    C5.6,6.7,5,7.3,5,8.1L5,8.1z M5,8.1"/>
+                <path d="M42.2,0H5.7C5.2,0,4.8,0.2,4.5,0.6L0.3,6.9C0.1,7.1,0,7.4,0,7.7l0,39.4c0,0,0,0.1,0,0.1v3.1c0,0.8,0.6,1.4,1.4,1.4h34.3
+                    c0.2,0,0.3,0,0.5-0.1c0.2,0,0.3-0.1,0.5-0.2l6.3-4.8c0.4-0.3,0.6-0.7,0.6-1.1v-44C43.7,0.6,43,0,42.2,0L42.2,0z M40.8,44.7
+                    l-5.4,4.1H2.9v-1.8c0,0,0-0.1,0-0.1l0-38.8l3.6-5.2h34.3V44.7z M40.8,44.7"/>
+                <path d="M15.2,21.7c-0.1-0.3-0.4-0.5-0.7-0.5H13c-0.3,0-0.6,0.2-0.7,0.5L8.2,33.8c-0.1,0.2,0,0.5,0.1,0.7c0.1,0.2,0.4,0.3,0.6,0.3
+                    h0.9c0.3,0,0.6-0.2,0.7-0.5l1.2-3.5h4l1.2,3.5c0.1,0.3,0.4,0.5,0.7,0.5h0.9c0.3,0,0.5-0.1,0.6-0.3c0.1-0.2,0.2-0.5,0.1-0.7
+                    L15.2,21.7z M12.3,28.7l1.1-3.2l0,0c0.1-0.3,0.2-0.6,0.3-1c0.1,0.3,0.2,0.7,0.3,1l1.1,3.2H12.3z M12.3,28.7"/>
+                <path d="M25.8,24.6c-1.1,0-2.1,0.4-2.8,1v-3.7c0-0.4-0.4-0.8-0.8-0.8h-0.9c-0.2,0-0.4,0.1-0.6,0.2c-0.1,0.1-0.2,0.3-0.2,0.6l0,12.1
+                    c0,0.4,0.4,0.8,0.8,0.8H22c0.4,0,0.8-0.4,0.8-0.8c0,0,0,0,0,0c0.7,0.7,1.6,1,2.7,1c1.2,0,2.3-0.5,3.1-1.3c0.9-1,1.4-2.4,1.4-4
+                    c0-1.6-0.5-3-1.4-3.9C27.9,25,26.9,24.6,25.8,24.6L25.8,24.6z M27.2,32.4c-0.4,0.4-0.9,0.6-1.5,0.6c-0.6,0-1.1-0.2-1.4-0.5
+                    c-0.9-0.9-0.8-2.6-0.8-2.7c0,0,0,0,0,0c0-0.1,0.1-3,2.3-3c2.2,0,2.4,2.9,2.4,3C28.1,30.2,27.9,31.6,27.2,32.4L27.2,32.4z
+                     M27.2,32.4"/>
+                </g>
+            </svg>
+
+
+        </div>
 
         {{/for}}
 
@@ -179,25 +232,75 @@
             <div class="modal-content" data-card={{:id}} data-theme={{:themes}}>
                 
                 <div class="modal-header">
-                    <h1 class="modal-title">&ldquo; &rdquo;</h1>
+                    {{if image}}
+                    <h1 class="modal-title">{{:title}}</h1>
+                    {{/if}}
+
+                    {{if body}}
+                     <h1 class="modal-title">{{:title}}</h1>
+                    {{/if}}
+
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
                     </button>
 
                 </div>
           
                 <div class="modal-body">
-                    <small>{{:caption}}</small>
+
+                    {{if body}}
+                    <small class="modal-credit">{{:credit}}</small>
 
                     <p>{{:body}}</p>
+                    {{/if}}
+
+                    {{if image}}
+
+                    <div style="position: relative;">
+                        <img src="{{:image}}" class="modal-img" />
+                        <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
+                    </div>
+                        
+                    <small class="modal-caption">{{:caption}}</small>
+                    {{/if}}
+
+                    <p class="modal-footer-message">Drag the card to the appropriate theme below</p>
+
                 </div>
 
-            </div>
+            </div><!-- /.modal-content -->
 
        
 
     </script>
+
+    <script id="complete-template" type="text/x-jsrender">
+         <div class="text-wrapper">
+
+                <ul class="subheader">
+
+                    {{for Themes}}
+
+                    <li data-theme="{{:id}}" data-toggle="tooltip" title="{{:definition}}">{{:title}}</li>
+
+                    {{/for}}
+
+                </ul>
+
+                 <h1>Puzzle complete</h1>
+
+                 <p>You’ve successfully completed this puzzle. Explore and save the image you’ve uncovered. Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry best support your argument.</p>
+
+                 <div class="btn-wrapper">
+                    <button class="btn btn-lg btn-white">Back to Module</button>
+                    <button id="explore-img-btn" class="btn btn-lg btn-white">Explore Image</button>
+                 </div>
+
+             </div>
+
+    </script>
+
 
     <!-- learning points template -->
     <script id="learning-points-template" type="text/x-jsrender">
@@ -224,32 +327,18 @@
 
         </div>
 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
+        </button>
+
     </script>
 
-    <div id="intro" class="animated fadeIn">
-        <div class="intro-overlay"></div>
-        <div class="intro-card hidden">
-            <div class="header-wrapper">
-                <ul class="subheader">
-                    <li>Homelands</li>
-                    <li>Kinship</li>
-                    <li>Nationhood</li>
-                </ul>
-                <h1>How do Native people and Nations experience belonging?</h1>
-            </div>
-            <div class="text-wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales nibh sit amet odio pretium, id mattis sapien pellentesque. Quisque auctor, sem et facilisis iaculis, ex velit accumsan turpis, quis semper augue leo venenatis tellus. Ut consectetur tempus vulputate. Donec vitae dignissim felis.</p>
-                <p>In gravida lacinia massa ac pellentesque. Pellentesque nec odio in dui accumsan tristique. Nulla semper est non lorem interdum sagittis. Curabitur iaculis velit sit amet mauris ultricies tempus. Curabitur vel iaculis magna, a maximus odio. Fusce semper est vitae neque facilisis ultricies.</p>
-
-                <h6>Ready to get started?</h6>
-            </div>
-        </div>
-    </div>
+    <div id="intro" class="animated fadeIn"></div>
 
     <div id="learning-points" class="hidden"></div>
 
     <div id="puzzle" class="hidden">
-        <section id="puzzle-header" class="header-wrapper"></section>
+        <section id="puzzle-header" class="header-wrapper header"></section>
 
         <section id="puzzle-wrapper"></section>
 
@@ -257,30 +346,13 @@
             <button class="btn btn-lg" id="read-more-btn">Read more about this image</button>
         </section>
 
-        <section id="droppable-wrapper"></section>
+       <!--  <section id="droppable-wrapper" class="hidden"></section> -->
 
-        <section id="complete-overlay" class="hidden">
-            <div class="text-wrapper">
-
-                <ul class="subheader">
-                    <li>Homelands</li>
-                    <li>Kinship</li>
-                    <li>Nationhood</li>
-                </ul>
-
-                 <h1>Puzzle Complete</h1>
-
-                 <p>You've completed this puzzle. Explore and save the iconic image you've uncovered. Once you're finished, return to the lesson module to continue learning about Northern Plains history and culture.</p>
-
-                 <div class="btn-wrapper">
-                    <button class="btn btn-lg">Back to Module</button>
-                    <button id="explore-img-btn" class="btn btn-lg">Explore Image</button>
-                 </div>
-
-             </div>
-        </section>
+        <section id="complete-overlay" class="hidden"></section>
 
     </main>
+
+    <section id="droppable-wrapper" class="hidden"></section>
 
     <div class="modal fade" id="card-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog draggable-widget" data-theme="{{:themes}}" role="document">

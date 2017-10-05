@@ -615,7 +615,7 @@ footer.transparent {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../images/icon-prev.svg") no-repeat;
+  background: url("../shared/images/icon-prev.svg") no-repeat;
   color: transparent;
   background-size: contain; }
 
@@ -625,7 +625,7 @@ footer.transparent {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../images/icon-next.svg") no-repeat;
+  background: url("../shared/images/icon-next.svg") no-repeat;
   color: transparent;
   background-size: contain; }
 
@@ -768,6 +768,8 @@ footer.transparent {
   background: red !important; }
 
 .slider-card {
-  background: url(../assets/text-card-pnw@2x.png) white !important;
+  background: white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
+
+/*# sourceMappingURL=main.css.map */

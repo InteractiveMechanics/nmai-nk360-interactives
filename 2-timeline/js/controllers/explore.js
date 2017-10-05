@@ -8,22 +8,36 @@ Explore = (function() {
         $('.transition-overlay').addClass('animated fadeOut hidden');
     }
 
+    //TODO account for window resize
     var advancePrevBtn = function() {
         event.preventDefault();
-        $('.timeline-wrapper').animate({
-            scrollLeft: "-=200px"
-        }, "fast");
+        var timelineWidth = $('.timeline-wrapper').width();
+        var scrollWidthPrev = $('.timeline-wrapper').scrollLeft();
+        var windowWidth = $(window).width();
+        if (scrollWidthPrev > 0) {
+            $('.timeline-wrapper').animate({
+                scrollLeft: "-=" + windowWidth + "px"
+            }, "fast");
+        }
+        console.log("prev scrollWidth " + scrollWidthPrev);
     }
 
     var advanceNextBtn = function() {
         event.preventDefault();
-        $('.timeline-wrapper').animate({
-            scrollLeft: "+=200px"
-        }, "fast");
+        var translateX = $('.timeline-wrapper').css(); 
+        var windowWidth = $(window).width(); // 1397px
+        if (scrollWidthPrev < Detail.timelineWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
+            $('.timeline-wrapper').animate({
+                transformX: "+=" + windowWidth + "px"
+            }, "fast");
+        }
+        console.log("prev scrollWidth " + scrollWidthPrev);
+       
+        
     }
 
     var getMomentDetails = function() {
-        var era = $('.timeline-wrapper').attr('data-era');
+        var era = $(this).attr('data-era');
         var moment = $(this).attr('data-timeline');
         console.log('the era is ' + era + 'the moment is ' + moment);
         Detail.displayModal(era, moment);

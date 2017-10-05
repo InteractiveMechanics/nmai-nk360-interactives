@@ -240,15 +240,15 @@ body .image-credit {
       right: 0;
       top: 0;
       bottom: 0;
-      background: url(../assets/bkgr.png) no-repeat;
+      background: url("../assets/bkgr.png") no-repeat;
       z-index: 1;
       background-size: cover; }
     .game .game-world .game-world__foreground {
-      background: url(../assets/foregr.png) no-repeat;
+      background: url("../assets/foregr.png") no-repeat;
       z-index: 3;
       background-size: cover; }
     .game .game-world .game-world__midground {
-      background: url(../assets/midgr.png) no-repeat;
+      background: url("../assets/midgr.png") no-repeat;
       z-index: 2;
       background-size: cover; }
 
@@ -352,39 +352,30 @@ body .image-credit {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
-
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
-
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
-
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
-
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
-
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
-
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
-
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
-
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
-
 .hotspot {
   width: 87px;
   height: 87px;
@@ -407,13 +398,10 @@ body .image-credit {
 @keyframes stretch {
   0% {
     transform: scale(1); }
-
   50% {
     transform: scale(0.8); }
-
   100% {
     transform: scale(1); } }
-
 #select-fish {
   position: fixed;
   width: 100%;
@@ -997,3 +985,5 @@ body .image-credit {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,15 +1,13 @@
 #droppable-container {
 	align-items: center;
-	bottom: 0px;
-	display: flex;
-	justify-content: center;
-	padding: 60px;
-	position: absolute;
-	width: 100%;
-	h3 {
-		font-size: 16px;
-		font-weight: 700;
-	}
+    bottom: 0px;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px;
+    color: $primary;
+    background-color: rgba(9, 74, 113, 0.35);
+    border-radius: 52px;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
 
 }
 
@@ -20,98 +18,162 @@
 
 
 .droppable-widget {
-	border: 3px solid black;
+	border: 1px solid $primary;
 	border-radius: 50%;
-	height: 75px;
+	height: 82px;
 	margin: 0px 10px;
-	width: 75px;
+	width: 82px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $primary;
+	font-size: 13px;
+	text-align: center;
 }
 
 [data-toggle="tooltip"] {
 	border-bottom: none;
 }
 
-.draggable-widget {
-	background-color: white; //white
-	height: 85px; //100px
-	position: absolute;
-	width: 350px; //350px
-	border-radius: 65px;
+.draggable-holder {
+	margin-left: 20px;
+}
 
+#draggable-wrapper {
+	position: relative;
 	display: flex;
+	width: 90%;
+	left: 5%;
+	height: 56%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.draggable-widget {
+	background-color: rgba(9, 74, 113, 0.5);
+    height: $moment-height;
+    width: $moment-width;
+    display: flex;
     align-items: center;
     overflow: hidden;
-
+    z-index: 2;
+    margin: 0px 20px;
+    padding: 15px 15px 15px 52px;
+    text-align: left;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 300;
 	img {
-		height: 75px;
-		width: 75px;
-		border: 3px solid black;
+		height: 82px;
+		width: 82px;
+		border: 3px solid white;
 		border-radius: 50%;
-		margin-left: 5px;
+		cursor: hand;
+  		cursor: -webkit-grab;
+  		cursor: grab;
 	}
 	div {
-		font-size: 14px; 
-		margin-left: 5px;
+		font-size: 13px;
+		flex: 1;
+		-webkit-touch-callout: none; /* iOS Safari */
+    	-webkit-user-select: none; /* Safari */
+     	-khtml-user-select: none; /* Konqueror HTML */
+       	-moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 		p {
 			margin-bottom: 0px;
 		}
 	}
 }
 
+.draggable-img {
+	height: 82px;
+	width: 82px;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin-left: 3px;
+	cursor: hand;
+  	cursor: -webkit-grab;
+  	cursor: grab;	
+  	z-index: 3;
+}
+
+.draggable-img-wrapper {
+	left: -23px;
+	top: -$moment-height;
+	height: 82px;
+	width: 82px;
+}
+
+.draggable-overlay {
+	background: #a8bd46;
+    opacity: 0.7;
+    height: 82px;
+    width: 82px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid white;
+    border-radius: 50%;
+    &:after {
+    	content: url('../shared/images/icon-checkmark.svg');
+    	height: 82px;
+    	width: 82px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+}
+
 .draggable-widget.dragged {
 	background-color: transparent;
+	box-shadow: none;
 	border: none;
 	height: auto;
 	width: auto;
+	z-index: -1;
 
 	.draggable-text {
 		display: none;
 	}
-
-	.draggable-img {
-		border: none;
-		height: 72px;
-    	width: 72px;
-    	position: relative;
-    	left: -2px;
-	}
 }
 
-.draggable-widget[data-timeline="1"] {
-	left: 50px;
-	top: 150px;
-}
-
-.draggable-widget[data-timeline="2"] {
-	left: 450px;
-	top: 150px;
-}
-
-.draggable-widget[data-timeline="3"] {
-	left: 850px;
-	top: 150px;
-}
-
-.draggable-widget[data-timeline="4"] {
-	left: 200px;
-	top: 300px;
-}
-
-.draggable-widget[data-timeline="5"] {
-	left: 750px;
-	top: 300px;
-}
 
 //active class for draggable
 .ui-draggable-dragging {
-	background-color: transparent;
-	height: auto;
-	width: auto;
+	cursor: hand;
+	cursor: grabbing;
+	cursor: -webkit-grabbing !important;
+	z-index: 2;
+}
 
-	.draggable-text {
-		display: none;
+.draggable-text.active {
+	display: none;
+	z-index: -2;
+
+}
+
+.draggable-widget.active {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.dragged {
+	.draggable-img {
+		margin-left: 0px;
 	}
 }
 
 
 
+.tooltip-inner {
+	background-color: $accent;
+	border-radius: 0.15rem;
+	font-weight: 300;
+	&::before {
+		border-top-color: $accent !important;
+	}
+}

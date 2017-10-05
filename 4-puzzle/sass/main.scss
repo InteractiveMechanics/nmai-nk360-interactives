@@ -18,14 +18,14 @@
 @import '../shared/sass/components/menu';
 @import '../shared/sass/components/gallery';
 
-@import 'base/variables';
-@import 'base/helpers';
-@import 'base/typography';
-@import 'base/mixins';
+@import 'default/base/variables';
+@import 'default/base/helpers';
+@import 'default/base/typography';
+@import 'default/base/mixins';
 
-@import 'components/layout';
-@import 'components/intro';
-@import 'components/puzzle';
-@import 'components/dragdrop';
-@import 'components/modal';
+@import 'default/components/layout';
+@import 'default/components/intro';
+@import 'default/components/puzzle';
+@import 'default/components/dragdrop';
+@import 'default/components/modal';
 

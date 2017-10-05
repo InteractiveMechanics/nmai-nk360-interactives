@@ -1,5 +1,7 @@
 Detail = (function() {
 
+    var timelineWidth = 2143;
+
 	 var init = function() {
         bindEvents();
     }
@@ -10,9 +12,21 @@ Detail = (function() {
     	$('#selection').addClass('hidden animated fadeOut');
         $("#detail").html($.templates("#detail-template").render(data.eras[id-1]));
     	//$('#detail-template').tmpl().appendTo('#detail');
+        var newMoments = randomMoments(data.eras[id-1].Moments);
+        $("#draggable-wrapper").html($.templates("#draggable-template").render(newMoments));
     	$('#detail').removeClass('hidden fadeOut').addClass('animated fadeIn');
         Init.isSelectionScreen();
         buildGame(id);
+    }
+
+    var randomMoments = function(moments) {
+        var newMoments = [];
+        $.each(moments, function(key, val){
+            var random = Math.floor(Math.random() * newMoments.length);
+            newMoments.splice(random, 0, val);
+        });
+        console.log(newMoments);
+        return newMoments;
     }
 
     var countDroppedEls = function() {
@@ -24,20 +38,40 @@ Detail = (function() {
 
             if (numberDropped == numberDroppable) {
                 $('.era-block[data-era="' + era + '"]').addClass('completed');
-                setTimeout(function() { displayExploreScreen(era); }, 2000);
+                setTimeout(function() { displayExploreScreen(era); }, 750);
             }
         }
     }
 
     var displayExploreScreen = function(era) {
+        
+        
         if (era !== null && typeof era === 'object') {
-            var booger = $(this).attr('data-timeline');
-            $('#explore').html($.templates("#explore-template").render(data.eras[booger-1]));
+            var era = $(this).attr('data-timeline');
+            $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').addClass('hidden');
-            console.log(booger);
+             if (era == 1) {
+                $('.era-container[data-era="2"]').addClass('hidden');
+                $('.era-container[data-era="3"]').addClass('hidden');
+            } else if (era == 2) {
+                $('.era-container[data-era="3"]').addClass('hidden');
+                $('.timeline-wrapper').css('width', '3500px');
+            } else {
+                $('.timeline-wrapper').css('width', '4800px');
+            }
+            console.log(era);
         } else {
             console.log('era is defined. it is ' + era);
-            $('#explore').html($.templates("#explore-template").render(data.eras[era-1]));
+            $('#explore').html($.templates("#explore-template").render(data));
+            if (era == 1) {
+                $('.era-container[data-era="2"]').addClass('hidden');
+                $('.era-container[data-era="3"]').addClass('hidden');
+            } else if (era == 2) {
+                $('.era-container[data-era="3"]').addClass('hidden');
+                timelineWidth = 3500;
+            } else {
+                timlineWidth = 4800;
+            }
         }
         $('#explore').removeClass('animated fadeIn hidden');
         $('#selection').addClass('fadeOut hidden');
@@ -47,28 +81,51 @@ Detail = (function() {
 
 
 
-
-
     var displayModal = function(era, moment) {
         $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1]));
         $('#correct-answer').modal('show');
     }
 
     
+    var hideText = function(id) {
+       var id = $(this).attr('data-timeline');
+       $('.draggable-text[data-timeline="' + id + '"]').addClass('active');
+       $('.draggable-widget[data-timeline="' + id + '"]').addClass('active');
+    }
 
+
+    var showText = function(id) {
+        var id = $(this).attr('data-timeline');
+        if ($(this).hasClass('dragged')) {
+            $('.draggable-text[data-timeline="' + id + '"]').addClass('active');
+            $('.draggable-widget[data-timeline="' + id + '"]').addClass('active');
+        } else {
+            $('.draggable-text[data-timeline="' + id + '"]').removeClass('active');
+            $('.draggable-widget[data-timeline="' + id + '"]').removeClass('active');
+        }
+
+    }
+
+    
+   
 
     var buildGame = function(id) {
+        $('#lightgallery').lightGallery({
+            subHtmlSelectorRelative: true
+        });
         $('[data-toggle=tooltip]').tooltip('hide');
-        $('.draggable-widget').draggable({
+        $('.draggable-img-wrapper').draggable({
+            appendTo: 'body',
             tolerance: 'touch',
             snap: '.droppable-widget',
             revert: 'invalid',
             snapMode: 'interior',
-            snapTolerance: 10,
-            //cursorAt: {top: 10, left: 10}
+            snapTolerance: 10
+            //cursorAt: {top: 0, left: 10}
         });
 
         $('.droppable-widget').droppable({
+
             drop: function( event, ui ) {
                 
 
@@ -79,8 +136,9 @@ Detail = (function() {
               
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
                         ui.draggable.addClass('dragged');
+                        ui.draggable.find('.draggable-overlay').removeClass('hidden');
                         ui.draggable.draggable('option', 'revert', 'invalid');
-
+                       
 
                         //alert('the thing is dropped!');
 
@@ -99,15 +157,17 @@ Detail = (function() {
                         });
 
                         ui.draggable.draggable('option', 'disabled', true);
+
                        
                        
 
 
                     } else {
                         ui.draggable.draggable('option', 'revert', 'valid');
-                        setTimeout(function() {   ui.draggable.tooltip('show'); }, 1000);
-
-                        setTimeout(function() {   ui.draggable.tooltip('hide'); }, 3000);
+                        var draggableNumber = ui.draggable.attr('data-timeline');
+                        var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
+                        setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);
+                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 3000);
                        
                        
                     }
@@ -122,6 +182,8 @@ Detail = (function() {
         $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);
         $(document).on('click tap', '.view-timeline-btn[data-timeline]', displayExploreScreen);
         $(document).on('hidden.bs.modal', countDroppedEls);
+        $(document).on('dragstart', '.draggable-img-wrapper[data-timeline]', hideText);
+        $(document).on('dragstop', '.draggable-img-wrapper[data-timeline]', showText);
     }
 
     
@@ -131,7 +193,8 @@ Detail = (function() {
 
 		init: init,
         displayExploreScreen: displayExploreScreen,
-        displayModal: displayModal
+        displayModal: displayModal,
+        timelineWidth: timelineWidth
 	
 	}
 
