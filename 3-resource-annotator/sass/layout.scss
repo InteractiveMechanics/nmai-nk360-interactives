@@ -4,6 +4,10 @@ body {
       font-family: "Archer Pro", serif;
     }
 
+    span {
+      font-family: "Archer Pro", serif;
+    }
+
     a {
       font-family: "Archer Pro", serif;
 
@@ -444,4 +448,17 @@ footer {
   &.transparent {
     background: #403f3f;
   }
+}
+
+.defintions-icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: -6px;
+  left: 5px;
+  padding-left:20px;
+  background:url('../assets/icon-definition.svg') no-repeat;
+  background-position: left center;
+  background-size:contain;
+  padding:10px;
+  padding-top:0;
 }

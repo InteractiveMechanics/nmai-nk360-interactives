@@ -32,12 +32,12 @@ Annotator = (function() {
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
         $('body').on('click tap', '#print-notes', printPage);
 
-        // Initialize tooltips again
-        $('[data-toggle="tooltip"]').tooltip();
-
         loadTemplate();
         createSlider();
         createThemeObj();
+
+        // Initialize tooltips again
+        $('[data-toggle="tooltip"]').tooltip();
     };
 
     var printPage = function() {
@@ -86,7 +86,7 @@ Annotator = (function() {
     }
 
     var loadTemplate = function() {
-
+      $('.intro-text').text(AnnotatorData.introduction);
     };
 
     var pinSetup = function() {
@@ -293,25 +293,25 @@ Annotator = (function() {
       });
 
 
-      if(objItem.caption) {
-        print.find('.caption-text').css('display', 'none');
+     /* if(objItem.caption) {
+        print.find('.caption-text').css('display', 'block');
       }
 
       if(objItem.question_text) {
-        print.find('.discussion-text').css('display', 'none');
+        print.find('.discussion-text').css('display', 'block');
       }
 
       if(objItem.paraphrase) {
-        print.find('.paraphrased-text').css('display', 'none');
+        print.find('.paraphrased-text').css('display', 'block');
       }
 
       if(objItem.body) {
-        print.find('.info').css('display', 'none');
+        print.find('.info').css('display', 'block');
       }
 
       if(objItem.image_url) {
-        print.find('.photo-container').css('display', 'none');
-      }
+        print.find('.photo-container').css('display', 'block');
+      }*/
     }
 
     var noteHTMLSnippet = function(src, note, num) {
@@ -459,6 +459,9 @@ Annotator = (function() {
           });
         }   
       });
+
+      // Initialize tooltips again
+      $('[data-toggle="tooltip"]').tooltip();
   }
 
     var getItemByAnnotationId = function(id) {

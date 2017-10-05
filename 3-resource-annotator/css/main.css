@@ -217,6 +217,8 @@ footer {
 
 body p {
   font-family: "Archer Pro", serif; }
+body span {
+  font-family: "Archer Pro", serif; }
 body a {
   font-family: "Archer Pro", serif; }
   body a.link-color {
@@ -546,6 +548,18 @@ small, .small {
 
 footer.transparent {
   background: #403f3f; }
+
+.defintions-icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: -6px;
+  left: 5px;
+  padding-left: 20px;
+  background: url("../assets/icon-definition.svg") no-repeat;
+  background-position: left center;
+  background-size: contain;
+  padding: 10px;
+  padding-top: 0; }
 
 .scrollbar-design::-webkit-scrollbar-track {
   background-color: #e0e1e2; }
