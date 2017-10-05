@@ -326,7 +326,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 40px; }
+    margin-bottom: 0px; }
     .intro-card .header-wrapper h1,
     .learning-points-card .header-wrapper h1 {
       font-size: 26px;
@@ -343,6 +343,12 @@ footer {
     left: 0px;
     padding: 0px 30px; }
 
+.intro-card p {
+  font-size: 14px;
+  margin-top: 10px; }
+.intro-card img {
+  height: 180px; }
+
 .subheader {
   padding-left: 0px; }
   .subheader li {
@@ -350,6 +356,16 @@ footer {
     font-size: 16px;
     color: white;
     font-family: "Archer Pro", serif; }
+
+.modal-img-wrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #puzzle .header-wrapper {
   width: 100%;

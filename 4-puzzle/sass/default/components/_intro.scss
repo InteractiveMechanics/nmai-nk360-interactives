@@ -31,7 +31,7 @@
 		display: flex;
     	flex-direction: column;
     	text-align: center;
-    	margin-bottom: 40px;
+    	margin-bottom: 0px;
     	h1 {
     		font-size: 26px;
     		line-height: 1.4;
@@ -54,6 +54,17 @@
 
 }
 
+.intro-card {
+	p {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+
+	img {
+		height: 180px;
+	}
+}
+
 .subheader {
 	padding-left: 0px;
 
@@ -63,4 +74,15 @@
 		color: white;
 		font-family: $headline-accent;
 	}
+}
+
+.modal-img-wrapper {
+	position: relative;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

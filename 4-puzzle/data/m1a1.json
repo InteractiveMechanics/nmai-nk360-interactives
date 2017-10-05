@@ -19,6 +19,7 @@
             "IntroCredit": "Photograph by Edward S. Curtis, courtesy of the Library of Congress, 89707042",
             "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to it’s corresponding theme and reveal an iconic image.",
             "IntroImage": "./assets/imgs/m1a1/intro-card-image.jpg",
+            "FullIntroImage": "../assets/imgs/m1a1/full-intro-card-image.jpg", 
             "LearningPoints": "Diversity exists between Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
             "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Themes": [
