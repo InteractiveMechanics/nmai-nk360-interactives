@@ -233,7 +233,6 @@ body .image-credit {
     height: 100vh;
     min-width: 100vh;
     width: 15000px !important;
-    overflow: hidden;
     position: relative; }
     .game .game-world .game-world__background, .game .game-world .game-world__midground, .game .game-world .game-world__foreground {
       position: absolute;
@@ -569,6 +568,8 @@ body .image-credit {
 
 .spawn-death-slider-wrapper .overlay {
   z-index: 20; }
+.spawn-death-slider-wrapper .slick-dots {
+  bottom: -175px; }
 
 .card {
   background: #FFFFFF;
@@ -660,17 +661,50 @@ body .image-credit {
     background: grey;
     font-size: 21px;
     padding: 15px;
-    margin: 5px 0 20px; }
+    margin: 5px 0 20px;
+    outline: none !important; }
     .quiz-options button:focus {
+      outline: none !important;
       outline: 0;
       background: grey; }
     .quiz-options button:active {
+      outline: none !important;
       outline: 0;
       background: grey; }
     .quiz-options button.correct {
-      background: green; }
+      background: green;
+      outline: none !important; }
+      .quiz-options button.correct:hover {
+        outline: none !important;
+        background: green !important;
+        color: white !important;
+        border-color: green !important; }
+      .quiz-options button.correct:active {
+        outline: none !important;
+        background: green !important;
+        color: white !important;
+        border-color: green !important; }
+      .quiz-options button.correct:focus {
+        outline: none !important;
+        background: green !important;
+        color: white !important;
+        border-color: green !important; }
     .quiz-options button.wrong {
-      background: red; }
+      background: red;
+      outline: none !important; }
+      .quiz-options button.wrong:hover {
+        background: red !important;
+        color: white !important;
+        border-color: red !important; }
+      .quiz-options button.wrong:active {
+        background: red !important;
+        color: white !important;
+        border-color: red !important; }
+      .quiz-options button.wrong:focus {
+        outline: none !important;
+        background: red !important;
+        color: white !important;
+        border-color: red !important; }
   .quiz-options hr {
     border-width: 5px; }
 
@@ -679,14 +713,47 @@ body .image-credit {
   background: grey;
   font-size: 21px;
   padding: 15px;
-  margin: 5px 0 20px; }
+  margin: 5px 0 20px;
+  outline: none !important; }
+  .quiz-answered button.btn {
+    outline: none !important; }
+    .quiz-answered button.btn:focus {
+      outline: 0 !important; }
+  .quiz-answered button.btn-default {
+    outline: none !important; }
+    .quiz-answered button.btn-default:focus {
+      outline: 0 !important; }
   .quiz-answered button:hover {
     background: grey !important;
     color: white !important; }
+  .quiz-answered button:focus {
+    outline: 0 !important; }
 .quiz-answered .correct:hover {
-  background: green !important; }
+  background: green !important;
+  color: white !important;
+  border-color: green !important; }
+.quiz-answered .correct:active {
+  background: green !important;
+  color: white !important;
+  border-color: green !important; }
+.quiz-answered .correct:focus {
+  background: green !important;
+  color: white !important;
+  border-color: green !important;
+  outline: 0 !important; }
 .quiz-answered .wrong:hover {
-  background: red !important; }
+  background: red !important;
+  color: white !important;
+  border-color: red !important; }
+.quiz-answered .wrong:active {
+  background: red !important;
+  color: white !important;
+  border-color: red !important; }
+.quiz-answered .wrong:focus {
+  background: red !important;
+  color: white !important;
+  border-color: red !important;
+  outline: 0 !important; }
 
 .slider-card {
   background: url(../assets/text-card-pnw@2x.png) white !important;
@@ -706,10 +773,15 @@ body .image-credit {
     width: 100%; }
 
 .slick-prev {
-  left: -130px; }
+  left: -120px; }
 
 .slick-next {
-  right: -50px; }
+  right: -120px; }
+
+.slick-prev,
+.slick-next {
+  width: 100px;
+  height: 100px; }
 
 .slick-prev:before,
 .slick-next:before {

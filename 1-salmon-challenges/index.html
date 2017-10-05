@@ -84,7 +84,7 @@
     <div class="activity-menu-wrapper">
         <div class="abs top right">
             <a class="icon icon-play" title="Pause Salmon Challenges" id="pause-icon"></a>
-            <a class="icon icon-restart" title="Restart Salmon Challenges" id="restart"></a>
+            <a class="icon icon-restart restart" title="Restart Salmon Challenges"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -291,7 +291,7 @@
         <div class="container select-fish-container">
 
             <header class="header text-center">
-              <h2 class="letter-spacing-1 all-caps">The Return Upstream<</h2>
+              <h2 class="letter-spacing-1 all-caps">The Return Upstream</h2>
               <h1>Pick Your Salmon</h1>
             </header>
 
@@ -435,6 +435,18 @@
               {{:body}}
             </p>
           {{/if}}
+
+          {{if isLastSlide}}
+
+            <div class="btn-group-vertical">
+
+                <button type="button" class="btn btn-default ">
+                  Play Activity Again
+                </button>
+
+            </div>
+            
+          {{/if}}
         </div>
     </script>
 
@@ -476,6 +488,19 @@
                 {{:result}}
               </p>
             </div>
+          {{/if}}
+
+          {{if isLastSlide}}
+
+
+            <div class="quiz-options btn-group-vertical">
+
+                <button type="button" class="restart btn btn-default ">
+                  Play Activity Again
+                </button>
+
+            </div>
+            
           {{/if}}
         </div>
     </script>
