@@ -1,11 +1,11 @@
 {
     "title": "Resource Annotator",
     "page_title": "Northern Plains History & Culture: Northern Cheyenne Nation",
-    "introduction": "",
+    "introduction": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful).",
 	"themes": [
 	    {
 	    	"title": "Relationships",
-	    	"tooltip_text": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful)",
+	    	"tooltip_text": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful).",
 	    	"count": 5,
 			"highlight_color": "#FF0000"
 	    }
