@@ -1,0 +1,10 @@
+.slick-dots {
+    > li {
+        &.slick-active {
+            > a,
+            > button {
+                background-color: $primary;
+            }
+        }
+    }
+}

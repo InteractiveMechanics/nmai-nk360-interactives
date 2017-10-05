@@ -199,7 +199,21 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 9;
-  background: url(../assets/randomHS.png) no-repeat;
+  background: url(../assets/icon@2x.png) no-repeat;
+  animation: stretch 2.25s infinite;
+  background-size:contain;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 

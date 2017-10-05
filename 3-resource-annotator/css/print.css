@@ -19,6 +19,9 @@ body {
 	margin: 0;
 }
 
+.marker img {
+	height:75px;
+}
  .module-menu-wrapper {
  	display: none;
  }

@@ -411,6 +411,9 @@ Annotator = (function() {
         $('.annotation-slider-screen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
               $('.annotation-slider-screen').addClass('hidden');
               $('.annotation-notes-screen').removeClass('hidden').addClass('show');
+
+              $('.icon-print').removeClass('disabled');
+              $('.icon-home').removeClass('disabled');
         });
       }
 

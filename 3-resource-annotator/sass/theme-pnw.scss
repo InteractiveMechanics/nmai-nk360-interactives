@@ -4,4 +4,7 @@
 */
 
 @import '../shared/sass/base/variables';
-@import '../shared/sass/_theme-pnw';
+@import '../shared/sass/theme-pnw';
+
+@import 'pnw/helper';
+@import 'pnw/navigation';

@@ -18,13 +18,11 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/theme-pnw.css" />
-    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
     <link rel="stylesheet" href="./css/print.css" />
     
     <!-- For development only, comment for distribution -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
@@ -93,8 +91,8 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print" title="Print this Activity"></a>
-            <a class="icon icon-home" title="Back to Home Screen"></a>
+            <a class="icon icon-print disabled" title="Print this Activity"></a>
+            <a class="icon icon-home disabled" title="Back to Home Screen"></a>
             
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
@@ -329,7 +327,9 @@
 
                   <div class="text-center print-button">
 
-                    <a class="btn btn-success btn-lg" id="print-notes" title="Print your notes">Print Your Notes</a>
+                    <a class="btn btn-success btn-lg" id="print-notes" title="Print your notes">
+                      <strong>Print Your Notes</strong>
+                    </a>
 
                   </div>
 
@@ -502,25 +502,28 @@
               <div class="photo">
                   <img src="{{:image_url}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
               </div>
-          </div>
 
-          <div class="bottom">
-             
-              <div class="body">
-                  <p>
-                     {{:body}}
-                  </p>
-              </div>
+              <div class="photo-overlay"></div>
+              <div class="text-overlay all-caps"><h3>{{:source_type}}</h3></div>
+            </div>
 
-              <div class="button">
+            <div class="bottom">
+               
+                <div class="body">
+                    <p>
+                       {{:body}}
+                    </p>
+                </div>
 
-                  <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
-                      Annotate this material
-                  </a>
+                <div class="button">
 
-              </div>
+                    <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
+                        <strong>Mark-up this material <i class="pencil"></i></strong>
+                    </a>
 
-          </div>
+                </div>
+
+            </div>
 
 
           </div>

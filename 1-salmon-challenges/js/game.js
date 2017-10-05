@@ -427,8 +427,12 @@ Game = (function() {
 
       $('.fish-row .col').addClass('faded');
       $('.fish-row .col').removeClass('selected');
+
+      $('.fish-row .col img').removeClass('animated bounce');
       _this.removeClass('faded');
       _this.addClass('selected');
+
+      _this.find('img').addClass('animated pulse');
 
       $('#close-select-fish').removeClass('faded');
       $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);
