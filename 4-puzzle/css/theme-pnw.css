@@ -6,17 +6,17 @@
   font-family: "Ludicrous";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../fonts/ludicrous/Ludicrous.woff") format("woff"), url("../fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+  src: url("../shared/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../shared/fonts/ludicrous/Ludicrous.woff") format("woff"), url("../shared/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
 @font-face {
   font-family: "Archer Pro";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+  src: url("../shared/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
 @font-face {
   font-family: "Archer Pro";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
+  src: url("../shared/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 h1 {
   font-size: 3.6rem;
   font-family: "Ludicrous", serif; }
@@ -34,13 +34,16 @@ h4 {
 .header {
   max-width: 540px;
   margin: 10px auto 0;
-  background-image: url("../images/pnw/splash-04.svg");
+  background-image: url("../shared/images/pnw/splash-04.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   padding: 10px 0 0;
   max-height: 85px;
   margin-bottom: 25px; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    .header {
+      margin: 60px auto 0; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
@@ -78,12 +81,12 @@ h4 {
       opacity: 0.65; }
 
 .card {
-  background: url("../../assets/card-pnw@2x.png");
+  background: url("../assets/card-pnw@2x.png");
   background-size: contain;
   background-color: #eaeaea; }
 
 .modal-content {
-  background: url("../../shared/images/pnw/text-card-pnw@2x.png");
+  background: url("../shared/images/pnw/text-card-pnw@2x.png");
   background-color: white;
   background-size: 90%;
   background-position: center center;
@@ -97,7 +100,7 @@ h4 {
   background: #a8bd46;
   opacity: 0.6; }
   .dropped:after {
-    content: url("../../shared/images/icon-checkmark.svg");
+    content: url("../shared/images/icon-checkmark.svg");
     position: absolute;
     left: 42%; }
 
@@ -111,7 +114,7 @@ h4 {
 
 .intro-card,
 .learning-points-card {
-  background: url("../../shared/images/pnw/text-card-pnw@2x.png");
+  background: url("../shared/images/pnw/text-card-pnw@2x.png");
   background-size: 90%;
   background-color: #eaeaea;
   background-repeat: no-repeat;
@@ -125,7 +128,7 @@ h4 {
   font-family: "Archer Pro", serif; }
 
 #puzzle {
-  background: url("../../shared/images/pnw/bkgr-pnw@2x.png");
+  background: url("../shared/images/pnw/bkgr-pnw@2x.png");
   background-size: cover; }
 
 /*# sourceMappingURL=theme-pnw.css.map */

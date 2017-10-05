@@ -6,12 +6,12 @@
   font-family: "Geared Slab";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/geared-slab/GearedSlab.eot?") format("eot"), url("../fonts/geared-slab/GearedSlab.woff") format("woff"), url("../fonts/geared-slab/GearedSlab.ttf") format("truetype"); }
+  src: url("../shared/fonts/geared-slab/GearedSlab.eot?") format("eot"), url("../shared/fonts/geared-slab/GearedSlab.woff") format("woff"), url("../shared/fonts/geared-slab/GearedSlab.ttf") format("truetype"); }
 @font-face {
   font-family: "Geared Slab";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/geared-slab/GearedSlab-Bold.eot?") format("eot"), url("../fonts/geared-slab/GearedSlab-Bold.woff") format("woff"), url("../fonts/geared-slab/GearedSlab-Bold.ttf") format("truetype"); }
+  src: url("../shared/fonts/geared-slab/GearedSlab-Bold.eot?") format("eot"), url("../shared/fonts/geared-slab/GearedSlab-Bold.woff") format("woff"), url("../shared/fonts/geared-slab/GearedSlab-Bold.ttf") format("truetype"); }
 h1 {
   font-size: 3.6rem;
   font-family: "Geared Slab", serif;
@@ -33,12 +33,15 @@ h4 {
   max-width: 540px;
   margin: 10px auto 0;
   padding: 10px 0 20px;
-  background-image: url("../images/np/decoration-np.svg");
+  background-image: url("../shared/images/np/decoration-np.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 50%;
   max-height: 125px;
   margin-bottom: 25px; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    .header {
+      margin: 60px auto 0; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
@@ -76,12 +79,12 @@ h4 {
       opacity: 0.65; }
 
 .card {
-  background: url("../../assets/card-np@2x.png");
+  background: url("../assets/card-np@2x.png");
   background-size: contain;
   background-color: #eaeaea; }
 
 .modal-content {
-  background: url("../../shared/images/np/text-card-np@2x.png");
+  background: url("../shared/images/np/text-card-np@2x.png");
   background-color: white;
   background-size: 90%;
   background-position: center center;
@@ -98,7 +101,7 @@ h4 {
   background: #677c4a;
   opacity: 0.6; }
   .dropped:after {
-    content: url("../../shared/images/icon-checkmark.svg");
+    content: url("../shared/images/icon-checkmark.svg");
     position: absolute;
     left: 42%; }
 
@@ -111,7 +114,7 @@ h4 {
   border-top-color: #73cce4; }
 
 .intro-card {
-  background: url("../../shared/images/np/text-card-np@2x.png");
+  background: url("../shared/images/np/text-card-np@2x.png");
   background-size: 95%;
   background-color: #eaeaea;
   background-repeat: no-repeat;
@@ -125,7 +128,7 @@ h4 {
   font-family: "Open Sans", serif; }
 
 #puzzle {
-  background: url("../../shared/images/np/bkgr-np@2x.png");
+  background: url("../shared/images/np/bkgr-np@2x.png");
   background-size: cover; }
 
 /*# sourceMappingURL=theme-np.css.map */

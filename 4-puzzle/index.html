@@ -25,7 +25,7 @@
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
 
 </head>
@@ -87,7 +87,7 @@
             <a class="icon icon-home" title="Back to Home Screen"></a>
             <a class="icon icon-print" title="Print this Activity"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
-            <a href="../assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
+            <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between">
@@ -167,7 +167,7 @@
                 <div class="lg-wrapper-puzzle">
                     <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
                         <img class="puzzle-img" src="{{:Image}}" alt="" title="">
-                        <span class="zoom-icon hidden"><img src="../shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                        <span class="zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
                     </a>
                 </div>
             
@@ -242,7 +242,7 @@
 
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><img src="../shared/images/icon-close.svg" alt="close" title="close"></span>
+                        <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
                     </button>
 
                 </div>
@@ -328,7 +328,7 @@
         </div>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"><img src="../shared/images/icon-close.svg" alt="close" title="close"></span>
+            <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
         </button>
 
     </script>
