@@ -31,7 +31,7 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('../images/icon-prev.svg') no-repeat;
+    background: url('../shared/images/icon-prev.svg') no-repeat;
     color: transparent;
     background-size:contain;
 }
@@ -43,11 +43,11 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('../images/icon-next.svg') no-repeat;
+    background: url('../shared/images/icon-next.svg') no-repeat;
     color: transparent;
     background-size:contain;
 }
-
+/*
 .slick-dots {
 	z-index: 50;
 
@@ -77,7 +77,7 @@
 			}
 		}
 	}
-}
+}*/
 
 .slick-dots {
     width: 100%;
