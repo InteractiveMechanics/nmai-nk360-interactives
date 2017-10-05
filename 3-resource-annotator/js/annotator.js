@@ -256,6 +256,7 @@ Annotator = (function() {
       
       print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
+      print.find('.paraphrased-text').html(objItem.paraphrase);
 
       // Add updated content
       original.find('.photo-container > *').clone().appendTo(print.find('.photo-container'));
@@ -290,6 +291,27 @@ Annotator = (function() {
         print.find('.print-notes ul').append('<li>'+ noteHTMLSnippet(src, note, num) +'</li>');
         i++;
       });
+
+
+      if(objItem.caption) {
+        print.find('.caption-text').css('display', 'none');
+      }
+
+      if(objItem.question_text) {
+        print.find('.discussion-text').css('display', 'none');
+      }
+
+      if(objItem.paraphrase) {
+        print.find('.paraphrased-text').css('display', 'none');
+      }
+
+      if(objItem.body) {
+        print.find('.info').css('display', 'none');
+      }
+
+      if(objItem.image_url) {
+        print.find('.photo-container').css('display', 'none');
+      }
     }
 
     var noteHTMLSnippet = function(src, note, num) {
