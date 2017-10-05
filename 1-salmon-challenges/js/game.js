@@ -619,7 +619,6 @@ Game = (function() {
     var showIntroModal = function() {
       if(!settings.started) {
         setTimeout(function() {
-          settings.started = true;
           $('.intro-slider-wrapper').removeClass('hidden').addClass('show');
 
           $(".intro-slider").slick({
