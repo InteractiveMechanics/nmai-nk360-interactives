@@ -627,7 +627,7 @@ Game = (function() {
                 
                 setTimeout(function(){
                   showSalmonSelection();
-                }, 550);
+                }, 375);
 
               }
           });

@@ -50,7 +50,6 @@
 
 .slick-dots {
 	z-index: 50;
-	bottom: -80px;
 
 	li {
 		@include screen-ltmd {
@@ -78,4 +77,44 @@
 			}
 		}
 	}
+}
+
+.slick-dots {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+	bottom: -80px;
+
+    > li {
+        display: inline-block;
+
+        &.slick-active {
+            > a,
+            > button {
+                background-color: orange;
+                cursor: default;
+            }
+        }
+
+        > a,
+        > button {
+            display: block;
+            background: $midgray;
+            width: 16px;
+            height: 16px;
+            text-indent: -99999px;
+            padding: 0;
+            margin: 0 2px;
+            border: 1px solid white !important;
+            border-radius: 99px;
+            outline: none;
+            cursor: pointer;
+
+            &:hover, &:active, &:focus {
+                background: darken($midgray, 10%);
+            }
+        }
+    }
 }

@@ -572,12 +572,12 @@ body .image-credit {
   color: white !important; }
 
 .slider-wrapper .slick-dots {
-  bottom: -150px; }
+  bottom: -155px; }
 
 .intro-slider-wrapper .overlay {
   z-index: 20; }
 .intro-slider-wrapper .slick-dots {
-  bottom: -150px; }
+  bottom: -80px; }
 
 .spawn-death-slider-wrapper .overlay {
   z-index: 20; }
@@ -749,8 +749,7 @@ body .image-credit {
   background-size: contain; }
 
 .slick-dots {
-  z-index: 50;
-  bottom: -80px; }
+  z-index: 50; }
   @media (max-width: 991px) {
     .slick-dots li {
       display: inline-block; } }
@@ -767,6 +766,38 @@ body .image-credit {
   .slick-dots li.slick-active button:before {
     color: #fff;
     opacity: 1.0; }
+
+.slick-dots {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  bottom: -80px; }
+  .slick-dots > li {
+    display: inline-block; }
+    .slick-dots > li.slick-active > a,
+    .slick-dots > li.slick-active > button {
+      background-color: orange;
+      cursor: default; }
+    .slick-dots > li > a,
+    .slick-dots > li > button {
+      display: block;
+      background: #9eb2c1;
+      width: 16px;
+      height: 16px;
+      text-indent: -99999px;
+      padding: 0;
+      margin: 0 2px;
+      border: 1px solid white !important;
+      border-radius: 99px;
+      outline: none;
+      cursor: pointer; }
+      .slick-dots > li > a:hover, .slick-dots > li > a:active, .slick-dots > li > a:focus,
+      .slick-dots > li > button:hover,
+      .slick-dots > li > button:active,
+      .slick-dots > li > button:focus {
+        background: #7f99ad; }
 
 .progress-wrapper {
   position: absolute;
