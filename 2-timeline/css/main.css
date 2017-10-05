@@ -636,7 +636,7 @@ div[id^="era-block"] {
 #prev-btn, #next-btn {
   left: 12px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   border: none;
   z-index: 3;
   transition: 0.5 opacity ease-in-out; }
@@ -754,7 +754,8 @@ div[id^="era-block"] {
 .modal-body {
   padding: 0px 30px 40px; }
   .modal-body p {
-    font-size: 14px; }
+    font-size: 14px;
+    margin-top: 20px; }
 
 .modal-year {
   font-size: 0.75em;
@@ -769,6 +770,16 @@ div[id^="era-block"] {
     font-style: italic;
     color: #2e3742;
     margin-top: 10px; }
+
+[data-gallery] {
+  background: url("../../shared/images/icon-zoom.svg");
+  background-repeat: no-repeat; }
+
+.modal-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+  background: #9eb2c1;
+  text-align: center; }
 
 .close[data-dismiss="modal"] {
   position: absolute;
