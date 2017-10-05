@@ -631,9 +631,7 @@ Game = (function() {
           $('.intro-slider').on('afterChange', function(e, slick, currentSlide){
               if(slick.slideCount == currentSlide + 1) {
                 
-                setTimeout(function(){
-                  showSalmonSelection();
-                }, 375);
+                $('.close-icon').removeClass('faded');
 
               }
           });
@@ -728,11 +726,18 @@ Game = (function() {
     var closePopup = function () {
       //var isVisible = $(".slider-wrapper").is(":visible");
       var isFaded = $(this).hasClass('faded');
-      if(!isFaded) {
+      var isSlider = $('.slider-wrapper').hasClass('show');
+      if(!isFaded && isSlider) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
         requestAnimationFrame(updateWorld);
       } 
+
+      var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');
+      if(!isFaded && isIntroSlider) {
+        $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
+        showSalmonSelection();
+      }
 
       /*$('.slider-wrapper').removeClass('show').addClass('hidden');
       settings.pause = true;
