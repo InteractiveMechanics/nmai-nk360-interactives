@@ -1,7 +1,7 @@
 #selection {
 	height: 100vh;
 	width: 100vw;
-	background: blue;
+	background: white;
 }
 
 .era-wrapper {
@@ -9,46 +9,113 @@
 }
 
 div[id^="era-block"] {
-	//align-items: center;
 	flex: 1;
 	display: flex;
 	height: 100vh;
 	align-items: flex-end;
 
-	h1 {
-		color: white;
-		font-size: 38px;
-		font-weight: 300;
-		margin-bottom: 150px;
+	img {
+		position: absolute;
 	}
 	
 	.era-content-wrapper {
 		text-align: center;
 		width: 100%;
-		height: 70%;
+		height: 46%;
 	    display: flex;
 	    flex-direction: column;
-	    //justify-content: space-around;
-	    padding: 100px 60px 80px 60px;
+	    padding: 0px 60px 80px 60px;
+	    position: relative;
 	}
 }
 
+.heading-wrapper {
+	margin-bottom: 80px;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		position: absolute;
+	}
+
+	h1 {
+		color: white;
+		margin: 0px;
+		padding: 0px;
+		line-height: 1;
+		z-index: 2;
+		text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+
+	}
+}
+
+.heading-wrapper[data-era="1"] {
+	h1 {
+		position: relative;
+		top: 10px;
+	}
+}
+
+
 #era-block-1 {
-	background: linear-gradient(135deg, #ababab, #232323);
+	background:  url('../../assets/timeline-segment-overlay-bg01@2x.png'), url('../../assets/timeline-segment-bg01@2x.jpg');
+	background-size: cover, cover;
+	button {
+		&:hover, &:active {
+			color:  $primary !important;
+		}
+	}
 }
 
 #era-block-2 {
-	background: linear-gradient(135deg, #efefef, #545454);
+	background:  url('../../assets/timeline-segment-bg02@2x.jpg');
+	background-size: cover;
+	opacity: 0.35;
+	transition: 0.5s all ease-in-out;
+	button {
+		&:hover, &:active {
+			color:  $accent !important;
+		}
+	}
+
+}
+
+#era-block-2.active {
+	background:  url('../../assets/timeline-segment-overlay-bg02@2x.png'), url('../../assets/timeline-segment-bg02@2x.jpg');
+	opacity: 1.0;
 }
 
 #era-block-3 {
-	background: linear-gradient(135deg, #9e9e9e, #212020);
+	background: url('../../assets/timeline-segment-bg03@2x.jpg');
+	background-size: cover;
+	opacity: 0.35;
+	button {
+		&:hover, &:active {
+			color:  $secondary !important;
+		}
+	}
 }
 
+#era-block-3.active {
+	background:  url('../../assets/timeline-segment-overlay-bg03@2x.png'), url('../../assets/timeline-segment-bg03@2x.jpg');
+	opacity: 1.0;
+}
+
+
+
 #detail {
-	background: #a9a9ab;
+	background: url('../../assets/bkgr-pnw@2x.png');
+	background-size: cover;
 	height: 100vh;
 	width: 100vw;
+	text-align: center;
+	.heading-wrapper {
+		position: relative;
+		top: 17px;
+	}
 }
 
 #explore {

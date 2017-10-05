@@ -6,107 +6,179 @@
     },
     "credits": "Created by the National Museum of the American Indian. Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
 
-	"puzzles": [
+    "puzzles": [
         {
             "Id": 1,
             "Title": "How do Native people and Nations experience belonging?",
-            "Image": "./assets/placeholder_luna.jpg",
-            "Caption": "1900s",
-            "Intro": "Text for the introduction card",
-            "IntroPrompt": "Ready to get started?",
-            "LearningPoints": "This is text for learning points.",
+            "Image": "assets/imgs/np/np-puzzle-image.jpg",
+            "FullImage": "assets/imgs/np/full-np-puzzle-image.jpg",
+            "Caption": "Dancing is an important part of Lakota culture and family life. Many children start dancing as soon as they can walk and continue throughout their lives. Parents and relatives spend countless hours designing and crafting colorful regalia—all of which contributes to a bright and beautiful experience.",
+            "Credit": "Rosebud Indian Reservation, South Dakota- The Rosebud Sioux Tribe’s annual wacipi (powwow), photograph by Jim West/Alamy",
+            "Intro": "At this point in the inquiry, you have examined sources that convey different ways that Native people and nations experience belonging. Over the centuries, many things have changed on the Northern Great Plains. However, Native culture is persistent and strong; Native identity continues to be shaped by relationships with land, family, and nation.",
+            "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to it’s corresponding theme and reveal an iconic image.",
+            "LearningPoints": "Diversity exists between Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
+            "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Themes": [
                 {
                     "id": 1,
                     "title": "Homelands", 
-                    "definition": "Definition of Homelands",
-                    "incorrect": "remediation for homelands"
+                    "definition": "Many Native Nations call the Northern Great Plains home. After living within these landscapes for many generations, they have developed a deep sense of belonging to place."
                 },
                 {
                     "id": 2,
                     "title": "Kinship", 
-                    "definition": "Definition of Kinship",
-                    "incorrect": "remediation for kinship"
+                    "definition": "Native kinship systems provide a network of care and support that extends beyond the immediate family."
                 },
                 {
                     "id": 3,
                     "title": "Nationhood", 
-                    "definition": "Definition of Nationhood",
-                    "incorrect": "remediation for nationhood"
+                    "definition": "Citizenship carries with it certain rights and responsibilities.  Each nation’s customs, values, and traditions inform an individual’s role as a tribal citizen."
                 }
             ],
             "Cards": [
                 {
                     "id": 1,
-                    "title": "Card 1",
-                    "subtitle": "Subtitle for Card 1",
+                    "title": "Northern Cheyenne",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 1",
-                    "body": "Body text for Card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien. Integer congue pharetra fringilla. Aenean bibendum semper arcu eget placerat.",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“I will never forget finding myself standing in front of a marker near Fort Robinson, Nebraska. On that cold winter day I read in horror about our relatives who, in the middle of a freezing 1879 winter, laid their very lives on the line in order to fight their way home 400 miles away…It was at that very moment I realized the sacrifice our Cheyenne ancestors paid with their very lives in order that we might have one another, our culture and our beautiful homeland.”",
+                    "credit": "Major Robinson, Northern Cheyenne Tribe",
+                    "incorrect": "Try again. According to this quote, what  significance does Fort Robinson have for Major Robinson?",
                     "themes": [1]
                 },
                 {
                     "id": 2,
-                    "title": "Card 2",
-                    "subtitle": "Subtitle for Card 2",
+                    "title": "Crow",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 2",
-                    "body": "Body text for Card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante. <p>Ut ac finibus libero, eu porta sem. Nulla malesuada est vel aliquam ultrices. Vivamus tempor sit amet purus non dignissim. Curabitur accumsan, diam vitae vulputate pulvinar, lacus leo tempus est, ut tincidunt nulla turpis eu sapien.</p>",
-                    "themes": [2]
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“The Crow country is in exactly the right place. It has snowy mountains, sunny plains, all kinds of climates and good things for every season. . .”",
+                    "credit": "Crow Chief Eelápuash Speech to Rocky Mountain Fur Company",
+                    "incorrect": "Try again. Think about how Crow Chief Elapuash describes Crow country.",
+                    "themes": [1]
                 },
                 {
                     "id": 3,
-                    "title": "Card 3",
-                    "subtitle": "Subtitle for Card 3",
+                    "title": "Oceti Sakowin",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 3",
-                    "body": "Body text for Card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis tempus mollis. Nullam et vestibulum mi. Vivamus blandit est sed eros dictum varius. Nullam quis consequat enim, a consequat ante.<p>Aenean eu nibh facilisis, hendrerit nisi quis, imperdiet mi. Duis non purus nec dui pretium porta. Morbi auctor velit sed condimentum elementum. Aenean volutpat diam et purus dictum, id ultricies ante consectetur. </p>",
-                    "themes": [3]
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "…He Sapa is a precious resource that Lakotas have held in trust for the coming generations. He Sapa to Lakotas is a wizipan, a repository from which we can draw physical and spiritual sustenance. It is a place of prayer and ceremony. We cannot look upon it without thinking about the power that created it. We are part of it, as it is part of us.”",
+                    "credit": "Craig Howe, Lydia Whirlwind Soldier, and Lanniko L. Lee, eds., He Sapa Woihanble: Black Hills Dreams (St. Paul: Living Justice Press, 2011) 4",
+                    "incorrect": "Try again. Think about how the authors describe the Black Hills and why that is significant.",
+                    "themes": [1]
                 },
                 {
                     "id": 4,
-                    "title": "Card 4",
-                    "subtitle": "Subtitle for Card 4",
+                    "title": "Three Affiliated Tribes",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 4",
-                    "body": "Body text for Card 4. Fusce laoreet, odio sed ornare malesuada, mauris neque pellentesque turpis, non rhoncus sapien velit eget libero. Pellentesque lacinia nibh mi, nec sodales mi bibendum volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce velit magna, venenatis sed justo in, sodales placerat diam. ",
-                    "themes": [2]
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“Well, I think the connection for my generation and my father's generation is the connection to the land...this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong. My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”",
+                    "credit": "Marilyn Hudson, Three Affiliated Tribes of Fort Berthold. NMAI Interview",
+                    "incorrect": "Try again. Think about how the authors describe He Sapa (the Black Hills) and why that is significant.",
+                    "themes": [1]
                 },
                 {
                     "id": 5,
-                    "title": "Card 5",
-                    "subtitle": "Subtitle for Card 5",
+                    "title": "Northern Cheyenne",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 5",
-                    "body": "Body text for Card 5. ellentesque sit amet leo tincidunt, tempus libero nec, semper nunc. Quisque ornare quam et orci bibendum tincidunt. Nulla tincidunt tellus a aliquet porta. Praesent a justo vitae libero malesuada euismod. Proin at ipsum sed nibh sagittis vestibulum. Nam elementum porttitor ligula nec facilisis. Quisque libero urna, efficitur nec pretium at, lobortis eget dolor.",
-                    "themes": [1]
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“And what I’m trying to do is leave a legacy for my young people to follow. Because the future is . . . sometimes it’s cloudy. And I want my young people to be able to withstand and overcome any kind of hardship that they might encounter in their young lives . . . to thrive and be proud of who they are, and seek out the true meaning of their identity and their purpose for being here in this time and space.”",
+                    "credit": "Anthony Prairie Bear (Northern Cheyenne) NMAI Interview, August 2016",
+                    "incorrect": "Try again. Think about what Anthony Prairie Bear hopes to create for young people in his community.",
+                    "themes": [2]
                 },
                 {
                     "id": 6,
-                    "title": "Card 6",
-                    "subtitle": "Subtitle for Card 6",
+                    "title": "Crow",
+                    "subtitle": "",
                     "image": "",
+                    "fullimage": "",
                     "caption": "Caption for Card 6",
-                    "body": "Body text for Card 6. Nam auctor justo non eros consequat fermentum. Cras felis elit, lacinia non metus ornare, euismod gravida odio. Nunc laoreet at odio quis pharetra. Integer nunc ex, ornare eget lacus ut, porta feugiat elit. Morbi vel ultrices turpis. Praesent eleifend, est ut volutpat vehicula, neque augue sagittis libero, ut efficitur mauris ante quis risus. Maecenas nisl nisi, convallis id venenatis consectetur, bibendum ut elit. Morbi convallis velit nibh, id consectetur neque pulvinar vel.",
-                    "themes": [3]
+                    "body": " “Clan uncle? His responsibility is to help his clan nephew physically and spiritually, mostly spiritually—that he will live a long life. Be prosperous. Be a good warrior and have all the things that he needs to survive on this earth.”",
+                    "credit": "Grant Bull Tail (Crow), NMAI Interview, 2016",
+                    "incorrect": "Try again. According to this quote, what is the significance of the relationship between a Crow clan uncle and his nephew?",
+                    "themes": [2]
                 },
                   {
                     "id": 7,
-                    "title": "Card ",
-                    "subtitle": "Subtitle for Card 7",
+                    "title": "Oceti Sakowin",
+                    "subtitle": "",
                     "image": "",
-                    "caption": "Caption for Card 7",
-                    "body": "Body text for Card 7.liquam nec urna sit amet mi posuere dictum sed vitae elit. <p>Ut laoreet, est sed ullamcorper condimentum, mi nisi vestibulum velit, in consectetur urna metus sit amet sapien.</p><p> Vivamus lacus nibh, gravida eget aliquam posuere, tempor et velit. Maecenas ex ligula, dapibus vel dapibus sit amet, lobortis at urna. Morbi eget convallis neque.</p>",
-                    "themes": [1]
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“Everyone who was born a Dakota belonged in it; nobody need be left outside…I can safely say that the ultimate aim of Dakota life, stripped of accessories, was quite simple: One must obey kinship rules; one must be a good relative.”",
+                    "credit": "Ella Cara Deloria, Speaking of Indians (Lincoln: University of Nebraska Press, [1944] 1984).",
+                    "incorrect": "Try again. Think carefully about the key message of this passage by Ella Cara Deloria.",
+                    "themes": [2]
                 },
                 {
                     "id": 8,
-                    "title": "Card 8",
+                    "title": "Three Affiliated Tribes",
                     "subtitle": "Subtitle for Card 8",
                     "image": "",
-                    "caption": "Caption for Card 8",
-                    "body": "Body text for Card 8. Praesent imperdiet velit tempor, venenatis massa sed, efficitur magna. Ut quis nunc diam. Quisque porta porttitor dictum. Aenean eget quam ut sapien bibendum vestibulum eget vitae lacus. Aliquam lobortis commodo augue vel iaculis. Duis interdum, lectus ac aliquet maximus, orci mauris viverra lectus, in fringilla diam tortor sit amet tellus.",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "The Hidatsa people . . . maintain their clan system, so anybody in that clan . . . you would be a brother or a sister. . . and that always followed your mother [mother’s side of the family].”",
+                    "credit": "Credit for Card 8",
+                    "incorrect": "Try again. Why would it be important to the Hidatsa to maintain a system in which roles of brothers and sisters are valued?",
                     "themes": [2]
+                },
+                {
+                    "id": 9,
+                    "title": "Northern Cheyenne",
+                    "subtitle": "",
+                    "image": "",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "Sweet Medicine learned next that he was to give the people a good government, with forty-four chiefs to manage it, and a good system of police and military protection . . . ‘Listen to me carefully, and truthfully follow up my instructions,’ Sweet Medicine told the chiefs. ‘You chiefs are peacemakers.",
+                    "credit": "John Stands in Timber and Margot Liberty, Cheyenne Memories (Lincoln: University of Nebraska Press, 1972).",
+                    "incorrect": "Try again. Think about the teachings that Sweet Medicine both received and gave to Cheyenne chiefs.",
+                    "themes": [3]
+                },
+                                {
+                    "id": 10,
+                    "title": "Crow",
+                    "subtitle": "",
+                    "image": "",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition. It wasn’t about, one day they woke up and said, from now on we’re going to be warriors . . . And for Indian people, warriors meant protecting. Protecting the family, protecting the home. And they would be the front lines, protecting their homeland and what they believed in. And they never backed down.”",
+                    "credit": "Darrin Old Coyote (Crow), NMAI Interview, August 2016",
+                    "incorrect": "Try again. What Crow traditions is Darrin Old Coyote recounting?",
+                    "themes": [3]
+                },
+                 {
+                    "id": 11,
+                    "title": "Oceti Sakowin",
+                    "subtitle": "",
+                    "image": "",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“The Lakotas were self-governors, and the rules and regulations that governed the conduct of people and established their duties as individuals, families, and bands came from a great tribal consciousness . . .”",
+                    "credit": "Luther Standing Bear, Land of the Spotted Eagle (Lincoln: University of Nebraska Press, [1933] 1978).",
+                    "incorrect": "Try again. What Lakota practices does Luther Standing Bear describe?",
+                    "themes": [3]
+                },
+                 {
+                    "id": 12,
+                    "title": "Three Affiliated Tribes",
+                    "subtitle": "",
+                    "image": "",
+                    "fullimage": "",
+                    "caption": "",
+                    "body": "“We're not against all oil and gas development. We're not against all pipelines. We just want responsible development... That being said, if our fellow tribal nation says, 'We don't want that,' that is their right. We stand firmly behind them.”",
+                    "credit": "Mark Fox, chairman of the Three Affiliated Tribes",
+                    "incorrect": "Try again. Think about the kind of relationship Mark Fox articulates in this quote.",
+                    "themes": [3]
                 }
 
             ]

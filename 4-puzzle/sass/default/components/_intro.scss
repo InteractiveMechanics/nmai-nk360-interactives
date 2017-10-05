@@ -25,7 +25,8 @@
 	position: absolute;
 	top: 10%;
 	width: 33%;
-	padding: 25px;
+	padding: 35px;
+	z-index: 2;
 	.header-wrapper {
 		display: flex;
     	flex-direction: column;
@@ -35,21 +36,18 @@
     		font-size: 26px;
     		line-height: 1.4;
 		}
-
-		&:after {
-			content: '';
-			border-bottom: 3px solid #ddd;
-			width: 33%;
-			bottom: -10px;
-			position: relative;
-			left: 33%;
-		}
 	}
 	.text-wrapper {
 		h6 {
 			text-align: center;
-    		font-weight: 600;
-    		margin-top: 50px;
+		    font-weight: 600;
+		    margin-top: 50px;
+		    position: bottom;
+		    position: absolute;
+		    bottom: 50px;
+		    width: 100%;
+		    left: 0px;
+		    padding: 0px 30px;
 		}
 		
 	}
@@ -61,7 +59,8 @@
 
 	li {
 		display: inline;
-		font-size: 14px;
-		text-transform: uppercase;
+		font-size: 16px;
+		color: white;
+		font-family: $headline-accent;
 	}
 }

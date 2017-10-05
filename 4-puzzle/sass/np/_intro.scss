@@ -1,0 +1,14 @@
+.intro-card {
+	background: url('../../shared/images/np/text-card-np@2x.png');
+	background-size: 95%;
+	background-color: #eaeaea;
+	background-repeat: no-repeat;
+	background-position: center center;
+	.header-wrapper {
+		h1 {
+			font-family: $headline;
+			font-size: 30px;
+    		margin-top: 20px;
+		}
+	}
+}

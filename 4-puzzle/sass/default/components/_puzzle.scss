@@ -1,0 +1,203 @@
+#puzzle {
+	.header-wrapper {
+		width: 100%;
+	    text-align: center;
+	}
+}
+
+.puzzle-img-wrapper,
+.lg-puzzle-wrapper {
+	position: relative;
+	left: 30%;
+    width: 40%;
+    height: 495px;
+    margin-top: 80px;
+}
+
+.puzzle-img {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 15px rgba(0,0,0, 0.9);
+}
+
+.card {
+	width: 175px;
+	height: 250px;
+	background: url('../../assets/card-generic@2x.png');
+	background-size: contain;
+	background-color: #eaeaea;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	position: absolute;
+	transition: 0.5s all ease-in-out;
+	&:hover {
+		z-index: 2;
+		box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5);
+	}
+}
+
+.card[data-card="1"] {
+	top: 0px;
+    left: 0px;
+    transition: 0.5s all ease-in-out;
+	transform: rotate(-11deg);
+	&:hover {
+		transform: rotate(-11deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="2"] {
+	top: -15px;
+    left: 133px;
+    transform: rotate(56deg);
+    &:hover {
+		transform: rotate(56deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="3"] {
+	top: -39px;
+    left: 292px;
+    transform: rotate(90deg);
+    &:hover {
+		transform: rotate(90deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="4"] {
+	top: -31px;
+    left: 412px;
+    transform: rotate(-39deg);
+    &:hover {
+		transform: rotate(-39deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="5"] {
+	top: 165px;
+    left: 407px;
+    transform: rotate(18deg);
+    &:hover {
+		transform: rotate(18deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="6"] {
+	top: 206px;
+    left: 212px;
+    transform: rotate(90deg);
+    &:hover {
+		transform: rotate(90deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="7"] {
+	transform: rotate(-70deg);
+    top: 93px;
+    left: 207px;
+    &:hover {
+		transform: rotate(-70deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="8"] {
+	top: 154px;
+    left: -6px;
+    transform: rotate(-17deg);
+    &:hover {
+		transform: rotate(-17deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="9"] {
+	top: -50px;
+    left: 425px;
+    transform: rotate(-18deg);
+    &:hover {
+		transform: rotate(-18deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="10"] {
+	top: -86px;
+    left: 29px;
+    transform: rotate(109deg);
+    &:hover {
+		transform: rotate(109deg) scale(1.15, 1.15);	
+	}
+}
+
+.card[data-card="11"] {
+	top: 253px;
+    left: 390px;
+    transform: rotate(46deg);
+    &:hover {
+		transform: rotate(46deg) scale(1.15, 1.15);	
+	}
+
+}
+
+.card[data-card="12"] {
+	top: 253px;
+    left: -23px;
+    transform: rotate(-60deg);
+    &:hover {
+		transform: rotate(-60deg) scale(1.15, 1.15);	
+	}
+}
+
+
+#complete-overlay {
+	height: 100vh;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.85);
+	.text-wrapper {
+		color: white;
+		width: 40%;
+		left: 30%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    	height: 100%;
+    	h1 {
+    		font-size: 50px;
+    		letter-spacing: 2px;
+    		margin-bottom: 40px;
+    	}
+    	p {
+    		margin-bottom: 80px;
+    		text-align: center;
+    		line-height: 1.9;
+    		font-weight: 300;
+    	}
+	}
+	.btn-wrapper {
+		button {
+			margin: 15px; 
+			color: white;
+		}
+	}
+
+}
+
+.zoom-icon {
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	right: 15px;
+    bottom: 15px;
+}
+
+.read-more {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 60px;
+}

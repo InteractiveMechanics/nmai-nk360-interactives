@@ -1,49 +1,63 @@
+
+.modal-backdrop {
+  opacity: 0.7 !important;
+}
+
 .modal-dialog {
 	max-width: 400px; // originally 500px
+	background-color: white;
+	border-radius: 10px;
 }
 
 .modal-header {
 	flex-direction: column;
 	border-bottom: none;
 	padding: 40px 20px 20px;
-	&:after {
-		content: "";
-		border: 2px solid #DDDDDD;
-		margin-top: 15px;
-		width: 50px;
+}
 
-	}
+.modal-content {
+	background: url('../../assets/text-card-pnw@2x.png');
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 550px;
 }
 
 .modal-body {
-	padding: 20px 20px 40px;
+	padding: 0px 30px 40px;
+	p {
+		font-size: 14px;
+	}
+}
+
+.modal-year {
+	font-size: 0.75em;
+	letter-spacing: 1px;
 }
 
 .modal-photo-wrapper {
+	position: relative;
 	img {
 		max-width: 100%;
 	}
 	figcaption {
-		font-size: 14px;
+		font-size: 13px;
 		font-style: italic;
+		color: $black;
+		margin-top: 10px;
 	}
 }
 
 .close[data-dismiss="modal"] {
 	position: absolute;
-	left: 110%;
+	left: 105%;
 	top: 0%;
-	span {
-		color: white;
-	    border: 1px solid white;
-	    border-radius: 50%;
-	    display: flex;
-	    height: 40px;
-	    width: 40px;
-	    justify-content: center;
-	    align-items: center;
-	    text-shadow: none;
-	    font-weight: initial;
-	}
+}
 
+.zoom {
+	position: absolute;
+    right: 0px;
+    top: 218px;
+    background: transparent;
+    border: none;
 }

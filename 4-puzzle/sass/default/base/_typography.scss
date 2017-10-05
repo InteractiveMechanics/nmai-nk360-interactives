@@ -1,0 +1,45 @@
+// Typography
+@font-face {
+    font-family: "Geared Slab";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/geared-slab/GearedSlab.eot?') format('eot'), 
+         url('../fonts/geared-slab/GearedSlab.woff') format('woff'), 
+         url('../fonts/geared-slab/GearedSlab.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Geared Slab";
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/geared-slab/GearedSlab-Bold.eot?') format('eot'), 
+         url('../fonts/geared-slab/GearedSlab-Bold.woff') format('woff'), 
+         url('../fonts/geared-slab/GearedSlab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Ludicrous";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/ludicrous/Ludicrous.eot?') format('eot'), 
+         url('../fonts/ludicrous/Ludicrous.woff') format('woff'), 
+         url('../fonts/ludicrous/Ludicrous.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Archer Pro";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/archer-pro/ArcherPro-Book.eot?') format('eot'), 
+         url('../fonts/archer-pro/ArcherPro-Book.woff') format('woff'), 
+         url('../fonts/archer-pro/ArcherPro-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Archer Pro";
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/archer-pro/ArcherPro-Semibold.eot?') format('eot'), 
+         url('../fonts/archer-pro/ArcherPro-Semibold.woff') format('woff'), 
+         url('../fonts/archer-pro/ArcherPro-Semibold.ttf') format('truetype');
+}

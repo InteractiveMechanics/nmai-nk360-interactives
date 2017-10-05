@@ -1,21 +1,28 @@
 #droppable-wrapper {
-	width: 80%;
+	width: 70%;
     display: flex;
     justify-content: space-between;
-    left: 10%;
+    left: 15%;
     position: relative;
     margin-top: 35px;
     z-index: 1052;
+    position: absolute;
+    bottom: 60px;
 }
 
 .droppable-widget {
 	font-weight: 600;
-    border: 3px solid black;
+    color: white;
+    border: 3px solid white;
    	width: 25%;
     text-align: center;
     padding: 6px;
-    &:hover {
-        border: 3px solid black;
+    background: transparent;
+    &:hover, &:active, &:visited {
+        border: 3px solid white;
+    }
+    &:after {
+        content: '';
     }
 }
 
@@ -26,7 +33,9 @@
 
 //active class for draggable
 .ui-draggable-dragging,
-.ui-draggable .dragged {
-	transform: scale(0.65, 0.65) !important;
-	opacity: 0.9;
+.dragged
+.answered {
+	transform: scale(0.50, 0.50) !important;
+    cursor: move;
+
 }
