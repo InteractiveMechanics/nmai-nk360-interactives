@@ -51,7 +51,7 @@
 		{
 			"id": 3,
 		    "title": "Dr. Joseph Medicine Crow",
-		    "image_url": "http://via.placeholder.com/1280x720",
+		    "image_url": "../assets/imgs/m1a1/med-source-3.jpg",
 		    "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "image_credit": "Dr. Joseph Medicine Crow shows a drum to President Barack Obama and First Lady Michelle Obama during a reception for recipients and their families in the Blue Room of the White House, August 12, 2009. Photograph by Pete Souza",
 		    "body": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
@@ -61,7 +61,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "../assets/imgs/m1a1/thumbnail-source-3.jpg",
 		    "question_text": "<p>What responsibilities and values are reflected in the four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
 		},
 		{
