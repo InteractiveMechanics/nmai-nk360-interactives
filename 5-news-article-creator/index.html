@@ -25,7 +25,7 @@
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
 </head>
 <body>
@@ -87,7 +87,7 @@
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
-    <footer class="fixed-bottom d-flex justify-content-between">
+    <footer id="footer" class="fixed-bottom d-flex justify-content-between">
         <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
@@ -120,11 +120,14 @@
 
     <!-- Main interactive templates -->
     <script id="imageTemplate" type="text/x-jsrender">
-        <div class="image-step step" data-id="{{:#index}}">
+        <div class="image-step step">
             <div class="step-container-inner">
-                <img src="{{:thumb}}" alt="{{:caption}}" title="{{:caption}}" />
+                <img src="{{:thumb}}" alt="{{:caption}}" title="{{:caption}}" data-id="{{:#index}}" />
                 <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}" data-gallery-caption="{{:caption}}"></div>
-                <div class="selected-overlay">Selected!</div>
+                <div class="selected-overlay">
+                    <img src="./shared/images/icon-checkmark.svg" class="icon-checkmark" />
+                    <span>Selected!</span>
+                </div>
             </div>
         </div>
     </script>
@@ -132,10 +135,14 @@
     <script id="quoteTemplate" type="text/x-jsrender">
         <div class="quote-step step" data-id="{{:#index}}">
             <div class="step-container-inner">
-                <p>"{{:text}}" 
+                <p>
+                    <span class="drop-letter-quote">"</span>{{:text}}"
                     <small>{{:source}}</small>
                 </p>
-                <div class="selected-overlay">Selected!</div>
+                <div class="selected-overlay">
+                    <img src="./shared/images/icon-checkmark.svg" class="icon-checkmark" />
+                    <span>Selected!</span>
+                </div>
             </div>
         </div>
     </script>
@@ -149,7 +156,7 @@
                     <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}"></div>
                 </div>
                 <div class="image-caption-form">
-                    <textarea class="image-caption-text" name="Image Caption" placeholder="Write your caption here!"></textarea>
+                    <textarea class="form-control image-caption-text" name="Image Caption" placeholder="Write your caption here!"></textarea>
                 </div>
             </div>
         </div>
@@ -196,7 +203,7 @@
                     <div class="divider"></div>
                     <p>Remember to use evidence from multiple sources that support your claims and refute counter-claims. Keep it clear and brief: you only have 250 words!</p>
                     <div id="text-editor"></div>
-                    <span class="article-word-count">0 words</span>
+                    <span class="article-word-count all-caps letter-spacing-1">0 words</span>
                 </div>
             </div>
             <div class="step step-images" data-title="Images">
@@ -259,7 +266,7 @@
                     <h4 class="text-center all-caps letter-spacing-1">Check the proof (draft)</h4>
                     <h1 class="text-center">Is your article ready to go?</h1>
                     <div class="divider"></div>
-                    <a class="btn btn-success btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
+                    <a class="btn btn-block btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
                     <p>Preview your proof and make sure your article doesn't need any changes. If you want to go back and edit any content, use the progress bar below.</p>
                 </div>
             </div>
@@ -286,7 +293,7 @@
             <div class="paper-preview-article"></div>
         </div>
 
-        <a id="print" class="btn btn-success btn-lg" title="Print your paper">Print your paper</a>
+        <a id="print" class="btn btn-success btn-white btn-lg" title="Print your paper">Print your paper</a>
         <div class="overlay"></div>
     </div>
 

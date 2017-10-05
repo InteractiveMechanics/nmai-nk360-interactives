@@ -1,6 +1,26 @@
+.slider-wrapper {
+	.slick-dots {
+		bottom:-155px;
+	}
+}
+
 .intro-slider-wrapper {
 	.overlay {
 		z-index:20;
+	}
+
+	.slick-dots {
+		bottom:-80px;
+	}
+}
+
+.spawn-death-slider-wrapper {
+	.overlay {
+		z-index:20;
+	}
+
+	.slick-dots {
+		bottom:-175px;
 	}
 }
 
@@ -14,10 +34,21 @@
   padding: 20px 48px;
   min-height: 600px;
 
+  @media (max-width: 767px) { 
+	min-height: 575px;
+}
+
   .close-icon {
   	position: absolute;
     right: -100px;
     cursor:pointer;
+
+    @media (max-width: 767px) {
+	    position: absolute;
+	    right: -30px;
+	    cursor: pointer;
+	    top: -30px;
+	}
   }
 
   p {
@@ -52,12 +83,16 @@
 		top: 0;
 		left: 0;
 		transition: top 0.3s ease, left 0.3s ease;
-		width: 430px;
+		width: 393px;
 		margin: auto;
 		position: absolute;
 		left: 0; 
 		right: 0;
 		margin-top:100px;
+
+		@media (max-width: 767px) { 
+			width:360px;
+		}
 
 		&:hover {
 		    -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
@@ -106,21 +141,67 @@
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
+		outline: none !important;
 
 		&:focus {
+			outline: none !important;
 			outline:0;
+			background: grey;
 		}
 
 		&:active {
+			outline: none !important;
 			outline:0;
+			background: grey;
 		}
 
 		&.correct {
 			background:green;
+			outline: none !important;
+
+			&:hover {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
+
+			&:active {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
+
+			&:focus {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
 		}
 
 		&.wrong {
 			background:red;
+			outline: none !important;
+			&:hover {
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
+
+			&:active {
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
+
+			&:focus {
+				outline: none !important;
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
 		}
 	}
 
@@ -136,22 +217,72 @@
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
+		outline: none !important;
+
+
+		&.btn {
+			outline: none !important;
+			&:focus {
+				outline:0 !important;
+			}
+		}
+
+		&.btn-default {
+			outline: none !important;
+			&:focus {
+				outline:0 !important;
+			}
+		}
 
 		&:hover {
 			background: grey !important;
 			color: white !important;
+		}
+
+		&:focus {
+			outline:0 !important;
 		}
 	}
 
 	.correct {
 		&:hover {
 			background: green !important;
+			color:white !important;
+			border-color:green !important;
+		}
+
+		&:active {
+			background: green !important;
+			color:white !important;
+			border-color:green !important;
+		}
+
+		&:focus {
+			background: green !important;
+			color:white !important;
+			border-color:green !important;
+			outline:0 !important;
 		}
 	}
 
 	.wrong {
 		&:hover {
 			background: red !important;
+			color:white !important;
+			border-color:red !important;
+		}
+
+		&:active {
+			background: red !important;
+			color:white !important;
+			border-color:red !important;
+		}
+
+		&:focus {
+			background: red !important;
+			color:white !important;
+			border-color:red !important;
+			outline:0 !important;
 		}
 	}
 }
@@ -160,4 +291,8 @@
 	background: url(../assets/text-card-pnw@2x.png) white !important;
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
+
+    @media (max-width: 767px) { 
+        background-size: 360px 570px !important;
+    }
 }

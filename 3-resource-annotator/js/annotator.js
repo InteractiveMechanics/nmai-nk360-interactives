@@ -10,10 +10,31 @@ Annotator = (function() {
     var objItem;
 
     var markersInJSON = [];
+    var heading = "";
 
     var init = function(data) {
       AnnotatorData = data;
       bindEvents();
+    }
+
+    var createHeading = function() {
+      var arr = markersInJSON;
+
+      if(arr.length == 1) {
+        heading =  arr[0].theme_id;
+      }
+
+      if(arr.length > 1) {
+        for (var i = 0; i < arr.length; i++) {
+          if( i == arr.length - 1) {
+            heading = heading.substring(0, heading.length - 1);
+            heading += " & " + arr[i].theme_id;
+          } else {
+            heading += arr[i].theme_id + " ,";
+          }
+        }
+      }
+      
     }
 
     var markerArray = [ 
@@ -32,12 +53,13 @@ Annotator = (function() {
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
         $('body').on('click tap', '#print-notes', printPage);
 
-        // Initialize tooltips again
-        $('[data-toggle="tooltip"]').tooltip();
-
-        loadTemplate();
         createSlider();
         createThemeObj();
+        createHeading();
+        loadTemplate();
+
+        // Initialize tooltips again
+        $('[data-toggle="tooltip"]').tooltip();
     };
 
     var printPage = function() {
@@ -86,7 +108,9 @@ Annotator = (function() {
     }
 
     var loadTemplate = function() {
-
+      $('.intro-text').text(AnnotatorData.introduction);
+      $('.theme-name').text(heading);
+      $('.page-title').text(AnnotatorData.page_title);
     };
 
     var pinSetup = function() {
@@ -192,7 +216,7 @@ Annotator = (function() {
             pin.removeClass().addClass('pin-visible marker-in-text');
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
-            pin.append('<textarea placeholder="Lorem"></textarea>');
+            pin.append('<textarea placeholder="Write your note here..."></textarea>');
             pin.append('<span class="delete-btn"></span>');
 
             findPinPosition(pin);
@@ -256,6 +280,7 @@ Annotator = (function() {
       
       print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
+      print.find('.paraphrased-text').html(objItem.paraphrase);
 
       // Add updated content
       original.find('.photo-container > *').clone().appendTo(print.find('.photo-container'));
@@ -290,6 +315,27 @@ Annotator = (function() {
         print.find('.print-notes ul').append('<li>'+ noteHTMLSnippet(src, note, num) +'</li>');
         i++;
       });
+
+
+     /* if(objItem.caption) {
+        print.find('.caption-text').css('display', 'block');
+      }
+
+      if(objItem.question_text) {
+        print.find('.discussion-text').css('display', 'block');
+      }
+
+      if(objItem.paraphrase) {
+        print.find('.paraphrased-text').css('display', 'block');
+      }
+
+      if(objItem.body) {
+        print.find('.info').css('display', 'block');
+      }
+
+      if(objItem.image_url) {
+        print.find('.photo-container').css('display', 'block');
+      }*/
     }
 
     var noteHTMLSnippet = function(src, note, num) {
@@ -351,7 +397,7 @@ Annotator = (function() {
     }
 
     var deletePin = function(pin) {
-      pin.append('<div class="delete-pin"><span>Delete annotation?</span><button class="confirm-delete">Yes</button><button class="undo-delete">No</button></div>');
+      pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Yes</button><button class="btn btn-white undo-delete">No</button></div>');
 
       pin.find('.confirm-delete').click(function() {
         var id = pin.data('marker');
@@ -402,15 +448,18 @@ Annotator = (function() {
       var itemLeftTemplateOutput = itemLeftTemplate.render(objItem);
       $("#item-left").html(itemLeftTemplateOutput);
 
-      /*var itemRightTemplate = $.templates("#itemRightTemplate");
+      var itemRightTemplate = $.templates("#itemRightTemplate");
       var itemRightTemplateOutput = itemRightTemplate.render(objItem);
-      $("#item-right").html(itemRightTemplateOutput);*/
+      $(".content-height").html(itemRightTemplateOutput);
 
       if(objItem) {
         $('.annotation-slider-screen').addClass('animated fadeOut');
         $('.annotation-slider-screen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
               $('.annotation-slider-screen').addClass('hidden');
               $('.annotation-notes-screen').removeClass('hidden').addClass('show');
+
+              $('.icon-print').removeClass('disabled');
+              $('.icon-home').removeClass('disabled');
         });
       }
 
@@ -419,8 +468,24 @@ Annotator = (function() {
 
       setTimeout(function(){
         $('.markers-container').addClass('animated pulse');
+        
       }, 1800);
+      
+      $('.markers-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        for(var i = 0; i < markersInJSON.length; i++) {
+          var id = markersInJSON[i].theme_id;
+          var count = i + 1;
+          //$('#' + id).delay( 500 * count ).addClass('animated bounce');
 
+          $('#' + id + ' img').delay(500 * count).queue(function(next) {
+            $(this).addClass('animated bounce');
+            next();
+          });
+        }   
+      });
+
+      // Initialize tooltips again
+      $('[data-toggle="tooltip"]').tooltip();
   }
 
     var getItemByAnnotationId = function(id) {
@@ -447,7 +512,7 @@ Annotator = (function() {
         slidesToShow: 3,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1600,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
@@ -456,14 +521,14 @@ Annotator = (function() {
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 1200,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 750,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1

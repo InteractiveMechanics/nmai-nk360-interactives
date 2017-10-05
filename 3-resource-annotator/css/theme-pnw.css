@@ -6,19 +6,19 @@
   font-family: "Ludicrous";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../fonts/ludicrous/Ludicrous.woff") format("woff"), url("../fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+  src: url("../shared/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../shared/fonts/ludicrous/Ludicrous.woff") format("woff"), url("../shared/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Archer Pro";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+  src: url("../shared/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Archer Pro";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
+  src: url("../shared/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 
 h1 {
   font-size: 3.6rem;
@@ -36,22 +36,25 @@ h4 {
 
 .header {
   max-width: 540px;
-  margin: 0 auto;
-  background-image: url("../images/pnw/splash-04.svg");
+  margin: 10px auto 0;
+  background-image: url("../shared/images/pnw/splash-04.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   padding: 10px 0 0;
   max-height: 85px;
   margin-bottom: 25px; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    .header {
+      margin: 60px auto 0; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
   .header h2 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
+    font-family: "Archer Pro", serif;
+    font-size: 0.8rem;
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
 
@@ -69,3 +72,20 @@ h4 {
       color: #2e3742 !important;
       background-color: white;
       border-color: white; }
+  .btn.active {
+    border-color: #2e3742;
+    background-color: #2e3742;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #2e3742;
+      border-color: #2e3742;
+      opacity: 0.65; }
+
+body {
+  background: url("../shared/images/pnw/bkgr-pnw@2x.png"); }
+
+.slick-dots > li.slick-active > a,
+.slick-dots > li.slick-active > button {
+  background-color: #006986; }

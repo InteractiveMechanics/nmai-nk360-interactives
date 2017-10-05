@@ -18,3 +18,20 @@
 	background-color:white !important;
 	color:#2e3742 !important;
 }
+
+.quiz-options {
+	.btn {
+		border-color:white !important;
+	}
+
+	.btn:hover {
+		background-color:white !important;
+		border:3px solid grey !important;
+		color: grey !important;;
+	}
+
+	.btn:focus, .btn:active {
+		background-color: grey !important;
+		color: white !important;
+	}
+}

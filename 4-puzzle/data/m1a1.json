@@ -10,15 +10,15 @@
         {
             "Id": 1,
             "Title": "How do Native people and Nations experience belonging?",
-            "Image": "../assets/imgs/m1a1/np-puzzle-image.jpg",
-            "FullImage": "../assets/imgs/m1a1/full-np-puzzle-image.jpg",
+            "Image": "./assets/imgs/m1a1/np-puzzle-image.jpg",
+            "FullImage": "./assets/imgs/m1a1/full-np-puzzle-image.jpg",
             "Caption": "Dancing is an important part of Lakota culture and family life. Many children start dancing as soon as they can walk and continue throughout their lives. Parents and relatives spend countless hours designing and crafting colorful regalia—all of which contributes to a bright and beautiful experience.",
             "Credit": "Rosebud Indian Reservation, South Dakota- The Rosebud Sioux Tribe’s annual wacipi (powwow), photograph by Jim West/Alamy",
             "Intro": "At this point in the inquiry, you have examined sources that convey different ways that Native people and nations experience belonging. Over the centuries, many things have changed on the Northern Great Plains. However, Native culture is persistent and strong; Native identity continues to be shaped by relationships with land, family, and nation.",
             "IntroCaption": "Good Bear, a member of the Hidatsa Nation, and his wife and three children pose for a studio portrait. Good Bear [and family], ca. 1908.",
             "IntroCredit": "Photograph by Edward S. Curtis, courtesy of the Library of Congress, 89707042",
             "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to it’s corresponding theme and reveal an iconic image.",
-            "IntroImage": "../assets/imgs/m1a1/intro-card-image.jpg",
+            "IntroImage": "./assets/imgs/m1a1/intro-card-image.jpg",
             "LearningPoints": "Diversity exists between Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
             "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Themes": [

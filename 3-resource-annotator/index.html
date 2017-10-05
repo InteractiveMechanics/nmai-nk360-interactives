@@ -18,17 +18,15 @@
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/theme-pnw.css" />
-    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
     <link rel="stylesheet" href="./css/print.css" />
     
     <!-- For development only, comment for distribution -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
 
     <style type="text/css">
@@ -93,8 +91,8 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print" title="Print this Activity"></a>
-            <a class="icon icon-home" title="Back to Home Screen"></a>
+            <a class="icon icon-print disabled" title="Print this Activity"></a>
+            <a class="icon icon-home disabled" title="Back to Home Screen"></a>
             
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
@@ -126,25 +124,18 @@
         <div class="card slider-card">
 
           <div class="close-icon faded">
-            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/55049-200.png" width="70">  
+            <img src="./shared/images/icon-close.svg" width="70">  
           </div>
 
           <section class="intro-slider">
             
             <div>
-              <p class="text-center">The Return Upstream</p>
-              <h2 class="text-center">Privileges and Responsibilities</h2>
+              <p class="text-center page-title">Northern Plains History & Culture: Crow Nation</p>
+              <h2 class="text-center theme-name"></h2>
 
-              <p class="image-credit">
-                Salmon eating zooplankton in the ocean, 2001. Photo by Ray Atkeson
-              </p>
 
-              <p>
-                Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
-              </p>
-
-              <p class="text-center">
-                <a href="javascript: void(0);" class="get-started"  onclick="getStarted();">Ready to get started?</a>
+              <p class="intro-text">
+                Text goes here.
               </p>
             </div>
             
@@ -159,24 +150,24 @@
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
             <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
-            <h1>Resource Annotator Instructions</h1>
+            <h1>Resource Annotator</h1>
             <div class="row justify-content-md-center">
                 <div class="col-6">
                     <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
-                    <h2>Select your resource</h2>
+                    <h2>Select Your Resource</h2>
                     <p>
-                        Choose a historical text or image to annotate from the collection of source materials provided.
+                        Select a historical image or text to annotate from the selection of source materials provided.
                     </p>
                 </div>
                 <div class="col-6">
                     <img src="./assets/instructions-02@2x.png" width="75%" alt="Add your annotations" title="Add your annotations" />
-                    <h2>Add your annotations</h2>
+                    <h2>Add Your Annotations</h2>
                     <p>
-                        Drag and drop theme icons onto the material where you wish to write your annotation. The different icons represent different themes that relate to the source materials
+                        Drag and drop themed pins onto the source where you wish to add an annotation.
                     </p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue this activity</a>
+            <a class="btn btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue the Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -192,9 +183,9 @@
             </h2>
 
             <div class="text-center progress-options">
-              <a class="btn btn-success btn-lg" onclick="reloadPage()" title="Choose another resource">Choose another resource</a>
-              <a class="btn btn-success btn-lg" title="Review your notes">Review your notes</a>
-              <a class="btn btn-success btn-lg" onclick="hideLostProgress()" id="close-porgess" title="Cancel">Cancel</a>
+              <a class="btn btn-lg btn-white" onclick="reloadPage()" title="Choose another resource">Choose another resource</a>
+              <a class="btn btn-lg btn-white" title="Review your notes">Review your notes</a>
+              <a class="btn btn-lg btn-white" onclick="hideLostProgress()" id="close-porgess" title="Cancel">Cancel</a>
             </div>
         </div>
         <div class="overlay"></div>
@@ -204,21 +195,10 @@
     <!-- Main interactive-specific content -->
     <main>
 
-        <header class="text-center">
-            <p class="hidden-xs">
-                NORTHERN PLAINS HISTORY & CULTURE: CROW NATION
-            </p>
-
-            <h1>
-                <span class="dotted" data-toggle="tooltip"  title="Privileges are special benefits.">
-                  Privileges
-                </span>
-                 & 
-                 <span class="dotted" data-toggle="tooltip" title="Responsibilities are moral duties.">
-                  Responsibilities
-                </span>
-            </h1>
-        </header>
+      <header class="header text-center">
+        <h2 class="letter-spacing-1 all-caps page-title">Homelands, Kinship, &amp; Nationhood</h2>
+        <h1 class="theme-name"></h1>
+      </header>
 
         <section class="print-view">
 
@@ -228,45 +208,44 @@
 
               <div class="">
 
-                <h3>Caption</h3>
-                <p class="caption-text">
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                </p>
+                <div class="print-caption">
+                  <h3>Caption</h3>
+                  <p class="caption-text">
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  </p>
+                </div>
 
-                <h3>Discussion Questions</h3>
-                <p class="discussion-text">
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                  Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
-                </p>
+                <div class="print-discussion">
+                  <h3>Discussion Questions</h3>
+                  <p class="discussion-text">
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                    Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
+                  </p>
+                </div>
+
               </div>
 
-              <div class="photo-container"></div>
-              <div class="print-info" style="overflow:visible;"></div>
+              <div class="print-photo">
+                <div class="photo-container"></div>
+                <div class="print-info" style="overflow:visible;"></div>
+              </div>
 
 
-              <div class="" style="overflow:visible;">
+              <div class="print-paraphrased" style="overflow:visible;">
 
                 <h3 class="yellow-underline">
                   Paraphrased Text
                 </h3>
 
-                <p class="original-text-info">
-                  Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br> However, these two nations understood the bundle's import, which included a pipe.
-
-                  <br><br> However, these two nations understood the bundle's import, which included a pipe.
+                <p class="original-text-info paraphrased-text">
+                  
                 </p>
 
-
-                <p class="original-text-info">
-                   After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br> However, these two nations understood the bundle's import, which included a pipe.
-
-                  <br><br> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
-                </p>
               </div>
               <div class="" style="overflow:visible;">
 
@@ -277,7 +256,6 @@
                   <ul class="theme-print-view">
 
                   </ul>
-
 
               </div>
 
@@ -331,7 +309,9 @@
 
                   <div class="text-center print-button">
 
-                    <a class="btn btn-success btn-lg" id="print-notes" title="Print your notes">Print Your Notes</a>
+                    <a class="btn btn-success btn-lg" id="print-notes" title="Print your notes">
+                      <strong>Print Your Notes</strong>
+                    </a>
 
                   </div>
 
@@ -343,49 +323,7 @@
 
                     <div class="content-height scrollbar-design">
 
-                      <h3>
-                        <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
-                      </h3> 
-
-                      <div class="photo-container">
-                          <img src="http://via.placeholder.com/640x320" class="img-fluid" />
-                          <div data-gallery data-gallery-image="http://via.placeholder.com/1280x480" data-gallery-caption="Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI xxxxx" data-gallery-credit="Test"></div>
-                      </div>
-
-                      <div class="info">
-
-                        <p class="copyright">
-                            Raymond J. DeMallie, ed., <em>The Sixth Grandfather: Black Elk's Teaching Given to John G. Neihardt </em> (Lincoln: University of Nebraska Press, 1984), 83.
-                        </p>
-
-                        <h3 class="yellow-underline">
-                          Original Text
-                        </h3>
-
-                        <p class="original-text-info">
-                          Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                          <br /><br /> However, these two nations understood the bundle's import, which included a pipe.
-                        </p>
-
-
-                        <p class="original-text-info">
-                           After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-
-                          <br /><br /> Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community.
-                        </p>
-
-                      </div>
-
-                      <div id="paraphrased">
-                        <h3 class="yellow-underline">
-                          Paraphrased Text
-                        </h3>
-
-                        <p class="original-text-info">
-                          After all, the two Arapahoe's intent was to retrieve horses some Crows had taken from them. <br /> However, these two nations understood the bundle's import, which included a pipe.
-                        </p>
-                      </div>
+                      
 
                     </div>
 
@@ -464,7 +402,7 @@
                             <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
                           </div>
                           <div class="theme">
-                            {{:title}}
+                            {{:title}} <span class="defintions-icon"></span>
                           </div>
                           <div class="markers-remaining"></div>
                         </li>
@@ -477,6 +415,54 @@
 
           </div>
         </div>
+    </script>
+
+    <script id="itemRightTemplate" type="text/x-jsrender">
+
+        {{if paraphrase}}
+        <h3>
+          <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
+        </h3> 
+        {{/if}}
+
+        {{if image_url}}
+        <div class="photo-container" style="display:block;">
+            <img src="{{:image_url}}" class="img-fluid" />
+            <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}"></div>
+        </div>
+        {{/if}}
+
+        <div class="info">
+
+          {{if image_credit}}
+          <p class="copyright">
+              {{:image_credit}}
+          </p>
+          {{/if}}
+
+          {{if body}}
+          <h3 class="yellow-underline">
+            Original Text
+          </h3>
+
+          <p class="original-text-info">
+            {{:body}}
+          </p>
+          {{/if}}
+
+        </div>
+
+        {{if paraphrase}}
+          <div id="paraphrased">
+            <h3 class="yellow-underline">
+              Paraphrased Text
+            </h3>
+
+            <p class="original-text-info">
+              {{:paraphrase}}
+            </p>
+          </div>
+        {{/if}}
     </script>
 
     <script id="printListItems" type="text/x-jsrender">
@@ -502,27 +488,30 @@
             
             <div class="top">
               <div class="photo">
-                  <img src="{{:image_url}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
-              </div>
-          </div>
-
-          <div class="bottom">
-             
-              <div class="body">
-                  <p>
-                     {{:body}}
-                  </p>
+                  <img src="{{:thumbnail_image}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
               </div>
 
-              <div class="button">
+              <div class="photo-overlay"></div>
+              <div class="text-overlay all-caps"><h3>{{:source_type}}</h3></div>
+            </div>
 
-                  <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
-                      Annotate this material
-                  </a>
+            <div class="bottom">
+               
+                <div class="body">
+                    <p>
+                       {{:body}}
+                    </p>
+                </div>
 
-              </div>
+                <div class="button">
 
-          </div>
+                    <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
+                        <strong>Mark-up this material <i class="pencil"></i></strong>
+                    </a>
+
+                </div>
+
+            </div>
 
 
           </div>
@@ -560,7 +549,7 @@
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m1a1.json';</script>
+    <script>var jsondata = './data/m1a2.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

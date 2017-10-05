@@ -21,13 +21,13 @@
         }
 
         &.icon-info {
-            background-image: url(../images/icon-info.svg);
+            background-image: url('../shared/images/icon-info.svg');
         }
         &.icon-home {
-            background-image: url(../images/icon-home.svg);
+            background-image: url('../shared/images/icon-home.svg');
         }
         &.icon-print {
-            background-image: url(../images/icon-print.svg);
+            background-image: url('../shared/images/icon-print.svg');
         }
         &.disabled {
             opacity: 0.4;

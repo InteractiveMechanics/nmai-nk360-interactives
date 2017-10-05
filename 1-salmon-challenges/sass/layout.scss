@@ -1,3 +1,19 @@
+body {
+  p {
+    font-family: "Archer Pro", serif;
+  }
+
+  a {
+    font-family: "Archer Pro", serif;
+  }
+
+  .image-credit {
+    color:#888;
+    margin:10px 0;
+    font-size:85%;
+    font-style:italic;
+  }
+}
 .game {
   height: 100vh;
   position: relative;
@@ -7,7 +23,6 @@
     height: 100vh;
     min-width: 100vh;
     width: 15000px !important;
-    overflow: hidden;
     position: relative;
 
     .game-world__background, .game-world__midground, .game-world__foreground {
@@ -16,19 +31,19 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background: url(../assets/bkgr.png) no-repeat;
+      background: url('../assets/bkgr.png') no-repeat;
       z-index: 1;
       background-size: cover;
     }
 
     .game-world__foreground {
-      background: url(../assets/foregr.png) no-repeat;
+      background: url('../assets/foregr.png') no-repeat;
       z-index: 3;
       background-size: cover;
     }
 
     .game-world__midground {
-      background: url(../assets/midgr.png) no-repeat;
+      background: url('../assets/midgr.png') no-repeat;
       z-index: 2;
       background-size: cover;
     }
@@ -75,7 +90,7 @@
   width: 366px;
   height:97px;
   background: url(http://dev.interactivemechanics.com/sprites/steelhead-4.png) no-repeat;
-  animation: three-fish-swimming 1s steps(14) infinite;
+  animation: three-steelhead-fish-swimming 1s steps(14) infinite;
 }
 
 .chinook-1 {
@@ -199,7 +214,21 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 9;
-  background: url(../assets/randomHS.png) no-repeat;
+  background: url(../assets/icon@2x.png) no-repeat;
+  animation: stretch 2.25s infinite;
+  background-size:contain;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
@@ -225,12 +254,42 @@
 }
 
 .fish-row {
+
+  @media (max-width: 990px) {
+    
+    .fish-photo {
+      width: 20%;
+      vertical-align: middle;
+      display: inline-block;
+      height: 100%;
+    }
+
+    .fish-detail {
+      width: 73%;
+      text-align: left;
+      padding-left: 5%;
+      display: inline-block;
+    }
+
+  }
+
   img {
     padding: 50px;
+    @media (max-width: 990px) {
+      padding:0;
+    }
     cursor:pointer;
 
     &:hover {
-      background:red;
+      background:url('../assets/selection-hover@2x.png') no-repeat;
+      background-size:contain;
+    }
+  }
+
+  .selected {
+    img {
+      background:url('../assets/selection-active@2x.png') no-repeat;
+      background-size:contain;
     }
   }
 
@@ -253,17 +312,17 @@
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../images/icon-info.svg); }
+    background-image: url(../shared/images/icon-info.svg); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../images/icon-home.svg); }
+    background-image: url(../shared/images/icon-home.svg); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../images/icon-print.svg); }
+    background-image: url(../shared/images/icon-print.svg); }
   .activity-menu-wrapper .icon.icon-restart {
-    background-image: url(../images/icon-restart.svg); }
+    background-image: url(../shared/images/icon-restart.svg); }
   .activity-menu-wrapper .icon.icon-pause {
-    background-image: url(https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png); }
+    background-image: url(../shared/images/icon-pause.svg); }
   .activity-menu-wrapper .icon.icon-play {
-    background-image: url(https://image.flaticon.com/icons/svg/26/26025.svg); }
+    background-image: url(../shared/images/icon-play.svg); }
 
 #congrats-instructions {
     position: fixed;
@@ -296,6 +355,40 @@
             margin-bottom: 20px;
         }
     }
+}
+
+.quiz-detail {
+  font-weight:bold;
+}
+
+.solution-text {
+  font-weight:bold;
+}
+
+
+@media (max-width: 800px) {
+  * {
+    /* Remove CSS transitions
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;*/
+    
+    /* Remove CSS transforms
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;*/
+    
+    /* RemoveCSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
 }
     
     

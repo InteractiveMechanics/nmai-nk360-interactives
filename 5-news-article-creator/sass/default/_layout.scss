@@ -2,6 +2,7 @@ html,
 body {
     background: url('../assets/background@2x.jpg');
     background-size: cover;
+    background-position: center center;
 }
 
 main {
@@ -18,5 +19,12 @@ main {
         bottom: 80px;
         right: 30px;
         color: white;
+
+        @media screen and ($screen-ltmd) and ($screen-portrait) {
+            bottom: 120px;
+            right: 50%;
+            width: 300px;
+            margin-right: -150px;
+        }
     }
 }

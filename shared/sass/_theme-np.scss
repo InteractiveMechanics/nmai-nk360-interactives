@@ -14,18 +14,18 @@ $btnaccent:         #311D18;    // Brown
     font-family: "Geared Slab";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/geared-slab/GearedSlab.eot?') format('eot'), 
-         url('../fonts/geared-slab/GearedSlab.woff') format('woff'), 
-         url('../fonts/geared-slab/GearedSlab.ttf') format('truetype');
+    src: url('../shared/fonts/geared-slab/GearedSlab.eot?') format('eot'), 
+         url('../shared/fonts/geared-slab/GearedSlab.woff') format('woff'), 
+         url('../shared/fonts/geared-slab/GearedSlab.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Geared Slab";
     font-weight: bold;
     font-style: normal;
-    src: url('../fonts/geared-slab/GearedSlab-Bold.eot?') format('eot'), 
-         url('../fonts/geared-slab/GearedSlab-Bold.woff') format('woff'), 
-         url('../fonts/geared-slab/GearedSlab-Bold.ttf') format('truetype');
+    src: url('../shared/fonts/geared-slab/GearedSlab-Bold.eot?') format('eot'), 
+         url('../shared/fonts/geared-slab/GearedSlab-Bold.woff') format('woff'), 
+         url('../shared/fonts/geared-slab/GearedSlab-Bold.ttf') format('truetype');
 }
 
 $headline:          'Geared Slab', serif;
@@ -61,12 +61,16 @@ h6 {
     max-width: 540px;
     margin: 10px auto 0;
     padding: 10px 0 20px;
-    background-image: url('../images/np/decoration-np.svg');
+    background-image: url('../shared/images/np/decoration-np.svg');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 50%;
     max-height: 125px;
     margin-bottom: 25px;
+
+    @media screen and ($screen-ltmd) and ($screen-portrait) {
+        margin: 60px auto 0;
+    }
 
     h1 {
         font-size: 2.1rem;

@@ -18,18 +18,13 @@
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
 
-  
-    <link rel="stylesheet" href="./css/theme-pnw.css" />
-   <!--  <link rel="stylesheet" href="./css/theme-np.css" />
- -->
-
     <!-- For development only, comment for distribution -->
     <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" />
- -->
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
 
 </head>
@@ -203,7 +198,7 @@
                     <div class="modal-content">
 
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="../shared/images/icon-close.svg" alt="close" title="close"></span></button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span></button>
                                 <h6 class="modal-year">{{:date}}</h6>
                                 <h3 class="modal-title">{{:title}}</h3>
                             </div>
@@ -213,7 +208,7 @@
 
                                 <figure class="modal-photo-wrapper">
                                     {{if image}}
-
+                                    
                                     <div style="position: relative;" class="modal-img-wrapper">
                                         <img src="{{:image}}" />
                                         <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
@@ -291,10 +286,10 @@
 
             </div>
                 <button id="prev-btn" class="btn">
-                    <img src="../shared/images/icon-prev.svg" alt="prev" title="prev">
+                    <img src="./shared/images/icon-prev.svg" alt="prev" title="prev">
                 </button>
                 <button id="next-btn" class="btn">
-                    <img src="../shared/images/icon-next.svg" alt="next" title="next">
+                    <img src="./shared/images/icon-next.svg" alt="next" title="next">
                 </button>
 
 
@@ -307,7 +302,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="1">
                             <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                             <img src="../shared/images/pnw/splash-01.svg" title="" alt="">
+                             <img src="./shared/images/pnw/splash-01.svg" title="" alt="">
                             <h1>Time Immemorial to 1974</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn"  data-timeline="1">Start This Timeline</button>
@@ -319,7 +314,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="2">
                              <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                            <img src="../shared/images/pnw/splash-02.svg" title="" alt="">
+                            <img src="./shared/images/pnw/splash-02.svg" title="" alt="">
                             <h1>1974 &mdash; 1979</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
@@ -331,7 +326,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="3">
                              <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                            <img src="../shared/images/pnw/splash-03.svg" title="" alt="">
+                            <img src="./shared/images/pnw/splash-03.svg" title="" alt="">
                             <h1>1979 &mdash; present</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>

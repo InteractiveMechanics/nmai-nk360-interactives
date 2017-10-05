@@ -1,0 +1,46 @@
+.form-control {
+    padding: 1rem 1.25rem;
+    background: $lightgray;
+    font-family: $sans-serif;
+    transition: 0.5s all;
+
+    &:hover {
+        outline: none;
+        border: 1px solid #4BADA6;
+    }
+    &:focus, &:active {
+        outline: none;
+        font-style: normal;
+        color: black;
+        background: white;
+        border: 1px solid #4BADA6;
+    }
+}
+
+.ql-toolbar.ql-snow {
+    background: $lightgray;
+    border-radius: 6px 6px 0 0;
+}
+.ql-container.ql-snow {
+    background: white;
+    border-radius: 0 0 6px 6px;
+    height: 200px;
+
+    @media screen and ($screen-ltlg) {
+        height: 150px;
+    }
+}
+.ql-editor {
+    font-size: 1.0rem;
+}
+.article-word-count {
+    font-size: 0.7rem;
+    text-align: right;
+    display: block;
+    margin-top: 8px;
+    color: $midgray;
+
+    &.error {
+        color: #ec5343;
+    }
+}

@@ -1,3 +1,26 @@
 .divider {
 
 }
+.drop-letter-quote {
+    font-size: 4.8rem;
+    font-weight: 900;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    opacity: 0.2;
+    font-style: italic;
+    font-family: 'Courier';
+}
+.icon-checkmark {
+    border: 2px solid white !important;
+    border-radius: 99px;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 10px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+
+    & + span {
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+}

@@ -50,7 +50,8 @@ Cards = (function() {
             dots: true,
             infinite: false,
             swipe: true,
-            touchMove: true
+            touchMove: true,
+            centerMode: true
         });
         $("#quote-selector .card-slider-container").slick({
             accessibility: false,
@@ -79,6 +80,7 @@ Cards = (function() {
                 return '<a data-toggle="tooltip" title="' + title + '"></a>';
             }
         });
+
         Cards.editor = new Quill('#text-editor', {
             debug: false,
             theme: 'snow',
@@ -101,11 +103,18 @@ Cards = (function() {
         $(document).on('click tap', '.quote-step', toggleQuote);
         $(document).on('click tap', '.featured', toggleFeatured);
 
+        $(document).on('click tap', '#navigation .nav-arrow-right', function(){ sendAnalyticsEvent('Navigation', 'next'); });
+        $(document).on('click tap', '#navigation .nav-arrow-left', function(){ sendAnalyticsEvent('Navigation', 'previous'); });
+
         $(document).on('change', '.image-caption-text', setCaption);
 
         $('#masthead').on('change', setMasthead);
         $('#headline').on('change', setHeadline);
 
+        $('#step-by-step-cards').on('afterChange', function(event, slick, currentSlide){
+            var slide = $('.slick-track').children().eq(currentSlide).data('title');
+            sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
+        });
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
@@ -116,14 +125,14 @@ Cards = (function() {
         var id = $(this).data('id');
 
         // If the image is not selected already
-        if ($(this).hasClass('selected')){
+        if ($(this).parent().parent().hasClass('selected')){
             // and the totalCount and imageCount are above zero
             if ((Cards.totalCount > 0) && (Cards.imageCount > 0)){
                 // Increment down by one each
                 Cards.imageCount -= 1;
                 Cards.totalCount -= 1;
 
-                $(this).removeClass('selected');
+                $(this).parent().parent().removeClass('selected');
                 removeImageFromArray(id);
             }
             
@@ -134,10 +143,11 @@ Cards = (function() {
                 Cards.imageCount += 1;
                 Cards.totalCount += 1;
 
-                $(this).addClass('selected');
+                $(this).parent().parent().addClass('selected');
                 addImageToArray(id);
             }
         }
+        $(window).trigger('resize');
     }
     var addImageToArray = function(id) {
         var image = data.images[id];
@@ -147,10 +157,7 @@ Cards = (function() {
         updateImageCaptions(id, true);
     }
     var removeImageFromArray = function(id) {
-        var index = Cards.images.indexOf(id);
-        if (index > -1) {
-            Cards.images.splice(index, 1);
-        }
+        Cards.images.splice(id, 1);
         updateImageCaptions(id, false);
     }
 
@@ -187,12 +194,7 @@ Cards = (function() {
         Cards.quotes[id] = quote;
     }
     var removeQuoteFromArray = function(id) {
-        var index = Cards.quotes.indexOf();
-
-        console.log(index);
-        if (index > -1) {
-            Cards.quotes.splice(index, 1);
-        }
+        Cards.quotes.splice(id, 1);
     }
 
 
@@ -244,20 +246,15 @@ Cards = (function() {
 
 
     var toggleFeatured = function() {
-        var id = $(this).parent().parent().data('id');
+        var id = $(this).parent().parent().parent().data('id');
+        console.log(Cards.featured, id);
 
-        if (!Cards.featured) {
+        $('.featured').removeClass('active');
+        if (parseInt(Cards.featured) == id) {
+            Cards.featured = null;
+        } else {
             $(this).addClass('active');
             Cards.featured = id;
-        } else {
-            if (Cards.featured == id) {
-                $(this).removeClass('active');
-                Cards.featured = null;
-            } else {
-                $('.featured').removeClass('active');
-                $(this).addClass('active');
-                Cards.featured = id;
-            }
         }
     }
     
@@ -265,12 +262,17 @@ Cards = (function() {
     var updateWordCount = function() {
         var count = getEditorTextLength();
         $('.article-word-count').text(count + ' words');
+
+        if (count > 250) {
+            $('.article-word-count').addClass('error');
+        } else {
+            $('.article-word-count').removeClass('error');
+        }
     }
     var updateImageCaptions = function(id, addTo) {
-        var captionTemplate = $.templates("#imageCaptionTemplate");
-        var captionTemplateHTMLOutput = captionTemplate.render(Cards.images[id]);
-
         if (addTo) {
+            var captionTemplate = $.templates("#imageCaptionTemplate");
+            var captionTemplateHTMLOutput = captionTemplate.render(Cards.images[id]);
             $("#image-captioning .card-slider-container").slick('slickAdd', captionTemplateHTMLOutput);
 
             if (Cards.imageCount > 0) {

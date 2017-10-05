@@ -6,7 +6,7 @@
     width: inherit;
 
     > .slick-list {
-        overflow: visible;
+        padding-bottom: 20px;
     }
     > .slick-dots {
         position: fixed;
@@ -24,6 +24,10 @@
             background: white;
             padding: 40px;
             box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
+
+            @media screen and ($screen-ltmd) and ($screen-portrait) {
+                margin-top: 180px;
+            }
 
             &:after {
                 content: '';
@@ -50,6 +54,14 @@
     
             &.step-container-lg {
                 width: 960px;
+                padding: 40px 50px;
+
+                @media screen and ($screen-ltlg) {
+                    width: 800px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    width: 540px;
+                }
             }
         }
     }
@@ -77,12 +89,15 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: rgba(0,255,0,0.5);
+                    flex-direction: column;
+                    color: white;
+                    background-color: rgba(#a8bd46, 0.75);
                     opacity: 0;
                     position: absolute;
                     top: 0;
                     width: 100%;
                     height: 100%;
+                    pointer-events: none;
                 }
             }
             .step-container-inner {
@@ -103,10 +118,11 @@
             margin-top: -25px;
             width: 50px;
             height: 50px;
-            background: black;
-            border-radius: 99px;
             opacity: 1;
             transition: 0.5s all;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
     
             &.slick-disabled {
                 opacity: 0.4;
@@ -114,40 +130,33 @@
             
             &.nav-arrow-left {
                 left: 20px;
+                background-image: url('../assets/icon-arrow-left.svg');
+                cursor: pointer;
+
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    left: 0;
+                }
+
+                &:not(.slick-disabled):hover, &:not(.slick-disabled):active, &:not(.slick-disabled):focus {
+                    left: 10px;
+                    opacity: 0.85;
+                    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+                }
             }
             &.nav-arrow-right {
                 right: 20px;
-            }
-        }
-        .image-caption-container {
-            display: table-cell;
-            position: relative;
-            padding: 0;
-            margin: 0;
-                
-            .featured {
-                background: red;
-                width: 44px;
-                height: 44px;
-                position: absolute;
-                top: 20px;
-                right: 20px;
+                background-image: url('../assets/icon-arrow-right.svg');
+                cursor: pointer;
 
-                &.active {
-                    background: green;
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    right: 0;
                 }
-            }
-        }
-        .image-caption-form {
-            display: table-cell;
-            padding: 20px;
-            vertical-align: top;
 
-            textarea {
-                padding: 10px;
-                width: 240px;
-                height: 120px;
-                margin: 0;
+                &:not(.slick-disabled):hover, &:not(.slick-disabled):active, &:not(.slick-disabled):focus {
+                    right: 10px;
+                    opacity: 0.85;
+                    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+                }
             }
         }
     }
@@ -155,6 +164,162 @@
     .step-intro {
         .guiding-question.large {
             font-size: 3.6rem;
+        }
+    }
+    .step-images {
+        .step-container-inner {
+            img {
+                position: relative;
+                border: 2px solid black;
+                max-height: 400px;
+                width: auto;
+
+                @media screen and ($screen-ltlg) {
+                    max-height: 200px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    max-height: 320px;
+                    max-width: 280px;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: black;
+                background-image: url('../assets/image-frame-left.svg');
+                background-size: cover;
+                width: 21px;
+                height: 100%;
+                top: 0;
+                left: -20px;
+                display: block;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                background: black;
+                background-image: url('../assets/image-frame-right.svg');
+                background-size: cover;
+                width: 21px;
+                height: 100%;
+                top: 0;
+                right: -20px;
+                display: block;
+            }
+        }
+    }
+    .step-image-captions {
+        .step-container-inner {
+            display: flex !important;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        .image-caption-container {
+            display: block;
+            position: relative;
+            padding: 0;
+            width: auto;
+            margin: 0 auto 15px;
+
+            img {
+                position: relative;
+                border: 2px solid black;
+                max-height: 240px;
+                width: auto;
+
+                @media screen and ($screen-ltlg) {
+                    max-height: 180px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
+                    max-height: 240px;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: black;
+                background-image: url('../assets/image-frame-left.svg');
+                background-size: cover;
+                width: 21px;
+                height: 100%;
+                top: 0;
+                left: -20px;
+                display: block;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                background: black;
+                background-image: url('../assets/image-frame-right.svg');
+                background-size: cover;
+                width: 21px;
+                height: 100%;
+                top: 0;
+                right: -20px;
+                display: block;
+            }
+
+            .featured {
+                background-image: url('../assets/icon-star-stroke.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 44px;
+                height: 44px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+                transition: 0.5s all;
+                cursor: pointer;
+
+                &:hover, &:active, &:focus {
+                    
+                }
+                &.active {
+                    background-image: url('../assets/icon-star-fill.svg');
+                }
+            }
+            .image-caption-form {
+                display: inline-block;
+                padding: 20px;
+                vertical-align: top;
+    
+                textarea {
+                    padding: 10px;
+                    width: 400px;
+                    height: 80px;
+                    margin: 0;
+                    display: inline-block;
+                        
+                    @media screen and ($screen-ltlg) {
+                        height: 60px;
+                    }
+                    @media screen and ($screen-ltmd) and ($screen-portrait) {
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+    .step-quotes {
+        .quote-step {
+            p {
+                padding: 20px 30px;
+
+                small {
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .step-review {
+        .btn {
+            margin: 20px 0;
+            font-weight: bold;
         }
     }
 }

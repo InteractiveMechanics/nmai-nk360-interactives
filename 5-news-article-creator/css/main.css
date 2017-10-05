@@ -94,10 +94,9 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
-  height: 100%;
   color: white;
   z-index: 1000;
   overflow: auto; }
@@ -189,11 +188,11 @@ footer {
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../images/icon-info.svg); }
+    background-image: url("../shared/images/icon-info.svg"); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../images/icon-home.svg); }
+    background-image: url("../shared/images/icon-home.svg"); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../images/icon-print.svg); }
+    background-image: url("../shared/images/icon-print.svg"); }
   .activity-menu-wrapper .icon.disabled {
     opacity: 0.4;
     cursor: default; }
@@ -204,15 +203,24 @@ footer {
   border-radius: 99px;
   margin: 10px 5px;
   display: inline-block;
-  background-color: red;
   position: absolute;
   bottom: 10px;
-  right: 10px; }
+  right: 10px;
+  background-image: url("../shared/images/icon-zoom.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  transition: 0.5s all; }
+  [data-gallery]:focus, [data-gallery]:hover, [data-gallery]:active {
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
 html,
 body {
   background: url("../assets/background@2x.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 main {
   position: absolute;
@@ -226,6 +234,33 @@ main {
   bottom: 80px;
   right: 30px;
   color: white; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    #static-ui .print-preview-btn {
+      bottom: 120px;
+      right: 50%;
+      width: 300px;
+      margin-right: -150px; } }
+
+.drop-letter-quote {
+  font-size: 4.8rem;
+  font-weight: 900;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: -30px;
+  opacity: 0.2;
+  font-style: italic;
+  font-family: 'Courier'; }
+
+.icon-checkmark {
+  border: 2px solid white !important;
+  border-radius: 99px;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
+  .icon-checkmark + span {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
 
 #step-by-step-cards {
   position: absolute;
@@ -234,7 +269,7 @@ main {
   height: inherit;
   width: inherit; }
   #step-by-step-cards > .slick-list {
-    overflow: visible; }
+    padding-bottom: 20px; }
   #step-by-step-cards > .slick-dots {
     position: fixed;
     bottom: 70px; }
@@ -248,6 +283,9 @@ main {
       background: white;
       padding: 40px;
       box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35); }
+      @media screen and (max-width: 991px) and (orientation: portrait) {
+        #step-by-step-cards .step .step-container {
+          margin-top: 180px; } }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
@@ -267,7 +305,14 @@ main {
       #step-by-step-cards .step .step-container h1 {
         font-size: 2.1rem; }
       #step-by-step-cards .step .step-container.step-container-lg {
-        width: 960px; }
+        width: 960px;
+        padding: 40px 50px; }
+        @media screen and (max-width: 1199px) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 800px; } }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 540px; } }
   #step-by-step-cards .card-slider {
     position: relative; }
     #step-by-step-cards .card-slider .card-slider-container {
@@ -281,12 +326,15 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0, 255, 0, 0.5);
+        flex-direction: column;
+        color: white;
+        background-color: rgba(168, 189, 70, 0.75);
         opacity: 0;
         position: absolute;
         top: 0;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        pointer-events: none; }
       #step-by-step-cards .card-slider .card-slider-container .step-container-inner {
         max-width: 80%;
         display: table;
@@ -302,41 +350,153 @@ main {
       margin-top: -25px;
       width: 50px;
       height: 50px;
-      background: black;
-      border-radius: 99px;
       opacity: 1;
-      transition: 0.5s all; }
+      transition: 0.5s all;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat; }
       #step-by-step-cards .card-slider .nav-arrow.slick-disabled {
         opacity: 0.4; }
       #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left {
-        left: 20px; }
+        left: 20px;
+        background-image: url("../assets/icon-arrow-left.svg");
+        cursor: pointer; }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left {
+            left: 0; } }
+        #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):hover, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):active, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left:not(.slick-disabled):focus {
+          left: 10px;
+          opacity: 0.85;
+          filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
       #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right {
-        right: 20px; }
-    #step-by-step-cards .card-slider .image-caption-container {
-      display: table-cell;
-      position: relative;
-      padding: 0;
-      margin: 0; }
-      #step-by-step-cards .card-slider .image-caption-container .featured {
-        background: red;
-        width: 44px;
-        height: 44px;
-        position: absolute;
-        top: 20px;
-        right: 20px; }
-        #step-by-step-cards .card-slider .image-caption-container .featured.active {
-          background: green; }
-    #step-by-step-cards .card-slider .image-caption-form {
-      display: table-cell;
-      padding: 20px;
-      vertical-align: top; }
-      #step-by-step-cards .card-slider .image-caption-form textarea {
-        padding: 10px;
-        width: 240px;
-        height: 120px;
-        margin: 0; }
+        right: 20px;
+        background-image: url("../assets/icon-arrow-right.svg");
+        cursor: pointer; }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right {
+            right: 0; } }
+        #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):hover, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):active, #step-by-step-cards .card-slider .nav-arrow.nav-arrow-right:not(.slick-disabled):focus {
+          right: 10px;
+          opacity: 0.85;
+          filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
   #step-by-step-cards .step-intro .guiding-question.large {
     font-size: 3.6rem; }
+  #step-by-step-cards .step-images .step-container-inner img {
+    position: relative;
+    border: 2px solid black;
+    max-height: 400px;
+    width: auto; }
+    @media screen and (max-width: 1199px) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-height: 200px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-height: 320px;
+        max-width: 280px; } }
+  #step-by-step-cards .step-images .step-container-inner:before {
+    content: '';
+    position: absolute;
+    background: black;
+    background-image: url("../assets/image-frame-left.svg");
+    background-size: cover;
+    width: 21px;
+    height: 100%;
+    top: 0;
+    left: -20px;
+    display: block; }
+  #step-by-step-cards .step-images .step-container-inner:after {
+    content: '';
+    position: absolute;
+    background: black;
+    background-image: url("../assets/image-frame-right.svg");
+    background-size: cover;
+    width: 21px;
+    height: 100%;
+    top: 0;
+    right: -20px;
+    display: block; }
+  #step-by-step-cards .step-image-captions .step-container-inner {
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+  #step-by-step-cards .step-image-captions .image-caption-container {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: auto;
+    margin: 0 auto 15px; }
+    #step-by-step-cards .step-image-captions .image-caption-container img {
+      position: relative;
+      border: 2px solid black;
+      max-height: 240px;
+      width: auto; }
+      @media screen and (max-width: 1199px) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-height: 180px; } }
+      @media screen and (max-width: 991px) and (orientation: portrait) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-height: 240px; } }
+    #step-by-step-cards .step-image-captions .image-caption-container:before {
+      content: '';
+      position: absolute;
+      background: black;
+      background-image: url("../assets/image-frame-left.svg");
+      background-size: cover;
+      width: 21px;
+      height: 100%;
+      top: 0;
+      left: -20px;
+      display: block; }
+    #step-by-step-cards .step-image-captions .image-caption-container:after {
+      content: '';
+      position: absolute;
+      background: black;
+      background-image: url("../assets/image-frame-right.svg");
+      background-size: cover;
+      width: 21px;
+      height: 100%;
+      top: 0;
+      right: -20px;
+      display: block; }
+    #step-by-step-cards .step-image-captions .image-caption-container .featured {
+      background-image: url("../assets/icon-star-stroke.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+      transition: 0.5s all;
+      cursor: pointer; }
+      #step-by-step-cards .step-image-captions .image-caption-container .featured.active {
+        background-image: url("../assets/icon-star-fill.svg"); }
+    #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form {
+      display: inline-block;
+      padding: 20px;
+      vertical-align: top; }
+      #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
+        padding: 10px;
+        width: 400px;
+        height: 80px;
+        margin: 0;
+        display: inline-block; }
+        @media screen and (max-width: 1199px) {
+          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
+            height: 60px; } }
+        @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
+            height: 80px; } }
+  #step-by-step-cards .step-quotes .quote-step p {
+    padding: 20px 30px; }
+    #step-by-step-cards .step-quotes .quote-step p small {
+      display: block;
+      margin-top: 10px; }
+  #step-by-step-cards .step-review .btn {
+    margin: 20px 0;
+    font-weight: bold; }
 
 #navigation .nav-arrow {
   position: fixed;
@@ -397,6 +557,20 @@ main {
       .slick-dots > li > button:focus {
         background: #7f99ad; }
 
+#print {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  color: white;
+  transition: 0.5s all;
+  z-index: 1001; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    #print {
+      bottom: 80px;
+      right: 50%;
+      width: 300px;
+      margin-right: -150px; } }
+
 #print-preview {
   position: fixed;
   width: 100%;
@@ -412,20 +586,38 @@ main {
     background: white;
     padding: 50px;
     z-index: 10; }
+    @media screen and (max-width: 1199px) {
+      #print-preview .print-preview-container {
+        margin: 100px auto 175px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #print-preview .print-preview-container {
+        width: 720px; } }
     #print-preview .print-preview-container.traditional .paper-preview-headline {
       font-weight: bold;
       font-style: italic;
       font-family: 'Times New Roman'; }
-    #print-preview .print-preview-container.traditional .paper-preview-byline {
+    #print-preview .print-preview-container.traditional .paper-preview-masthead {
       font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional .paper-preview-masthead .byline {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-date,
     #print-preview .print-preview-container.traditional .paper-preview-cost {
       font-family: 'Times New Roman', serif;
       font-style: italic; }
+    #print-preview .print-preview-container.traditional p {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional blockquote p {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional blockquote .blockquote-footer {
+      font-family: 'Times New Roman', serif; }
+    #print-preview .print-preview-container.traditional figure figcaption {
+      font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional figure figcaption em {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.modern .paper-preview-headline {
       font-family: 'Open Sans Condensed';
       font-weight: bold; }
-    #print-preview .print-preview-container.modern .paper-preview-byline {
+    #print-preview .print-preview-container.modern .paper-preview-masthead {
       font-family: 'Open Sans', serif; }
     #print-preview .print-preview-container.modern .paper-preview-date,
     #print-preview .print-preview-container.modern .paper-preview-cost {
@@ -460,10 +652,52 @@ main {
     line-height: 1.1; }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
-      height: 76px; }
-  #print-preview .paper-preview-byline {
+      height: 76px;
+      overflow: visible; }
+  #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
     font-style: italic; }
+  #print-preview .paper-preview-article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
+    max-height: 1200px; }
+    #print-preview .paper-preview-article > * {
+      width: 30%;
+      margin-right: 3%; }
+    #print-preview .paper-preview-article > p:empty {
+      display: none; }
+    #print-preview .paper-preview-article > p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      text-align: justify; }
+    #print-preview .paper-preview-article blockquote {
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      font-style: italic;
+      border: none; }
+      #print-preview .paper-preview-article blockquote p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 5px; }
+      #print-preview .paper-preview-article blockquote .blockquote-footer {
+        background: none;
+        padding: 0;
+        height: auto;
+        color: #9eb2c1; }
+    #print-preview .paper-preview-article figure .image-wrapper {
+      text-align: center;
+      background: #f1f2f2; }
+      #print-preview .paper-preview-article figure .image-wrapper img {
+        max-height: 400px;
+        max-width: 100%; }
+    #print-preview .paper-preview-article figure figcaption {
+      font-size: 0.8rem;
+      margin-top: 10px; }
   #print-preview .close-preview {
     width: 45px;
     height: 45px;
@@ -478,5 +712,103 @@ main {
     transition: 0.5s all; }
     #print-preview .close-preview:hover, #print-preview .close-preview:focus, #print-preview .close-preview:active {
       opacity: 0.65; }
+    @media screen and (max-width: 1199px) {
+      #print-preview .close-preview {
+        top: -60px;
+        right: 0;
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); } }
+
+.form-control {
+  padding: 1rem 1.25rem;
+  background: #f1f2f2;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.5s all; }
+  .form-control:hover {
+    outline: none;
+    border: 1px solid #4BADA6; }
+  .form-control:focus, .form-control:active {
+    outline: none;
+    font-style: normal;
+    color: black;
+    background: white;
+    border: 1px solid #4BADA6; }
+
+.ql-toolbar.ql-snow {
+  background: #f1f2f2;
+  border-radius: 6px 6px 0 0; }
+
+.ql-container.ql-snow {
+  background: white;
+  border-radius: 0 0 6px 6px;
+  height: 200px; }
+  @media screen and (max-width: 1199px) {
+    .ql-container.ql-snow {
+      height: 150px; } }
+
+.ql-editor {
+  font-size: 1.0rem; }
+
+.article-word-count {
+  font-size: 0.7rem;
+  text-align: right;
+  display: block;
+  margin-top: 8px;
+  color: #9eb2c1; }
+  .article-word-count.error {
+    color: #ec5343; }
+
+@media print {
+  .module-menu-wrapper,
+  .activity-menu-wrapper,
+  .fixed-bottom,
+  .overlay,
+  #footer,
+  #print,
+  #static-ui,
+  #navigation,
+  #instructions,
+  #step-by-step-cards {
+    display: none !important; }
+
+  html,
+  body {
+    background: white;
+    overflow: auto;
+    height: auto;
+    -webkit-print-color-adjust: exact; }
+
+  #print-preview {
+    opacity: 1 !important;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: block !important; }
+    #print-preview .print-preview-container {
+      width: 100%;
+      margin: 0;
+      position: relative;
+      background: white;
+      padding: 0;
+      z-index: 10; }
+    #print-preview .paper-preview-article {
+      max-height: 800px; }
+      #print-preview .paper-preview-article > p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        text-align: justify; }
+      #print-preview .paper-preview-article blockquote {
+        font-size: 1rem; }
+        #print-preview .paper-preview-article blockquote p {
+          font-size: 1rem;
+          line-height: 1.4; }
+        #print-preview .paper-preview-article blockquote .blockquote-footer {
+          font-size: 0.8rem;
+          line-height: 1.4; }
+      #print-preview .paper-preview-article figure .image-wrapper img {
+        max-height: 250px; }
+      #print-preview .paper-preview-article figure figcaption {
+        font-size: 0.65rem;
+        margin-top: 5px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -24,8 +24,8 @@ $screen-gtxs:       'min-width: 768px';
 $screen-gtsm:       'min-width: 992px';
 $screen-gtmd:       'min-width: 1200px';
 
-$screen-portrait:   '(orientation: portrait)';
-$screen-landscape:  '(orientation: landscape)';
+$screen-portrait:   'orientation: portrait';
+$screen-landscape:  'orientation: landscape';
 
 
 // Transition

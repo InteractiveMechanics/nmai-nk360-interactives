@@ -14,27 +14,27 @@ $btnaccent:         #2E3742;    // Deep blue
     font-family: "Ludicrous";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/ludicrous/Ludicrous.eot?') format('eot'), 
-         url('../fonts/ludicrous/Ludicrous.woff') format('woff'), 
-         url('../fonts/ludicrous/Ludicrous.ttf') format('truetype');
+    src: url('../shared/fonts/ludicrous/Ludicrous.eot?') format('eot'), 
+         url('../shared/fonts/ludicrous/Ludicrous.woff') format('woff'), 
+         url('../shared/fonts/ludicrous/Ludicrous.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Archer Pro";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/archer-pro/ArcherPro-Book.eot?') format('eot'), 
-         url('../fonts/archer-pro/ArcherPro-Book.woff') format('woff'), 
-         url('../fonts/archer-pro/ArcherPro-Book.ttf') format('truetype');
+    src: url('../shared/fonts/archer-pro/ArcherPro-Book.eot?') format('eot'), 
+         url('../shared/fonts/archer-pro/ArcherPro-Book.woff') format('woff'), 
+         url('../shared/fonts/archer-pro/ArcherPro-Book.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Archer Pro";
     font-weight: bold;
     font-style: normal;
-    src: url('../fonts/archer-pro/ArcherPro-Semibold.eot?') format('eot'), 
-         url('../fonts/archer-pro/ArcherPro-Semibold.woff') format('woff'), 
-         url('../fonts/archer-pro/ArcherPro-Semibold.ttf') format('truetype');
+    src: url('../shared/fonts/archer-pro/ArcherPro-Semibold.eot?') format('eot'), 
+         url('../shared/fonts/archer-pro/ArcherPro-Semibold.woff') format('woff'), 
+         url('../shared/fonts/archer-pro/ArcherPro-Semibold.ttf') format('truetype');
 }
 
 $sans-serif:        'Open Sans', sans-serif;
@@ -68,13 +68,17 @@ h6 {
 .header {
     max-width: 540px;
     margin: 10px auto 0;
-    background-image: url('../images/pnw/splash-04.svg');
+    background-image: url('../shared/images/pnw/splash-04.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     padding: 10px 0 0;
     max-height: 85px;
     margin-bottom: 25px;
+
+    @media screen and ($screen-ltmd) and ($screen-portrait) {
+        margin: 60px auto 0;
+    }
 
     h1 {
         font-size: 2.1rem;

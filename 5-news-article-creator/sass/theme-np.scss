@@ -3,7 +3,9 @@
  * Include each file for this specific instance.
 */
 
+@import '../shared/sass/base/variables';
 @import '../shared/sass/theme-np';
 
 @import 'np/cards';
 @import 'np/navigation';
+@import 'np/forms';

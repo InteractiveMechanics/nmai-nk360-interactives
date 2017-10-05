@@ -20,23 +20,17 @@
     <link rel="stylesheet" href="./css/main.css" />
     
     <!-- For development only, comment for distribution -->
-    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
     <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
-        <link rel="stylesheet" href="./css/theme-<%= theme %>.css"
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
-
-    <style type="text/css">
-
-      /** Quick CSS Tests Here **/
-
-    </style>
 </head>
 <body>
     <!-- Google Analytics tracking script -->
-    <!--<script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -45,7 +39,7 @@
       ga('create', 'UA-28789452-3', 'auto');
       ga('set', 'appName', 'SalmonChallenges');
       ga('send', 'pageview');
-    </script>-->
+    </script>
 
 
     <!-- Common interactive elements -->
@@ -90,7 +84,7 @@
     <div class="activity-menu-wrapper">
         <div class="abs top right">
             <a class="icon icon-play" title="Pause Salmon Challenges" id="pause-icon"></a>
-            <a class="icon icon-restart" title="Restart Salmon Challenges" id="restart"></a>
+            <a class="icon icon-restart restart" title="Restart Salmon Challenges"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
@@ -120,7 +114,7 @@
         <div class="card">
 
           <div class="close-icon faded">
-            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/55049-200.png" width="70">  
+            <img src="./shared/images/icon-close.svg" width="70">  
           </div>
 
           <div class="slider">
@@ -188,7 +182,42 @@
         </div>
           
         <div class="card slider-card">
+
+          <div class="close-icon faded">
+            <img src="./shared/images/icon-close.svg" width="70">  
+          </div>
+
           <section class="intro-slider">
+            
+            <div>
+              <p>
+                Follow your salmon on their journey as they travel from the ocean back upstream to spawn. Find safe refuge as you travel, face helpful or harmful encounters, and make decisions that impact whether your salmon live or die.
+              </p>
+            </div>
+            
+          </section>
+        </div>
+
+      </div>
+
+      <div class="overlay"></div>
+    </div>
+
+    <!--spawn/death slider-->
+    <div class="spawn-death-slider-wrapper hidden">
+    
+      <div class="card-wrapper">
+        
+        <div class="card card-before">
+          <p></p>
+        </div>
+         
+        <div class="card card-after">
+          <p></p>
+        </div>
+          
+        <div class="card slider-card">
+          <section class="spawn-death-slider">
             
             <div>
               <p>
@@ -206,21 +235,25 @@
     
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
+
+          <header class="text-center">
             <h4 class="all-caps letter-spacing-1">How to Play</h4>
-            <h1>Salmon Challenges Instructions</h1>
+            <h2>Salmon Challenges</h2>
+          </header>
+
             <div class="row justify-content-md-center">
                 <div class="col-6">
                     <img src="./assets/instructions-01@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="50%" />
-                    <h2>Keep your salmon alive</h2>
+                    <h2>Keep Your Salmon Alive</h2>
                     <p>
                       Guide your salmon upstream to spawn, and help them make important decisions and avoid dangerous obstacles along the way.
                     </p>
                 </div>
                 <div class="col-6">
                     <img src="./assets/instructions-02@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="50%" />
-                    <h2>Explore and learn</h2>
+                    <h2>Explore and Learn</h2>
                     <p>
-                      Encounter (tap or click) animated objects as they float down the river to learn about salmon&mdash;maybe even find more fish to join you on your journey to spawn!
+                      Encounter (tap or click) animated objects as they float down the river to learn about salmon &mdash; maybe even find more fish to join you on your journey to spawn!
                     </p>
                 </div>
             </div>
@@ -231,8 +264,12 @@
 
     <div id="congrats-instructions" class="fade hidden">
         <div class="container congrats-instructions-container">
-            <h4 class="all-caps letter-spacing-1">Congratulations</h4>
-            <h1>You made it!</h1>
+
+            <header class="text-center">
+              <h4 class="all-caps letter-spacing-1">Congratulations</h4>
+              <h2>You Made It</h2>
+            </header>
+            
             <p>
               
               You survived your long journey upstream with 
@@ -240,53 +277,81 @@
               left after 
               <br /> 
               encountering 
-              <strong><span class="obstacles-hit">6</span> obstacles</strong> 
+              <strong><span class="obstacles-hit">13</span> obstacles</strong> 
               and 
               <strong><span class="encounters-hit">16</span> random</strong> 
-              encounters along the way.
+              objects along the way.
 
             </p>
             <div>
               <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="75%" />
             </div>
 
-            <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue this activity</a>
+            <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue</a>
         </div>
         <div class="overlay"></div>
     </div>
 
     <div id="select-fish" class="fade hidden">
         <div class="container select-fish-container">
-            <p class="all-caps letter-spacing-1">The Return Upstream</p>
-            <h1>Pick your salmon</h1>
+
+            <header class="header text-center">
+              <h2 class="letter-spacing-1 all-caps">The Return Upstream</h2>
+              <h1>Pick Your Salmon</h1>
+            </header>
+
             <div class="row justify-content-md-center fish-row">
                 
                 <div class="col cursor-pointer" data-fish="Sockeye">
-                    <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
-                    <h2>Sockeye</h2>
-                    <p>
-                      Smallest of the species, and the most abundant in number. Also known as the humpback salmon.
-                    </p>
+                    
+                    <div class="fish-photo">
+                      <img src="./assets/sockeye@2x.png" class="img-fluid" alt="Sockeye" title="Sockeye" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Sockeye</h2>
+                      <p>
+                        Sockeye salmon is the dominant commercial species of pacific salmon.
+                      </p>
+                    </div>
+
+                    <br style="clear:left;" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Steelhead">
-                    <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
-                    <h2>Steelhead</h2>
-                    <p>
-                      Often viewed as a prize catch for commercial and sports fishers. Native to cold-water tributaries of the Pacific Ocean
-                    </p>
+
+                    <div class="fish-photo">
+                      <img src="./assets/steelhead@2x.png" class="img-fluid" alt="Steelhead" title="Steelhead" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Steelhead</h2>
+                      <p>
+                        The steelhead is often viewed as prize catch for commercial and sports fishers. Steelhead can return multiple times to spawn.
+                      </p>
+                    </div>
+                    
+                    <br style="clear:left;" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Chinook">
-                    <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
-                    <h2>Chinook</h2>
-                    <p>
-                      Second least abundant species of salmon, but the most commercially sought out. Also known as the silver salmon from their color.
-                    </p>
+
+                    <div class="fish-photo">
+                      <img src="./assets/chinook@2x.png" class="img-fluid" alt="Chinook" title="Chinook" width="95%" />
+                    </div>
+
+                    <div class="fish-detail">
+                      <h2>Chinook</h2>
+                      <p>
+                        The chinook is the largest in size, but least abundant pacific salmon species.
+                      </p>
+                    </div>
+
+                    <br style="clear:left;" />
                 </div>
 
             </div>
-            <a class="btn btn-success btn-lg faded" id="close-select-fish" title="Start your journey">Start your journey</a>
+            <a class="btn btn-success btn-lg faded" id="close-select-fish" title="Start your journey">Start Your Journey</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -308,13 +373,13 @@
 
             <div class="encounters">
 
-              <div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
+              <!--<div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
               </div>
 
               <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
               </div>
 
-              <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot"></div>
+              <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot"></div>-->
 
             </div>
 
@@ -347,7 +412,7 @@
           {{/if}}
 
           {{if title}}
-            <h2 class="text-center">{{:title}}</h2>
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           {{if heading}}
@@ -357,8 +422,13 @@
           {{if image}}
 
             <div class="card-image">
-              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+              <div class="photo-container" style="display:block;">
+                  <img src="{{:image}}" class="img-fluid" />
+                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                  </div>
+              </div>
             </div>
+
             <p class="image-credit">
               {{:credit}}
             </p>
@@ -369,6 +439,18 @@
             <p>
               {{:body}}
             </p>
+          {{/if}}
+
+          {{if isLastSlide}}
+
+            <div class="btn-group-vertical">
+
+                <button type="button" class="btn btn-default ">
+                  Play Activity Again
+                </button>
+
+            </div>
+            
           {{/if}}
         </div>
     </script>
@@ -381,7 +463,7 @@
           {{/if}}
 
           {{if title}}
-            <h2 class="text-center">{{:title}}</h2>
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           {{if heading}}
@@ -412,6 +494,19 @@
               </p>
             </div>
           {{/if}}
+
+          {{if isLastSlide}}
+
+
+            <div class="quiz-options btn-group-vertical">
+
+                <button type="button" class="restart btn btn-default ">
+                  Play Activity Again
+                </button>
+
+            </div>
+            
+          {{/if}}
         </div>
     </script>
 
@@ -425,13 +520,15 @@
             {{/if}}
 
             {{if title}}
-              <h2 class="text-center">{{:title}}</h2>
+              <h3 class="text-center">{{:title}}</h3>
             {{/if}}
 
             <hr style="width:25%" />
 
-            <h3>{{:heading}}</h3>
-
+            {{if heading}}
+              <h3>{{:heading}}</h3>
+            {{/if}}
+            
             <p class="all-caps">
               Pick one option to proceed
             </p>
@@ -439,8 +536,8 @@
             <div class="quiz-options btn-group-vertical" role="group" data-answered="false">
 
 
-              {{for allClients}}
-                <button type="button" class="btn btn-default" data-losefish="{{:lose_fish}}" data-addfish="{{:add_fish}}" data-result="{{:result}}">
+              {{for quiz_options}}
+                <button type="button" class="btn btn-default answer-{{:add_fish}}" data-losefish="{{:lose_fish}}" data-addfish="{{:add_fish}}" data-result="{{:result}}">
                   {{:options}}
                 </button>
               {{/for}}

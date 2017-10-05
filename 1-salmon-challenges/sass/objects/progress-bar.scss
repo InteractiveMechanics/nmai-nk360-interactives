@@ -30,7 +30,7 @@
 
 .position-progress {
   position: absolute;
-  top: calc(-50% + 3px - 60px);
+  top: calc(-50% + 3px - 73px);
   width: 127px;
   height: 121px;
   z-index: 87;
@@ -63,4 +63,72 @@
 .position-3-progress.highlight,
 .position-4-progress.highlight {
     opacity: 1;
+}
+
+
+@media (max-width: 1440px) {
+  .fish-outline {
+    background-size: 66px 39px;
+    top: -32px;
+    right: -32px;
+    width: 66px;
+    height: 39px;
+  }
+
+  .position-progress {
+    width: 85px;
+    height: 81px;
+    top: calc(-50% + 3px - 53px);
+  }
+
+  .position-1-progress {
+    background: url('../assets/prog-bar-ocean@2x.png') no-repeat center center;
+    background-size: 85px 81px;
+  }
+  .position-2-progress {
+    background: url('../assets/prog-bar-city@2x.png') no-repeat center center;
+    background-size: 85px 81px;
+  }
+  .position-3-progress {
+    background: url('../assets/prog-bar-rural@2x.png') no-repeat center center;
+    background-size: 85px 81px;
+  }
+  .position-4-progress {
+    background: url('../assets/prog-bar-spawn@2x.png') no-repeat center center;
+    background-size: 85px 81px;
+  }
+}
+
+@media (max-width: 990px) {
+  .fish-outline {
+    background-size: 45px 32px;
+    top: -27px;
+    right: -18px;
+    width: 45px;
+    height: 32px;
+
+  }
+
+  .position-progress {
+    width: 45px;
+    height: 43px;
+    top: calc(-50% + 3px - 33px);
+  }
+
+  .position-1-progress {
+    background: url('../assets/prog-bar-ocean@2x.png') no-repeat center center;
+    background-size: 45px 43px;
+  }
+  .position-2-progress {
+    background: url('../assets/prog-bar-city@2x.png') no-repeat center center;
+    background-size: 45px 43px;
+  }
+  .position-3-progress {
+    background: url('../assets/prog-bar-rural@2x.png') no-repeat center center;
+    background-size: 45px 43px;
+  }
+  .position-4-progress {
+    background: url('../assets/prog-bar-spawn@2x.png') no-repeat center center;
+    background-size: 45px 43px;
+  }
 }

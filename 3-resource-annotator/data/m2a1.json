@@ -1,6 +1,7 @@
 {
     "title": "Resource Annotator",
     "page_title": "Northern Plains Treaties: Values",
+    "introduction": "Beliefs about what is important; values influence behavior and attitudes.",
 	"themes": [
 	    {
 	    	"title": "Values",
@@ -18,7 +19,7 @@
 		    "image_credit": "",
 		    "body": "“Almost every tribal religion was based on land in the sense that the tribe felt that its lands were specifically given to its use. The proceedings of treaty councils are filled with protests and declarations by Indians to the effect that lands cannot be sold since no human has the power or right to own them. Some of the old chiefs felt that, because generations of their ancestors had been buried on their lands and because the sacred events of their religion had taken place on the lands, they were obligated to maintain the tribal lands against new kinds of exploitation.”",
 		    "source": "John Stands in Timber and Margot Liberty, Cheyenne Memories (Lincoln: University of Nebraska Press, 1972)",
-		    "caption": "Late <span data-pronounce=“../shared/audio/PL_Cheyenne.mp3”>Cheyenne</span> <span data-toggle=“tooltip” title=“An older person who is respected because of her or his wisdom and cultural knowledge.”>elder</span>, John Stands In Timber, explains the relationship and attachment to homeland that was generally shared by Native people. Land was central to ceremony and generational history.  Native people were intimately tied to particular landscapes.",
+		    "caption": "Late <span data-pronounce=“./shared/audio/PL_Cheyenne.mp3”>Cheyenne</span> <span data-toggle=“tooltip” title=“An older person who is respected because of her or his wisdom and cultural knowledge.”>elder</span>, John Stands In Timber, explains the relationship and attachment to homeland that was generally shared by Native people. Land was central to ceremony and generational history.  Native people were intimately tied to particular landscapes.",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Passage",
@@ -51,7 +52,7 @@
 		    "image_credit": "",
 		    "body": "“When Indians gave their word and smoked the pipe, they sent the smoke to the Creator. It was sacred, and the treaty was good in the eyes of all. The white men had to go back and ask other white men if they could keep their promises and make good on their word.”",
 		    "source": "Vine Deloria Jr., quoted in the introduction to Nation to Nation: Treaties Between the United States and American Indian Nations, ed. Suzan Shown Harjo (Washington, D.C. and New York: Smithsonian Institution, 2014), 3",
-		    "caption": "Vine Deloria, Jr. (Standing Rock <span data-pronounce=“../shared/audio/PL_Sioux.mp3”>Sioux</span>) is speaking to the ethics of Native people and the <span data-toggle=“tooltip” title=“The quality of being honest and having strong moral principles.”>integrity</span> bound to the pipe.  He contrasts this with the process of government treaty negotiators making promises that were not in force or legal until that treaty was <span data-toggle=“tooltip” title=“To sign or give formal approval to.”>ratified</span> by the <span data-toggle=“tooltip” title=“One of two branches of the U.S. government responsible for passing laws. Each state has two Senators representing it.”>Senate</span>.",
+		    "caption": "Vine Deloria, Jr. (Standing Rock <span data-pronounce=“./shared/audio/PL_Sioux.mp3”>Sioux</span>) is speaking to the ethics of Native people and the <span data-toggle=“tooltip” title=“The quality of being honest and having strong moral principles.”>integrity</span> bound to the pipe.  He contrasts this with the process of government treaty negotiators making promises that were not in force or legal until that treaty was <span data-toggle=“tooltip” title=“To sign or give formal approval to.”>ratified</span> by the <span data-toggle=“tooltip” title=“One of two branches of the U.S. government responsible for passing laws. Each state has two Senators representing it.”>Senate</span>.",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Quote",
@@ -77,13 +78,13 @@
 		},
 		{
 			"id": 5,
-		    "title": "Curly Chief (<span data-pronounce=“../shared/audio/PL_Pawnee.mp3”>Pawnee</span>)",
+		    "title": "Curly Chief (<span data-pronounce=“./shared/audio/PL_Pawnee.mp3”>Pawnee</span>)",
 		    "image_url": "",
 		    "image_caption": "",
 		    "image_credit": "",
 		    "body": "“I heard that long ago there was a time when there were no people in this country except Indians. After that the people began to hear of men that had white skins; they had been seen far to the east. Before I was born they came out to our country and visited us. The man who came was from the government. He wanted to make a treaty with us, and to give us presents, blankets and guns, flint and steel, and knives. The Head Chief told him that we needed none of these things. He said, “We have our buffalo and corn. These things the Ruler gave to us, and they are all we need…We do not want your presents, and we do not want you to come into our country.”",
 		    "source": "Curly Chief, “Keep Your Presents” in Native American Testimony, ed. Peter Nabokov (New York: Penguin Books, 1999)",
-		    "caption": "Curly Chief (<span data-pronounce=“../shared/audio/PL_Pawnee.mp3”>Pawnee</span>) describes his leader rejecting European goods, valuing their tribal land and resources over what was being offered.",
+		    "caption": "Curly Chief (<span data-pronounce=“./shared/audio/PL_Pawnee.mp3”>Pawnee</span>) describes his leader rejecting European goods, valuing their tribal land and resources over what was being offered.",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "",
@@ -112,7 +113,7 @@
 		{
 			"id": 7,
 		    "title": "American Progress",
-		    "image_url": "",
+		    "image_url": "./assets/imgs/m2a1/med-source-7.jpg",
 		    "image_caption": "",
 		    "image_credit": "George A. Crofutt, American Progress, ca. 1873. Chromolithograph after an 1872 oil painting by John Gast, courtesy of the Library of Congress, LC-DIG-ppmsca-09855",
 		    "body": "A romantic depiction of the <span data-toggle=“tooltip” title=“A system of ideas and ideals.”>ideology</span> of the <span data-toggle=“tooltip” title=“The concept used to support policies that invalidated or ignored Native possession of land in order to justify colonial or U.S. governments taking possession of that land.”>Doctrine of Discovery</span> and <span data-toggle=“tooltip” title=“A 19th-century belief that the expansion of the U.S. throughout the North American continent was both justified and inevitable.”>Manifest Destiny</span>.",
@@ -122,13 +123,13 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "A romantic depiction of the ideology of the Doctrine of Discovery and Manifest Destiny.",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "./assets/imgs/m2a1/thumbnail-source-7.jpg",
 		    "question_text": "<p>What values about Manifest Destiny and the Doctrine of Discovery can be inferred from this painting?</p><p>What are the consequences of Manifest Destiny and the Doctrine of Discovery can be inferred from this photograph?</p>"
 		},
 		{
 			"id": 8,
 		    "title": "Bison Skulls",
-		    "image_url": "",
+		    "image_url": "./assets/imgs/m2a1/med-source-8.jpg",
 		    "image_caption": "",
 		    "image_credit": "Bison skulls, ca. 1890. Photograph courtesy of the Burton Historical Collection, Detroit Public Library, https://digitalcollections.detroitpubliclibrary.org/islandora/object/islandora%3A151477",
 		    "body": "Increased western settlement, a growing market for bison products, and the use of horses and firearms all contributed to the bison’s near extinction in the nineteenth century. By the late 1800s, the railroad industry had also taken its toll; bison were viewed as a barrier to advancing travel westward and this justified their decimation. They were also intentionally slaughtered to impact the major food source of Plains tribes.",
@@ -138,7 +139,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "Increased western settlement, a growing market for bison products, and the use of horses and firearms all contributed to the bison’s near extinction in the nineteenth century. By the late 1800s, the railroad industry had also taken its toll; bison were viewed as a barrier to advancing travel westward and this justified their decimation. They were also intentionally slaughtered to impact the major food source of Plains tribes.",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "./assets/imgs/m2a1/thumbnail-source-8.jpg",
 		    "question_text": "<p>What values about Manifest Destiny and the Doctrine of Discovery can be inferred from this painting?</p><p>What are the consequences of Manifest Destiny and the Doctrine of Discovery can be inferred from this photograph?</p>"
 		}
 

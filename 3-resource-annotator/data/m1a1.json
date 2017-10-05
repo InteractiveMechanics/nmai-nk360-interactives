@@ -1,6 +1,7 @@
 {
     "title": "Resource Annotator",
     "page_title": "Northern Plains History & Culture: Crow Nation",
+    "introduction": "Rights are special benefits. Responsibilities are moral duties.",
 	"themes": [
 	    {
 	    	"title": "Rights",
@@ -22,9 +23,9 @@
 		    "image_url": "",
 		    "image_caption": "",
 		    "image_credit": "",
-		    "body": "“The <span data-pronounce=“../shared/audio/PL_Crow.mp3”>Crow</span> Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition. It wasn’t about, one day they woke up and said, from now on we’re going to be warriors . . . they wanted to protect their homeland from being invaded by whoever it was—whether it be <span data-pronounce=“../shared/audio/PL_Blackfeet.mp3”>Blackfeet</span> to the north or the <span data-pronounce=“../shared/audio/PL_Arapaho.mp3”>Arapahos</span> and <span data-pronounce=“../shared/audio/PL_Sioux.mp3”>Sioux</span>—and so they basically had to train themselves to become warriors. And for Indian people, warriors meant protecting. Protecting the family, protecting the home. And they would be the front lines, protecting their homeland and what they believed in. And they never backed down.”",
+		    "body": "“The <span data-pronounce=“./shared/audio/PL_Crow.mp3”>Crow</span> Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition. It wasn’t about, one day they woke up and said, from now on we’re going to be warriors . . . they wanted to protect their homeland from being invaded by whoever it was—whether it be <span data-pronounce=“./shared/audio/PL_Blackfeet.mp3”>Blackfeet</span> to the north or the <span data-pronounce=“./shared/audio/PL_Arapaho.mp3”>Arapahos</span> and <span data-pronounce=“./shared/audio/PL_Sioux.mp3”>Sioux</span>—and so they basically had to train themselves to become warriors. And for Indian people, warriors meant protecting. Protecting the family, protecting the home. And they would be the front lines, protecting their homeland and what they believed in. And they never backed down.”",
 		    "source": "Darrin Old Coyote (Crow), NMAI Interview, August 2016",
-		    "caption": "Darrin Old Coyote was the twenty-first chairman of the <span data-pronounce=“../shared/audio/PL_Crow.mp3”>Crow</span> Nation. His Apsáalooke name is Ishbilxe Itche and he is a member of the Piegan clan and a child of the Ties in a Bundle and Whistling Water clans. As a tribal chairman, Mr. Old Coyote has a deep commitment to building the tribal economy and strengthening Crow <span data-toggle=“tooltip” title=“The authority of a nation or state to govern itself.”>sovereignty</span>.",
+		    "caption": "Darrin Old Coyote was the twenty-first chairman of the <span data-pronounce=“./shared/audio/PL_Crow.mp3”>Crow</span> Nation. His Apsáalooke name is Ishbilxe Itche and he is a member of the Piegan clan and a child of the Ties in a Bundle and Whistling Water clans. As a tribal chairman, Mr. Old Coyote has a deep commitment to building the tribal economy and strengthening Crow <span data-toggle=“tooltip” title=“The authority of a nation or state to govern itself.”>sovereignty</span>.",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Quote",
@@ -35,23 +36,23 @@
 		{
 			"id": 2,
 		    "title": "Crow Fair",
-		    "image_url": "http://via.placeholder.com/1280x720",
-		    "image_caption": "<span data-pronounce=“../shared/audio/PL_Crow.mp3”>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "image_url": "./assets/imgs/m1a1/med-source-2.jpg",
+		    "image_caption": "<span data-pronounce=“./shared/audio/PL_Crow.mp3”>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "image_credit": "Crow Nation women on horseback at Crow Fair (above); Honor Guard of Crow Nation Veterans (below). Photographs by Tina Pelletier, courtesy of Pasqua First Nation and Métis community of Ste. Madelaine",
-		    "body": "<span data-pronounce=“../shared/audio/PL_Crow.mp3”>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "body": "<span data-pronounce=“./shared/audio/PL_Crow.mp3”>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "source": "",
 		    "caption": "",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "./assets/imgs/m1a1/thumbnail-source-2.jpg",
 		    "question_text": "Why might the Crow Nation choose to honor veterans so prominently at Crow Fair?"
 		},
 		{
 			"id": 3,
 		    "title": "Dr. Joseph Medicine Crow",
-		    "image_url": "http://via.placeholder.com/1280x720",
+		    "image_url": "./assets/imgs/m1a1/med-source-3.jpg",
 		    "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "image_credit": "Dr. Joseph Medicine Crow shows a drum to President Barack Obama and First Lady Michelle Obama during a reception for recipients and their families in the Blue Room of the White House, August 12, 2009. Photograph by Pete Souza",
 		    "body": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
@@ -61,13 +62,13 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "./assets/imgs/m1a1/thumbnail-source-3.jpg",
 		    "question_text": "<p>What responsibilities and values are reflected in the four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
 		},
 		{
 			"id": 4,
 		    "title": "Pipe",
-		    "image_url": "http://via.placeholder.com/1280x720",
+		    "image_url": "./assets/imgs/m1a1/med-source-4.jpg",
 		    "image_caption": "",
 		    "image_credit": "Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI 012599",
 		    "body": "<p>“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe’s intent was to retrieve horses some Crows had taken from them.</p><p>However, these two nations understood the bundle’s import, which included a pipe:</p><p>He [Sharp Nose] had a [piece of] red flannel and mixed the tobacco and willow bark and tallow [fat] and put it in a dried bladder and then in the red flannel. That is a “sacred bundle.” All tribes respect that....This sacred bundle is used to make peace and to make relationships among the Indians.</p><p>In an elaborate welcoming ceremony that followed Sharp Nose’s and Big Plume’s initial contact with the Crow, the Crow leadership supplied the two Arapahoe with meaningful gifts and nourishment. Thereafter, the Crow offered them a pipe, asking, ‘What are you? Where did you come from? What business have you? Why do you bring this sacred bundle? Tell us nothing but the truth. You have smoked the peace pipe and must tell the truth.’</p><p> The two Arapahoe explained their purpose for coming into Crow country. They had risked their lives coming to the Crow Nation but the sacred bundle and pipe signaled to everyone the Arapahoe peaceful intention. The Crow not only returned the horses but they also reciprocated the gesture. . . and when the welcome concluded, an Arapahoe leader extended his hand in friendship to the Crow man, gave him the pipe of peace and said, ‘Hereafter we will be friends.’”</p>",
@@ -77,7 +78,7 @@
 		    "video_url": "",
 		    "source_type": "Image/Passage",
 		    "excerpt": "“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared.”",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "./assets/imgs/m1a1/thumbnail-source-4.jpg",
 		    "question_text": "<p>According to this story, why is the pipe significant to the Arapahoe and Crow Nations?</p><p>How did the Crow and Arapahoe practice diplomacy in this story?</p>"
 		}
 	],
