@@ -278,7 +278,7 @@ Annotator = (function() {
       print.find('.print-notes ul').html('');
       print.find('.marker-in-text .number').remove();
       
-      print.find('.caption-text').html(objItem.caption);
+      //print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
       print.find('.paraphrased-text').html(objItem.paraphrase);
 

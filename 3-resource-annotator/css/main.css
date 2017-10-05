@@ -316,7 +316,7 @@ small, .small {
   font-style: bold;
   color: black;
   letter-spacing: .5px;
-  font-size: 85%;
+  font-size: 70%;
   margin-top: 15px; }
 
 .markers-remaining {
@@ -456,11 +456,11 @@ small, .small {
 .markers-container .list-inline {
   margin: 30px 0 45px; }
   .markers-container .list-inline .list-inline-item {
-    margin-right: 10px;
+    margin-right: 7px;
     text-align: center;
     display: inline-block;
     text-align: center;
-    width: 125px; }
+    width: 30%; }
 
 .btn-lg {
   width: 325px; }

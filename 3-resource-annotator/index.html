@@ -208,7 +208,7 @@
 
               <div class="">
 
-                <div class="print-caption">
+                <!--<div class="print-caption">
                   <h3>Caption</h3>
                   <p class="caption-text">
                     Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
@@ -216,7 +216,7 @@
                     Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
                     Caption Text Caption Text Caption Text Caption Text Caption Text Caption Text
                   </p>
-                </div>
+                </div>-->
 
                 <div class="print-discussion">
                   <h3>Discussion Questions</h3>
@@ -352,13 +352,6 @@
               <div class="outer-top">
                <div class="top scrollbar-design">
 
-                    {{if caption}}
-                      <h3 >Caption</h3>
-                      <p>
-                        {{:caption}}
-                      </p>
-                    {{/if}}
-
                     {{if question_text}}
                       <h3>Discussion Questions</h3>
                       <p>
@@ -426,10 +419,10 @@
         {{/if}}
 
         {{if image_url}}
-        <div class="photo-container" style="display:block;">
-            <img src="{{:image_url}}" class="img-fluid" />
-            <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}"></div>
-        </div>
+          <div class="photo-container" style="display:block;">
+              <img src="{{:image_url}}" class="img-fluid" />
+              <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}"></div>
+          </div>
         {{/if}}
 
         <div class="info">
@@ -448,6 +441,20 @@
           <p class="original-text-info">
             {{:body}}
           </p>
+          {{/if}}
+
+
+          {{if caption}}
+            <p class="original-text-info">
+              {{:caption}}
+            </p>
+          {{/if}}
+
+
+          {{if source}}
+            <p class="original-text-info">
+              {{:source}}
+            </p>
           {{/if}}
 
         </div>
@@ -549,7 +556,7 @@
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m1a2.json';</script>
+    <script>var jsondata = './data/m1a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 
