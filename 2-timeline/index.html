@@ -84,11 +84,11 @@
     <div class="activity-menu-wrapper">
         <div class="abs top right">
             <a class="icon icon-home" title="Back to Home Screen"></a>
-            <a class="icon icon-print" title="Print this Activity"></a>
+            <!-- <a class="icon icon-print" title="Print this Activity"></a> -->
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
-    <footer class="fixed-bottom d-flex justify-content-between transparent">
+    <footer class="fixed-bottom d-flex justify-content-between">
         <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
@@ -204,22 +204,25 @@
                             </div>
                       
                             <div class="modal-body">
+
+
                                 <figure class="modal-photo-wrapper">
                                     {{if image}}
-                                    <a href="{{:imgage}}"  data-sub-html=".caption">
-                                        <img src="{{:image}}" alt="{{:caption}}" title={{:caption}}>
-                                        <button class="zoom" id="lightgallery"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></button>
-                                        <figcaption class="caption">{{:caption}}</figcaption>
-                                    </a>
+                                    
+                                    <div style="position: relative;" class="modal-img-wrapper">
+                                        <img src="{{:image}}" />
+                                        <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
+                                    </div>
+
+                                     <figcaption class="caption">{{:caption}}</figcaption>
+
                                     {{else}}
                                         <figcaption class="caption">{{:caption}}</figcaption>
                                     {{/if}}
-                                </figure>
 
+                                     <p>{{:description}}</p>
 
-                               
-                                <p>{{:description}}</p>
-                            </div>
+                                </div>
 
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->

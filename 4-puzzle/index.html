@@ -135,6 +135,17 @@
             <div class="text-wrapper">
                 <p>{{:Intro}}</p>
 
+                {{if IntroImage}}
+                <div style="position: relative;">
+                    <img src="{{:IntroImage}}" class="modal-img" />
+                    <div data-gallery data-gallery-image="{{:IntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
+                </div>
+                        
+                <small class="modal-caption">{{:IntroCaption}}</small>
+                {{/if}}
+
+
+
                 <h6>{{:IntroPrompt}}</h6>
             </div>
         </div>

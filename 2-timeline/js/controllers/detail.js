@@ -1,8 +1,8 @@
 Detail = (function() {
 
-    var timelineWidth = 2143;
+    timelineWidth = 2143;
 
-	 var init = function() {
+	var init = function() {
         bindEvents();
     }
 
@@ -43,6 +43,8 @@ Detail = (function() {
         }
     }
 
+   
+
     var displayExploreScreen = function(era) {
         
         
@@ -55,9 +57,9 @@ Detail = (function() {
                 $('.era-container[data-era="3"]').addClass('hidden');
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
-                $('.timeline-wrapper').css('width', '3500px');
+                Detail.timelineWidth = 3500;
             } else {
-                $('.timeline-wrapper').css('width', '4800px');
+                Detail.timelineWidth = 4800;
             }
             console.log(era);
         } else {
@@ -66,11 +68,12 @@ Detail = (function() {
             if (era == 1) {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
+                timelineWidth = 2143;
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
-                timelineWidth = 3500;
+                Detail.timelineWidth = 3500;
             } else {
-                timlineWidth = 4800;
+                Detail.timelineWidth = 4800;
             }
         }
         $('#explore').removeClass('animated fadeIn hidden');
@@ -177,6 +180,7 @@ Detail = (function() {
         });
 
     }
+
 
     var bindEvents = function() {
         $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);

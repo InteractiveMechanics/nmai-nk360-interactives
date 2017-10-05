@@ -27,6 +27,7 @@
 	padding: 0px 30px 40px;
 	p {
 		font-size: 14px;
+		margin-top: 20px;
 	}
 }
 
@@ -46,6 +47,19 @@
 		color: $black;
 		margin-top: 10px;
 	}
+}
+
+[data-gallery] {
+	background: url('../../shared/images/icon-zoom.svg');
+	background-repeat: no-repeat;
+}
+
+.modal-img-wrapper {
+	height: 250px;
+    overflow: hidden;
+    background: $midgray;
+    text-align: center;
+
 }
 
 .close[data-dismiss="modal"] {
