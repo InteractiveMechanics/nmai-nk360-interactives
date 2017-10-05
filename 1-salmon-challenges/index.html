@@ -407,7 +407,7 @@
           {{/if}}
 
           {{if title}}
-            <h2 class="text-center">{{:title}}</h2>
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           {{if heading}}
@@ -417,8 +417,13 @@
           {{if image}}
 
             <div class="card-image">
-              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+              <div class="photo-container" style="display:block;">
+                  <img src="{{:image}}" class="img-fluid" />
+                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                  </div>
+              </div>
             </div>
+
             <p class="image-credit">
               {{:credit}}
             </p>
@@ -441,7 +446,7 @@
           {{/if}}
 
           {{if title}}
-            <h2 class="text-center">{{:title}}</h2>
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           {{if heading}}
@@ -485,13 +490,15 @@
             {{/if}}
 
             {{if title}}
-              <h2 class="text-center">{{:title}}</h2>
+              <h3 class="text-center">{{:title}}</h3>
             {{/if}}
 
             <hr style="width:25%" />
 
-            <h3>{{:heading}}</h3>
-
+            {{if heading}}
+              <h3>{{:heading}}</h3>
+            {{/if}}
+            
             <p class="all-caps">
               Pick one option to proceed
             </p>

@@ -1,3 +1,19 @@
+body {
+  p {
+    font-family: "Archer Pro", serif;
+  }
+
+  a {
+    font-family: "Archer Pro", serif;
+  }
+
+  .image-credit {
+    color:#888;
+    margin:10px 0;
+    font-size:85%;
+    font-style:italic;
+  }
+}
 .game {
   height: 100vh;
   position: relative;
@@ -341,6 +357,15 @@
         }
     }
 }
+
+.quiz-detail {
+  font-weight:bold;
+}
+
+.solution-text {
+  font-weight:bold;
+}
+
 
 @media (max-width: 800px) {
   * {

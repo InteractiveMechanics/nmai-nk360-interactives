@@ -215,6 +215,16 @@ footer {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
+body p {
+  font-family: "Archer Pro", serif; }
+body a {
+  font-family: "Archer Pro", serif; }
+body .image-credit {
+  color: #888;
+  margin: 10px 0;
+  font-size: 85%;
+  font-style: italic; }
+
 .game {
   height: 100vh;
   position: relative;
@@ -508,6 +518,12 @@ footer {
       max-width: 300px; }
     #congrats-instructions .congrats-instructions-container .row {
       margin-bottom: 20px; }
+
+.quiz-detail {
+  font-weight: bold; }
+
+.solution-text {
+  font-weight: bold; }
 
 @media (max-width: 800px) {
   * {

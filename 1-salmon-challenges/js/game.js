@@ -428,7 +428,7 @@ Game = (function() {
       $('.fish-row .col').addClass('faded');
       $('.fish-row .col').removeClass('selected');
 
-      $('.fish-row .col img').removeClass('animated bounce');
+      $('.fish-row .col img').removeClass('animated pulse');
       _this.removeClass('faded');
       _this.addClass('selected');
 
@@ -439,7 +439,14 @@ Game = (function() {
 
     }
 
+    var setCloseIcon = function() {
+      if(!$('.close-icon').hasClass('faded')) {
+        $('.close-icon').addClass('faded')
+      }
+    }
+
     var hotspotClicked = function() {
+      setCloseIcon();
 
       var wasAlreadyClicked = $(this).hasClass('faded');
       if(wasAlreadyClicked) {
@@ -480,6 +487,8 @@ Game = (function() {
     }
 
     var createForcedEncounterSlider = function(encounter) {
+      setCloseIcon();
+
       var sliderHTML = "";
       var cards = encounter.cards;
       for (var i = 0; i < cards.length; i++) {
@@ -618,7 +627,7 @@ Game = (function() {
                 
                 setTimeout(function(){
                   showSalmonSelection();
-                }, 200);
+                }, 550);
 
               }
           });
@@ -719,9 +728,9 @@ Game = (function() {
         requestAnimationFrame(updateWorld);
       } 
 
-      $('.slider-wrapper').removeClass('show').addClass('hidden');
+      /*$('.slider-wrapper').removeClass('show').addClass('hidden');
       settings.pause = true;
-      requestAnimationFrame(updateWorld);
+      requestAnimationFrame(updateWorld);*/
 
       if(lastCard) {
         if(lastCard.cards[0].lose_fish) {
