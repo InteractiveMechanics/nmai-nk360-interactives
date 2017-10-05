@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 3,
+      salmonCount: 1,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -69,7 +69,7 @@ Game = (function() {
         $('body').on('click tap', '.quiz-options button', quizHandler);
         $('body').on('click tap', '.close-icon', closePopup);
         $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
-        $('body').on('click tap', '#restart', restartSalmonChallenges);
+        $('body').on('click tap', '.restart', restartSalmonChallenges);
         $('body').on('click tap', '#pause-icon', hitPause);
         //$('body').on('click tap', '#', victoryContinueButton);
 
@@ -171,8 +171,6 @@ Game = (function() {
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
-
-      console.log(hotspotHTML);
     }
 
     var getCityEncounter = function() {
@@ -220,8 +218,6 @@ Game = (function() {
       encounter.bottom = y;
       encounter.alreadyUsing = true;
 
-      console.log(randomEncounters.length);
-
       return encounter;
     };
 
@@ -251,7 +247,8 @@ Game = (function() {
       var isUnique = true;
 
       for (var i = randomNumberArray.length - 1; i >= 0; i--) {
-        if( randomNumberArray[i] == number ) {
+        var n = randomNumberArray[i];
+        if( (n - 200) >= number && (n + 200) <= number ) {
           isUnique = false;
         }
       };
@@ -289,7 +286,7 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 12840) {
+            if (current_position < 13840) {
 
                 if(checkEncounters(current_position)) {
 
@@ -377,14 +374,23 @@ Game = (function() {
     }
 
     var setGameOverSlider = function() {
-      if($('.spawn-death-slider').hasClass('slick-initialized')) {
-        $('.spawn-death-slider').slick('unslick'); 
-      }
-
       var sliderTemplate = $.templates("#introSliderTemplate");
-      var sliderTemplateHTMLOutput = sliderTemplate.render(gameData.death_cards);
-      $(".spawn-death-slider").html(sliderTemplateHTMLOutput);
+      var sliderTemplateHTMLOutput = ""; sliderTemplate.render(gameData.death_cards);
+      gameData.death_cards[gameData.death_cards.length - 1].isLastSlide = true;
 
+
+      var cards = gameData.death_cards;
+
+      for (var i = 0; i < cards.length; i++) {
+        
+        sliderTemplateHTMLOutput += getInformationCardHTML(cards[i]);
+
+        console.log(getInformationCardHTML(cards[i]));
+
+        
+      };
+
+      $(".spawn-death-slider").html(sliderTemplateHTMLOutput);
 
       setTimeout(function(){
         $(".spawn-death-slider").slick({
@@ -398,6 +404,7 @@ Game = (function() {
       setTimeout(function(){        
         $('.spawn-death-slider-wrapper').removeClass('hidden').addClass('show');
       }, 500);
+
     }
 
     var startGame = function() {

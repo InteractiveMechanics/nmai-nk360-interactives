@@ -12,11 +12,17 @@
 }
 
 .slick-prev {
-	left: -130px;
+	left: -120px;
 }
 
 .slick-next {
-	right: -50px;
+	right: -120px;
+}
+
+.slick-prev,
+.slick-next {
+    width: 100px;
+    height: 100px;
 }
 
 .slick-prev:before,

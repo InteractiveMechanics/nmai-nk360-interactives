@@ -18,6 +18,10 @@
 	.overlay {
 		z-index:20;
 	}
+
+	.slick-dots {
+		bottom:-175px;
+	}
 }
 
 .card {
@@ -137,23 +141,67 @@
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
+		outline: none !important;
 
 		&:focus {
+			outline: none !important;
 			outline:0;
 			background: grey;
 		}
 
 		&:active {
+			outline: none !important;
 			outline:0;
 			background: grey;
 		}
 
 		&.correct {
 			background:green;
+			outline: none !important;
+
+			&:hover {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
+
+			&:active {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
+
+			&:focus {
+				outline: none !important;
+				background: green !important;
+				color:white !important;
+				border-color:green !important;
+			}
 		}
 
 		&.wrong {
 			background:red;
+			outline: none !important;
+			&:hover {
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
+
+			&:active {
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
+
+			&:focus {
+				outline: none !important;
+				background: red !important;
+				color:white !important;
+				border-color:red !important;
+			}
 		}
 	}
 
@@ -169,22 +217,72 @@
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
+		outline: none !important;
+
+
+		&.btn {
+			outline: none !important;
+			&:focus {
+				outline:0 !important;
+			}
+		}
+
+		&.btn-default {
+			outline: none !important;
+			&:focus {
+				outline:0 !important;
+			}
+		}
 
 		&:hover {
 			background: grey !important;
 			color: white !important;
+		}
+
+		&:focus {
+			outline:0 !important;
 		}
 	}
 
 	.correct {
 		&:hover {
 			background: green !important;
+			color:white !important;
+			border-color:green !important;
+		}
+
+		&:active {
+			background: green !important;
+			color:white !important;
+			border-color:green !important;
+		}
+
+		&:focus {
+			background: green !important;
+			color:white !important;
+			border-color:green !important;
+			outline:0 !important;
 		}
 	}
 
 	.wrong {
 		&:hover {
 			background: red !important;
+			color:white !important;
+			border-color:red !important;
+		}
+
+		&:active {
+			background: red !important;
+			color:white !important;
+			border-color:red !important;
+		}
+
+		&:focus {
+			background: red !important;
+			color:white !important;
+			border-color:red !important;
+			outline:0 !important;
 		}
 	}
 }
