@@ -10,10 +10,31 @@ Annotator = (function() {
     var objItem;
 
     var markersInJSON = [];
+    var heading = "";
 
     var init = function(data) {
       AnnotatorData = data;
       bindEvents();
+    }
+
+    var createHeading = function() {
+      var arr = markersInJSON;
+
+      if(arr.length == 1) {
+        heading =  arr[0].theme_id;
+      }
+
+      if(arr.length > 1) {
+        for (var i = 0; i < arr.length; i++) {
+          if( i == arr.length - 1) {
+            heading = heading.substring(0, heading.length - 1);
+            heading += " & " + arr[i].theme_id;
+          } else {
+            heading += arr[i].theme_id + " ,";
+          }
+        }
+      }
+      
     }
 
     var markerArray = [ 
@@ -32,9 +53,10 @@ Annotator = (function() {
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
         $('body').on('click tap', '#print-notes', printPage);
 
-        loadTemplate();
         createSlider();
         createThemeObj();
+        createHeading();
+        loadTemplate();
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
@@ -87,6 +109,8 @@ Annotator = (function() {
 
     var loadTemplate = function() {
       $('.intro-text').text(AnnotatorData.introduction);
+      $('.theme-name').text(heading);
+      $('.page-title').text(AnnotatorData.page_title);
     };
 
     var pinSetup = function() {
@@ -192,7 +216,7 @@ Annotator = (function() {
             pin.removeClass().addClass('pin-visible marker-in-text');
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
-            pin.append('<textarea placeholder="Lorem"></textarea>');
+            pin.append('<textarea placeholder="Write your note here..."></textarea>');
             pin.append('<span class="delete-btn"></span>');
 
             findPinPosition(pin);
