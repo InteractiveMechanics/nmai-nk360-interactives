@@ -316,14 +316,14 @@
 						},
 						{
 							"options": "Storm drain runoff",
-							"result": "Correct. City storm drains carry pollutants like motor oils and trash into rivers. Lose 1 fish.",
-							"lose_fish": true,
+							"result": "Correct. City storm drains carry pollutants like motor oils and trash into rivers. No fish lost, no fish gained.",
+							"lose_fish": false,
 							"add_fish": false
 						},
 						{
 							"options": "Predatory sharks",
-							"result": "Incorrect. Some sharks are saltwater predators, but they don’t follow salmon upriver. No fish lost, no fish gained.",
-							"lose_fish": false,
+							"result": "Incorrect. Some sharks are saltwater predators, but they don’t follow salmon upriver. Lose 1 fish.",
+							"lose_fish": true,
 							"add_fish": false
 						}
 					]
