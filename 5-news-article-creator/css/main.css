@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic");
 .overlay {
   position: fixed;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.85);
   top: 0;
   left: 0;
   width: 100%;
@@ -94,7 +94,8 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   color: white;
@@ -381,11 +382,25 @@ main {
           filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
   #step-by-step-cards .step-intro .guiding-question.large {
     font-size: 3.6rem; }
+  #step-by-step-cards .step-theme .btn.btn-theme {
+    padding: 40px 1.25rem;
+    background-position: center center;
+    background-size: 100%;
+    font-weight: bold; }
+    #step-by-step-cards .step-theme .btn.btn-theme[data-theme="traditional"] {
+      background-image: url("../assets/background-traditional.jpg"); }
+    #step-by-step-cards .step-theme .btn.btn-theme[data-theme="modern"] {
+      background-image: url("../assets/background-modern.jpg"); }
+    #step-by-step-cards .step-theme .btn.btn-theme:focus, #step-by-step-cards .step-theme .btn.btn-theme:hover, #step-by-step-cards .step-theme .btn.btn-theme:active {
+      background-size: 125%; }
   #step-by-step-cards .step-images .step-container-inner img {
     position: relative;
     border: 2px solid black;
     max-height: 400px;
-    width: auto; }
+    width: auto;
+    cursor: pointer;
+    transition: 0.5s all;
+    opacity: 1; }
     @media screen and (max-width: 1199px) {
       #step-by-step-cards .step-images .step-container-inner img {
         max-height: 200px; } }
@@ -393,6 +408,8 @@ main {
       #step-by-step-cards .step-images .step-container-inner img {
         max-height: 320px;
         max-width: 280px; } }
+    #step-by-step-cards .step-images .step-container-inner img:focus, #step-by-step-cards .step-images .step-container-inner img:hover, #step-by-step-cards .step-images .step-container-inner img:active {
+      opacity: 0.75; }
   #step-by-step-cards .step-images .step-container-inner:before {
     content: '';
     position: absolute;
@@ -470,7 +487,10 @@ main {
       right: 20px;
       filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
       transition: 0.5s all;
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 1; }
+      #step-by-step-cards .step-image-captions .image-caption-container .featured:hover, #step-by-step-cards .step-image-captions .image-caption-container .featured:active, #step-by-step-cards .step-image-captions .image-caption-container .featured:focus {
+        opacity: 0.75; }
       #step-by-step-cards .step-image-captions .image-caption-container .featured.active {
         background-image: url("../assets/icon-star-fill.svg"); }
     #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form {
@@ -489,6 +509,12 @@ main {
         @media screen and (max-width: 991px) and (orientation: portrait) {
           #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
             height: 80px; } }
+  #step-by-step-cards .step-quotes .quote-step .step-container-inner {
+    cursor: pointer;
+    transition: 0.5s all;
+    opacity: 1; }
+    #step-by-step-cards .step-quotes .quote-step .step-container-inner:focus, #step-by-step-cards .step-quotes .quote-step .step-container-inner:hover, #step-by-step-cards .step-quotes .quote-step .step-container-inner:active {
+      opacity: 0.75; }
   #step-by-step-cards .step-quotes .quote-step p {
     padding: 20px 30px; }
     #step-by-step-cards .step-quotes .quote-step p small {

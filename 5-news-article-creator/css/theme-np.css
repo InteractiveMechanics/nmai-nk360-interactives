@@ -88,6 +88,8 @@ h4 {
   font-size: 3.6rem;
   line-height: 1.2;
   color: #677c4a; }
+#step-by-step-cards .step-theme .btn.btn-theme:focus, #step-by-step-cards .step-theme .btn.btn-theme:hover, #step-by-step-cards .step-theme .btn.btn-theme:active {
+  color: #677c4a; }
 
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
