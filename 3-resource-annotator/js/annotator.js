@@ -163,9 +163,10 @@ Annotator = (function() {
 
     var draggableEvent = function(markers) {
       markers.draggable({
-        containment: 'document',
+        containment: 'window',
         helper: 'clone',
         cursor: 'move',
+        appendTo: 'body',
         // If there are no more pins available
         start: function(event, ui) {
           var m = $(this).parent();
@@ -227,6 +228,12 @@ Annotator = (function() {
             pin.append('<span class="delete-btn"></span>');
 
             findPinPosition(pin);
+
+            $('.marker-in-text').each(function() {
+              if($(this).is(pin)) return;
+              hidePin($(this));
+            });
+
           }
 
           // When a marker is moved to another position, make it draggable
@@ -241,6 +248,14 @@ Annotator = (function() {
               });
 
               findPinPosition(pin);
+
+              $('.marker-in-text').each(function() {
+                if($(this).is(pin)) return;
+                hidePin($(this));
+              });
+              
+              showPin(pin);
+
             }
           });
 
@@ -261,7 +276,11 @@ Annotator = (function() {
             }
             else {
               //todo
-              
+              $('.marker-in-text').each(function() {
+                if($(this).is(pin)) return;
+                hidePin($(this));
+              });
+
               showPin(pin);
             }
           });

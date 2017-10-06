@@ -1,11 +1,16 @@
 .slider-wrapper {
 	.slick-dots {
-		bottom:-125px;
+		bottom:-155px;
+	}
+
+	.slick-slide {
+		margin:0 0;
 	}
 
 	.overlay {
 		z-index:20;
 	}
+
 }
 
 .intro-slider-wrapper {
@@ -14,13 +19,17 @@
 	}
 
 	.slick-dots {
-		bottom:-50px;
+		bottom:-70px;
 	}
 }
 
 .spawn-death-slider-wrapper {
 	.overlay {
 		z-index:20;
+	}
+
+	.slick-slide {
+		margin:0 0;
 	}
 
 	.slick-dots {
@@ -287,7 +296,17 @@
 }
 
 .slider-card {
-	background: url(../shared/images/text-card-pnw@2x.png) white !important;
+	background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
+    background-size: 400px 600px !important;
+    background-repeat:no-repeat;
+
+    @media (max-width: 767px) { 
+        background-size: 360px 570px !important;
+    }
+}
+
+.card-bg {
+	background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
 
