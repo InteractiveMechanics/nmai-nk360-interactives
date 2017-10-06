@@ -18,7 +18,7 @@
     .step-theme {
         .btn.btn-theme {
             &:focus, &:hover, &:active {
-                color: $primary;
+                color: $btnaccent !important;
             }
         }
     }
