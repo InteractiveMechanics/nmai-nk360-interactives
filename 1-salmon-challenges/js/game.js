@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 3,
+      salmonCount: 1,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -85,9 +85,12 @@ Game = (function() {
       if(isPlaying) {
         settings.pause = false;
         $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
+        $('#SelectedSalmon').css('animation-play-state', 'paused');
       } else {
         settings.pause = true;
         $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
+        $('#SelectedSalmon').css('animation-play-state', 'running');
+        requestAnimationFrame(updateWorld);
       }
     }
 
