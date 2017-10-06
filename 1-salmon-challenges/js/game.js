@@ -500,6 +500,13 @@ Game = (function() {
 
       var sliderHTML = "";
       var cards = encounter.cards;
+
+      if(cards.length > 1) {
+        $('.before-indicator').addClass('card-before');
+        $('.after-indicator').addClass('card-after');
+      }
+
+
       for (var i = 0; i < cards.length; i++) {
         
         if(cards[i].type == 'quiz') {
@@ -550,6 +557,11 @@ Game = (function() {
 
       $('.slider').html(sliderHTML);
       $('.close-icon').removeClass('faded');
+
+      if(cards.length == 1) {
+        $('.before-indicator').removeClass('card-before');
+        $('.after-indicator').removeClass('card-after');
+      }
 
       //Slick slider call if multiple slides
       if(cards.length > 1) {

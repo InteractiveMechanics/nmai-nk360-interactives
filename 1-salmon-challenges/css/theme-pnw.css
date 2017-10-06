@@ -86,3 +86,14 @@ h4 {
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #006986; }
+
+.header {
+  max-width: 540px;
+  margin: 10px auto 0;
+  background-image: url(../shared/images/pnw/splash-04.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px 0 0;
+  max-height: 85px;
+  margin-bottom: 25px; }

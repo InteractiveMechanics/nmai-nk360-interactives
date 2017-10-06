@@ -116,24 +116,55 @@ footer {
       margin-bottom: 20px; }
 
 [data-toggle="tooltip"] {
-  border-bottom: 1px dotted #2e3742;
-  transition: all 0.5s; }
+  border: 1px solid #206CAF;
+  border-radius: 4px;
+  padding: 1px 3px;
+  transition: all 0.5s;
+  color: black;
+  cursor: help;
+  display: inline-block; }
   [data-toggle="tooltip"]:hover, [data-toggle="tooltip"]:focus, [data-toggle="tooltip"]:active {
-    border-bottom: 1px dotted #f1f2f2; }
-  [data-toggle="tooltip"].invert {
-    border-bottom: 1px dotted white; }
-    [data-toggle="tooltip"].invert:hover, [data-toggle="tooltip"].invert:focus, [data-toggle="tooltip"].invert:active {
-      border-bottom: 1px dotted #9eb2c1; }
+    background-color: #206CAF;
+    color: white; }
+    [data-toggle="tooltip"]:hover:after, [data-toggle="tooltip"]:focus:after, [data-toggle="tooltip"]:active:after {
+      background-image: url("../shared/images/icon-definition-white.svg"); }
+  [data-toggle="tooltip"]:after {
+    content: '';
+    display: inline-block;
+    background-image: url("../shared/images/icon-definition.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    margin-top: -3px;
+    vertical-align: middle;
+    transition: all 0.5s; }
 
 [data-pronounce] {
-  background-color: #f1f2f2;
-  transition: all 0.5s; }
+  border: 1px solid #D67169;
+  border-radius: 4px;
+  padding: 1px 3px;
+  transition: all 0.5s;
+  color: black;
+  cursor: help;
+  display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
-    background-color: #9eb2c1; }
-  [data-pronounce].invert {
-    background-color: #2e3742; }
-    [data-pronounce].invert:hover, [data-pronounce].invert:focus, [data-pronounce].invert:active {
-      background-color: #9eb2c1; }
+    background-color: #D67169;
+    color: white; }
+    [data-pronounce]:hover:after, [data-pronounce]:focus:after, [data-pronounce]:active:after {
+      background-image: url("../shared/images/icon-audio-white.svg"); }
+  [data-pronounce]:after {
+    content: '';
+    display: inline-block;
+    background-image: url("../shared/images/icon-audio.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: all 0.5s; }
 
 .btn {
   background-color: transparent;
@@ -221,6 +252,10 @@ body .image-credit {
   margin: 10px 0;
   font-size: 85%;
   font-style: italic; }
+body .photo-container {
+  text-align: center;
+  height: auto;
+  position: relative; }
 
 .game {
   height: 100vh;
@@ -449,10 +484,12 @@ body .image-credit {
         padding: 0; } }
     .fish-row img:hover {
       background: url("../assets/selection-hover@2x.png") no-repeat;
-      background-size: contain; }
+      background-size: contain;
+      background-position-y: 25px; }
   .fish-row .selected img {
     background: url("../assets/selection-active@2x.png") no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    background-position-y: 25px; }
 
 .activity-menu-wrapper > div {
   z-index: 100; }

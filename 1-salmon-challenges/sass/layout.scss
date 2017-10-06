@@ -5,6 +5,12 @@ body {
     font-size:85%;
     font-style:italic;
   }
+
+  .photo-container {
+    text-align: center;
+    height: auto;
+    position: relative;
+  }
 }
 .game {
   height: 100vh;
@@ -275,6 +281,7 @@ body {
     &:hover {
       background:url('../assets/selection-hover@2x.png') no-repeat;
       background-size:contain;
+      background-position-y:25px;
     }
   }
 
@@ -282,6 +289,7 @@ body {
     img {
       background:url('../assets/selection-active@2x.png') no-repeat;
       background-size:contain;
+      background-position-y:25px;
     }
   }
 
