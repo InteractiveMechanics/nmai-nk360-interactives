@@ -229,10 +229,11 @@
 
         </script>
 
-        <!-- Explore Template -->
-        <script id="explore-template" type="text/x-jsrender">
-             <div class="transition-overlay">
-                <div class="transition-content-wrapper">
+
+
+        <!-- Complete Overlay Template -->
+        <script id="complete-template" type="text/x-jsrender">
+            <div class="transition-content-wrapper">
                     <h6>{{:StartDate}} to {{:EndDate}}</h6>
                     <h1>Timeline Complete</h1>
                     <p>You’ve completed this timeline segment. Explore the timeline entries in order for all the sections you’ve completed so far. Once you’re finished, go back and continue learning about the Fish Wars.</p>
@@ -240,8 +241,16 @@
                         <button class="btn btn-lg btn-white" id="back-to-module-btn">Back to Module</button>
                         <button class="btn btn-lg btn-white" id="explore-btn">Explore Timeline</button>
                     </div>
-                </div>
             </div>
+
+
+        </script>
+
+
+
+        <!-- Explore Template -->
+        <script id="explore-template" type="text/x-jsrender">
+             <div class="transition-overlay"></div>
 
             <div class="timeline-wrapper">
                 <div class="timeline-labels">
