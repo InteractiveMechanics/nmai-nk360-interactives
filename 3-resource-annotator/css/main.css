@@ -2,6 +2,7 @@
  * This file loads all Sass files to be compiled by Grunt.
  * Include each file for this specific instance.
 */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic");
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.85);
@@ -115,7 +116,7 @@ footer {
     #instructions .instructions-container .row {
       margin-bottom: 20px; }
 
-[data-toggle="tooltip"] {
+span[data-toggle="tooltip"] {
   border: 1px solid #206CAF;
   border-radius: 4px;
   padding: 1px 3px;
@@ -123,12 +124,12 @@ footer {
   color: black;
   cursor: help;
   display: inline-block; }
-  [data-toggle="tooltip"]:hover, [data-toggle="tooltip"]:focus, [data-toggle="tooltip"]:active {
+  span[data-toggle="tooltip"]:hover, span[data-toggle="tooltip"]:focus, span[data-toggle="tooltip"]:active {
     background-color: #206CAF;
     color: white; }
-    [data-toggle="tooltip"]:hover:after, [data-toggle="tooltip"]:focus:after, [data-toggle="tooltip"]:active:after {
+    span[data-toggle="tooltip"]:hover:after, span[data-toggle="tooltip"]:focus:after, span[data-toggle="tooltip"]:active:after {
       background-image: url("../shared/images/icon-definition-white.svg"); }
-  [data-toggle="tooltip"]:after {
+  span[data-toggle="tooltip"]:after {
     content: '';
     display: inline-block;
     background-image: url("../shared/images/icon-definition.svg");
