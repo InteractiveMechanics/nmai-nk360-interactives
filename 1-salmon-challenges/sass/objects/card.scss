@@ -145,7 +145,7 @@
 
 	button {
 		color: white;
-		background: grey;
+		background: #2e3742;
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
@@ -154,13 +154,13 @@
 		&:focus {
 			outline: none !important;
 			outline:0;
-			background: grey;
+			background: #2e3742;
 		}
 
 		&:active {
 			outline: none !important;
 			outline:0;
-			background: grey;
+			background: #2e3742;
 		}
 
 		&.correct {
@@ -221,7 +221,7 @@
 .quiz-answered {
 	button {
 		color: white;
-		background: grey;
+		background: #2e3742;
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
@@ -243,7 +243,7 @@
 		}
 
 		&:hover {
-			background: grey !important;
+			background: #2e3742 !important;
 			color: white !important;
 		}
 

@@ -141,6 +141,14 @@ span[data-toggle="tooltip"] {
     margin-top: -3px;
     vertical-align: middle;
     transition: all 0.5s; }
+  @media print {
+    span[data-toggle="tooltip"] {
+      border: none;
+      padding: none;
+      border-radius: none; }
+      span[data-toggle="tooltip"]:after {
+        content: none;
+        display: none; } }
 
 [data-pronounce] {
   border: 1px solid #D67169;
@@ -166,6 +174,14 @@ span[data-toggle="tooltip"] {
     margin-left: 5px;
     vertical-align: middle;
     transition: all 0.5s; }
+  @media print {
+    [data-pronounce] {
+      border: none;
+      padding: none;
+      border-radius: none; }
+      [data-pronounce]:after {
+        content: none;
+        display: none; } }
 
 .btn {
   background-color: transparent;
@@ -605,10 +621,10 @@ body .photo-container {
   border-color: white !important; }
 .quiz-options .btn:hover {
   background-color: white !important;
-  border: 3px solid grey !important;
-  color: grey !important; }
+  border: 3px solid #2e3742 !important;
+  color: #2e3742 !important; }
 .quiz-options .btn:focus, .quiz-options .btn:active {
-  background-color: grey !important;
+  background-color: #2e3742 !important;
   color: white !important; }
 
 .slider-wrapper .slick-dots {
@@ -712,7 +728,7 @@ body .photo-container {
   width: 100%; }
   .quiz-options button {
     color: white;
-    background: grey;
+    background: #2e3742;
     font-size: 21px;
     padding: 15px;
     margin: 5px 0 20px;
@@ -720,11 +736,11 @@ body .photo-container {
     .quiz-options button:focus {
       outline: none !important;
       outline: 0;
-      background: grey; }
+      background: #2e3742; }
     .quiz-options button:active {
       outline: none !important;
       outline: 0;
-      background: grey; }
+      background: #2e3742; }
     .quiz-options button.correct {
       background: green;
       outline: none !important; }
@@ -764,7 +780,7 @@ body .photo-container {
 
 .quiz-answered button {
   color: white;
-  background: grey;
+  background: #2e3742;
   font-size: 21px;
   padding: 15px;
   margin: 5px 0 20px;
@@ -778,7 +794,7 @@ body .photo-container {
     .quiz-answered button.btn-default:focus {
       outline: 0 !important; }
   .quiz-answered button:hover {
-    background: grey !important;
+    background: #2e3742 !important;
     color: white !important; }
   .quiz-answered button:focus {
     outline: 0 !important; }

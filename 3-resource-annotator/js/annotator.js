@@ -52,7 +52,11 @@ Annotator = (function() {
         $('body').on('click tap', '.close-icon', closePopup);
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
         $('body').on('click tap', '#print-notes', printPage);
-        $('body').on('click tap', '.icon-home', reloadPage);
+
+        $('body').on('click tap', '.reload-page', reloadPage);
+        $('body').on('click tap', '#close-porgess', hideLostProgress);
+
+        
 
         createSlider();
         createThemeObj();
@@ -582,11 +586,11 @@ Annotator = (function() {
     }
 
     var showLostProgress = function() {
-      $('#lost-progress').removeClass('pin-hidden').addClass('show');
+      $('#lost-progress').removeClass('hidden').addClass('show');
     }
 
     var hideLostProgress = function() {
-      $('#lost-progress').removeClass('show').addClass('pin-hidden');
+      $('#lost-progress').removeClass('show').addClass('hidden');
     }
 
     var reloadPage = function() {
