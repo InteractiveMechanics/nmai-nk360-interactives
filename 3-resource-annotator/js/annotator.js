@@ -214,6 +214,7 @@ Annotator = (function() {
 
             pin.data('marker', dataMaker);
 
+            console.log($('.marker-in-text'));
             pin.removeClass().addClass('pin-visible marker-in-text');
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
