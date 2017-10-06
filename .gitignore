@@ -1,6 +1,8 @@
 .sass-cache/
 *.css.map
 .DS_Store
+
+git-automation.sh
 installer.phar
 composer.lock
 composer.json
@@ -9,3 +11,16 @@ node_modules/
 bower_components/
 dist/
 vendor/
+
+plains-belonging-markup-1/
+plains-belonging-markup-2/
+plains-belonging-puzzle/
+plains-treaty-markup/
+plains-treaty-news/
+pnw-fish-wars-markup-1/
+pnw-fish-wars-markup-2/
+pnw-fish-wars-news/
+pnw-fish-wars-timeline/
+pnw-history-culture-markup/
+pnw-history-culture-puzzle/
+pnw-history-culture-salmon/
