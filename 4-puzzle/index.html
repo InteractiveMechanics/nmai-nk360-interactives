@@ -85,7 +85,7 @@
     <div class="activity-menu-wrapper">
         <div class="abs top right">
             <a class="icon icon-home" title="Back to Home Screen"></a>
-            <a class="icon icon-print" title="Print this Activity"></a>
+            <!-- <a class="icon icon-print" title="Print this Activity"></a> -->
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
             <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
         </div>
@@ -107,7 +107,7 @@
                 <div class="col">
                     <img src="./assets/instructions-01@2x.png" alt="Turn over the statement cards and explore the hidden content" title="Turn over the statment cards and explore the hidden content." />
                     <h2>Explore the Cards</h2>
-                    <p>Turn over the statement cards and discover the hidden content..</p>
+                    <p>Turn over the statement cards and discover the hidden content.</p>
                 </div>
                 <div class="col">
                     <img src="./assets/instructions-02@2x.png" alt="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" title="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" />
@@ -133,21 +133,25 @@
                 <h1>{{:Title}}</h1>
             </div>
             <div class="text-wrapper">
-                <p>{{:Intro}}</p>
-
+              
                 {{if IntroImage}}
-                <div style="position: relative;">
-                    <img src="{{:IntroImage}}" class="modal-img" />
-                    <div data-gallery data-gallery-image="{{:IntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
+                <div style="position: relative;" class="modal-img-wrapper">
+                    <img src="{{:IntroImage}}" class="modal-img intro-img" />
+                    <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
                 </div>
                         
                 <small class="modal-caption">{{:IntroCaption}}</small>
                 {{/if}}
 
+                <p>{{:Intro}}</p>
 
 
                 <h6>{{:IntroPrompt}}</h6>
             </div>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
+            </button>
         </div>
 
     </script>   
@@ -178,7 +182,7 @@
                 <div class="lg-wrapper-puzzle">
                     <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
                         <img class="puzzle-img" src="{{:Image}}" alt="" title="">
-                        <span class="zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                        <span class="puzzle-img-zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
                     </a>
                 </div>
             
@@ -202,7 +206,7 @@
 
         {{for Themes}}
 
-        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}">{{:title}}
+        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}" data-animation="false">{{:title}}
 
             <svg class="icon-definition" version="1.1"
          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -397,7 +401,7 @@
     <script src="./shared/code/upperleftmenu/menu.js"></script>
 
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m1a1.json';</script>
+    <script>var jsondata = './data/m3a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

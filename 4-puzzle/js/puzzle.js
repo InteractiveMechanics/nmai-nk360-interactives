@@ -11,7 +11,7 @@ Puzzle = (function() {
             $('#droppable-wrapper').addClass('hidden animated fadeOut');
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
             $('#puzzle-download').removeClass('hidden');
-            $('.zoom-icon').removeClass('hidden');
+            $('.puzzle-img-zoom-icon').removeClass('hidden');
         }
     }
 
@@ -149,6 +149,7 @@ Puzzle = (function() {
         clearTimeout(droppableTimeout);
         clearTimeout(hidePopoverTimeout);
         hidePopover();
+        hideTooltip();
         resetDroppables();
         $('#droppable-wrapper').removeClass('hidden fadeOut').addClass('animated fadeIn');
         var id = $(this).attr('data-card');

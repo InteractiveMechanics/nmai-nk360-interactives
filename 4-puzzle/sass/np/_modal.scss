@@ -26,11 +26,15 @@
 }
 
 .popover {
-	background-color: $accent;
+	background-color: #823129;
 	color: white;
 }
 
 .popover.popover-top::after, 
 .popover.bs-tether-element-attached-bottom::after {
-	border-top-color: $accent;
+	border-top-color: #823129;
+}
+
+.modal-img-wrapper {
+	background-color: $midgray;
 }

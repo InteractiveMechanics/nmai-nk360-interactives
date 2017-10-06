@@ -124,6 +124,9 @@ h4 {
   .learning-points-card .header-wrapper h1 {
     font-family: "Archer Pro", serif; }
 
+.modal-img-wrapper {
+  background-color: #9eb2c1; }
+
 #complete-overlay .text-wrapper h1 {
   font-family: "Archer Pro", serif; }
 

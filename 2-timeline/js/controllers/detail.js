@@ -65,6 +65,7 @@ Detail = (function() {
         } else {
             console.log('era is defined. it is ' + era);
             $('#explore').html($.templates("#explore-template").render(data));
+            $('.transition-overlay').html($.templates('#complete-template').render(data.eras[era-1]));
             if (era == 1) {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
@@ -79,6 +80,8 @@ Detail = (function() {
         $('#explore').removeClass('animated fadeIn hidden');
         $('#selection').addClass('fadeOut hidden');
         $('#detail').addClass('fadeOut hidden');
+
+        
     
     }
 
@@ -143,8 +146,6 @@ Detail = (function() {
                         ui.draggable.draggable('option', 'revert', 'invalid');
                        
 
-                        //alert('the thing is dropped!');
-
                         ui.draggable.addClass('dragged');
                         $(this).addClass('dropped');
                         displayModal(id, droppableNumber);
@@ -170,7 +171,7 @@ Detail = (function() {
                         var draggableNumber = ui.draggable.attr('data-timeline');
                         var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
                         setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);
-                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 3000);
+                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 5000);
                        
                        
                     }
@@ -206,14 +207,5 @@ Detail = (function() {
 })();
 
 
-/*
-var template = $.templates("#theTmpl");
-
-var htmlOutput = template.render(data);
-
-$("#result").html(htmlOutput);
-
-$("#result").html($.templates("#theTmpl").render(data));
-*/
 
 
