@@ -106,23 +106,25 @@ h4 {
     left: 42%; }
 
 .popover {
-  background-color: #73cce4;
+  background-color: #823129;
   color: white; }
 
 .popover.popover-top::after,
 .popover.bs-tether-element-attached-bottom::after {
-  border-top-color: #73cce4; }
+  border-top-color: #823129; }
 
 .modal-img-wrapper {
   background-color: #9eb2c1; }
 
-.intro-card {
+.intro-card,
+.learning-points-card {
   background: url("../shared/images/np/text-card-np@2x.png");
   background-size: 95%;
   background-color: #eaeaea;
   background-repeat: no-repeat;
   background-position: center center; }
-  .intro-card .header-wrapper h1 {
+  .intro-card .header-wrapper h1,
+  .learning-points-card .header-wrapper h1 {
     font-family: "Geared Slab", serif;
     font-size: 30px;
     margin-top: 20px; }

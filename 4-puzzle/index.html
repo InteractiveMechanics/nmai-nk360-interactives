@@ -136,7 +136,7 @@
               
                 {{if IntroImage}}
                 <div style="position: relative;" class="modal-img-wrapper">
-                    <img src="{{:IntroImage}}" class="modal-img" />
+                    <img src="{{:IntroImage}}" class="modal-img intro-img" />
                     <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
                 </div>
                         
@@ -148,6 +148,10 @@
 
                 <h6>{{:IntroPrompt}}</h6>
             </div>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
+            </button>
         </div>
 
     </script>   
@@ -178,7 +182,7 @@
                 <div class="lg-wrapper-puzzle">
                     <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
                         <img class="puzzle-img" src="{{:Image}}" alt="" title="">
-                        <span class="zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                        <span class="puzzle-img-zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
                     </a>
                 </div>
             

@@ -346,8 +346,6 @@ footer {
 .intro-card p {
   font-size: 14px;
   margin-top: 10px; }
-.intro-card img {
-  height: 180px; }
 
 .subheader {
   padding-left: 0px; }
@@ -366,6 +364,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.intro-img {
+  max-height: 180px; }
 
 #puzzle .header-wrapper {
   width: 100%;
@@ -519,6 +520,14 @@ footer {
   position: absolute;
   right: 15px;
   bottom: 15px; }
+
+.puzzle-img-zoom-icon {
+  width: 100%;
+  position: relative;
+  display: block;
+  text-align: right;
+  top: -40px;
+  right: 15px; }
 
 .read-more {
   width: 100%;
