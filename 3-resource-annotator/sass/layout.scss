@@ -1,13 +1,5 @@
 body {
 
-    p {
-      font-family: "Archer Pro", serif;
-    }
-
-    span {
-      font-family: "Archer Pro", serif;
-    }
-
     a {
       font-family: "Archer Pro", serif;
 
@@ -60,7 +52,13 @@ body {
         text-shadow:2px 2px 2px rgba(0,0,0,.35);
       }
     }
+
+    .info {
+      margin-top:20px;
+    }
+
 }
+
 
 .photo-container {
   text-align: center;
@@ -112,8 +110,8 @@ small, .small {
       height: 50vh;
 
       .body {
-        height: 37vh;
-        overflow-y: scroll;
+        height: 36vh;
+        overflow-y: auto;
       }
 
       .button {
@@ -137,7 +135,7 @@ small, .small {
   }
 
   .copyright {
-    color:#888;
+    color:#333232;
     margin:12px 0;
   }
 }
@@ -184,7 +182,7 @@ small, .small {
 
     .content-height {
       max-height: 70vh; 
-      overflow-y: scroll; 
+      overflow-y: auto; 
       padding: 0 25px 25px;
     }
 }
@@ -218,7 +216,7 @@ small, .small {
   }
   .top {
     height: 22vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     background:white;
   }
 }
@@ -419,13 +417,14 @@ small, .small {
   color: #fff;
   text-align: center;
   font-weight: bold;
-  text-transform: uppercase;
   font-style: normal;
+  padding-top:25px;
 }
 
 .delete-pin span {
   display: block;
   margin-top: 30px;
+  font-family:"Open Sans";
 }
 
 
@@ -444,12 +443,6 @@ small, .small {
   }
 }
 
-footer {
-  &.transparent {
-    background: #403f3f;
-  }
-}
-
 .defintions-icon {
   position: relative;
   /* Adjust these values accordingly */
@@ -461,4 +454,10 @@ footer {
   background-size:contain;
   padding:10px;
   padding-top:0;
+}
+
+.pin-visible {
+  img {
+    opacity:1 !important;
+  }
 }

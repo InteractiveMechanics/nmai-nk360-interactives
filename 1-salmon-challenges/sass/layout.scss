@@ -1,17 +1,15 @@
 body {
-  p {
-    font-family: "Archer Pro", serif;
-  }
-
-  a {
-    font-family: "Archer Pro", serif;
-  }
-
   .image-credit {
     color:#888;
     margin:10px 0;
     font-size:85%;
     font-style:italic;
+  }
+
+  .photo-container {
+    text-align: center;
+    height: auto;
+    position: relative;
   }
 }
 .game {
@@ -283,6 +281,7 @@ body {
     &:hover {
       background:url('../assets/selection-hover@2x.png') no-repeat;
       background-size:contain;
+      background-position-y:25px;
     }
   }
 
@@ -290,6 +289,7 @@ body {
     img {
       background:url('../assets/selection-active@2x.png') no-repeat;
       background-size:contain;
+      background-position-y:25px;
     }
   }
 
@@ -325,6 +325,7 @@ body {
     background-image: url(../shared/images/icon-play.svg); }
 
 #congrats-instructions {
+    font-family: 'Open Sans';
     position: fixed;
     width: 100%;
     top: 0;
@@ -333,7 +334,7 @@ body {
     color: white;
     z-index: 1000;
     overflow: auto;
-
+    font-size:110%;
     .congrats-instructions-container {
         z-index: 101;
         position: relative;
@@ -344,11 +345,18 @@ body {
             padding: 30px 30px 100px;
         }
 
-        h2 {
+        h2, h3 {
             color: white !important;
+            font-family: 'Open Sans';
         }
-        img {
-            max-width: 300px;
+
+        p {
+          margin:30px 0;
+          font-family: 'Open Sans';
+        }
+
+        a {
+          font-family: 'Open Sans';
         }
 
         .row {
