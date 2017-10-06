@@ -86,6 +86,11 @@ body {
   body .annotation-screen {
     margin: 50px auto 0 !important; }
 
+.btn i path {
+  fill: #301c18; }
+.btn:hover i path {
+  fill: #FFF; }
+
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #677c4a; }

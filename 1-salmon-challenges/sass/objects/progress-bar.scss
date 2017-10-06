@@ -18,7 +18,8 @@
   right: -48px;
   width: 98px;
   height: 61px;
-  z-index: 50;
+  z-index: 90;
+  filter:drop-shadow( 4px 3px 5px rgba(0,0,0,.35));
 }
 
 .progressb {
@@ -35,6 +36,7 @@
   height: 121px;
   z-index: 87;
   opacity: 0.2;
+  filter:drop-shadow( 4px 3px 5px rgba(0,0,0,.35));
 }
 
 .position-1-progress {

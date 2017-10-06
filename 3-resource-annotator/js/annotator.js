@@ -215,6 +215,11 @@ Annotator = (function() {
             pin.data('marker', dataMaker);
 
             console.log($('.marker-in-text'));
+
+            $( ".pin-visible" ).each(function(  ) {
+              hidePin($(this));
+            });
+
             pin.removeClass().addClass('pin-visible marker-in-text');
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
@@ -255,6 +260,8 @@ Annotator = (function() {
               hidePin(pin);
             }
             else {
+              //todo
+              
               showPin(pin);
             }
           });
@@ -352,6 +359,7 @@ Annotator = (function() {
     var findPinPosition = function(pin) {
       var width = pin.closest('.scrollbar-design').outerWidth();
       var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+
       // Special case for featured image
       if(pin.parent().hasClass('photo-container')) {
         var top = 30;
@@ -372,16 +380,30 @@ Annotator = (function() {
         pin.css({
           'left': 0
         });
+        
         width = pin.closest('.scrollbar-design').outerWidth();
         scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
 
-        if(width < scroll) {
+        var height = pin.closest('.scrollbar-design').outerHeight();
+        var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+        
+        /*if(height < 300) {
           pin.css({
-            'left': -320 + parseInt(pin.parent().width()),
-            'top': ''
+            'left': '',
+            'top': 50
           });
           pin.find('img').css({
-            'left': 320 - parseInt(pin.find('img').width()) + 10
+            'top': -75
+          });
+        }*/
+
+        if(width < scroll) {
+          pin.css({
+            'left': '',
+            'bottom': -320 + parseInt(pin.parent().height())
+          });
+          pin.find('img').css({
+            'bottom': 320 - parseInt(pin.find('img').width()) + 10
           });
           pin.removeClass('left-flipped').addClass('right-flipped');
         }
@@ -399,7 +421,7 @@ Annotator = (function() {
     }
 
     var deletePin = function(pin) {
-      pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Yes</button><button class="btn btn-white undo-delete">No</button></div>');
+      pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Delete</button><button class="btn btn-white undo-delete">Cancel</button></div>');
 
       pin.find('.confirm-delete').click(function() {
         var id = pin.data('marker');

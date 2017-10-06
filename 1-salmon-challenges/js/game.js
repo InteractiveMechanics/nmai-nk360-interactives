@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 1,
+      salmonCount: 3,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -325,6 +325,7 @@ Game = (function() {
               $('.fishes-left').text(settings.salmonCount);
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
+              $('#SelectedSalmon').css('animation-play-state', 'paused');
             }
           }
 
@@ -447,6 +448,7 @@ Game = (function() {
     }
 
     var setCloseIcon = function() {
+      $('#SelectedSalmon').css('animation-play-state', 'paused');
       if(!$('.close-icon').hasClass('faded')) {
         $('.close-icon').addClass('faded')
       }
@@ -741,6 +743,8 @@ Game = (function() {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
         requestAnimationFrame(updateWorld);
+
+        $('#SelectedSalmon').css('animation-play-state', 'running');
       } 
 
       var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');

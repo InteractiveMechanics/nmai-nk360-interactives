@@ -4,7 +4,7 @@
 */
 .overlay {
   position: fixed;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.85);
   top: 0;
   left: 0;
   width: 100%;
@@ -93,7 +93,8 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   color: white;
@@ -215,10 +216,6 @@ footer {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
-body p {
-  font-family: "Archer Pro", serif; }
-body a {
-  font-family: "Archer Pro", serif; }
 body .image-credit {
   color: #888;
   margin: 10px 0;
@@ -495,6 +492,7 @@ body .image-credit {
   background-image: url(../shared/images/icon-play.svg); }
 
 #congrats-instructions {
+  font-family: 'Open Sans';
   position: fixed;
   width: 100%;
   top: 0;
@@ -502,7 +500,8 @@ body .image-credit {
   height: 100%;
   color: white;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  font-size: 110%; }
   #congrats-instructions .congrats-instructions-container {
     z-index: 101;
     position: relative;
@@ -511,10 +510,14 @@ body .image-credit {
     @media screen and (max-width: 767px) {
       #congrats-instructions .congrats-instructions-container {
         padding: 30px 30px 100px; } }
-    #congrats-instructions .congrats-instructions-container h2 {
-      color: white !important; }
-    #congrats-instructions .congrats-instructions-container img {
-      max-width: 300px; }
+    #congrats-instructions .congrats-instructions-container h2, #congrats-instructions .congrats-instructions-container h3 {
+      color: white !important;
+      font-family: 'Open Sans'; }
+    #congrats-instructions .congrats-instructions-container p {
+      margin: 30px 0;
+      font-family: 'Open Sans'; }
+    #congrats-instructions .congrats-instructions-container a {
+      font-family: 'Open Sans'; }
     #congrats-instructions .congrats-instructions-container .row {
       margin-bottom: 20px; }
 
@@ -571,14 +574,14 @@ body .image-credit {
   color: white !important; }
 
 .slider-wrapper .slick-dots {
-  bottom: -155px; }
+  bottom: -125px; }
 .slider-wrapper .overlay {
   z-index: 20; }
 
 .intro-slider-wrapper .overlay {
   z-index: 20; }
 .intro-slider-wrapper .slick-dots {
-  bottom: -80px; }
+  bottom: -50px; }
 
 .spawn-death-slider-wrapper .overlay {
   z-index: 20; }
@@ -618,13 +621,8 @@ body .image-credit {
   transform: rotate(-2.5deg); }
 
 .card-wrapper {
-  z-index: 30;
-  position: relative;
-  /*width: 350px;
-  height: 250px;
-  position: relative;
-  z-index: 30;
-  position: relative;*/ }
+  z-index: 95;
+  position: relative; }
   .card-wrapper > .card {
     position: absolute;
     top: 0;
@@ -904,7 +902,8 @@ body .image-credit {
   right: -48px;
   width: 98px;
   height: 61px;
-  z-index: 50; }
+  z-index: 90;
+  filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.35)); }
 
 .progressb {
   position: relative;
@@ -918,7 +917,8 @@ body .image-credit {
   width: 127px;
   height: 121px;
   z-index: 87;
-  opacity: 0.2; }
+  opacity: 0.2;
+  filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.35)); }
 
 .position-1-progress {
   background: url("../assets/prog-bar-ocean@2x.png") no-repeat center center;

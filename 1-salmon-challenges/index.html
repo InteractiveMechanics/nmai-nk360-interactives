@@ -284,7 +284,7 @@
 
             </p>
             <div>
-              <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="75%" />
+              <img src="./assets/congrats-screen@2x.png" class="img-fluid" width="75%" alt="Salmon" title="Salmon" />
             </div>
 
             <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue</a>
@@ -473,8 +473,13 @@
           {{if image}}
 
             <div class="card-image">
-              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+              <div class="photo-container" style="display:block;">
+                  <img src="{{:image}}" class="img-fluid" />
+                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                  </div>
+              </div>
             </div>
+
             <p class="image-credit">
               {{:credit}}
             </p>
