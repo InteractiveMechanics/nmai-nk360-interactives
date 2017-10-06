@@ -28,4 +28,15 @@ span[data-toggle="tooltip"] {
         vertical-align: middle;
         transition: $transition;
     }
+
+    @media print {
+        border: none;
+        padding: none;
+        border-radius: none;
+    
+        &:after {
+            content: none;
+            display: none;
+        }
+    }
 }
