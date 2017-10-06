@@ -1,16 +1,30 @@
 [data-pronounce] {
-    background-color: $lightgray;
+    border: 1px solid #D67169;
+    border-radius: 4px;
+    padding: 1px 3px;
     transition: $transition;
+    color: black;
+    cursor: help;
+    display: inline-block;
 
     &:hover, &:focus, &:active {
-        background-color: $midgray;
-    }
+        background-color: #D67169;
+        color: white;
 
-    &.invert {
-        background-color: $black;
-
-        &:hover, &:focus, &:active {
-            background-color: $midgray;
+        &:after {
+            background-image: url('../shared/images/icon-audio-white.svg');
         }
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        background-image: url('../shared/images/icon-audio.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-left: 5px;
+        vertical-align: middle;
+        transition: $transition;
     }
 }

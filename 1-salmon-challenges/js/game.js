@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 1,
+      salmonCount: 3,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -272,7 +272,7 @@ Game = (function() {
     var checkEncounters = function(current_position) {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
-        if(encounters[i].trigger_location == current_position) {
+        if((encounters[i].trigger_location - 200) == current_position) {
           settings.pause = false;
           createForcedEncounterSlider(encounters[i]);
         }
@@ -325,6 +325,7 @@ Game = (function() {
               $('.fishes-left').text(settings.salmonCount);
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
+              $('#SelectedSalmon').css('animation-play-state', 'paused');
             }
           }
 
@@ -447,6 +448,7 @@ Game = (function() {
     }
 
     var setCloseIcon = function() {
+      $('#SelectedSalmon').css('animation-play-state', 'paused');
       if(!$('.close-icon').hasClass('faded')) {
         $('.close-icon').addClass('faded')
       }
@@ -498,6 +500,13 @@ Game = (function() {
 
       var sliderHTML = "";
       var cards = encounter.cards;
+
+      if(cards.length > 1) {
+        $('.before-indicator').addClass('card-before');
+        $('.after-indicator').addClass('card-after');
+      }
+
+
       for (var i = 0; i < cards.length; i++) {
         
         if(cards[i].type == 'quiz') {
@@ -548,6 +557,11 @@ Game = (function() {
 
       $('.slider').html(sliderHTML);
       $('.close-icon').removeClass('faded');
+
+      if(cards.length == 1) {
+        $('.before-indicator').removeClass('card-before');
+        $('.after-indicator').removeClass('card-after');
+      }
 
       //Slick slider call if multiple slides
       if(cards.length > 1) {
@@ -741,6 +755,8 @@ Game = (function() {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
         requestAnimationFrame(updateWorld);
+
+        $('#SelectedSalmon').css('animation-play-state', 'running');
       } 
 
       var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');

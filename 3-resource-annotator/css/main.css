@@ -4,7 +4,7 @@
 */
 .overlay {
   position: fixed;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.85);
   top: 0;
   left: 0;
   width: 100%;
@@ -93,7 +93,8 @@ footer {
 
 #instructions {
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   color: white;
@@ -115,24 +116,55 @@ footer {
       margin-bottom: 20px; }
 
 [data-toggle="tooltip"] {
-  border-bottom: 1px dotted #2e3742;
-  transition: all 0.5s; }
+  border: 1px solid #206CAF;
+  border-radius: 4px;
+  padding: 1px 3px;
+  transition: all 0.5s;
+  color: black;
+  cursor: help;
+  display: inline-block; }
   [data-toggle="tooltip"]:hover, [data-toggle="tooltip"]:focus, [data-toggle="tooltip"]:active {
-    border-bottom: 1px dotted #f1f2f2; }
-  [data-toggle="tooltip"].invert {
-    border-bottom: 1px dotted white; }
-    [data-toggle="tooltip"].invert:hover, [data-toggle="tooltip"].invert:focus, [data-toggle="tooltip"].invert:active {
-      border-bottom: 1px dotted #9eb2c1; }
+    background-color: #206CAF;
+    color: white; }
+    [data-toggle="tooltip"]:hover:after, [data-toggle="tooltip"]:focus:after, [data-toggle="tooltip"]:active:after {
+      background-image: url("../shared/images/icon-definition-white.svg"); }
+  [data-toggle="tooltip"]:after {
+    content: '';
+    display: inline-block;
+    background-image: url("../shared/images/icon-definition.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    margin-top: -3px;
+    vertical-align: middle;
+    transition: all 0.5s; }
 
 [data-pronounce] {
-  background-color: #f1f2f2;
-  transition: all 0.5s; }
+  border: 1px solid #D67169;
+  border-radius: 4px;
+  padding: 1px 3px;
+  transition: all 0.5s;
+  color: black;
+  cursor: help;
+  display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
-    background-color: #9eb2c1; }
-  [data-pronounce].invert {
-    background-color: #2e3742; }
-    [data-pronounce].invert:hover, [data-pronounce].invert:focus, [data-pronounce].invert:active {
-      background-color: #9eb2c1; }
+    background-color: #D67169;
+    color: white; }
+    [data-pronounce]:hover:after, [data-pronounce]:focus:after, [data-pronounce]:active:after {
+      background-image: url("../shared/images/icon-audio-white.svg"); }
+  [data-pronounce]:after {
+    content: '';
+    display: inline-block;
+    background-image: url("../shared/images/icon-audio.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: all 0.5s; }
 
 .btn {
   background-color: transparent;
@@ -215,10 +247,6 @@ footer {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
-body p {
-  font-family: "Archer Pro", serif; }
-body span {
-  font-family: "Archer Pro", serif; }
 body a {
   font-family: "Archer Pro", serif; }
   body a.link-color {
@@ -256,6 +284,8 @@ body .text-overlay {
     line-height: 25vh;
     position: relative;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35); }
+body .info {
+  margin-top: 20px; }
 
 .photo-container {
   text-align: center;
@@ -295,8 +325,8 @@ small, .small {
       padding: 20px 8% 0;
       height: 50vh; }
       .annotation-screen .annotation-item .bottom .body {
-        height: 37vh;
-        overflow-y: scroll; }
+        height: 36vh;
+        overflow-y: auto; }
       .annotation-screen .annotation-item .bottom .button {
         position: absolute;
         bottom: 25px;
@@ -309,7 +339,7 @@ small, .small {
     .annotation-screen .annotation-item .col-no-padding {
       padding: 0; }
   .annotation-screen .copyright {
-    color: #888;
+    color: #333232;
     margin: 12px 0; }
 
 .theme {
@@ -347,7 +377,7 @@ small, .small {
   height: 80vh; }
   .original-text .content-height {
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 0 25px 25px; }
 
 .markers-container {
@@ -372,7 +402,7 @@ small, .small {
     background: white; }
   .original-text-detail .top {
     height: 22vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     background: white; }
 
 .dotted {
@@ -529,12 +559,13 @@ small, .small {
   color: #fff;
   text-align: center;
   font-weight: bold;
-  text-transform: uppercase;
-  font-style: normal; }
+  font-style: normal;
+  padding-top: 25px; }
 
 .delete-pin span {
   display: block;
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-family: "Open Sans"; }
 
 .delete-pin .btn {
   border-color: white;
@@ -545,9 +576,6 @@ small, .small {
     color: #2e3742 !important;
     border-color: white;
     background: white; }
-
-footer.transparent {
-  background: #403f3f; }
 
 .defintions-icon {
   position: relative;
@@ -560,6 +588,9 @@ footer.transparent {
   background-size: contain;
   padding: 10px;
   padding-top: 0; }
+
+.pin-visible img {
+  opacity: 1 !important; }
 
 .scrollbar-design::-webkit-scrollbar-track {
   background-color: #e0e1e2; }
@@ -580,17 +611,17 @@ footer.transparent {
       width: 310px; } }
 
 .slick-prev {
-  left: -80px; }
+  left: -70px; }
 
 .slick-next {
-  right: 0px; }
+  right: 10px; }
 
 .slick-slide img {
   width: 100%; }
 
-.slick-prev:before,
-.slick-next:before {
-  color: black; }
+.slick-prev:hover,
+.slick-next:hover {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); }
 
 .slick-dots {
   z-index: 50;
@@ -687,13 +718,8 @@ footer.transparent {
   transform: rotate(-2.5deg); }
 
 .card-wrapper {
-  z-index: 30;
-  position: relative;
-  /*width: 350px;
-  height: 250px;
-  position: relative;
-  z-index: 30;
-  position: relative;*/ }
+  z-index: 95;
+  position: relative; }
   .card-wrapper > .card {
     position: absolute;
     top: 0;

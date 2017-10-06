@@ -96,6 +96,8 @@ h4 {
   line-height: 1.2;
   color: #006986;
   margin: 40px 0; }
+#step-by-step-cards .step-theme .btn.btn-theme:focus, #step-by-step-cards .step-theme .btn.btn-theme:hover, #step-by-step-cards .step-theme .btn.btn-theme:active {
+  color: #2E3742 !important; }
 
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {

@@ -27,6 +27,7 @@
 	width: 33%;
 	padding: 35px;
 	z-index: 2;
+
 	.header-wrapper {
 		display: flex;
     	flex-direction: column;
@@ -64,6 +65,9 @@
 .subheader {
 	padding-left: 0px;
 
+    ul {
+        margin: 0;
+    }
 	li {
 		display: inline;
 		font-size: 16px;

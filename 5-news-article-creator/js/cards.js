@@ -111,15 +111,27 @@ Cards = (function() {
         $('#masthead').on('change', setMasthead);
         $('#headline').on('change', setHeadline);
 
-        $('#step-by-step-cards').on('afterChange', function(event, slick, currentSlide){
-            var slide = $('.slick-track').children().eq(currentSlide).data('title');
-            sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
-        });
+        $('#step-by-step-cards').on('afterChange', changeStep);
 
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
     }
 
+
+    var changeStep = function(event, slick, currentSlide) {
+        var slide = $('.slick-track').children().eq(currentSlide).data('title');
+        sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
+
+        if (slide == 'Byline'){
+            $('#masthead').focus();
+        }
+        if (slide == 'Article'){
+            Cards.editor.focus();
+        }
+        if (slide == 'Headline'){
+            $('#headline').focus();
+        }
+    }
 
     var toggleImage = function() {
         var id = $(this).data('id');

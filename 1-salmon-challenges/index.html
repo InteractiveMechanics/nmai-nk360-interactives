@@ -91,8 +91,8 @@
     <footer class="fixed-bottom d-flex justify-content-between transparent">
         <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external">Privacy</a></li>
-            <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external">Terms of Use</a></li>
+            <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
+            <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
             <li class="list-inline-item"><a href="#">Credits</a></li>
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
@@ -103,11 +103,11 @@
 
       <div class="card-wrapper">
      
-        <div class="card card-before">
+        <div class="card card-before before-indicator">
           <p></p>
         </div>
        
-        <div class="card card-after">
+        <div class="card card-after after-indicator">
           <p></p>
         </div>
         
@@ -235,7 +235,6 @@
     
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
-
           <header class="text-center">
             <h4 class="all-caps letter-spacing-1">How to Play</h4>
             <h2>Salmon Challenges</h2>
@@ -267,7 +266,7 @@
 
             <header class="text-center">
               <h4 class="all-caps letter-spacing-1">Congratulations</h4>
-              <h2>You Made It</h2>
+              <h2>You Made It!</h2>
             </header>
             
             <p>
@@ -284,7 +283,7 @@
 
             </p>
             <div>
-              <img src="./assets/congrats-screen@2x.png" class="img-fluid" alt="Salmon" title="Salmon" width="75%" />
+              <img src="./assets/congrats-screen@2x.png" class="img-fluid" width="75%" alt="Salmon" title="Salmon" />
             </div>
 
             <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue</a>
@@ -473,8 +472,13 @@
           {{if image}}
 
             <div class="card-image">
-              <img src="{{:image}}" alt="" title="" class="img-fluid" />
+              <div class="photo-container" style="display:block;">
+                  <img src="{{:image}}" class="img-fluid" />
+                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                  </div>
+              </div>
             </div>
+
             <p class="image-credit">
               {{:credit}}
             </p>

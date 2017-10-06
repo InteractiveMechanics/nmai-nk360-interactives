@@ -46,7 +46,7 @@
 			"title": "Your Salmon Died",
 			"heading": "",
 			"image": "./assets/imgs/card-dead-salmon-2.jpg",
-			"credit": "Dead Salmon, Ethan Ableman August 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/ethansphotosarecool/5817205588/in/album-72157626801973789/>Source</a>",
+			"credit": "Dead Salmon, Ethan Ableman August 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/ethansphotosarecool/5817205588/in/album-72157626801973789/'>Source</a>",
 			"caption": "",
 			"body": "There are many forces that threaten salmon during their life’s journey. While some of the threats are from natural predators or poor conditions human activities are the primary threats to salmon survival.",
 			"result": "",
@@ -121,7 +121,7 @@
 		}
 	],
 	"forced": [{
-			"trigger_location": 500,
+			"trigger_location": 700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered an Obstacle",
@@ -163,7 +163,7 @@
 			]
 		},
 		{
-			"trigger_location": 1700,
+			"trigger_location": 3100,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve entered a healthy habitat",
@@ -205,7 +205,7 @@
 			]
 		},
 		{
-			"trigger_location": 3100,
+			"trigger_location": 1700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve encountered an obstacle",
@@ -380,7 +380,7 @@
 					"title": "Temperature Increase",
 					"heading": "",
 					"image": "./assets/imgs/filename.jpg",
-					"credit": "Photograph by NPS/USBR/USGS Elwha Restoration Project Imagery, 2013 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/>License</a>, <a target='_blank' href='https://www.flickr.com/photos/usgs_elwhacams/8572465353/'>Source</a>",
+					"credit": "Photograph by NPS/USBR/USGS Elwha Restoration Project Imagery, 2013 <a target='_blank' href='https://creativecommons.org/licenses/by-sa/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/usgs_elwhacams/8572465353/'>Source</a>",
 					"caption": "",
 					"body": "Here you are on a nice cool river and you feel the water getting warmer. That’s not supposed to happen. Salmon like cool clear water on their spawning journeys.",
 					"result": "",
