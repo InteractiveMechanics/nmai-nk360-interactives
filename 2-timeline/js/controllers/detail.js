@@ -170,7 +170,7 @@ Detail = (function() {
                         var draggableNumber = ui.draggable.attr('data-timeline');
                         var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
                         setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);
-                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 3000);
+                        setTimeout(function() {   draggableShell.tooltip('hide'); }, 5000);
                        
                        
                     }
