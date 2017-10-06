@@ -379,10 +379,12 @@ span[data-toggle="tooltip"] {
   font-size: 14px;
   margin-top: 10px; }
 
+#puzzle .header-wrapper {
+  margin: 0 auto; }
+
 .subheader {
-  padding-left: 0px; }
-  .subheader ul {
-    margin: 0; }
+  padding-left: 0px;
+  margin: 0; }
   .subheader li {
     display: inline;
     font-size: 16px;

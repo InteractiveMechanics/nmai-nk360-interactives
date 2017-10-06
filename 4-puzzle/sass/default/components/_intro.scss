@@ -56,6 +56,7 @@
 
 }
 
+
 .intro-card {
 	p {
 		font-size: 14px;
@@ -63,12 +64,17 @@
 	}
 }
 
+#puzzle {
+    .header-wrapper {
+        margin: 0 auto;
+    }
+
+}
+
 .subheader {
 	padding-left: 0px;
+    margin: 0;
 
-    ul {
-        margin: 0;
-    }
 	li {
 		display: inline;
 		font-size: 16px;
