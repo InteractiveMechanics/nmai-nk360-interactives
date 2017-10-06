@@ -95,3 +95,11 @@ body {
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #006986; }
+
+.slider-card {
+  background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
+  background-size: 400px 600px !important;
+  background-repeat: no-repeat; }
+  @media (max-width: 767px) {
+    .slider-card {
+      background-size: 360px 570px !important; } }

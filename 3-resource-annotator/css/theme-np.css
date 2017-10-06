@@ -94,3 +94,11 @@ body {
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #677c4a; }
+
+.slider-card {
+  background: url(../shared/images/np/text-card-np@2x.png) white !important;
+  background-size: 400px 600px !important;
+  background-repeat: no-repeat; }
+  @media (max-width: 767px) {
+    .slider-card {
+      background-size: 360px 570px !important; } }
