@@ -495,7 +495,9 @@
             
             <div class="top">
               <div class="photo">
+                {{if thumbnail_image}}
                   <img src="{{:thumbnail_image}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
+                {{/if}}
               </div>
 
               <div class="photo-overlay"></div>
