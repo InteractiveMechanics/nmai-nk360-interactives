@@ -1,12 +1,13 @@
 .progress-wrapper {
     position: absolute;
-    z-index: 80;
+    z-index: 5;
     bottom: 100px;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 85%;
     height: 6px;
+    border-radius: 99px;
     background-color: #fff;
 }
 
@@ -31,11 +32,12 @@
 
 .position-progress {
   position: absolute;
-  top: calc(-50% + 3px - 73px);
-  width: 127px;
-  height: 121px;
+  top: calc(-50% - 40px);
+    width: 64px;
+    background-size: contain !important;
+    height: 64px;
   z-index: 87;
-  opacity: 0.2;
+  opacity: 0.3;
   filter:drop-shadow( 4px 3px 5px rgba(0,0,0,.35));
 }
 
@@ -58,6 +60,7 @@
 .position-4-progress {
     background: url('../assets/prog-bar-spawn@2x.png') no-repeat center center;
     left: 0;
+    margin-left: 32px;
 }
 
 .position-1-progress.highlight,
