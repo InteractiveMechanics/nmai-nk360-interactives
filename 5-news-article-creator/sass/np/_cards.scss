@@ -15,4 +15,11 @@
             color: $primary;
         }
     }
+    .step-theme {
+        .btn.btn-theme {
+            &:focus, &:hover, &:active {
+                color: $btnaccent !important;
+            }
+        }
+    }
 }

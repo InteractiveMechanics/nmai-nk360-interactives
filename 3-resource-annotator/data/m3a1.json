@@ -16,7 +16,7 @@
 			"highlight_color": "#0000FF"
 	    },
 	    {
-	    	"title": "A sense of community",
+	    	"title": "Community",
 	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group",
 	    	"count": 2,
 			"highlight_color": "#0000FF"
@@ -68,7 +68,7 @@
 		    "video_url": "",
 		    "source_type": "Quote",
 		    "excerpt": "“We’ve been out on boats all our lives; my dad was a fisherman when he was young; . . . we grew up here on the water, we grew up on boats. It seemed like we were fishing everywhere we went. We’d always throw a hook in the water somewhere, whether it’s in a lake or along the river, or wherever we went.”",
-		    "thumbnail_image": "http://via.placeholder.com/1280x720",
+		    "thumbnail_image": "",
 		    "question_text": "What does Ronnie Wilson’s quote tell you about the significance of fishing to him and his family?"
 		}
 
