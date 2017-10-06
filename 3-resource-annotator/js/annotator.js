@@ -52,6 +52,7 @@ Annotator = (function() {
         $('body').on('click tap', '.close-icon', closePopup);
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
         $('body').on('click tap', '#print-notes', printPage);
+        $('body').on('click tap', '.icon-home', reloadPage);
 
         createSlider();
         createThemeObj();
@@ -458,7 +459,7 @@ Annotator = (function() {
               $('.annotation-slider-screen').addClass('hidden');
               $('.annotation-notes-screen').removeClass('hidden').addClass('show');
 
-              $('.icon-print').removeClass('disabled');
+              //$('.icon-print').removeClass('disabled');
               $('.icon-home').removeClass('disabled');
         });
       }

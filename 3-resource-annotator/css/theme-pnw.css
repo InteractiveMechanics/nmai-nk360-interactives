@@ -84,7 +84,8 @@ h4 {
       opacity: 0.65; }
 
 body {
-  background: url("../shared/images/pnw/bkgr-pnw@2x.png"); }
+  background: url("../shared/images/pnw/bkgr-pnw@2x.png");
+  background-size: cover; }
 
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
