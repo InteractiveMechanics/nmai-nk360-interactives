@@ -169,6 +169,8 @@
     .step-theme {
         .btn.btn-theme {
             padding: 40px 1.25rem;
+            background-color: rgb(168, 189, 70);
+            background-color: rgba(168, 189, 70, 0.75);
             background-position: center center;
             background-size: 100%; 
             font-weight: bold;
@@ -182,6 +184,9 @@
 
             &:focus, &:hover, &:active {
                 background-size: 125%;
+            }
+            &.active {
+                background-blend-mode: color-burn;
             }
         }
     }
