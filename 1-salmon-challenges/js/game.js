@@ -272,7 +272,7 @@ Game = (function() {
     var checkEncounters = function(current_position) {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
-        if(encounters[i].trigger_location == current_position) {
+        if((encounters[i].trigger_location - 200) == current_position) {
           settings.pause = false;
           createForcedEncounterSlider(encounters[i]);
         }
