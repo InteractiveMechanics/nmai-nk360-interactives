@@ -8,6 +8,11 @@
     margin: 25mm 25mm 25mm 25mm;
 }
 
+.black-text {
+	color: black !important;
+	font-size:75% !important;
+}
+
 body,
 html {
   overflow: visible !important;
@@ -114,4 +119,12 @@ body {
 
 .note-area {
 	margin: 20px 0;
+}
+
+[data-gallery] {
+	display: none;
+}
+
+.print-hidden {
+	display: none !important;
 }

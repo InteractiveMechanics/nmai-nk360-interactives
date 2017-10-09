@@ -264,14 +264,14 @@ span[data-toggle="tooltip"] {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
-body a {
-  font-family: "Archer Pro", serif; }
-  body a.link-color {
-    color: #4BADa6;
-    text-decoration: underline;
-    font-size: 75%;
-    display: inine-block;
-    padding-right: 25px; }
+body .black-text {
+  color: #353535; }
+body a.link-color {
+  color: #4BADa6;
+  text-decoration: underline;
+  font-size: 75%;
+  display: inine-block;
+  padding-right: 25px; }
 body h3 {
   color: #006986; }
   body h3.yellow-underline {
@@ -390,7 +390,7 @@ small, .small {
 
 .original-text {
   background: #eee;
-  padding: 25px;
+  padding: 30px 50px 30px 30px;
   height: 80vh; }
   .original-text .content-height {
     max-height: 70vh;
@@ -430,7 +430,7 @@ small, .small {
 
 .original-text {
   background: #eee;
-  padding: 50px;
+  padding: 30px 50px 30px 30px;
   height: 77vh;
   box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.3); }
   .original-text .photo {

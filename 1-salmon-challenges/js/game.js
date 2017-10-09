@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 2,
+      speed: 351,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 1,
+      salmonCount: 3,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -33,12 +33,15 @@ Game = (function() {
       encounterSeen: 0
     };
 
+    var AnalyticsLabel = "Salmon Challenges";
+
     var lastCard = null;
 
     var randomEncounters = [];
     var oceanEncounters = [];
     var wildernessEncounters = [];
     var cityEncounters = [];
+    var randomNumberArray = [];
 
     var init = function(data) {
         gameData = data;
@@ -59,6 +62,7 @@ Game = (function() {
           $('.position-'+String(index + 1)+'-progress').css("left", (index * settings.sectionLength) - ($('.position-'+String(index + 1)+'-progress').width() / 2));
         });
     }
+
     var bindEvents = function() {
         $('body').on('click tap', '#show-instructions', showIntro);
         $('body').on('click tap', '#instructions', showIntroModal);
@@ -73,6 +77,8 @@ Game = (function() {
         $('body').on('click tap', '#pause-icon', hitPause);
         //$('body').on('click tap', '#', victoryContinueButton);
 
+        
+
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
 
@@ -86,10 +92,12 @@ Game = (function() {
         settings.pause = false;
         $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
         $('#SelectedSalmon').css('animation-play-state', 'paused');
+        $('.hotspot').css('animation-play-state', 'paused');
       } else {
         settings.pause = true;
         $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
         $('#SelectedSalmon').css('animation-play-state', 'running');
+        $('.hotspot').css('animation-play-state', 'running');
         requestAnimationFrame(updateWorld);
       }
     }
@@ -140,17 +148,6 @@ Game = (function() {
         }
       };
 
-
-      /*var x = getRandomValue(400, 12000);
-      var y = getRandomValue(150, window.innerHeight - 200);
-      
-      cityEncounters[0].left = 1000;//x;
-      cityEncounters[0].bottom = y;
-      
-      var encounter = cityEncounters[0];
-      var hotspotHTML = createHotspotHTML(encounter);
-      $('.encounters').html(hotspotHTML);*/
-
       var arr = [];
       for(var i = 0; i < 3; i++) {
         var temp = getCityEncounter();
@@ -166,11 +163,6 @@ Game = (function() {
         var temp = getWildernessEncounters();
         arr.push(temp);
       }
-
-      /*for(var i = 0; i < 3; i++) {
-        var temp = getRandomEncounters();
-        arr.push(temp);
-      }*/
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
@@ -243,8 +235,6 @@ Game = (function() {
 
     }
 
-    var randomNumberArray = [];
-
     var getRandomValue = function(min,max) {
       var number = Math.floor(Math.random() * (max - min + 1) + min);
       var isUnique = true;
@@ -262,8 +252,6 @@ Game = (function() {
       } else {
         return getRandomValue(min, max);
       }
-
-      //return Math.floor(Math.random()*(max-min+1)+min);
     }
 
     var closeCongratsScreen = function() {
@@ -329,6 +317,7 @@ Game = (function() {
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
+              $('.hotspot').css('animation-play-state', 'paused');
             }
           }
 
@@ -448,16 +437,21 @@ Game = (function() {
       $('#close-select-fish').removeClass('faded');
       $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);
 
+      settings.started = true;
     }
 
     var setCloseIcon = function() {
       $('#SelectedSalmon').css('animation-play-state', 'paused');
-      if(!$('.close-icon').hasClass('faded')) {
-        $('.close-icon').addClass('faded')
+      if(!$('.close-icon').hasClass('close-faded')) {
+        $('.close-icon').addClass('close-faded')
       }
     }
 
     var hotspotClicked = function() {
+      if(!settings.pause) {
+        return;
+      }
+
       setCloseIcon();
 
       var wasAlreadyClicked = $(this).hasClass('faded');
@@ -536,14 +530,6 @@ Game = (function() {
           slidesToShow: 1,
           variableWidth: true
         });
-
-        /*$(".slider").slick({
-          dots: true,
-          infinite: false,
-          slidesToShow: 1,
-          variableWidth: true
-        });*/
-
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
@@ -559,7 +545,7 @@ Game = (function() {
       };
 
       $('.slider').html(sliderHTML);
-      $('.close-icon').removeClass('faded');
+      $('.close-icon').removeClass('close-faded');
 
       if(cards.length == 1) {
         $('.before-indicator').removeClass('card-before');
@@ -577,13 +563,14 @@ Game = (function() {
         });
 
         $('.slider').on('afterChange', function(e, slick, currentSlide){
+          alert(slick.slideCount + ' + ' + currentSlide + 1);
             if(slick.slideCount == currentSlide + 1) {
-              $('.close-icon').removeClass('faded');
-              $('.slick-next').hide();
+              $('.close-icon').removeClass('close-faded');
+              $('.slider .slick-next').hide();
             }
 
             if(slick.slideCount > currentSlide + 1) {
-              $('.slick-next').show();
+              $('.slider .slick-next').show();
             }
         });
 
@@ -633,9 +620,9 @@ Game = (function() {
     }
 
     var showIntro = function () {
-      if(settings.started) {
+      /*if(settings.started && settings.pause) {
         settings.pause = false;
-      }
+      }*/
     }
 
     var showIntroModal = function() {
@@ -653,13 +640,13 @@ Game = (function() {
           $('.intro-slider').on('afterChange', function(e, slick, currentSlide){
               if(slick.slideCount == currentSlide + 1) {
                 
-                $('.close-icon').removeClass('faded');
-                $('.slick-next').hide();
+                $('.close-icon').removeClass('close-faded');
+                $('.intro-slider .slick-next').hide();
 
               }
 
               if(slick.slideCount > currentSlide + 1) {
-                $('.slick-next').show();
+                $('.intro-slider .slick-next').show();
               }
           });
 
@@ -667,10 +654,10 @@ Game = (function() {
         }, 100);
       }
 
-      if(settings.started) {
+      /*if(settings.started) {
         settings.pause = true;
         requestAnimationFrame(updateWorld);
-      }
+      }*/
     }
 
     var showSalmonSelection = function() {
@@ -718,36 +705,9 @@ Game = (function() {
         setTimeout(function(){
           //$('.quiz-solution').removeClass('hidden').addClass('show');
           $('.quiz-detail').removeClass('hidden').addClass('show');
-          $('.close-icon').removeClass('faded');
+          $('.close-icon').removeClass('close-faded');
         }, 200);
       }
-      
-      //var isAlreadyAnswered = $('.quiz-options').data('answered');
-
-      //if(!isAlreadyAnswered) {
-        /*var isRightAnswer = $(this).hasClass('right-answer');
-
-        if(isRightAnswer) {
-          $(this).addClass('correct');
-        } else {
-          $(this).addClass('wrong');
-          $('.right-answer').addClass('correct');
-        }
-
-        $('.quiz-options').data('answered', true);
-        $('.quiz-options').addClass('quiz-answered');*/
-
-
-        /*setTimeout(function(){
-          $('.quiz-solution').removeClass('hidden').addClass('show');
-           $('.quiz-detail').removeClass('hidden').addClass('show');
-        }, 200);
-        setTimeout(function(){
-          $('.slider-wrapper').removeClass('show').addClass('hidden');
-          settings.pause = true;
-          requestAnimationFrame(updateWorld);
-        }, 1500);*/
-      //}
     }
 
     var closePopup = function () {
@@ -760,6 +720,7 @@ Game = (function() {
         requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
+        $('.hotspot').css('animation-play-state', 'running');
       } 
 
       var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');
@@ -767,11 +728,6 @@ Game = (function() {
         $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
         showSalmonSelection();
       }
-
-      /*$('.slider-wrapper').removeClass('show').addClass('hidden');
-      settings.pause = true;
-      requestAnimationFrame(updateWorld);*/
-
       if(lastCard) {
         if(lastCard.cards[0].lose_fish) {
           loseFish();

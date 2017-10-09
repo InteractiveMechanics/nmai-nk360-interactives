@@ -222,7 +222,7 @@
                 </div>
 
                 <div class="print-discussion print-hidden">
-                  <h3 class=black-text>Discussion Questions</h3>
+                  <h3 class="black-text">Discussion Questions</h3>
                   <p class="discussion-text">
                    
                   </p>
@@ -233,17 +233,10 @@
               <div class="print-photo">
                 <div class="photo-container print-hidden"></div>
                 <div class="print-info print-hidden" style="overflow:visible;"></div>
+                <div class="more-info">
 
-                <!--<div class="print-caption-info print-hidden">
-                  <h3 class="black-text">Caption</h3>
                 </div>
-
-                <div class="print-source print-hidden">
-                  <h3 class="black-text">Source</h3>
-                </div>-->
               </div>
-
-              
 
 
               <div class="print-paraphrased print-hidden" style="overflow:visible;">
@@ -311,13 +304,13 @@
 
               <div class="row">
 
-                <div class="col-4">
+                <div class="col-md-12 col-lg-4 show-right-screen">
 
                   <div id="item-left" class="original-text-detail">
 
                   </div>
 
-                  <div class="text-center print-button">
+                  <div class="text-center print-button hidden-md-down">
 
                     <a class="btn btn-success btn-lg disabled" id="print-notes" title="Print your notes">
                       <strong>Print Your Notes</strong>
@@ -327,7 +320,7 @@
 
                 </div>
 
-                <div class="col-8">
+                <div class="col-md-12 col-lg-8 show-left-screen">
                   
                   <div class="original-text">
 
@@ -391,7 +384,7 @@
                </div>
              </div>
 
-               <div class="bottom markers-container">
+               <div class="bottom markers-container hidden-md-down">
                   <h3>
                     Drag and drop to add annotation
                   </h3>
@@ -455,7 +448,6 @@
 
 
           {{if caption}}
-            <h3 class="black-text">Caption</h3>
             <p class="original-text-info">
               {{:caption}}
             </p>
@@ -463,7 +455,6 @@
 
 
           {{if source}}
-            <h3 class="black-text">Source</h3>
             <p class="original-text-info">
               {{:source}}
             </p>

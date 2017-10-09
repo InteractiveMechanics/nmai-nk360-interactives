@@ -32,10 +32,10 @@
 
 .position-progress {
   position: absolute;
-  top: calc(-50% - 40px);
-    width: 64px;
-    background-size: contain !important;
-    height: 64px;
+  top: calc(-50% - 32px);
+  width: 55px;
+  background-size: contain !important;
+  height: 55px;
   z-index: 87;
   opacity: 0.3;
   filter:drop-shadow( 4px 3px 5px rgba(0,0,0,.35));
@@ -44,6 +44,7 @@
 .position-1-progress {
     background: url('../assets/prog-bar-ocean@2x.png') no-repeat center center;
     opacity: 1;
+    margin-left: -20px !important;
     left: 0;
 }
 
@@ -60,7 +61,7 @@
 .position-4-progress {
     background: url('../assets/prog-bar-spawn@2x.png') no-repeat center center;
     left: 0;
-    margin-left: 32px;
+    margin-left: 20px;
 }
 
 .position-1-progress.highlight,

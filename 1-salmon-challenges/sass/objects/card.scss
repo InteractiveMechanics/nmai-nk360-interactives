@@ -33,7 +33,7 @@
 	}
 
 	.slick-dots {
-		bottom:-175px;
+		bottom:-105px;
 	}
 }
 
@@ -66,6 +66,10 @@
 
   p {
   	font-size:13px;
+
+  	&.quiz-detail {
+  		font-size:12px;
+  	}
   }
 }
 
@@ -96,7 +100,7 @@
 		position: absolute;
 		left: 0; 
 		right: 0;
-		margin-top:100px;
+		margin-top:30px;
 
 		@media (max-width: 767px) { 
 			width:360px;
@@ -146,10 +150,11 @@
 	button {
 		color: white;
 		background: #2e3742;
-		font-size: 21px; 
+		font-size: 18px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
 		outline: none !important;
+		outline: 0 !important;
 
 		&:focus {
 			outline: none !important;

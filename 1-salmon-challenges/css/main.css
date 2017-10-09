@@ -483,16 +483,30 @@ body .photo-container {
 .fish-row {
   margin-bottom: 30px; }
   @media (max-width: 990px) {
+    .fish-row .col {
+      flex-basis: auto !important; }
     .fish-row .fish-photo {
       width: 20%;
       vertical-align: middle;
       display: inline-block;
-      height: 100%; }
+      height: 100%;
+      float: left; }
+      .fish-row .fish-photo img:hover {
+        background: url("../assets/selection-active@2x.png") no-repeat;
+        background-position-y: 0;
+        background-position-x: 0;
+        background-size: cover; }
+      .fish-row .fish-photo .selected img {
+        background: url("../assets/selection-active@2x.png") no-repeat;
+        background-position-y: 0;
+        background-position-x: 0;
+        background-size: cover; }
     .fish-row .fish-detail {
       width: 73%;
       text-align: left;
       padding-left: 5%;
-      display: inline-block; } }
+      display: inline-block;
+      float: left; } }
   .fish-row img {
     padding: 50px;
     cursor: pointer; }
@@ -574,6 +588,8 @@ body .photo-container {
       font-family: 'Open Sans'; }
     #congrats-instructions .congrats-instructions-container .row {
       margin-bottom: 20px; }
+    #congrats-instructions .congrats-instructions-container img {
+      margin: 80px 0; }
 
 .quiz-detail {
   font-weight: bold; }
@@ -603,6 +619,9 @@ body .photo-container {
     animation: none !important; } }
 .faded {
   opacity: .5; }
+
+.close-faded {
+  opacity: 0; }
 
 .not-faded {
   opacity: 1; }
@@ -644,7 +663,7 @@ body .photo-container {
 .spawn-death-slider-wrapper .slick-slide {
   margin: 0 0; }
 .spawn-death-slider-wrapper .slick-dots {
-  bottom: -175px; }
+  bottom: -105px; }
 
 .card {
   background: #FFFFFF;
@@ -670,6 +689,8 @@ body .photo-container {
         top: -30px; } }
   .card p {
     font-size: 13px; }
+    .card p.quiz-detail {
+      font-size: 12px; }
 
 .card:before {
   background: #CABDB6;
@@ -691,7 +712,7 @@ body .photo-container {
     position: absolute;
     left: 0;
     right: 0;
-    margin-top: 100px; }
+    margin-top: 30px; }
     @media (max-width: 767px) {
       .card-wrapper > .card {
         width: 360px; } }
@@ -729,10 +750,11 @@ body .photo-container {
   .quiz-options button {
     color: white;
     background: #2e3742;
-    font-size: 21px;
+    font-size: 18px;
     padding: 15px;
     margin: 5px 0 20px;
-    outline: none !important; }
+    outline: none !important;
+    outline: 0 !important; }
     .quiz-options button:focus {
       outline: none !important;
       outline: 0;
@@ -980,10 +1002,10 @@ body .photo-container {
 
 .position-progress {
   position: absolute;
-  top: calc(-50% - 40px);
-  width: 64px;
+  top: calc(-50% - 32px);
+  width: 55px;
   background-size: contain !important;
-  height: 64px;
+  height: 55px;
   z-index: 87;
   opacity: 0.3;
   filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.35)); }
@@ -991,6 +1013,7 @@ body .photo-container {
 .position-1-progress {
   background: url("../assets/prog-bar-ocean@2x.png") no-repeat center center;
   opacity: 1;
+  margin-left: -20px !important;
   left: 0; }
 
 .position-2-progress {
@@ -1004,7 +1027,7 @@ body .photo-container {
 .position-4-progress {
   background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
   left: 0;
-  margin-left: 32px; }
+  margin-left: 20px; }
 
 .position-1-progress.highlight,
 .position-2-progress.highlight,

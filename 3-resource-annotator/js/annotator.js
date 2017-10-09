@@ -7,6 +7,8 @@ Annotator = (function() {
       "theme3": 2
     };
 
+    var AnalyticsLabel = "Resource Annotator";
+
     var objItem;
 
     var markersInJSON = [];
@@ -27,10 +29,10 @@ Annotator = (function() {
       if(arr.length > 1) {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
-            heading = heading.substring(0, heading.length - 1);
+            heading = heading.substring(0, heading.length - 2);
             heading += " & " + arr[i].theme_id;
           } else {
-            heading += arr[i].theme_id + " ,";
+            heading += arr[i].theme_id + ", ";
           }
         }
       }
@@ -45,6 +47,7 @@ Annotator = (function() {
       './assets/marker-05@2x.png', 
     ]
 
+    var printEvent = window.matchMedia('print');
     var bindEvents = function() {
         $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
         $('body').on('click tap', '.icon-home', showLostProgress);
@@ -56,6 +59,26 @@ Annotator = (function() {
         $('body').on('click tap', '.reload-page', reloadPage);
         $('body').on('click tap', '#close-porgess', hideLostProgress);
 
+        window.onafterprint=function(){
+          sendGoogleAnalyticsEvent();
+        }
+
+
+        printEvent.addListener(function(printEnd) {
+          if (!printEnd.matches) {
+              sendGoogleAnalyticsEvent();
+          };
+        });
+
+        $('body').click(function (event) 
+        {
+           if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text')) {
+             $( ".pin-visible" ).each(function(  ) {
+                hidePin($(this));
+              });
+           }     
+        });
+
         
 
         createSlider();
@@ -66,6 +89,10 @@ Annotator = (function() {
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
     };
+
+    var sendGoogleAnalyticsEvent = function() {
+      console.log(sendAnalyticsEvent);
+    }
 
     var printPage = function() {
       window.print();
@@ -349,25 +376,26 @@ Annotator = (function() {
       });
 
 
-     /* if(objItem.caption) {
-        print.find('.caption-text').css('display', 'block');
-      }
-
+      
       if(objItem.question_text) {
-        print.find('.discussion-text').css('display', 'block');
+        print.find('.print-discussion').removeClass('print-hidden');
       }
 
       if(objItem.paraphrase) {
-        print.find('.paraphrased-text').css('display', 'block');
+        print.find('.print-paraphrased').removeClass('print-hidden');
       }
 
       if(objItem.body) {
-        print.find('.info').css('display', 'block');
+        print.find('.print-info').removeClass('print-hidden');
       }
 
       if(objItem.image_url) {
-        print.find('.photo-container').css('display', 'block');
-      }*/
+        print.find('.photo-container').removeClass('print-hidden');
+      }
+
+      if(AnnotatorData.themes > 0) {
+        print.find('.print-themes').removeClass('print-hidden');
+      }
     }
 
     var noteHTMLSnippet = function(src, note, num) {
