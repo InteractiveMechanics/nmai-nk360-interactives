@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 351,
+      speed: 2,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -270,6 +270,10 @@ Game = (function() {
       };
     };
 
+    var sendGoogleAnalyticsEvent = function(heading, action, label) {
+      sendAnalyticsEvent(heading, action, label);
+    }
+
     var updateWorld = function() {
         var totalPos = 0, prevPos = 0;
 
@@ -318,6 +322,10 @@ Game = (function() {
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
               $('.hotspot').css('animation-play-state', 'paused');
+
+              //sendGoogleAnalyticsEvent(AnalyticsLabel,);
+
+
             }
           }
 
