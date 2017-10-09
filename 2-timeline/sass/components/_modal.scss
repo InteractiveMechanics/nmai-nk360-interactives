@@ -4,7 +4,7 @@
 }
 
 .modal-dialog {
-	max-width: 400px; // originally 500px
+	max-width: 450px; // originally 500px
 	background-color: white;
 	border-radius: 10px;
 }
@@ -20,7 +20,7 @@
 	background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 550px;
+    min-height: 650px;
 }
 
 .modal-body {
@@ -29,6 +29,10 @@
 		font-size: 14px;
 		margin-top: 20px;
 	}
+}
+
+.modal-title {
+	text-align: center;
 }
 
 .modal-year {
@@ -50,8 +54,8 @@
 }
 
 [data-gallery] {
-	background: url('../../shared/images/icon-zoom.svg');
-	background-repeat: no-repeat;
+	//background: url('../../shared/images/icon-zoom.svg');
+	//background-repeat: no-repeat;
 }
 
 .modal-img-wrapper {

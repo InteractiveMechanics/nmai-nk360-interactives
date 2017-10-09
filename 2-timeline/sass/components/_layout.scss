@@ -60,6 +60,8 @@ div[id^="era-block"] {
 }
 
 
+
+
 #era-block-1 {
 	background:  url('../assets/timeline-segment-overlay-bg01@2x.png'), url('../assets/timeline-segment-bg01@2x.jpg');
 	background-size: cover, cover;
@@ -102,6 +104,12 @@ div[id^="era-block"] {
 #era-block-3.active {
 	background:  url('../assets/timeline-segment-overlay-bg03@2x.png'), url('../assets/timeline-segment-bg03@2x.jpg');
 	opacity: 1.0;
+}
+
+
+.start-timeline-btn, 
+.view-timeline-btn {
+	font-weight: 700;
 }
 
 

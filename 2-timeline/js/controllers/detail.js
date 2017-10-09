@@ -90,6 +90,7 @@ Detail = (function() {
     var displayModal = function(era, moment) {
         $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1]));
         $('#correct-answer').modal('show');
+        $('[data-toggle=tooltip]').tooltip('hide');
     }
 
     
