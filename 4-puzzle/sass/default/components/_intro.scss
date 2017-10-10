@@ -1,9 +1,17 @@
 #intro,
 #learning-points {
-	background: #ddd;
 	height: 100vh;
 	width: 100vw;
+	position: absolute;
+	z-index: 1;
 }
+
+// #intro,
+// #learning-points {
+// 	background: #ddd;
+// 	height: 100vh;
+// 	width: 100vw;
+// }
 
 .intro-overlay,
 .learning-points-overlay {
@@ -96,4 +104,8 @@
 
 .intro-img {
 	max-height: 180px;
+}
+
+.read-more-btn {
+	font-weight: 700;
 }
