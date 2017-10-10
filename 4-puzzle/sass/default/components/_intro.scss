@@ -6,12 +6,6 @@
 	z-index: 1;
 }
 
-// #intro,
-// #learning-points {
-// 	background: #ddd;
-// 	height: 100vh;
-// 	width: 100vw;
-// }
 
 .intro-overlay,
 .learning-points-overlay {
@@ -52,14 +46,26 @@
 			text-align: center;
 		    font-weight: 600;
 		    margin-top: 50px;
-		    position: bottom;
 		    position: absolute;
 		    bottom: 50px;
 		    width: 100%;
 		    left: 0px;
 		    padding: 0px 30px;
+		    @include screen-xs {
+		    	position: initial;
+		    }
+		}
+		@include screen-xs {
+			height: 80%;
+    		overflow: scroll;
 		}
 		
+	}
+
+	@include screen-xs {
+		width: 85%;
+		left: 7.5%;
+		top: 14%
 	}
 
 }
