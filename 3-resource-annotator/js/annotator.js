@@ -59,14 +59,17 @@ Annotator = (function() {
         $('body').on('click tap', '.reload-page', reloadPage);
         $('body').on('click tap', '#close-porgess', hideLostProgress);
 
+        window.onbeforeprint = function() {
+          sendGoogleAnalyticsEvent("Print preview", "open");
+        }
         window.onafterprint=function(){
-          sendGoogleAnalyticsEvent();
+          sendGoogleAnalyticsEvent("Print preview", "closed");
         }
 
 
         printEvent.addListener(function(printEnd) {
           if (!printEnd.matches) {
-              sendGoogleAnalyticsEvent();
+              sendGoogleAnalyticsEvent("Print preview", "closed");
           };
         });
 
@@ -104,6 +107,7 @@ Annotator = (function() {
 
     var closePopup = function() {
       $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
+      sendAnalyticsScreen("Selection screen");
     }
 
     var paraphrasedClicked = function() {
@@ -265,6 +269,7 @@ Annotator = (function() {
               hidePin($(this));
             });
 
+            sendGoogleAnalyticsEvent("Markup", "add");
           }
 
           // When a marker is moved to another position, make it draggable
@@ -319,6 +324,7 @@ Annotator = (function() {
           // Update print layout when an annotation changes
           pin.find('textarea').on('keyup', function() {
             setupPrintLayout();
+            sendGoogleAnalyticsEvent("Markup", "edit");
           });
 
           // Update print layout when a pin is (re)positioned
@@ -481,6 +487,7 @@ Annotator = (function() {
         setMarkerRemaining(m, newVal);
         pin.remove();
         setupPrintLayout();
+        sendGoogleAnalyticsEvent("Markup", "delete");
       });
 
       pin.find('.undo-delete').click(function() {
@@ -528,6 +535,7 @@ Annotator = (function() {
       $(".content-height").html(itemRightTemplateOutput);
 
       if(objItem) {
+        sendAnalyticsScreen("Markup screen - " + objItem.title);
         $('.annotation-slider-screen').addClass('animated fadeOut');
         $('.annotation-slider-screen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
               $('.annotation-slider-screen').addClass('hidden');

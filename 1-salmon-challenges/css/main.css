@@ -634,17 +634,21 @@ body .photo-container {
 
 .btn:hover, .btn:focus, .btn:active {
   background-color: white !important;
-  color: #2e3742 !important; }
+  color: #2e3742 !important;
+  box-shadow: none; }
 
 .quiz-options .btn {
-  border-color: white !important; }
+  border-color: white !important;
+  box-shadow: none; }
 .quiz-options .btn:hover {
   background-color: white !important;
   border: 3px solid #2e3742 !important;
-  color: #2e3742 !important; }
+  color: #2e3742 !important;
+  box-shadow: none; }
 .quiz-options .btn:focus, .quiz-options .btn:active {
   background-color: #2e3742 !important;
-  color: white !important; }
+  color: white !important;
+  box-shadow: none; }
 
 .slider-wrapper .slick-dots {
   bottom: -155px; }
@@ -752,38 +756,28 @@ body .photo-container {
     background: #2e3742;
     font-size: 18px;
     padding: 15px;
-    margin: 5px 0 20px;
-    outline: none !important;
-    outline: 0 !important; }
+    margin: 5px 0 20px; }
     .quiz-options button:focus {
-      outline: none !important;
-      outline: 0;
       background: #2e3742; }
     .quiz-options button:active {
-      outline: none !important;
-      outline: 0;
       background: #2e3742; }
     .quiz-options button.correct {
-      background: green;
-      outline: none !important; }
+      background: green; }
       .quiz-options button.correct:hover {
         outline: none !important;
         background: green !important;
         color: white !important;
         border-color: green !important; }
       .quiz-options button.correct:active {
-        outline: none !important;
         background: green !important;
         color: white !important;
         border-color: green !important; }
       .quiz-options button.correct:focus {
-        outline: none !important;
         background: green !important;
         color: white !important;
         border-color: green !important; }
     .quiz-options button.wrong {
-      background: red;
-      outline: none !important; }
+      background: red; }
       .quiz-options button.wrong:hover {
         background: red !important;
         color: white !important;
@@ -793,7 +787,6 @@ body .photo-container {
         color: white !important;
         border-color: red !important; }
       .quiz-options button.wrong:focus {
-        outline: none !important;
         background: red !important;
         color: white !important;
         border-color: red !important; }
@@ -805,21 +798,10 @@ body .photo-container {
   background: #2e3742;
   font-size: 21px;
   padding: 15px;
-  margin: 5px 0 20px;
-  outline: none !important; }
-  .quiz-answered button.btn {
-    outline: none !important; }
-    .quiz-answered button.btn:focus {
-      outline: 0 !important; }
-  .quiz-answered button.btn-default {
-    outline: none !important; }
-    .quiz-answered button.btn-default:focus {
-      outline: 0 !important; }
+  margin: 5px 0 20px; }
   .quiz-answered button:hover {
     background: #2e3742 !important;
     color: white !important; }
-  .quiz-answered button:focus {
-    outline: 0 !important; }
 .quiz-answered .correct:hover {
   background: green !important;
   color: white !important;
@@ -831,8 +813,7 @@ body .photo-container {
 .quiz-answered .correct:focus {
   background: green !important;
   color: white !important;
-  border-color: green !important;
-  outline: 0 !important; }
+  border-color: green !important; }
 .quiz-answered .wrong:hover {
   background: red !important;
   color: white !important;
@@ -844,8 +825,7 @@ body .photo-container {
 .quiz-answered .wrong:focus {
   background: red !important;
   color: white !important;
-  border-color: red !important;
-  outline: 0 !important; }
+  border-color: red !important; }
 
 .slider-card {
   background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;

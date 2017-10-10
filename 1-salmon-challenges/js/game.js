@@ -323,7 +323,7 @@ Game = (function() {
               $('#SelectedSalmon').css('animation-play-state', 'paused');
               $('.hotspot').css('animation-play-state', 'paused');
 
-              //sendGoogleAnalyticsEvent(AnalyticsLabel,);
+              sendGoogleAnalyticsEvent("End game", "complete");
 
 
             }
@@ -337,7 +337,7 @@ Game = (function() {
     var showGameOverScreen = function() {
       var isShowing = $('.intro-slider-wrapper').hasClass('show');
       if(!isShowing) {
-
+        sendGoogleAnalyticsEvent("End game", "death");
         setGameOverSlider();
       }
     }
@@ -423,6 +423,7 @@ Game = (function() {
       var isFaded = $('#close-select-fish').hasClass('faded');
 
       if(!isFaded) {
+        sendGoogleAnalyticsEvent("Salmon selected", settings.fishSelection);
         $('#select-fish').removeClass('show').addClass('hidden');
         startGame();
       }
@@ -498,6 +499,10 @@ Game = (function() {
       $(this).addClass('faded');
 
       settings.encounterSeen += 1;
+
+      if(lastCard > 0) {        
+        sendGoogleAnalyticsEvent("Encounter", "Random encounter - " + lastCard[0].title);
+      }
     }
 
     var createForcedEncounterSlider = function(encounter) {
@@ -542,6 +547,8 @@ Game = (function() {
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
       //console.log(sliderHTML);
+
+      sendGoogleAnalyticsEvent("Encounter", "Forced encounter - " + cards[0].title);
     }
 
     var createEncounterSlider = function(encounter) {
@@ -689,6 +696,10 @@ Game = (function() {
 
           $('.quiz-detail').text(result);
           //$('.solution-text').text('Gain 1 fish'); 
+
+          if(lastCard > 0) {        
+            sendGoogleAnalyticsEvent("Encounter", "Encounter - " + lastCard[0].title + " - correct");
+          }
         }
 
         if(lose_fish) {
@@ -699,6 +710,9 @@ Game = (function() {
 
           $('.quiz-detail').text(result);
           //$('.solution-text').text('Lose 1 fish');
+          if(lastCard > 0) {        
+            sendGoogleAnalyticsEvent("Encounter", "Encounter - " + lastCard[0].title + " - incorrect");
+          }
         }
 
         if(!add_fish && !add_fish) {

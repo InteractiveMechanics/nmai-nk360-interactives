@@ -21,21 +21,25 @@
 .btn:hover, .btn:focus, .btn:active {
 	background-color:white !important;
 	color:#2e3742 !important;
+	box-shadow:none;
 }
 
 .quiz-options {
 	.btn {
 		border-color:white !important;
+		box-shadow:none;
 	}
 
 	.btn:hover {
 		background-color:white !important;
 		border:3px solid #2e3742 !important;
-		color: #2e3742 !important;;
+		color: #2e3742 !important;
+		box-shadow:none;
 	}
 
 	.btn:focus, .btn:active {
 		background-color: #2e3742 !important;
 		color: white !important;
+		box-shadow:none;
 	}
 }
