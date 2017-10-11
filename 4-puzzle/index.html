@@ -84,7 +84,7 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-home" title="Back to Home Screen"></a>
+            <!-- <a class="icon icon-home" title="Back to Home Screen"></a> -->
             <!-- <a class="icon icon-print" title="Print this Activity"></a> -->
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
             <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Download" id="puzzle-download" download></a>
@@ -115,7 +115,7 @@
                     <p>Drag and drop the statement cards and sort them into the appropriate categories, revealing the hidden picture underneath.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue the activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue the activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -136,7 +136,7 @@
               
                 {{if IntroImage}}
                 <div style="position: relative;" class="modal-img-wrapper">
-                    <img src="{{:IntroImage}}" class="modal-img intro-img" />
+                    <img src="{{:IntroImage}}" class="modal-img intro-img" alt="{{:IntroCaption}}" title="{{:IntroCaption}}"/>
                     <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
                 </div>
                         
@@ -162,7 +162,7 @@
 
             {{for Themes}}
 
-                <li data-theme="{{:id}}" data-toggle="tooltip" title="{{:definition}}">{{:title}}</li>
+                <li class="header-themes" data-theme="{{:id}}" data-toggle="tooltip"  data-placement="bottom" title="{{:definition}}">{{:title}}</li>
 
             {{/for}}
 
@@ -181,7 +181,7 @@
             <div class="puzzle-img-wrapper">    
                 <div class="lg-wrapper-puzzle">
                     <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
-                        <img class="puzzle-img" src="{{:Image}}" alt="" title="">
+                        <img class="puzzle-img" src="{{:Image}}" alt="{{:Caption}}" title="{{:Caption}}">
                         <span class="puzzle-img-zoom-icon hidden"><img src="./shared/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
                     </a>
                 </div>
@@ -273,7 +273,7 @@
                     {{if image}}
 
                     <div style="position: relative;">
-                        <img src="{{:image}}" class="modal-img" />
+                        <img src="{{:image}}" class="modal-img" alt="{{:caption}}" title="{{:caption}}" />
                         <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
                     </div>
                         
@@ -340,19 +340,20 @@
                 <p>{{:LearningPoints}}</p>
             </div>
 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
+            </button>
+
         </div>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span>
-        </button>
-
+        
     </script>
 
     <div id="intro" class="animated fadeIn"></div>
 
     <div id="learning-points" class="hidden"></div>
 
-    <div id="puzzle" class="hidden">
+    <div id="puzzle" class="">
         <section id="puzzle-header" class="header-wrapper header"></section>
 
         <section id="puzzle-wrapper"></section>

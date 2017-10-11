@@ -43,6 +43,12 @@
 	position: absolute;
 	left: 105%;
 	top: 0%;
+	@include screen-xs {
+		left: 92%;
+    	top: -3%;
+    	background: black;
+    	border-radius: 50%;
+	}
 }
 
 .modal-img {
