@@ -20,6 +20,7 @@
     	width: 100vw;
     	overflow: auto;
     	margin-top: 30px;
+    	height: 430px;
     }
 }
 
@@ -57,6 +58,9 @@
 	&:hover {
 		transform: rotate(-11deg) scale(1.15, 1.15);	
 	}
+	@include screen-xs {
+		top: -15px;
+	}
 }
 
 .card[data-card="2"] {
@@ -65,6 +69,10 @@
     transform: rotate(56deg);
     &:hover {
 		transform: rotate(56deg) scale(1.15, 1.15);	
+	}
+	@include screen-xs {
+		top: -15px;
+    	left: 83px;
 	}
 }
 
@@ -75,6 +83,9 @@
     &:hover {
 		transform: rotate(90deg) scale(1.15, 1.15);	
 	}
+	@include screen-xs {
+		left: 240px;
+	}
 }
 
 .card[data-card="4"] {
@@ -83,6 +94,10 @@
     transform: rotate(-39deg);
     &:hover {
 		transform: rotate(-39deg) scale(1.15, 1.15);	
+	}
+	@include screen-xs {
+		top: 41px;
+    	left: 252px;
 	}
 }
 
@@ -93,6 +108,9 @@
     &:hover {
 		transform: rotate(18deg) scale(1.15, 1.15);	
 	}
+	@include screen-xs {
+		left: 246px;
+	}
 }
 
 .card[data-card="6"] {
@@ -102,6 +120,7 @@
     &:hover {
 		transform: rotate(90deg) scale(1.15, 1.15);	
 	}
+	//okay on screen-xs
 }
 
 .card[data-card="7"] {
@@ -110,6 +129,9 @@
     left: 207px;
     &:hover {
 		transform: rotate(-70deg) scale(1.15, 1.15);	
+	}
+	@include screen-xs {
+		left: 150px;
 	}
 }
 
@@ -120,6 +142,9 @@
     &:hover {
 		transform: rotate(-17deg) scale(1.15, 1.15);	
 	}
+	@include screen-xs {
+		left: 2px;
+	}
 }
 
 .card[data-card="9"] {
@@ -128,6 +153,10 @@
     transform: rotate(-18deg);
     &:hover {
 		transform: rotate(-18deg) scale(1.15, 1.15);	
+	}
+	@include screen-xs {
+		top: 207px;
+    	left: 93px;
 	}
 }
 
@@ -138,6 +167,10 @@
     &:hover {
 		transform: rotate(109deg) scale(1.15, 1.15);	
 	}
+	@include screen-xs {
+		top: 297px;
+    	left: 175px;
+	}
 }
 
 .card[data-card="11"] {
@@ -146,6 +179,9 @@
     transform: rotate(46deg);
     &:hover {
 		transform: rotate(46deg) scale(1.15, 1.15);	
+	}
+	@include screen-xs {
+		left: 275px;
 	}
 
 }
@@ -157,6 +193,7 @@
     &:hover {
 		transform: rotate(-60deg) scale(1.15, 1.15);	
 	}
+	//okay on screen-xs
 }
 
 
@@ -181,18 +218,36 @@
     		font-size: 50px;
     		letter-spacing: 2px;
     		margin-bottom: 40px;
+    		@include screen-xs {
+    			font-size: 35px;
+   				margin-bottom: 20px;
+    		}
     	}
     	p {
     		margin-bottom: 80px;
     		text-align: center;
     		line-height: 1.9;
     		font-weight: 300;
+    		@include screen-xs {
+    			margin-bottom: 10px;
+    		}
+    	}
+    	@include screen-xs {
+    		width: 80%;
+		    left: 10%;
+		    height: 80%;
+		    top: 10%;
     	}
 	}
 	.btn-wrapper {
 		button {
 			margin: 15px; 
 			color: white;
+		}
+		@include screen-xs {
+			width: 100%;
+		    display: flex;
+		    flex-direction: column;
 		}
 	}
 

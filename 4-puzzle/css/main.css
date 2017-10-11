@@ -408,7 +408,8 @@ span[data-toggle="tooltip"] {
     .learning-points-card {
       width: 85%;
       left: 7.5%;
-      top: 14%; } }
+      top: 14%;
+      height: 75%; } }
 
 .intro-card p {
   font-size: 14px;
@@ -462,7 +463,8 @@ span[data-toggle="tooltip"] {
       left: 0px;
       width: 100vw;
       overflow: auto;
-      margin-top: 30px; } }
+      margin-top: 30px;
+      height: 430px; } }
 
 .puzzle-img {
   width: 100%;
@@ -494,6 +496,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(-11deg); }
   .card[data-card="1"]:hover {
     transform: rotate(-11deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="1"] {
+      top: -15px; } }
 
 .card[data-card="2"] {
   top: -15px;
@@ -501,6 +506,10 @@ span[data-toggle="tooltip"] {
   transform: rotate(56deg); }
   .card[data-card="2"]:hover {
     transform: rotate(56deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="2"] {
+      top: -15px;
+      left: 83px; } }
 
 .card[data-card="3"] {
   top: -39px;
@@ -508,6 +517,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(90deg); }
   .card[data-card="3"]:hover {
     transform: rotate(90deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="3"] {
+      left: 240px; } }
 
 .card[data-card="4"] {
   top: -31px;
@@ -515,6 +527,10 @@ span[data-toggle="tooltip"] {
   transform: rotate(-39deg); }
   .card[data-card="4"]:hover {
     transform: rotate(-39deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="4"] {
+      top: 41px;
+      left: 252px; } }
 
 .card[data-card="5"] {
   top: 165px;
@@ -522,6 +538,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(18deg); }
   .card[data-card="5"]:hover {
     transform: rotate(18deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="5"] {
+      left: 246px; } }
 
 .card[data-card="6"] {
   top: 206px;
@@ -536,6 +555,9 @@ span[data-toggle="tooltip"] {
   left: 207px; }
   .card[data-card="7"]:hover {
     transform: rotate(-70deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="7"] {
+      left: 150px; } }
 
 .card[data-card="8"] {
   top: 154px;
@@ -543,6 +565,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(-17deg); }
   .card[data-card="8"]:hover {
     transform: rotate(-17deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="8"] {
+      left: 2px; } }
 
 .card[data-card="9"] {
   top: -50px;
@@ -550,6 +575,10 @@ span[data-toggle="tooltip"] {
   transform: rotate(-18deg); }
   .card[data-card="9"]:hover {
     transform: rotate(-18deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="9"] {
+      top: 207px;
+      left: 93px; } }
 
 .card[data-card="10"] {
   top: -86px;
@@ -557,6 +586,10 @@ span[data-toggle="tooltip"] {
   transform: rotate(109deg); }
   .card[data-card="10"]:hover {
     transform: rotate(109deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="10"] {
+      top: 297px;
+      left: 175px; } }
 
 .card[data-card="11"] {
   top: 253px;
@@ -564,6 +597,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(46deg); }
   .card[data-card="11"]:hover {
     transform: rotate(46deg) scale(1.15, 1.15); }
+  @media (max-width: 767px) {
+    .card[data-card="11"] {
+      left: 275px; } }
 
 .card[data-card="12"] {
   top: 253px;
@@ -593,14 +629,32 @@ span[data-toggle="tooltip"] {
       font-size: 50px;
       letter-spacing: 2px;
       margin-bottom: 40px; }
+      @media (max-width: 767px) {
+        #complete-overlay .text-wrapper h1 {
+          font-size: 35px;
+          margin-bottom: 20px; } }
     #complete-overlay .text-wrapper p {
       margin-bottom: 80px;
       text-align: center;
       line-height: 1.9;
       font-weight: 300; }
+      @media (max-width: 767px) {
+        #complete-overlay .text-wrapper p {
+          margin-bottom: 10px; } }
+    @media (max-width: 767px) {
+      #complete-overlay .text-wrapper {
+        width: 80%;
+        left: 10%;
+        height: 80%;
+        top: 10%; } }
   #complete-overlay .btn-wrapper button {
     margin: 15px;
     color: white; }
+  @media (max-width: 767px) {
+    #complete-overlay .btn-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column; } }
 
 .zoom-icon {
   width: 42px;
