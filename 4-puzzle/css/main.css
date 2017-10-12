@@ -379,30 +379,35 @@ span[data-toggle="tooltip"] {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 0px; }
+    justify-content: center;
+    margin-bottom: 0px;
+    min-height: 12%; }
     .intro-card .header-wrapper h1,
     .learning-points-card .header-wrapper h1 {
       font-size: 26px;
       line-height: 1.4; }
-  .intro-card .text-wrapper h6,
-  .learning-points-card .text-wrapper h6 {
-    text-align: center;
-    font-weight: 600;
-    margin-top: 50px;
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    left: 0px;
-    padding: 0px 30px; }
+  .intro-card .text-wrapper,
+  .learning-points-card .text-wrapper {
+    height: 70%;
+    overflow: auto; }
+    .intro-card .text-wrapper h6,
+    .learning-points-card .text-wrapper h6 {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 50px;
+      bottom: 50px;
+      width: 100%;
+      left: 0px;
+      padding: 0px 30px; }
+      @media (max-width: 767px) {
+        .intro-card .text-wrapper h6,
+        .learning-points-card .text-wrapper h6 {
+          position: initial; } }
     @media (max-width: 767px) {
-      .intro-card .text-wrapper h6,
-      .learning-points-card .text-wrapper h6 {
-        position: initial; } }
-  @media (max-width: 767px) {
-    .intro-card .text-wrapper,
-    .learning-points-card .text-wrapper {
-      height: 80%;
-      overflow: scroll; } }
+      .intro-card .text-wrapper,
+      .learning-points-card .text-wrapper {
+        height: 80%;
+        overflow: scroll; } }
   @media (max-width: 767px) {
     .intro-card,
     .learning-points-card {
@@ -420,6 +425,7 @@ span[data-toggle="tooltip"] {
 
 .subheader {
   padding-left: 0px;
+  padding-bottom: 10px;
   margin: 0; }
   .subheader li {
     display: inline;
@@ -476,9 +482,10 @@ span[data-toggle="tooltip"] {
   height: 250px;
   background: url("../assets/card-generic@2x.png");
   background-size: contain;
-  background-color: #eaeaea;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  border: none;
   position: absolute;
   transition: 0.5s all ease-in-out; }
   .card:hover {
@@ -694,10 +701,10 @@ span[data-toggle="tooltip"] {
   font-weight: 600;
   color: white;
   border: 3px solid white;
+  background-color: rgba(1, 106, 135, 0.65);
   width: 25%;
   text-align: center;
-  padding: 6px;
-  background: transparent; }
+  padding: 6px; }
   .droppable-widget:hover, .droppable-widget:active, .droppable-widget:visited {
     border: 3px solid white; }
   .droppable-widget:after {
@@ -730,16 +737,16 @@ span[data-toggle="tooltip"] {
 .modal-header {
   flex-direction: column;
   border-bottom: none;
-  padding: 40px 20px 20px;
+  padding: 40px 20px 10px;
   cursor: move; }
 
 .modal-body {
-  padding: 15px 30px; }
+  padding: 0px 30px 15px; }
   .modal-body small {
     font-style: italic;
     display: block; }
   .modal-body p {
-    margin-top: 40px; }
+    margin-top: 20px; }
 
 .close[data-dismiss="modal"] {
   position: absolute;

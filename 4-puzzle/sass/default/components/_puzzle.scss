@@ -35,9 +35,10 @@
 	height: 250px;
 	background: url('../assets/card-generic@2x.png');
 	background-size: contain;
-	background-color: #eaeaea;
-	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+	background-color: white;
+	box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
+	border: none;
 	position: absolute;
 	transition: 0.5s all ease-in-out;
 	&:hover {
