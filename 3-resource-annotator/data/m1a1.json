@@ -1,7 +1,7 @@
 {
     "title": "Resource Annotator",
     "page_title": "Northern Plains History & Culture: Crow Nation",
-    "introduction": "Rights are the freedoms to which people are entitled as members of a Native Nation. Responsibilities are the moral and cultural obligations of citizenship to a Native Nation.",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for each theme.",
 	"themes": [
 	    {
 	    	"title": "Rights",
@@ -11,8 +11,8 @@
 	    },
 	    {
 	    	"title": "Responsibilities",
-	    	"tooltip_text": "Responsibilities are moral duties",
-	    	"count": 2,
+	    	"tooltip_text": "The moral and cultural obligations of citizenship in a Native Nation.",
+	    	"count": 5,
 			"highlight_color": "#0000FF"
 	    }
     ],
@@ -37,23 +37,23 @@
 			"id": 2,
 		    "title": "Crow Fair",
 		    "image_url": "./assets/imgs/m1a1/med-source-2.jpg",
-		    "image_caption": "<span data-pronounce='./shared/audio/PL_Crow.mp3'>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "image_caption": "<span data-pronounce='./shared/audio/PL_Crow.mp3'>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native People and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "image_credit": "Crow Nation women on horseback at Crow Fair (above); Honor Guard of Crow Nation Veterans (below). Photographs by Tina Pelletier, courtesy of Pasqua First Nation and Métis community of Ste. Madelaine",
-		    "body": "<span data-pronounce='./shared/audio/PL_Crow.mp3'>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "body": "<span data-pronounce='./shared/audio/PL_Crow.mp3'>Crow</span> veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native People and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "source": "",
 		    "caption": "",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Image",
-		    "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
+		    "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native People and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "thumbnail_image": "./assets/imgs/m1a1/thumbnail-source-2.jpg",
-		    "question_text": "Why might the Crow Nation choose to honor veterans so prominently at Crow Fair?"
+		    "question_text": "In what ways does the Crow Nation honor veterans during Crow Fair?"
 		},
 		{
 			"id": 3,
 		    "title": "Dr. Joseph Medicine Crow",
 		    "image_url": "./assets/imgs/m1a1/med-source-3.jpg",
-		    "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
+		    "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Dr.Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: he captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "image_credit": "Dr. Joseph Medicine Crow shows a drum to President Barack Obama and First Lady Michelle Obama during a reception for recipients and their families in the Blue Room of the White House, August 12, 2009. Photograph by Pete Souza",
 		    "body": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "source": "",
@@ -63,7 +63,7 @@
 		    "source_type": "Image",
 		    "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "thumbnail_image": "./assets/imgs/m1a1/thumbnail-source-3.jpg",
-		    "question_text": "<p>What responsibilities and values are reflected in the four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
+		    "question_text": "<p>What responsibilities and values can be inferred from four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
 		},
 		{
 			"id": 4,
