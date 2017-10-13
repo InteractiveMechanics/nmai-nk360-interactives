@@ -88,6 +88,7 @@ div[id^="era-block"] {
 #era-block-2.active {
 	background:  url('../assets/timeline-segment-overlay-bg02@2x.png'), url('../assets/timeline-segment-bg02@2x.jpg');
 	opacity: 1.0;
+	background-size: cover, cover;
 }
 
 #era-block-3 {
@@ -104,6 +105,7 @@ div[id^="era-block"] {
 #era-block-3.active {
 	background:  url('../assets/timeline-segment-overlay-bg03@2x.png'), url('../assets/timeline-segment-bg03@2x.jpg');
 	opacity: 1.0;
+	background-size: cover, cover;
 }
 
 

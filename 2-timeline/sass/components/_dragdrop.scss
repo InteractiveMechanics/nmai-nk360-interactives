@@ -71,6 +71,7 @@
 		cursor: hand;
   		cursor: -webkit-grab;
   		cursor: grab;
+  		transition: all 0.5s ease-in-out;
 	}
 	div {
 		font-size: 13px;
@@ -98,6 +99,9 @@
   	cursor: -webkit-grab;
   	cursor: grab;	
   	z-index: 3;
+  	&:hover, &:focus {
+  		animation: pulse 1s infinite;
+  	}
 }
 
 .draggable-img-wrapper {
@@ -134,7 +138,7 @@
 	height: auto;
 	width: auto;
 	z-index: -1;
-
+	cursor: pointer;
 	.draggable-text {
 		display: none;
 	}
@@ -176,4 +180,30 @@
 	&::before {
 		border-top-color: $accent !important;
 	}
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
+      box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 0 rgba( 255, 255, 255, 0);
+  }
 }

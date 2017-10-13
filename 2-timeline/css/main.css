@@ -339,7 +339,8 @@ div[id^="era-block"] {
 
 #era-block-2.active {
   background: url("../assets/timeline-segment-overlay-bg02@2x.png"), url("../assets/timeline-segment-bg02@2x.jpg");
-  opacity: 1.0; }
+  opacity: 1.0;
+  background-size: cover, cover; }
 
 #era-block-3 {
   background: url("../assets/timeline-segment-bg03@2x.jpg");
@@ -350,7 +351,8 @@ div[id^="era-block"] {
 
 #era-block-3.active {
   background: url("../assets/timeline-segment-overlay-bg03@2x.png"), url("../assets/timeline-segment-bg03@2x.jpg");
-  opacity: 1.0; }
+  opacity: 1.0;
+  background-size: cover, cover; }
 
 .start-timeline-btn,
 .view-timeline-btn {
@@ -436,7 +438,8 @@ div[id^="era-block"] {
     border-radius: 50%;
     cursor: hand;
     cursor: -webkit-grab;
-    cursor: grab; }
+    cursor: grab;
+    transition: all 0.5s ease-in-out; }
   .draggable-widget div {
     font-size: 13px;
     flex: 1;
@@ -466,6 +469,8 @@ div[id^="era-block"] {
   cursor: -webkit-grab;
   cursor: grab;
   z-index: 3; }
+  .draggable-img:hover, .draggable-img:focus {
+    animation: pulse 1s infinite; }
 
 .draggable-img-wrapper {
   left: -23px;
@@ -497,7 +502,8 @@ div[id^="era-block"] {
   border: none;
   height: auto;
   width: auto;
-  z-index: -1; }
+  z-index: -1;
+  cursor: pointer; }
   .draggable-widget.dragged .draggable-text {
     display: none; }
 
@@ -526,6 +532,23 @@ div[id^="era-block"] {
   .tooltip-inner::before {
     border-top-color: #ec5343 !important; }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% {
+    -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% {
+    -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
 .timeline-bkgr {
   height: 100%; }
 
