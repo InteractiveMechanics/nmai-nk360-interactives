@@ -96,6 +96,21 @@ Detail = (function() {
         $('[data-toggle=tooltip]').tooltip('hide');
     }
 
+    var reopenModal = function() {
+        var moment = $(this).attr('data-timeline');
+        var era = $('#droppable-container').attr('data-era');
+        console.log('this is reOpenModa ' + 'the era is ' + era + " the moment is " + moment);
+        displayModal(era, moment);
+    } 
+
+    var hideModal = function() {
+        $('#correct-answer').modal('hide');
+    }
+
+    var showModal = function() {
+        $('#correct-answer').modal('show');
+    }
+
     
     var hideText = function(id) {
        var id = $(this).attr('data-timeline');
@@ -194,6 +209,10 @@ Detail = (function() {
         $(document).on('hidden.bs.modal', countDroppedEls);
         $(document).on('dragstart', '.draggable-img-wrapper[data-timeline]', hideText);
         $(document).on('dragstop', '.draggable-img-wrapper[data-timeline]', showText);
+        $(document).on('click tap', '.dragged[data-timeline]', reopenModal);
+        $(document).on('onBeforeOpen.lg', hideModal);
+        $(document).on('onBeforeClose.lg', showModal);   
+
     }
 
     
