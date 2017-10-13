@@ -23,7 +23,7 @@
                     "quote": "",
                     "credit": "Quileute iron salmon hook, ca.1890. NMAI 057591",
                     "excerpt": "Traditional belief holds that the Creator placed Native Peoples on Earth to care for and protect for its resources.",
-                    "thumbnail": "./assets/imgs/card-Time-Immemorial.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-Time-Immemorial.jpg",
                     "incorrect": "Try again. Native Nations have thoughtfully managed natural resources for countless generations."
                 },
                 {
@@ -38,7 +38,7 @@
                     "quote": "",
                     "credit": "Medicine Creek Treaty, 1854 National Archives, Washington, D.C.; digitized by Oklahoma State University.",
                     "excerpt": "Treaties between Pacific Northwest Native Nations and the emerging U.S. government are rapidly negotiated.",
-                    "thumbnail": "./assets/imgs/card-1854.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1854.jpg",
                     "incorrect": "Try again. As the U.S. emerged as a powerful nation, Native Nations were pressured to sign treaties."
                 },
                 {
@@ -52,7 +52,7 @@
                     "quote": "",
                     "credit": "",
                     "excerpt": "Supreme Court holds that treaty Indians reserved the right to fish at “usual and accustomed” places.",
-                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "thumbnail": "./assets/imgs/thumbnail-1905.jpg",
                     "incorrect": "Try again. Native Nations went to the U.S. courts to affirm treaty fishing rights within fifty years after negotiating treaties with the government. "
                 },
                 {
@@ -67,7 +67,7 @@
                     "quote": "",
                     "credit": "Photograph by Tom Thompson, courtesy of  NWIFC",
                     "excerpt": "In an effort to defend their treaty rights, Native communities stage protests called “fish-ins.”",
-                    "thumbnail": "./assets/imgs/card-1960s.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1960s.jpg",
                     "incorrect": "Try again. Before exercising civil disobedience to affirm treaty fishing rights,  Native Nations went to the U.S. courts."
                 },
                  {
@@ -81,7 +81,7 @@
                     "quote": "",
                     "credit": "",
                     "excerpt": "“There was a real tradition in the Pacific Northwest of tribal people going to the courts. That the courts were the only real remedy that they were going to find.” - John Platt, NMAI Interview, August 2016",
-                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "thumbnail": "./assets/imgs/thumbnail-1970.jpg",
                     "incorrect": "Try again. Despite early court rulings in the 1900s that affirmed treaty fishing rights, Native Nations had to repeatedly bring their cases to the U.S. courts."
                 }
 
@@ -104,7 +104,7 @@
                     "quote": "",
                     "credit": "Don Hannula, “Sportsmen protest decision,” Seattle Times, March 5, 1974",
                     "excerpt": "A landmark decision in favor of Native Nations: the court affirms that tribal fishing rights are “protected under the supreme law of the land.”",
-                    "thumbnail": "./assets/imgs/card-1974.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1974.jpg",
                     "incorrect": "Try again. The Boldt Decision reaffirmed treaty rights and established that Native Nations are co-managers of salmon populations along the Pacific Northwest. "
                 },
                 {
@@ -119,7 +119,7 @@
                     "quote": "",
                     "credit": "Photograph by staff photographer Matt McVay, Seattle Times, September 11, 1977",
                     "excerpt": "A U.S. court of appeals affirms Judge Boldt’s holding.",
-                    "thumbnail": "./assets/imgs/card-1975.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1975.jpg",
                     "incorrect": "Try again. U.S. court of appeals hears cases on appeal—or after a lower court has already made a ruling."
                 },
                 {
@@ -134,7 +134,7 @@
                     "quote": "",
                     "credit": "Seal of the Northwest Fisheries Commission, Seal of the Columbia Inter-Tribal Fish Commission",
                     "excerpt": "Native Nations join forces to create fishing commissions.",
-                    "thumbnail": "./assets/imgs/card-1977.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1977.jpg",
                     "incorrect": "Try again. In order for Native fishing commissions to meet their goals, Native Nations must first be recognized as comanagers of salmon."
                 },
                 {
@@ -148,7 +148,7 @@
                     "quote": "",
                     "credit": "",
                     "excerpt": "Supreme Court denies Washington state’s petition for certiorari (request to hear the case); the Boldt Decision remains in effect.",
-                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "thumbnail": "./assets/imgs/thumbnail-1979.jpg",
                     "incorrect": "Try again. The Supreme Court is the highest court of the U.S. government. Most cases that make it to the Supreme Court have already been heard in district or appellate courts."
                 }
 
@@ -170,7 +170,7 @@
                     "quote": "",
                     "credit": "",
                     "excerpt": "The treaty adds tribal representation to the international decision-making body along with other government fish managers.",
-                    "thumbnail": "https://placekitten.com/g/200/200",
+                    "thumbnail": "./assets/imgs/thumbnail-1985.jpg",
                     "incorrect": "Try again. In order to restore salmon populations of the Pacific Northwest, Native Nations must be included at the table of salmon resource management. "
                 },
                 {
@@ -179,13 +179,13 @@
                     "year": "1991",
                     "title": "Endangered Species Act", 
                     "description": "Several salmon runs from the Snake River, the Columbia River’s largest tributary, were listed under the Endangered Species Act.",
-                    "image": "./assets/imgs/full-1991.jpg",
+                    "image": "./assets/imgs/card-1991.jpg",
                     "fullimage": "./assets/imgs/full-1991.jpg",
                     "caption": "",
                     "quote": "",
                     "credit": "Dead Salmon, September 24, 2011. Photograph by Christopher Porter <a target='_blank' href='https://creativecommons.org/licenses/by-nc-nd/2.0'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/canadianveggie/6184023793/'>Source</a>",
                     "excerpt": "Several salmon runs from the Snake River, the Columbia River’s largest tributary were listed under the Endangered Species Act.",
-                    "thumbnail": "./assets/imgs/full-1991.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1991.jpg",
                     "incorrect": "Try again. Despite the Boldt Decision’s (1974) mandate that tribal, state, and federal governments comanage salmon runs, almost twenty years later salmon populations remained threatened."
                 },
                 {
@@ -200,7 +200,7 @@
                     "quote": "",
                     "credit": "Shellfish, January 20, 2016. Photograph by Judy Dean <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License, <a target='_blank' href='https://www.flickr.com/photos/peterscherub/24565124625/''>Source</a>",
                     "excerpt": "Federal court rules that “in common” language applies to shellfish harvest rights.",
-                    "thumbnail": "./assets/imgs/card-1994.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-1994.jpg",
                     "incorrect": "Try again. Issued twenty years after the Boldt Decision, the Rafeedie Ruling further strengthened Native Nations’ treaty fishing rights."
                 },
                 {
@@ -215,7 +215,7 @@
                     "quote": "",
                     "credit": "Photograph and caption by Richard Walker,  Indian Country Today",
                     "excerpt": "The 40th anniversary of the Boldt Decision.",
-                    "thumbnail": "./assets/imgs/card-2014.jpg",
+                    "thumbnail": "./assets/imgs/thumbnail-2014.jpg",
                     "incorrect": "Try again. The Boldt Decision was made in 1974."
                 }
 
