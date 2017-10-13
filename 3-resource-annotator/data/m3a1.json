@@ -1,24 +1,24 @@
 {
     "title": "Resource Annotator",
     "page_title": "Pacific Northwest History and Cultures: Coastal Region",
-    "introduction": "Identity is the qualities and beliefs of an individual. Culture is the shared beliefs, traditions, and practices of a group. A sense of community is a feeling of wanting to be with other people or of caring about the other people in a group.",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for each theme.",
 	"themes": [
 	    {
 	    	"title": "Identity",
-	    	"tooltip_text": "The qualities and beliefs of an individual",
+	    	"tooltip_text": "The qualities and beliefs of an individual.",
 	    	"count": 5,
 			"highlight_color": "#FF0000"
 	    },
 	    {
 	    	"title": "Culture",
-	    	"tooltip_text": "Shared beliefs, traditions, and practices of a group",
-	    	"count": 2,
+	    	"tooltip_text": "Shared beliefs, traditions, and practices of a group.",
+	    	"count": 5,
 			"highlight_color": "#0000FF"
 	    },
 	    {
 	    	"title": "Community",
-	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group",
-	    	"count": 2,
+	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group.",
+	    	"count": 5,
 			"highlight_color": "#0000FF"
 	    }
     ],
