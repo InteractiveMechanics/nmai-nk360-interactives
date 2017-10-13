@@ -9,23 +9,32 @@ Explore = (function() {
     }
 
     //TODO account for window resize
-    var advancePrevBtn = function() {
+    var advancePrevBtn = function(event) {
         event.preventDefault();
         var timelineLeft = $('.timeline-wrapper').position().left;
         var windowWidth = $(window).width();
         if (timelineLeft < 0 && -timelineLeft >= windowWidth) {
+            $('#prev-btn').removeClass('disabled');
+            $('#next-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "+=" + windowWidth 
             }, "fast");
-        } else {
+        } else if (timelineLeft < 0) {
+            $('#prev-btn').removeClass('disabled');
+            $('#next-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "+=" + -timelineLeft 
             }, "fast");
+
+            setTimeout(function() { $('#prev-btn').addClass('disabled'); }, 500);
+        } else {
+            $('#prev-btn').addClass('disabled');
+            $('#next-btn').removeClass('disabled');  
         }
         console.log("left " + timelineLeft);
     }
 
-    var advanceNextBtn = function() {
+    var advanceNextBtn = function(event) {
         event.preventDefault();
         var windowWidth = $(window).width(); // 1397px
         var timelineLeft = $('.timeline-wrapper').position().left;
@@ -33,19 +42,24 @@ Explore = (function() {
        
         if (windowWidth < Detail.timelineWidth && leftToScroll >= windowWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
             console.log(Detail.timelineWidth + " and " + timelineLeft + " left to Scroll is " + leftToScroll);
+            $('#next-btn').removeClass('disabled');
+            $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "-=" + windowWidth 
             }, "fast");
         } else if (leftToScroll > 0) {
             console.log(timelineLeft);
+            $('#next-btn').removeClass('disabled');
+            $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "-=" + leftToScroll
             }, "fast");
+            setTimeout(function() { $('#next-btn').addClass('disabled'); }, 500);
         } else {
-
+            $('#next-btn').addClass('disabled'); 
+            $('#prev-btn').removeClass('disabled');
         }
-        //console.log("translateX is" + translateX);
-       
+      
         
     }
 

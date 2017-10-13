@@ -116,7 +116,7 @@ h4 {
 .learning-points-card {
   background: url("../shared/images/pnw/text-card-pnw@2x.png");
   background-size: 90%;
-  background-color: #eaeaea;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 2; }

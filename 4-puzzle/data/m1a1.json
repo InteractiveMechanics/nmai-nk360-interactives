@@ -9,18 +9,18 @@
     "puzzles": [
         {
             "Id": 1,
-            "Title": "How do Native people and Nations experience belonging?",
+            "Title": "How Do Native Peoples and Nations Experience Belonging?",
             "Image": "./assets/imgs/m1a1/np-puzzle-image.jpg",
             "FullImage": "./assets/imgs/m1a1/full-np-puzzle-image.jpg",
             "Caption": "Dancing is an important part of Lakota culture and family life. Many children start dancing as soon as they can walk and continue throughout their lives. Parents and relatives spend countless hours designing and crafting colorful regalia—all of which contributes to a bright and beautiful experience.",
             "Credit": "Rosebud Indian Reservation, South Dakota- The Rosebud Sioux Tribe’s annual wacipi (powwow), photograph by Jim West/Alamy",
-            "Intro": "At this point in the inquiry, you have examined sources that convey different ways that Native people and nations experience belonging. Over the centuries, many things have changed on the Northern Great Plains. However, Native culture is persistent and strong; Native identity continues to be shaped by relationships with land, family, and nation.",
+            "Intro": "At this point in the inquiry, you have examined sources that convey different ways that Native People and Nations experience belonging. Over the centuries, many things have changed on the Northern Great Plains. However, Native cultures are persistent and strong; Native identity continues to be shaped by relationships with land, family, and nation.",
             "IntroCaption": "Good Bear, a member of the Hidatsa Nation, and his wife and three children pose for a studio portrait. Good Bear [and family], ca. 1908.",
             "IntroCredit": "Photograph by Edward S. Curtis, courtesy of the Library of Congress, 89707042",
-            "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to it’s corresponding theme and reveal an iconic image.",
+            "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to its corresponding theme and reveal an iconic image.",
             "IntroImage": "./assets/imgs/m1a1/intro-card-image.jpg",
             "FullIntroImage": "../assets/imgs/m1a1/full-intro-card-image.jpg", 
-            "LearningPoints": "Diversity exists between Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
+            "LearningPoints": "Diversity exists among Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
             "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Themes": [
                 {
@@ -47,7 +47,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "“I will never forget finding myself standing in front of a marker near Fort Robinson, Nebraska. On that cold winter day I read in horror about our relatives who, in the middle of a freezing 1879 winter, laid their very lives on the line in order to fight their way home 400 miles away…It was at that very moment I realized the sacrifice our Cheyenne ancestors paid with their very lives in order that we might have one another, our culture and our beautiful homeland.”",
+                    "body": "“I will never forget finding myself standing in front of a marker near Fort Robinson, Nebraska. On that cold winter day I read in horror about our relatives who, in the middle of a freezing 1879 winter, laid their very lives on the line in order to fight their way home 400 miles away . . . It was at that very moment I realized the sacrifice our Cheyenne ancestors paid with their very lives in order that we might have one another, our culture, and our beautiful homeland.”",
                     "credit": "Major Robinson, Northern Cheyenne Tribe",
                     "incorrect": "Try again. According to this quote, what  significance does Fort Robinson have for Major Robinson?",
                     "themes": [1]
@@ -61,7 +61,7 @@
                     "caption": "",
                     "body": "“The Crow country is in exactly the right place. It has snowy mountains, sunny plains, all kinds of climates and good things for every season. . .”",
                     "credit": "Crow Chief Eelápuash Speech to Rocky Mountain Fur Company",
-                    "incorrect": "Try again. Think about how Crow Chief Elapuash describes Crow country.",
+                    "incorrect": "Try again. Think about how Crow Chief Eelápuash describes Crow country.",
                     "themes": [1]
                 },
                 {
@@ -71,7 +71,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "…He Sapa is a precious resource that Lakotas have held in trust for the coming generations. He Sapa to Lakotas is a wizipan, a repository from which we can draw physical and spiritual sustenance. It is a place of prayer and ceremony. We cannot look upon it without thinking about the power that created it. We are part of it, as it is part of us.”",
+                    "body": "“…He Sapa is a precious resource that Lakotas have held in trust for the coming generations. He Sapa to Lakotas is a wizipan, a repository from which we can draw physical and spiritual sustenance. It is a place of prayer and ceremony. We cannot look upon it without thinking about the power that created it. We are part of it, as it is part of us.”",
                     "credit": "Craig Howe, Lydia Whirlwind Soldier, and Lanniko L. Lee, eds., He Sapa Woihanble: Black Hills Dreams (St. Paul: Living Justice Press, 2011) 4",
                     "incorrect": "Try again. Think about how the authors describe the Black Hills and why that is significant.",
                     "themes": [1]
@@ -83,7 +83,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "“Well, I think the connection for my generation and my father's generation is the connection to the land...this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong. My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”",
+                    "body": "“Well, I think the connection for my generation and my father's generation is the connection to the land . . . this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong. My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”",
                     "credit": "Marilyn Hudson, Three Affiliated Tribes of Fort Berthold. NMAI Interview",
                     "incorrect": "Try again. Think about how the authors describe He Sapa (the Black Hills) and why that is significant.",
                     "themes": [1]
@@ -119,7 +119,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "“Everyone who was born a Dakota belonged in it; nobody need be left outside…I can safely say that the ultimate aim of Dakota life, stripped of accessories, was quite simple: One must obey kinship rules; one must be a good relative.”",
+                    "body": "“Everyone who was born a Dakota belonged in it; nobody need be left outside . . . I can safely say that the ultimate aim of Dakota life, stripped of accessories, was quite simple: One must obey kinship rules; one must be a good relative.”",
                     "credit": "Ella Cara Deloria, Speaking of Indians (Lincoln: University of Nebraska Press, [1944] 1984).",
                     "incorrect": "Try again. Think carefully about the key message of this passage by Ella Cara Deloria.",
                     "themes": [2]
@@ -143,7 +143,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "Sweet Medicine learned next that he was to give the people a good government, with forty-four chiefs to manage it, and a good system of police and military protection . . . ‘Listen to me carefully, and truthfully follow up my instructions,’ Sweet Medicine told the chiefs. ‘You chiefs are peacemakers.",
+                    "body": "“Sweet Medicine learned next that he was to give the people a good government, with forty-four chiefs to manage it, and a good system of police and military protection . . . ‘Listen to me carefully, and truthfully follow up my instructions,’ Sweet Medicine told the chiefs. ‘You chiefs are peacemakers.‘“",
                     "credit": "John Stands in Timber and Margot Liberty, Cheyenne Memories (Lincoln: University of Nebraska Press, 1972).",
                     "incorrect": "Try again. Think about the teachings that Sweet Medicine both received and gave to Cheyenne chiefs.",
                     "themes": [3]
@@ -167,7 +167,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "“The Lakotas were self-governors, and the rules and regulations that governed the conduct of people and established their duties as individuals, families, and bands came from a great tribal consciousness . . .”",
+                    "body": "“The Lakotas were self-governors, and the rules and regulations that governed the conduct of people and established their duties as individuals, families, and bands came from a great tribal consciousness.”",
                     "credit": "Luther Standing Bear, Land of the Spotted Eagle (Lincoln: University of Nebraska Press, [1933] 1978).",
                     "incorrect": "Try again. What Lakota practices does Luther Standing Bear describe?",
                     "themes": [3]
@@ -179,7 +179,7 @@
                     "image": "",
                     "fullimage": "",
                     "caption": "",
-                    "body": "“We're not against all oil and gas development. We're not against all pipelines. We just want responsible development... That being said, if our fellow tribal nation says, 'We don't want that,' that is their right. We stand firmly behind them.”",
+                    "body": "“We're not against all oil and gas development. We're not against all pipelines. We just want responsible development. . . . That being said, if our fellow tribal nation says, 'We don't want that,' that is their right. We stand firmly behind them.”",
                     "credit": "Mark Fox, chairman of the Three Affiliated Tribes",
                     "incorrect": "Try again. Think about the kind of relationship Mark Fox articulates in this quote.",
                     "themes": [3]

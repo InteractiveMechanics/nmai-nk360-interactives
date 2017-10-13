@@ -114,7 +114,7 @@
                     <p>Learn more about the timeline entries, including videos and images.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg" id="close-instructions" title="Continue this activity">Continue the activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue the activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="draggable-img-wrapper" data-timeline={{:id}}>
-                    <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element" title="thumbnail image for this draggable element">
+                    <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element">
                     <div class="draggable-overlay hidden" data-timeline={{:id}}></div>
                 </div>
                 
@@ -294,7 +294,7 @@
                 {{/for}}
 
             </div>
-                <button id="prev-btn" class="btn">
+                <button id="prev-btn" class="btn disabled">
                     <img src="./shared/images/icon-prev.svg" alt="prev" title="prev">
                 </button>
                 <button id="next-btn" class="btn">
