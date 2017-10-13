@@ -1,7 +1,7 @@
 {
     "title": "Resource Annotator",
     "page_title": "Pacific Northwest Fish Wars and Boldt Decision",
-    "introduction": "As you review these sources, consider whether they provide strong evidence the Fish Wars were resolved or leave open the question of whether the Fish Wars were resolved.",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for each theme.",
 	"themes": [
 	    {
 	    	"title": "Yes",
@@ -12,7 +12,7 @@
 	    {
 	    	"title": "Maybe",
 	    	"tooltip_text": "Source leaves open the question of whether the Fish Wars were resolved",
-	    	"count": 2,
+	    	"count": 5,
 			"highlight_color": "#0000FF"
 	    }
     ],
