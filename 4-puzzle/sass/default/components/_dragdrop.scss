@@ -14,10 +14,10 @@
 	font-weight: 600;
     color: white;
     border: 3px solid white;
+    background-color: rgba(1, 106, 135, 0.65);
    	width: 25%;
     text-align: center;
     padding: 6px;
-    background: transparent;
     &:hover, &:active, &:visited {
         border: 3px solid white;
     }

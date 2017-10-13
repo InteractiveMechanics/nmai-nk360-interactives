@@ -2,6 +2,9 @@ Detail = (function() {
 
     timelineWidth = 2143;
 
+    var tooltipShowTimeout;
+    var tooltipHideTimeout;
+
 	var init = function() {
         bindEvents();
     }
@@ -96,8 +99,10 @@ Detail = (function() {
     
     var hideText = function(id) {
        var id = $(this).attr('data-timeline');
+       $('.draggable-widget').tooltip('hide');
        $('.draggable-text[data-timeline="' + id + '"]').addClass('active');
        $('.draggable-widget[data-timeline="' + id + '"]').addClass('active');
+
     }
 
 
@@ -173,7 +178,6 @@ Detail = (function() {
                         var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
                         setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);
                         setTimeout(function() {   draggableShell.tooltip('hide'); }, 5000);
-                       
                        
                     }
             

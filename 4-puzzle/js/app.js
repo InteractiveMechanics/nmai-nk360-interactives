@@ -11,6 +11,7 @@ $(function(){
         Init.init();
         Instructions.init();
         Puzzle.init();
+        Mobile.init();
 
     }, 'json');
 });

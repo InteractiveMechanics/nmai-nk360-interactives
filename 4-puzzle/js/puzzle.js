@@ -85,9 +85,6 @@ Puzzle = (function() {
                         var cardNumber = ui.draggable.data('card');
                         $('.card[data-card="' + cardNumber + '"]').addClass('hidden animated fadeOut answered');
 
-                        //alert('the thing is dropped!');
-                        //alert('card number ' + cardNumber);
-
                         ui.draggable.addClass('dragged animated');
                         $(this).addClass('dropped');
                         $('#card-modal').modal('hide').removeClass('fadeIn').addClass('animated');
@@ -103,7 +100,6 @@ Puzzle = (function() {
                             }
                         });
 
-                        //ui.draggable.draggable('option', 'disabled', true);
                         ui.draggable.css('left', '0').css('top', '0');
                         showComplete();
                        
@@ -124,7 +120,6 @@ Puzzle = (function() {
 
         });
     }
-
 
     var droppableTimeout;
     var popoverTimeout; 
@@ -215,8 +210,11 @@ Puzzle = (function() {
 
     var animateDroppables = function() {
         console.log('animateDroppables is running');
-        $('.droppable-widget').addClass('animated pulse infinite');
+       $('.droppable-widget').addClass('animated pulse infinite');
+        
     }
+
+
     
     var resetDroppables = function() {
         if ($('.droppable-widget').hasClass('dropped')) {
@@ -228,6 +226,7 @@ Puzzle = (function() {
         $('.droppable-widget').tooltip({
             trigger: 'hover focus'
         });
+        
     }
 
     var hideTooltip = function() {
@@ -263,11 +262,13 @@ Puzzle = (function() {
         $(document).on('shown.bs.modal', animateDroppables);
         $(document).on('onAfterOpen.lg', hideDroppables);
         $(document).on('onCloseAfter.lg', showModal);
+        $('.draggable-widget').on('drag', hideTooltip);
     }
 
     
     return {
         init: init,
-        buildGame: buildGame
+        buildGame: buildGame,
+        showComplete: showComplete
     }
 })();
