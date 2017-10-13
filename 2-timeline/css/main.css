@@ -620,7 +620,9 @@ div[id^="era-block"] {
   width: 325px;
   height: 115px;
   z-index: 3;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0px; }
 
 .timeline-item-wrapper[data-era="1"][data-timeline="1"] {
   left: 60px;
@@ -704,15 +706,22 @@ div[id^="era-block"] {
   width: 82px;
   position: absolute;
   top: 0px;
-  left: -33px;
+  left: -38px;
   z-index: 2; }
 
 .timeline-btn-text-wrapper {
   font-weight: 300;
   color: white;
-  padding: 15px 15px 15px 52px; }
+  overflow: hidden;
+  padding: 10px 10px 10px 52px;
+  height: 115px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .timeline-btn-text-wrapper p {
-    font-size: 14px; }
+    font-size: 13px;
+    margin-bottom: 0px; }
 
 #prev-btn, #next-btn {
   left: 12px;
@@ -749,14 +758,14 @@ div[id^="era-block"] {
 .sm-label {
   font-family: "Archer Pro", serif;
   position: relative;
-  top: 28px;
-  left: -4px;
+  top: 32px;
+  left: -8px;
   color: #deded1; }
 
 .sm-label-wrapper {
   position: absolute;
   height: 182px;
-  border-left: 2px dotted #deded1;
+  border-left: 4px dotted #deded1;
   display: flex;
   align-items: flex-end;
   padding-left: 2px;
@@ -765,7 +774,8 @@ div[id^="era-block"] {
   .sm-label-wrapper h4 {
     display: inline;
     position: relative;
-    font-family: "Archer Pro", serif; }
+    font-family: "Archer Pro", serif;
+    font-size: 1.5rem; }
 
 .sm-label-wrapper[data-era="1"][data-timeline="3"] {
   height: 346px; }
