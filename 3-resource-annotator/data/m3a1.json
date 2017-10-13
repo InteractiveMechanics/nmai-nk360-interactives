@@ -22,6 +22,7 @@
 			"highlight_color": "#0000FF"
 	    }
     ],
+
 	"sources": [
 		{
 			"id": 1,
@@ -39,9 +40,10 @@
 		    "thumbnail_image": "./assets/imgs/m3a1/thumbnail-source-1.jpg",
 		    "question_text": "What is the importance to individuals and communities in maintaining traditional salmon cooking methods?"
 		},
+
 		{
 			"id": 2,
-		    "title": "Fishing",
+		     "title": "Fishing",
 		    "image_url": "./assets/imgs/m3a1/med-source-2.jpg",
 		    "image_caption": "",
 		    "image_credit": "<p>Image 1: Quileute iron salmon hook, ca.1890. NMAI 057591</p><p>Image 2: Quileute drift net for catching salmon, collected in 1916. Washington. NMAI 057870</p>",
@@ -51,10 +53,11 @@
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Images",
-		    "excerpt": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
+		     "excerpt": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
 		    "thumbnail_image": "./assets/imgs/m3a1/thumbnail-source-2.jpg",
 		    "question_text": "How do these resources reflect the historical and contemporary importance of salmon fishing to the cultures, communities, and identities of coastal Native Nations?"
 		},
+
 		{
 			"id": 3,
 		    "title": "Ronnie Wilson",

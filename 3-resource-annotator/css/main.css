@@ -273,7 +273,10 @@ body a.link-color {
   display: inine-block;
   padding-right: 25px; }
 body h3 {
-  color: #006986; }
+  color: #006986;
+  font-family: "Archer Pro", serif; }
+  body h3 span {
+    font-family: "Archer Pro", serif; }
   body h3.yellow-underline {
     display: inline-block;
     border-bottom: 3px solid #f6b851;
@@ -548,6 +551,9 @@ small, .small {
   cursor: pointer;
   left: 0; }
 
+.hidden-mobile {
+  display: none; }
+
 .marker-in-text textarea {
   border-radius: 3px;
   border: thin solid #ccc;
@@ -628,10 +634,10 @@ small, .small {
       width: 310px; } }
 
 .slick-prev {
-  left: -70px; }
+  left: -60px; }
 
 .slick-next {
-  right: 10px; }
+  right: -60px; }
 
 .slick-slide img {
   width: 100%; }
@@ -651,6 +657,11 @@ small, .small {
 
 .slick-dots li button.slick-active:before {
   opacity: 1.0; }
+
+.slick-prev,
+.slick-next {
+  width: 100px;
+  height: 100px; }
 
 .slick-prev:before,
 .slick-next:before {
@@ -709,7 +720,7 @@ small, .small {
         background: #7f99ad; }
 
 .intro-slider-wrapper .overlay {
-  z-index: 20; }
+  z-index: 70; }
 
 .card {
   background: #FFFFFF;
@@ -814,3 +825,117 @@ small, .small {
   background: white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
+
+@media screen and (max-width: 992px) {
+  .annotation-screen {
+    width: 95%; }
+    .annotation-screen .annotation-item {
+      width: 100%;
+      height: 67.5vh; }
+      .annotation-screen .annotation-item .top {
+        height: 21vh; }
+        .annotation-screen .annotation-item .top .photo img {
+          height: 21vh !important; }
+        .annotation-screen .annotation-item .top .photo-overlay {
+          height: 21vh; }
+      .annotation-screen .annotation-item .bottom {
+        height: 47.5vh; }
+        .annotation-screen .annotation-item .bottom .body {
+          height: 33vh; }
+        .annotation-screen .annotation-item .bottom .button {
+          background: #FFF;
+          bottom: 15px; }
+
+  footer {
+    z-index: -1; }
+
+  .card-wrapper > .card {
+    width: 350px;
+    margin-top: 60px; }
+
+  .card {
+    height: 490px;
+    min-height: 490px; }
+    .card .close-icon {
+      top: -30px;
+      right: -30px; }
+
+  .slider-card {
+    background-repeat: no-repeat !important; }
+
+  .slick-next {
+    right: -30px; }
+
+  .slick-next::before {
+    font-size: 75px; }
+
+  .slick-prev {
+    left: -30px;
+    z-index: 1; }
+
+  .slick-prev::before {
+    font-size: 75px; }
+
+  .mobile-markers {
+    position: absolute;
+    bottom: 0;
+    background: #2e3742;
+    padding: 20px 45px;
+    width: 100%;
+    z-index: 10000000;
+    left: 0; } }
+@media screen and (max-width: 768px) {
+  .marker-in-text {
+    width: 265px;
+    /* Must match Js */
+    height: 150px; }
+    .marker-in-text textarea {
+      width: 210px; }
+
+  .original-text {
+    padding: 10px 15px 75px 0px; }
+
+  .header {
+    margin-top: 10px; }
+    .header h2 {
+      font-size: 50%; }
+    .header h1 {
+      font-size: 1.6rem; }
+
+  .mobile-menu .half-menu {
+    width: 50%;
+    float: left;
+    background: grey;
+    cursor: pointer; }
+    .mobile-menu .half-menu a {
+      color: white;
+      font-weight: bold;
+      display: block;
+      padding: 10px 13px; }
+      .mobile-menu .half-menu a:hover {
+        text-decoration: none; }
+    .mobile-menu .half-menu.active {
+      box-shadow: inset 0 -3px 0 #FFF; }
+
+  .marker {
+    float: left; }
+    .marker img {
+      width: 30px; }
+
+  .list-inline-item .right {
+    float: right;
+    margin-left: 12px; }
+  .list-inline-item .theme {
+    margin-top: 0;
+    color: white;
+    font-weight: bold; }
+  .list-inline-item .markers-remaining {
+    color: white; }
+
+  .original-text {
+    height: 50vh; }
+    .original-text .content-height {
+      height: 47vh; }
+
+  .delete-pin {
+    padding-top: 0; } }

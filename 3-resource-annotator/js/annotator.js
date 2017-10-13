@@ -19,6 +19,8 @@ Annotator = (function() {
       bindEvents();
     }
 
+    var modalWidth = 275;
+
     var createHeading = function() {
       var arr = markersInJSON;
 
@@ -48,16 +50,47 @@ Annotator = (function() {
     ]
 
     var printEvent = window.matchMedia('print');
+
+    var showView = function() {
+      var isShowing = $('.show-right-screen').is(":Visible");
+      if(isShowing) {
+        $('.show-right-screen').addClass('hidden-mobile');
+        $('.show-left-screen').removeClass('hidden-mobile');
+      }
+    };
+
+    var showContent = function() {
+       var isShowing = $('.show-left-screen').is(":Visible");
+       if(isShowing) {
+        $('.show-left-screen').addClass('hidden-mobile');
+        $('.show-right-screen').removeClass('hidden-mobile');
+       }
+    };
+
+    var mobileMenuClicked = function () {
+      $('.half-menu').removeClass('active');
+      $(this).addClass('active');
+      var page = $(this).data('page');
+
+      if(page == 'content') {
+        showContent();
+      } else {
+        showView();
+      }
+    }
+
     var bindEvents = function() {
         $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
         $('body').on('click tap', '.icon-home', showLostProgress);
         $('body').on('click tap', '#instructions', showIntro);
         $('body').on('click tap', '.close-icon', closePopup);
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
-        $('body').on('click tap', '#print-notes', printPage);
+        $('body').on('click tap', '.print-notes', printPage);
 
         $('body').on('click tap', '.reload-page', reloadPage);
         $('body').on('click tap', '#close-porgess', hideLostProgress);
+
+        $('body').on('click tap', '.half-menu', mobileMenuClicked);
 
         window.onbeforeprint = function() {
           sendGoogleAnalyticsEvent("Print preview", "open");
@@ -428,7 +461,7 @@ Annotator = (function() {
           'top': top,
         });
         pin.find('img').css({
-          'left': 320 - parseInt(pin.find('img').width()) + 10
+          'left': modalWidth - parseInt(pin.find('img').width()) + 10
         });
         pin.removeClass('left-flipped').addClass('right-flipped');
       }
@@ -457,10 +490,10 @@ Annotator = (function() {
         if(width < scroll) {
           pin.css({
             'left': '',
-            'bottom': -320 + parseInt(pin.parent().height())
+            'bottom': -modalWidth + parseInt(pin.parent().height())
           });
           pin.find('img').css({
-            'bottom': 320 - parseInt(pin.find('img').width()) + 10
+            'bottom': modalWidth - parseInt(pin.find('img').width()) + 10
           });
           pin.removeClass('left-flipped').addClass('right-flipped');
         }
@@ -541,13 +574,20 @@ Annotator = (function() {
               $('.annotation-slider-screen').addClass('hidden');
               $('.annotation-notes-screen').removeClass('hidden').addClass('show');
 
-              //$('.icon-print').removeClass('disabled');
+              $('.icon-print').removeClass('disabled');
               $('.icon-home').removeClass('disabled');
         });
       }
 
+      if(window.outerWidth > 992) {
+        $('.show-left-screen').removeClass('hidden-mobile');
+        var markers = $.templates("#itemMarkerItems");
+        var markersOutput = markers.render(objItem.themes);
+        $(".desktop-markers").html(markersOutput);
+      }
+
       
-      pinSetup();
+      
 
       setTimeout(function(){
         $('.markers-container').addClass('animated pulse');
@@ -569,6 +609,17 @@ Annotator = (function() {
 
       // Initialize tooltips again
       $('[data-toggle="tooltip"]').tooltip();
+
+      if(window.outerWidth <= 992) {
+        var markers = $.templates("#itemMarkerItems");
+        var markersOutput = markers.render(objItem.themes);
+        $("#MobileMarker").html(markersOutput);
+
+        $('.mobile-menu').removeClass('hidden-mobile');
+        $('.mobile-markers').removeClass('hidden-mobile');
+      }
+
+      pinSetup();
   }
 
     var getItemByAnnotationId = function(id) {

@@ -91,7 +91,7 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print disabled" title="Print this Activity"></a>
+            <a href="" class="icon icon-print print-notes" title="Print this Activity"></a>
             <a class="icon icon-home disabled" title="Back to Home Screen"></a>
             
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
@@ -184,7 +184,7 @@
 
             <div class="text-center progress-options">
               <a class="btn btn-lg btn-white reload-page"  title="Choose another resource">Choose another resource</a>
-              <a class="btn btn-lg btn-white disabled" title="Review your notes">Review your notes</a>
+              <a class="btn btn-lg btn-white print-notes" title="Review your notes">Review your notes</a>
               <a class="btn btn-lg btn-white" id="close-porgess" title="Cancel">Cancel</a>
             </div>
         </div>
@@ -281,6 +281,31 @@
         </section>
 
 
+        <section class="mobile-menu hidden-mobile">
+          <div class="half-menu" data-page="content">
+             <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
+          </div>
+
+          <div class="half-menu" data-page="view">
+             <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+          </div>
+
+          <br style="clear:left;" />
+          <!--<div class="container-fluid">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
+              </div>
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+              </div>
+
+            </div>
+          </div>-->
+        </section>
+
         <section class="annotation-screen">
           
           <!-- Slider starts here -->
@@ -312,7 +337,7 @@
 
                   <div class="text-center print-button hidden-md-down">
 
-                    <a class="btn btn-success btn-lg disabled" id="print-notes" title="Print your notes">
+                    <a class="btn btn-success btn-lg print-notes" title="Print your notes">
                       <strong>Print Your Notes</strong>
                     </a>
 
@@ -320,7 +345,7 @@
 
                 </div>
 
-                <div class="col-md-12 col-lg-8 show-left-screen">
+                <div class="col-md-12 col-lg-8 show-left-screen hidden-mobile">
                   
                   <div class="original-text">
 
@@ -335,6 +360,11 @@
                 </div>
 
               </div>
+
+              <section class="mobile-markers hidden-mobile">
+                <ul id="MobileMarker" class="list-inline" style="margin-bottom:0;">
+                </ul>
+              </section>
 
             </div>
 
@@ -389,21 +419,9 @@
                     Drag and drop to add annotation
                   </h3>
 
-                  <ul class="list-inline" style="margin-bottom:0;">
+                  <ul class="list-inline desktop-markers" style="margin-bottom:0;">
 
-                      {{for themes}}
-
-                        <li id="{{:title}}" class="list-inline-item">
-                          <div class="marker">
-                            <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
-                          </div>
-                          <div class="theme">
-                            {{:title}} <span class="defintions-icon"></span>
-                          </div>
-                          <div class="markers-remaining"></div>
-                        </li>
-
-                      {{/for}}
+                      
 
                     </ul>
                </div>
@@ -411,6 +429,23 @@
 
           </div>
         </div>
+    </script>
+
+
+    <script id="itemMarkerItems" type="text/x-jsrender">
+      <li id="{{:title}}" class="list-inline-item">
+        <div class="marker">
+          <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
+        </div>
+        <div class="right">
+          <div class="theme">
+            {{:title}} <!--<span class="defintions-icon"></span>-->
+          </div>
+          <div class="markers-remaining"></div>
+        </div>
+
+        <br style="clear:both;" />
+      </li>
     </script>
 
     <script id="itemRightTemplate" type="text/x-jsrender">

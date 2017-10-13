@@ -23,11 +23,25 @@
 .slick-next {
     width: 100px;
     height: 100px;
+    transition: 0.5s all;
 }
 
 .slick-prev:before,
 .slick-next:before {
 	font-size:100px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.slick-prev:hover {
+    left: -130px;
+}
+
+.slick-next:hover {
+    right: -130px;
 }
 
 .slick-prev:before {

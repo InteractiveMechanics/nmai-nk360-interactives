@@ -302,11 +302,16 @@ body .photo-container {
       background-size: cover; }
 
 #SelectedSalmon {
-  margin-top: 50vh;
+  /*margin-top: 50vh;*/
   position: fixed;
-  top: -1em;
+  top: 50%;
   margin-left: 1em;
-  z-index: 10; }
+  z-index: 10;
+  transition: top 3s;
+  left: 50px; }
+
+.rising-water {
+  top: 20% !important; }
 
 .steelhead-1 {
   width: 141px;
@@ -597,6 +602,14 @@ body .photo-container {
 .solution-text {
   font-weight: bold; }
 
+.restart-game {
+  color: white;
+  background: #2e3742;
+  font-size: 21px; }
+  .restart-game:hover {
+    background: #2e3742 !important;
+    color: white !important; }
+
 @media (max-width: 800px) {
   * {
     /* Remove CSS transitions
@@ -620,6 +633,9 @@ body .photo-container {
 .faded {
   opacity: .5; }
 
+.hotspot-faded {
+  opacity: .2; }
+
 .close-faded {
   opacity: 0; }
 
@@ -639,7 +655,8 @@ body .photo-container {
 
 .quiz-options .btn {
   border-color: white !important;
-  box-shadow: none; }
+  box-shadow: none;
+  font-weight: bold; }
 .quiz-options .btn:hover {
   background-color: white !important;
   border: 3px solid #2e3742 !important;
@@ -651,7 +668,7 @@ body .photo-container {
   box-shadow: none; }
 
 .slider-wrapper .slick-dots {
-  bottom: -155px; }
+  bottom: -125px; }
 .slider-wrapper .slick-slide {
   margin: 0 0; }
 .slider-wrapper .overlay {
@@ -660,14 +677,14 @@ body .photo-container {
 .intro-slider-wrapper .overlay {
   z-index: 20; }
 .intro-slider-wrapper .slick-dots {
-  bottom: -70px; }
+  bottom: -125px; }
 
 .spawn-death-slider-wrapper .overlay {
   z-index: 20; }
 .spawn-death-slider-wrapper .slick-slide {
   margin: 0 0; }
 .spawn-death-slider-wrapper .slick-dots {
-  bottom: -105px; }
+  bottom: 0px; }
 
 .card {
   background: #FFFFFF;
@@ -691,10 +708,12 @@ body .photo-container {
         right: -30px;
         cursor: pointer;
         top: -30px; } }
-  .card p {
-    font-size: 13px; }
-    .card p.quiz-detail {
-      font-size: 12px; }
+  .card p.quiz-detail {
+    font-size: 12px; }
+
+.card-body {
+  height: 445px;
+  overflow: scroll; }
 
 .card:before {
   background: #CABDB6;
@@ -798,7 +817,8 @@ body .photo-container {
   background: #2e3742;
   font-size: 21px;
   padding: 15px;
-  margin: 5px 0 20px; }
+  margin: 5px 0 20px;
+  width: 100%; }
   .quiz-answered button:hover {
     background: #2e3742 !important;
     color: white !important; }
@@ -861,11 +881,22 @@ body .photo-container {
 .slick-prev,
 .slick-next {
   width: 100px;
-  height: 100px; }
+  height: 100px;
+  transition: 0.5s all; }
 
 .slick-prev:before,
 .slick-next:before {
   font-size: 100px; }
+
+.slick-prev:hover,
+.slick-next:hover {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); }
+
+.slick-prev:hover {
+  left: -130px; }
+
+.slick-next:hover {
+  right: -130px; }
 
 .slick-prev:before {
   font-family: 'slick';
@@ -987,7 +1018,7 @@ body .photo-container {
   background-size: contain !important;
   height: 55px;
   z-index: 87;
-  opacity: 0.3;
+  opacity: 0.5;
   filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.35)); }
 
 .position-1-progress {

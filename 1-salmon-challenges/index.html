@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     
     <!-- For development only, comment for distribution -->
-    <!-- <link rel="stylesheet" href="./css/theme-pnw.css" /> -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
     <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
@@ -235,11 +235,11 @@
       <div class="overlay"></div>
     </div>
     
-    <div id="instructions" class="fade show">
+    <div id="instructions" class="fade show" data-instructionsclicked="false">
         <div class="container instructions-container">
           <header class="text-center">
             <h4 class="all-caps letter-spacing-1">How to Play</h4>
-            <h2>Salmon Challenges</h2>
+            <h1>Salmon Challenges</h1>
           </header>
 
             <div class="row justify-content-md-center">
@@ -344,7 +344,7 @@
                     <div class="fish-detail">
                       <h2>Chinook</h2>
                       <p>
-                        The chinook is the largest in size, but least abundant pacific salmon species.
+                        The Chinook is the largest in size but least abundant Pacific salmon species.
                       </p>
                     </div>
 
@@ -412,41 +412,44 @@
             <p class="text-center all-caps">{{:sub_title}}</p>
           {{/if}}
 
-          {{if title}}
-            <h3 class="text-center">{{:title}}</h3>
-          {{/if}}
+          <div class="card-body">
+            {{if title}}
+              <h3 class="text-center">{{:title}}</h3>
+            {{/if}}
 
-          {{if heading}}
-            <h1>{{:heading}}</h1>
-          {{/if}}
+            {{if heading}}
+              <h1>{{:heading}}</h1>
+            {{/if}}
 
-          {{if image}}
 
-            <div class="card-image">
-              <div class="photo-container" style="display:block;">
-                  <img src="{{:thumb}}" class="img-fluid" />
-                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
-                  </div>
+            {{if image}}
+
+              <div class="card-image">
+                <div class="photo-container" style="display:block;">
+                    <img src="{{:thumb}}" class="img-fluid" />
+                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                    </div>
+                </div>
               </div>
-            </div>
 
-            <p class="image-credit">
-              {{:credit}}
-            </p>
+              <p class="image-credit">
+                {{:credit}}
+              </p>
 
-          {{/if}}
+            {{/if}}
 
-          {{if body}}
-            <p>
-              {{:body}}
-            </p>
-          {{/if}}
+            {{if body}}
+              <p>
+                {{:body}}
+              </p>
+            {{/if}}
+          </div>
 
           {{if isLastSlide}}
 
-            <div class="btn-group-vertical">
+            <div class="quiz-options btn-group-vertical">
 
-                <button type="button" class="btn btn-default ">
+                <button type="button" class="btn btn-default restart">
                   Play Activity Again
                 </button>
 
@@ -463,35 +466,39 @@
             <p class="text-center all-caps">{{:sub_title}}</p>
           {{/if}}
 
-          {{if title}}
-            <h3 class="text-center">{{:title}}</h3>
-          {{/if}}
+          <div class="card-body">
 
-          {{if heading}}
-            <h1>{{:heading}}</h1>
-          {{/if}}
+            {{if title}}
+              <h3 class="text-center">{{:title}}</h3>
+            {{/if}}
 
-          {{if image}}
+            {{if heading}}
+              <h1>{{:heading}}</h1>
+            {{/if}}
 
-            <div class="card-image">
-              <div class="photo-container" style="display:block;">
-                  <img src="{{:thumb}}" class="img-fluid" />
-                  <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
-                  </div>
+
+            {{if image}}
+
+              <div class="card-image">
+                <div class="photo-container" style="display:block;">
+                    <img src="{{:thumb}}" class="img-fluid" />
+                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                    </div>
+                </div>
               </div>
-            </div>
 
-            <p class="image-credit">
-              {{:credit}}
-            </p>
+              <p class="image-credit">
+                {{:credit}}
+              </p>
 
-          {{/if}}
+            {{/if}}
 
-          {{if body}}
-            <p>
-              {{:body}}
-            </p>
-          {{/if}}
+            {{if body}}
+              <p>
+                {{:body}}
+              </p>
+            {{/if}}
+          </div>
 
           {{if result}}
             <div class="result-area text-center">

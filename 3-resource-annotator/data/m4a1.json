@@ -11,6 +11,7 @@
 	    }
     ],
 	"sources": [
+
 		{
 			"id": 1,
 		    "title": "Sportsmen Protest Decision",
@@ -91,6 +92,7 @@
 		    "thumbnail_image": "./assets/imgs/m4a1/thumbnail-source-5.jpg",
 		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect?</p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>"
 		}
+		
 	],
     "returnTo": {
         "title": "Pacific Northwest Lesson",

@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 2,
+      speed: 5,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -75,7 +75,6 @@ Game = (function() {
         $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
         $('body').on('click tap', '.restart', restartSalmonChallenges);
         $('body').on('click tap', '#pause-icon', hitPause);
-        //$('body').on('click tap', '#', victoryContinueButton);
 
         
 
@@ -281,11 +280,15 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 13840) {
+            if (current_position < 12840) {
 
                 if(checkEncounters(current_position)) {
 
                 };
+
+                if(current_position == 12000) {
+                  $('#SelectedSalmon').addClass('rising-water');
+                }
 
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
@@ -355,6 +358,9 @@ Game = (function() {
         $('.spawn-death-slider').slick('unslick'); 
       }
 
+      gameData.spawn_cards[gameData.spawn_cards.length - 1].isLastSlide = true;
+
+
       var sliderTemplate = $.templates("#introSliderTemplate");
       var sliderTemplateHTMLOutput = sliderTemplate.render(gameData.spawn_cards);
       $(".spawn-death-slider").html(sliderTemplateHTMLOutput);
@@ -366,6 +372,17 @@ Game = (function() {
           infinite: false,
           slidesToShow: 1,
           variableWidth: true
+        });
+
+        $('.spawn-death-slider').on('afterChange', function(e, slick, currentSlide){
+            if(slick.slideCount == currentSlide + 1) {
+              $('.close-icon').removeClass('close-faded');
+              $('.slider .slick-next').hide();
+            }
+
+            if(slick.slideCount > currentSlide + 1) {
+              $('.slider .slick-next').show();
+            }
         });
       }, 200);
 
@@ -399,6 +416,17 @@ Game = (function() {
           infinite: false,
           slidesToShow: 1,
           variableWidth: true
+        });
+
+        $('.spawn-death-slider').on('afterChange', function(e, slick, currentSlide){
+            if(slick.slideCount == currentSlide + 1) {
+              $('.close-icon').removeClass('close-faded');
+              $('.slider .slick-next').hide();
+            }
+
+            if(slick.slideCount > currentSlide + 1) {
+              $('.slider .slick-next').show();
+            }
         });
       }, 200);
 
@@ -451,6 +479,7 @@ Game = (function() {
 
     var setCloseIcon = function() {
       $('#SelectedSalmon').css('animation-play-state', 'paused');
+      $('.hotspot').css('animation-play-state', 'paused');
       if(!$('.close-icon').hasClass('close-faded')) {
         $('.close-icon').addClass('close-faded')
       }
@@ -463,7 +492,7 @@ Game = (function() {
 
       setCloseIcon();
 
-      var wasAlreadyClicked = $(this).hasClass('faded');
+      var wasAlreadyClicked = $(this).hasClass('hotspot-faded');
       if(wasAlreadyClicked) {
         return;
       }
@@ -496,7 +525,7 @@ Game = (function() {
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
 
-      $(this).addClass('faded');
+      $(this).addClass('hotspot-faded');
 
       settings.encounterSeen += 1;
 
@@ -543,6 +572,17 @@ Game = (function() {
           slidesToShow: 1,
           variableWidth: true
         });
+
+        $('.slider').on('afterChange', function(e, slick, currentSlide){
+            if(slick.slideCount == currentSlide + 1) {
+              $('.close-icon').removeClass('close-faded');
+              $('.slider .slick-next').hide();
+            }
+
+            if(slick.slideCount > currentSlide + 1) {
+              $('.slider .slick-next').show();
+            }
+        });
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
@@ -578,7 +618,6 @@ Game = (function() {
         });
 
         $('.slider').on('afterChange', function(e, slick, currentSlide){
-          alert(slick.slideCount + ' + ' + currentSlide + 1);
             if(slick.slideCount == currentSlide + 1) {
               $('.close-icon').removeClass('close-faded');
               $('.slider .slick-next').hide();
@@ -638,9 +677,29 @@ Game = (function() {
       /*if(settings.started && settings.pause) {
         settings.pause = false;
       }*/
+
+      //settings.pause = false;
+
+      //$('.icon-play').click();
+
+      settings.pause = false;
+      $('#instructions').data('instructionsclicked', true);
+      $('#SelectedSalmon').css('animation-play-state', 'paused');
+        $('.hotspot').css('animation-play-state', 'paused');
     }
 
     var showIntroModal = function() {
+      var instructionsClicked = $('#instructions').data('instructionsclicked');
+
+      if(instructionsClicked) {
+        settings.pause = true;
+        $('#instructions').data('instructionsclicked', false);
+        $('#SelectedSalmon').css('animation-play-state', 'running');
+        $('.hotspot').css('animation-play-state', 'running');
+
+        requestAnimationFrame(updateWorld);
+      };
+
       if(!settings.started) {
         setTimeout(function() {
           $('.intro-slider-wrapper').removeClass('hidden').addClass('show');

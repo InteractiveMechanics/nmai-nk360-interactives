@@ -49,11 +49,17 @@ body {
 }
 
 #SelectedSalmon {
-  margin-top: 50vh;
+  /*margin-top: 50vh;*/
   position: fixed;
-  top: -1em;
+  top: 50%;
   margin-left: 1em;
   z-index: 10;
+  transition: top 3s;
+  left:50px;
+}
+
+.rising-water {
+  top: 20% !important;
 }
 
 .steelhead-1 {
@@ -399,6 +405,18 @@ body {
 
 .solution-text {
   font-weight:bold;
+}
+
+.restart-game {
+  color: white;
+  background: #2e3742;
+  font-size: 21px; 
+
+
+  &:hover {
+    background: #2e3742 !important;
+    color: white !important;
+  }
 }
 
 

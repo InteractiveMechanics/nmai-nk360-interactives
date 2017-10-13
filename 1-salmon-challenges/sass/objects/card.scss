@@ -1,6 +1,6 @@
 .slider-wrapper {
 	.slick-dots {
-		bottom:-155px;
+		bottom:-125px;
 	}
 
 	.slick-slide {
@@ -19,7 +19,7 @@
 	}
 
 	.slick-dots {
-		bottom:-70px;
+		bottom:-125px;
 	}
 }
 
@@ -33,7 +33,7 @@
 	}
 
 	.slick-dots {
-		bottom:-105px;
+		bottom:0px;
 	}
 }
 
@@ -65,12 +65,17 @@
   }
 
   p {
-  	font-size:13px;
 
   	&.quiz-detail {
   		font-size:12px;
   	}
   }
+}
+
+
+.card-body {
+	height:445px;
+	overflow:scroll;
 }
 
 .card:before {
@@ -219,6 +224,7 @@
 		font-size: 21px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
+		width:100%;
 
 
 		&:hover {

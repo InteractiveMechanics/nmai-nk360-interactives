@@ -13,10 +13,10 @@
 }
 
 .slick-prev {
-  left:-70px;
+  left:-60px;
 }
 .slick-next {
-  right:10px;
+  right:-60px;
 }
 
 .slick-slide img {
@@ -43,9 +43,15 @@
     opacity: 1.0;
 }
 
+.slick-prev,
+.slick-next {
+    width: 100px;
+    height: 100px;
+}
+
 .slick-prev:before,
 .slick-next:before {
-  font-size:100px;
+    font-size:100px;
 }
 
 .slick-prev:before {

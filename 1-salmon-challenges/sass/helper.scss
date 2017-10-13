@@ -2,6 +2,10 @@
 	opacity:.5;
 }
 
+.hotspot-faded {
+	opacity:.2;
+}
+
 .close-faded {
 	opacity:0;
 }
@@ -28,6 +32,7 @@
 	.btn {
 		border-color:white !important;
 		box-shadow:none;
+		font-weight:bold;
 	}
 
 	.btn:hover {
