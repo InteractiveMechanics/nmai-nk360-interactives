@@ -824,8 +824,7 @@ body .photo-container {
     color: white !important; }
 .quiz-answered .correct:hover {
   background: green !important;
-  color: white !important;
-  border-color: green !important; }
+  color: white !important; }
 .quiz-answered .correct:active {
   background: green !important;
   color: white !important;
@@ -836,8 +835,7 @@ body .photo-container {
   border-color: green !important; }
 .quiz-answered .wrong:hover {
   background: red !important;
-  color: white !important;
-  border-color: red !important; }
+  color: white !important; }
 .quiz-answered .wrong:active {
   background: red !important;
   color: white !important;

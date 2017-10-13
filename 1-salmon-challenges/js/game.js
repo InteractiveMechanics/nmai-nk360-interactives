@@ -75,6 +75,7 @@ Game = (function() {
         $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
         $('body').on('click tap', '.restart', restartSalmonChallenges);
         $('body').on('click tap', '#pause-icon', hitPause);
+        $('body').keyup(hitPauseSpaceBar);
 
         
 
@@ -85,6 +86,28 @@ Game = (function() {
     }
 
     var hitPause = function() {
+      var isPlaying = $('#pause-icon').hasClass('icon-play');
+
+      if(isPlaying) {
+        settings.pause = false;
+        $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
+        $('#SelectedSalmon').css('animation-play-state', 'paused');
+        $('.hotspot').css('animation-play-state', 'paused');
+      } else {
+        settings.pause = true;
+        $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
+        $('#SelectedSalmon').css('animation-play-state', 'running');
+        $('.hotspot').css('animation-play-state', 'running');
+        requestAnimationFrame(updateWorld);
+      }
+    }
+
+    var hitPauseSpaceBar = function(e) {
+
+      if(e.keyCode != 32) {
+        return;
+      }
+
       var isPlaying = $('#pause-icon').hasClass('icon-play');
 
       if(isPlaying) {

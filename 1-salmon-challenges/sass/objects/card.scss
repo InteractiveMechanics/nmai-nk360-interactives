@@ -238,7 +238,6 @@
 		&:hover {
 			background: green !important;
 			color:white !important;
-			border-color:green !important;
 		}
 
 		&:active {
@@ -258,7 +257,6 @@
 		&:hover {
 			background: red !important;
 			color:white !important;
-			border-color:red !important;
 		}
 
 		&:active {
@@ -274,6 +272,7 @@
 		}
 	}
 }
+
 
 .slider-card {
 	background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
