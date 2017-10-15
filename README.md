@@ -33,7 +33,6 @@ We're using a number of outside libraries for different features, including:
 - [Bootstrap](https://v4-alpha.getbootstrap.com) - for standard Bootstrap modules, includes Tether
 - [jQuery](http://jquery.com/) - for, you know, jQuery things
 - [jQuery UI](https://jqueryui.com/) - for draggable, droppable, etc.
-- [jsPDF](https://parall.ax/products/jspdf) - for generate PDFs on the client side
 - [jsRender](http://www.jsviews.com/#jsrender) - for templating
 - [lightGallery](http://sachinchoolur.github.io/lightGallery/) - for lightbox modals
 - [Quill](https://quilljs.com) - for client-side WYSIWYG editor
