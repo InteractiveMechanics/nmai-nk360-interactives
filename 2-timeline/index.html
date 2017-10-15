@@ -8,12 +8,12 @@
     <title>Drag-and-Drop Timeline - Native Knowledge 360&deg;</title>
   
     <!-- Include shared stylesheets -->
-    <link rel="stylesheet" href="./shared/css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="./shared/js/lightgallery/css/lightgallery.min.css" />
-    <link rel="stylesheet" href="./shared/js/slick/slick.css" />
-    <link rel="stylesheet" href="./shared/css/animate/animate.css" />
+    <link rel="stylesheet" href="../shared/lib/im/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../shared/lib/im/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="../shared/lib/im/js/slick/slick.css" />
+    <link rel="stylesheet" href="../shared/lib/im/css/animate/animate.css" />
     
-    <link rel="stylesheet" href="./shared/code/upperleftmenu/menu.css" />
+    <link rel="stylesheet" href="../shared/lib/im/code/upperleftmenu/menu.css" />
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
@@ -55,8 +55,8 @@
     			</div>
     			
     			<div class="nk360-logo">
-    				<img class="black-logo" src="./shared/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
-    				<img class="color-logo" src="./shared/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
+    				<img class="black-logo" src="../shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
+    				<img class="color-logo" src="../shared/lib/im/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
     			</div>
     		</div>
     	
@@ -89,7 +89,7 @@
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between">
-        <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <img src="../shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
@@ -153,7 +153,7 @@
         <!-- Detail Template -->
         <script id="detail-template" type="text/x-jsrender">
         <div class="heading-wrapper">
-             <img src="../shared/images/pnw/splash-01.svg">
+             <img src=".../shared/lib/im/images/pnw/splash-01.svg">
             <h1>{{:StartDate}} to {{:EndDate}}</h1>
         </div>
 
@@ -199,7 +199,7 @@
                     <div class="modal-content">
 
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="./shared/images/icon-close.svg" alt="close" title="close"></span></button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="../shared/lib/im/images/icon-close.svg" alt="close" title="close"></span></button>
                                 <h6 class="modal-year">{{:date}}</h6>
                                 <h3 class="modal-title">{{:title}}</h3>
                             </div>
@@ -296,10 +296,10 @@
 
             </div>
                 <button id="prev-btn" class="btn disabled">
-                    <img src="./shared/images/icon-prev.svg" alt="prev" title="prev">
+                    <img src="../shared/lib/im/images/icon-prev.svg" alt="prev" title="prev">
                 </button>
                 <button id="next-btn" class="btn">
-                    <img src="./shared/images/icon-next.svg" alt="next" title="next">
+                    <img src="../shared/lib/im/images/icon-next.svg" alt="next" title="next">
                 </button>
 
 
@@ -312,7 +312,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="1">
                             <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                             <img src="./shared/images/pnw/splash-01.svg" title="" alt="">
+                             <img src="../shared/lib/im/images/pnw/splash-01.svg" title="" alt="">
                             <h1>Time Immemorial to 1974</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn"  data-timeline="1">Start This Timeline</button>
@@ -324,7 +324,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="2">
                              <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                            <img src="./shared/images/pnw/splash-02.svg" title="" alt="">
+                            <img src="../shared/lib/im/images/pnw/splash-02.svg" title="" alt="">
                             <h1>1974 &mdash; 1979</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden"  data-timeline="2">Start This Timeline</button>
@@ -336,7 +336,7 @@
                     <div class="era-content-wrapper">
                         <div class="heading-wrapper" data-era="3">
                              <!-- decorative img title/alt attributes intentionally left blank so screen readers skip over them -->
-                            <img src="./shared/images/pnw/splash-03.svg" title="" alt="">
+                            <img src="../shared/lib/im/images/pnw/splash-03.svg" title="" alt="">
                             <h1>1979 &mdash; present</h1>
                         </div>
                         <button class="btn btn-lg btn-white start-timeline-btn hidden" data-timeline="3">Start This Timeline</button>
@@ -360,28 +360,28 @@
 
     
     <!-- Include jquery, jquery ui, touchpunch -->
-    <script src="./shared/js/jquery/jquery-3.2.1.min.js"></script>
-    <script src="./shared/js/jqueryui/jquery-ui.min.js"></script>
-    <script src="./shared/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
-    <script src="./shared/js/jsrender/jsrender.min.js"></script>
+    <script src="../shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="../shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="../shared/lib/im/js/jsrender/jsrender.min.js"></script>
 
     <!-- Include bootstrap -->
-    <script src="./shared/js/tether/tether.min.js"></script>
-    <script src="./shared/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="../shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
 
     <!-- Include lightGallery -->
-    <script src="./shared/js/lightgallery/js/lightgallery-all.min.js"></script>
+    <script src="../shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
 
     <!-- Include slick -->
-    <script src="./shared/js/slick/slick.min.js"></script>
+    <script src="../shared/lib/im/js/slick/slick.min.js"></script>
 
     <!-- Include shared code -->
-    <script src="./shared/code/analytics.js"></script>
-    <script src="./shared/code/audio/audio.js"></script>
-    <script src="./shared/code/tooltips/tooltips.js"></script>
-    <script src="./shared/code/instructions/instructions.js"></script>
-    <script src="./shared/code/lightbox/lightbox.js"></script>
-    <script src="./shared/code/upperleftmenu/menu.js"></script>
+    <script src="../shared/lib/im/code/analytics.js"></script>
+    <script src="../shared/lib/im/code/audio/audio.js"></script>
+    <script src="../shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="../shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="../shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="../shared/lib/im/code/upperleftmenu/menu.js"></script>
 
     <!-- For development only, comment for distribution -->
     <script>var jsondata = './data/m4a1.json';</script>

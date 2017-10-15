@@ -1,5 +1,5 @@
 .modal-content {
-	background: url('../shared/images/pnw/text-card-pnw@2x.png');
+	background: url('../../shared/lib/im/images/pnw/text-card-pnw@2x.png');
 	background-color: white;
 	background-size: 90%;
 	background-position: center center;
@@ -15,7 +15,7 @@
 	background: #a8bd46;
     opacity: 0.6;
     &:after {
-    	content: url('../shared/images/icon-checkmark.svg');
+    	content: url('../../shared/lib/im/images/icon-checkmark.svg');
     	position: absolute;
     	left: 42%;
 	}

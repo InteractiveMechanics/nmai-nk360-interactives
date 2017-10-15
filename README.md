@@ -14,7 +14,7 @@
 * Run `npm install` in the project directory
 
 ##### Working with this repo
-There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `Shared` directory where possible to save time.
+There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `shared/lib/im` directory where possible to save time.
 
 
 ### Project structure
@@ -23,11 +23,10 @@ Each project folder (see 5-news-article-creator for a sample) should follow the 
 - data: contains json data files
 - js: contains js files
 - sass: contains sass files
-- shared: symlink to shared directory
 - test: contains qUnit tests
 
 ##### Shared assets
-In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files. Check the `shared/code` directory for all shared code with sample markup.
+In the root project directory is a shared folder containing assets we can use for multiple interactives. This may include Sass files, images/assets, written content, or JavaScript files. Check the `shared/lib/im/code` directory for all shared code with sample markup.
 
 ##### Third-party libraries
 We're using a number of outside libraries for different features, including:
