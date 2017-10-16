@@ -53,10 +53,7 @@
 	}
 }
 
-[data-gallery] {
-	//background: url('../../shared/lib/im/images/icon-zoom.svg');
-	//background-repeat: no-repeat;
-}
+
 
 .modal-img-wrapper {
 	max-height: 250px;
@@ -81,4 +78,11 @@
     top: 218px;
     background: transparent;
     border: none;
+}
+
+.attribution {
+	display: block;
+    font-style: italic;
+    text-align: right;
+    margin-top: 10px;
 }

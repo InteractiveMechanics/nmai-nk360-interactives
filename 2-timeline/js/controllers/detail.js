@@ -11,10 +11,8 @@ Detail = (function() {
 
     var displayDetailScreen = function() {
         var id = $(this).attr('data-timeline');
-        console.log(id);
     	$('#selection').addClass('hidden animated fadeOut');
         $("#detail").html($.templates("#detail-template").render(data.eras[id-1]));
-    	//$('#detail-template').tmpl().appendTo('#detail');
         var newMoments = randomMoments(data.eras[id-1].Moments);
         $("#draggable-wrapper").html($.templates("#draggable-template").render(newMoments));
     	$('#detail').removeClass('hidden fadeOut').addClass('animated fadeIn');
@@ -28,7 +26,6 @@ Detail = (function() {
             var random = Math.floor(Math.random() * newMoments.length);
             newMoments.splice(random, 0, val);
         });
-        console.log(newMoments);
         return newMoments;
     }
 
@@ -37,7 +34,6 @@ Detail = (function() {
             var era = $('#droppable-container').attr('data-era');
             var numberDropped = $('.dropped').length;
             var numberDroppable = $('.droppable-widget').length;
-            console.log(numberDropped);
 
             if (numberDropped == numberDroppable) {
                 $('.era-block[data-era="' + era + '"]').addClass('completed');
@@ -46,25 +42,41 @@ Detail = (function() {
         }
     }
 
+    var setupTimelineScroll = function() {
+        var containX1 = $('.timeline-wrapper').parent().offset().left;
+        var containY1 = $('.timeline-wrapper').parent().offset().top;
+        var containX2 =  ($(".timeline-wrapper").parent().outerWidth() + $(".timeline-wrapper").parent().offset().left - Detail.timelineWidth);
+        var containY2 =  ($(".timeline-wrapper").parent().outerHeight() +  $(".timeline-wrapper").parent().offset().top - $('.timeline-wrapper').outerHeight()); 
+
+
+        $('.timeline-wrapper').draggable({
+            axis: 'x',
+            containment: [containX1, containY1, containX2, containY1]
+        });
+    }     
+
    
 
     var displayExploreScreen = function(era) {
-        
-        
+       
+        //this is for 'view my timeline'
         if (era !== null && typeof era === 'object') {
             var era = $(this).attr('data-timeline');
             $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').addClass('hidden');
+
              if (era == 1) {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
+                Detail.timelineWidth = 2143;
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
+                $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
             } else {
+                $('.timeline-wrapper').css('left', -3340)
                 Detail.timelineWidth = 4800;
             }
-            console.log(era);
         } else {
             console.log('era is defined. it is ' + era);
             $('#explore').html($.templates("#explore-template").render(data));
@@ -72,34 +84,38 @@ Detail = (function() {
             if (era == 1) {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
-                timelineWidth = 2143;
+                Detail.timelineWidth = 2143;
+                setupTimelineScroll();               
+                
+
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
+                $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
+                setupTimelineScroll();
+
             } else {
                 Detail.timelineWidth = 4800;
+                $('.timeline-wrapper').css('left', -3340);
+                setupTimelineScroll();
             }
         }
         $('#explore').removeClass('animated fadeIn hidden');
         $('#selection').addClass('fadeOut hidden');
-        $('#detail').addClass('fadeOut hidden');
-
-        
+        $('#detail').addClass('fadeOut hidden');    
     
     }
 
 
 
     var displayModal = function(era, moment) {
-        $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1]));
-        $('#correct-answer').modal('show');
+        $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1])).modal('show');
         $('[data-toggle=tooltip]').tooltip('hide');
     }
 
     var reopenModal = function() {
         var moment = $(this).attr('data-timeline');
         var era = $('#droppable-container').attr('data-era');
-        console.log('this is reOpenModa ' + 'the era is ' + era + " the moment is " + moment);
         displayModal(era, moment);
     } 
 
@@ -148,7 +164,6 @@ Detail = (function() {
             revert: 'invalid',
             snapMode: 'interior',
             snapTolerance: 10
-            //cursorAt: {top: 0, left: 10}
         });
 
         $('.droppable-widget').droppable({
@@ -188,7 +203,7 @@ Detail = (function() {
 
 
                     } else {
-                        ui.draggable.draggable('option', 'revert', 'valid');
+                        ui.draggable.draggable('option', 'revert', true);
                         var draggableNumber = ui.draggable.attr('data-timeline');
                         var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
                         setTimeout(function() {   draggableShell.tooltip('show'); }, 1000);

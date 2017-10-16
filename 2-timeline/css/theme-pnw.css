@@ -6,17 +6,17 @@
   font-family: "Ludicrous";
   font-weight: normal;
   font-style: normal;
-  src: url("../shared/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../shared/fonts/ludicrous/Ludicrous.woff") format("woff"), url("../shared/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+  src: url("../../shared/lib/im/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("../../shared/lib/im/fonts/ludicrous/Ludicrous.woff") format("woff"), url("../../shared/lib/im/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
 @font-face {
   font-family: "Archer Pro";
   font-weight: normal;
   font-style: normal;
-  src: url("../shared/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+  src: url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
 @font-face {
   font-family: "Archer Pro";
   font-weight: bold;
   font-style: normal;
-  src: url("../shared/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../shared/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
+  src: url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../../shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 h1 {
   font-size: 3.6rem;
   font-family: "Ludicrous", serif; }
@@ -34,7 +34,7 @@ h4 {
 .header {
   max-width: 540px;
   margin: 10px auto 0;
-  background-image: url("../shared/images/pnw/splash-04.svg");
+  background-image: url("../../shared/lib/im/images/pnw/splash-04.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;

@@ -121,6 +121,7 @@
     left: 0;
     border: 3px solid white;
     border-radius: 50%;
+    cursor: pointer;
     &:after {
     	content: url('../../shared/lib/im/images/icon-checkmark.svg');
     	height: 82px;
