@@ -58,11 +58,17 @@ Puzzle = (function() {
             revert: 'invalid',
             snapMode: 'interior',
             snapTolerance: 10,
-            //cursorAt: {top: 10, left: 10}
+            greedy: false,
+            start: function(event, ui) { 
+                $(this).draggable("option", "cursorAt", {
+                    left: Math.floor(this.clientWidth / 2),
+                    top: Math.floor(this.clientHeight / 2)
+                }); 
+            }
         });
 
          $('.droppable-widget').droppable({
-            tolerance: 'touch',
+            tolerance: 'pointer',
             drop: function( event, ui ) {
                 
 
@@ -107,7 +113,7 @@ Puzzle = (function() {
 
                     } else {
                         setPopover();
-                        ui.draggable.draggable('option', 'revert', 'valid');
+                        ui.draggable.draggable('option', 'revert', true);
                         $(this).css('border', '3px solid white');
                         $(this).popover('show');
                         $('.droppable-widget').tooltip('hide');
@@ -214,7 +220,9 @@ Puzzle = (function() {
         
     }
 
-
+    var disableAnimateDroppables = function() {
+        $('.droppable-widget').removeClass('animated pulse infinite');
+    }
     
     var resetDroppables = function() {
         if ($('.droppable-widget').hasClass('dropped')) {
@@ -259,10 +267,12 @@ Puzzle = (function() {
     	$(document).on('click tap', '#read-more-btn', showLearningPts);
         $(document).on('click tap', '#learning-points', hideLearningPts);
         $(document).on('hidden.bs.modal', hideDroppables);
-        $(document).on('shown.bs.modal', animateDroppables);
+        //$(document).on('shown.bs.modal', animateDroppables);
         $(document).on('onAfterOpen.lg', hideDroppables);
         $(document).on('onCloseAfter.lg', showModal);
         $('.draggable-widget').on('drag', hideTooltip);
+        $('.draggable-widget').on('drag', animateDroppables);
+        $('.draggable-widget').on('dragstop', disableAnimateDroppables);
     }
 
     

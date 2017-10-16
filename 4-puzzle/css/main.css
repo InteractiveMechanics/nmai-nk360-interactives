@@ -704,7 +704,8 @@ span[data-toggle="tooltip"] {
   background-color: rgba(1, 106, 135, 0.65);
   width: 25%;
   text-align: center;
-  padding: 6px; }
+  padding: 6px;
+  transition: all 0.5s linear; }
   .droppable-widget:hover, .droppable-widget:active, .droppable-widget:visited {
     border: 3px solid white; }
   .droppable-widget:after {
@@ -716,7 +717,7 @@ span[data-toggle="tooltip"] {
 .ui-draggable-dragging,
 .dragged
 .answered {
-  transform: scale(0.5, 0.5) !important;
+  transform: scale(0.2, 0.2) !important;
   cursor: move; }
 
 .modal-backdrop {
