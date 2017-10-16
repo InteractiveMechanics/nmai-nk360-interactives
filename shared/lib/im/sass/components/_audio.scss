@@ -12,13 +12,13 @@
         color: white;
 
         &:after {
-            background-image: url('../shared/images/icon-audio-white.svg');
+            background-image: url('../../shared/lib/im/images/icon-audio-white.svg');
         }
     }
     &:after {
         content: '';
         display: inline-block;
-        background-image: url('../shared/images/icon-audio.svg');
+        background-image: url('../../shared/lib/im/images/icon-audio.svg');
         background-size: contain;
         background-repeat: no-repeat;
         width: 18px;

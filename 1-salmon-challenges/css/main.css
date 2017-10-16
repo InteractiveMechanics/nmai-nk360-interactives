@@ -128,11 +128,11 @@ span[data-toggle="tooltip"] {
     background-color: #206CAF;
     color: white; }
     span[data-toggle="tooltip"]:hover:after, span[data-toggle="tooltip"]:focus:after, span[data-toggle="tooltip"]:active:after {
-      background-image: url("../shared/images/icon-definition-white.svg"); }
+      background-image: url("../../shared/lib/im/images/icon-definition-white.svg"); }
   span[data-toggle="tooltip"]:after {
     content: '';
     display: inline-block;
-    background-image: url("../shared/images/icon-definition.svg");
+    background-image: url("../../shared/lib/im/images/icon-definition.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 18px;
@@ -162,11 +162,11 @@ span[data-toggle="tooltip"] {
     background-color: #D67169;
     color: white; }
     [data-pronounce]:hover:after, [data-pronounce]:focus:after, [data-pronounce]:active:after {
-      background-image: url("../shared/images/icon-audio-white.svg"); }
+      background-image: url("../../shared/lib/im/images/icon-audio-white.svg"); }
   [data-pronounce]:after {
     content: '';
     display: inline-block;
-    background-image: url("../shared/images/icon-audio.svg");
+    background-image: url("../../shared/lib/im/images/icon-audio.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 18px;
@@ -236,11 +236,11 @@ span[data-toggle="tooltip"] {
   .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
     opacity: 0.5; }
   .activity-menu-wrapper .icon.icon-info {
-    background-image: url("../shared/images/icon-info.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-info.svg"); }
   .activity-menu-wrapper .icon.icon-home {
-    background-image: url("../shared/images/icon-home.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-home.svg"); }
   .activity-menu-wrapper .icon.icon-print {
-    background-image: url("../shared/images/icon-print.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-print.svg"); }
   .activity-menu-wrapper .icon.disabled {
     opacity: 0.4;
     cursor: default; }
@@ -254,7 +254,7 @@ span[data-toggle="tooltip"] {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-image: url("../shared/images/icon-zoom.svg");
+  background-image: url("../../shared/lib/im/images/icon-zoom.svg");
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -406,39 +406,30 @@ body .photo-container {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
-
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
-
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
-
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
-
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
-
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
-
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
-
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
-
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
-
 .hotspot {
   cursor: pointer;
   width: 87px;
@@ -462,13 +453,10 @@ body .photo-container {
 @keyframes stretch {
   0% {
     transform: scale(1); }
-
   50% {
     transform: scale(0.8); }
-
   100% {
     transform: scale(1); } }
-
 #select-fish {
   position: fixed;
   width: 100%;
@@ -548,22 +536,22 @@ body .photo-container {
   opacity: 0.5; }
 
 .activity-menu-wrapper .icon.icon-info {
-  background-image: url(../shared/images/icon-info.svg); }
+  background-image: url(../../shared/lib/im/images/icon-info.svg); }
 
 .activity-menu-wrapper .icon.icon-home {
-  background-image: url(../shared/images/icon-home.svg); }
+  background-image: url(../../shared/lib/im/images/icon-home.svg); }
 
 .activity-menu-wrapper .icon.icon-print {
-  background-image: url(../shared/images/icon-print.svg); }
+  background-image: url(../../shared/lib/im/images/icon-print.svg); }
 
 .activity-menu-wrapper .icon.icon-restart {
-  background-image: url(../shared/images/icon-restart.svg); }
+  background-image: url(../../shared/lib/im/images/icon-restart.svg); }
 
 .activity-menu-wrapper .icon.icon-pause {
-  background-image: url(../shared/images/icon-pause.svg); }
+  background-image: url(../../shared/lib/im/images/icon-pause.svg); }
 
 .activity-menu-wrapper .icon.icon-play {
-  background-image: url(../shared/images/icon-play.svg); }
+  background-image: url(../../shared/lib/im/images/icon-play.svg); }
 
 #congrats-instructions {
   font-family: 'Open Sans';
@@ -847,7 +835,7 @@ body .photo-container {
   border-color: red !important; }
 
 .slider-card {
-  background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
+  background: url(../../shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
@@ -855,7 +843,7 @@ body .photo-container {
       background-size: 360px 570px !important; } }
 
 .card-bg {
-  background: url(../shared/images/pnw/text-card-pnw@2x.png) white !important;
+  background: url(../../shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
@@ -904,7 +892,7 @@ body .photo-container {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../shared/images/icon-prev.svg") no-repeat;
+  background: url("../../shared/lib/im/images/icon-prev.svg") no-repeat;
   color: transparent;
   background-size: contain; }
 
@@ -914,7 +902,7 @@ body .photo-container {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../shared/images/icon-next.svg") no-repeat;
+  background: url("../../shared/lib/im/images/icon-next.svg") no-repeat;
   color: transparent;
   background-size: contain; }
 
@@ -1101,3 +1089,5 @@ body .photo-container {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -12,13 +12,13 @@ span[data-toggle="tooltip"] {
         color: white;
 
         &:after {
-            background-image: url('../shared/images/icon-definition-white.svg');
+            background-image: url('../../shared/lib/im/images/icon-definition-white.svg');
         }
     }
     &:after {
         content: '';
         display: inline-block;
-        background-image: url('../shared/images/icon-definition.svg');
+        background-image: url('../../shared/lib/im/images/icon-definition.svg');
         background-size: contain;
         background-repeat: no-repeat;
         width: 18px;

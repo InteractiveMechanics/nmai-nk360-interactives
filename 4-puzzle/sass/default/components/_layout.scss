@@ -6,7 +6,7 @@
 }
 
 #puzzle {
-	background: url('../shared/images/default/bkgr-generic@2x.png');
+	background: url('../../shared/lib/im/images/default/bkgr-generic@2x.png');
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
@@ -22,7 +22,7 @@
 }
 
 [data-gallery] {
-	background: url('../shared/images/icon-zoom.svg');
+	background: url('../../shared/lib/im/images/icon-zoom.svg');
 	background-repeat: no-repeat;
 }
 

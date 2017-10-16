@@ -14,7 +14,7 @@
 * Run `npm install` in the project directory
 
 ##### Working with this repo
-There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `Shared` directory where possible to save time.
+There will be at least three people actively working in this repository. Keep it clean and organized for everyone's sake. If you make a change that impacts other people, please notify them via Slack and submit the change as a Pull Request with reviewers assigned so we can approve it. Pull anything that can benefit the team into the `shared/lib/im` directory where possible to save time.
 
 
 ### Project structure
@@ -23,18 +23,16 @@ Each project folder (see 5-news-article-creator for a sample) should follow the 
 - data: contains json data files
 - js: contains js files
 - sass: contains sass files
-- shared: symlink to shared directory
 - test: contains qUnit tests
 
 ##### Shared assets
-In the root project directory is a shared folder containing assets we can use for multiple interactives. Each directory has a symlink to the shared directory to reference these files during development. This may include Sass files, images/assets, written content, or JavaScript files. Check the `shared/code` directory for all shared code with sample markup.
+In the root project directory is a shared folder containing assets we can use for multiple interactives. This may include Sass files, images/assets, written content, or JavaScript files. Check the `shared/lib/im/code` directory for all shared code with sample markup.
 
 ##### Third-party libraries
 We're using a number of outside libraries for different features, including:
 - [Bootstrap](https://v4-alpha.getbootstrap.com) - for standard Bootstrap modules, includes Tether
 - [jQuery](http://jquery.com/) - for, you know, jQuery things
 - [jQuery UI](https://jqueryui.com/) - for draggable, droppable, etc.
-- [jsPDF](https://parall.ax/products/jspdf) - for generate PDFs on the client side
 - [jsRender](http://www.jsviews.com/#jsrender) - for templating
 - [lightGallery](http://sachinchoolur.github.io/lightGallery/) - for lightbox modals
 - [Quill](https://quilljs.com) - for client-side WYSIWYG editor
@@ -44,7 +42,7 @@ We're using a number of outside libraries for different features, including:
 ##### Grunt
 Each interactive has a Gruntfile that will run a local webserver with watch command `grunt dev`. If you want to run JSHint to lint all of your custom JavaScript files, you can run `grunt jshint`.
 
-For distribution, you can run `grunt dist` with several variables: `--json=m#a#`, `--dir=name-of-directory`, `--theme=theme-acronym`. For example, if you want to generate/build Module 1's (Pacific Northwest) Activity 1, and the directory provided by NMAI is "pnw-fishwars-markup", you can should run `grunt dist --json=m1a1 --dir=pnw-fishwars-markup --theme=pnw`. This will build a `dist` directory with the built folder for that activity processed for deployment. To see the full list of directory names from NMAI, go here: [https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit](https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit)
+For distribution, you can run `grunt dist` with several variables: `--json=m#a#`, `--dir=name-of-directory`, `--theme=theme-acronym`. For example, if you want to generate/build Module 1's (Pacific Northwest) Activity 1, and the directory provided by NMAI is "pnw-fishwars-markup", you can should run `grunt dist --json=m1a1 --dir=pnw-fishwars-markup --theme=pnw`. This will build a folder with the built files for that activity processed for deployment in the root of the repo. To see the full list of directory names from NMAI, go here: [https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit](https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit)
 
 Here are all of the `grunt dist` commands you will need to run (by activity):
 - Salmon Challenge: `grunt dist --dir=pnw-history-culture-salmon --theme=pnw --json=m3a1`

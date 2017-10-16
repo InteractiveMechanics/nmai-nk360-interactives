@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                     port: 4000,
                     debug: true,
                     open: true,
-                    base: ['shared', '.']
+                    base: ['..']
                 }
             }
         },
@@ -37,10 +37,10 @@ module.exports = function(grunt) {
         copy: {
             dist: {
                 files: [
-                    {expand: true, src: ['css/**'], dest: 'dist/' + grunt.option('dir')},
-                    {expand: true, src: ['js/**'], dest: 'dist/' + grunt.option('dir')},
-                    {expand: true, src: ['assets/**'], dest: 'dist/' + grunt.option('dir')},
-                    {expand: true, src: ['data/**'], dest: 'dist/' + grunt.option('dir')},
+                    {expand: true, src: ['css/**'], dest: '../' + grunt.option('dir')},
+                    {expand: true, src: ['js/**'], dest: '../' + grunt.option('dir')},
+                    {expand: true, src: ['assets/**'], dest: '../' + grunt.option('dir')},
+                    {expand: true, src: ['data/**'], dest: '../' + grunt.option('dir')},
                 ]
             },
         },
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: [
-                    {expand: true, src: ['*.html'], dest: 'dist/' + grunt.option('dir') + '/', ext: '.html'},
+                    {expand: true, src: ['*.html'], dest: '../' + grunt.option('dir') + '/', ext: '.html'},
                 ]
             },
         },
@@ -63,8 +63,8 @@ module.exports = function(grunt) {
                 overwrite: true
             },
             build: {
-                src: '../shared',
-                dest: 'dist/' + grunt.option('dir') + '/shared'
+                src: '../shared/lib/im',
+                dest: '../' + grunt.option('dir') + '/shared'
             }
         },
         uglify: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: 'js',
                     src: '**/*.js',
-                    dest: 'dist/' + grunt.option('dir') + '/js'
+                    dest: '../' + grunt.option('dir') + '/js'
                 }]
             }
         }
@@ -93,5 +93,5 @@ module.exports = function(grunt) {
     grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
     grunt.registerTask('dev', ['connect', 'watch']);
-    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'uglify', 'symlink']);
+    grunt.registerTask('dist', ['sass', 'copy', 'processhtml', 'uglify']);
 };

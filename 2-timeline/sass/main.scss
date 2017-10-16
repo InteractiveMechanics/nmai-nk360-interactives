@@ -3,20 +3,20 @@
  * Include each file for this specific instance.
 */
 
-@import '../shared/sass/base/variables';
-@import '../shared/sass/base/helpers';
-@import '../shared/sass/base/typography';
-@import '../shared/sass/base/mixins';
+@import '../../shared/lib/im/sass/base/variables';
+@import '../../shared/lib/im/sass/base/helpers';
+@import '../../shared/lib/im/sass/base/typography';
+@import '../../shared/lib/im/sass/base/mixins';
 
-@import '../shared/sass/components/layout';
-@import '../shared/sass/components/header';
-@import '../shared/sass/components/footer';
-@import '../shared/sass/components/instructions';
-@import '../shared/sass/components/tooltips';
-@import '../shared/sass/components/audio';
-@import '../shared/sass/components/buttons';
-@import '../shared/sass/components/menu';
-@import '../shared/sass/components/gallery';
+@import '../../shared/lib/im/sass/components/layout';
+@import '../../shared/lib/im/sass/components/header';
+@import '../../shared/lib/im/sass/components/footer';
+@import '../../shared/lib/im/sass/components/instructions';
+@import '../../shared/lib/im/sass/components/tooltips';
+@import '../../shared/lib/im/sass/components/audio';
+@import '../../shared/lib/im/sass/components/buttons';
+@import '../../shared/lib/im/sass/components/menu';
+@import '../../shared/lib/im/sass/components/gallery';
 
 @import 'base/variables';
 @import 'base/helpers';
