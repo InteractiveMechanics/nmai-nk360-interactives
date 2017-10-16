@@ -440,6 +440,7 @@ body .photo-container {
     background-position: -5306px; } }
 
 .hotspot {
+  cursor: pointer;
   width: 87px;
   height: 87px;
   position: absolute;
