@@ -13,8 +13,7 @@ Init = (function() {
         $('#droppable-wrapper').html($.templates('#droppable-template').render(data.puzzles[0]));
         $('#complete-overlay').html($.templates('#complete-template').render(data.puzzles[0]));
         $('#learning-points').html($.templates('#learning-points-template').render(data.puzzles[0]));
-        $('#mobile-btn-wrapper').html($.templates('#mobile-btn-template').render(data.puzzles[0]));
-        selectGame();
+        Puzzle.buildGame();
         setHeaderTooltip();
     }
 
@@ -36,17 +35,6 @@ Init = (function() {
         $('#intro').addClass('hidden animated fadeOut');
     }
 
-
-    var selectGame = function() {
-        var windowWidth = $(window).width();
-        if (windowWidth >= 767) {
-            Puzzle.buildGame();
-        } else {
-            Mobile.buildGame();
-            console.log('build mobile');
-        }
-
-    }
 
     
     var bindEvents = function() {
