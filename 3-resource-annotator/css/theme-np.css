@@ -6,14 +6,12 @@
   font-family: "Geared Slab";
   font-weight: normal;
   font-style: normal;
-  src: url("../shared/fonts/geared-slab/GearedSlab.eot?") format("eot"), url("../shared/fonts/geared-slab/GearedSlab.woff") format("woff"), url("../shared/fonts/geared-slab/GearedSlab.ttf") format("truetype"); }
-
+  src: url("../../shared/lib/im/fonts/geared-slab/GearedSlab.eot?") format("eot"), url("../../shared/lib/im/fonts/geared-slab/GearedSlab.woff") format("woff"), url("../../shared/lib/im/fonts/geared-slab/GearedSlab.ttf") format("truetype"); }
 @font-face {
   font-family: "Geared Slab";
   font-weight: bold;
   font-style: normal;
-  src: url("../shared/fonts/geared-slab/GearedSlab-Bold.eot?") format("eot"), url("../shared/fonts/geared-slab/GearedSlab-Bold.woff") format("woff"), url("../shared/fonts/geared-slab/GearedSlab-Bold.ttf") format("truetype"); }
-
+  src: url("../../shared/lib/im/fonts/geared-slab/GearedSlab-Bold.eot?") format("eot"), url("../../shared/lib/im/fonts/geared-slab/GearedSlab-Bold.woff") format("woff"), url("../../shared/lib/im/fonts/geared-slab/GearedSlab-Bold.ttf") format("truetype"); }
 h1 {
   font-size: 3.6rem;
   font-family: "Geared Slab", serif;
@@ -35,7 +33,7 @@ h4 {
   max-width: 540px;
   margin: 10px auto 0;
   padding: 10px 0 20px;
-  background-image: url("../shared/images/np/decoration-np.svg");
+  background-image: url("../../shared/lib/im/images/np/decoration-np.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -53,35 +51,35 @@ h4 {
     font-family: "Geared Slab", serif;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-    color: #311d18; }
+    color: #311D18; }
 
 .btn {
-  border-color: #311d18;
-  color: #311d18; }
+  border-color: #311D18;
+  color: #311D18; }
   .btn:hover, .btn:focus, .btn:active {
-    background-color: #311d18;
-    border-color: #311d18;
+    background-color: #311D18;
+    border-color: #311D18;
     color: white !important; }
   .btn.btn-white {
     border-color: white;
     color: white; }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
-      color: #311d18 !important;
+      color: #311D18 !important;
       background-color: white;
       border-color: white; }
   .btn.active {
-    border-color: #311d18;
-    background-color: #311d18;
+    border-color: #311D18;
+    background-color: #311D18;
     color: white !important;
     opacity: 1; }
     .btn.active:hover, .btn.active:focus, .btn.active:active {
       color: white !important;
-      background-color: #311d18;
-      border-color: #311d18;
+      background-color: #311D18;
+      border-color: #311D18;
       opacity: 0.65; }
 
 body {
-  background: url("../shared/images/np/bkgr-np@2x.png");
+  background: url("../../shared/lib/im/images/np/bkgr-np@2x.png");
   background-size: cover; }
   body .annotation-screen {
     margin: 50px auto 0 !important; }
@@ -96,9 +94,11 @@ body {
   background-color: #677c4a; }
 
 .slider-card {
-  background: url(../shared/images/np/text-card-np@2x.png) white !important;
+  background: url(../../shared/lib/im/images/np/text-card-np@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
     .slider-card {
       background-size: 370px 480px !important; } }
+
+/*# sourceMappingURL=theme-np.css.map */
