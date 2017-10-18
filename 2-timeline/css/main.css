@@ -121,7 +121,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   span[data-toggle="tooltip"]:hover, span[data-toggle="tooltip"]:focus, span[data-toggle="tooltip"]:active {
     background-color: #206CAF;
@@ -155,7 +155,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
     background-color: #D67169;
@@ -293,6 +293,9 @@ div[id^="era-block"] {
   align-items: flex-end; }
   div[id^="era-block"] img {
     position: absolute; }
+    @media (max-width: 767px) {
+      div[id^="era-block"] img {
+        width: 75%; } }
   div[id^="era-block"] .era-content-wrapper {
     text-align: center;
     width: 100%;
@@ -301,6 +304,22 @@ div[id^="era-block"] {
     flex-direction: column;
     padding: 0px 60px 80px 60px;
     position: relative; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      div[id^="era-block"] .era-content-wrapper {
+        height: 39%;
+        justify-content: space-between;
+        width: 80%;
+        left: 10%;
+        top: 46%;
+        padding-bottom: 0px; } }
+    @media (max-width: 767px) {
+      div[id^="era-block"] .era-content-wrapper {
+        height: 39%;
+        justify-content: space-between;
+        width: 100%;
+        left: 0%;
+        top: 43%;
+        padding: 0px 30px; } }
 
 .heading-wrapper {
   margin-bottom: 80px;
@@ -322,6 +341,9 @@ div[id^="era-block"] {
 .heading-wrapper[data-era="1"] h1 {
   position: relative;
   top: 10px; }
+  @media (max-width: 767px) {
+    .heading-wrapper[data-era="1"] h1 {
+      font-size: 3em; } }
 
 #era-block-1 {
   background: url("../assets/timeline-segment-overlay-bg01@2x.png"), url("../assets/timeline-segment-bg01@2x.jpg");
@@ -460,6 +482,10 @@ div[id^="era-block"] {
            supported by Chrome and Opera */ }
     .draggable-widget div p {
       margin-bottom: 0px; }
+  @media (max-width: 767px) {
+    .draggable-widget {
+      height: 90px;
+      padding: 5px 5px 5px 52px; } }
 
 .draggable-img {
   height: 82px;
@@ -479,6 +505,9 @@ div[id^="era-block"] {
   top: -115px;
   height: 82px;
   width: 82px; }
+  @media (max-width: 767px) {
+    .draggable-img-wrapper {
+      top: -90px; } }
 
 .draggable-overlay {
   background: #a8bd46;
@@ -926,5 +955,66 @@ div[id^="era-block"] {
   font-style: italic;
   text-align: right;
   margin-top: 10px; }
+
+.slick-prev,
+.slick-next {
+  width: 100px;
+  height: 100px;
+  z-index: 1; }
+  @media (max-width: 767px) {
+    .slick-prev,
+    .slick-next {
+      width: 50px;
+      height: 50px; } }
+
+.slick-prev {
+  left: 25px; }
+  .slick-prev:before {
+    content: "";
+    background: url("../../shared/lib/im/images/icon-prev.svg");
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block; }
+  @media (max-width: 767px) {
+    .slick-prev {
+      left: -5px; }
+      .slick-prev:before {
+        width: 50px;
+        height: 50px; } }
+
+.slick-next {
+  right: 25px; }
+  .slick-next:before {
+    content: "";
+    background: url("../../shared/lib/im/images/icon-next.svg");
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block; }
+  @media (max-width: 767px) {
+    .slick-next {
+      right: -5px; }
+      .slick-next:before {
+        width: 50px;
+        height: 50px; } }
+
+.slick-dots li button:before {
+  content: '';
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; }
+@media (max-width: 767px) {
+  .slick-dots li button:before {
+    width: 15px;
+    height: 15px; } }
+
+.slick-dots {
+  bottom: 75px; }
 
 /*# sourceMappingURL=main.css.map */

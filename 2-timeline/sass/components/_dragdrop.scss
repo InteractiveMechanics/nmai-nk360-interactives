@@ -87,6 +87,11 @@
 			margin-bottom: 0px;
 		}
 	}
+
+	@include screen-xs {
+		height: 90px;
+		padding: 5px 5px 5px 52px;
+	}
 }
 
 .draggable-img {
@@ -102,6 +107,7 @@
   	&:hover, &:focus {
   		animation: pulse 1s infinite;
   	}
+
 }
 
 .draggable-img-wrapper {
@@ -109,6 +115,9 @@
 	top: -$moment-height;
 	height: 82px;
 	width: 82px;
+	@include screen-xs {
+		top: -90px;
+	}
 }
 
 .draggable-overlay {

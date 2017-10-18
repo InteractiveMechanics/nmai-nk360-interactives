@@ -16,6 +16,9 @@ div[id^="era-block"] {
 
 	img {
 		position: absolute;
+		@include screen-xs {
+			width: 75%;
+		}
 	}
 	
 	.era-content-wrapper {
@@ -26,6 +29,22 @@ div[id^="era-block"] {
 	    flex-direction: column;
 	    padding: 0px 60px 80px 60px;
 	    position: relative;
+	    @include screen-sm {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 80%;
+		    left: 10%;
+		    top: 46%;
+		    padding-bottom: 0px;
+	    }
+	    @include screen-xs {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 100%;
+		    left: 0%;
+		    top: 43%;
+		    padding: 0px 30px;
+	    }
 	}
 }
 
@@ -56,6 +75,9 @@ div[id^="era-block"] {
 	h1 {
 		position: relative;
 		top: 10px;
+		@include screen-xs {
+			font-size: 3em;
+		}
 	}
 }
 

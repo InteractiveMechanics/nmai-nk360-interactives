@@ -12,6 +12,7 @@ $(function(){
         Instructions.init();
         Detail.init();
         Explore.init();
+        Slider.init();
 
     }, 'json');
 });
