@@ -42,18 +42,6 @@
             "Cards": [
                 {
                     "id": 1,
-                    "title": "Quileute Hook",
-                    "subtitle": "",
-                    "image": "./assets/imgs/m3a1/card-1.jpg",
-                    "fullimage": "./assets/imgs/m3a1/full-card-1.jpg",
-                    "caption": "Native Peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.",
-                    "body": "",
-                    "credit": "Quileute iron salmon hook, ca.1890. NMAI 057591",
-                    "incorrect": "Try again. Read the caption and think about the significance of this object to Pacific Northwest Native Peoples.",
-                    "themes": [1]
-                },
-                                {
-                    "id": 2,
                     "title": "Lisa Wilson Cook",
                     "subtitle": "",
                     "image": "",
@@ -63,9 +51,8 @@
                     "credit": "Lisa Wilson Cook (Lummi), NMAI Interview, 2016",
                     "incorrect": "Try again. Think about what Lisa Cook says about the importance of fishing to her and her family.",
                     "themes": [1]
-                },
-                                {
-                    "id": 3,
+                },{
+                    "id": 2,
                     "title": "Michael Marchand",
                     "subtitle": "",
                     "image": "",
@@ -75,9 +62,8 @@
                     "credit": "Michael Marchand (Confederated Tribes of Colville Reservation), NMAI Interview, July 2016",
                     "incorrect": "Try again. What does Michael Marchand tell you about the role of salmon for his community?",
                     "themes": [1]
-                },
-                                {
-                    "id": 4,
+                },{
+                    "id": 3,
                     "title": "Makah Days",
                     "subtitle": "",
                     "image": "./assets/imgs/m3a1/card-4.jpg",
@@ -87,21 +73,8 @@
                     "credit": "Makah Feast Day, Salmon Bake, ca. 1955. Photograph credited to the Makah Tribe, <a target='_blank' href='http://exotichikes.com/wp-content/uploads/2013/12/makahfeastday_salmon-bake-c1955.jpg'>Source</a>",
                     "incorrect": "Try again. What does this convey about the importance of Native food practices?",
                     "themes": [1]
-                },
-                                {
-                    "id": 5,
-                    "title": "Carol Craig",
-                    "subtitle": "",
-                    "image": "",
-                    "fullimage": "",
-                    "caption": "",
-                    "body": "“On March 7, 1957, they [the Army Corps of Engineers] closed the concrete gates and the tribal people stood on the side of the hills dressed in regalia and mourning the loss of Celilo Falls. It took seven to eight hours before it was completely flooded over . . . It was devastating. They thought, after that, that we would lay down our fishing equipment and walk away.”",
-                    "credit": "Carol Craig (Yakama), NMAI Interview, August 2016",
-                    "incorrect": "Try again. Think about the event that Carol Craig is referencing. How did that event impact the communities of Celilo Falls?",
-                    "themes": [2]
-                },
-                                {
-                    "id": 6,
+                },{
+                    "id": 4,
                     "title": "Dalles Dam",
                     "subtitle": "",
                     "image": "./assets/imgs/m3a1/card-6.jpg",
@@ -111,9 +84,8 @@
                     "credit": "TThe Dalles Dam Blast, 1952. Photograph by Ray Atkeson, courtesy of ©Ray Atkeson Image Archive 2008.72.1",
                     "incorrect": "Try again. What are possible consequences for salmon of using explosive forces? ",
                     "themes": [2]
-                },
-                                {
-                    "id": 7,
+                },{
+                    "id": 5,
                     "title": "Valerie Segrest",
                     "subtitle": "",
                     "image": "",
@@ -123,9 +95,8 @@
                     "credit": "Valerie Segrest (Muckleshoot), NMAI Interview, August 2016",
                     "incorrect": "Try again. How does limited access to healthy foods impact individuals and communities?",
                     "themes": [2]
-                },
-                                {
-                    "id": 8,
+                },{
+                    "id": 6,
                     "title": "Logging",
                     "subtitle": "",
                     "image": "./assets/imgs/m3a1/card-8.jpg",
@@ -135,9 +106,8 @@
                     "credit": "A Kelly-Springfield logging truck hauls a large fir log along a track-like wooden logging road. Behind the truck are acres of cutover land. Photo by J. Wilbur Sandison, ca. 1925. Photo courtesy of the PEMCO and Stevens Collection, Museum of History and Industry, Seattle. 1983.10.3675.10",
                     "incorrect": "Try again. Read the caption. What does clear-cutting do to salmon habitats?",
                     "themes": [2]
-                },
-                                {
-                    "id": 9,
+                },{
+                    "id": 7,
                     "title": "Fishing Commissions",
                     "subtitle": "",
                     "image": "./assets/imgs/m3a1/card-9.jpg",
@@ -147,9 +117,8 @@
                     "credit": "Seal of the Columbia River Inter-Tribal Fish Commission (CRITFC). Courtesy of Jeremy Five Crows; Seal of the Northwest Indian Fisheries Commission (NWIFC), courtesy of NWIFC.",
                     "incorrect": "Try again. Think about the significance of educating people about salmon restoration, treaty rights, and tribal cultures.",
                     "themes": [3]
-                },
-                                {
-                    "id": 10,
+                },{
+                    "id": 8,
                     "title": "Mel Moon",
                     "subtitle": "",
                     "image": "",
@@ -159,9 +128,8 @@
                     "credit": "Mel Moon (Quileute), NMAI Interview, July 2016",
                     "incorrect": "Try again. What is Mel Moon saying about the role Native Nations play in resource management?",
                     "themes": [3]
-                },
-                                {
-                    "id": 11,
+                },{
+                    "id": 9,
                     "title": "Carol Craig",
                     "subtitle": "",
                     "image": "",
@@ -170,18 +138,6 @@
                     "body": "“We planted baby fish, they left, they started coming back in numbers. People could not believe it. This was for everybody. Tribal and nontribal people could fish in the Yakima River.”",
                     "credit": "Carol Craig (Yakama), NMAI Interview, August 2016",
                     "incorrect": "Try again. Why did salmon begin to return to the Yakima River?",
-                    "themes": [3]
-                },
-                                {
-                    "id": 12,
-                    "title": "Nancy Shippentower",
-                    "subtitle": "",
-                    "image": "",
-                    "fullimage": "",
-                    "caption": "",
-                    "body": "“It’s the tribes that are putting the fish back in the waters. It’s our people doing that to make sure our livelihood will carry on, that our children will have this opportunity to get into a boat and go fishing so they can eat what they need.”",
-                    "credit": "Nancy Shippentower (Puyallup), NMAI Interview, July 2016",
-                    "incorrect": "Try again. Who is taking responsibility for restoring salmon and why is that significant?",
                     "themes": [3]
                 }
 
