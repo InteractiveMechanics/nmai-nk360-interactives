@@ -84,7 +84,7 @@ Cards = (function() {
         Cards.editor = new Quill('#text-editor', {
             debug: false,
             theme: 'snow',
-            placeholder: 'Lorem ipsum sit dolor amet',
+            placeholder: 'What story do the sources tell about the compelling question? Construct a news article to address the question and explain how the sources support your argument.',
             modules: {
                 toolbar: [
                     ['bold', 'italic', 'underline']

@@ -1069,7 +1069,7 @@
 				"image": "",
 				"credit": "",
 				"caption": "",
-				"body": "Low water levels can make the spawning migration even more difficult. This condition can be caused by many different factors. Extended periods of drought, or low rainfall and decreased winter snows create low water levels in rivers. The people who manage dams also have the ability to affect the water levels in rivers. Water is generally released from dams to keep an acceptable flow in the river. However, when drought conditions exist there may not be enough water in the reservoir to release into the river below. Low water levels can keep salmon from reaching their spawning grounds, which are often located in normally shallow waters. Lower levels also result in lower water temperatures, another hazard for salmon.",
+				"body": "Extended periods of drought or low rainfall and decreased winter snows create low water levels in rivers. Sometimes less water is released from dams during droughts, which also lowers water levels. Lower water levels result in higher water temperatures— a hazard for salmon. Additionally, low water levels make migration even more difficult and can ultimately keep salmon from reaching their spawning ground.",
 				"result": "Lose 1 fish",
 				"lose_fish": true,
 				"add_fish": false
@@ -1085,7 +1085,7 @@
 				"image": "",
 				"credit": "",
 				"caption": "",
-				"body": "Low water levels can make the spawning migration even more difficult. This condition can be caused by many different factors. Extended periods of drought or low rainfall and decreased winter snows create low water levels in rivers. The people who manage dams also have the ability to affect the water levels in rivers. Water is generally released from dams to keep an acceptable flow in the river. However, when drought conditions exist, there may not be enough water in the reservoir to release into the river below. Low water levels can keep salmon from reaching their spawning grounds, which are often located in normally shallow waters. Lower levels also result in lower water temperatures, another hazard for salmon.",
+				"body": "Extended periods of drought or low rainfall and decreased winter snows create low water levels in rivers. Sometimes less water is released from dams during droughts, which also lowers water levels. Lower water levels result in higher water temperatures— a hazard for salmon. Additionally, low water levels make migration even more difficult and can ultimately keep salmon from reaching their spawning ground.",
 				"result": "You lose one fish.",
 				"lose_fish": true,
 				"add_fish": false
