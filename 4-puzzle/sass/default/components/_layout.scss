@@ -26,7 +26,22 @@
 	background-repeat: no-repeat;
 }
 
+.popover {
+	background-color: #ec5343;
+	color: white;
+}
+
+
 .popover-title {
 	display: none;
 }
 
+
+.popover.popover-top::after, 
+.popover.bs-tether-element-attached-bottom::after {
+	border-top-color:  #ec5343;
+}
+
+.btn-wrapper {
+	display: flex;
+}

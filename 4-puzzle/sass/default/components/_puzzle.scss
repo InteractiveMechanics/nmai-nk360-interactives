@@ -238,6 +238,12 @@
     			margin-bottom: 10px;
     		}
     	}
+
+    	@include screen-md {
+    		left: 25%;
+    		width: 50%;
+    	}
+
     	@include screen-sm {
     		left: 20%;
     		width: 60%;

@@ -122,7 +122,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   span[data-toggle="tooltip"]:hover, span[data-toggle="tooltip"]:focus, span[data-toggle="tooltip"]:active {
     background-color: #206CAF;
@@ -156,7 +156,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
     background-color: #D67169;
@@ -343,8 +343,19 @@ span[data-toggle="tooltip"] {
   background: url("../../shared/lib/im/images/icon-zoom.svg");
   background-repeat: no-repeat; }
 
+.popover {
+  background-color: #ec5343;
+  color: white; }
+
 .popover-title {
   display: none; }
+
+.popover.popover-top::after,
+.popover.bs-tether-element-attached-bottom::after {
+  border-top-color: #ec5343; }
+
+.btn-wrapper {
+  display: flex; }
 
 #intro,
 #learning-points {
@@ -408,6 +419,11 @@ span[data-toggle="tooltip"] {
       .learning-points-card .text-wrapper {
         height: 80%;
         overflow: scroll; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .intro-card,
+    .learning-points-card {
+      width: 40%;
+      left: 30%; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .intro-card,
     .learning-points-card {
@@ -660,6 +676,10 @@ span[data-toggle="tooltip"] {
       @media (max-width: 767px) {
         #complete-overlay .text-wrapper p {
           margin-bottom: 10px; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #complete-overlay .text-wrapper {
+        left: 25%;
+        width: 50%; } }
     @media (min-width: 768px) and (max-width: 991px) {
       #complete-overlay .text-wrapper {
         left: 20%;

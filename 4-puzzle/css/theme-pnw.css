@@ -104,14 +104,6 @@ h4 {
     position: absolute;
     left: 42%; }
 
-.popover {
-  background-color: #ec5343;
-  color: white; }
-
-.popover.popover-top::after,
-.popover.bs-tether-element-attached-bottom::after {
-  border-top-color: #ec5343; }
-
 .intro-card,
 .learning-points-card {
   background: url("../../shared/lib/im/images/pnw/text-card-pnw@2x.png");

@@ -21,13 +21,4 @@
 	}
 }
 
-.popover {
-	background-color: $accent;
-	color: white;
-}
-
-.popover.popover-top::after, 
-.popover.bs-tether-element-attached-bottom::after {
-	border-top-color: $accent;
-}
 
