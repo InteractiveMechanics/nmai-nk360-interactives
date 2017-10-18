@@ -119,17 +119,21 @@ Cards = (function() {
 
 
     var changeStep = function(event, slick, currentSlide) {
+        var id = slick.$slider[0].id;
         var slide = $('.slick-track').children().eq(currentSlide).data('title');
-        sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
 
-        if (slide == 'Byline'){
-            $('#masthead').focus();
-        }
-        if (slide == 'Article'){
-            Cards.editor.focus();
-        }
-        if (slide == 'Headline'){
-            $('#headline').focus();
+        if (id == 'step-by-step-cards'){
+            sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
+    
+            if (slide == 'Byline'){
+                $('#masthead').focus();
+            }
+            if (slide == 'Article'){
+                Cards.editor.focus();
+            }
+            if (slide == 'Headline'){
+                $('#headline').focus();
+            }
         }
     }
 
@@ -273,12 +277,13 @@ Cards = (function() {
 
     var updateWordCount = function() {
         var count = getEditorTextLength();
-        $('.article-word-count').text(count + ' words');
 
         if (count > 250) {
             $('.article-word-count').addClass('error');
+            $('.article-word-count').text((250-count) + ' words');
         } else {
             $('.article-word-count').removeClass('error');
+            $('.article-word-count').text(count + ' words');
         }
     }
     var updateImageCaptions = function(id, addTo) {

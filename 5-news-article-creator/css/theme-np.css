@@ -79,7 +79,7 @@ h4 {
       opacity: 0.65; }
 
 #step-by-step-cards .step .step-container {
-  background-image: url("../shared/images/np/text-card-np@2x.png");
+  background-image: url("../../shared/lib/im/images/np/text-card-np-watermark@2x.png");
   background-size: 400px;
   background-position: center center;
   background-repeat: no-repeat; }

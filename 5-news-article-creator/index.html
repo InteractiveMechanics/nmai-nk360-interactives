@@ -4,8 +4,21 @@
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="The National Museum of the American Indian">
+    <meta name="description" content="">
     
     <title>News Article Creator - Native Knowledge 360&deg;</title>
+
+    <meta property="og:title" content="News Article Creator - Native Knowledge 360&deg;" />
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <meta property="og:url" content="http://nmai.si.edu/nk360/<%= dir %>" />
+    /build -->
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   
     <!-- Include shared stylesheets -->
     <link rel="stylesheet" href="../shared/lib/im/css/bootstrap/bootstrap.css" />
@@ -92,7 +105,7 @@
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
-            <li class="list-inline-item"><a href="#">Credits</a></li>
+            <li class="list-inline-item"><a href="#" id="footer-credits" data-content="">Credits</a></li>
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
@@ -112,7 +125,7 @@
                     <p>Once you've completed your newspaper, save it as a PDF and print it out to distribute to the masses!</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue this Activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="1">Continue this Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -172,7 +185,8 @@
                     <h1 class="text-center">Inform your readers</h1>
                     <div class="divider"></div>
                     <p class="large guiding-question text-center"></p>
-                    <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process. </p>
+                    <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process.</p>
+                    <a class="hidden" tabindex="1">Next</a>
                 </div>
             </div>
             <div class="step step-theme" data-title="Design">
@@ -182,8 +196,8 @@
                     <div class="divider"></div>
                     <p>The style of your paper will change the look and feel. Consider your audience, the subject matter, and mood you want to create.</p>
                     <div class="row">
-                        <div class="col"><a class="btn btn-block btn-theme" data-theme="traditional" title="Theme: Traditional">Traditional</a></div>
-                        <div class="col"><a class="btn btn-block btn-theme" data-theme="modern" title="Theme: Modern">Modern</a></div>
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="traditional" tabindex="2" title="Theme: Traditional">Traditional</a></div>
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="modern" tabindex="3" title="Theme: Modern">Modern</a></div>
                     </div>
                 </div>
             </div>
@@ -329,7 +343,7 @@
     <script src="../shared/lib/im/code/upperleftmenu/menu.js"></script>
 
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m4a1.json';</script>
+    <script>var jsondata = './data/m2a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

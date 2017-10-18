@@ -83,14 +83,17 @@ footer {
         display: none; } }
   footer ul {
     margin-top: 6px; }
-    footer ul li:not(:last-child):after {
-      content: '|';
-      margin: 0 0 0 10px;
-      opacity: 0.5; }
-    footer ul li a {
-      color: white; }
-      footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
-        color: white; }
+    footer ul li {
+      font-family: "Open Sans", sans-serif; }
+      footer ul li:not(:last-child):after {
+        content: '|';
+        margin: 0 0 0 10px;
+        opacity: 0.5; }
+      footer ul li a {
+        color: white;
+        font-family: "Open Sans", sans-serif; }
+        footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+          color: white; }
 
 #instructions {
   position: fixed;
@@ -122,7 +125,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   span[data-toggle="tooltip"]:hover, span[data-toggle="tooltip"]:focus, span[data-toggle="tooltip"]:active {
     background-color: #206CAF;
@@ -150,13 +153,26 @@ span[data-toggle="tooltip"] {
         content: none;
         display: none; } }
 
+body > .popover {
+  border: none;
+  border-radius: 0; }
+  body > .popover .popover-title {
+    font-family: "Open Sans", sans-serif;
+    background: none;
+    border: none;
+    padding: 12px 14px 0px;
+    font-weight: 700; }
+  body > .popover .popover-content {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem; }
+
 [data-pronounce] {
   border: 1px solid #D67169;
   border-radius: 4px;
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
     background-color: #D67169;
@@ -531,11 +547,13 @@ main {
       background-image: url("../assets/icon-star-stroke.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      width: 44px;
-      height: 44px;
+      width: 60px;
+      height: 60px;
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 50%;
+      left: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
       filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
       transition: 0.5s all;
       cursor: pointer;
@@ -594,12 +612,12 @@ main {
     cursor: pointer; }
   #navigation .nav-arrow.nav-arrow-left {
     left: 20px;
-    background-image: url("../shared/images/icon-prev.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-prev.svg"); }
     #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
       left: 10px; }
   #navigation .nav-arrow.nav-arrow-right {
     right: 20px;
-    background-image: url("../shared/images/icon-next.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-next.svg"); }
     #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
       right: 10px; }
 
@@ -623,7 +641,7 @@ main {
       height: 16px;
       text-indent: -99999px;
       padding: 0;
-      margin: 0 2px;
+      margin: 0 4px;
       border: 1px solid white !important;
       border-radius: 99px;
       outline: none;
@@ -669,10 +687,12 @@ main {
     @media screen and (max-width: 991px) and (orientation: portrait) {
       #print-preview .print-preview-container {
         width: 720px; } }
+    #print-preview .print-preview-container.traditional * {
+      font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-headline {
       font-weight: bold;
       font-style: italic;
-      font-family: 'Times New Roman'; }
+      font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-masthead {
       font-family: 'Times New Roman', serif; }
       #print-preview .print-preview-container.traditional .paper-preview-masthead .byline {
@@ -687,6 +707,8 @@ main {
       font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional blockquote .blockquote-footer {
       font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional blockquote .blockquote-footer em {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional figure figcaption {
       font-family: 'Times New Roman', serif; }
       #print-preview .print-preview-container.traditional figure figcaption em {
@@ -720,13 +742,13 @@ main {
     #print-preview .paper-preview-header hr:last-of-type {
       margin: 30px 0; }
   #print-preview .paper-preview-headline {
-    height: 96px;
+    height: 100px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     font-size: 46px;
-    line-height: 1.1; }
+    line-height: 1; }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
       height: 76px;
@@ -766,6 +788,8 @@ main {
         padding: 0;
         height: auto;
         color: #9eb2c1; }
+        #print-preview .paper-preview-article blockquote .blockquote-footer em {
+          font-style: italic; }
     #print-preview .paper-preview-article figure .image-wrapper {
       text-align: center;
       background: #f1f2f2; }
@@ -779,7 +803,7 @@ main {
     width: 45px;
     height: 45px;
     display: block;
-    background-image: url(../shared/images/icon-close.svg);
+    background-image: url("../../shared/lib/im/images/icon-close.svg");
     background-size: 100%;
     position: absolute;
     top: 0;
