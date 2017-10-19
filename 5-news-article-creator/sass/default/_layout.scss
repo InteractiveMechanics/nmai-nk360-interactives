@@ -26,5 +26,8 @@ main {
             width: 300px;
             margin-right: -150px;
         }
+        @media screen and ($screen-xs) {
+            display: none;
+        }
     }
 }

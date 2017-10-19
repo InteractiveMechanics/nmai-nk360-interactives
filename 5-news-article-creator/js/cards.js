@@ -163,7 +163,7 @@ Cards = (function() {
                 addImageToArray(id);
             }
         }
-        $(window).trigger('resize');
+        $('#image-captioning .card-slider-container').slick('setPosition');
     }
     var addImageToArray = function(id) {
         var image = data.images[id];
