@@ -1,0 +1,137 @@
+/**
+ * This file loads all Sass files to be compiled by Grunt.
+ * Include each file for this specific instance.
+*/
+@font-face {
+  font-family: "Ludicrous";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.woff") format("woff"), url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+@font-face {
+  font-family: "Archer Pro";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
+h1 {
+  font-size: 3.6rem;
+  font-family: "Ludicrous", serif; }
+
+h2 {
+  font-family: "Archer Pro", serif;
+  color: #006986; }
+
+h3 {
+  font-family: "Archer Pro", serif; }
+
+h4 {
+  font-size: 1rem; }
+
+.header {
+  max-width: 540px;
+  margin: 10px auto 0;
+  background-image: url("/nk360/shared/lib/im/images/pnw/splash-04.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px 0 0;
+  max-height: 85px;
+  margin-bottom: 25px; }
+  @media screen and (max-width: 991px) and (orientation: portrait) {
+    .header {
+      margin: 60px auto 0; } }
+  .header h1 {
+    font-size: 2.1rem;
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
+  .header h2 {
+    font-family: "Archer Pro", serif;
+    font-size: 0.8rem;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
+
+.btn {
+  border-color: #2E3742;
+  color: #2E3742; }
+  .btn:hover, .btn:focus, .btn:active {
+    background-color: #2E3742;
+    border-color: #2E3742;
+    color: white !important; }
+  .btn.btn-white {
+    border-color: white;
+    color: white; }
+    .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
+      color: #2E3742 !important;
+      background-color: white;
+      border-color: white; }
+  .btn.active {
+    border-color: #2E3742;
+    background-color: #2E3742;
+    color: white !important;
+    opacity: 1; }
+    .btn.active:hover, .btn.active:focus, .btn.active:active {
+      color: white !important;
+      background-color: #2E3742;
+      border-color: #2E3742;
+      opacity: 0.65; }
+
+.card {
+  background: url("../assets/card-pnw@2x.png");
+  background-size: contain;
+  background-color: #eaeaea; }
+
+.modal-content {
+  background: url("/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png");
+  background-color: white;
+  background-size: 90%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.modal-title {
+  font-family: "Archer Pro", serif;
+  font-size: 1.7em; }
+
+.dropped {
+  background: #a8bd46;
+  opacity: 0.6; }
+  .dropped:after {
+    content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
+    position: absolute;
+    left: 42%; }
+
+.popover {
+  background-color: #ec5343;
+  color: white; }
+
+.popover.popover-top::after,
+.popover.bs-tether-element-attached-bottom::after {
+  border-top-color: #ec5343; }
+
+.intro-card,
+.learning-points-card {
+  background: url("/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png");
+  background-size: 90%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2; }
+  .intro-card .header-wrapper h1,
+  .learning-points-card .header-wrapper h1 {
+    font-family: "Archer Pro", serif; }
+
+.modal-img-wrapper {
+  background-color: #9eb2c1; }
+
+#complete-overlay .text-wrapper h1 {
+  font-family: "Archer Pro", serif; }
+
+#puzzle {
+  background: url("/nk360/shared/lib/im/images/pnw/bkgr-pnw@2x.png");
+  background-size: cover; }
+
+/*# sourceMappingURL=theme-pnw.css.map */

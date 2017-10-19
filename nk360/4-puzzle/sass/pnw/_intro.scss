@@ -1,0 +1,18 @@
+.intro-card,
+.learning-points-card {
+	background: url('/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png');
+	background-size: 90%;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 2;
+	.header-wrapper {
+		h1 {
+			font-family: $headline-accent;
+		}
+	}
+}
+
+.modal-img-wrapper {
+	background-color: $midgray;
+}

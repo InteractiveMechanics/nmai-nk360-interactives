@@ -1,0 +1,9 @@
+.slider-card {
+    background: url(/nk360/shared/lib/im/images/np/text-card-np@2x.png) white !important;
+    background-size: 400px 600px !important;
+    background-repeat:no-repeat;
+
+    @media (max-width: 767px) { 
+        background-size: 370px 480px !important;
+    }
+}

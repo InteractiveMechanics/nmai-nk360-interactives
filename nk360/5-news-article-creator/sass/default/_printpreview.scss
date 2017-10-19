@@ -1,0 +1,246 @@
+#print {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    color: white;
+    transition: 0.5s all;
+    z-index: 1001;
+
+    @media screen and ($screen-ltmd) and ($screen-portrait) {
+        bottom: 80px;
+        right: 50%;
+        width: 300px;
+        margin-right: -150px;
+    }
+}
+#print-preview {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+
+    .print-preview-container {
+        width: 960px;
+        margin: 100px auto;
+        position: relative;
+        background: white;
+        padding: 50px;
+        z-index: 10;
+
+        @media screen and ($screen-ltlg) {
+            margin: 100px auto 175px;
+        }
+        @media screen and ($screen-ltmd) and ($screen-portrait) {
+            width: 720px;
+        }
+
+        &.traditional {
+            * {
+                font-family: 'Times New Roman', serif;
+            }
+
+            .paper-preview-headline {
+                font-weight: bold;
+                font-style: italic;
+                font-family: 'Times New Roman', serif;
+            }
+            .paper-preview-masthead {
+                font-family: 'Times New Roman', serif;
+
+                .byline {
+                    font-family: 'Times New Roman', serif;
+                }
+            }
+            .paper-preview-date,
+            .paper-preview-cost {
+                font-family: 'Times New Roman', serif;
+                font-style: italic;
+            }
+            p {
+                font-family: 'Times New Roman', serif;
+            }
+            blockquote {
+                p {
+                    font-family: 'Times New Roman', serif;
+                }
+                .blockquote-footer {
+                    font-family: 'Times New Roman', serif;
+
+                    em {
+                        font-family: 'Times New Roman', serif;
+                    }
+                }
+            }
+            figure {
+                figcaption {
+                    font-family: 'Times New Roman', serif;
+
+                    em {
+                        font-family: 'Times New Roman', serif;
+                    }
+                }
+            }
+        }
+        &.modern {
+            .paper-preview-headline {
+                font-family: 'Open Sans Condensed';
+                font-weight: bold;
+            }
+            .paper-preview-masthead {
+                font-family: 'Open Sans', serif;
+            }
+            .paper-preview-date,
+            .paper-preview-cost {
+                font-family: 'Open Sans', serif;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .paper-preview-header {
+        height: 100px;
+        margin-bottom: 15px;
+
+        .paper-preview-title {
+            max-height: 60px;
+            margin: 0 auto 8px;
+            display: block;
+        }
+        .paper-preview-date {
+            font-size: 0.8rem;
+            display: block;
+            float: left;
+        }
+        .paper-preview-cost {
+            font-size: 0.8rem;
+            display: block;
+            float: right;
+        }
+
+        hr:first-of-type {
+            margin: 5px 0;
+        }
+        hr:last-of-type {
+            margin: 30px 0;
+        }
+    }
+    .paper-preview-headline {
+        height: 100px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        font-size: 46px;
+        line-height: 1;
+
+        @media screen and ($screen-md) {
+            font-size: 40px;
+            height: 96px;
+        }
+
+        &.large {
+            font-size: 68px;
+            height: 76px;
+            overflow: visible;
+            
+            @media screen and ($screen-md) {
+                font-size: 66px;
+            }
+        }
+    }
+    .paper-preview-masthead {
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    .paper-preview-article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        position: relative;
+        max-height: 1200px;
+
+        > * {
+            width: 30%;
+            margin-right: 3%;
+        }
+        > .featured {
+            //width: 63%;
+        }
+        > p:empty {
+            display: none;
+        }
+        
+        > p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        blockquote {
+            padding: 0;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-style: italic;
+            border: none;
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                margin-bottom: 5px;
+            }
+            .blockquote-footer {
+                background: none;
+                padding: 0;
+                height: auto;
+                color: $midgray;
+
+                em {
+                    font-style: italic;
+                }
+            }
+        }
+
+        figure {
+            .image-wrapper {
+                text-align: center;
+                background: $lightgray;
+            
+                img {
+                    max-height: 400px;
+                    max-width: 100%;
+                }
+            }
+            figcaption {
+                font-size: 0.8rem;
+                margin-top: 10px;
+            }
+        }
+    }
+    .close-preview {
+        width: 45px;
+        height: 45px;
+        display: block;
+        background-image: url('/nk360/shared/lib/im/images/icon-close.svg');
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        right: -60px;
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.5s all;
+        
+        &:hover, &:focus, &:active {
+            opacity: 0.65;
+        }
+
+        @media screen and ($screen-ltlg) {
+            top: -60px;
+            right: 0;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+        }
+    }
+}
