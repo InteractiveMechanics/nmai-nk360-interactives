@@ -31,7 +31,6 @@ Explore = (function() {
             $('#prev-btn').addClass('disabled');
             $('#next-btn').removeClass('disabled');  
         }
-        console.log("left " + timelineLeft);
     }
 
     var advanceNextBtn = function(event) {
@@ -41,14 +40,12 @@ Explore = (function() {
         var leftToScroll = Detail.timelineWidth + timelineLeft - windowWidth;
        
         if (windowWidth < Detail.timelineWidth && leftToScroll >= windowWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
-            console.log(Detail.timelineWidth + " and " + timelineLeft + " left to Scroll is " + leftToScroll);
             $('#next-btn').removeClass('disabled');
             $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "-=" + windowWidth 
             }, "fast");
         } else if (leftToScroll > 0) {
-            console.log(timelineLeft);
             $('#next-btn').removeClass('disabled');
             $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
@@ -63,10 +60,11 @@ Explore = (function() {
         
     }
 
+
+
     var getMomentDetails = function() {
         var era = $(this).attr('data-era');
         var moment = $(this).attr('data-timeline');
-        console.log('the era is ' + era + 'the moment is ' + moment);
         Detail.displayModal(era, moment);
     }
 
