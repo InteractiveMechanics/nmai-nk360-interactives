@@ -31,3 +31,22 @@ main {
         }
     }
 }
+
+#error-alert {
+    position: fixed;
+    width: 260px;
+    padding: 14px;
+    border-radius: 4px;
+    background: rgba(#ec5343, 0.9);
+    color: white;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -130px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+
+    &.show {
+        bottom: 70px;
+    }
+}

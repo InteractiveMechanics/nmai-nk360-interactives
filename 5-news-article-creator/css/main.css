@@ -305,6 +305,22 @@ main {
     #static-ui .print-preview-btn {
       display: none; } }
 
+#error-alert {
+  position: fixed;
+  width: 260px;
+  padding: 14px;
+  border-radius: 4px;
+  background: rgba(236, 83, 67, 0.9);
+  color: white;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -130px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center; }
+  #error-alert.show {
+    bottom: 70px; }
+
 .drop-letter-quote {
   font-size: 4.8rem;
   font-weight: 900;

@@ -175,8 +175,12 @@ Cards = (function() {
 
                 $(this).parent().parent().addClass('selected');
                 addImageToArray(id);
+            } else {
+                // Checks to see if the total number of images/quotes is above 4
+                checkTotalImagesQuotes();
             }
         }
+
         // Required to reload the slideshow for Image Captions
         // otherwise you run into a styling bug where width isn't properly set
         $('#image-captioning .card-slider-container').slick('setPosition');
@@ -229,6 +233,9 @@ Cards = (function() {
 
                 $(this).addClass('selected');
                 addQuoteToArray(id);
+            } else {
+                // Checks to see if the total number of images/quotes is above 4
+                checkTotalImagesQuotes();
             }
         }
     }
@@ -246,6 +253,38 @@ Cards = (function() {
      */
     var removeQuoteFromArray = function(id) {
         Cards.quotes.splice(id, 1);
+    }
+
+    /**
+     * Checks to see if the total number of images and quotes
+     * combined is greater than four, and if so, show an alert
+     */
+    var checkTotalImagesQuotes = function() {
+        var message = '';
+
+        if (Cards.totalCount == 4){
+            message = 'Your article can only have up to four images and quotes total.';
+        } else {
+            if (Cards.quoteCount == 3){
+                message = 'You can only have up to three quotes in your article at a time.';
+            }
+            if (Cards.imageCount == 3){
+                message = 'You can only have up to three images in your article at a time.';
+            }
+        }
+
+        $('#error-alert').text(message).removeClass('hidden');
+        setTimeout(function() {
+            $('#error-alert').addClass('show');
+
+            setTimeout(function() {
+                $('#error-alert').removeClass('show');
+
+                setTimeout(function() {
+                    $('#error-alert').addClass('hidden');
+                }, 500);
+            }, 5000);
+        }, 100);
     }
 
     /**
