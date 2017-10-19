@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 5,
+      speed: 500,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -63,6 +63,28 @@ Game = (function() {
         });
     }
 
+    var blowBubbles = function(evt) {
+        console.log('bubbles');
+        var bubbleContainer = document.getElementById('bubbles');
+        var x = evt.pageX;
+        var y = evt.pageY;
+        var number = Math.floor((Math.random() * 6) + 2);
+
+        bubbleContainer.innerHTML = "";
+        bubbleContainer.style.top = (y - 50) + "px";
+        bubbleContainer.style.left = (x - 50) + "px";
+
+        for(i=0; i<number; i++){
+             var size = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+             var speed = Math.random() + 0.5;
+             var bx = Math.floor((Math.random() * 100) + 1);
+             var by = Math.floor((Math.random() * 100) + 1);
+
+             bubbleContainer.insertAdjacentHTML('beforeend', 
+                 '<div class="bubble" style="width:'+size+'px;height:'+size+'px;top:'+by+'px;left:'+bx+'px;-webkit-animation-duration:'+speed+'s"></div>');
+        }
+    }
+
     var bindEvents = function() {
         $('body').on('click tap', '#show-instructions', showIntro);
         $('body').on('click tap', '#instructions', showIntroModal);
@@ -76,6 +98,7 @@ Game = (function() {
         $('body').on('click tap', '.restart', restartSalmonChallenges);
         $('body').on('click tap', '#pause-icon', hitPause);
         $('body').keyup(hitPauseSpaceBar);
+        //window.onclick = blowBubbles;
 
         
 
@@ -305,9 +328,9 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 12840) {
 
-                if(checkEncounters(current_position)) {
+                /*if(checkEncounters(current_position)) {
 
-                };
+                };*/
 
                 if(current_position == 12000) {
                   $('#SelectedSalmon').addClass('rising-water');
