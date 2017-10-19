@@ -24,6 +24,8 @@ footer {
         margin-top: 6px;
 
         li {
+            font-family: $sans-serif;
+
             &:not(:last-child):after {
                 content: '|';
                 margin: 0 0 0 10px;
@@ -32,6 +34,7 @@ footer {
 
             a {
                 color: white;
+                font-family: $sans-serif;
 
                 &:hover, &:focus, &:active {
                     color: white;

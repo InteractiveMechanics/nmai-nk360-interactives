@@ -65,6 +65,10 @@ body {
   .abs.bottom {
     bottom: 0; }
 
+@media screen and (max-width: 767px) {
+  .module-menu-wrapper .black-logo {
+    opacity: 0; } }
+
 footer {
   color: white;
   height: 50px;
@@ -83,14 +87,17 @@ footer {
         display: none; } }
   footer ul {
     margin-top: 6px; }
-    footer ul li:not(:last-child):after {
-      content: '|';
-      margin: 0 0 0 10px;
-      opacity: 0.5; }
-    footer ul li a {
-      color: white; }
-      footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
-        color: white; }
+    footer ul li {
+      font-family: "Open Sans", sans-serif; }
+      footer ul li:not(:last-child):after {
+        content: '|';
+        margin: 0 0 0 10px;
+        opacity: 0.5; }
+      footer ul li a {
+        color: white;
+        font-family: "Open Sans", sans-serif; }
+        footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+          color: white; }
 
 #instructions {
   position: fixed;
@@ -106,13 +113,19 @@ footer {
     position: relative;
     text-align: center;
     padding: 100px 20px; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      #instructions .instructions-container {
+        padding: 60px 20px; } }
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
-        padding: 30px 30px 100px; } }
+        padding: 30px 20px 100px; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {
       max-width: 300px; }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        #instructions .instructions-container img {
+          max-width: 250px; } }
     #instructions .instructions-container .row {
       margin-bottom: 20px; }
 
@@ -122,7 +135,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   span[data-toggle="tooltip"]:hover, span[data-toggle="tooltip"]:focus, span[data-toggle="tooltip"]:active {
     background-color: #206CAF;
@@ -156,7 +169,7 @@ span[data-toggle="tooltip"] {
   padding: 1px 3px;
   transition: all 0.5s;
   color: black;
-  cursor: help;
+  cursor: pointer;
   display: inline-block; }
   [data-pronounce]:hover, [data-pronounce]:focus, [data-pronounce]:active {
     background-color: #D67169;
@@ -288,6 +301,9 @@ main {
       right: 50%;
       width: 300px;
       margin-right: -150px; } }
+  @media screen and (max-width: 767px) {
+    #static-ui .print-preview-btn {
+      display: none; } }
 
 .drop-letter-quote {
   font-size: 4.8rem;
@@ -317,23 +333,29 @@ main {
   height: inherit;
   width: inherit; }
   #step-by-step-cards > .slick-list {
-    padding-bottom: 20px; }
+    padding-bottom: 40px; }
   #step-by-step-cards > .slick-dots {
     position: fixed;
     bottom: 70px; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards > .slick-dots {
+        display: none; } }
   #step-by-step-cards .step {
     position: relative;
     height: 100%; }
     #step-by-step-cards .step .step-container {
       position: relative;
       width: 540px;
-      margin: 150px auto 0px;
+      margin: 120px auto 0px;
       background: white;
       padding: 40px;
       box-shadow: 0 2px 40px rgba(0, 0, 0, 0.35); }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        #step-by-step-cards .step .step-container {
+          margin-top: 100px; } }
       @media screen and (max-width: 991px) and (orientation: portrait) {
         #step-by-step-cards .step .step-container {
-          margin-top: 180px; } }
+          margin-top: 160px; } }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
@@ -352,13 +374,26 @@ main {
         margin-bottom: 15px; }
       #step-by-step-cards .step .step-container h1 {
         font-size: 2.1rem; }
+        @media screen and (max-width: 1199px) {
+          #step-by-step-cards .step .step-container h1 {
+            font-size: 1.8rem !important; } }
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+          #step-by-step-cards .step .step-container h1 {
+            font-size: 1.7rem !important; } }
       #step-by-step-cards .step .step-container.step-container-lg {
         width: 960px;
         padding: 40px 50px; }
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: 1199px) and (orientation: landscape) {
           #step-by-step-cards .step .step-container.step-container-lg {
-            width: 800px; } }
+            width: 800px;
+            max-height: 550px; } }
         @media screen and (max-width: 991px) and (orientation: portrait) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 590px; } }
+        @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 590px; } }
+        @media screen and (max-width: 767px) and (orientation: landscape) {
           #step-by-step-cards .step .step-container.step-container-lg {
             width: 540px; } }
   #step-by-step-cards .card-slider {
@@ -392,6 +427,9 @@ main {
       #step-by-step-cards .card-slider .card-slider-container .slick-dots {
         position: absolute;
         bottom: -40px; }
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+          #step-by-step-cards .card-slider .card-slider-container .slick-dots {
+            bottom: -20px; } }
     #step-by-step-cards .card-slider .nav-arrow {
       position: absolute;
       top: 50%;
@@ -531,13 +569,14 @@ main {
       background-image: url("../assets/icon-star-stroke.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      width: 44px;
-      height: 44px;
+      width: 60px;
+      height: 60px;
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 50%;
+      left: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
       filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
-      transition: 0.5s all;
       cursor: pointer;
       opacity: 1; }
       #step-by-step-cards .step-image-captions .image-caption-container .featured:hover, #step-by-step-cards .step-image-captions .image-caption-container .featured:active, #step-by-step-cards .step-image-captions .image-caption-container .featured:focus {
@@ -585,21 +624,26 @@ main {
   opacity: 1;
   transition: 0.5s all; }
   #navigation .nav-arrow.slick-disabled {
-    opacity: 0.4; }
+    opacity: 0; }
     #navigation .nav-arrow.slick-disabled:hover, #navigation .nav-arrow.slick-disabled:active, #navigation .nav-arrow.slick-disabled:focus {
       filter: drop-shadow(0 0 0 transparent);
       cursor: default; }
   #navigation .nav-arrow:hover, #navigation .nav-arrow:active, #navigation .nav-arrow:focus {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
     cursor: pointer; }
+  @media screen and (max-width: 767px) {
+    #navigation .nav-arrow {
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); }
+      #navigation .nav-arrow:hover, #navigation .nav-arrow:active, #navigation .nav-arrow:focus {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.85)); } }
   #navigation .nav-arrow.nav-arrow-left {
     left: 20px;
-    background-image: url("../shared/images/icon-prev.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-prev.svg"); }
     #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
       left: 10px; }
   #navigation .nav-arrow.nav-arrow-right {
     right: 20px;
-    background-image: url("../shared/images/icon-next.svg"); }
+    background-image: url("../../shared/lib/im/images/icon-next.svg"); }
     #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
       right: 10px; }
 
@@ -623,7 +667,7 @@ main {
       height: 16px;
       text-indent: -99999px;
       padding: 0;
-      margin: 0 2px;
+      margin: 0 4px;
       border: 1px solid white !important;
       border-radius: 99px;
       outline: none;
@@ -669,10 +713,12 @@ main {
     @media screen and (max-width: 991px) and (orientation: portrait) {
       #print-preview .print-preview-container {
         width: 720px; } }
+    #print-preview .print-preview-container.traditional * {
+      font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-headline {
       font-weight: bold;
       font-style: italic;
-      font-family: 'Times New Roman'; }
+      font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional .paper-preview-masthead {
       font-family: 'Times New Roman', serif; }
       #print-preview .print-preview-container.traditional .paper-preview-masthead .byline {
@@ -687,6 +733,8 @@ main {
       font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional blockquote .blockquote-footer {
       font-family: 'Times New Roman', serif; }
+      #print-preview .print-preview-container.traditional blockquote .blockquote-footer em {
+        font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.traditional figure figcaption {
       font-family: 'Times New Roman', serif; }
       #print-preview .print-preview-container.traditional figure figcaption em {
@@ -720,17 +768,24 @@ main {
     #print-preview .paper-preview-header hr:last-of-type {
       margin: 30px 0; }
   #print-preview .paper-preview-headline {
-    height: 96px;
+    height: 100px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     font-size: 46px;
-    line-height: 1.1; }
+    line-height: 1; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      #print-preview .paper-preview-headline {
+        font-size: 40px;
+        height: 96px; } }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
       height: 76px;
       overflow: visible; }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        #print-preview .paper-preview-headline.large {
+          font-size: 66px; } }
   #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
     font-style: italic; }
@@ -766,6 +821,8 @@ main {
         padding: 0;
         height: auto;
         color: #9eb2c1; }
+        #print-preview .paper-preview-article blockquote .blockquote-footer em {
+          font-style: italic; }
     #print-preview .paper-preview-article figure .image-wrapper {
       text-align: center;
       background: #f1f2f2; }
@@ -779,7 +836,7 @@ main {
     width: 45px;
     height: 45px;
     display: block;
-    background-image: url(../shared/images/icon-close.svg);
+    background-image: url("../../shared/lib/im/images/icon-close.svg");
     background-size: 100%;
     position: absolute;
     top: 0;
@@ -823,7 +880,11 @@ main {
       height: 150px; } }
 
 .ql-editor {
-  font-size: 1.0rem; }
+  font-size: 1.0rem;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto; }
 
 .article-word-count {
   font-size: 0.7rem;

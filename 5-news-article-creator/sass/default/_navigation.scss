@@ -10,7 +10,7 @@
         transition: 0.5s all;
 
         &.slick-disabled {
-            opacity: 0.4;
+            opacity: 0;
             
             &:hover, &:active, &:focus {
                 filter: drop-shadow(0 0 0 rgba(0,0,0,0.0));
@@ -21,10 +21,18 @@
             filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
             cursor: pointer;
         }
+
+        @media screen and ($screen-xs) {
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+
+            &:hover, &:active, &:focus {
+                filter: drop-shadow(0 0 5px rgba(0,0,0,0.85));
+            }
+        }
         
         &.nav-arrow-left {
             left: 20px;
-            background-image: url('../shared/images/icon-prev.svg');
+            background-image: url('../../shared/lib/im/images/icon-prev.svg');
 
             &:hover, &:active, &:focus {
                 left: 10px;
@@ -32,7 +40,7 @@
         }
         &.nav-arrow-right {
             right: 20px;
-            background-image: url('../shared/images/icon-next.svg');
+            background-image: url('../../shared/lib/im/images/icon-next.svg');
 
             &:hover, &:active, &:focus {
                 right: 10px;
@@ -67,7 +75,7 @@
             height: 16px;
             text-indent: -99999px;
             padding: 0;
-            margin: 0 2px;
+            margin: 0 4px;
             border: 1px solid white !important;
             border-radius: 99px;
             outline: none;

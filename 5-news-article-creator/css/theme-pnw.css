@@ -81,9 +81,9 @@ h4 {
       opacity: 0.65; }
 
 #step-by-step-cards .step .step-container {
-  background-image: url("../shared/images/pnw/text-card-pnw@2x.png");
+  background-image: url("../../shared/lib/im/images/pnw/text-card-pnw-watermark@2x.png");
   background-size: 400px;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat; }
   #step-by-step-cards .step .step-container h1 {
     font-family: "Archer Pro", serif;

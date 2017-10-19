@@ -1,0 +1,7 @@
+.module-menu-wrapper {
+    .black-logo {
+        @media screen and ($screen-xs){
+            opacity: 0;
+        }
+    }
+}
