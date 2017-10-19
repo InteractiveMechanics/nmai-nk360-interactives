@@ -153,10 +153,14 @@ Detail = (function() {
    
 
     var buildGame = function(id) {
+        var windowWidth = $(window).width();
+
         $('#lightgallery').lightGallery({
             subHtmlSelectorRelative: true
         });
         $('[data-toggle=tooltip]').tooltip('hide');
+
+        if (windowWidth >= 990) {
         $('.draggable-img-wrapper').draggable({
             appendTo: 'body',
             tolerance: 'touch',
@@ -165,6 +169,39 @@ Detail = (function() {
             snapMode: 'interior',
             snapTolerance: 10
         });
+        } else {
+
+            $('#draggable-wrapper').sortable({
+                axis: 'y',
+                cancel: '.sortableEl-disabled',
+                stop: function( event, ui ) {
+                    $('.draggable-holder').each(function(index, element){
+                        var timeline = $(this).attr('data-timeline');
+                        console.log("Iteration: " + index + " Timeline: " + timeline);
+                        if (timeline == index+1) {
+                            $(this).addClass('sortableEl-disabled dropped');
+                        } else {
+                            if ($(this).hasClass('sortableEl-disabled dropped')) {
+                                $(this).removeClass('sortableEl-disabled dropped');
+                            }
+                        }
+                        
+                    });
+                    countDroppedEls();
+                }
+            });
+            
+            // $('.draggable-holder').draggable({
+            //     axis: 'y',
+            //     appendTo: 'body',
+            //     tolerance: 'touch',
+            //     snap: '.droppable-widget',
+            //     revert: 'invalid',
+            //     snapMode: 'interior',
+            //     snapTolerance: 10
+
+            // });
+        }
 
         $('.droppable-widget').droppable({
 

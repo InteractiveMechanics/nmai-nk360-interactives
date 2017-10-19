@@ -7,6 +7,13 @@
 	max-width: 450px; // originally 500px
 	background-color: white;
 	border-radius: 10px;
+	@include screen-xs {
+		width: 80%;
+    	left: 10%;
+    	top: 5%;
+    	margin: 0px;
+    	height: auto;
+	}
 }
 
 .modal-header {
@@ -17,10 +24,13 @@
 
 .modal-content {
 	background: url('../assets/text-card-pnw@2x.png');
-	background-size: contain;
+	background-size: 90% 90%;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 650px;
+    @include screen-xs {
+    	min-height: initial;
+    }
 }
 
 .modal-body {
@@ -28,6 +38,11 @@
 	p {
 		font-size: 14px;
 		margin-top: 20px;
+	}
+	@include screen-xs {
+		max-height: 60vh;
+    	overflow: scroll;
+    	margin-bottom: 5vh;
 	}
 }
 
@@ -70,6 +85,12 @@
 	position: absolute;
 	left: 105%;
 	top: 0%;
+	@include screen-xs {
+		left: 91%;
+    	top: -20px;
+    	background: black;
+    	border-radius: 50%;
+	}
 }
 
 .zoom {

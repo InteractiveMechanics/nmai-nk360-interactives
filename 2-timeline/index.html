@@ -131,7 +131,7 @@
         <!-- Draggable Template -->
         <script id="draggable-template" type="text/x-jsrender">
             
-            <div class="draggable-holder">
+            <div class="draggable-holder" data-timeline="{{:id}}">
 
                 <div class="draggable-widget" data-timeline="{{:id}}" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="{{:incorrect}}" data-animation="false">
                     <div class="draggable-text" data-timeline={{:id}}>
@@ -154,7 +154,7 @@
         <!-- Detail Template -->
         <script id="detail-template" type="text/x-jsrender">
         <div class="heading-wrapper">
-             <img src=".../shared/lib/im/images/pnw/splash-01.svg">
+             <img src="../shared/lib/im/images/pnw/splash-01.svg">
             <h1>{{:StartDate}} to {{:EndDate}}</h1>
         </div>
 

@@ -16,9 +16,6 @@ div[id^="era-block"] {
 
 	img {
 		position: absolute;
-		@include screen-xs {
-			width: 75%;
-		}
 	}
 	
 	.era-content-wrapper {
@@ -148,6 +145,22 @@ div[id^="era-block"] {
 	.heading-wrapper {
 		position: relative;
 		top: 17px;
+		h1 {
+			@include screen-xs {
+				font-size: 2.3em;
+			}
+		}
+		@include screen-xs {
+			height: auto;
+    		padding-top: 100px;
+    		margin-bottom: 30px;
+    		position: initial;
+		}
+		img {
+			@include screen-xs {
+				width: 75%;
+			}
+		}
 	}
 }
 
