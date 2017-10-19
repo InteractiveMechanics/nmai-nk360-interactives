@@ -26,6 +26,22 @@ div[id^="era-block"] {
 	    flex-direction: column;
 	    padding: 0px 60px 80px 60px;
 	    position: relative;
+	    @include screen-sm {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 80%;
+		    left: 10%;
+		    top: 46%;
+		    padding-bottom: 0px;
+	    }
+	    @include screen-xs {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 100%;
+		    left: 0%;
+		    top: 43%;
+		    padding: 0px 30px;
+	    }
 	}
 }
 
@@ -56,6 +72,9 @@ div[id^="era-block"] {
 	h1 {
 		position: relative;
 		top: 10px;
+		@include screen-xs {
+			font-size: 3em;
+		}
 	}
 }
 
@@ -122,9 +141,26 @@ div[id^="era-block"] {
 	height: 100vh;
 	width: 100vw;
 	text-align: center;
+	user-select: none;
 	.heading-wrapper {
 		position: relative;
 		top: 17px;
+		h1 {
+			@include screen-xs {
+				font-size: 2.3em;
+			}
+		}
+		@include screen-xs {
+			height: auto;
+    		padding-top: 100px;
+    		margin-bottom: 30px;
+    		position: initial;
+		}
+		img {
+			@include screen-xs {
+				width: 75%;
+			}
+		}
 	}
 }
 
@@ -133,6 +169,7 @@ div[id^="era-block"] {
 	height: 100vh;
 	position: relative;
 	width: 100vw;
+	user-select: none;
 }
 
 

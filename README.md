@@ -45,18 +45,18 @@ Each interactive has a Gruntfile that will run a local webserver with watch comm
 For distribution, you can run `grunt dist` with several variables: `--json=m#a#`, `--dir=name-of-directory`, `--theme=theme-acronym`. For example, if you want to generate/build Module 1's (Pacific Northwest) Activity 1, and the directory provided by NMAI is "pnw-fishwars-markup", you can should run `grunt dist --json=m1a1 --dir=pnw-fishwars-markup --theme=pnw`. This will build a folder with the built files for that activity processed for deployment in the root of the repo. To see the full list of directory names from NMAI, go here: [https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit](https://docs.google.com/document/d/1tCZ--qR89ZD-peq41w0BEt1foUu9S7ratKCiMky3HQo/edit)
 
 Here are all of the `grunt dist` commands you will need to run (by activity):
-- Salmon Challenge: `grunt dist --dir=pnw-history-culture-salmon --theme=pnw --json=m3a1`
-- Timeline: `grunt dist --dir=pnw-fish-wars-timeline --theme=pnw --json=m4a1`
-- Resource Annotator: `grunt dist --dir=plains-belonging-markup-1 --theme=np --json=m1a1`
-- Resource Annotator: `grunt dist --dir=plains-belonging-markup-2 --theme=np --json=m1a2`
-- Resource Annotator: `grunt dist --dir=plains-treaty-markup --theme=np --json=m2a1`
-- Resource Annotator: `grunt dist --dir=pnw-history-culture-markup --theme=pnw --json=m3a1`
-- Resource Annotator: `grunt dist --dir=pnw-fish-wars-markup-1 --theme=pnw --json=m4a1`
-- Resource Annotator: `grunt dist --dir=pnw-fish-wars-markup-2 --theme=pnw --json=m4a2`
-- Puzzle: `grunt dist --dir=plains-belonging-puzzle --theme=np --json=m1a1`
-- Puzzle: `grunt dist --dir=pnw-history-culture-puzzle --theme=pnw --json=m3a1`
-- News Article: `grunt dist --dir=plains-treaty-news --theme=np --json=m2a1`
-- News Article: `grunt dist --dir=pnw-fish-wars-news --theme=pnw --json=m4a1`
+- Salmon Challenge: `grunt dist --dir=pnw1-salmon --theme=pnw --json=m3a1`
+- Timeline: `grunt dist --dir=pnw2-timeline --theme=pnw --json=m4a1`
+- Resource Annotator: `grunt dist --dir=plains1-markup1 --theme=np --json=m1a1`
+- Resource Annotator: `grunt dist --dir=plains1-markup2 --theme=np --json=m1a2`
+- Resource Annotator: `grunt dist --dir=plains2-markup1 --theme=np --json=m2a1`
+- Resource Annotator: `grunt dist --dir=pnw1-markup1 --theme=pnw --json=m3a1`
+- Resource Annotator: `grunt dist --dir=pnw2-markup1 --theme=pnw --json=m4a1`
+- Resource Annotator: `grunt dist --dir=pnw2-markup2 --theme=pnw --json=m4a2`
+- Puzzle: `grunt dist --dir=plains1-puzzle --theme=np --json=m1a1`
+- Puzzle: `grunt dist --dir=pnw1-puzzle --theme=pnw --json=m3a1`
+- News Article: `grunt dist --dir=plains2-news --theme=np --json=m2a1`
+- News Article: `grunt dist --dir=pnw2-news --theme=pnw --json=m4a1`
 
 
 ##### Commenting

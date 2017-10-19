@@ -53,16 +53,24 @@ Puzzle = (function() {
             controls: true
         });
 
+
+
          $('.draggable-widget').draggable({
             snap: '.droppable-widget',
             revert: 'invalid',
             snapMode: 'interior',
             snapTolerance: 10,
-            //cursorAt: {top: 10, left: 10}
+            greedy: false,
+            start: function(event, ui) { 
+                $(this).draggable("option", "cursorAt", {
+                    left: Math.floor(this.clientWidth / 2),
+                    top: Math.floor(this.clientHeight / 2)
+                }); 
+            }
         });
 
          $('.droppable-widget').droppable({
-            tolerance: 'touch',
+            tolerance: 'pointer',
             drop: function( event, ui ) {
                 
 
@@ -107,7 +115,7 @@ Puzzle = (function() {
 
                     } else {
                         setPopover();
-                        ui.draggable.draggable('option', 'revert', 'valid');
+                        ui.draggable.draggable('option', 'revert', true);
                         $(this).css('border', '3px solid white');
                         $(this).popover('show');
                         $('.droppable-widget').tooltip('hide');
@@ -150,6 +158,7 @@ Puzzle = (function() {
         var id = $(this).attr('data-card');
         $('.modal-dialog').html();
         $(".modal-dialog").html($.templates("#modal-template").render(data.puzzles[0].Cards[id-1]));
+        $('#mobile-btn-wrapper').html($.templates('#mobile-btn-template').render(data.puzzles[0]));
         $(".droppable-widget").attr('data-content', data.puzzles[0].Cards[id-1].incorrect);
         if ($('.modal-dialog').hasClass('dragged')) {
             $('.modal-dialog').removeClass('dragged animated fadeOutDown');
@@ -157,7 +166,7 @@ Puzzle = (function() {
         }
         //var id = $(this).attr('data-card');
         updateModal(id);
-        $('#card-modal').modal('show').removeClass('fadeOut').addClass('animated fadeIn');
+        $('#card-modal').modal('show');
         }
     }
 
@@ -201,11 +210,11 @@ Puzzle = (function() {
 
     
     var hideModalCard = function() {
-        $('.modal-dialog').addClass('hidden animated fadeOut').removeClass('fadeIn');
+        $('.modal-dialog').addClass('hidden');
     } 
 
     var showModalCard = function() {
-        $('.modal-dialog').removeClass('hidden fadeOut').addClass('fadeIn');
+        $('.modal-dialog').removeClass('hidden');
     }
 
     var animateDroppables = function() {
@@ -214,7 +223,9 @@ Puzzle = (function() {
         
     }
 
-
+    var disableAnimateDroppables = function() {
+        $('.droppable-widget').removeClass('animated pulse infinite');
+    }
     
     var resetDroppables = function() {
         if ($('.droppable-widget').hasClass('dropped')) {
@@ -250,19 +261,60 @@ Puzzle = (function() {
         $('.droppable-widget').popover('hide');
     }
 
+    var mobileGame = function() {
+        var droppableNumber = $(this).data('theme');
+        var draggableEl = $('.draggable-widget').find('.modal-content');
+        var mobileDraggable = $(this).find('.draggable-widget');
+        var draggableElThemes = draggableEl.attr('data-theme');
+        var draggableElArray =  draggableElThemes.split(',').map(Number);
+
+        if(contains.call(draggableElArray, droppableNumber)) {
+            mobileDraggable.addClass('dragged');
+            var cardNumber = draggableEl.data('card');
+            $('.card[data-card="' + cardNumber + '"]').addClass('hidden animated fadeOut answered');
+
+            mobileDraggable.addClass('dragged animated');
+            $(this).addClass('dropped');
+            setTimeout(function() {$('#card-modal').modal('hide').removeClass('fadeIn').addClass('animated');}, 1000);
+            showComplete();
+        } else {
+            setPopover();
+            $(this).css('border', '3px solid white');
+            $(this).popover('show');
+            $('.droppable-widget').tooltip('hide');
+            hidePopoverTimeout();
+        }
+
+
+        
+    }
+
+    var checkWindowWidth = function() {
+        var windowWidth = $( window ).width();
+        if (windowWidth >= 768) {
+            $('.draggable-widget').draggable('enable');
+        } else {
+            $('.draggable-widget').draggable('disable');
+        }
+    }
+
    
 
 
     var bindEvents = function() {
+        $(document).ready(checkWindowWidth);
         $(document).on('click tap', '.card[data-card]', showModal);
         $(document).on('click tap', '#explore-img-btn', exploreImg);
     	$(document).on('click tap', '#read-more-btn', showLearningPts);
         $(document).on('click tap', '#learning-points', hideLearningPts);
         $(document).on('hidden.bs.modal', hideDroppables);
-        $(document).on('shown.bs.modal', animateDroppables);
+        //$(document).on('shown.bs.modal', animateDroppables);
         $(document).on('onAfterOpen.lg', hideDroppables);
         $(document).on('onCloseAfter.lg', showModal);
         $('.draggable-widget').on('drag', hideTooltip);
+        $('.draggable-widget').on('drag', animateDroppables);
+        $('.draggable-widget').on('dragstop', disableAnimateDroppables);
+        $(document).on('click tap', '.droppable-widget[data-theme]', mobileGame);
     }
 
     

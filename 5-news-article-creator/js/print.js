@@ -12,6 +12,9 @@ Print = (function() {
         $(document).on('click tap', '#print', triggerPrint);
     }
 
+    /**
+     * Opens the print view
+     */
     var openPrintPreview = function() {
         buildPrintView();
         $('#print-preview').removeClass('hidden');
@@ -22,6 +25,10 @@ Print = (function() {
 
         sendAnalyticsEvent('Print preview', 'open');
     }
+
+    /**
+     * Closes the print view
+     */
     var closePrintPreview = function() {
         $('#print-preview').removeClass('show');
         $('#static-ui .print-preview-btn').removeClass('hidden');
@@ -31,15 +38,27 @@ Print = (function() {
 
         sendAnalyticsEvent('Print preview', 'close');
     }
+
+    /**
+     * Trigger the browser's print method
+     */
     var triggerPrint = function() {
         window.print();
 
         sendAnalyticsEvent('Print preview', 'print');
     }
+
+    /**
+     * Toggles the print preview buttons on
+     */
     var activatePrintPreview = function() {
         $('.print-preview-btn').removeClass('disabled').attr('disabled', false);
         $('.icon-print').removeClass('disabled').attr('disabled', false);
     }
+
+    /**
+     * Builds the print preview from data stored
+     */
     var buildPrintView = function() {
         // Get all of the data from the activity first
         var articleArray = Cards.getEditorContents();
@@ -107,6 +126,11 @@ Print = (function() {
             }
         });
     }
+
+    /**
+     * Takes the raw input of the QuillJS editor and applies
+     * appropriate HTML markup to it for styling and spacing
+     */
     var buildArticleCopy = function(articleArray) {
         var html = '<p>';
         var count = articleArray.ops.length;
@@ -141,6 +165,11 @@ Print = (function() {
         html += '</p>';
         return html;
     }
+
+    /**
+     * Adds in the correct amount of article text, splitting it
+     * on new lines by adding in appropriate HTML markup
+     */
     var buildArticleCopyText = function(str) {
         var splitStr = str.split("\n");
 
@@ -157,6 +186,10 @@ Print = (function() {
             return str;
         }
     }
+
+    /**
+     * Builds the masthead with today's date, theme, and other custom items
+     */
     var buildMasthead = function(theme) {
         var img;
         var cost;
@@ -182,6 +215,10 @@ Print = (function() {
 
         $('.paper-preview-header').html(html);
     }
+
+    /**
+     * Builds the headline based on the number of characters
+     */
     var buildHeadline = function(headline) {
         if (headline){
             var length = headline.length;

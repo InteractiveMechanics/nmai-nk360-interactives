@@ -28,6 +28,9 @@
         margin: 20px 0px;
         font-family: $headline-accent;
         font-size: 4.0em;
+        @include screen-xs {
+            font-size: 2em;
+        }
     }
     h6 {
         font-size: 0.75em;
@@ -43,10 +46,17 @@
     .btn-wrapper {
         display: flex;
         margin-top: 60px;
+        @include screen-xs {
+            flex-direction: column;
+            margin-top: 0px;
+        }
         .btn {
             margin: 20px;
             font-weight: 400;
         }
+    }
+    @include screen-xs {
+        width: 90%;
     }
 }
 
@@ -262,6 +272,24 @@
         background: transparent !important;
         opacity: 0.7;
     }
+    img {
+        @include screen-xs {
+            display: none;
+        }
+    }
+    @include screen-xs {
+        left: 0px;
+        &:before {
+        content: "";
+        background: url('../../shared/lib/im/images/icon-prev.svg');
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        }
+    }
 }
 
 
@@ -269,6 +297,20 @@
     @extend #prev-btn;
     right: 12px;
     left: auto;
+    @include screen-xs {
+        right: 0px;
+        &:before {
+            content: "";
+            background: url('../../shared/lib/im/images/icon-next.svg');
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+    }
+
 }
 
 .disabled {
