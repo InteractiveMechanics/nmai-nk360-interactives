@@ -14,6 +14,9 @@ Cards = (function() {
     var quoteCount;
     var featured;
 
+    /**
+     * Initializes all cards, renders templates, and builds sliders
+     */
     var init = function() {
         Cards.images = new Array();
         Cards.quotes = new Array();
@@ -95,6 +98,10 @@ Cards = (function() {
 
         bindEvents();
     }
+
+    /**
+     * Bind all events
+     */
     var bindEvents = function() {
         Cards.editor.on('text-change', updateWordCount);
 
@@ -117,7 +124,10 @@ Cards = (function() {
         $('[data-toggle="tooltip"]').tooltip();
     }
 
-
+    /**
+     * When a slider's afterChange event is called, do something specific
+     * based on which slide it is. Params from Slick.
+     */
     var changeStep = function(event, slick, currentSlide) {
         var id = slick.$slider[0].id;
         var slide = $('.slick-track').children().eq(currentSlide).data('title');
@@ -137,6 +147,10 @@ Cards = (function() {
         }
     }
 
+    /**
+     * When an image is selected/deselected, toggle the UI for that
+     * image and change the variables that track it
+     */
     var toggleImage = function() {
         var id = $(this).data('id');
 
@@ -163,8 +177,14 @@ Cards = (function() {
                 addImageToArray(id);
             }
         }
+        // Required to reload the slideshow for Image Captions
+        // otherwise you run into a styling bug where width isn't properly set
         $('#image-captioning .card-slider-container').slick('setPosition');
     }
+
+    /**
+     * Add the image to the array by ID
+     */
     var addImageToArray = function(id) {
         var image = data.images[id];
         Cards.images[id] = image;
@@ -172,12 +192,19 @@ Cards = (function() {
 
         updateImageCaptions(id, true);
     }
+    
+    /**
+     * Remove the image from array by ID
+     */
     var removeImageFromArray = function(id) {
         Cards.images.splice(id, 1);
         updateImageCaptions(id, false);
     }
 
-
+    /**
+     * When an quote is selected/deselected, toggle the UI for that
+     * quote and change the variables that track it
+     */
     var toggleQuote = function() {
         var id = $(this).data('id');
 
@@ -205,27 +232,50 @@ Cards = (function() {
             }
         }
     }
+
+    /**
+     * Add the quote to the array by ID
+     */
     var addQuoteToArray = function(id) {
         var quote = data.quotes[id];
         Cards.quotes[id] = quote;
     }
+
+    /**
+     * Remove the quote from array by ID
+     */
     var removeQuoteFromArray = function(id) {
         Cards.quotes.splice(id, 1);
     }
 
-
+    /**
+     * Set the theme, which also triggers that the
+     * print view is now activated
+     */
     var setTheme = function() {
         $('.btn-theme').removeClass('active');
         $(this).addClass('active');
         Cards.theme = $(this).data('theme');
         Print.activatePrintPreview();
     }
+
+    /**
+     * Set the byline
+     */
     var setMasthead = function() {
         Cards.masthead = $(this).val();
     }
+    
+    /**
+     * Set the headline
+     */
     var setHeadline = function() {
         Cards.headline = $(this).val();
     }
+
+    /**
+     * Set the caption's text
+     */
     var setCaption = function() {
         var text = $(this).val();
         var id = $(this).parent().parent().parent().data('id');
@@ -233,14 +283,24 @@ Cards = (function() {
         Cards.images[id].caption = text;
     }
 
-
+    /**
+     * Get the content of the QuillJS editor
+     */
     var getEditorContents = function() {
         return Cards.editor.getContents();
     }
+
+    /**
+     * Get the length of the text from the editor
+     */
     var getEditorTextLength = function() {
         var text = Cards.editor.getText();
         return text.split(" ").length;
     }
+
+    /**
+     * Getter functions for all printed elements
+     */
     var getTheme = function() {
         return Cards.theme;
     }
@@ -260,7 +320,9 @@ Cards = (function() {
         return Cards.featured;
     }
 
-
+    /**
+     * Logic to handle toggling the featured image on/off
+     */
     var toggleFeatured = function() {
         var id = $(this).parent().parent().parent().data('id');
         console.log(Cards.featured, id);
@@ -274,7 +336,9 @@ Cards = (function() {
         }
     }
     
-
+    /**
+     * Gets the word count and changes the UI based on number
+     */
     var updateWordCount = function() {
         var count = getEditorTextLength();
 
@@ -286,6 +350,10 @@ Cards = (function() {
             $('.article-word-count').text(count + ' words');
         }
     }
+
+    /**
+     * Logic to handle when images are changed (added/removed)
+     */
     var updateImageCaptions = function(id, addTo) {
         if (addTo) {
             var captionTemplate = $.templates("#imageCaptionTemplate");
@@ -309,7 +377,6 @@ Cards = (function() {
         }
     }
 
-    
     return {
         init: init,
         getEditorContents: getEditorContents,
