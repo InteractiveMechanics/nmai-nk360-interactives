@@ -32,6 +32,10 @@
 }
 .ql-editor {
     font-size: 1.0rem;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
 .article-word-count {
     font-size: 0.7rem;

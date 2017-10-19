@@ -68,7 +68,7 @@
 		{
 			"id": 4,
 		    "title": "Northwest Indian Fisheries Commission",
-		    "image_url": "./assets/imgs/m4a2/med-source-4.jpg",
+		    "image_url": "./assets/imgs/m4a2/full-source-4.jpg",
 		    "image_caption": "NWIFC is an organization that provides support to twenty treaty tribes in western Washington. Nations within the NWIFC work together to effectively manage and preserve salmon populations.",
 		    "image_credit": "Northwest Indian Fisheries Commission, http://nwifc.org",
 		    "body": "NWIFC is an organization that provides support to twenty treaty tribes in western Washington. Nations within the NWIFC work together to effectively manage and preserve salmon populations.",
@@ -84,7 +84,7 @@
 		{
 			"id": 5,
 		    "title": "Columbia River Inter-Tribal Fish Commission",
-		    "image_url": "./assets/imgs/m4a2/med-source-5.jpg",
+		    "image_url": "./assets/imgs/m4a2/full-source-5.jpg",
 		    "image_caption": "<a target=_'blank' href='http://www.critfc.org/about-us/mission-vision/'>CRITFC.org</a>",
 		    "image_credit": "Seal of the Columbia River Inter-Tribal Fish Commission (CRITFC), courtesy of Jeremy Five Crows",
 		    "body": "The Columbia River Intertribal Fish Commission (CRITFC) is made up of <span data-pronounce='../shared/lib/im/audio/PNW_Yakama.mp3'>Yakama</span>, <span data-pronounce='../shared/lib/im/audio/PNW_Warm_Springs.mp3'>Warm Springs</span>, <span data-pronounce='../shared/lib/im/audio/PNW_Umatilla.mp3'>Umatilla</span>, and <span data-pronounce='../shared/lib/im/audio/PNW_Nez_Perce.mp3'>Nez Perce</span> tribes. CRITFC's mission is “to ensure a unified voice in the overall management of the <span data-toggle='tooltip' title='A specific area where fish are caught.'>fishery</span> resources, and as managers, to protect reserved treaty rights through the exercise of the inherent <span data-toggle='tooltip' title='Having authority to self-govern.'>sovereign</span> powers of the tribes.”",
@@ -212,7 +212,7 @@
 		{
 			"id": 13,
 		    "title": "First Salmon Ceremony",
-		    "image_url": "./assets/imgs/m4a2/med-source-13.jpg",
+		    "image_url": "./assets/imgs/m4a2/full-source-13.jpg",
 		    "image_caption": "<span data-pronounce='../shared/lib/im/audio/PNW_Tulalip.mp3'>Tulalip</span> youth drum during the First Salmon Ceremony.",
 		    "image_credit": "“2016 State of Our Watersheds Report: Snohomish River Basin,” <span data-pronounce='../shared/lib/im/audio/PNW_Tulalip.mp3'>Tulalip</span> Tribes, <a target='_blank' href='https://geo.nwifc.org/SOW/SOW2016_Report/Tulalip.pdf'>NWIFC.org</a>",
 		    "body": "<span data-pronounce='../shared/lib/im/audio/PNW_Tulalip.mp3'>Tulalip</span> youth drum during the First Salmon Ceremony.",

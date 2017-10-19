@@ -4,7 +4,7 @@ span[data-toggle="tooltip"] {
     padding: 1px 3px;
     transition: $transition;
     color: black;
-    cursor: help;
+    cursor: pointer;
     display: inline-block;
 
     &:hover, &:focus, &:active {

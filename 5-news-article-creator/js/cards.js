@@ -84,7 +84,7 @@ Cards = (function() {
         Cards.editor = new Quill('#text-editor', {
             debug: false,
             theme: 'snow',
-            placeholder: 'Lorem ipsum sit dolor amet',
+            placeholder: 'What story do the sources tell about the compelling question? Construct a news article to address the question and explain how the sources support your argument.',
             modules: {
                 toolbar: [
                     ['bold', 'italic', 'underline']
@@ -119,17 +119,21 @@ Cards = (function() {
 
 
     var changeStep = function(event, slick, currentSlide) {
+        var id = slick.$slider[0].id;
         var slide = $('.slick-track').children().eq(currentSlide).data('title');
-        sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
 
-        if (slide == 'Byline'){
-            $('#masthead').focus();
-        }
-        if (slide == 'Article'){
-            Cards.editor.focus();
-        }
-        if (slide == 'Headline'){
-            $('#headline').focus();
+        if (id == 'step-by-step-cards'){
+            sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
+    
+            if (slide == 'Byline'){
+                $('#masthead').focus();
+            }
+            if (slide == 'Article'){
+                Cards.editor.focus();
+            }
+            if (slide == 'Headline'){
+                $('#headline').focus();
+            }
         }
     }
 
@@ -159,7 +163,7 @@ Cards = (function() {
                 addImageToArray(id);
             }
         }
-        $(window).trigger('resize');
+        $('#image-captioning .card-slider-container').slick('setPosition');
     }
     var addImageToArray = function(id) {
         var image = data.images[id];
@@ -273,12 +277,13 @@ Cards = (function() {
 
     var updateWordCount = function() {
         var count = getEditorTextLength();
-        $('.article-word-count').text(count + ' words');
 
         if (count > 250) {
             $('.article-word-count').addClass('error');
+            $('.article-word-count').text((250-count) + ' words');
         } else {
             $('.article-word-count').removeClass('error');
+            $('.article-word-count').text(count + ' words');
         }
     }
     var updateImageCaptions = function(id, addTo) {

@@ -6,6 +6,7 @@ Init = (function() {
         generateGuidingQuestion();
         generatePaperTitle();
         generateReturnTo();
+        generateCredits();
     }
     
     var generateGuidingQuestion = function() {
@@ -24,6 +25,10 @@ Init = (function() {
             .attr('href', returnTo.url)
             .find('div')
             .text('Return to ' + returnTo.title);
+    }
+    var generateCredits = function() {
+        var credits = data.credits;
+        $('#footer-credits').attr('data-content', credits);
     }
     
     return {

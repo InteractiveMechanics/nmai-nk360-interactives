@@ -4,8 +4,21 @@
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="The National Museum of the American Indian">
+    <meta name="description" content="">
     
     <title>News Article Creator - Native Knowledge 360&deg;</title>
+
+    <meta property="og:title" content="News Article Creator - Native Knowledge 360&deg;" />
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <meta property="og:url" content="http://nmai.si.edu/nk360/<%= dir %>" />
+    /build -->
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
   
     <!-- Include shared stylesheets -->
     <link rel="stylesheet" href="../shared/lib/im/css/bootstrap/bootstrap.css" />
@@ -92,7 +105,7 @@
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
-            <li class="list-inline-item"><a href="#">Credits</a></li>
+            <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="">Credits</a></li>
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
@@ -101,18 +114,18 @@
             <h4 class="all-caps letter-spacing-1">How to Play</h4>
             <h1>News Article Creator</h1>
             <div class="row justify-content-md-center">
-                <div class="col">
+                <div class="col-md-6 col-lg-6">
                     <img src="./assets/instructions-01@2x.png" alt="Design and Write" title="Design and Write" />
                     <h2>Design and Write</h2>
-                    <p>Write a headline and article copy, then add images and supporting quotes. Pick a theme that best supports your newspaper article.</p>
+                    <p>Pick a style, draft your article copy and construct a headline. Select images and quotes that support your argument. You can build your news article in any order and track your progress along the way.</p>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-lg-6">
                     <img src="./assets/instructions-02@2x.png" alt="" title="" />
                     <h2>Preview then Print</h2>
                     <p>Once you've completed your newspaper, save it as a PDF and print it out to distribute to the masses!</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue this Activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="1">Continue this Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -172,25 +185,26 @@
                     <h1 class="text-center">Inform your readers</h1>
                     <div class="divider"></div>
                     <p class="large guiding-question text-center"></p>
-                    <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process. </p>
+                    <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process.</p>
+                    <a class="hidden" tabindex="1">Next</a>
                 </div>
             </div>
             <div class="step step-theme" data-title="Design">
                 <div class="step-container">
-                    <h4 class="text-center all-caps letter-spacing-1">Pick your newspaper style</h4>
-                    <h1 class="text-center">What style works best?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Pick Your Newspaper Style</h4>
+                    <h1 class="text-center">What Style Works Best?</h1>
                     <div class="divider"></div>
-                    <p>The design of your paper will change the look and feel. Consider your audience, the subject matter, and mood you want to create.</p>
+                    <p>The style of your paper will change the look and feel. Consider your audience, the subject matter, and mood you want to create.</p>
                     <div class="row">
-                        <div class="col"><a class="btn btn-block btn-theme" data-theme="traditional" title="Theme: Traditional">Traditional</a></div>
-                        <div class="col"><a class="btn btn-block btn-theme" data-theme="modern" title="Theme: Modern">Modern</a></div>
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="traditional" tabindex="2" title="Theme: Traditional">Traditional</a></div>
+                        <div class="col"><a class="btn btn-block btn-theme" data-theme="modern" tabindex="3" title="Theme: Modern">Modern</a></div>
                     </div>
                 </div>
             </div>
             <div class="step step-masthead" data-title="Byline">
                 <div class="step-container">
-                    <h4 class="text-center all-caps letter-spacing-1">Write your byline (name)</h4>
-                    <h1 class="text-center">What's your name?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Write Your Byline</h4>
+                    <h1 class="text-center">What&apos;s Your Name?</h1>
                     <div class="divider"></div>
                     <p>Every article needs a byline to tell the reader who wrote the piece. Add your name or names to the article. </p>
                     <input id="masthead" name="Byline" class="form-control form-control-lg" type="text" title="Write your byline" maxlength="140" placeholder="e.g. Jo Journalist" />
@@ -198,8 +212,8 @@
             </div>
             <div class="step step-article-copy" data-title="Article">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps letter-spacing-1">Construct your argument (article)</h4>
-                    <h1 class="text-center">How will you address the compelling question?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Construct Your Argument (News Article)</h4>
+                    <h1 class="text-center">How Will You Address the Compelling Question?</h1>
                     <div class="divider"></div>
                     <p>Remember to use evidence from multiple sources that support your claims and refute counter-claims. Keep it clear and brief: you only have 250 words!</p>
                     <div style="position: relative; display: block;">
@@ -210,8 +224,8 @@
             </div>
             <div class="step step-images" data-title="Images">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps letter-spacing-1">Select your images</h4>
-                    <h1 class="text-center">What images support your argument?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Select Your Images</h4>
+                    <h1 class="text-center">What Images Support Your Argument?</h1>
                     <div class="divider"></div>
                     <p>Pick one to three images that support your argument. You'll write captions for these images next.</p>
                     <div id="image-selector" class="card-slider">
@@ -225,8 +239,8 @@
             </div>
             <div class="step step-image-captions" data-title="Image Captions">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps letter-spacing-1">Write image captions</h4>
-                    <h1 class="text-center">Describe your images</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Write Image Captions</h4>
+                    <h1 class="text-center">Describe Your Images</h1>
                     <div class="divider"></div>
                     <p>Describe how the selected images support your argument. Star the image if you would like it to be your largest featured image. </p>
                     <div id="image-captioning" class="card-slider">
@@ -241,8 +255,8 @@
             </div>
             <div class="step step-quotes" data-title="Quotes">
                 <div class="step-container step-container-lg">
-                    <h4 class="text-center all-caps letter-spacing-1">Select a quote</h4>
-                    <h1 class="text-center">What quotes support your argument?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Select A Quote</h4>
+                    <h1 class="text-center">What Quotes Support Your Argument?</h1>
                     <div class="divider"></div>
                     <p>Select one to three quotes. Consider including statements from different perspectives to tell a more complete story.</p>
                     <div id="quote-selector" class="card-slider">
@@ -256,17 +270,17 @@
             </div>
             <div class="step step-headline" data-title="Headline">
                 <div class="step-container">
-                    <h4 class="text-center all-caps letter-spacing-1">Write Your headline (title)</h4>
-                    <h1 class="text-center">How will you get your reader's attention?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Write Your Headline (Title)</h4>
+                    <h1 class="text-center">How Will You Get Your Reader&apos;s Attention?</h1>
                     <div class="divider"></div>
-                    <p>Every article needs an eye-catching but informative headline to summarize the article and draw in readers. Be thoughtful, you only have two lines!</p>
+                    <p>Every article needs an eye-catching but informative headline to summarize the article and draw in readers. Be thoughtful: you only have two lines!</p>
                     <input id="headline" name="headline" class="form-control form-control-lg" type="text" title="Write your headline" maxlength="72" placeholder="e.g. Your headline here" />
                 </div>
             </div>
             <div class="step step-review" data-title="Review">
                 <div class="step-container">
-                    <h4 class="text-center all-caps letter-spacing-1">Check the proof (draft)</h4>
-                    <h1 class="text-center">Is your article ready to go?</h1>
+                    <h4 class="text-center all-caps letter-spacing-1">Check the Proof (Draft)</h4>
+                    <h1 class="text-center">Is Your News Article Ready to Go?</h1>
                     <div class="divider"></div>
                     <a class="btn btn-block btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
                     <p>Preview your proof and make sure your article doesn't need any changes. If you want to go back and edit any content, use the progress bar below.</p>
@@ -329,7 +343,7 @@
     <script src="../shared/lib/im/code/upperleftmenu/menu.js"></script>
 
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m4a1.json';</script>
+    <script>var jsondata = './data/m2a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

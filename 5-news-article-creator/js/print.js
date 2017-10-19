@@ -53,6 +53,7 @@ Print = (function() {
 
         // Then generate the newspaper
         buildMasthead(theme);
+        $('.print-preview-container').removeClass('traditional modern');
         $('.print-preview-container').addClass(theme);
         $('.paper-preview-article').html(article);
         $('.paper-preview-masthead .byline').text(masthead);
