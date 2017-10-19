@@ -25,15 +25,7 @@
 	}
 }
 
-.popover {
-	background-color: #ec5343;
-	color: white;
-}
 
-.popover.popover-top::after, 
-.popover.bs-tether-element-attached-bottom::after {
-	border-top-color:  #ec5343;
-}
 
 .modal-img-wrapper {
 	background-color: $midgray;

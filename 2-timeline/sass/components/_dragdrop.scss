@@ -8,6 +8,9 @@
     background-color: rgba(9, 74, 113, 0.35);
     border-radius: 52px;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
+    @include screen-xs {
+    	display: none;
+    }
 
 }
 
@@ -37,6 +40,10 @@
 
 .draggable-holder {
 	margin-left: 20px;
+	@include screen-xs {
+		margin: 5px 0px;
+		height: 75px;
+	}
 }
 
 #draggable-wrapper {
@@ -85,7 +92,16 @@
                                   supported by Chrome and Opera */
 		p {
 			margin-bottom: 0px;
+			@include screen-xs {
+				height: 60px;
+    			overflow: hidden;
+			}
 		}
+	}
+
+	@include screen-xs {
+		height: 75px;
+		padding: 5px 5px 5px 52px;
 	}
 }
 
@@ -102,6 +118,11 @@
   	&:hover, &:focus {
   		animation: pulse 1s infinite;
   	}
+  	@include screen-xs {
+  		height: 50px;
+  		width: 50px;
+  	}
+
 }
 
 .draggable-img-wrapper {
@@ -109,6 +130,13 @@
 	top: -$moment-height;
 	height: 82px;
 	width: 82px;
+	@include screen-xs {
+		top: -75px;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		left: -7px;
+	}
 }
 
 .draggable-overlay {
@@ -121,6 +149,7 @@
     left: 0;
     border: 3px solid white;
     border-radius: 50%;
+    cursor: pointer;
     &:after {
     	content: url('../../shared/lib/im/images/icon-checkmark.svg');
     	height: 82px;
@@ -172,13 +201,18 @@
 }
 
 
-
 .tooltip-inner {
 	background-color: $accent;
 	border-radius: 0.15rem;
 	font-weight: 300;
 	&::before {
 		border-top-color: $accent !important;
+	}
+}
+
+.sortableEl-disabled {
+	.draggable-widget {
+		background-color: rgba(168, 189, 70, 0.7);
 	}
 }
 

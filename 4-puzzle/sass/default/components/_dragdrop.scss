@@ -8,6 +8,9 @@
     z-index: 1052;
     position: absolute;
     bottom: 60px;
+    @include screen-xs {
+        display: none;
+    }
 }
 
 .droppable-widget {
@@ -18,13 +21,17 @@
    	width: 25%;
     text-align: center;
     padding: 6px;
+    transition: all 0.5s linear;
     &:hover, &:active, &:visited {
         border: 3px solid white;
+
     }
     &:after {
         content: '';
     }
 }
+
+
 
 .draggable-widget {
 	transition: $transition;
@@ -35,7 +42,7 @@
 .ui-draggable-dragging,
 .dragged
 .answered {
-	transform: scale(0.50, 0.50) !important;
+	transform: scale(0.20, 0.20) !important;
     cursor: move;
 
 }

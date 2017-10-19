@@ -74,8 +74,21 @@
     display: block;
     left: 0px;
     width: 100%;
+    @include screen-xs {
+    	display: none;
+    }
 }
 
 .lg-wrapper-card {
 	position: relative;
+}
+
+#mobile-btn-wrapper {
+	display: none;
+	@include screen-xs {
+		display: block;
+	}
+	.droppable-widget {
+		width: auto;
+	}
 }
