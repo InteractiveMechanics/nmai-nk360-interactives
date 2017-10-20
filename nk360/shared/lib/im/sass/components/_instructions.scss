@@ -1,0 +1,75 @@
+#instructions {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1000;
+    overflow: auto;
+
+    .instructions-container {
+        z-index: 101;
+        position: relative;
+        text-align: center;
+        padding: 100px 20px;
+
+        @media screen and ($screen-md) {
+            padding: 60px 20px;
+        }
+        @media screen and ($screen-xs) {
+            padding: 30px 20px 100px;
+        }
+
+        h2 {
+            color: white !important;
+        }
+        img {
+            max-width: 300px;
+
+            @media screen and ($screen-md) {
+                max-width: 250px;
+            }
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+#credits-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    color: white;
+    text-align: center;
+    padding: 200px 100px;
+
+    @media screen and ($screen-md) {
+        padding: 120px 60px;
+    }
+    @media screen and ($screen-sm) {
+        padding: 80px 40px;
+    }
+    @media screen and ($screen-xs) {
+        padding: 80px 40px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+    span {
+        display: block;
+        margin-top: 40px;
+        font-style: italic;
+    }
+}

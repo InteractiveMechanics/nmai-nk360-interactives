@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Drag-and-Drop Puzzle - Native Knowledge 360&deg;</title>
+  
+    <!-- Include shared stylesheets -->
+    <link rel="stylesheet" href="/nk360/shared/lib/im/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/css/animate/animate.css" />
+    
+    <link rel="stylesheet" href="/nk360/shared/lib/im/code/upperleftmenu/menu.css" />
+
+    <!-- Include project stylesheets -->
+    <link rel="stylesheet" href="./css/main.css" />
+    
+
+    <!-- For development only, comment for distribution -->
+    <link rel="stylesheet" href="./css/theme-pnw.css" />
+    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
+    /build -->
+
+</head>
+<body>
+    <!-- Google Analytics tracking script -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-28789452-3', 'auto');
+      ga('set', 'appName', 'Puzzle');
+      ga('send', 'pageview');
+    </script>
+
+
+    <!-- Common interactive elements -->
+    <div class="module-menu-wrapper">
+	    <div class="abs top left module-menu">
+    		<div id="showLeft">	
+    			<div class="nk360-back-arrow">
+    				<svg x="0px" y="0px" width="23px" height="41px" viewBox="0 0 23 41" style="enable-background:new 0 0 23 41;" xml:space="preserve">
+    					<path class="st3" d="M18.856,2.383C19.102,2.128,19.408,2,19.744,2c0.339,0,0.644,0.128,0.888,0.383c0.489,0.51,0.489,1.339,0,1.85
+    					L5.028,20.502l15.604,16.264c0.489,0.512,0.489,1.344,0,1.852c-0.489,0.51-1.286,0.51-1.776,0L2.367,21.426
+    					c-0.489-0.51-0.489-1.34,0-1.85L18.856,2.383z"/>
+    				</svg>	
+    			</div>
+    			
+    			<div class="nk360-logo">
+    				<img class="black-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
+    				<img class="color-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
+    			</div>
+    		</div>
+    	
+    		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left menu-items" id="cbp-spmenu-s1">
+    			<a href="#" title="Native Knowledge 360&deg; Home">
+    				<svg id="home-icon" x="0px" y="0px" width="28px" height="26px" viewBox="0 0 28 26" style="enable-background:new 0 0 23 26;" xml:space="preserve"><path class="st3" d="M20.406,12.869c-0.296,0-0.536,0.238-0.536,0.531v9.455h-5.76v-5.936c0-0.293-0.24-0.53-0.536-0.53H9.369
+    				c-0.296,0-0.536,0.237-0.536,0.53v4.705c0,0.294,0.24,0.531,0.536,0.531c0.297,0,0.537-0.238,0.537-0.531v-4.175h3.132v5.405H3.074
+    	V9.865l8.398-6.653l8.599,6.813c0.231,0.183,0.57,0.147,0.756-0.083c0.186-0.229,0.147-0.562-0.084-0.746l-8.936-7.08
+    	c-0.195-0.156-0.475-0.156-0.67,0l-8.936,7.08C2.074,9.297,2,9.449,2,9.61v13.773c0,0.293,0.24,0.531,0.537,0.531h17.869
+    	c0.297,0,0.537-0.238,0.537-0.531V13.4C20.943,13.107,20.703,12.869,20.406,12.869L20.406,12.869z"/></svg>
+    				<div>Native Knowledge<br />360&deg; Home</div>
+    			</a>
+    			<a href="#" title="Return to American Indian Removal Lesson">
+    				<svg id="return-icon" x="0px" y="0px" width="28px" height="17px" viewBox="0 0 28 17" style="enable-background:new 0 0 28 17;" xml:space="preserve"><path class="st3" d="M20.248,4.678H3.779l2.067-1.852c0.204-0.182,0.204-0.478,0-0.66c-0.204-0.182-0.534-0.182-0.737,0L2.156,4.811
+    	C2.147,4.819,2.138,4.828,2.13,4.836C2.049,4.918,2,5.026,2,5.145c0,0.153,0.083,0.289,0.209,0.374l2.9,2.597
+    	c0.203,0.183,0.533,0.183,0.737,0c0.204-0.182,0.204-0.478,0-0.66L3.788,5.611h16.46c2.587,0,4.69,1.885,4.69,4.203
+    	c0,2.316-2.104,4.201-4.69,4.201H2.521C2.233,14.016,2,14.226,2,14.482c0,0.258,0.233,0.468,0.521,0.468h17.727
+    	c3.161,0,5.733-2.305,5.733-5.136C25.981,6.981,23.409,4.678,20.248,4.678L20.248,4.678z"/>
+    				</svg>
+    				<div>Return to American<br />Indian Removal<br />Lesson</div>
+    			</a>	
+    		</nav>
+    	</div>
+    </div>
+    <div class="activity-menu-wrapper">
+        <div class="abs top right">
+            <!-- <a class="icon icon-home" title="Back to Home Screen"></a> -->
+            <!-- <a class="icon icon-print" title="Print this Activity"></a> -->
+            <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+            <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Print" id="puzzle-download" download></a>
+        </div>
+    </div>
+    <footer class="fixed-bottom d-flex justify-content-between">
+        <img src="/nk360/shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
+            <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
+            <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="">Credits</a></li>
+            <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
+        </ul>
+    </footer>
+    <div id="instructions" class="fade show">
+        <div class="container instructions-container">
+            <h4 class="all-caps letter-spacing-1">How to Play</h4>
+            <h1>Drag-and-Drop Puzzle Instructions</h1>
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-6">
+                    <img src="./assets/instructions-01@2x.png" alt="Turn over the statement cards and explore the hidden content" title="Turn over the statment cards and explore the hidden content." />
+                    <h2>Explore the Cards</h2>
+                    <p>Turn over the statement cards and discover the hidden content.</p>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <img src="./assets/instructions-02@2x.png" alt="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" title="Drag and drop the statement cards to sort them into the appropriate categories and revela the hidden image undernearth" />
+                    <h2>Uncover the Image</h2>
+                    <p>Drag and drop the statement cards and sort them into the appropriate categories, revealing the hidden picture underneath.</p>
+                </div>
+            </div>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue this Activity</a>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <!-- Main interactive-specific content -->
+    <main>
+
+
+    <!-- intro template -->
+    <script id="intro-template" type="text/x-jsrender">
+         <div class="intro-overlay"></div>
+        <div class="intro-card hidden">
+            <div class="header-wrapper">
+                <h1>{{:Title}}</h1>
+            </div>
+            <div class="text-wrapper">
+              
+                {{if IntroImage}}
+                <div style="position: relative;" class="modal-img-wrapper">
+                    <img src="{{:IntroImage}}" class="modal-img intro-img" alt="{{:IntroCaption}}" title="{{:IntroCaption}}"/>
+                    <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
+                </div>
+                        
+                <small class="modal-caption">{{:IntroCaption}}</small>
+                {{/if}}
+
+                <p>{{:Intro}}</p>
+
+                <h6>{{:IntroPrompt}}</h6>
+                
+            </div>
+                
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="/nk360/shared/lib/im/images/icon-close.svg" alt="close" title="close"></span>
+            </button>
+        </div>
+
+    </script>   
+
+    <!-- header template -->
+    <script id="puzzle-header-template" type="text/x-jsrender">
+        <ul class="subheader">
+
+            {{for Themes}}
+
+                <li class="header-themes" data-theme="{{:id}}" data-toggle="tooltip"  data-placement="bottom" title="{{:definition}}">{{:title}}</li>
+
+            {{/for}}
+
+        </ul>
+        <h1>{{:Title}}</h1>
+    </script>
+
+
+    <!-- puzzle image and cards template -->
+    <script id="puzzle-wrapper-template" type="text/x-jsrender">
+
+            <div id="caption" style="display:none">
+                <h4>{{:Caption}}</p>
+            </div>  
+            
+            <div class="puzzle-img-wrapper">    
+                <div class="lg-wrapper-puzzle">
+                    <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
+                        <img class="puzzle-img" src="{{:Image}}" alt="{{:Caption}}" title="{{:Caption}}">
+                        <span class="puzzle-img-zoom-icon hidden"><img src="/nk360/shared/lib/im/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
+                    </a>
+                </div>
+            
+
+                {{for Cards}}
+
+                <button class="card" data-card="{{:id}}"></button>
+
+
+                {{/for}}
+
+            </div>    
+
+    </script>
+
+
+   
+
+    <!-- puzzle droppable elements (themes) template -->
+    <script id="droppable-template" type="text/x-jsrender">
+
+        {{for Themes}}
+
+        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}" data-animation="false">{{:title}}
+
+            <svg class="icon-definition" version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+         x="0px" y="0px" width="43.7px" height="51.7px" viewBox="0 0 43.7 51.7" style="enable-background:new 0 0 43.7 51.7;"
+         xml:space="preserve">
+            <defs>
+            </defs>
+            <g>
+                <path d="M5,8.1c0,0.8,0.6,1.4,1.4,1.4H34v35.7c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4V8.1c0-0.8-0.6-1.4-1.4-1.4h-29
+                    C5.6,6.7,5,7.3,5,8.1L5,8.1z M5,8.1"/>
+                <path d="M42.2,0H5.7C5.2,0,4.8,0.2,4.5,0.6L0.3,6.9C0.1,7.1,0,7.4,0,7.7l0,39.4c0,0,0,0.1,0,0.1v3.1c0,0.8,0.6,1.4,1.4,1.4h34.3
+                    c0.2,0,0.3,0,0.5-0.1c0.2,0,0.3-0.1,0.5-0.2l6.3-4.8c0.4-0.3,0.6-0.7,0.6-1.1v-44C43.7,0.6,43,0,42.2,0L42.2,0z M40.8,44.7
+                    l-5.4,4.1H2.9v-1.8c0,0,0-0.1,0-0.1l0-38.8l3.6-5.2h34.3V44.7z M40.8,44.7"/>
+                <path d="M15.2,21.7c-0.1-0.3-0.4-0.5-0.7-0.5H13c-0.3,0-0.6,0.2-0.7,0.5L8.2,33.8c-0.1,0.2,0,0.5,0.1,0.7c0.1,0.2,0.4,0.3,0.6,0.3
+                    h0.9c0.3,0,0.6-0.2,0.7-0.5l1.2-3.5h4l1.2,3.5c0.1,0.3,0.4,0.5,0.7,0.5h0.9c0.3,0,0.5-0.1,0.6-0.3c0.1-0.2,0.2-0.5,0.1-0.7
+                    L15.2,21.7z M12.3,28.7l1.1-3.2l0,0c0.1-0.3,0.2-0.6,0.3-1c0.1,0.3,0.2,0.7,0.3,1l1.1,3.2H12.3z M12.3,28.7"/>
+                <path d="M25.8,24.6c-1.1,0-2.1,0.4-2.8,1v-3.7c0-0.4-0.4-0.8-0.8-0.8h-0.9c-0.2,0-0.4,0.1-0.6,0.2c-0.1,0.1-0.2,0.3-0.2,0.6l0,12.1
+                    c0,0.4,0.4,0.8,0.8,0.8H22c0.4,0,0.8-0.4,0.8-0.8c0,0,0,0,0,0c0.7,0.7,1.6,1,2.7,1c1.2,0,2.3-0.5,3.1-1.3c0.9-1,1.4-2.4,1.4-4
+                    c0-1.6-0.5-3-1.4-3.9C27.9,25,26.9,24.6,25.8,24.6L25.8,24.6z M27.2,32.4c-0.4,0.4-0.9,0.6-1.5,0.6c-0.6,0-1.1-0.2-1.4-0.5
+                    c-0.9-0.9-0.8-2.6-0.8-2.7c0,0,0,0,0,0c0-0.1,0.1-3,2.3-3c2.2,0,2.4,2.9,2.4,3C28.1,30.2,27.9,31.6,27.2,32.4L27.2,32.4z
+                     M27.2,32.4"/>
+                </g>
+            </svg>
+
+
+        </div>
+
+        {{/for}}
+
+    </script>
+
+    <script id="mobile-btn-template" type="text/text-jsrender">
+        
+        {{for Themes}}
+
+            <div class="droppable-widget mobile-btn" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}" data-animation="false">{{:title}}</div>
+
+
+        {{/for}}
+
+    </script>
+
+    <!-- modal template -->
+    <script id="modal-template" type="text/x-jsrender">
+       
+        
+
+            <div class="modal-content" data-card={{:id}} data-theme={{:themes}}>
+                
+                <div class="modal-header">
+                    {{if image}}
+                    <h1 class="modal-title">{{:title}}</h1>
+                    {{/if}}
+
+                    {{if body}}
+                     <h1 class="modal-title">{{:title}}</h1>
+                    {{/if}}
+
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="/nk360/shared/lib/im/images/icon-close.svg" alt="close" title="close"></span>
+                    </button>
+
+                </div>
+          
+                <div class="modal-body">
+
+                    {{if body}}
+                    <small class="modal-credit">{{:credit}}</small>
+
+                    <p>{{:body}}</p>
+                    {{/if}}
+
+                    {{if image}}
+
+                    <div style="position: relative;">
+                        <img src="{{:image}}" class="modal-img" alt="{{:caption}}" title="{{:caption}}" />
+                        <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
+                    </div>
+                        
+                    <small class="modal-caption">{{:caption}}</small>
+                    {{/if}}
+
+                    <div id="mobile-btn-wrapper"></div>
+
+
+                    <p class="modal-footer-message">Drag the card to the appropriate theme below</p>
+
+                </div>
+
+            </div><!-- /.modal-content -->
+
+       
+
+    </script>
+
+    <script id="complete-template" type="text/x-jsrender">
+         <div class="text-wrapper">
+
+                <ul class="subheader">
+
+                    {{for Themes}}
+
+                    <li data-theme="{{:id}}" data-toggle="tooltip" title="{{:definition}}">{{:title}}</li>
+
+                    {{/for}}
+
+                </ul>
+
+                 <h1>Puzzle complete</h1>
+
+                 <p>You’ve successfully completed this puzzle. Explore and save the image you’ve uncovered. Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry best support your argument.</p>
+
+                 <div class="btn-wrapper">
+                    <button class="btn btn-lg btn-white">Back to Module</button>
+                    <button id="explore-img-btn" class="btn btn-lg btn-white">Explore Image</button>
+                 </div>
+
+             </div>
+
+    </script>
+
+
+    <!-- learning points template -->
+    <script id="learning-points-template" type="text/x-jsrender">
+
+        <div class="learning-points-overlay"></div>
+        
+        <div class="learning-points-card hidden">
+
+            <div class="header-wrapper">
+                <ul class="subheader">
+
+                    {{for Themes}}
+                    
+                    <li data-themes="{{:id}}">{{:title}}</li>
+                    
+                    {{/for}}
+                </ul>
+                <h1>{{:Title}}</h1>
+            </div>
+
+            <div class="text-wrapper">
+                <p>{{:LearningPoints}}</p>
+            </div>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="/nk360/shared/lib/im/images/icon-close.svg" alt="close" title="close"></span>
+            </button>
+
+        </div>
+
+        
+    </script>
+
+    <div id="intro" class="animated fadeIn"></div>
+
+    <div id="learning-points" class="hidden"></div>
+
+    <div id="puzzle" class="">
+        <section id="puzzle-header" class="header-wrapper header"></section>
+
+        <section id="puzzle-wrapper"></section>
+
+        <section class="read-more hidden">
+            <button class="btn btn-lg animated pulse infinite" id="read-more-btn">Learn More</button>
+        </section>
+
+       <!--  <section id="droppable-wrapper" class="hidden"></section> -->
+
+        <section id="complete-overlay" class="hidden"></section>
+
+    </main>
+
+    <section id="droppable-wrapper" class="hidden"></section>
+
+    <div class="modal fade" id="card-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog draggable-widget" data-theme="{{:themes}}" role="document">
+        </div>
+    </div> <!-- /.modal -->
+
+
+    
+    <!-- Include jquery, jquery ui, touchpunch -->
+    <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jsrender/jsrender.min.js"></script>
+
+    <!-- Include bootstrap -->
+    <script src="/nk360/shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Include lightGallery -->
+    <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Include slick -->
+    <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
+
+    <!-- Include shared code -->
+    <script src="/nk360/shared/lib/im/code/analytics.js"></script>
+    <script src="/nk360/shared/lib/im/code/audio/audio.js"></script>
+    <script src="/nk360/shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="/nk360/shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="/nk360/shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
+
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = './data/m3a1.json';</script>
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
+
+    <!-- Include project specific code/files -->
+    <script src="./js/app.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/puzzle.js"></script>
+    <script src="./js/mobile.js"></script>
+</body>
+</html>
