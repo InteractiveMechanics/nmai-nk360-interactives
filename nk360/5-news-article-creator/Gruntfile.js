@@ -49,7 +49,8 @@ module.exports = function(grunt) {
                 process: true,
                 data: {
                     json: grunt.option('json'),
-                    theme: grunt.option('theme')
+                    theme: grunt.option('theme'),
+                    dir: grunt.option('dir')
                 }
             },
             dist: {
