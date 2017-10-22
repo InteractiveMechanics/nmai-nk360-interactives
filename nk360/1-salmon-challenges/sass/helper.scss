@@ -30,15 +30,16 @@
 
 .quiz-options {
 	.btn {
-		border-color:white !important;
+		border-color: #2e3742 !important;
 		box-shadow:none;
 		font-weight:bold;
+		color: #2e3742;
 	}
 
 	.btn:hover {
-		background-color:white !important;
-		border:3px solid #2e3742 !important;
-		color: #2e3742 !important;
+		background-color:#2e3742 !important;
+		/*border:3px solid #2e3742 !important;*/
+		color: #FFF !important;
 		box-shadow:none;
 	}
 

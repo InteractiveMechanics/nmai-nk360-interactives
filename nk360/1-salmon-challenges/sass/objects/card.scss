@@ -1,6 +1,6 @@
 .slider-wrapper {
 	.slick-dots {
-		bottom:-125px;
+		bottom:-95px;
 	}
 
 	.slick-slide {
@@ -9,6 +9,15 @@
 
 	.overlay {
 		z-index:20;
+
+		@media (max-width: 767px) { 
+			z-index:195;
+		}
+	}
+
+	.card-body {
+		height:475px;
+		overflow-y:none;
 	}
 
 }
@@ -16,6 +25,10 @@
 .intro-slider-wrapper {
 	.overlay {
 		z-index:20;
+
+		@media (max-width: 767px) { 
+			z-index:195;
+		}
 	}
 
 	.slick-dots {
@@ -26,6 +39,10 @@
 .spawn-death-slider-wrapper {
 	.overlay {
 		z-index:20;
+
+		@media (max-width: 767px) { 
+			z-index:195;
+		}
 	}
 
 	.slick-slide {
@@ -33,7 +50,11 @@
 	}
 
 	.slick-dots {
-		bottom:0px;
+		bottom:-80px;
+	}
+
+	.card-body {
+		height:365px;
 	}
 }
 
@@ -58,9 +79,18 @@
 
     @media (max-width: 767px) {
 	    position: absolute;
-	    right: -30px;
+	    right: -14px;
 	    cursor: pointer;
-	    top: -30px;
+	    top: -14px;
+	    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+	    z-index: 10000000000;
+	}
+
+	img {
+		@media (max-width: 767px) {
+			width:42px;
+			height:42px;
+		}
 	}
   }
 
@@ -75,7 +105,24 @@
 
 .card-body {
 	height:445px;
-	overflow:scroll;
+	overflow-y:auto;
+
+	&::-webkit-scrollbar-track
+	{
+	  background-color: #e0e1e2;
+	}
+
+	&::-webkit-scrollbar
+	{
+	  width: 8px;
+	  background-color: #F5F5F5;
+	}
+
+	&::-webkit-scrollbar-thumb
+	{
+	  background-color: #636365;
+	  height:10px;
+	}
 }
 
 .card:before {
@@ -92,6 +139,17 @@
   z-index: 95;
   position: relative;
 
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+
+  @media (max-width: 767px) { 
+  	z-index:200;
+  }
+
   
 
   & > {
@@ -100,12 +158,13 @@
 		top: 0;
 		left: 0;
 		transition: top 0.3s ease, left 0.3s ease;
-		width: 393px;
+		width: 392px;
 		margin: auto;
 		position: absolute;
+		top: 0; 
 		left: 0; 
+		bottom: 0; 
 		right: 0;
-		margin-top:30px;
 
 		@media (max-width: 767px) { 
 			width:360px;
@@ -154,7 +213,7 @@
 
 	button {
 		color: white;
-		background: #2e3742;
+		border-color: #2e3742;
 		font-size: 18px; 
 		padding: 15px; 
 		margin: 5px 0 20px;
@@ -169,6 +228,8 @@
 
 		&.correct {
 			background:green;
+			color:white !important;
+			border-color:green !important;
 
 			&:hover {
 				outline: none !important;
@@ -192,6 +253,9 @@
 
 		&.wrong {
 			background:red;
+			color:white !important;
+			border-color:red !important;
+
 			&:hover {
 				background: red !important;
 				color:white !important;
@@ -217,7 +281,7 @@
 	}
 }
 
-.quiz-answered {
+/*.quiz-answered {
 	button {
 		color: white;
 		background: #2e3742;
@@ -271,11 +335,11 @@
 			border-color:red !important;
 		}
 	}
-}
+}*/
 
 
 .slider-card {
-	background: url(/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
+	background: url(../../shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
 
@@ -285,7 +349,7 @@
 }
 
 .card-bg {
-	background: url(/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
+	background: url(../../shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
 
