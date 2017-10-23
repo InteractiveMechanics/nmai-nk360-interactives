@@ -128,3 +128,14 @@ body {
 .print-hidden {
 	display: none !important;
 }
+
+.marker-in-text .number {
+    position: absolute;
+    top: 17px;
+    left: 1px;
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.5;
+}
