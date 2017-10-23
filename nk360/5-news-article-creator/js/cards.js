@@ -53,8 +53,7 @@ Cards = (function() {
             dots: true,
             infinite: false,
             swipe: true,
-            touchMove: true,
-            centerMode: true
+            touchMove: true
         });
         $("#quote-selector .card-slider-container").slick({
             accessibility: false,

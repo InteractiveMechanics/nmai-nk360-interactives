@@ -366,7 +366,9 @@ main {
   font-style: italic;
   color: #9eb2c1;
   text-align: center;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  position: relative;
+  bottom: -20px; }
 
 .drop-letter-quote {
   font-size: 4.8rem;
@@ -577,7 +579,7 @@ main {
         max-width: 280px; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       #step-by-step-cards .step-images .step-container-inner img {
-        max-width: 240px; } }
+        max-width: 100%; } }
     #step-by-step-cards .step-images .step-container-inner img:focus, #step-by-step-cards .step-images .step-container-inner img:hover, #step-by-step-cards .step-images .step-container-inner img:active {
       opacity: 0.75; }
   #step-by-step-cards .step-images .step-container-inner:before {
@@ -602,17 +604,15 @@ main {
     top: 0;
     right: -20px;
     display: block; }
-  #step-by-step-cards .step-image-captions .step-container-inner {
-    display: flex !important;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column; }
   #step-by-step-cards .step-image-captions .image-caption-container {
-    display: block;
+    display: inline-block;
     position: relative;
     padding: 0;
     width: auto;
     margin: 0 auto 15px; }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-container {
+        width: 100%; } }
     #step-by-step-cards .step-image-captions .image-caption-container img {
       position: relative;
       border: 2px solid black;
@@ -627,6 +627,9 @@ main {
       @media screen and (max-width: 767px) and (orientation: landscape) {
         #step-by-step-cards .step-image-captions .image-caption-container img {
           max-height: 180px; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-width: 100%; } }
     #step-by-step-cards .step-image-captions .image-caption-container:before {
       content: '';
       position: absolute;
@@ -667,39 +670,51 @@ main {
         opacity: 0.75; }
       #step-by-step-cards .step-image-captions .image-caption-container .featured.active {
         background-image: url("../assets/icon-star-fill.svg"); }
-    #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form {
-      display: inline-block;
-      padding: 20px;
-      vertical-align: top; }
-      #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-        padding: 10px;
-        width: 400px;
-        height: 80px;
-        margin: 0;
-        display: inline-block; }
-        @media screen and (max-width: 1199px) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            height: 60px; } }
-        @media screen and (max-width: 991px) and (orientation: portrait) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            height: 80px; } }
-        @media screen and (max-width: 767px) and (orientation: landscape) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            width: 320px; } }
+  #step-by-step-cards .step-image-captions .image-caption-form textarea {
+    padding: 10px;
+    width: 400px;
+    height: 80px;
+    margin: 0;
+    display: inline-block; }
+    @media screen and (max-width: 1199px) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        height: 60px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        height: 80px; } }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        width: 320px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        width: 100%; } }
   #step-by-step-cards .step-quotes .quote-step .step-container-inner {
     cursor: pointer;
     transition: 0.5s all;
     opacity: 1; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-quotes .quote-step .step-container-inner {
+        max-width: 100%; } }
     #step-by-step-cards .step-quotes .quote-step .step-container-inner:focus, #step-by-step-cards .step-quotes .quote-step .step-container-inner:hover, #step-by-step-cards .step-quotes .quote-step .step-container-inner:active {
       opacity: 0.75; }
   #step-by-step-cards .step-quotes .quote-step p {
     padding: 20px 30px; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-quotes .quote-step p {
+        padding: 10px;
+        font-size: 0.9rem; } }
     #step-by-step-cards .step-quotes .quote-step p small {
       display: block;
       margin-top: 10px; }
+      @media screen and (max-width: 767px) {
+        #step-by-step-cards .step-quotes .quote-step p small {
+          font-size: 0.6rem; } }
   #step-by-step-cards .step-review .btn {
     margin: 20px 0;
     font-weight: bold; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-review .btn {
+        font-size: 1rem; } }
 
 #navigation .nav-arrow {
   position: fixed;
@@ -870,12 +885,15 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
-    font-size: 46px;
+    font-size: 42px;
     line-height: 1; }
     @media screen and (min-width: 992px) and (max-width: 1199px) {
       #print-preview .paper-preview-headline {
         font-size: 40px;
         height: 96px; } }
+    @media screen and (max-width: 767px) {
+      #print-preview .paper-preview-headline {
+        font-size: 36px; } }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
       height: 76px;
@@ -883,6 +901,9 @@ main {
       @media screen and (min-width: 992px) and (max-width: 1199px) {
         #print-preview .paper-preview-headline.large {
           font-size: 66px; } }
+      @media screen and (max-width: 767px) {
+        #print-preview .paper-preview-headline.large {
+          font-size: 60px; } }
   #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
     font-style: italic; }
@@ -894,6 +915,9 @@ main {
     align-content: flex-start;
     position: relative;
     max-height: 1200px; }
+    @media screen and (max-width: 767px) {
+      #print-preview .paper-preview-article {
+        max-height: 1400px; } }
     #print-preview .paper-preview-article > * {
       width: 30%;
       margin-right: 3%; }
@@ -948,6 +972,11 @@ main {
         top: -60px;
         right: 0;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); } }
+    @media screen and (max-width: 767px) {
+      #print-preview .close-preview {
+        position: fixed;
+        top: 20px;
+        right: 20px; } }
 
 .form-control {
   padding: 1rem 1.25rem;
