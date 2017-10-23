@@ -129,6 +129,36 @@ footer {
     #instructions .instructions-container .row {
       margin-bottom: 20px; }
 
+#credits-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  padding: 200px 100px; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    #credits-container {
+      padding: 120px 60px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #credits-container {
+      padding: 80px 40px; } }
+  @media screen and (max-width: 767px) {
+    #credits-container {
+      padding: 80px 40px; } }
+  #credits-container h1 {
+    font-size: 2.1rem; }
+  #credits-container a {
+    color: white;
+    text-decoration: underline; }
+  #credits-container span {
+    display: block;
+    margin-top: 40px;
+    font-style: italic; }
+
 span[data-toggle="tooltip"] {
   border: 1px solid #206CAF;
   border-radius: 4px;
@@ -332,29 +362,15 @@ span[data-toggle="tooltip"] {
   font-weight: bold;
   font-style: normal;
   src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
-#intro {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  z-index: 1; }
-
-#puzzle {
-  background: url("/nk360/shared/lib/im/images/default/bkgr-generic@2x.png");
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: absolute; }
-
+/**
+ * This file includes a few miscellaneous styles. 
+**/
 .icon-definition {
   fill: white;
   height: 18px;
   position: relative;
   bottom: -2px;
   left: -11px; }
-
-[data-gallery] {
-  background: url("/nk360/shared/lib/im/images/icon-zoom.svg");
-  background-repeat: no-repeat; }
 
 .popover {
   background-color: #ec5343;
@@ -370,6 +386,24 @@ span[data-toggle="tooltip"] {
 .btn-wrapper {
   display: flex; }
 
+.zoom-icon {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px; }
+
+.puzzle-img-zoom-icon {
+  width: 100%;
+  position: relative;
+  display: block;
+  text-align: right;
+  top: -40px;
+  right: 15px; }
+
+/**
+ * This file includes default styles for the intro and learning points modals
+**/
 #intro,
 #learning-points {
   height: 100vh;
@@ -410,6 +444,9 @@ span[data-toggle="tooltip"] {
     .learning-points-card .header-wrapper h1 {
       font-size: 26px;
       line-height: 1.4; }
+    .intro-card .header-wrapper .subheader li,
+    .learning-points-card .header-wrapper .subheader li {
+      color: black; }
   .intro-card .text-wrapper,
   .learning-points-card .text-wrapper {
     height: 70%;
@@ -466,7 +503,8 @@ span[data-toggle="tooltip"] {
     display: inline;
     font-size: 16px;
     color: white;
-    font-family: "Archer Pro", serif; }
+    font-family: "Archer Pro", serif;
+    padding: 0px 3px; }
 
 .modal-img-wrapper {
   position: relative;
@@ -484,12 +522,25 @@ span[data-toggle="tooltip"] {
 .read-more-btn {
   font-weight: 700; }
 
-#puzzle .header-wrapper {
-  width: 100%;
-  text-align: center; }
-  @media (max-width: 767px) {
-    #puzzle .header-wrapper {
-      margin-top: 75px; } }
+/**
+ * This file includes all of the default styling for the puzzle template, including styling for the cards.  Cards are in this file as they are not the draggable objects.
+ * 
+**/
+#puzzle {
+  background: url("/nk360/shared/lib/im/images/default/bkgr-generic@2x.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute; }
+  #puzzle .header-wrapper {
+    width: 100%;
+    text-align: center; }
+    @media (max-width: 767px) {
+      #puzzle .header-wrapper {
+        margin-top: 75px; } }
+  @media (orientation: landscape) {
+    #puzzle {
+      overflow: scroll; } }
 
 .puzzle-img-wrapper,
 .lg-puzzle-wrapper {
@@ -656,83 +707,15 @@ span[data-toggle="tooltip"] {
   .card[data-card="12"]:hover {
     transform: rotate(-60deg) scale(1.15, 1.15); }
 
-#complete-overlay {
-  height: 100vh;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.85); }
-  #complete-overlay .text-wrapper {
-    color: white;
-    width: 40%;
-    left: 30%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%; }
-    #complete-overlay .text-wrapper h1 {
-      font-size: 50px;
-      letter-spacing: 2px;
-      margin-bottom: 40px; }
-      @media (max-width: 767px) {
-        #complete-overlay .text-wrapper h1 {
-          font-size: 35px;
-          margin-bottom: 20px; } }
-    #complete-overlay .text-wrapper p {
-      margin-bottom: 80px;
-      text-align: center;
-      line-height: 1.9;
-      font-weight: 300; }
-      @media (max-width: 767px) {
-        #complete-overlay .text-wrapper p {
-          margin-bottom: 10px; } }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      #complete-overlay .text-wrapper {
-        left: 25%;
-        width: 50%; } }
-    @media (min-width: 768px) and (max-width: 991px) {
-      #complete-overlay .text-wrapper {
-        left: 20%;
-        width: 60%; } }
-    @media (max-width: 767px) {
-      #complete-overlay .text-wrapper {
-        width: 80%;
-        left: 10%;
-        height: 80%;
-        top: 10%; } }
-  #complete-overlay .btn-wrapper button {
-    margin: 15px;
-    color: white; }
-  @media (max-width: 767px) {
-    #complete-overlay .btn-wrapper {
-      width: 100%;
-      display: flex;
-      flex-direction: column; } }
-
-.zoom-icon {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  right: 15px;
-  bottom: 15px; }
-
-.puzzle-img-zoom-icon {
-  width: 100%;
-  position: relative;
-  display: block;
-  text-align: right;
-  top: -40px;
-  right: 15px; }
-
 .read-more {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 20px; }
 
+/**
+ * This file includes default styles for draggable and droppable elements, except for the draggable modal.  Styles for the draggable modal are in the modal partial
+**/
 #droppable-wrapper {
   width: 70%;
   display: flex;
@@ -770,6 +753,10 @@ span[data-toggle="tooltip"] {
   transform: scale(0.2, 0.2) !important;
   cursor: move; }
 
+/**
+ * This file includes default styles for the card modal, which uses the Bootstrap modal.  The intro and learning card modals are  not based on the Bootstrap modal; those styles are in intro.scss
+ * Include each file for this specific instance.
+**/
 .modal-backdrop {
   opacity: 0.65 !important;
   z-index: 1000;
@@ -844,5 +831,65 @@ span[data-toggle="tooltip"] {
       display: block; } }
   #mobile-btn-wrapper .droppable-widget {
     width: auto; }
+
+/**
+ * This file includes all of the default styling for the 'puzzle complete' overlay.
+ * 
+**/
+#complete-overlay {
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.85); }
+  #complete-overlay .text-wrapper {
+    color: white;
+    width: 40%;
+    left: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    #complete-overlay .text-wrapper h1 {
+      font-size: 50px;
+      letter-spacing: 2px;
+      margin-bottom: 40px; }
+      @media (max-width: 767px) {
+        #complete-overlay .text-wrapper h1 {
+          font-size: 35px;
+          margin-bottom: 20px; } }
+    #complete-overlay .text-wrapper p {
+      margin-bottom: 80px;
+      text-align: center;
+      line-height: 1.9;
+      font-weight: 300; }
+      @media (max-width: 767px) {
+        #complete-overlay .text-wrapper p {
+          margin-bottom: 10px; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #complete-overlay .text-wrapper {
+        left: 25%;
+        width: 50%; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      #complete-overlay .text-wrapper {
+        left: 20%;
+        width: 60%; } }
+    @media (max-width: 767px) {
+      #complete-overlay .text-wrapper {
+        width: 80%;
+        left: 10%;
+        height: 80%;
+        top: 10%; } }
+  #complete-overlay .btn-wrapper button {
+    margin: 15px;
+    color: white; }
+  @media (max-width: 767px) {
+    #complete-overlay .btn-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column; } }
 
 /*# sourceMappingURL=main.css.map */

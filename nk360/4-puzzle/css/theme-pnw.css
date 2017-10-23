@@ -80,11 +80,19 @@ h4 {
       border-color: #2E3742;
       opacity: 0.65; }
 
+/**
+ * This file includes Pacific Northwest theme styles for the card.
+ * 
+**/
 .card {
   background: url("../assets/card-pnw@2x.png");
   background-size: contain;
   background-color: #eaeaea; }
 
+/**
+ * This file includes Pacific Northwest theme styles for the modal.
+ * 
+**/
 .modal-content {
   background: url("/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png");
   background-color: white;
@@ -104,6 +112,10 @@ h4 {
     position: absolute;
     left: 42%; }
 
+/**
+ * This file includes Pacific Northwest theme styles for the intro and learning points modals.
+ * 
+**/
 .intro-card,
 .learning-points-card {
   background: url("/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png");
@@ -119,9 +131,17 @@ h4 {
 .modal-img-wrapper {
   background-color: #9eb2c1; }
 
+/**
+ * This file includes Northern Plains theme styles for the 'puzzle complete' overlay.
+ * 
+**/
 #complete-overlay .text-wrapper h1 {
   font-family: "Archer Pro", serif; }
 
+/**
+ * This file includes Pacific Northwest theme styles for the puzzle.
+ * 
+**/
 #puzzle {
   background: url("/nk360/shared/lib/im/images/pnw/bkgr-pnw@2x.png");
   background-size: cover; }

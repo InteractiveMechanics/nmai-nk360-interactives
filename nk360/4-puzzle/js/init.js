@@ -6,6 +6,11 @@ Init = (function() {
     	bindEvents();
     }
 
+    /**
+    * Displays the Puzzles screen, renders data for the various templates on the puzzle screen, calls the functions that initialize the draggable and droppable elements as well as the tooltip in the puzzle screen header
+    * @param {int} takes no arguments
+    * @return {} doesn't return anything but manipulates the DOM and renders data 
+    **/ 
     var displayPuzzleScreen = function() {
     	$('#puzzle').removeClass('hidden').addClass('animated fadeIn');
         $('#puzzle-header').html($.templates("#puzzle-header-template").render(data.puzzles[0]));
@@ -17,20 +22,37 @@ Init = (function() {
         setHeaderTooltip();
     }
 
+
+    /**
+    * Initailizes the tooltip for the header
+    * @param {int} takes no arguments
+    * @return {} doesn't return anything but manipulates the DOM 
+    **/ 
     var setHeaderTooltip = function() {
          $('.header-themes').tooltip({
             trigger: 'hover focus'
          });
     }
  
+     /**
+    * Renders data for the intro modal and displays the intro modal 
+    * @param {int} takes no arguments
+    * @return {} doesn't return anything but manipulates the DOM 
+    **/ 
     var displayIntroModal = function() {
         $('#intro').html($.templates('#intro-template').render(data.puzzles[0]));
     	if ($('.intro-card').hasClass('hidden')) {
     		$('.intro-card').removeClass('hidden').addClass('animated slideInDown');
     	}
-        //displayPuzzleScreen();
+        
     }
 
+
+    /**
+    * Hides the intro modal
+    * @param {int} takes no arguments
+    * @return {} doesn't return anything but manipulates the DOM 
+    **/ 
     var hideIntroModal = function() {
         $('#intro').addClass('hidden animated fadeOut');
     }
