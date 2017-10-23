@@ -400,7 +400,7 @@ Annotator = (function() {
       var i = 1;
       print.find('.marker-in-text').each(function() {
         var m = $(this);
-        m.append('<span class="number">' + i + '</span>');
+        m.append('<span class="number" style="opacity:1; display:block;">' + i + '</span>');
         i++;
       });
 

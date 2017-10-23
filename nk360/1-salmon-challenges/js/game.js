@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 3,
+      speed: 5,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -424,22 +424,22 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 12840) {
 
-                /*if(checkEncounters(current_position)) {
+                if(checkEncounters(current_position)) {
 
-                };*/
+                };
 
                 if(current_position == 12000) {
                   $('#SelectedSalmon').addClass('rising-water');
                 }
 
                 settings.position -= settings.speed;
-                //$('.game-world').css('left', settings.position + 'px');
+                $('.game-world').css('left', settings.position + 'px');
                 
-                settings.backgroundPosition -= 2;
-                settings.midgroundPosition -= 2;
-                settings.foregroundPosition -= 5;
+                settings.backgroundPosition -= .5;
+                //settings.midgroundPosition -= 2;
+                settings.foregroundPosition -= .5;
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
-                settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
+                //settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
                 settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
   
                 settings.positions.forEach(function(pos, index) {

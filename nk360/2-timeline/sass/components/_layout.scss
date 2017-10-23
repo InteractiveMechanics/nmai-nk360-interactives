@@ -55,6 +55,9 @@ div[id^="era-block"] {
 
 	img {
 		position: absolute;
+		@include screen-md {
+			width: 90%;
+		}
 	}
 
 	h1 {
@@ -146,8 +149,11 @@ div[id^="era-block"] {
 		position: relative;
 		top: 17px;
 		h1 {
-			@include screen-xs {
+			@include screen-ltmd {
 				font-size: 2.3em;
+			}
+			@include screen-md {
+				font-size: 2.4em;
 			}
 		}
 		@include screen-xs {
@@ -156,9 +162,27 @@ div[id^="era-block"] {
     		margin-bottom: 30px;
     		position: initial;
 		}
+		@include screen-sm {
+			height: auto;
+    		padding-top: 135px;
+    		margin-bottom: 60px;
+    		position: initial;
+		}
+		@include screen-md {
+			height: auto;
+    		padding-top: 50px;
+    		margin-bottom: 60px;
+    		position: initial;
+		}
 		img {
 			@include screen-xs {
 				width: 75%;
+			}
+			@include screen-sm {
+				width: 50%;
+			}
+			@include screen-md {
+				width: 30%;
 			}
 		}
 	}
