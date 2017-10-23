@@ -7,6 +7,10 @@
 		width: 50px;
 		height: 50px;
 	}
+	@include screen-sm {
+		width: 75px;
+		height: 75px;
+	}
 }
 
 .slick-prev {
@@ -26,6 +30,12 @@
 		&:before {
 			width: 50px;
 			height: 50px;
+		}
+	}
+	@include screen-sm {
+		&:before {
+			width: 75px;
+			height: 75px;
 		}
 	}
 }
@@ -50,17 +60,23 @@
 			height: 50px;
 		}
 	}
+	@include screen-sm {
+		&:before {
+			width: 75px;
+			height: 75px;
+		}
+	}
 }
 
 .slick-dots li button {
 	&:before {
 		content: '';
-    	background-color: white;
+    	background-color: black;
     	border-radius: 50%;
     	width: 30px;
     	height: 30px;
 	}
-	@include screen-xs {
+	@include screen-ltmd {
 		&:before {
 			width: 15px;
 			height: 15px;

@@ -128,6 +128,36 @@ footer {
     #instructions .instructions-container .row {
       margin-bottom: 20px; }
 
+#credits-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  padding: 200px 100px; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    #credits-container {
+      padding: 120px 60px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #credits-container {
+      padding: 80px 40px; } }
+  @media screen and (max-width: 767px) {
+    #credits-container {
+      padding: 80px 40px; } }
+  #credits-container h1 {
+    font-size: 2.1rem; }
+  #credits-container a {
+    color: white;
+    text-decoration: underline; }
+  #credits-container span {
+    display: block;
+    margin-top: 40px;
+    font-style: italic; }
+
 span[data-toggle="tooltip"] {
   border: 1px solid #206CAF;
   border-radius: 4px;
@@ -340,6 +370,9 @@ div[id^="era-block"] {
   align-items: center; }
   .heading-wrapper img {
     position: absolute; }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .heading-wrapper img {
+        width: 90%; } }
   .heading-wrapper h1 {
     color: white;
     margin: 0px;
@@ -400,18 +433,39 @@ div[id^="era-block"] {
   #detail .heading-wrapper {
     position: relative;
     top: 17px; }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       #detail .heading-wrapper h1 {
         font-size: 2.3em; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #detail .heading-wrapper h1 {
+        font-size: 2.4em; } }
     @media (max-width: 767px) {
       #detail .heading-wrapper {
         height: auto;
         padding-top: 100px;
         margin-bottom: 30px;
         position: initial; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      #detail .heading-wrapper {
+        height: auto;
+        padding-top: 135px;
+        margin-bottom: 60px;
+        position: initial; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #detail .heading-wrapper {
+        height: auto;
+        padding-top: 50px;
+        margin-bottom: 60px;
+        position: initial; } }
     @media (max-width: 767px) {
       #detail .heading-wrapper img {
         width: 75%; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      #detail .heading-wrapper img {
+        width: 50%; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #detail .heading-wrapper img {
+        width: 30%; } }
 
 #explore {
   background: #a9a9ab;
@@ -422,17 +476,20 @@ div[id^="era-block"] {
 
 #droppable-container {
   align-items: center;
-  bottom: 0px;
   display: inline-flex;
   justify-content: center;
   padding: 10px;
   color: #006986;
   background-color: rgba(9, 74, 113, 0.35);
   border-radius: 52px;
-  box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 5%; }
   @media (max-width: 767px) {
     #droppable-container {
       display: none; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #droppable-container {
+      margin-top: 3%; } }
 
 #era-label-start {
   width: 125px;
@@ -450,23 +507,32 @@ div[id^="era-block"] {
   color: #006986;
   font-size: 13px;
   text-align: center; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .droppable-widget {
+      height: 70px;
+      width: 70px; } }
 
 [data-toggle="tooltip"] {
   border-bottom: none; }
 
 .draggable-holder {
-  margin-left: 20px; }
+  margin-left: 20px;
+  height: 115px; }
   @media (max-width: 767px) {
     .draggable-holder {
       margin: 5px 0px;
       height: 75px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .draggable-holder {
+      margin: 5px 0px;
+      height: 90px; } }
 
 #draggable-wrapper {
   position: relative;
   display: flex;
   width: 90%;
   left: 5%;
-  height: 56%;
+  height: 50%;
   flex-wrap: wrap;
   justify-content: center; }
 
@@ -515,9 +581,17 @@ div[id^="era-block"] {
         .draggable-widget div p {
           height: 60px;
           overflow: hidden; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .draggable-widget div p {
+          height: 70px;
+          overflow: hidden; } }
   @media (max-width: 767px) {
     .draggable-widget {
       height: 75px;
+      padding: 5px 5px 5px 52px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .draggable-widget {
+      height: 90px;
       padding: 5px 5px 5px 52px; } }
 
 .draggable-img {
@@ -536,6 +610,10 @@ div[id^="era-block"] {
     .draggable-img {
       height: 50px;
       width: 50px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .draggable-img {
+      height: 70px;
+      width: 70px; } }
 
 .draggable-img-wrapper {
   left: -23px;
@@ -547,6 +625,13 @@ div[id^="era-block"] {
       top: -75px;
       height: 50px;
       width: 50px;
+      position: relative;
+      left: -7px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .draggable-img-wrapper {
+      top: -90px;
+      height: 70px;
+      width: 70px;
       position: relative;
       left: -7px; } }
 
@@ -568,6 +653,14 @@ div[id^="era-block"] {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .draggable-overlay:after {
+        height: 70px;
+        width: 70px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .draggable-overlay {
+      height: 70px;
+      width: 70px; } }
 
 .draggable-widget.dragged {
   background-color: transparent;
@@ -1068,6 +1161,11 @@ div[id^="era-block"] {
     .slick-next {
       width: 50px;
       height: 50px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .slick-prev,
+    .slick-next {
+      width: 75px;
+      height: 75px; } }
 
 .slick-prev {
   left: 25px; }
@@ -1086,6 +1184,10 @@ div[id^="era-block"] {
       .slick-prev:before {
         width: 50px;
         height: 50px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .slick-prev:before {
+      width: 75px;
+      height: 75px; } }
 
 .slick-next {
   right: 25px; }
@@ -1104,14 +1206,18 @@ div[id^="era-block"] {
       .slick-next:before {
         width: 50px;
         height: 50px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .slick-next:before {
+      width: 75px;
+      height: 75px; } }
 
 .slick-dots li button:before {
   content: '';
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
   width: 30px;
   height: 30px; }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .slick-dots li button:before {
     width: 15px;
     height: 15px; } }
