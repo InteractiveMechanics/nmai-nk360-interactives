@@ -34,6 +34,14 @@
             left: 20px;
             background-image: url('/nk360/shared/lib/im/images/icon-prev.svg');
 
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                left: 10px;
+
+                &:hover, &:active, &:focus {
+                    left: 0;
+                }
+            }
+
             &:hover, &:active, &:focus {
                 left: 10px;
             }
@@ -41,6 +49,14 @@
         &.nav-arrow-right {
             right: 20px;
             background-image: url('/nk360/shared/lib/im/images/icon-next.svg');
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                right: 10px;
+                    
+                &:hover, &:active, &:focus {
+                    right: 0;
+                }
+            }
 
             &:hover, &:active, &:focus {
                 right: 10px;

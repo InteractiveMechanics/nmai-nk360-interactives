@@ -119,6 +119,9 @@ footer {
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
         padding: 30px 20px 100px; } }
+    @media screen and (max-width: 767px) {
+      #instructions .instructions-container h1 {
+        font-size: 2.7rem; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {
@@ -359,6 +362,12 @@ main {
   #error-alert.show {
     bottom: 70px; }
 
+.swipe-message {
+  font-style: italic;
+  color: #9eb2c1;
+  text-align: center;
+  font-size: 0.8rem; }
+
 .drop-letter-quote {
   font-size: 4.8rem;
   font-weight: 900;
@@ -410,6 +419,9 @@ main {
       @media screen and (max-width: 991px) and (orientation: portrait) {
         #step-by-step-cards .step .step-container {
           margin-top: 160px; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .step .step-container {
+          width: 320px; } }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
@@ -450,6 +462,9 @@ main {
         @media screen and (max-width: 767px) and (orientation: landscape) {
           #step-by-step-cards .step .step-container.step-container-lg {
             width: 540px; } }
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 320px; } }
   #step-by-step-cards .card-slider {
     position: relative; }
     #step-by-step-cards .card-slider .card-slider-container {
@@ -495,6 +510,9 @@ main {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .card-slider .nav-arrow {
+          display: none !important; } }
       #step-by-step-cards .card-slider .nav-arrow.slick-disabled {
         opacity: 0.4; }
       #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left {
@@ -521,6 +539,9 @@ main {
           filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
   #step-by-step-cards .step-intro .guiding-question.large {
     font-size: 3.6rem; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-intro .guiding-question.large {
+        font-size: 3rem; } }
   #step-by-step-cards .step-theme .btn.btn-theme {
     padding: 40px 1.25rem;
     background-color: #a8bd46;
@@ -528,6 +549,9 @@ main {
     background-position: center center;
     background-size: 100%;
     font-weight: bold; }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-theme .btn.btn-theme {
+        margin-bottom: 10px; } }
     #step-by-step-cards .step-theme .btn.btn-theme[data-theme="traditional"] {
       background-image: url("../assets/background-traditional.jpg"); }
     #step-by-step-cards .step-theme .btn.btn-theme[data-theme="modern"] {
@@ -551,6 +575,9 @@ main {
       #step-by-step-cards .step-images .step-container-inner img {
         max-height: 320px;
         max-width: 280px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-width: 240px; } }
     #step-by-step-cards .step-images .step-container-inner img:focus, #step-by-step-cards .step-images .step-container-inner img:hover, #step-by-step-cards .step-images .step-container-inner img:active {
       opacity: 0.75; }
   #step-by-step-cards .step-images .step-container-inner:before {
@@ -699,11 +726,21 @@ main {
   #navigation .nav-arrow.nav-arrow-left {
     left: 20px;
     background-image: url("/nk360/shared/lib/im/images/icon-prev.svg"); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #navigation .nav-arrow.nav-arrow-left {
+        left: 10px; }
+        #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
+          left: 0; } }
     #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
       left: 10px; }
   #navigation .nav-arrow.nav-arrow-right {
     right: 20px;
     background-image: url("/nk360/shared/lib/im/images/icon-next.svg"); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #navigation .nav-arrow.nav-arrow-right {
+        right: 10px; }
+        #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
+          right: 0; } }
     #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
       right: 10px; }
 
@@ -938,6 +975,9 @@ main {
   @media screen and (max-width: 1199px) {
     .ql-container.ql-snow {
       height: 150px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .ql-container.ql-snow {
+      height: 250px; } }
 
 .ql-editor {
   font-size: 1.0rem;

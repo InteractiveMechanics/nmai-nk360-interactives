@@ -35,6 +35,9 @@
             @media screen and ($screen-ltmd) and ($screen-portrait) {
                 margin-top: 160px;
             }
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                width: 320px;
+            }
 
             &:after {
                 content: '';
@@ -82,6 +85,9 @@
                 }
                 @media screen and ($screen-xs) and ($screen-landscape) {
                     width: 540px;
+                }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    width: 320px;
                 }
             }
         }
@@ -148,6 +154,10 @@
             background-position: center center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                display: none !important;
+            }
     
             &.slick-disabled {
                 opacity: 0.4;
@@ -189,6 +199,10 @@
     .step-intro {
         .guiding-question.large {
             font-size: 3.6rem;
+
+            @media screen and ($screen-xs) {
+                font-size: 3rem;
+            }
         }
     }
     .step-theme {
@@ -199,6 +213,10 @@
             background-position: center center;
             background-size: 100%; 
             font-weight: bold;
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                margin-bottom: 10px;
+            }
 
             &[data-theme="traditional"] {
                 background-image: url('../assets/background-traditional.jpg');
@@ -232,6 +250,9 @@
                 @media screen and ($screen-ltmd) and ($screen-portrait) {
                     max-height: 320px;
                     max-width: 280px;
+                }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    max-width: 240px;
                 }
 
                 &:focus, &:hover, &:active {
