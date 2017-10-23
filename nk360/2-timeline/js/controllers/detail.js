@@ -160,7 +160,7 @@ Detail = (function() {
         });
         $('[data-toggle=tooltip]').tooltip('hide');
 
-        if (windowWidth >= 990) {
+        if (windowWidth >= 768) {
         $('.draggable-img-wrapper').draggable({
             appendTo: 'body',
             tolerance: 'touch',

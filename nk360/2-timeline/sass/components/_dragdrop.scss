@@ -1,6 +1,5 @@
 #droppable-container {
 	align-items: center;
-    bottom: 0px;
     display: inline-flex;
     justify-content: center;
     padding: 10px;
@@ -8,8 +7,12 @@
     background-color: rgba(9, 74, 113, 0.35);
     border-radius: 52px;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
+    margin-top: 5%;
     @include screen-xs {
     	display: none;
+    }
+    @include screen-md {
+    	margin-top: 3%;
     }
 
 }
@@ -32,6 +35,10 @@
 	color: $primary;
 	font-size: 13px;
 	text-align: center;
+	@include screen-sm {
+		height: 70px;
+		width: 70px;
+	}
 }
 
 [data-toggle="tooltip"] {
@@ -40,10 +47,16 @@
 
 .draggable-holder {
 	margin-left: 20px;
+	height: $moment-height;
 	@include screen-xs {
 		margin: 5px 0px;
 		height: 75px;
 	}
+	@include screen-sm {
+		margin: 5px 0px;
+		height: 90px;
+	}
+	
 }
 
 #draggable-wrapper {
@@ -51,7 +64,7 @@
 	display: flex;
 	width: 90%;
 	left: 5%;
-	height: 56%;
+	height: 50%;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -96,6 +109,11 @@
 				height: 60px;
     			overflow: hidden;
 			}
+			@include screen-sm {
+				height: 70px;
+				overflow: hidden;
+			}
+			
 		}
 	}
 
@@ -103,6 +121,11 @@
 		height: 75px;
 		padding: 5px 5px 5px 52px;
 	}
+	@include screen-sm {
+		height: 90px;
+		padding: 5px 5px 5px 52px;
+	}
+	
 }
 
 .draggable-img {
@@ -122,6 +145,10 @@
   		height: 50px;
   		width: 50px;
   	}
+  	@include screen-sm {
+  		height: 70px;
+  		width: 70px;
+  	}
 
 }
 
@@ -134,6 +161,13 @@
 		top: -75px;
 		height: 50px;
 		width: 50px;
+		position: relative;
+		left: -7px;
+	}
+	@include screen-sm {
+		top: -90px;
+		height: 70px;
+		width: 70px;
 		position: relative;
 		left: -7px;
 	}
@@ -157,6 +191,14 @@
     	display: flex;
     	justify-content: center;
     	align-items: center;
+    	@include screen-sm {
+    		height: 70px;
+    		width: 70px;
+    	}
+    }
+    @include screen-sm {
+    	height: 70px;
+    	width: 70px;
     }
 }
 
