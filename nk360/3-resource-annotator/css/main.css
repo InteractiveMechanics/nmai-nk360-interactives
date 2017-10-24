@@ -119,6 +119,9 @@ footer {
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
         padding: 30px 20px 100px; } }
+    @media screen and (max-width: 767px) {
+      #instructions .instructions-container h1 {
+        font-size: 2.7rem; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {
@@ -307,6 +310,19 @@ span[data-toggle="tooltip"] {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
+body p {
+  font-size: 1rem; }
+  @media screen and (max-width: 1200px) {
+    body p {
+      font-size: .8rem; } }
+body textarea {
+  -webkit-user-select: all;
+  /* Chrome all / Safari all */
+  -moz-user-select: all;
+  /* Firefox all */
+  -ms-user-select: all;
+  /* IE 10+ */
+  user-select: all; }
 body .black-text {
   color: #353535; }
 body a.link-color {
@@ -409,14 +425,20 @@ small, .small {
   font-style: bold;
   color: black;
   letter-spacing: .5px;
-  font-size: 70%;
+  font-size: .8rem;
   margin-top: 15px; }
+  @media screen and (max-width: 1200px) {
+    .theme {
+      font-size: .5rem; } }
 
 .markers-remaining {
   font-family: "Archer Pro", serif;
   color: black;
   letter-spacing: .5px;
   text-align: center; }
+  @media screen and (max-width: 1200px) {
+    .markers-remaining {
+      font-size: .6rem; } }
 
 .pin-image {
   display: inline-block;
@@ -454,12 +476,18 @@ small, .small {
   position: relative; }
 
 .print-button {
-  margin-top: 40px; }
+  margin-top: 35px; }
+  @media screen and (max-width: 1200px) {
+    .print-button {
+      margin-top: 20px; } }
 
 .original-text-detail {
   box-shadow: rgba(0, 0, 0, 0.35) 4px 2px 10px 0; }
   .original-text-detail h3 {
     color: black; }
+    @media screen and (max-width: 1200px) {
+      .original-text-detail h3 {
+        font-size: 1.25rem; } }
   .original-text-detail .outer-top {
     padding: 25px;
     background: white; }
@@ -545,15 +573,27 @@ small, .small {
     margin: 0 auto;
     width: 60px;
     display: inherit; }
+    @media screen and (max-width: 1200px) {
+      .marker img {
+        width: 30px; } }
 
 .markers-container .list-inline {
   margin: 30px 0 45px; }
+  @media screen and (max-width: 1200px) {
+    .markers-container .list-inline {
+      overflow-x: auto; } }
   .markers-container .list-inline .list-inline-item {
     margin-right: 7px;
     text-align: center;
     display: inline-block;
     text-align: center;
     width: 30%; }
+    @media screen and (max-width: 1625px) {
+      .markers-container .list-inline .list-inline-item {
+        width: 40%; } }
+    @media screen and (max-width: 1200px) {
+      .markers-container .list-inline .list-inline-item {
+        width: 40%; } }
 
 .btn-lg {
   width: 325px; }
@@ -654,6 +694,10 @@ small, .small {
   background-size: contain;
   padding: 10px;
   padding-top: 0; }
+  @media screen and (max-width: 1200px) {
+    .defintions-icon {
+      padding: 7px;
+      padding-top: 0; } }
 
 .pin-visible img {
   opacity: 1 !important; }
@@ -774,6 +818,9 @@ small, .small {
   box-sizing: border-box;
   padding: 20px 48px;
   min-height: 600px; }
+  @media screen and (max-width: 1200px) {
+    .card {
+      min-height: 500px; } }
   .card .close-icon {
     position: absolute;
     right: -100px;
@@ -830,6 +877,9 @@ small, .small {
   position: absolute;
   width: 93%;
   height: 580px; }
+  @media screen and (max-width: 1100px) {
+    .card {
+      height: 490px; } }
 
 .quiz-options {
   width: 100%; }
@@ -868,6 +918,9 @@ small, .small {
   background: white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1200px) {
+    .slider-card {
+      background-size: 400px 500px !important; } }
 
 @media screen and (max-width: 992px) {
   .annotation-screen {

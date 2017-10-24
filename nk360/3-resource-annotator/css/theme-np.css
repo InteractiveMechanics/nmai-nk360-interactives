@@ -44,6 +44,15 @@ h4 {
   @media screen and (max-width: 991px) and (orientation: portrait) {
     .header {
       margin: 60px auto 0; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .header {
+      margin: 20px auto 0;
+      max-width: 300px;
+      background-size: 75%; }
+      .header h1 {
+        font-size: 1.8rem; }
+      .header h2 {
+        font-size: 0.8rem; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
@@ -99,6 +108,9 @@ body {
   background: url(/nk360/shared/lib/im/images/np/text-card-np@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1200px) {
+    .slider-card {
+      background-size: 400px 500px !important; } }
   @media (max-width: 767px) {
     .slider-card {
       background-size: 370px 480px !important; } }
