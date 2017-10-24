@@ -41,10 +41,6 @@ Init = (function() {
         var credits = data.credits;
         $('#footer-credits').attr('data-content', credits);
     }
-
-    var showCredits = function() {
-        
-    }
     
     return {
         init: init

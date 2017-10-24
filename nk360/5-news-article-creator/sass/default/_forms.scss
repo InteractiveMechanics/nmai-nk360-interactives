@@ -29,6 +29,9 @@
     @media screen and ($screen-ltlg) {
         height: 150px;
     }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 250px;
+    }
 }
 .ql-editor {
     font-size: 1.0rem;

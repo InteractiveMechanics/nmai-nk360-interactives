@@ -22,6 +22,10 @@
             line-height: 1.2;
             color: $primary;
             margin: 40px 0;
+
+            @media screen and ($screen-xs) {
+                font-size: 2.4rem;
+            }
         }
     }
     .step-theme {

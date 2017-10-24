@@ -35,6 +35,9 @@
             @media screen and ($screen-ltmd) and ($screen-portrait) {
                 margin-top: 160px;
             }
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                width: 320px;
+            }
 
             &:after {
                 content: '';
@@ -82,6 +85,9 @@
                 }
                 @media screen and ($screen-xs) and ($screen-landscape) {
                     width: 540px;
+                }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    width: 320px;
                 }
             }
         }
@@ -148,6 +154,10 @@
             background-position: center center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                display: none !important;
+            }
     
             &.slick-disabled {
                 opacity: 0.4;
@@ -189,6 +199,10 @@
     .step-intro {
         .guiding-question.large {
             font-size: 3.6rem;
+
+            @media screen and ($screen-xs) {
+                font-size: 3rem;
+            }
         }
     }
     .step-theme {
@@ -199,6 +213,10 @@
             background-position: center center;
             background-size: 100%; 
             font-weight: bold;
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                margin-bottom: 10px;
+            }
 
             &[data-theme="traditional"] {
                 background-image: url('../assets/background-traditional.jpg');
@@ -233,6 +251,9 @@
                     max-height: 320px;
                     max-width: 280px;
                 }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    max-width: 100%;
+                }
 
                 &:focus, &:hover, &:active {
                     opacity: 0.75;
@@ -266,18 +287,20 @@
         }
     }
     .step-image-captions {
-        .step-container-inner {
-            display: flex !important;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
+        .image-caption-step {
+            
         }
+
         .image-caption-container {
-            display: block;
+            display: inline-block;
             position: relative;
             padding: 0;
             width: auto;
             margin: 0 auto 15px;
+
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                width: 100%;
+            }
 
             img {
                 position: relative;
@@ -293,6 +316,9 @@
                 }
                 @media screen and ($screen-xs) and ($screen-landscape) {
                     max-height: 180px;
+                }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    max-width: 100%;
                 }
             }
 
@@ -343,27 +369,30 @@
                     background-image: url('../assets/icon-star-fill.svg');
                 }
             }
-            .image-caption-form {
+        }
+        .image-caption-form {
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                
+            }
+
+            textarea {
+                padding: 10px;
+                width: 400px;
+                height: 80px;
+                margin: 0;
                 display: inline-block;
-                padding: 20px;
-                vertical-align: top;
-    
-                textarea {
-                    padding: 10px;
-                    width: 400px;
+                    
+                @media screen and ($screen-ltlg) {
+                    height: 60px;
+                }
+                @media screen and ($screen-ltmd) and ($screen-portrait) {
                     height: 80px;
-                    margin: 0;
-                    display: inline-block;
-                        
-                    @media screen and ($screen-ltlg) {
-                        height: 60px;
-                    }
-                    @media screen and ($screen-ltmd) and ($screen-portrait) {
-                        height: 80px;
-                    }
-                    @media screen and ($screen-xs) and ($screen-landscape) {
-                        width: 320px;
-                    }
+                }
+                @media screen and ($screen-xs) and ($screen-landscape) {
+                    width: 320px;
+                }
+                @media screen and ($screen-xs) and ($screen-portrait) {
+                    width: 100%;
                 }
             }
         }
@@ -373,7 +402,11 @@
             .step-container-inner {
                 cursor: pointer;
                 transition: 0.5s all;
-                opacity: 1;                
+                opacity: 1;        
+
+                @media screen and ($screen-xs) {
+                    max-width: 100%;
+                }
 
                 &:focus, &:hover, &:active {
                     opacity: 0.75;
@@ -383,9 +416,18 @@
             p {
                 padding: 20px 30px;
 
+                @media screen and ($screen-xs) {
+                    padding: 10px;
+                    font-size: 0.9rem;
+                }
+
                 small {
                     display: block;
                     margin-top: 10px;
+
+                    @media screen and ($screen-xs) {
+                        font-size: 0.6rem;
+                    }
                 }
             }
         }
@@ -394,6 +436,10 @@
         .btn {
             margin: 20px 0;
             font-weight: bold;
+
+            @media screen and ($screen-xs) {
+                font-size: 1rem;
+            }
         }
     }
 }

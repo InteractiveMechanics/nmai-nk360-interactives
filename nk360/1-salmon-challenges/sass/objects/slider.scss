@@ -1,22 +1,22 @@
 .slick-slide {
     margin: 0px 20px;
-	width: 342px;
-	  
-	@media (max-width: 767px) { 
-	 	width:310px;
-	}
+    width: 342px;
+      
+    @media (max-width: 767px) { 
+        width:310px;
+    }
 
-	img {
-		width: 100%;
-	}
+    img {
+        width: 100%;
+    }
 }
 
 .slick-prev {
-	left: -120px;
+    left: -120px;
 }
 
 .slick-next {
-	right: -120px;
+    right: -120px;
 }
 
 .slick-prev,
@@ -28,7 +28,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-	font-size:100px;
+    font-size:100px;
 }
 
 .slick-prev:hover,
@@ -51,7 +51,7 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('/nk360/shared/lib/im/images/icon-prev.svg') no-repeat;
+    background: url('../../shared/lib/im/images/icon-prev.svg') no-repeat;
     color: transparent;
     background-size:contain;
 }
@@ -63,40 +63,40 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('/nk360/shared/lib/im/images/icon-next.svg') no-repeat;
+    background: url('../../shared/lib/im/images/icon-next.svg') no-repeat;
     color: transparent;
     background-size:contain;
 }
 /*
 .slick-dots {
-	z-index: 50;
+    z-index: 50;
 
-	li {
-		@include screen-ltmd {
-			display: inline-block;
-		}
-		@include screen-xs {
-			display: inline-block;
-		}
-		@include screen-xxs {
-			margin: 0 3px;
-		}
-		button {
-			&:before {
-				font-size: 17px;
-				color: #ffffff;
-				opacity: 0.5;
-			}
-		}
-		&.slick-active {
-			button {
-				&:before {
-					color: #fff;
-					opacity: 1.0;
-				}
-			}
-		}
-	}
+    li {
+        @include screen-ltmd {
+            display: inline-block;
+        }
+        @include screen-xs {
+            display: inline-block;
+        }
+        @include screen-xxs {
+            margin: 0 3px;
+        }
+        button {
+            &:before {
+                font-size: 17px;
+                color: #ffffff;
+                opacity: 0.5;
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    color: #fff;
+                    opacity: 1.0;
+                }
+            }
+        }
+    }
 }*/
 
 .slick-dots {
@@ -105,7 +105,7 @@
     list-style: none;
     padding: 0;
     margin: 0 auto;
-	bottom: -80px;
+    bottom: -80px;
 
     > li {
         display: inline-block;

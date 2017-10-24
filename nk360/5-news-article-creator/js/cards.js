@@ -53,8 +53,7 @@ Cards = (function() {
             dots: true,
             infinite: false,
             swipe: true,
-            touchMove: true,
-            centerMode: true
+            touchMove: true
         });
         $("#quote-selector .card-slider-container").slick({
             accessibility: false,
@@ -246,6 +245,7 @@ Cards = (function() {
     var addQuoteToArray = function(id) {
         var quote = data.quotes[id];
         Cards.quotes[id] = quote;
+        return Cards.quotes[id];
     }
 
     /**
@@ -403,6 +403,7 @@ Cards = (function() {
                 $('#image-captioning h2').addClass('hidden');
                 $('#image-captioning .card-slider-container').removeClass('hidden');
                 $('#image-captioning .card-slider-nav').removeClass('hidden');
+                $('#image-captioning .swipe-message').removeClass('hidden');
             }
         } else {
             var index = $("#image-captioning .card-slider-container").find('[data-id="' + id + '"]').data('slick-index');
@@ -412,12 +413,14 @@ Cards = (function() {
                 $('#image-captioning h2').removeClass('hidden');
                 $('#image-captioning .card-slider-container').addClass('hidden');
                 $('#image-captioning .card-slider-nav').addClass('hidden');
+                $('#image-captioning .swipe-message').addClass('hidden');
             }
         }
     }
 
     return {
         init: init,
+        addQuoteToArray: addQuoteToArray,
         getEditorContents: getEditorContents,
         getTheme: getTheme,
         getMasthead: getMasthead,

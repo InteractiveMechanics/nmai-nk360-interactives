@@ -119,6 +119,9 @@ footer {
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
         padding: 30px 20px 100px; } }
+    @media screen and (max-width: 767px) {
+      #instructions .instructions-container h1 {
+        font-size: 2.7rem; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {
@@ -359,6 +362,14 @@ main {
   #error-alert.show {
     bottom: 70px; }
 
+.swipe-message {
+  font-style: italic;
+  color: #9eb2c1;
+  text-align: center;
+  font-size: 0.8rem;
+  position: relative;
+  bottom: -20px; }
+
 .drop-letter-quote {
   font-size: 4.8rem;
   font-weight: 900;
@@ -410,6 +421,9 @@ main {
       @media screen and (max-width: 991px) and (orientation: portrait) {
         #step-by-step-cards .step .step-container {
           margin-top: 160px; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .step .step-container {
+          width: 320px; } }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
@@ -450,6 +464,9 @@ main {
         @media screen and (max-width: 767px) and (orientation: landscape) {
           #step-by-step-cards .step .step-container.step-container-lg {
             width: 540px; } }
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          #step-by-step-cards .step .step-container.step-container-lg {
+            width: 320px; } }
   #step-by-step-cards .card-slider {
     position: relative; }
     #step-by-step-cards .card-slider .card-slider-container {
@@ -495,6 +512,9 @@ main {
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .card-slider .nav-arrow {
+          display: none !important; } }
       #step-by-step-cards .card-slider .nav-arrow.slick-disabled {
         opacity: 0.4; }
       #step-by-step-cards .card-slider .nav-arrow.nav-arrow-left {
@@ -521,6 +541,9 @@ main {
           filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); }
   #step-by-step-cards .step-intro .guiding-question.large {
     font-size: 3.6rem; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-intro .guiding-question.large {
+        font-size: 3rem; } }
   #step-by-step-cards .step-theme .btn.btn-theme {
     padding: 40px 1.25rem;
     background-color: #a8bd46;
@@ -528,6 +551,9 @@ main {
     background-position: center center;
     background-size: 100%;
     font-weight: bold; }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-theme .btn.btn-theme {
+        margin-bottom: 10px; } }
     #step-by-step-cards .step-theme .btn.btn-theme[data-theme="traditional"] {
       background-image: url("../assets/background-traditional.jpg"); }
     #step-by-step-cards .step-theme .btn.btn-theme[data-theme="modern"] {
@@ -551,6 +577,9 @@ main {
       #step-by-step-cards .step-images .step-container-inner img {
         max-height: 320px;
         max-width: 280px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-images .step-container-inner img {
+        max-width: 100%; } }
     #step-by-step-cards .step-images .step-container-inner img:focus, #step-by-step-cards .step-images .step-container-inner img:hover, #step-by-step-cards .step-images .step-container-inner img:active {
       opacity: 0.75; }
   #step-by-step-cards .step-images .step-container-inner:before {
@@ -575,17 +604,15 @@ main {
     top: 0;
     right: -20px;
     display: block; }
-  #step-by-step-cards .step-image-captions .step-container-inner {
-    display: flex !important;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column; }
   #step-by-step-cards .step-image-captions .image-caption-container {
-    display: block;
+    display: inline-block;
     position: relative;
     padding: 0;
     width: auto;
     margin: 0 auto 15px; }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-container {
+        width: 100%; } }
     #step-by-step-cards .step-image-captions .image-caption-container img {
       position: relative;
       border: 2px solid black;
@@ -600,6 +627,9 @@ main {
       @media screen and (max-width: 767px) and (orientation: landscape) {
         #step-by-step-cards .step-image-captions .image-caption-container img {
           max-height: 180px; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        #step-by-step-cards .step-image-captions .image-caption-container img {
+          max-width: 100%; } }
     #step-by-step-cards .step-image-captions .image-caption-container:before {
       content: '';
       position: absolute;
@@ -640,39 +670,51 @@ main {
         opacity: 0.75; }
       #step-by-step-cards .step-image-captions .image-caption-container .featured.active {
         background-image: url("../assets/icon-star-fill.svg"); }
-    #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form {
-      display: inline-block;
-      padding: 20px;
-      vertical-align: top; }
-      #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-        padding: 10px;
-        width: 400px;
-        height: 80px;
-        margin: 0;
-        display: inline-block; }
-        @media screen and (max-width: 1199px) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            height: 60px; } }
-        @media screen and (max-width: 991px) and (orientation: portrait) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            height: 80px; } }
-        @media screen and (max-width: 767px) and (orientation: landscape) {
-          #step-by-step-cards .step-image-captions .image-caption-container .image-caption-form textarea {
-            width: 320px; } }
+  #step-by-step-cards .step-image-captions .image-caption-form textarea {
+    padding: 10px;
+    width: 400px;
+    height: 80px;
+    margin: 0;
+    display: inline-block; }
+    @media screen and (max-width: 1199px) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        height: 60px; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        height: 80px; } }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        width: 320px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #step-by-step-cards .step-image-captions .image-caption-form textarea {
+        width: 100%; } }
   #step-by-step-cards .step-quotes .quote-step .step-container-inner {
     cursor: pointer;
     transition: 0.5s all;
     opacity: 1; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-quotes .quote-step .step-container-inner {
+        max-width: 100%; } }
     #step-by-step-cards .step-quotes .quote-step .step-container-inner:focus, #step-by-step-cards .step-quotes .quote-step .step-container-inner:hover, #step-by-step-cards .step-quotes .quote-step .step-container-inner:active {
       opacity: 0.75; }
   #step-by-step-cards .step-quotes .quote-step p {
     padding: 20px 30px; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-quotes .quote-step p {
+        padding: 10px;
+        font-size: 0.9rem; } }
     #step-by-step-cards .step-quotes .quote-step p small {
       display: block;
       margin-top: 10px; }
+      @media screen and (max-width: 767px) {
+        #step-by-step-cards .step-quotes .quote-step p small {
+          font-size: 0.6rem; } }
   #step-by-step-cards .step-review .btn {
     margin: 20px 0;
     font-weight: bold; }
+    @media screen and (max-width: 767px) {
+      #step-by-step-cards .step-review .btn {
+        font-size: 1rem; } }
 
 #navigation .nav-arrow {
   position: fixed;
@@ -699,11 +741,21 @@ main {
   #navigation .nav-arrow.nav-arrow-left {
     left: 20px;
     background-image: url("/nk360/shared/lib/im/images/icon-prev.svg"); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #navigation .nav-arrow.nav-arrow-left {
+        left: 10px; }
+        #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
+          left: 0; } }
     #navigation .nav-arrow.nav-arrow-left:hover, #navigation .nav-arrow.nav-arrow-left:active, #navigation .nav-arrow.nav-arrow-left:focus {
       left: 10px; }
   #navigation .nav-arrow.nav-arrow-right {
     right: 20px;
     background-image: url("/nk360/shared/lib/im/images/icon-next.svg"); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      #navigation .nav-arrow.nav-arrow-right {
+        right: 10px; }
+        #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
+          right: 0; } }
     #navigation .nav-arrow.nav-arrow-right:hover, #navigation .nav-arrow.nav-arrow-right:active, #navigation .nav-arrow.nav-arrow-right:focus {
       right: 10px; }
 
@@ -833,12 +885,15 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
-    font-size: 46px;
+    font-size: 42px;
     line-height: 1; }
     @media screen and (min-width: 992px) and (max-width: 1199px) {
       #print-preview .paper-preview-headline {
         font-size: 40px;
         height: 96px; } }
+    @media screen and (max-width: 767px) {
+      #print-preview .paper-preview-headline {
+        font-size: 36px; } }
     #print-preview .paper-preview-headline.large {
       font-size: 68px;
       height: 76px;
@@ -846,6 +901,9 @@ main {
       @media screen and (min-width: 992px) and (max-width: 1199px) {
         #print-preview .paper-preview-headline.large {
           font-size: 66px; } }
+      @media screen and (max-width: 767px) {
+        #print-preview .paper-preview-headline.large {
+          font-size: 60px; } }
   #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
     font-style: italic; }
@@ -857,6 +915,9 @@ main {
     align-content: flex-start;
     position: relative;
     max-height: 1200px; }
+    @media screen and (max-width: 767px) {
+      #print-preview .paper-preview-article {
+        max-height: 1400px; } }
     #print-preview .paper-preview-article > * {
       width: 30%;
       margin-right: 3%; }
@@ -911,6 +972,11 @@ main {
         top: -60px;
         right: 0;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); } }
+    @media screen and (max-width: 767px) {
+      #print-preview .close-preview {
+        position: fixed;
+        top: 20px;
+        right: 20px; } }
 
 .form-control {
   padding: 1rem 1.25rem;
@@ -938,6 +1004,9 @@ main {
   @media screen and (max-width: 1199px) {
     .ql-container.ql-snow {
       height: 150px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .ql-container.ql-snow {
+      height: 250px; } }
 
 .ql-editor {
   font-size: 1.0rem;
