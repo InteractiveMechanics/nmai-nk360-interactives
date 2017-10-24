@@ -15,7 +15,7 @@ Init = (function() {
     }
 
     var bindEvents = function() {
-        $('#footer-credits').on('click tap', showCredits);
+
     }
     
     var generateGuidingQuestion = function() {
