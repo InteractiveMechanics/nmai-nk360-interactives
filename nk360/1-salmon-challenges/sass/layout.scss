@@ -65,106 +65,196 @@ body {
 .steelhead-1 {
   width: 141px;
   height:54px;
-  background: url(http://dev.interactivemechanics.com/sprites/steelhead-0.png) no-repeat;
+  background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
   animation: one-steelhead-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 141px;
+    height:54px;
+    background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
+  }
 }
 
 .steelhead-2 {
   width:265px;
   height:56px;
-  background: url(http://dev.interactivemechanics.com/sprites/steelhead-1.png) no-repeat;
+  background: url(../assets/sprite-sheets/steelhead-1.png) no-repeat;
   animation: two-steelhead-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 141px;
+    height:54px;
+    background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
+  }
 }
 
 .steelhead-3 {
   width: 367px;
   height:74px;
-  background: url(http://dev.interactivemechanics.com/sprites/steelhead-2.png) no-repeat;
+  background: url(../assets/sprite-sheets/steelhead-2.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 141px;
+    height:54px;
+    background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
+  }
 }
 
 .steelhead-4 {
   width: 366px;
   height:97px;
-  background: url(http://dev.interactivemechanics.com/sprites/steelhead-3.png) no-repeat;
+  background: url(../assets/sprite-sheets/steelhead-3.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 141px;
+    height:54px;
+    background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
+  }
 }
 
 .steelhead-5 {
   width: 366px;
   height:97px;
-  background: url(http://dev.interactivemechanics.com/sprites/steelhead-4.png) no-repeat;
+  background: url(../assets/sprite-sheets/steelhead-4.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 141px;
+    height:54px;
+    background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
+  }
 }
 
 .chinook-1 {
   width: 146px;
   height:49px;
-  background: url(http://dev.interactivemechanics.com/sprites/chinook-0.png) no-repeat;
+  background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
   animation: one-chinook-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 146px;
+    height:49px;
+    background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
+  }
 }
 
 .chinook-2 {
   width: 270px;
   height:52px;
-  background: url(http://dev.interactivemechanics.com/sprites/chinook-1.png) no-repeat;
+  background: url(../assets/sprite-sheets/chinook-1.png) no-repeat;
   animation: two-chinook-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 146px;
+    height:49px;
+    background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
+  }
 }
 
 .chinook-3 {
   width: 373px;
   height:71px;
-  background: url(http://dev.interactivemechanics.com/sprites/chinook-2.png) no-repeat;
+  background: url(../assets/sprite-sheets/chinook-2.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 146px;
+    height:49px;
+    background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
+  }
 }
 
 .chinook-4 {
   width: 373px;
   height:94px;
-  background: url(http://dev.interactivemechanics.com/sprites/chinook-3.png) no-repeat;
+  background: url(../assets/sprite-sheets/chinook-3.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 146px;
+    height:49px;
+    background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
+  }
 }
 
 .chinook-5 {
   width: 373px;
   height:94px;
-  background: url(http://dev.interactivemechanics.com/sprites/chinook-4.png) no-repeat;
+  background: url(../assets/sprite-sheets/chinook-4.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 146px;
+    height:49px;
+    background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
+  }
 }
 
 .sockeye-1 {
   width: 152px;
   height:62px;
-  background: url(http://dev.interactivemechanics.com/sprites/sockeye-0.png) no-repeat;
+  background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
   animation: one-sockeye-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 152px;
+    height:62px;
+    background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
+  }
 }
 
 .sockeye-2 {
   width: 276px;
   height:63px;
-  background: url(http://dev.interactivemechanics.com/sprites/sockeye-1.png) no-repeat;
+  background: url(../assets/sprite-sheets/sockeye-1.png) no-repeat;
   animation: two-sockeye-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 152px;
+    height:62px;
+    background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
+  }
 }
 
 .sockeye-3 {
   width: 379px;
   height:80px;
-  background: url(http://dev.interactivemechanics.com/sprites/sockeye-2.png) no-repeat;
+  background: url(../assets/sprite-sheets/sockeye-2.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 152px;
+    height:62px;
+    background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
+  }
 }
 
 .sockeye-4 {
   width: 379px;
   height:102px;
-  background: url(http://dev.interactivemechanics.com/sprites/sockeye-3.png) no-repeat;
+  background: url(../assets/sprite-sheets/sockeye-3.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 152px;
+    height:62px;
+    background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
+  }
 }
 
 .sockeye-5 {
   width: 379px;
   height:102px;
-  background: url(http://dev.interactivemechanics.com/sprites/sockeye-4.png) no-repeat;
+  background: url(../assets/sprite-sheets/sockeye-4.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite;
+
+  @media (max-width: 990px) {
+    width: 152px;
+    height:62px;
+    background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
+  }
 }
       
 @keyframes one-steelhead-fish-swimming {
@@ -308,6 +398,13 @@ body {
       float:left;
     }
 
+  }
+
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+  and (orientation : portrait) { 
+      margin-top:125px !important;
+      margin-bottom:100px;
   }
 
   img {
@@ -466,5 +563,74 @@ body {
     animation: none !important;
   }
 }
-    
+
+.waves {
+  width: 431px;
+  height:61px;
+  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
+  margin-left:100%;
+  position:absolute;
+  z-index:100;
+  top:150px;
+}
+
+.waves-1 {
+  width: 431px;
+  height:61px;
+  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
+  margin-left:150%;
+  position:absolute;
+  z-index:100;
+  top:325px;
+}
+
+.waves-2 {
+  width: 431px;
+  height:61px;
+  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
+  margin-left:120%;
+  position:absolute;
+  z-index:100;
+  top:510px;
+}
+
+
+@keyframes move-waves {
+  100%{background-position:-6034px; }
+}
+
+@keyframes left-to-right {
+  100%{margin-left:-431px; }
+}
+
+
+.number-of-salmon {
+  
+  position: fixed;
+  top: 47%;
+  margin-left: 1em;
+  z-index: 10;
+  transition: top 3s;
+  left: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 250px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 25px;
+  text-align: center;
+  background: #fac55f;
+  border: 2px solid white;
+  opacity: 0;
+  display:none;
+
+  @media (max-width: 990px) {
+    display:block;
+  }
+
+  
+}
     
