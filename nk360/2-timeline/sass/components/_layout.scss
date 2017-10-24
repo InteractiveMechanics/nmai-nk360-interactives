@@ -6,6 +6,7 @@
 
 .era-wrapper {
 	display: flex;
+	justify-content: center;
 }
 
 div[id^="era-block"] {
@@ -42,6 +43,14 @@ div[id^="era-block"] {
 		    top: 43%;
 		    padding: 0px 30px;
 	    }
+	    @media screen and ($screen-xs) and ($screen-landscape) {
+        	top: 20%;
+		    padding: 0px 30px;
+		    width: 80%;
+		    height: 60%;
+		    left: 10%;
+    	}
+
 	}
 }
 
@@ -52,9 +61,16 @@ div[id^="era-block"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: url('../../shared/lib/im/images/pnw/splash-01.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 
 	img {
 		position: absolute;
+		@include screen-xs {
+			width: 80%;
+		}
 		@include screen-md {
 			width: 90%;
 		}
@@ -69,9 +85,17 @@ div[id^="era-block"] {
 		text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
 
 	}
+
 }
 
+
+
+
 .heading-wrapper[data-era="1"] {
+	background: url('../../shared/lib/im/images/pnw/splash-01.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 	h1 {
 		position: relative;
 		top: 10px;
@@ -79,6 +103,21 @@ div[id^="era-block"] {
 			font-size: 3em;
 		}
 	}
+}
+
+
+.heading-wrapper[data-era="2"] {
+	background: url('../../shared/lib/im/images/pnw/splash-02.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.heading-wrapper[data-era="3"] {
+	background: url('../../shared/lib/im/images/pnw/splash-03.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 
@@ -92,6 +131,11 @@ div[id^="era-block"] {
 			color:  $primary !important;
 		}
 	}
+	@media screen and ($screen-xs) and ($screen-landscape) {
+        background-position: center;
+    }
+
+
 }
 
 #era-block-2 {
@@ -122,6 +166,10 @@ div[id^="era-block"] {
 			color:  $secondary !important;
 		}
 	}
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		background-position: center;
+	}
+
 }
 
 #era-block-3.active {
@@ -146,6 +194,7 @@ div[id^="era-block"] {
 	text-align: center;
 	user-select: none;
 	.heading-wrapper {
+
 		position: relative;
 		top: 17px;
 		h1 {
@@ -157,34 +206,43 @@ div[id^="era-block"] {
 			}
 		}
 		@include screen-xs {
-			height: auto;
-    		padding-top: 100px;
-    		margin-bottom: 30px;
-    		position: initial;
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 50px 0px 0px;
+		    height: 152px;
 		}
 		@include screen-sm {
-			height: auto;
-    		padding-top: 135px;
-    		margin-bottom: 60px;
-    		position: initial;
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 50px 0px 0px;
+		    height: 152px;	
 		}
 		@include screen-md {
-			height: auto;
-    		padding-top: 50px;
-    		margin-bottom: 60px;
-    		position: initial;
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 0px;
+		    height: 152px;
 		}
-		img {
-			@include screen-xs {
-				width: 75%;
-			}
-			@include screen-sm {
-				width: 50%;
-			}
-			@include screen-md {
-				width: 30%;
-			}
+		@media screen and ($screen-xs) and ($screen-landscape) {
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 0px;
+		    height: 150px;
+
 		}
+	}
+	@include screen-xxs {
+		user-select: initial;
+		overflow-y: scroll;
+	}
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		user-select: initial;
+		overflow-y: scroll;
 	}
 }
 
@@ -194,6 +252,9 @@ div[id^="era-block"] {
 	position: relative;
 	width: 100vw;
 	user-select: none;
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		user-select: initial;
+	}
 }
 
 

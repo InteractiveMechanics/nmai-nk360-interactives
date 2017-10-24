@@ -1,10 +1,25 @@
+/**
+ * This file includes all of the default styling for the puzzle template, including styling for the cards.  Cards are in this file as they are not the draggable objects.
+ * 
+**/
+
+
+
 #puzzle {
+	background: url('/nk360/shared/lib/im/images/default/bkgr-generic@2x.png');
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
 	.header-wrapper {
 		width: 100%;
 	    text-align: center;
 	    @include screen-xs {
 	    	margin-top: 75px;
 	    }
+	}
+	@include screen-landscape {
+		overflow: scroll;
 	}
 }
 
@@ -200,91 +215,6 @@
 		transform: rotate(-60deg) scale(1.15, 1.15);	
 	}
 	//okay on screen-xs
-}
-
-
-#complete-overlay {
-	height: 100vh;
-	left: 0px;
-	position: absolute;
-	top: 0px;
-	width: 100vw;
-	background: rgba(0, 0, 0, 0.85);
-	.text-wrapper {
-		color: white;
-		width: 40%;
-		left: 30%;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-    	height: 100%;
-    	h1 {
-    		font-size: 50px;
-    		letter-spacing: 2px;
-    		margin-bottom: 40px;
-    		@include screen-xs {
-    			font-size: 35px;
-   				margin-bottom: 20px;
-    		}
-    	}
-    	p {
-    		margin-bottom: 80px;
-    		text-align: center;
-    		line-height: 1.9;
-    		font-weight: 300;
-    		@include screen-xs {
-    			margin-bottom: 10px;
-    		}
-    	}
-
-    	@include screen-md {
-    		left: 25%;
-    		width: 50%;
-    	}
-
-    	@include screen-sm {
-    		left: 20%;
-    		width: 60%;
-    	}
-    	@include screen-xs {
-    		width: 80%;
-		    left: 10%;
-		    height: 80%;
-		    top: 10%;
-    	}
-	}
-	.btn-wrapper {
-		button {
-			margin: 15px; 
-			color: white;
-		}
-		@include screen-xs {
-			width: 100%;
-		    display: flex;
-		    flex-direction: column;
-		}
-	}
-
-}
-
-.zoom-icon {
-	width: 42px;
-	height: 42px;
-	position: absolute;
-	right: 15px;
-    bottom: 15px;
-}
-
-.puzzle-img-zoom-icon {
-	width: 100%;
-    position: relative;
-    display: block;
-    text-align: right;
-    top: -40px;
-    right: 15px;
-
 }
 
 .read-more {

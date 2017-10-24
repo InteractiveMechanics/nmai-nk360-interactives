@@ -71,3 +71,9 @@
     @content;
   }
 }
+
+@mixin screen-landscape {
+  @media (#{$screen-landscape}) {
+    @content;
+  }
+}

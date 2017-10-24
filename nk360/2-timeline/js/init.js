@@ -13,6 +13,7 @@ Init = (function() {
     }
 
     var displaySelectionScreen = function() {
+        sendAnalyticsScreen('Selection screen');
     	if ($('#selection').hasClass('hidden')) {
     		$('#selection').removeClass('hidden fadeOut').addClass('fadeIn');
             displayEra2();

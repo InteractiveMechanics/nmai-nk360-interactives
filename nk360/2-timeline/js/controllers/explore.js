@@ -66,6 +66,7 @@ Explore = (function() {
         var era = $(this).attr('data-era');
         var moment = $(this).attr('data-timeline');
         Detail.displayModal(era, moment);
+
     }
 
     var bindEvents = function() {

@@ -193,11 +193,11 @@
             </div>  
             
             <div class="puzzle-img-wrapper">    
-                <div class="lg-wrapper-puzzle">
-                    <a href="{{:FullImage}}" data-sub-html="#caption" class="lg-link disabled-link">
-                        <img class="puzzle-img" src="{{:Image}}" alt="{{:Caption}}" title="{{:Caption}}">
-                        <span class="puzzle-img-zoom-icon hidden"><img src="/nk360/shared/lib/im/images/icon-zoom.svg" alt="zoom" title="zoom"></span>
-                    </a>
+                <div class="lg-wrapper-puzzle" style="position: relative;">
+                    
+                    <img class="puzzle-img" src="{{:Image}}" alt="{{:Caption}}" title="{{:Caption}}" />
+                    <div data-gallery data-gallery-image="{{:FullImage}}" data-gallery-caption="{{:Caption}}" data-gallery-credit="{{:Credit}}"></div>
+                   
                 </div>
             
 

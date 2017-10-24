@@ -18,6 +18,7 @@ Detail = (function() {
     	$('#detail').removeClass('hidden fadeOut').addClass('animated fadeIn');
         Init.isSelectionScreen();
         buildGame(id);
+        sendAnalyticsScreen('Builder screen - ' + id);
     }
 
     var randomMoments = function(moments) {
@@ -43,16 +44,19 @@ Detail = (function() {
     }
 
     var setupTimelineScroll = function() {
-        var containX1 = $('.timeline-wrapper').parent().offset().left;
-        var containY1 = $('.timeline-wrapper').parent().offset().top;
-        var containX2 =  ($(".timeline-wrapper").parent().outerWidth() + $(".timeline-wrapper").parent().offset().left - Detail.timelineWidth);
-        var containY2 =  ($(".timeline-wrapper").parent().outerHeight() +  $(".timeline-wrapper").parent().offset().top - $('.timeline-wrapper').outerHeight()); 
+        var windowWidth = $(window).width();
+        if (windowWidth >= 1024) {
+            var containX1 = $('.timeline-wrapper').parent().offset().left;
+            var containY1 = $('.timeline-wrapper').parent().offset().top;
+            var containX2 =  ($(".timeline-wrapper").parent().outerWidth() + $(".timeline-wrapper").parent().offset().left - Detail.timelineWidth);
+            var containY2 =  ($(".timeline-wrapper").parent().outerHeight() +  $(".timeline-wrapper").parent().offset().top - $('.timeline-wrapper').outerHeight()); 
 
 
-        $('.timeline-wrapper').draggable({
-            axis: 'x',
-            containment: [containX1, containY1, containX2, containY1]
-        });
+            $('.timeline-wrapper').draggable({
+                axis: 'x',
+                containment: [containX1, containY1, containX2, containY1]
+            }); 
+        } 
     }     
 
    
@@ -69,13 +73,18 @@ Detail = (function() {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
                 Detail.timelineWidth = 2143;
+                sendAnalyticsScreen('Explore screen - era 1');
+
             } else if (era == 2) {
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
+                sendAnalyticsScreen('Explore screen - era 2');
+
             } else {
                 $('.timeline-wrapper').css('left', -3340)
                 Detail.timelineWidth = 4800;
+                sendAnalyticsScreen('Explore screen - era 3');
             }
         } else {
             console.log('era is defined. it is ' + era);
@@ -85,7 +94,8 @@ Detail = (function() {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
                 Detail.timelineWidth = 2143;
-                setupTimelineScroll();               
+                setupTimelineScroll();
+                sendAnalyticsScreen('Explore screen - era 1');               
                 
 
             } else if (era == 2) {
@@ -93,16 +103,19 @@ Detail = (function() {
                 $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
                 setupTimelineScroll();
+                sendAnalyticsScreen('Explore screen - era 2');
 
             } else {
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
                 setupTimelineScroll();
+                sendAnalyticsScreen('Explore screen - era 3');
             }
         }
         $('#explore').removeClass('animated fadeIn hidden');
         $('#selection').addClass('fadeOut hidden');
-        $('#detail').addClass('fadeOut hidden');    
+        $('#detail').addClass('fadeOut hidden');
+       
     
     }
 
@@ -111,6 +124,7 @@ Detail = (function() {
     var displayModal = function(era, moment) {
         $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1])).modal('show');
         $('[data-toggle=tooltip]').tooltip('hide');
+        sendAnalyticsEvent('Timeline Entry', 'open');
     }
 
     var reopenModal = function() {
@@ -121,6 +135,8 @@ Detail = (function() {
 
     var hideModal = function() {
         $('#correct-answer').modal('hide');
+        sendAnalyticsEvent('Timeline Entry', 'open');
+
     }
 
     var showModal = function() {
@@ -214,6 +230,7 @@ Detail = (function() {
               
               
                     if(ui.draggable.is('[data-timeline="' + droppableNumber + '"]')) {
+                        sendAnalyticsEvent('Builder', 'correct');
                         ui.draggable.addClass('dragged');
                         ui.draggable.find('.draggable-overlay').removeClass('hidden');
                         ui.draggable.draggable('option', 'revert', 'invalid');
@@ -235,11 +252,13 @@ Detail = (function() {
 
                         ui.draggable.draggable('option', 'disabled', true);
 
+
                        
                        
 
 
                     } else {
+                        sendAnalyticsEvent('Builder', 'incorrect');
                         ui.draggable.draggable('option', 'revert', true);
                         var draggableNumber = ui.draggable.attr('data-timeline');
                         var draggableShell = $('.draggable-widget[data-timeline="' + draggableNumber + '"]');
