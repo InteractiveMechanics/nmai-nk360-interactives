@@ -26,8 +26,8 @@
     opacity: 0.6;
     &:after {
     	content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
-    	position: absolute;
-    	left: 42%;
+    	position: relative;
+    	left: -25%;
 	}
 }
 

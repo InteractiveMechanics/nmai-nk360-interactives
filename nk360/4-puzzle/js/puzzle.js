@@ -23,6 +23,7 @@ Puzzle = (function() {
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
             $('#puzzle-download').removeClass('hidden');
             $('.puzzle-img-zoom-icon').removeClass('hidden');
+            sendAnalyticsEvent('Puzzle', 'complete');
         }
     }
 
@@ -126,10 +127,12 @@ Puzzle = (function() {
 
                         ui.draggable.css('left', '0').css('top', '0');
                         showComplete();
+                        sendAnalyticsEvent('Puzzle', 'correct', label)
                        
 
 
                     } else {
+                        sendAnalyticsEvent('Puzzle', 'incorrect', label)
                         setPopover();
                         ui.draggable.draggable('option', 'revert', true);
                         $(this).css('border', '3px solid white');
@@ -172,6 +175,7 @@ Puzzle = (function() {
     * @return {} doesn't return anything but manipulates the DOM 
     **/  
     var showModal = function() {
+        sendAnalyticsEvent('Puzzle', 'open');
         var numberDropped = $('.answered').length;
         var numberCards = $('.card').length
 
@@ -225,7 +229,7 @@ Puzzle = (function() {
     var exploreImg = function() {
         $('#complete-overlay').addClass('hidden animated fadeOutUp');
         $('.read-more').removeClass('hidden');
-        //$('.lg-link').removeClass('disabled-link');
+
     }
 
 
@@ -241,6 +245,7 @@ Puzzle = (function() {
         }
         if ($('.learning-points-card').hasClass('hidden')) {
             $('.learning-points-card').removeClass('hidden').addClass('animated slideInDown');
+            sendAnalyticsEvent('Learning points', 'open');
         }
     }
 
@@ -251,6 +256,7 @@ Puzzle = (function() {
     **/    
     var hideLearningPts = function() {
         $('#learning-points').addClass('hidden animated fadeOut');
+        sendAnalyticsEvent('Learning points', 'close');
     }
 
 
@@ -274,6 +280,7 @@ Puzzle = (function() {
     **/ 
     var hideModalCard = function() {
         $('.modal-dialog').addClass('hidden');
+        sendAnalyticsEvent('Puzzle', 'close', label)
     } 
 
 

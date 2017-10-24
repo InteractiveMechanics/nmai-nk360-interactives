@@ -44,6 +44,12 @@ h4 {
   @media screen and (max-width: 991px) and (orientation: portrait) {
     .header {
       margin: 60px auto 0; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .header {
+      margin: 20px auto 0;
+      max-width: 300px; }
+      .header h1 {
+        font-size: 1.8rem; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
@@ -109,8 +115,8 @@ h4 {
   opacity: 0.6; }
   .dropped:after {
     content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
-    position: absolute;
-    left: 42%; }
+    position: relative;
+    left: -25%; }
 
 /**
  * This file includes Pacific Northwest theme styles for the intro and learning points modals.

@@ -119,6 +119,9 @@ footer {
     @media screen and (max-width: 767px) {
       #instructions .instructions-container {
         padding: 30px 20px 100px; } }
+    @media screen and (max-width: 767px) {
+      #instructions .instructions-container h1 {
+        font-size: 2.7rem; } }
     #instructions .instructions-container h2 {
       color: white !important; }
     #instructions .instructions-container img {

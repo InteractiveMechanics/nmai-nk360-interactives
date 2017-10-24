@@ -42,6 +42,15 @@ h4 {
   @media screen and (max-width: 991px) and (orientation: portrait) {
     .header {
       margin: 60px auto 0; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .header {
+      margin: 20px auto 0;
+      max-width: 300px;
+      background-size: 75%; }
+      .header h1 {
+        font-size: 1.8rem; }
+      .header h2 {
+        font-size: 0.8rem; } }
   .header h1 {
     font-size: 2.1rem;
     font-weight: normal;
@@ -110,8 +119,8 @@ h4 {
   opacity: 0.6; }
   .dropped:after {
     content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
-    position: absolute;
-    left: 42%; }
+    position: relative;
+    left: -25%; }
 
 .modal-img-wrapper {
   background-color: #9eb2c1; }
