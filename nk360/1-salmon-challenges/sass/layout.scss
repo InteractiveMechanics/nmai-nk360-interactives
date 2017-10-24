@@ -285,8 +285,8 @@ body {
         &:hover {
           background:url('../assets/selection-active@2x.png') no-repeat;
           background-position-y: 0;
-          background-position-x: 0;
-          background-size:cover;
+          background-position-x: 10px;
+          background-size:contain;
         }
       }
 
@@ -294,8 +294,8 @@ body {
         img {
           background:url('../assets/selection-active@2x.png') no-repeat;
           background-position-y: 0;
-          background-position-x: 0;
-          background-size:cover;
+          background-position-x: 10px;
+          background-size:contain;
         }
       }
     }
@@ -314,6 +314,9 @@ body {
     padding: 50px;
     @media (max-width: 990px) {
       padding:0;
+      background-position-y: 0;
+      background-position-x: 10px;
+      background-size: contain;
     }
     cursor:pointer;
 
@@ -329,6 +332,12 @@ body {
       background:url('../assets/selection-active@2x.png') no-repeat;
       background-size:contain;
       background-position-y:25px;
+
+      @media (max-width: 990px) {
+      background-position-y: 0;
+      background-position-x: 10px;
+      background-size: contain;
+    }
     }
   }
 

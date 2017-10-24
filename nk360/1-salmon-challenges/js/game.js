@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 1,
+      salmonCount: 3,
       backgroundSpeed: .5,
       midgroundSpeed: 1,
       foregroundSpeed: 1.5,
@@ -45,6 +45,7 @@ Game = (function() {
     var PositionArray = [];
 
     var init = function(data) {
+        $('.icon-pause').hide();
         gameData = data;
         
         bindEvents();
@@ -103,6 +104,8 @@ Game = (function() {
         $('body').on('click tap', '#close-congrats-screen', closeCongratsScreen);
         $('body').on('click tap', '.restart', restartSalmonChallengesSkipInstructions);
         $('body').on('click tap', '#pause-icon', hitPause);
+        $('body').on('click tap', '.icon-play', hitPause);
+        $('body').on('click tap', '.icon-pause', hitPause);
         $('body').on('click tap', '.restart-skip-intro', restartSalmonChallengesSkipInstructions);
         $('body').keyup(hitPauseSpaceBar);
         //window.onclick = blowBubbles;
@@ -126,16 +129,19 @@ Game = (function() {
     }
 
     var hitPause = function() {
-      var isPlaying = $('#pause-icon').hasClass('icon-play');
+      var isPlayingVisible = $('.icon-play').is(':visible');
 
-      if(isPlaying) {
+      if(isPlayingVisible) {
         settings.pause = false;
-        $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
+        $('.icon-play').hide();
+        $('.icon-pause').show();
+        //$('#pause-icon').removeClass('icon-play').addClass('icon-pause');
         $('#SelectedSalmon').css('animation-play-state', 'paused');
         $('.hotspot').css('animation-play-state', 'paused');
       } else {
         settings.pause = true;
-        $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
+        $('.icon-play').show();
+        $('.icon-pause').hide();
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').css('animation-play-state', 'running');
         requestAnimationFrame(updateWorld);
@@ -428,16 +434,16 @@ Game = (function() {
 
                 };
 
-                if(current_position == 12000) {
+                if(current_position == 8600) {
                   $('#SelectedSalmon').addClass('rising-water');
                 }
 
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
                 
-                settings.backgroundPosition -= .5;
+                settings.backgroundPosition -= 1;
                 //settings.midgroundPosition -= 2;
-                settings.foregroundPosition -= .5;
+                settings.foregroundPosition -= 1;
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
                 //settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
                 settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");

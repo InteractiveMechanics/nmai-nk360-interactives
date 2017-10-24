@@ -136,7 +136,7 @@
 
 
 .card-wrapper {
-  z-index: 95;
+  z-index: 200;
   position: relative;
 
   margin: auto;
@@ -148,6 +148,10 @@
 
   @media (max-width: 767px) { 
   	z-index:200;
+  }
+
+  .overlay {
+  	z-index:196;
   }
 
   

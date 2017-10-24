@@ -548,13 +548,13 @@ body .photo-container {
       .fish-row .fish-photo img:hover {
         background: url("../assets/selection-active@2x.png") no-repeat;
         background-position-y: 0;
-        background-position-x: 0;
-        background-size: cover; }
+        background-position-x: 10px;
+        background-size: contain; }
       .fish-row .fish-photo .selected img {
         background: url("../assets/selection-active@2x.png") no-repeat;
         background-position-y: 0;
-        background-position-x: 0;
-        background-size: cover; }
+        background-position-x: 10px;
+        background-size: contain; }
     .fish-row .fish-detail {
       width: 73%;
       text-align: left;
@@ -566,7 +566,10 @@ body .photo-container {
     cursor: pointer; }
     @media (max-width: 990px) {
       .fish-row img {
-        padding: 0; } }
+        padding: 0;
+        background-position-y: 0;
+        background-position-x: 10px;
+        background-size: contain; } }
     .fish-row img:hover {
       background: url("../assets/selection-hover@2x.png") no-repeat;
       background-size: contain;
@@ -575,6 +578,11 @@ body .photo-container {
     background: url("../assets/selection-active@2x.png") no-repeat;
     background-size: contain;
     background-position-y: 25px; }
+    @media (max-width: 990px) {
+      .fish-row .selected img {
+        background-position-y: 0;
+        background-position-x: 10px;
+        background-size: contain; } }
 
 .activity-menu-wrapper > div {
   z-index: 100; }
@@ -804,7 +812,7 @@ body .photo-container {
   transform: rotate(-2.5deg); }
 
 .card-wrapper {
-  z-index: 95;
+  z-index: 200;
   position: relative;
   margin: auto;
   position: absolute;
@@ -815,6 +823,8 @@ body .photo-container {
   @media (max-width: 767px) {
     .card-wrapper {
       z-index: 200; } }
+  .card-wrapper .overlay {
+    z-index: 196; }
   .card-wrapper > .card {
     position: absolute;
     top: 0;
