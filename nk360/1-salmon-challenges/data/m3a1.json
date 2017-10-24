@@ -171,7 +171,7 @@
 			]
 		},
 		{
-			"trigger_location": 3100,
+			"trigger_location": 2800,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Entered a Healthy Habitat",
@@ -214,7 +214,7 @@
 			]
 		},
 		{
-			"trigger_location": 1700,
+			"trigger_location": 1600,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered An Obstacle",
@@ -257,7 +257,7 @@
 			]
 		},
 		{
-			"trigger_location": 4300,
+			"trigger_location": 3700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Entered a Healthy Habitat",
@@ -300,7 +300,7 @@
 			]
 		},
 		{
-			"trigger_location": 5050,
+			"trigger_location": 4700,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered an Obstacle",
@@ -343,7 +343,7 @@
 			]
 		},
 		{
-			"trigger_location": 5900,
+			"trigger_location": 5600,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered An Obstacle",
@@ -386,7 +386,7 @@
 			]
 		},
 		{
-			"trigger_location": 6600,
+			"trigger_location": 6400,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered an Obstacle",
@@ -429,7 +429,7 @@
 			]
 		},
 		{
-			"trigger_location": 7200,
+			"trigger_location": 6900,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Entered a Healthy Habitat",
@@ -471,7 +471,7 @@
 			]
 		},
 		{
-			"trigger_location": 7600,
+			"trigger_location": 7200,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You have Encountered an Obstacle",
@@ -514,7 +514,7 @@
 			]
 		},
 		{
-			"trigger_location": 8000,
+			"trigger_location": 7600,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Reached a Man-Made Solution",
@@ -600,7 +600,7 @@
 			]
 		},
 		{
-			"trigger_location": 9700,
+			"trigger_location": 9300,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Reached an Obstacle",
@@ -643,7 +643,7 @@
 			]
 		},
 		{
-			"trigger_location": 12900,
+			"trigger_location": 11000,
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Entered a Healthy Habitat",

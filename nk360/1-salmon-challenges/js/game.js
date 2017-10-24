@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 5,
+      speed: 4,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -15,9 +15,9 @@ Game = (function() {
       sectionOffset: 0,
       position: 0,
       salmonCount: 3,
-      backgroundSpeed: .5,
-      midgroundSpeed: 1,
-      foregroundSpeed: 1.5,
+      backgroundSpeed: 0,
+      midgroundSpeed: .1,
+      foregroundSpeed: 1,
       $background: $('.game-world .game-world__background'),
       $midground: $('.game-world .game-world__midground'),
       $foreground: $('.game-world .game-world__foreground'),
@@ -419,9 +419,9 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 12840) {
 
-                /*if(checkEncounters(current_position)) {
+                if(checkEncounters(current_position)) {
 
-                };*/
+                };
 
                 if(current_position == 8600) {
                   $('#SelectedSalmon').addClass('rising-water');
@@ -430,11 +430,11 @@ Game = (function() {
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
                 
-                settings.backgroundPosition -= .25;
-                //settings.midgroundPosition -= 2;
-                settings.foregroundPosition -= 1;
+                settings.backgroundPosition -= settings.backgroundSpeed;
+                settings.midgroundPosition -= settings.midgroundSpeed;
+                settings.foregroundPosition -= settings.foregroundSpeed;
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
-                //settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
+                settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
                 settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
   
                 settings.positions.forEach(function(pos, index) {
