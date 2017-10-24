@@ -21,6 +21,11 @@
             padding: 30px 20px 100px;
         }
 
+        h1 {
+            @media screen and ($screen-xs) {
+                font-size: 2.7rem;
+            }
+        }
         h2 {
             color: white !important;
         }

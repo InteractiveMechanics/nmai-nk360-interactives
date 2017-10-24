@@ -133,12 +133,15 @@
         overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-        font-size: 46px;
+        font-size: 42px;
         line-height: 1;
 
         @media screen and ($screen-md) {
             font-size: 40px;
             height: 96px;
+        }
+        @media screen and ($screen-xs) {
+            font-size: 36px;
         }
 
         &.large {
@@ -148,6 +151,9 @@
             
             @media screen and ($screen-md) {
                 font-size: 66px;
+            }
+            @media screen and ($screen-xs) {
+                font-size: 60px;
             }
         }
     }
@@ -163,6 +169,10 @@
         align-content: flex-start;
         position: relative;
         max-height: 1200px;
+
+        @media screen and ($screen-xs) {
+            max-height: 1400px;
+        }
 
         > * {
             width: 30%;
@@ -241,6 +251,11 @@
             top: -60px;
             right: 0;
             filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+        }
+        @media screen and ($screen-xs) {
+               position: fixed;
+               top: 20px;
+               right: 20px;
         }
     }
 }

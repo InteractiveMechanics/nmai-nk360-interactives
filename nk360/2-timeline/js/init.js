@@ -3,7 +3,13 @@
  */
 Init = (function() {
     var init = function() {
+        generateCredits();
     	bindEvents();
+    }
+
+    var generateCredits = function() {
+        var credits = data.credits;
+        $('#footer-credits').attr('data-content', credits);
     }
 
     var displaySelectionScreen = function() {
