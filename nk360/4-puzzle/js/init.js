@@ -3,6 +3,7 @@
  */
 Init = (function() {
     var init = function() {
+        generateCredits();
     	bindEvents();
     }
 
@@ -35,7 +36,10 @@ Init = (function() {
         $('#intro').addClass('hidden animated fadeOut');
     }
 
-
+    var generateCredits = function() {
+        var credits = data.credits;
+        $('#footer-credits').attr('data-content', credits);
+    }
     
     var bindEvents = function() {
         $(document).ready(displayPuzzleScreen);
