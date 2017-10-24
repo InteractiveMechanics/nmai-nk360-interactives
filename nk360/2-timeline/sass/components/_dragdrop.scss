@@ -115,6 +115,13 @@
 			}
 			
 		}
+		@include screen-xxs {
+			font-size: 12px;
+		}
+	}
+
+	@include screen-xxs {
+		width: 90%;
 	}
 
 	@include screen-xs {
@@ -125,6 +132,7 @@
 		height: 90px;
 		padding: 5px 5px 5px 52px;
 	}
+
 	
 }
 
