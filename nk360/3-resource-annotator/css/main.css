@@ -312,6 +312,9 @@ span[data-toggle="tooltip"] {
 
 body p {
   font-size: 1rem; }
+  @media screen and (max-width: 1400px) {
+    body p {
+      font-size: .9rem; } }
   @media screen and (max-width: 1200px) {
     body p {
       font-size: .8rem; } }
