@@ -932,7 +932,9 @@ body .photo-container {
         width: 42px;
         height: 42px; } }
   .card p.quiz-detail {
-    font-size: 12px; }
+    font-size: 12px;
+    position: absolute;
+    width: inherit; }
 
 .card-body {
   height: 445px;
