@@ -76,6 +76,7 @@
     	width: 30px;
     	height: 30px;
 	}
+
 	@include screen-ltmd {
 		&:before {
 			width: 15px;
@@ -87,4 +88,9 @@
 
 .slick-dots {
 	bottom: 75px;
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		bottom: 115px;
+	}
 }
+
+
