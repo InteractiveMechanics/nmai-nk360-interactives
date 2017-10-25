@@ -540,7 +540,14 @@ span[data-toggle="tooltip"] {
     text-align: center; }
     @media (max-width: 767px) {
       #puzzle .header-wrapper {
-        margin-top: 75px; } }
+        margin-top: 50px;
+        max-height: initial; } }
+  @media (max-width: 480px) {
+    #puzzle {
+      overflow: scroll; } }
+  @media (max-width: 767px) {
+    #puzzle {
+      overflow: scroll; } }
   @media (orientation: landscape) {
     #puzzle {
       overflow: scroll; } }
@@ -557,9 +564,9 @@ span[data-toggle="tooltip"] {
     .lg-puzzle-wrapper {
       left: 0px;
       width: 100vw;
-      overflow: auto;
+      overflow: initial;
       margin-top: 30px;
-      height: 430px; } }
+      height: auto; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .puzzle-img-wrapper,
     .lg-puzzle-wrapper {
@@ -769,10 +776,12 @@ span[data-toggle="tooltip"] {
   top: 20px; }
 
 .modal-content {
-  height: 550px;
+  height: 85%;
+  max-height: 550px;
   cursor: move; }
 
 .modal-dialog {
+  height: 90vh;
   max-width: 400px; }
 
 .modal-header {
