@@ -304,7 +304,7 @@
 			"cards": [{
 					"type": "information",
 					"sub_title": "You’ve Encountered an Obstacle",
-					"title": "Poor Habitat(Pollution)",
+					"title": "Poor Habitat (Pollution)",
 					"heading": "",
 					"image": "./assets/imgs/full-Encounter5_Runoff.jpg",
                     "thumb": "./assets/imgs/card-Encounter5_Runoff.jpg",
@@ -750,23 +750,6 @@
 				"credit": "Photograph by Portland Corps, July 2010 <a target='_blank' href='https://creativecommons.org/licenses/by/2.0/'>License</a>, <a target='_blank' href='https://www.flickr.com/photos/portlandcorps/11997850005/in/album-72157654873269070/'>Source</a>",
 				"caption": "",
 				"body": "You’ve reached a dam that has a fish ladder built on the side for migrating fish. The dam is really big and the fish ladder is small. You get confused and are unable to find the fish ladder.",
-				"result": "You lose one fish.",
-				"lose_fish": true,
-				"add_fish": false
-			}]
-		},
-		{
-			"location": "city",
-			"cards": [{
-				"type": "information",
-				"sub_title": "You’ve Encountered an Obstacle",
-				"title": "Siltation",
-				"heading": "",
-				"image": "./assets/imgs/full-Object4_Siltation.jpg",
-                "thumb": "./assets/imgs/card-Object4_Siltation.jpg",
-				"credit": "Photograph by U.S. Fish and Wildlife Service [Public domain], via Wikimedia Commons",
-				"caption": "",
-				"body": "A lot of logging is going on in this area. All of the trees have been cut down and it creates soil erosion. The loose soil runs into the river when it rains. Some of it is suspended in the water, making the water murky and unhealthy for fish. Some of the silt settles on the river bottom, where it chokes the water plants and covers up the gravelly spawning grounds that salmon need.",
 				"result": "You lose one fish.",
 				"lose_fish": true,
 				"add_fish": false
