@@ -508,7 +508,7 @@ div[id^="era-block"] {
         padding: 0px;
         margin: 0px;
         height: 150px; } }
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     #detail {
       user-select: initial;
       overflow-y: scroll; } }
