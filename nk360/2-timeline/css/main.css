@@ -511,7 +511,8 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #detail {
       user-select: initial;
-      overflow-y: scroll; } }
+      overflow-y: scroll;
+      height: calc(100vh - 50px); } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     #detail {
       user-select: initial;
@@ -523,6 +524,9 @@ div[id^="era-block"] {
   position: relative;
   width: 100vw;
   user-select: none; }
+  @media (max-width: 767px) {
+    #explore {
+      height: calc(100vh - 50px); } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     #explore {
       user-select: initial; } }
