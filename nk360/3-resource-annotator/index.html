@@ -77,7 +77,7 @@
           
           <div class="nk360-logo">
             <img class="black-logo" src="../shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
-            <img class="color-logo" src="../shared/lib/im/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
+            <img class="color-logo" src="./shared/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
           </div>
         </div>
       
@@ -104,18 +104,18 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print print-notes disabled" title="Print this Activity"></a>
+            <a href="" class="icon icon-print print-notes" title="Print this Activity"></a>
             <a class="icon icon-home disabled" title="Back to Home Screen"></a>
             
             <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between">
-        <img src="../shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
-            <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="">Credits</a></li>
+            <li class="list-inline-item"><a href="#">Credits</a></li>
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
@@ -137,7 +137,7 @@
         <div class="card slider-card">
 
           <div class="close-icon faded">
-            <img src="../shared/lib/im/images/icon-close.svg" width="70">  
+            <img src="../shared/lib/im/images/icon-close.svg" width="70">
           </div>
 
           <section class="intro-slider">
@@ -162,17 +162,17 @@
 
     <div id="instructions" class="fade show">
         <div class="container instructions-container">
-            <h4 class="all-caps letter-spacing-1">How to Play</h4>
+            <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
             <h1>Resource Annotator</h1>
             <div class="row justify-content-md-center">
-                <div class="col-md-6 col-lg-6">
+                <div class="col-6">
                     <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
                     <h2>Select Your Resource</h2>
                     <p>
                         Select a historical image or text to annotate from the selection of source materials provided.
                     </p>
                 </div>
-                <div class="col-md-6 col-lg-6">
+                <div class="col-6">
                     <img src="./assets/instructions-02@2x.png" width="75%" alt="Add your annotations" title="Add your annotations" />
                     <h2>Add Your Annotations</h2>
                     <p>
@@ -180,7 +180,7 @@
                     </p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue this Activity</a>
+            <a class="btn btn-lg btn-white" id="close-instructions" title="Continue this activity"><strong>Continue the Activity</strong></a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -197,7 +197,7 @@
 
             <div class="text-center progress-options">
               <a class="btn btn-lg btn-white reload-page"  title="Choose another resource">Choose another resource</a>
-              <a class="btn btn-lg btn-white" title="Review your notes">Review your notes</a>
+              <a class="btn btn-lg btn-white print-notes" title="Review your notes">Review your notes</a>
               <a class="btn btn-lg btn-white" id="close-porgess" title="Cancel">Cancel</a>
             </div>
         </div>
@@ -235,7 +235,7 @@
                 </div>
 
                 <div class="print-discussion print-hidden">
-                  <h3 class=black-text>Discussion Questions</h3>
+                  <h3 class="black-text">Discussion Questions</h3>
                   <p class="discussion-text">
                    
                   </p>
@@ -246,17 +246,10 @@
               <div class="print-photo">
                 <div class="photo-container print-hidden"></div>
                 <div class="print-info print-hidden" style="overflow:visible;"></div>
+                <div class="more-info">
 
-                <!--<div class="print-caption-info print-hidden">
-                  <h3 class="black-text">Caption</h3>
                 </div>
-
-                <div class="print-source print-hidden">
-                  <h3 class="black-text">Source</h3>
-                </div>-->
               </div>
-
-              
 
 
               <div class="print-paraphrased print-hidden" style="overflow:visible;">
@@ -283,7 +276,7 @@
               </div>
 
 
-              <div class="print-notes" style="overflow:visible;">
+              <div class="print-notes print-hidden" style="overflow:visible;">
                   <h3 class="yellow-underline">
                     Notes
                   </h3>
@@ -300,6 +293,31 @@
 
         </section>
 
+
+        <section class="mobile-menu hidden-mobile">
+          <div class="half-menu" data-page="content">
+             <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
+          </div>
+
+          <div class="half-menu" data-page="view">
+             <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+          </div>
+
+          <br style="clear:left;" />
+          <!--<div class="container-fluid">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
+              </div>
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+              </div>
+
+            </div>
+          </div>-->
+        </section>
 
         <section class="annotation-screen">
           
@@ -324,15 +342,15 @@
 
               <div class="row">
 
-                <div class="col-4">
+                <div class="col-md-12 col-lg-4 show-right-screen">
 
                   <div id="item-left" class="original-text-detail">
 
                   </div>
 
-                  <div class="text-center print-button">
+                  <div class="text-center print-button hidden-md-down">
 
-                    <a class="btn btn-success btn-lg print-notes" id="print-notes" title="Print your notes">
+                    <a class="btn btn-success btn-lg print-notes" title="Print your notes">
                       <strong>Print Your Notes</strong>
                     </a>
 
@@ -340,7 +358,7 @@
 
                 </div>
 
-                <div class="col-8">
+                <div class="col-md-12 col-lg-8 show-left-screen hidden-mobile">
                   
                   <div class="original-text">
 
@@ -355,6 +373,11 @@
                 </div>
 
               </div>
+
+              <section class="mobile-markers hidden-mobile">
+                <ul id="MobileMarker" class="list-inline" style="margin-bottom:0;">
+                </ul>
+              </section>
 
             </div>
 
@@ -404,26 +427,14 @@
                </div>
              </div>
 
-               <div class="bottom markers-container">
+               <div class="bottom markers-container hidden-md-down">
                   <h3>
-                    Drag and drop to add annotation on text and images
+                    Drag and drop to add annotation
                   </h3>
 
-                  <ul class="list-inline" style="margin-bottom:0;">
+                  <ul class="list-inline desktop-markers" style="margin-bottom:0;">
 
-                      {{for themes}}
-
-                        <li id="{{:title}}" class="list-inline-item">
-                          <div class="marker">
-                            <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
-                          </div>
-                          <div class="theme" data-toggle="tooltip" title="{{:tooltip_text}}">
-                            {{:title}} <span class="defintions-icon"></span>
-                          </div>
-                          <div class="markers-remaining"></div>
-                        </li>
-
-                      {{/for}}
+                      
 
                     </ul>
                </div>
@@ -431,6 +442,23 @@
 
           </div>
         </div>
+    </script>
+
+
+    <script id="itemMarkerItems" type="text/x-jsrender">
+      <li id="{{:title}}" class="list-inline-item">
+        <div class="marker">
+          <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
+        </div>
+        <div class="right">
+          <div class="theme">
+            {{:title}} <!--<span class="defintions-icon"></span>-->
+          </div>
+          <div class="markers-remaining"></div>
+        </div>
+
+        <br style="clear:both;" />
+      </li>
     </script>
 
     <script id="itemRightTemplate" type="text/x-jsrender">
@@ -458,7 +486,7 @@
 
           {{if body}}
           <h3 class="yellow-underline">
-            Text
+            Original Text
           </h3>
 
           <p class="original-text-info">
@@ -468,7 +496,6 @@
 
 
           {{if caption}}
-            <h3 class="black-text">Caption</h3>
             <p class="original-text-info">
               {{:caption}}
             </p>
@@ -476,7 +503,6 @@
 
 
           {{if source}}
-            <h3 class="black-text">Source</h3>
             <p class="original-text-info">
               {{:source}}
             </p>
@@ -607,8 +633,5 @@
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
 
-<script type="text/javascript">
-  
-</script>
 </body>
 </html>

@@ -176,6 +176,8 @@
 	}
 
 	.card {
+		height:250px;
+		min-height:250px;
 		.close-icon {
 			@media (max-width: 767px) {
 			    position: absolute;

@@ -1047,16 +1047,20 @@ small, .small {
       height: 47vh; }
 
   .delete-pin {
-    padding-top: 0; } }
-@media screen and (max-width: 768px) and (max-width: 767px) {
-  .card .close-icon {
-    position: absolute;
-    right: 0px;
-    cursor: pointer;
-    top: 0px;
-    filter: drop-shadow(1px 1px 1px black);
-    z-index: 10000000000; } }
-@media screen and (max-width: 768px) and (max-width: 767px) {
-  .card .close-icon img {
-    width: 42px;
-    height: 42px; } }
+    padding-top: 0; }
+
+  .card {
+    height: 250px;
+    min-height: 250px; } }
+  @media screen and (max-width: 768px) and (max-width: 767px) {
+    .card .close-icon {
+      position: absolute;
+      right: 0px;
+      cursor: pointer;
+      top: 0px;
+      filter: drop-shadow(1px 1px 1px black);
+      z-index: 10000000000; } }
+  @media screen and (max-width: 768px) and (max-width: 767px) {
+    .card .close-icon img {
+      width: 42px;
+      height: 42px; } }
