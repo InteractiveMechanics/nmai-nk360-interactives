@@ -238,6 +238,7 @@ div[id^="era-block"] {
 	@include screen-xs {
 		user-select: initial;
 		overflow-y: scroll;
+		height: calc(100vh - 50px);
 	}
 
 	@media screen and ($screen-xs) and ($screen-landscape) {
@@ -252,6 +253,9 @@ div[id^="era-block"] {
 	position: relative;
 	width: 100vw;
 	user-select: none;
+	@include screen-xs {
+		height: calc(100vh - 50px);
+	}
 	@media screen and ($screen-xs) and ($screen-landscape) {
 		user-select: initial;
 	}
