@@ -21,7 +21,22 @@ Slider = (function() {
             dots: true,
             arrows: true,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            responsive: [
+                {
+                breakpoint: 767,
+                settings: {
+                    dots: false 
+                    }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    dots: false    
+                    }
+                }
+   
+            ]
         });
     }
 

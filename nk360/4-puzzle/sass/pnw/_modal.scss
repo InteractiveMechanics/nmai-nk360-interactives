@@ -1,3 +1,8 @@
+/**
+ * This file includes Pacific Northwest theme styles for the modal.
+ * 
+**/
+
 .modal-content {
 	background: url('/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png');
 	background-color: white;
@@ -16,8 +21,8 @@
     opacity: 0.6;
     &:after {
     	content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
-    	position: absolute;
-    	left: 42%;
+    	position: relative;
+    	left: -25%;
 	}
 }
 
