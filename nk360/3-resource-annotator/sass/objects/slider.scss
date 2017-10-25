@@ -47,6 +47,11 @@
 .slick-next {
     width: 100px;
     height: 100px;
+
+    @media (max-width: 767px) { 
+        width:310px;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+    }
 }
 
 .slick-prev:before,

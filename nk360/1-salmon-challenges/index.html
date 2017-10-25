@@ -168,7 +168,7 @@
             <div class="text-center">
               <p class="all-caps">You've encountered an obstacle</p>
               <h2 class="">Manmade Dam</h2>
-              <hr style="width:25%" />
+              <hr />
 
               <h3>The dam is blocking your path. <br /> How will you make it past?</h3>
               <p class="all-caps">
@@ -360,7 +360,7 @@
                       </p>
                     </div>
 
-                    <br style="clear:left;" />
+                    <br class="clear-left" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Steelhead">
@@ -376,7 +376,7 @@
                       </p>
                     </div>
                     
-                    <br style="clear:left;" />
+                    <br class="clear-left" />
                 </div>
                 
                 <div class="col cursor-pointer" data-fish="Chinook">
@@ -392,7 +392,7 @@
                       </p>
                     </div>
 
-                    <br style="clear:left;" />
+                    <br class="clear-left" />
                 </div>
 
             </div>
@@ -421,14 +421,6 @@
             <div class="game-world__foreground"></div>
 
             <div class="encounters">
-
-              <!--<div data-hotspot="1" style="bottom: 165px; left: 900px;" class="hotspot">
-              </div>
-
-              <div data-hotspot="2" style="bottom: 465px; left: 2000px;" class="hotspot">
-              </div>
-
-              <div data-hotspot="3" style="bottom: 365px; left: 300px;" class="hotspot"></div>-->
 
             </div>
 
@@ -473,7 +465,7 @@
             {{if image}}
 
               <div class="card-image">
-                <div class="photo-container" style="display:block;">
+                <div class="photo-container">
                     <img src="{{:thumb}}" class="img-fluid" />
                     <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
                     </div>
@@ -528,7 +520,7 @@
             {{if image}}
 
               <div class="card-image">
-                <div class="photo-container" style="display:block;">
+                <div class="photo-container">
                     <img src="{{:thumb}}" class="img-fluid" />
                     <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
                     </div>
@@ -587,7 +579,7 @@
                 <h3 class="text-center">{{:title}}</h3>
               {{/if}}
 
-              <hr style="width:25%" />
+              <hr />
 
               {{if heading}}
                 <h3>{{:heading}}</h3>
@@ -665,9 +657,5 @@
     <script src="./js/game.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/init.js"></script>
-
-    <script type="text/javascript">
-      //Game.init();
-    </script>
 </body>
 </html>

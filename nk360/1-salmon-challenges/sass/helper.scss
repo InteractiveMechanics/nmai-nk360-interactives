@@ -1,3 +1,11 @@
+hr {
+	width:25%;
+}
+
+.clear-left {
+	clear:left;
+}
+
 .faded {
 	opacity:.5;
 }
@@ -47,5 +55,11 @@
 		background-color: #2e3742 !important;
 		color: white !important;
 		box-shadow:none;
+	}
+}
+
+p {
+	@media (max-width: 990px) {
+		font-size:.8rem;
 	}
 }

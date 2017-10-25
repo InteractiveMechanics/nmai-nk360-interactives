@@ -10,6 +10,7 @@ body {
     text-align: center;
     height: auto;
     position: relative;
+    display:block;
   }
 }
 .game {
@@ -49,18 +50,22 @@ body {
 }
 
 #SelectedSalmon {
-  /*margin-top: 50vh;*/
   position: fixed;
   top: 50%;
   margin-left: 1em;
   z-index: 10;
-  transition: top 3s;
+  transition: left 10s;
   left:50px;
 }
 
 .rising-water {
   top: 20% !important;
 }
+
+.sonic-effect {
+  left:250% !important;
+}
+
 
 .steelhead-1 {
   width: 141px;
@@ -352,6 +357,8 @@ body {
 
     @media screen and (max-width: 767px) {
       padding:30px;
+      overflow: auto;
+      height: 100%;
     }
   }
 }
@@ -359,6 +366,7 @@ body {
 .fish-row {
 
   @media (max-width: 990px) {
+    margin-bottom:15px;
 
     .col {
       flex-basis: auto !important;
@@ -441,33 +449,12 @@ body {
   margin-bottom:30px;
 }
 
-.activity-menu-wrapper > div {
-  z-index: 100; }
-.activity-menu-wrapper .icon {
-  width: 36px;
-  height: 36px;
-  margin: 10px 5px;
-  display: inline-block;
-  background-size: cover;
-  opacity: 1;
-  transition: 0.5s all;
-  cursor: pointer; }
-  .activity-menu-wrapper .icon:last-of-type {
-    margin-right: 15px; }
-  .activity-menu-wrapper .icon:hover, .activity-menu-wrapper .icon:focus, .activity-menu-wrapper .icon:active {
-    opacity: 0.5; }
-  .activity-menu-wrapper .icon.icon-info {
-    background-image: url(../../shared/lib/im/images/icon-info.svg); }
-  .activity-menu-wrapper .icon.icon-home {
-    background-image: url(../../shared/lib/im/images/icon-home.svg); }
-  .activity-menu-wrapper .icon.icon-print {
-    background-image: url(../../shared/lib/im/images/icon-print.svg); }
-  .activity-menu-wrapper .icon.icon-restart {
-    background-image: url(../../shared/lib/im/images/icon-restart.svg); }
-  .activity-menu-wrapper .icon.icon-pause {
-    background-image: url(../../shared/lib/im/images/icon-pause.svg); }
-  .activity-menu-wrapper .icon.icon-play {
-    background-image: url(../../shared/lib/im/images/icon-play.svg); }
+.activity-menu-wrapper .icon.icon-restart {
+  background-image: url(../../shared/lib/im/images/icon-restart.svg); }
+.activity-menu-wrapper .icon.icon-pause {
+  background-image: url(../../shared/lib/im/images/icon-pause.svg); }
+.activity-menu-wrapper .icon.icon-play {
+  background-image: url(../../shared/lib/im/images/icon-play.svg); }
 
 #congrats-instructions {
     font-family: 'Open Sans';
@@ -567,7 +554,7 @@ body {
 .waves {
   width: 431px;
   height:61px;
-  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left:100%;
   position:absolute;
@@ -578,7 +565,7 @@ body {
 .waves-1 {
   width: 431px;
   height:61px;
-  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left:150%;
   position:absolute;
@@ -589,7 +576,7 @@ body {
 .waves-2 {
   width: 431px;
   height:61px;
-  background: url(https://i.imgur.com/QBHS5wT.png) no-repeat;
+  background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left:120%;
   position:absolute;

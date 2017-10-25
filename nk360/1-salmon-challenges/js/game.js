@@ -66,7 +66,6 @@ Game = (function() {
 
       if(getParameterByName('instructions') == "false") {  
         $('#select-fish').removeClass('hidden').addClass('show');
-        //noIntro();
       }
     }
 
@@ -112,7 +111,6 @@ Game = (function() {
         settings.pause = false;
         $('.icon-play').hide();
         $('.icon-pause').show();
-        //$('#pause-icon').removeClass('icon-play').addClass('icon-pause');
         $('#SelectedSalmon').css('animation-play-state', 'paused');
         $('.hotspot').css('animation-play-state', 'paused');
         $('.waves').css('animation-play-state', 'paused');
@@ -430,13 +428,13 @@ Game = (function() {
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
                 
-                settings.backgroundPosition -= .25;
-                //settings.midgroundPosition -= 2;
+                /*settings.backgroundPosition -= .25;
+                settings.midgroundPosition -= 2;
                 settings.foregroundPosition -= 1;
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
                 //settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
                 settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
-  
+                */
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
                         pos = (window.innerWidth / 2);
@@ -462,9 +460,11 @@ Game = (function() {
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
               $('.hotspot').css('animation-play-state', 'paused');
-              $('.waves').css('animation-play-state', 'paused');
-              $('.waves-1').css('animation-play-state', 'paused');
-              $('.waves-2').css('animation-play-state', 'paused');
+              $('.waves').css('display', 'none');
+              $('.waves-1').css('display', 'none');
+              $('.waves-2').css('display', 'none');
+
+              $('#SelectedSalmon').addClass('sonic-effect');
 
               sendGoogleAnalyticsEvent("End game", "complete");
 
@@ -704,8 +704,7 @@ Game = (function() {
       };
 
       if($('.slider').hasClass('slick-initialized')) {
-        $('.slider').slick('unslick'); 
-        //$('.slider').remove(); 
+        $('.slider').slick('unslick');
       }
       $('.slider').html(sliderHTML);
 
@@ -731,8 +730,6 @@ Game = (function() {
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
-      //console.log(sliderHTML);
-
       sendGoogleAnalyticsEvent("Encounter", "Forced encounter - " + cards[0].title);
     }
 
@@ -813,11 +810,7 @@ Game = (function() {
 
       return output;
     }
-
-    var showPopup = function (htmlData){
-
-    }
-
+    
     var noIntro = function() {
       $('#select-fish').removeClass('hidden').addClass('show');
       settings.pause = false;
@@ -883,11 +876,6 @@ Game = (function() {
 
         }, 100);
       }
-
-      /*if(settings.started) {
-        settings.pause = true;
-        requestAnimationFrame(updateWorld);
-      }*/
     }
 
     var showSalmonSelection = function() {
@@ -912,7 +900,6 @@ Game = (function() {
           $(this).addClass('correct');
 
           $('.quiz-detail').text(result);
-          //$('.solution-text').text('Gain 1 fish'); 
 
           if(lastCard > 0) {        
             sendGoogleAnalyticsEvent("Encounter", "Encounter - " + lastCard[0].title + " - correct");
@@ -926,7 +913,6 @@ Game = (function() {
           $('.answer-true').addClass('correct');
 
           $('.quiz-detail').text(result);
-          //$('.solution-text').text('Lose 1 fish');
           if(lastCard > 0) {        
             sendGoogleAnalyticsEvent("Encounter", "Encounter - " + lastCard[0].title + " - incorrect");
           }
@@ -942,7 +928,6 @@ Game = (function() {
         $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
-          //$('.quiz-solution').removeClass('hidden').addClass('show');
           $('.quiz-detail').removeClass('hidden').addClass('show');
           $('.close-icon').removeClass('close-faded');
         }, 200);
@@ -950,7 +935,6 @@ Game = (function() {
     }
 
     var closePopup = function () {
-      //var isVisible = $(".slider-wrapper").is(":visible");
       var isFaded = $(this).hasClass('close-faded');
       var isSlider = $('.slider-wrapper').hasClass('show');
       if(!isFaded && isSlider) {

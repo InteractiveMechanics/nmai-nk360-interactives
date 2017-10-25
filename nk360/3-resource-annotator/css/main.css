@@ -752,6 +752,11 @@ small, .small {
 .slick-next {
   width: 100px;
   height: 100px; }
+  @media (max-width: 767px) {
+    .slick-prev,
+    .slick-next {
+      width: 310px;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); } }
 
 .slick-prev:before,
 .slick-next:before {
@@ -963,13 +968,13 @@ small, .small {
     background-repeat: no-repeat !important; }
 
   .slick-next {
-    right: -30px; }
+    right: -130px; }
 
   .slick-next::before {
     font-size: 75px; }
 
   .slick-prev {
-    left: -30px;
+    left: -130px;
     z-index: 1; }
 
   .slick-prev::before {
@@ -1038,3 +1043,15 @@ small, .small {
 
   .delete-pin {
     padding-top: 0; } }
+@media screen and (max-width: 768px) and (max-width: 767px) {
+  .card .close-icon {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    top: 0px;
+    filter: drop-shadow(1px 1px 1px black);
+    z-index: 10000000000; } }
+@media screen and (max-width: 768px) and (max-width: 767px) {
+  .card .close-icon img {
+    width: 42px;
+    height: 42px; } }
