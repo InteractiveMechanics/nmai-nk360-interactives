@@ -1273,7 +1273,7 @@ hr {
 .progress-wrapper {
   position: absolute;
   z-index: 5;
-  bottom: 100px;
+  bottom: 135px;
   left: 0;
   right: 0;
   margin: 0 auto;
