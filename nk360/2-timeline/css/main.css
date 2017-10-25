@@ -1134,7 +1134,8 @@ div[id^="era-block"] {
     font-size: 1.5rem; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper {
-      height: 100px; } }
+      height: 100px;
+      width: 200px; } }
 
 .sm-label-wrapper[data-era="1"][data-timeline="3"] {
   height: 346px; }
@@ -1366,5 +1367,8 @@ div[id^="era-block"] {
 
 .slick-dots {
   bottom: 75px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .slick-dots {
+      bottom: 115px; } }
 
 /*# sourceMappingURL=main.css.map */
