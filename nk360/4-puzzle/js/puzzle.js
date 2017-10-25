@@ -127,7 +127,7 @@ Puzzle = (function() {
 
                         ui.draggable.css('left', '0').css('top', '0');
                         showComplete();
-                        sendAnalyticsEvent('Puzzle', 'correct', label)
+                        sendAnalyticsEvent('Puzzle', 'correct');
                        
 
 
