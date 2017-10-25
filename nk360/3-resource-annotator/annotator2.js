@@ -15,11 +15,11 @@ Annotator = (function() {
     var heading = "";
 
     var init = function(data) {
-      AnnotatorData = data;
       bindEvents();
     }
 
-    var modalWidth = 275;
+    var modalWidth = 320;
+    var modalHeight = 200;
 
     var createHeading = function() {
       var arr = markersInJSON;
@@ -213,7 +213,10 @@ Annotator = (function() {
       // Adapt position of the pins on window resize
       $(window).resize(function() {
         $('.marker-in-text').each(function() {
-          findPinPosition($(this));
+          //old findPinPosition($(this));
+          if (!$(this).parent().hasClass('photo-container')) {
+            findPinPosition($(this));
+          }
         })
       });
 
@@ -231,7 +234,7 @@ Annotator = (function() {
 
     var draggableEvent = function(markers) {
       markers.draggable({
-        containment: 'window',
+        containment: 'document', //old containment: 'window',
         helper: 'clone',
         cursor: 'move',
         appendTo: 'body',
@@ -290,12 +293,26 @@ Annotator = (function() {
             });
 
             pin.removeClass().addClass('pin-visible marker-in-text');
+            
+            //new
+            if ($(this).hasClass("photo-container")) {
+                console.log("Marker drop position (check for accuracy)", event.offsetX, event.offsetY);
+                setTimeout(function() {
+                    pin.css({
+                        'left': String(event.offsetX - modalWidth) + 'px',
+                        'top': String(event.offsetY - modalHeight) + 'px'
+                    });
+                }, 50);
+            }
+
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
             pin.append('<textarea placeholder="Write your note here..."></textarea>');
             pin.append('<span class="delete-btn"></span>');
 
-            findPinPosition(pin);
+            if (!pin.parent().hasClass("photo-container")) {
+                findPinPosition(pin);
+            }
 
             $('.marker-in-text').each(function() {
               if($(this).is(pin)) return;
@@ -303,14 +320,10 @@ Annotator = (function() {
             });
 
             sendGoogleAnalyticsEvent("Markup", "add");
-
-            setTimeout(function(){
-              pin.find('textarea').focus();
-            }, 500);
           }
 
           // When a marker is moved to another position, make it draggable
-          pin.draggable({
+          /*old pin.draggable({
             containment: 'document',
             cursor: 'move',
             // If not hovering droppable words, go back to the original position
@@ -329,6 +342,34 @@ Annotator = (function() {
               
               showPin(pin);
 
+            }
+          });*/
+
+          pin.draggable({
+            containment: 'document',
+            cursor: 'move',
+            start: function(event, ui) {
+                if (pin.parent().hasClass("photo-container")) {
+                    pin.data("origLeft", pin.get(0).offsetLeft);
+                    pin.data("origTop", pin.get(0).offsetTop);
+                    console.log("Orig position, ", pin.get(0).offsetLeft, pin.get(0).offsetTop);
+                }
+            },
+            // If not hovering droppable words, go back to the original position
+            stop: function(event, ui) {
+              console.log("Current offsets", ui.position.left, ui.position.top + pin.height() + pin.find("img").height());
+              if (pin.parent().hasClass("photo-container")) {
+                  pin.css({
+                    'left': String(ui.position.left) + 'px',
+                    'top': String(ui.position.top) + 'px'
+                  });
+              } else {
+                  pin.css({
+                    'left': '',
+                    'top': '',
+                  });
+                  findPinPosition(pin);
+              }
             }
           });
 
@@ -379,6 +420,8 @@ Annotator = (function() {
       print.find('.print-info').html('');
       print.find('.print-notes ul').html('');
       print.find('.marker-in-text .number').remove();
+
+      print.find('.photo-container').width(original.find('.photo-container').width());
       
       //print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
@@ -453,51 +496,42 @@ Annotator = (function() {
     var findPinPosition = function(pin) {
       var width = pin.closest('.scrollbar-design').outerWidth();
       var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
-
       // Special case for featured image
       if(pin.parent().hasClass('photo-container')) {
-        var top = 30;
+        var top = pin.get(0).offsetTop - (pin.height() + pin.find('img').height());
+        var left = pin.get(0).offsetLeft;
         if(pin.hasClass('pin-hidden')) {
           top = 158;
         }
+        if (left < pin.width() + 10) {
+            //pin.removeClass('right-flipped').addClass('left-flipped');
+        } else {
+            left -= pin.width() + (pin.find('img').width() / 2);
+            //pin.removeClass('left-flipped').addClass('right-flipped');
+        }
         pin.css({
-          'left': parseInt(pin.parent().width() / 2) - 50,
-          'top': top,
+          'left': /*parseInt(pin.parent().width() / 2) - 50*/ left,
+          'top': top
         });
         pin.find('img').css({
           'left': modalWidth - parseInt(pin.find('img').width()) + 10
         });
-        pin.removeClass('left-flipped').addClass('right-flipped');
       }
-      //Default behaviour for words
+      // Default behaviour for words
       else {
         pin.css({
           'left': 0
         });
-        
         width = pin.closest('.scrollbar-design').outerWidth();
         scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
 
-        var height = pin.closest('.scrollbar-design').outerHeight();
-        var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
-        
-        /*if(height < 300) {
-          pin.css({
-            'left': '',
-            'top': 50
-          });
-          pin.find('img').css({
-            'top': -75
-          });
-        }*/
-
         if(width < scroll) {
           pin.css({
-            'left': '',
-            'bottom': -modalWidth + parseInt(pin.parent().height())
+            'left': -modalWidth + parseInt(pin.parent().width()),
+            'top': ''
           });
           pin.find('img').css({
-            'bottom': modalWidth - parseInt(pin.find('img').width()) + 10
+            'left': modalWidth - parseInt(pin.find('img').width()) + 10
           });
           pin.removeClass('left-flipped').addClass('right-flipped');
         }
@@ -534,7 +568,9 @@ Annotator = (function() {
 
     var showPin = function(pin) {
       pin.removeClass('pin-hidden').addClass('pin-visible');
-      findPinPosition(pin);
+      if (!pin.parent().hasClass("photo-container")) {
+          findPinPosition(pin);
+      }
 
       pin.find('*').not('img').finish().show().animate({
         'opacity': 1,
@@ -542,10 +578,6 @@ Annotator = (function() {
 
       pin.css("background-color", "rgba(221, 221, 221, 1)");
       pin.css("border-color", "rgba(204, 204, 204, 1)");
-
-      setTimeout(function(){
-        pin.find('textarea').focus();
-      }, 500);
     };
 
     var hidePin = function(pin) {
@@ -554,7 +586,9 @@ Annotator = (function() {
       }, 250, function() {
         $(this).hide();
         pin.removeClass('pin-visible').addClass('pin-hidden');
-        findPinPosition(pin);
+        if (!pin.parent().hasClass("photo-container")) {
+            findPinPosition(pin);
+        }
       });
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
@@ -608,10 +642,10 @@ Annotator = (function() {
           var count = i + 1;
           //$('#' + id).delay( 500 * count ).addClass('animated bounce');
 
-          $('#' + id + ' img').delay(500 * count).queue(function(next) {
+          /*$('#' + id + ' img').delay(500 * count).queue(function(next) {
             $(this).addClass('animated bounce');
             next();
-          });
+          });*/
         }   
       });
 

@@ -83,6 +83,10 @@ body {
       margin-top:20px;
     }
 
+  @media screen and (max-width: 767px) {
+    overflow:scroll;
+  }
+
 }
 
 
@@ -236,6 +240,10 @@ small, .small {
 
 .print-button {
   margin-top:35px;
+
+  .btn-lg {
+    width:100% !important;
+  }
 
   @media screen and (max-width: 1200px) {
     margin-top:20px;
