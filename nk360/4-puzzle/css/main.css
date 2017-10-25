@@ -542,13 +542,16 @@ span[data-toggle="tooltip"] {
       #puzzle .header-wrapper {
         margin-top: 50px;
         max-height: initial; } }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      #puzzle .header-wrapper {
+        margin: 60px auto 0; } }
   @media (max-width: 480px) {
     #puzzle {
       overflow: scroll; } }
   @media (max-width: 767px) {
     #puzzle {
       overflow: scroll; } }
-  @media (orientation: landscape) {
+  @media screen and (max-width: 767px) and (orientation: landscape) {
     #puzzle {
       overflow: scroll; } }
 
