@@ -18,6 +18,9 @@
 	    	margin-top: 50px;
     		max-height: initial;
 	    }
+	    @media screen and ($screen-ltmd) and ($screen-portrait) {
+	    	    margin: 60px auto 0;
+	    }
 	}
 	@include screen-xxs {
 		overflow: scroll;
@@ -25,7 +28,7 @@
 	@include screen-xs {
 		overflow: scroll;
 	}
-	@include screen-landscape {
+	@media screen and ($screen-xs) and ($screen-landscape) {
 		overflow: scroll;
 	}
 

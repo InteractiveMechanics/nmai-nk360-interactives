@@ -132,7 +132,7 @@ Puzzle = (function() {
 
 
                     } else {
-                        sendAnalyticsEvent('Puzzle', 'incorrect', label)
+                        sendAnalyticsEvent('Puzzle', 'incorrect');
                         setPopover();
                         ui.draggable.draggable('option', 'revert', true);
                         $(this).css('border', '3px solid white');
@@ -280,7 +280,7 @@ Puzzle = (function() {
     **/ 
     var hideModalCard = function() {
         $('.modal-dialog').addClass('hidden');
-        sendAnalyticsEvent('Puzzle', 'close', label)
+        sendAnalyticsEvent('Puzzle', 'close');
     } 
 
 
