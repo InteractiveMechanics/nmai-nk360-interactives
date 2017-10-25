@@ -576,6 +576,11 @@ span[data-toggle="tooltip"] {
       left: 12%;
       width: 75%;
       margin-top: 150px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .puzzle-img-wrapper,
+    .lg-puzzle-wrapper {
+      left: 25%;
+      width: 50%; } }
 
 .puzzle-img {
   width: 100%;
@@ -611,6 +616,9 @@ span[data-toggle="tooltip"] {
   @media (max-width: 767px) {
     .card[data-card="1"] {
       top: -15px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="1"] {
+      left: -60px; } }
 
 .card[data-card="2"] {
   top: -15px;
@@ -622,6 +630,10 @@ span[data-toggle="tooltip"] {
     .card[data-card="2"] {
       top: -15px;
       left: 83px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="2"] {
+      top: -33px;
+      left: 18px; } }
 
 .card[data-card="3"] {
   top: -39px;
@@ -632,6 +644,9 @@ span[data-toggle="tooltip"] {
   @media (max-width: 767px) {
     .card[data-card="3"] {
       left: 240px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="3"] {
+      left: 200px; } }
 
 .card[data-card="4"] {
   top: -31px;
@@ -643,6 +658,9 @@ span[data-toggle="tooltip"] {
     .card[data-card="4"] {
       top: 41px;
       left: 252px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="4"] {
+      left: 375px; } }
 
 .card[data-card="5"] {
   top: 165px;
@@ -653,6 +671,9 @@ span[data-toggle="tooltip"] {
   @media (max-width: 767px) {
     .card[data-card="5"] {
       left: 246px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="5"] {
+      left: 350px; } }
 
 .card[data-card="6"] {
   top: 206px;
@@ -660,6 +681,9 @@ span[data-toggle="tooltip"] {
   transform: rotate(90deg); }
   .card[data-card="6"]:hover {
     transform: rotate(90deg) scale(1.15, 1.15); }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="6"] {
+      left: 135px; } }
 
 .card[data-card="7"] {
   transform: rotate(-70deg);
@@ -670,6 +694,9 @@ span[data-toggle="tooltip"] {
   @media (max-width: 767px) {
     .card[data-card="7"] {
       left: 150px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="7"] {
+      left: 160px; } }
 
 .card[data-card="8"] {
   top: 154px;
@@ -680,6 +707,10 @@ span[data-toggle="tooltip"] {
   @media (max-width: 767px) {
     .card[data-card="8"] {
       left: 2px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .card[data-card="8"] {
+      left: -17px;
+      transform: rotate(15deg); } }
 
 .card[data-card="9"] {
   top: -50px;

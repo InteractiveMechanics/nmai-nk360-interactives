@@ -22,6 +22,7 @@
 	    	    margin: 60px auto 0;
 	    }
 	}
+
 	@include screen-xxs {
 		overflow: scroll;
 	}
@@ -52,6 +53,10 @@
     	left: 12%;
     	width: 75%;
     	margin-top: 150px;
+    }
+    @include screen-md {
+    	left: 25%;
+    	width: 50%;
     }
 }
 
@@ -93,6 +98,9 @@
 	@include screen-xs {
 		top: -15px;
 	}
+	@include screen-md {
+		left: -60px;
+	}
 }
 
 .card[data-card="2"] {
@@ -106,6 +114,10 @@
 		top: -15px;
     	left: 83px;
 	}
+	@include screen-md {
+		top: -33px;
+    	left: 18px;
+	}
 }
 
 .card[data-card="3"] {
@@ -117,6 +129,9 @@
 	}
 	@include screen-xs {
 		left: 240px;
+	}
+	@include screen-md {
+		left: 200px;
 	}
 }
 
@@ -131,6 +146,9 @@
 		top: 41px;
     	left: 252px;
 	}
+	@include screen-md {
+		left: 375px;
+	}
 }
 
 .card[data-card="5"] {
@@ -143,6 +161,9 @@
 	@include screen-xs {
 		left: 246px;
 	}
+	@include screen-md {
+		left: 350px;
+	}
 }
 
 .card[data-card="6"] {
@@ -153,6 +174,9 @@
 		transform: rotate(90deg) scale(1.15, 1.15);	
 	}
 	//okay on screen-xs
+	@include screen-md {
+		left: 135px;
+	}
 }
 
 .card[data-card="7"] {
@@ -165,6 +189,9 @@
 	@include screen-xs {
 		left: 150px;
 	}
+	@include screen-md {
+		left: 160px;
+	}
 }
 
 .card[data-card="8"] {
@@ -176,6 +203,10 @@
 	}
 	@include screen-xs {
 		left: 2px;
+	}
+	@include screen-md {
+		left: -17px;
+    	transform: rotate(15deg);
 	}
 }
 
