@@ -21,7 +21,7 @@ body {
   .game-world {
     height: 100vh;
     min-width: 100vh;
-    width: 15000px !important;
+    width: 20000px !important;
     position: relative;
 
     .game-world__background, .game-world__midground, .game-world__foreground {
@@ -60,6 +60,10 @@ body {
 
 .rising-water {
   top: 20% !important;
+
+  @media only screen and ($screen-xs) and ($screen-landscape) { 
+    top: 30% !important;
+  }
 }
 
 .sonic-effect {
@@ -355,11 +359,16 @@ body {
       padding: 30px 20px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) and ($screen-landscape) {
       padding:30px;
-      overflow: auto;
-      height: 100%;
+      overflow-y: auto;
+      height: 90%;
     }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+  and (orientation : portrait) { 
+    padding-top:100px;
+  }
   }
 }
 
@@ -465,7 +474,7 @@ body {
     height: 100%;
     color: white;
     z-index: 1000;
-    overflow: auto;
+    overflow-y: auto;
     font-size:110%;
     .congrats-instructions-container {
         z-index: 101;
@@ -613,6 +622,8 @@ body {
   border: 2px solid white;
   opacity: 0;
   display:none;
+  transition: top 3s, left 10s;
+  z-index:11;
 
   @media (max-width: 990px) {
     display:block;
