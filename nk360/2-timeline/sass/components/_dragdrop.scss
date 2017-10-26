@@ -48,10 +48,13 @@
 .draggable-holder {
 	margin-left: 20px;
 	height: $moment-height;
+
 	@include screen-xs {
-		margin: 5px 0px;
+		margin: 25px 0px;
 		height: 75px;
 	}
+
+
 	@include screen-sm {
 		margin: 5px 0px;
 		height: 90px;
@@ -67,6 +70,12 @@
 	height: 50%;
 	flex-wrap: wrap;
 	justify-content: center;
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		width: 75%;
+    	left: 7.5%;
+	}
+
 	@include screen-xs {
 		height: auto;
     	padding-bottom: 100px;
@@ -111,9 +120,6 @@
 			margin-bottom: 0px;
 			@include screen-xs {
     			overflow: hidden;
-    			-webkit-line-clamp: 3;
-    			-webkit-box-orient: vertical;
-    			display: -webkit-box;
 			}
 			@include screen-sm {
 				height: 70px;
@@ -126,19 +132,21 @@
 		}
 	}
 
-	@include screen-xxs {
-		width: 80%;
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		height: 100px;
+		padding: 5px 5px 5px 35px;
+		width: 100%;
 	}
-
-	@include screen-xs {
-		height: 75px;
-		padding: 5px 5px 5px 52px;
+	
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		height: 95px;
+	    padding: 5px 15px 5px 35px;
+	    width: 385px;
 	}
 	@include screen-sm {
 		height: 90px;
 		padding: 5px 5px 5px 52px;
 	}
-
 	
 }
 
@@ -171,13 +179,23 @@
 	top: -$moment-height;
 	height: 82px;
 	width: 82px;
-	@include screen-xs {
-		top: -75px;
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		top: -100px;
 		height: 50px;
 		width: 50px;
 		position: relative;
 		left: -7px;
 	}
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		top: -95px;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		left: -7px;
+	}
+
 	@include screen-sm {
 		top: -90px;
 		height: 70px;
