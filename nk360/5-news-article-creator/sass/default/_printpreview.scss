@@ -21,7 +21,11 @@
     height: 100%;
     z-index: 1000;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
+    .overlay {
+        pointer-events: none;
+    }
     .print-preview-container {
         width: 960px;
         margin: 100px auto;

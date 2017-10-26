@@ -107,7 +107,8 @@ footer {
   left: 0;
   color: white;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -337,7 +338,8 @@ main {
   height: 100%; }
   @media screen and (max-width: 767px) {
     main {
-      overflow: auto; } }
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; } }
 
 #static-ui .print-preview-btn {
   position: absolute;
@@ -831,7 +833,10 @@ main {
   left: 0;
   height: 100%;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  #print-preview .overlay {
+    pointer-events: none; }
   #print-preview .print-preview-container {
     width: 960px;
     margin: 100px auto;
