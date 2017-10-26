@@ -38,4 +38,12 @@
             display: none;
         }
     }
+
+    .lg & {
+        color: white;
+
+        &:after {
+            background-image: url('/nk360/shared/lib/im/images/icon-audio-white.svg');
+        }
+    }
 }

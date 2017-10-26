@@ -195,6 +195,10 @@ span[data-toggle="tooltip"] {
       span[data-toggle="tooltip"]:after {
         content: none;
         display: none; } }
+  .lg span[data-toggle="tooltip"] {
+    color: white; }
+    .lg span[data-toggle="tooltip"]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-definition-white.svg"); }
 
 [data-pronounce] {
   border: 1px solid #D67169;
@@ -228,6 +232,10 @@ span[data-toggle="tooltip"] {
       [data-pronounce]:after {
         content: none;
         display: none; } }
+  .lg [data-pronounce] {
+    color: white; }
+    .lg [data-pronounce]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-audio-white.svg"); }
 
 .btn {
   background-color: transparent;
@@ -561,7 +569,10 @@ main {
     #step-by-step-cards .step-theme .btn.btn-theme:focus, #step-by-step-cards .step-theme .btn.btn-theme:hover, #step-by-step-cards .step-theme .btn.btn-theme:active {
       background-size: 125%; }
     #step-by-step-cards .step-theme .btn.btn-theme.active {
-      background-blend-mode: color-burn; }
+      background-blend-mode: color-burn;
+      background-size: 125%; }
+      #step-by-step-cards .step-theme .btn.btn-theme.active:focus, #step-by-step-cards .step-theme .btn.btn-theme.active:hover, #step-by-step-cards .step-theme .btn.btn-theme.active:active {
+        opacity: 1 !important; }
   #step-by-step-cards .step-images .step-container-inner img {
     position: relative;
     border: 2px solid black;

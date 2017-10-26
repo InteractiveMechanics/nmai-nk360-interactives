@@ -230,6 +230,11 @@
             }
             &.active {
                 background-blend-mode: color-burn;
+                background-size: 125%;
+
+                &:focus, &:hover, &:active {
+                    opacity: 1 !important;
+                }
             }
         }
     }
