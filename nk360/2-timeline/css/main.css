@@ -586,7 +586,7 @@ div[id^="era-block"] {
   height: 115px; }
   @media (max-width: 767px) {
     .draggable-holder {
-      margin: 5px 0px;
+      margin: 25px 0px;
       height: 75px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .draggable-holder {
@@ -601,6 +601,10 @@ div[id^="era-block"] {
   height: 50%;
   flex-wrap: wrap;
   justify-content: center; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    #draggable-wrapper {
+      width: 75%;
+      left: 7.5%; } }
   @media (max-width: 767px) {
     #draggable-wrapper {
       height: auto;
@@ -649,10 +653,7 @@ div[id^="era-block"] {
       margin-bottom: 0px; }
       @media (max-width: 767px) {
         .draggable-widget div p {
-          overflow: hidden;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          display: -webkit-box; } }
+          overflow: hidden; } }
       @media (min-width: 768px) and (max-width: 991px) {
         .draggable-widget div p {
           height: 70px;
@@ -660,13 +661,16 @@ div[id^="era-block"] {
     @media (max-width: 480px) {
       .draggable-widget div {
         font-size: 12px; } }
-  @media (max-width: 480px) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .draggable-widget {
-      width: 80%; } }
-  @media (max-width: 767px) {
+      height: 100px;
+      padding: 5px 5px 5px 35px;
+      width: 100%; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
     .draggable-widget {
-      height: 75px;
-      padding: 5px 5px 5px 52px; } }
+      height: 95px;
+      padding: 5px 15px 5px 35px;
+      width: 385px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .draggable-widget {
       height: 90px;
@@ -698,9 +702,16 @@ div[id^="era-block"] {
   top: -115px;
   height: 82px;
   width: 82px; }
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .draggable-img-wrapper {
-      top: -75px;
+      top: -100px;
+      height: 50px;
+      width: 50px;
+      position: relative;
+      left: -7px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .draggable-img-wrapper {
+      top: -95px;
       height: 50px;
       width: 50px;
       position: relative;
