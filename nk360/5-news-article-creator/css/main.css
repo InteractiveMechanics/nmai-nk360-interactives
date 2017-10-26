@@ -435,6 +435,8 @@ main {
       @media screen and (max-width: 767px) and (orientation: portrait) {
         #step-by-step-cards .step .step-container {
           width: 320px; } }
+      #step-by-step-cards .step .step-container:focus {
+        outline: none !important; }
       #step-by-step-cards .step .step-container:after {
         content: '';
         position: absolute;
