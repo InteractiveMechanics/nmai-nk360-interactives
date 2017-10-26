@@ -400,9 +400,9 @@ Game = (function() {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
         if((encounters[i].trigger_location - 200) == current_position) {
-          //settings.pause = false;
-          //createForcedEncounterSlider(encounters[i]);
-          alert(encounters[i].cards[0].title)
+          settings.pause = false;
+          createForcedEncounterSlider(encounters[i]);
+          //alert(encounters[i].cards[0].title)
         }
       };
     };
