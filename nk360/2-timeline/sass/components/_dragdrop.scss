@@ -7,7 +7,7 @@
     background-color: rgba(9, 74, 113, 0.35);
     border-radius: 52px;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
-    margin-top: 5%;
+    margin-top: 2.5%;
     @include screen-xs {
     	display: none;
     }
@@ -110,8 +110,10 @@
 		p {
 			margin-bottom: 0px;
 			@include screen-xs {
-				height: 60px;
     			overflow: hidden;
+    			-webkit-line-clamp: 3;
+    			-webkit-box-orient: vertical;
+    			display: -webkit-box;
 			}
 			@include screen-sm {
 				height: 70px;
@@ -125,7 +127,7 @@
 	}
 
 	@include screen-xxs {
-		width: 90%;
+		width: 80%;
 	}
 
 	@include screen-xs {
@@ -239,6 +241,10 @@
 .draggable-text.active {
 	display: none;
 	z-index: -2;
+	@include screen-xs {
+		display: initial;
+		z-index: initial;
+	}
 
 }
 

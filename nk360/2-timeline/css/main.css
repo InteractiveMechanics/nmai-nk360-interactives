@@ -106,7 +106,8 @@ footer {
   left: 0;
   color: white;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -194,6 +195,10 @@ span[data-toggle="tooltip"] {
       span[data-toggle="tooltip"]:after {
         content: none;
         display: none; } }
+  .lg span[data-toggle="tooltip"] {
+    color: white; }
+    .lg span[data-toggle="tooltip"]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-definition-white.svg"); }
 
 [data-pronounce] {
   border: 1px solid #D67169;
@@ -227,6 +232,10 @@ span[data-toggle="tooltip"] {
       [data-pronounce]:after {
         content: none;
         display: none; } }
+  .lg [data-pronounce] {
+    color: white; }
+    .lg [data-pronounce]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-audio-white.svg"); }
 
 .btn {
   background-color: transparent;
@@ -540,7 +549,7 @@ div[id^="era-block"] {
   background-color: rgba(9, 74, 113, 0.35);
   border-radius: 52px;
   box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2);
-  margin-top: 5%; }
+  margin-top: 2.5%; }
   @media (max-width: 767px) {
     #droppable-container {
       display: none; } }
@@ -640,8 +649,10 @@ div[id^="era-block"] {
       margin-bottom: 0px; }
       @media (max-width: 767px) {
         .draggable-widget div p {
-          height: 60px;
-          overflow: hidden; } }
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          display: -webkit-box; } }
       @media (min-width: 768px) and (max-width: 991px) {
         .draggable-widget div p {
           height: 70px;
@@ -651,7 +662,7 @@ div[id^="era-block"] {
         font-size: 12px; } }
   @media (max-width: 480px) {
     .draggable-widget {
-      width: 90%; } }
+      width: 80%; } }
   @media (max-width: 767px) {
     .draggable-widget {
       height: 75px;
@@ -749,6 +760,10 @@ div[id^="era-block"] {
 .draggable-text.active {
   display: none;
   z-index: -2; }
+  @media (max-width: 767px) {
+    .draggable-text.active {
+      display: initial;
+      z-index: initial; } }
 
 .draggable-widget.active {
   background-color: transparent;
