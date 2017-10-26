@@ -14,6 +14,7 @@ Instructions = (function() {
     }
     var openInstructions = function() {
         $('#instructions').removeClass('hidden');
+        $('#instructions').scrollTop(0);
         setTimeout(function() {
             $('#instructions').addClass('show');
         }, 100);
