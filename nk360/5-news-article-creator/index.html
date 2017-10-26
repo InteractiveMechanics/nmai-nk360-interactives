@@ -56,7 +56,7 @@
 
 
     <!-- Common interactive elements -->
-    <div class="module-menu-wrapper">
+    <div class="module-menu-wrapper" role="navigation">
 	    <div class="abs top left module-menu">
     		<div id="showLeft">	
     			<div class="nk360-back-arrow">
@@ -94,15 +94,15 @@
     		</nav>
     	</div>
     </div>
-    <div class="activity-menu-wrapper">
+    <div class="activity-menu-wrapper" role="navigation">
         <div class="abs top right">
-            <a class="icon icon-print disabled" disabled title="Print this Activity" disabled></a>
-            <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+            <a class="icon icon-print disabled" disabled title="Print this Activity" role="button"></a>
+            <a class="icon icon-info" title="Show Instructions" id="show-instructions" role="button"></a>
         </div>
     </div>
-    <footer id="footer" class="fixed-bottom d-flex justify-content-between">
+    <footer id="footer" class="fixed-bottom d-flex justify-content-between" role="banner">
         <img src="/nk360/shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
-        <ul class="list-inline">
+        <ul class="list-inline" role="navigation">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
             <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="">Credits</a></li>
@@ -125,7 +125,7 @@
                     <p>Once you've completed your newspaper, save it as a PDF and print it out to distribute to the masses!</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="1">Continue this Activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="1" role="button">Continue this Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -135,9 +135,9 @@
     <script id="imageTemplate" type="text/x-jsrender">
         <div class="image-step step">
             <div class="step-container-inner">
-                <img src="{{:thumb}}" alt="{{:caption}}" title="{{:caption}}" data-id="{{:#index}}" />
-                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}" data-gallery-caption="{{:caption}}"></div>
-                <div class="selected-overlay">
+                <img src="{{:thumb}}" alt="{{:caption}}" title="{{:caption}}" data-id="{{:#index}}" role="button" />
+                <div data-gallery data-gallery-image="{{:url}}" data-gallery-credit="{{:credit}}" data-gallery-caption="{{:caption}}" role="button"></div>
+                <div class="selected-overlay" role="presentation">
                     <img src="/nk360/shared/lib/im/images/icon-checkmark.svg" class="icon-checkmark" />
                     <span>Selected!</span>
                 </div>
@@ -148,11 +148,11 @@
     <script id="quoteTemplate" type="text/x-jsrender">
         <div class="quote-step step" data-id="{{:#index}}">
             <div class="step-container-inner">
-                <p>
+                <p role="button">
                     <span class="drop-letter-quote">"</span>{{:text}}"
                     <small>{{:source}}</small>
                 </p>
-                <div class="selected-overlay">
+                <div class="selected-overlay" role="presentation">
                     <img src="/nk360/shared/lib/im/images/icon-checkmark.svg" class="icon-checkmark" />
                     <span>Selected!</span>
                 </div>
@@ -180,17 +180,17 @@
     <main>
         <section id="step-by-step-cards">
             <div class="step step-intro" data-title="Introduction">
-                <div class="step-container">
+                <div class="step-container" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Create your own news article</h4>
                     <h1 class="text-center">Inform your readers</h1>
                     <div class="divider"></div>
                     <p class="large guiding-question text-center"></p>
-                    <p>You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process.</p>
+                    <p >You have a deadline&mdash;your editor needs a new piece for the latest edition of <em class="paper-title"></em>. In your argument, be sure to support your claims with evidence. You can preview your article at any point in the process.</p>
                     <a class="hidden" tabindex="1">Next</a>
                 </div>
             </div>
             <div class="step step-theme" data-title="Design">
-                <div class="step-container">
+                <div class="step-container" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Pick Your Newspaper Style</h4>
                     <h1 class="text-center">What Style Works Best?</h1>
                     <div class="divider"></div>
@@ -202,7 +202,7 @@
                 </div>
             </div>
             <div class="step step-masthead" data-title="Byline">
-                <div class="step-container">
+                <div class="step-container" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Write Your Byline</h4>
                     <h1 class="text-center">What&apos;s Your Name?</h1>
                     <div class="divider"></div>
@@ -211,7 +211,7 @@
                 </div>
             </div>
             <div class="step step-article-copy" data-title="Article">
-                <div class="step-container step-container-lg">
+                <div class="step-container step-container-lg" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Construct Your Argument (News Article)</h4>
                     <h1 class="text-center">How Will You Address the Compelling Question?</h1>
                     <div class="divider"></div>
@@ -223,23 +223,23 @@
                 </div>
             </div>
             <div class="step step-images" data-title="Images">
-                <div class="step-container step-container-lg">
+                <div class="step-container step-container-lg" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Select Your Images</h4>
                     <h1 class="text-center">What Images Support Your Argument?</h1>
                     <div class="divider"></div>
                     <p>Pick one to three images that support your argument. You'll write captions for these images next.</p>
                     <div id="image-selector" class="card-slider">
                         <div class="card-slider-container"></div>
-                        <div class="card-slider-nav">
-                            <div class="nav-arrow nav-arrow-left"></div>
-                            <div class="nav-arrow nav-arrow-right"></div>
+                        <div class="card-slider-nav" role="navigation">
+                            <div class="nav-arrow nav-arrow-left" role="button"></div>
+                            <div class="nav-arrow nav-arrow-right" role="button"></div>
                         </div>
                     </div>
                     <p class="swipe-message hidden-sm-up"><em>Swipe left/right to see more.</em></p>
                 </div>
             </div>
             <div class="step step-image-captions" data-title="Image Captions">
-                <div class="step-container step-container-lg">
+                <div class="step-container step-container-lg" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Write Image Captions</h4>
                     <h1 class="text-center">Describe Your Images</h1>
                     <div class="divider"></div>
@@ -247,32 +247,32 @@
                     <div id="image-captioning" class="card-slider">
                         <h2 class="text-center">No images selected, yet!</h2>
                         <div class="card-slider-container hidden"></div>
-                        <div class="card-slider-nav hidden">
-                            <div class="nav-arrow nav-arrow-left"></div>
-                            <div class="nav-arrow nav-arrow-right"></div>
+                        <div class="card-slider-nav hidden" role="navigation">
+                            <div class="nav-arrow nav-arrow-left" role="button"></div>
+                            <div class="nav-arrow nav-arrow-right" role="button"></div>
                         </div>
                     </div>
                     <p class="swipe-message hidden-sm-up hidden"><em>Swipe left/right to see more.</em></p>
                 </div>
             </div>
             <div class="step step-quotes" data-title="Quotes">
-                <div class="step-container step-container-lg">
+                <div class="step-container step-container-lg" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Select A Quote</h4>
                     <h1 class="text-center">What Quotes Support Your Argument?</h1>
                     <div class="divider"></div>
                     <p>Select one to three quotes. Consider including statements from different perspectives to tell a more complete story.</p>
                     <div id="quote-selector" class="card-slider">
                         <div class="card-slider-container"></div>
-                        <div class="card-slider-nav">
-                            <div class="nav-arrow nav-arrow-left"></div>
-                            <div class="nav-arrow nav-arrow-right"></div>
+                        <div class="card-slider-nav" role="navigation">
+                            <div class="nav-arrow nav-arrow-left" role="button"></div>
+                            <div class="nav-arrow nav-arrow-right" role="button"></div>
                         </div>
                     </div>
                     <p class="swipe-message hidden-sm-up"><em>Swipe left/right to see more.</em></p>
                 </div>
             </div>
             <div class="step step-headline" data-title="Headline">
-                <div class="step-container">
+                <div class="step-container" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Write Your Headline (Title)</h4>
                     <h1 class="text-center">How Will You Get Your Reader&apos;s Attention?</h1>
                     <div class="divider"></div>
@@ -281,7 +281,7 @@
                 </div>
             </div>
             <div class="step step-review" data-title="Review">
-                <div class="step-container">
+                <div class="step-container" role="contentinfo">
                     <h4 class="text-center all-caps letter-spacing-1">Check the Proof (Draft)</h4>
                     <h1 class="text-center">Is Your News Article Ready to Go?</h1>
                     <div class="divider"></div>
@@ -291,32 +291,32 @@
             </div>
         </section>
         <div id="static-ui">
-            <header class="header text-center">
+            <header class="header text-center" role="heading">
                 <h2 class="letter-spacing-1 all-caps">News Article Creator</h2>
                 <h1 class="guiding-question"></h1>
             </header>
-            <a class="btn btn-white btn-lg hidden-xs disabled print-preview-btn" disabled>Preview Your Paper</a>
+            <a class="btn btn-white btn-lg hidden-xs disabled print-preview-btn" disabled role="button">Preview Your Paper</a>
         </div>
-        <nav id="navigation">
-            <div class="nav-arrow nav-arrow-left"></div>
-            <div class="nav-arrow nav-arrow-right"></div>
+        <nav id="navigation" role="navigation">
+            <div class="nav-arrow nav-arrow-left" role="button"></div>
+            <div class="nav-arrow nav-arrow-right" role="button"></div>
         </nav>
     </main>
 
-    <div id="print-preview" class="fade hidden">
+    <div id="print-preview" class="fade hidden" role="dialog">
         <div class="print-preview-container">
-            <div class="close-preview"></div>
-            <div class="paper-preview-header"></div>
-            <div class="paper-preview-headline">Lorem Ipsum Sit Dolor Amet Lorem ipsum dolor sit amet, consectetur elit</div>
+            <div class="close-preview" role="button"></div>
+            <div class="paper-preview-header" role="presentation"></div>
+            <div class="paper-preview-headline" role="heading">Lorem Ipsum Sit Dolor Amet Lorem ipsum dolor sit amet, consectetur elit</div>
             <div class="paper-preview-masthead all-caps letter-spacing-1">Written and Edited by <span class="byline">Joe Journalist</span></div>
-            <div class="paper-preview-article"></div>
+            <div class="paper-preview-article" role="article"></div>
         </div>
 
         <a id="print" class="btn btn-success btn-white btn-lg" title="Print your paper">Print your paper</a>
-        <div class="overlay"></div>
+        <div class="overlay" role="presentation"></div>
     </div>
 
-    <div id="error-alert" class="fade hidden"></div>
+    <div id="error-alert" class="fade hidden" role="alert"></div>
 
     
     <!-- Include jquery, jquery ui, touchpunch -->
