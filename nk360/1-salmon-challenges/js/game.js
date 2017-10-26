@@ -398,8 +398,9 @@ Game = (function() {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
         if((encounters[i].trigger_location - 200) == current_position) {
-          settings.pause = false;
-          createForcedEncounterSlider(encounters[i]);
+          //settings.pause = false;
+          //createForcedEncounterSlider(encounters[i]);
+          console.log(encounters[i].cards[0].title)
         }
       };
     };
@@ -426,16 +427,23 @@ Game = (function() {
                 }
 
                 settings.position -= settings.speed;
-                $('.game-world').css('left', settings.position + 'px');
+                //$('.game-world').css('left', settings.position + 'px');
             
-                /*settings.backgroundPosition -= .25;
-                settings.midgroundPosition -= 2;
-                settings.foregroundPosition -= 1;
+                settings.backgroundPosition -= 3.25;
+                settings.midgroundPosition -= 3.9;
+                settings.foregroundPosition -= 3.5;
                 
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
                 settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
                 settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
-                */
+
+                var menus = document.getElementsByClassName("hotspot");
+                for (var i = menus.length - 1; i >= 0; i--)
+                {
+                  var _left = parseInt(menus[i].style.left) - 4;
+                  menus[i].style.left = _left + "px";
+                }
+                
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
                         pos = (window.innerWidth / 2);

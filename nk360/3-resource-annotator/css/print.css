@@ -13,6 +13,10 @@
 	font-size:75% !important;
 }
 
+.mobile-menu {
+	display: none;
+}
+
 body,
 html {
   overflow: visible !important;

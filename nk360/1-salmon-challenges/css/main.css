@@ -195,6 +195,10 @@ span[data-toggle="tooltip"] {
       span[data-toggle="tooltip"]:after {
         content: none;
         display: none; } }
+  .lg span[data-toggle="tooltip"] {
+    color: white; }
+    .lg span[data-toggle="tooltip"]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-definition-white.svg"); }
 
 [data-pronounce] {
   border: 1px solid #D67169;
@@ -228,6 +232,10 @@ span[data-toggle="tooltip"] {
       [data-pronounce]:after {
         content: none;
         display: none; } }
+  .lg [data-pronounce] {
+    color: white; }
+    .lg [data-pronounce]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-audio-white.svg"); }
 
 .btn {
   background-color: transparent;
@@ -353,7 +361,7 @@ body .photo-container {
   top: 50%;
   margin-left: 1em;
   z-index: 10;
-  transition: left 10s;
+  transition: top 3s, left 10s;
   left: 50px; }
 
 .rising-water {

@@ -401,11 +401,11 @@ Annotator = (function() {
       });
 
       //Add numbers
-      var i = 1;
+      var i = 0;
       print.find('.marker-in-text').each(function() {
+        i++;
         var m = $(this);
         m.append('<span class="number" style="opacity:1; display:block;">' + i + '</span>');
-        i++;
       });
 
       // Add notes
@@ -428,6 +428,7 @@ Annotator = (function() {
         print.find('.print-paraphrased').removeClass('print-hidden');
       }
 
+
       if(objItem.body) {
         print.find('.print-info').removeClass('print-hidden');
       }
@@ -438,6 +439,10 @@ Annotator = (function() {
 
       if(AnnotatorData.themes > 0) {
         print.find('.print-themes').removeClass('print-hidden');
+      }
+
+      if(i >= 1) {
+        print.find('.print-notes').removeClass('print-hidden');
       }
     }
 
