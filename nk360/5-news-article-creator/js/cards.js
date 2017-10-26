@@ -84,7 +84,6 @@ Cards = (function() {
         });
 
         Cards.editor = new Quill('#text-editor', {
-            debug: false,
             theme: 'snow',
             placeholder: 'What story do the sources tell about the compelling question? Construct a news article to address the question and explain how the sources support your argument.',
             modules: {
@@ -326,7 +325,20 @@ Cards = (function() {
      * Get the content of the QuillJS editor
      */
     var getEditorContents = function() {
-        return Cards.editor.getContents();
+        var text = Cards.editor.getText();
+        var split = text.split(" ");
+
+        var textCount = 0;
+        var wordCount = 0;
+
+        $.each(split, function(index, value){
+            if (wordCount <= 250) {
+                textCount += value.length + 1;
+                wordCount += 1;
+            }
+        });
+
+        return Cards.editor.getContents(0, textCount);
     }
 
     /**
@@ -421,6 +433,7 @@ Cards = (function() {
     return {
         init: init,
         addQuoteToArray: addQuoteToArray,
+        getEditorTextLength: getEditorTextLength,
         getEditorContents: getEditorContents,
         getTheme: getTheme,
         getMasthead: getMasthead,

@@ -223,10 +223,10 @@ Print = (function() {
         if (headline){
             var length = headline.length;
     
-            if (length <= 26) {
+            if (length <= 24) {
                 $('.paper-preview-headline').addClass('large').text(headline);
             } else {
-                $('.paper-preview-headline').text(headline);
+                $('.paper-preview-headline').removeClass('large').text(headline);
             }
         }
     }

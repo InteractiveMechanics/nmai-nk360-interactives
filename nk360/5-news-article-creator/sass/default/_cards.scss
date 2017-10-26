@@ -12,6 +12,9 @@
         position: fixed;
         bottom: 70px;
 
+        @media screen and (max-height: 768px) {
+            display: none !important;
+        }
         @media screen and ($screen-xs) {
             display: none !important;
         }
@@ -231,6 +234,11 @@
             &.active {
                 background-blend-mode: color-burn;
                 background-size: 125%;
+
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    background-color: rgb(168, 189, 70);
+                    background-image: none;
+                }
 
                 &:focus, &:hover, &:active {
                     opacity: 1 !important;

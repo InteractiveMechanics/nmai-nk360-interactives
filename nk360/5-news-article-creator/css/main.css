@@ -410,6 +410,9 @@ main {
   #step-by-step-cards > .slick-dots {
     position: fixed;
     bottom: 70px; }
+    @media screen and (max-height: 768px) {
+      #step-by-step-cards > .slick-dots {
+        display: none !important; } }
     @media screen and (max-width: 767px) {
       #step-by-step-cards > .slick-dots {
         display: none !important; } }
@@ -571,6 +574,10 @@ main {
     #step-by-step-cards .step-theme .btn.btn-theme.active {
       background-blend-mode: color-burn;
       background-size: 125%; }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #step-by-step-cards .step-theme .btn.btn-theme.active {
+          background-color: #a8bd46;
+          background-image: none; } }
       #step-by-step-cards .step-theme .btn.btn-theme.active:focus, #step-by-step-cards .step-theme .btn.btn-theme.active:hover, #step-by-step-cards .step-theme .btn.btn-theme.active:active {
         opacity: 1 !important; }
   #step-by-step-cards .step-images .step-container-inner img {
@@ -893,7 +900,6 @@ main {
   #print-preview .paper-preview-headline {
     height: 100px;
     margin-bottom: 10px;
-    overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     font-size: 42px;
