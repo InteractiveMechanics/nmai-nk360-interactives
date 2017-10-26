@@ -90,7 +90,15 @@ Cards = (function() {
                 toolbar: [
                     ['bold', 'italic', 'underline']
                 ],
-                history: true
+                history: true,
+                keyboard: {
+                    bindings: {
+                        tab: { 
+                            key: 9, 
+                            handler: function(){ return true; } 
+                        }
+                    }
+                }
             }
         });
 
@@ -110,6 +118,10 @@ Cards = (function() {
 
         $(document).on('click tap', '#navigation .nav-arrow-right', function(){ sendAnalyticsEvent('Navigation', 'next'); });
         $(document).on('click tap', '#navigation .nav-arrow-left', function(){ sendAnalyticsEvent('Navigation', 'previous'); });
+
+        $(document).on('keypress', '.btn-theme', function(e) { if(e.which == 13){ $(this).click(); } });
+        $(document).on('keypress', '.image-step img', function(e) { if(e.which == 13){ $(this).click(); } });
+        $(document).on('keypress', '.quote-step', function(e) { if(e.which == 13){ $(this).click(); } });
 
         $(document).on('change', '.image-caption-text', setCaption);
 
@@ -134,13 +146,13 @@ Cards = (function() {
             sendAnalyticsEvent('Navigation', 'Navigate to ' + slide);
     
             if (slide == 'Byline'){
-                $('#masthead').focus();
+                //$('#masthead').focus();
             }
             if (slide == 'Article'){
-                Cards.editor.focus();
+                //Cards.editor.focus();
             }
             if (slide == 'Headline'){
-                $('#headline').focus();
+                //$('#headline').focus();
             }
         }
     }

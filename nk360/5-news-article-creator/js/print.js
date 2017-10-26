@@ -10,6 +10,11 @@ Print = (function() {
         $(document).on('click tap', '.icon-print', openPrintPreview);
         $(document).on('click tap', '.close-preview', closePrintPreview);
         $(document).on('click tap', '#print', triggerPrint);
+
+        $(document).on('keypress', '.print-preview-btn', function(e) { if(e.which == 13){ $(this).click(); } });
+        $(document).on('keypress', '.icon-print', function(e) { if(e.which == 13){ $(this).click(); } });
+        $(document).on('keypress', '.close-preview', function(e) { if(e.which == 13){ $(this).click(); } });
+        $(document).on('keypress', '#print', function(e) { if(e.which == 13){ $(this).click(); } });
     }
 
     /**

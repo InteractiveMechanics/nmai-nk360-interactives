@@ -9,6 +9,8 @@ Instructions = (function() {
     var bindEvents = function() {
         $(document).on('click tap', '#instructions', closeInstructions);
         $(document).on('click tap', '#show-instructions', openInstructions);
+        $(document).on('click tap', '#close-instructions', closeInstructions);
+        $(document).on('keypress', '#close-instructions', closeInstructionsKeypress);
     }
     var openInstructions = function() {
         $('#instructions').removeClass('hidden');
@@ -26,6 +28,11 @@ Instructions = (function() {
         }, 500);
 
         sendAnalyticsEvent('Instructions', 'close');
+    }
+    var closeInstructionsKeypress = function(e) {
+        if(e.which == 13){
+            $('#close-instructions').click();
+        }
     }
 
     var checkQuerystring = function() {
