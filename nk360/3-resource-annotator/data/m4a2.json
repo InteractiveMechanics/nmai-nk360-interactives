@@ -78,7 +78,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "NWIFC is an organization that provides support to twenty treaty tribes in western Washington. Nations within the NWIFC work together to effectively manage and preserve salmon populations.",
-		    "thumbnail_image": "./assets/imgs/m4a2/thumbnail-source-4.jpg",
+		    "thumbnail_image": "./assets/imgs/m4a2/med-source-4.jpg",
 		    "question_text": "What opportunities and challenges might nations encounter when they work together in order to solve problems?"
 		},
 		{
@@ -94,7 +94,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "The Columbia River Intertribal Fish Commission (CRITFC) is made up of Yakama, Warm Springs, Umatilla, and Nez Perce tribes. CRITFC’s mission is “to ensure a unified voice in the overall management of the fishery resources, and as managers, to protect reserved treaty rights through the exercise of the inherent sovereign powers of the tribes.”",
-		    "thumbnail_image": "./assets/imgs/m4a2/thumbnail-source-5.jpg",
+		    "thumbnail_image": "./assets/imgs/m4a2/med-source-5.jpg",
 		    "question_text": "What opportunities and challenges might nations encounter when they work together in order to solve problems?"
 		},
 		{
@@ -222,7 +222,7 @@
 		    "video_url": "",
 		    "source_type": "Image",
 		    "excerpt": "Tulalip youth drum during the First Salmon Ceremony.",
-		    "thumbnail_image": "./assets/imgs/m4a2/thumbnail-source-13.jpg",
+		    "thumbnail_image": "./assets/imgs/m4a2/med-source-13.jpg",
 		    "question_text": "How might future tribal leaders be able to end the Fish Wars?"
 		}
 	],

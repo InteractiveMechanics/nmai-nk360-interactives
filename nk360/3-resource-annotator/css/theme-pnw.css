@@ -7,19 +7,16 @@
   font-weight: normal;
   font-style: normal;
   src: url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.woff") format("woff"), url("/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.ttf") format("truetype"); }
-
 @font-face {
   font-family: "Archer Pro";
   font-weight: normal;
   font-style: normal;
   src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
-
 @font-face {
   font-family: "Archer Pro";
   font-weight: bold;
   font-style: normal;
   src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
-
 h1 {
   font-size: 3.6rem;
   font-family: "Ludicrous", serif; }
@@ -65,28 +62,28 @@ h4 {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
 
 .btn {
-  border-color: #2e3742;
-  color: #2e3742; }
+  border-color: #2E3742;
+  color: #2E3742; }
   .btn:hover, .btn:focus, .btn:active {
-    background-color: #2e3742;
-    border-color: #2e3742;
+    background-color: #2E3742;
+    border-color: #2E3742;
     color: white !important; }
   .btn.btn-white {
     border-color: white;
     color: white; }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
-      color: #2e3742 !important;
+      color: #2E3742 !important;
       background-color: white;
       border-color: white; }
   .btn.active {
-    border-color: #2e3742;
-    background-color: #2e3742;
+    border-color: #2E3742;
+    background-color: #2E3742;
     color: white !important;
     opacity: 1; }
     .btn.active:hover, .btn.active:focus, .btn.active:active {
       color: white !important;
-      background-color: #2e3742;
-      border-color: #2e3742;
+      background-color: #2E3742;
+      border-color: #2E3742;
       opacity: 0.65; }
 
 body {
@@ -112,3 +109,5 @@ body {
   @media (max-width: 767px) {
     .slider-card {
       background-size: 370px 480px !important; } }
+
+/*# sourceMappingURL=theme-pnw.css.map */

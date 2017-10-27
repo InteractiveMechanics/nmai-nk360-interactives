@@ -21,13 +21,13 @@
     <meta property="og:image:height" content="630" />
   
     <!-- Include shared stylesheets -->
-    <link rel="stylesheet" href="../shared/lib/im/css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="../shared/lib/im/js/lightgallery/css/lightgallery.min.css" />
-    <link rel="stylesheet" href="../shared/lib/im/js/slick/slick.css" />
-    <link rel="stylesheet" href="../shared/lib/im/js/slick/slick-theme.css" />
-    <link rel="stylesheet" href="../shared/lib/im/css/animate/animate.css" />
+    <link rel="stylesheet" href="/nk360//shared/lib/im/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/css/animate/animate.css" />
     
-    <link rel="stylesheet" href="../shared/lib/im/code/upperleftmenu/menu.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/code/upperleftmenu/menu.css" />
 
     <!-- Include project stylesheets -->
     <link rel="stylesheet" href="./css/main.css" />
@@ -42,12 +42,6 @@
         <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
     /build -->
 
-    <style type="text/css">
-        .marker-in-text.pin-hidden {
-          width: 0 !important;
-          height: 0 !important;
-        }
-    </style>
 </head>
 <body>
     <!-- Google Analytics tracking script -->
@@ -76,8 +70,8 @@
           </div>
           
           <div class="nk360-logo">
-            <img class="black-logo" src="../shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
-            <img class="color-logo" src="./shared/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
+            <img class="black-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
+            <img class="color-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
           </div>
         </div>
       
@@ -111,11 +105,11 @@
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between">
-        <img src="./shared/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <img src="/nk360/shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
         <ul class="list-inline">
             <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
             <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
-            <li class="list-inline-item"><a href="#">Credits</a></li>
+            <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="" tabindex="-1">Credits</a></li>
             <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
         </ul>
     </footer>
@@ -137,13 +131,13 @@
         <div class="card slider-card">
 
           <div class="close-icon faded">
-            <img src="../shared/lib/im/images/icon-close.svg" width="70">
+            <img src="/nk360/shared/lib/im/images/icon-close.svg" width="70">
           </div>
 
           <section class="intro-slider">
             
             <div>
-              <p class="text-center page-title"></p>
+              <p class="text-center page-title all-caps letter-spacing-1"></p>
               <h3 class="text-center theme-name black-text"></h3>
 
 
@@ -187,16 +181,16 @@
 
     <div id="lost-progress" class="fade hidden">
         <div class="container instructions-container">
-            <h2 class="all-caps letter-spacing-1">
+            <h4 class="all-caps letter-spacing-1">
               Are you sure you want to choose another resource? 
-            </h2>
+            </h4>
 
-            <h2 class="all-caps letter-spacing-1" style="margin:20px 0">
+            <h1 class="all-caps letter-spacing-1">
               Your work will not be saved.
-            </h2>
+            </h1>
 
             <div class="text-center progress-options">
-              <a class="btn btn-lg btn-white reload-page"  title="Choose another resource">Choose another resource</a>
+              <a class="btn btn-lg btn-white reload-page" title="Choose another resource">Choose another resource</a>
               <a class="btn btn-lg btn-white print-notes" title="Review your notes">Review your notes</a>
               <a class="btn btn-lg btn-white" id="close-porgess" title="Cancel">Cancel</a>
             </div>
@@ -249,14 +243,14 @@
                 </div>-->
 
                 <div class="print-caption print-hidden">
-                  <h3 class="yellow-underline" style="font-size:1.1rem;">Caption</h3>
+                  <h3 class="yellow-underline">Caption</h3>
                   <p class="caption-text">
                     
                   </p>
                 </div>
 
                 <div class="print-discussion print-hidden">
-                  <h3 class="yellow-underline" style="font-size:1.1rem;">Discussion Questions</h3>
+                  <h3 class="yellow-underline">Discussion Questions</h3>
                   <p class="discussion-text">
                    
                   </p>
@@ -296,7 +290,7 @@
 
 
         <section class="mobile-menu hidden-mobile">
-          <div class="half-menu" data-page="content">
+          <div class="half-menu active" data-page="content">
              <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
           </div>
 
@@ -399,6 +393,13 @@
               <div class="outer-top">
                <div class="top scrollbar-design">
 
+                    {{if caption}}
+                      <h3>Caption</h3>
+                      <p>
+                        {{:caption}}
+                      </p>
+                    {{/if}}
+
                     {{if question_text}}
                       <h3>Discussion Questions</h3>
                       <p>
@@ -473,7 +474,7 @@
         {{if image_url}}
           <div class="photo-container" style="display:block;">
               <img src="{{:image_url}}" class="img-fluid" />
-              <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}"></div>
+              <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}" data-gallery-credit="{{:image_credit}}"></div>
           </div>
         {{/if}}
 
@@ -547,26 +548,27 @@
             
             <div class="top">
               <div class="photo">
+                <div class="photo-overlay"></div>
+
                 {{if thumbnail_image}}
                   <img src="{{:thumbnail_image}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
+                {{else}}
+                  <img src="./assets/thumbnail-default@2x.jpg" class="img-fluid" />
                 {{/if}}
               </div>
 
-              <div class="photo-overlay"></div>
               <div class="text-overlay all-caps"><h3>{{:source_type}}</h3></div>
             </div>
 
             <div class="bottom">
                
                 <div class="body">
-                    <p>
-                       {{:excerpt}}
-                    </p>
+                    {{:excerpt}}
                 </div>
 
                 <div class="button">
 
-                    <a href="javascript:void(0);" class="btn btn-success" data-annotationid="{{:id}}">
+                    <a href="javascript:void(0);" class="btn btn-block btn-success" data-annotationid="{{:id}}">
                         <strong>Mark-up this material <i class="" style="
     padding-left: 5px;
 "><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="19.2px" height="19.2px" viewBox="0 0 19.2 19.2" style="enable-background:new 0 0 19.2 19.2;" xml:space="preserve">
@@ -596,28 +598,29 @@
 
     
     <!-- Include jquery, jquery ui, touchpunch -->
-    <script src="../shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
-    <script src="../shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
-    <script src="../shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
-    <script src="../shared/lib/im/js/jsrender/jsrender.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jsrender/jsrender.min.js"></script>
 
     <!-- Include bootstrap -->
-    <script src="../shared/lib/im/js/tether/tether.min.js"></script>
-    <script src="../shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
 
     <!-- Include lightGallery -->
-    <script src="../shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
 
     <!-- Include slick -->
-    <script src="../shared/lib/im/js/slick/slick.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
 
     <!-- Include shared code -->
-    <script src="../shared/lib/im/code/analytics.js"></script>
-    <script src="../shared/lib/im/code/audio/audio.js"></script>
-    <script src="../shared/lib/im/code/tooltips/tooltips.js"></script>
-    <script src="../shared/lib/im/code/instructions/instructions.js"></script>
-    <script src="../shared/lib/im/code/lightbox/lightbox.js"></script>
-    <script src="../shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/analytics.js"></script>
+    <script src="/nk360/shared/lib/im/code/audio/audio.js"></script>
+    <script src="/nk360/shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="/nk360/shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="/nk360/shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
 
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>

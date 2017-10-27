@@ -107,7 +107,8 @@ footer {
   left: 0;
   color: white;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -318,67 +319,75 @@ span[data-toggle="tooltip"] {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
-body p {
+body {
   font-size: 1rem; }
   @media screen and (max-width: 1400px) {
-    body p {
+    body {
       font-size: .9rem; } }
   @media screen and (max-width: 1200px) {
-    body p {
+    body {
       font-size: .8rem; } }
-body textarea {
-  -webkit-user-select: all;
-  /* Chrome all / Safari all */
-  -moz-user-select: all;
-  /* Firefox all */
-  -ms-user-select: all;
-  /* IE 10+ */
-  user-select: all; }
-body .black-text {
-  color: #353535; }
-body a.link-color {
-  color: #4BADa6;
-  text-decoration: underline;
-  font-size: 75%;
-  display: inine-block;
-  padding-right: 25px; }
-body h3 {
-  color: #006986;
-  font-family: "Archer Pro", serif; }
-  body h3 span {
+  body p {
+    font-size: 1rem; }
+    @media screen and (max-width: 1400px) {
+      body p {
+        font-size: .9rem; } }
+    @media screen and (max-width: 1200px) {
+      body p {
+        font-size: .8rem; } }
+  body textarea {
+    -webkit-user-select: all;
+    /* Chrome all / Safari all */
+    -moz-user-select: all;
+    /* Firefox all */
+    -ms-user-select: all;
+    /* IE 10+ */
+    user-select: all; }
+  body .black-text {
+    color: #353535; }
+  body a.link-color {
+    color: #4BADa6;
+    text-decoration: underline;
+    font-size: 75%;
+    display: inine-block;
+    padding-right: 25px; }
+  body h3 {
+    color: #006986;
     font-family: "Archer Pro", serif; }
-  body h3.yellow-underline {
-    display: inline-block;
-    border-bottom: 3px solid #f6b851;
-    padding-bottom: 5px; }
-body .disabled {
-  opacity: .5 !important; }
-body .pencil {
-  background: url(/nk360/shared/lib/im/images/icon-pencil.svg) no-repeat;
-  background-size: 16px;
-  height: 16px;
-  margin: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 16px;
-  width: 16px;
-  right: 10px; }
-body .text-overlay {
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  body .text-overlay h3 {
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 25vh;
-    position: relative;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35); }
-body .info {
-  margin-top: 20px; }
-@media screen and (max-width: 767px) {
-  body {
-    overflow: scroll; } }
+    body h3 span {
+      font-family: "Archer Pro", serif; }
+    body h3.yellow-underline {
+      display: inline-block;
+      border-bottom: 3px solid #f6b851;
+      padding-bottom: 5px; }
+  body .disabled {
+    opacity: .5 !important; }
+  body .pencil {
+    background: url(/nk360/shared/lib/im/images/icon-pencil.svg) no-repeat;
+    background-size: 16px;
+    height: 16px;
+    margin: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    width: 16px;
+    right: 10px; }
+  body .text-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    body .text-overlay h3 {
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 25vh;
+      position: relative;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35); }
+  body .info {
+    margin-top: 20px; }
+  @media screen and (max-width: 767px) {
+    body {
+      overflow: scroll; } }
 
 .photo-container {
   text-align: center;
@@ -386,17 +395,28 @@ body .info {
   height: auto;
   position: relative; }
 
-.photo-overlay {
-  background: #016A87;
-  position: absolute;
-  width: 100%;
+.photo {
+  overflow: hidden;
+  padding: 0;
   height: 25vh;
-  top: 0;
-  right: 0;
-  opacity: .75;
-  background-blend-mode: multiply; }
+  position: relative; }
+  .photo .photo-overlay {
+    background: #016A87;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: .65;
+    background-blend-mode: multiply; }
+  .photo img {
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto; }
 
-small, .small {
+small,
+.small {
   font-size: 55%;
   font-weight: 100; }
 
@@ -404,31 +424,54 @@ small, .small {
   width: 90%;
   margin: 20px auto 0;
   height: 75vh; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .annotation-screen {
+      height: 68vh;
+      width: 86%; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .annotation-screen {
+      height: 68vh;
+      width: 86%;
+      margin-top: 0; } }
   .annotation-screen .annotation-item {
     height: 75vh;
     background: #FFF;
     width: 90%;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 4px 2px 10px 0; }
+    box-shadow: rgba(0, 0, 0, 0.35) 0 2px 15px 0; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      .annotation-screen .annotation-item {
+        height: 68vh; } }
+    @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+      .annotation-screen .annotation-item {
+        height: 68vh;
+        width: 100%; } }
     .annotation-screen .annotation-item .top {
       height: 25vh; }
-      .annotation-screen .annotation-item .top .photo img {
-        height: 25vh; }
     .annotation-screen .annotation-item .bottom {
       padding: 20px 8% 0;
       height: 50vh; }
+      @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+        .annotation-screen .annotation-item .bottom {
+          height: 43vh; } }
+      @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+        .annotation-screen .annotation-item .bottom {
+          height: 43vh; } }
       .annotation-screen .annotation-item .bottom .body {
         height: 36vh;
         overflow-y: auto; }
+        @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+          .annotation-screen .annotation-item .bottom .body {
+            height: 26vh; } }
+        @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+          .annotation-screen .annotation-item .bottom .body {
+            height: 30vh; } }
       .annotation-screen .annotation-item .bottom .button {
         position: absolute;
         bottom: 25px;
         margin: 0 auto;
-        width: 250px;
-        left: 0;
-        right: 0; }
-        .annotation-screen .annotation-item .bottom .button a {
-          width: 250px; }
+        left: 8%;
+        right: 8%; }
     .annotation-screen .annotation-item .col-no-padding {
       padding: 0; }
   .annotation-screen .copyright {
@@ -471,17 +514,26 @@ small, .small {
   font-weight: bold; }
 
 .original-text {
-  background: #eee;
-  padding: 30px 50px 30px 30px;
-  height: 80vh; }
+  background: #fff;
+  padding: 30px 40px 30px 30px;
+  height: 77vh; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .original-text {
+      height: 70vh; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .original-text {
+      height: 61vh; } }
   .original-text .content-height {
     max-height: 70vh;
     overflow-y: auto;
-    padding: 0 25px 25px; }
+    padding: 0 10px 0; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      .original-text .content-height {
+        max-height: 62vh; } }
 
 .markers-container {
   padding: 25px;
-  background: rgba(213, 237, 235, 0.5); }
+  background: rgba(12, 92, 154, 0.3); }
 
 .original-text .photo {
   max-height: 350px;
@@ -518,10 +570,49 @@ small, .small {
 .print-view {
   display: none; }
 
+@media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .mobile-markers {
+    position: absolute;
+    bottom: 50px;
+    background: rgba(46, 55, 66, 0.85);
+    padding: 20px 50px 0;
+    width: 100%;
+    z-index: 99;
+    left: 0; } }
+.mobile-markers ul {
+  text-align: center; }
+.mobile-markers li {
+  margin: 0 10px !important;
+  text-align: center; }
+  .mobile-markers li .markers-remaining {
+    color: white; }
+  .mobile-markers li .theme {
+    color: white;
+    font-size: 1rem; }
+
+.mobile-menu {
+  background: #9eb2c1;
+  position: relative;
+  width: 86%;
+  margin: 0 auto;
+  box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.3); }
+  .mobile-menu .half-menu {
+    width: 49.7%;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    padding: 12px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.05); }
+    .mobile-menu .half-menu a {
+      color: white;
+      text-decoration: none; }
+    .mobile-menu .half-menu.active {
+      border-bottom: 4px solid white;
+      background: transparent; }
+
 .original-text {
-  background: #eee;
-  padding: 30px 50px 30px 30px;
-  height: 77vh;
   box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.3); }
   .original-text .photo {
     max-height: 350px;
@@ -559,8 +650,10 @@ small, .small {
   height: 100%;
   color: white;
   z-index: 100; }
-  #lost-progress h2 {
+  #lost-progress h1, #lost-progress h4 {
     color: white; }
+  #lost-progress h4 {
+    margin-bottom: 20px; }
   #lost-progress .instructions-container {
     z-index: 101;
     position: relative;
@@ -569,11 +662,14 @@ small, .small {
   #lost-progress .progress-options {
     margin: 100px auto 0;
     width: 325px; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      #lost-progress .progress-options {
+        margin: 50px auto 0; } }
     #lost-progress .progress-options .btn-lg {
       width: 325px;
       border-color: white;
       display: block;
-      margin-bottom: 40px; }
+      margin-bottom: 20px; }
       #lost-progress .progress-options .btn-lg:hover {
         color: #2e3742 !important;
         border-color: white;
@@ -589,27 +685,31 @@ small, .small {
     margin: 0 auto;
     width: 60px;
     display: inherit; }
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      .marker img {
+        width: 30px; } }
+    @media screen and (max-width: 991px) {
       .marker img {
         width: 30px; } }
 
 .markers-container .list-inline {
   margin: 30px 0 45px; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 991px) {
     .markers-container .list-inline {
       overflow-x: auto; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .markers-container .list-inline {
+      margin: 15px 0; } }
   .markers-container .list-inline .list-inline-item {
     margin-right: 7px;
     text-align: center;
     display: inline-block;
     text-align: center;
     width: 30%; }
-    @media screen and (max-width: 1625px) {
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
       .markers-container .list-inline .list-inline-item {
-        width: 40%; } }
-    @media screen and (max-width: 1200px) {
-      .markers-container .list-inline .list-inline-item {
-        width: 40%; } }
+        margin-right: 3%;
+        width: 29%; } }
 
 .btn-lg {
   width: 325px; }
@@ -625,51 +725,71 @@ small, .small {
 .marker-in-text {
   position: absolute;
   padding: 10px;
-  background: #ddd;
+  background: #fff !important;
   /* Must match Js */
-  border: thin solid #ccc;
+  border: none;
   /* Must match Js */
-  border-radius: 3px;
+  border-radius: 0;
   width: 320px;
   /* Must match Js */
   height: 200px;
   z-index: 2;
   bottom: 40px;
   left: 0;
-  font-size: 15px; }
+  font-size: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
 
 .marker-in-text.visible {
   z-index: 3; }
 
 .marker-in-text img {
-  width: 30px;
+  width: 50px;
   height: auto;
   bottom: -30px;
   position: absolute;
   opacity: .5;
   cursor: pointer;
-  left: 0; }
+  left: -25px !important;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+  z-index: 4; }
 
 .hidden-mobile {
   display: none; }
 
 .marker-in-text textarea {
-  border-radius: 3px;
+  border-radius: 0;
   border: thin solid #ccc;
   width: 100%;
-  padding: 7px;
+  padding: 8px;
   height: 100%;
   float: left;
   width: 250px; }
 
 .marker-in-text .delete-btn {
   float: right;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   display: block;
-  background-image: url("https://maxcdn.icons8.com/Share/icon/p1em/Editing//trash11600.png");
+  background-image: url("../assets/icon-trash.svg");
   background-size: cover;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  opacity: 1;
+  transition: all 0.5s; }
+  .marker-in-text .delete-btn:hover, .marker-in-text .delete-btn:active {
+    opacity: 0.5; }
+  .marker-in-text .delete-btn:after {
+    content: 'Delete';
+    display: block;
+    top: 38px;
+    left: -2px;
+    position: absolute;
+    font-size: 0.8rem; }
+
+.marker-in-text.pin-hidden {
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important; }
 
 .delete-pin {
   width: 100%;
@@ -729,6 +849,9 @@ small, .small {
   background-color: #636365;
   height: 10px; }
 
+.slick-track {
+  padding-bottom: 20px; }
+
 .slick-slide {
   margin: 0px 20px;
   width: 342px; }
@@ -743,7 +866,8 @@ small, .small {
   right: -60px; }
 
 .slick-slide img {
-  width: 100%; }
+  width: 100%;
+  object-fit: cover; }
 
 .slick-prev:hover,
 .slick-next:hover {
@@ -752,6 +876,9 @@ small, .small {
 .slick-dots {
   z-index: 50;
   bottom: -35px; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .slick-dots {
+      bottom: -15px; } }
 
 .slick-dots li button:before {
   font-size: 15px;
@@ -778,7 +905,7 @@ small, .small {
 .slick-prev:before {
   font-family: 'slick';
   line-height: 1;
-  opacity: .75;
+  opacity: 1;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -804,8 +931,7 @@ small, .small {
   margin: 0 auto; }
   .slick-dots > li {
     display: inline-block; }
-    .slick-dots > li.slick-active > a,
-    .slick-dots > li.slick-active > button {
+    .slick-dots > li.slick-active > a, .slick-dots > li.slick-active > button {
       background-color: orange;
       cursor: default; }
     .slick-dots > li > a,
@@ -844,10 +970,11 @@ small, .small {
       min-height: 500px; } }
   .card .close-icon {
     position: absolute;
+    top: 0;
     right: -100px;
     cursor: pointer; }
-  .card p {
-    font-size: 13px; }
+  .card .page-title {
+    font-size: 0.8rem; }
 
 .card:before {
   background: #CABDB6;
@@ -873,6 +1000,9 @@ small, .small {
     .card-wrapper > .card:hover {
       -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
       box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4); }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      .card-wrapper > .card {
+        margin-top: 60px; } }
   .card-wrapper .card-before {
     opacity: .3;
     -webkit-transform: rotate(-2deg);
@@ -943,132 +1073,4 @@ small, .small {
     .slider-card {
       background-size: 400px 500px !important; } }
 
-@media screen and (max-width: 992px) {
-  .annotation-screen {
-    width: 95%; }
-    .annotation-screen .annotation-item {
-      width: 100%;
-      height: 67.5vh; }
-      .annotation-screen .annotation-item .top {
-        height: 21vh; }
-        .annotation-screen .annotation-item .top .photo img {
-          height: 21vh !important; }
-        .annotation-screen .annotation-item .top .photo-overlay {
-          height: 21vh; }
-      .annotation-screen .annotation-item .bottom {
-        height: 47.5vh; }
-        .annotation-screen .annotation-item .bottom .body {
-          height: 33vh; }
-        .annotation-screen .annotation-item .bottom .button {
-          background: #FFF;
-          bottom: 15px; }
-
-  footer {
-    z-index: -1; }
-
-  .card-wrapper > .card {
-    width: 350px;
-    margin-top: 60px; }
-
-  .card {
-    height: 490px;
-    min-height: 490px; }
-    .card .close-icon {
-      top: -30px;
-      right: -30px; }
-
-  .slider-card {
-    background-repeat: no-repeat !important; }
-
-  .slick-next {
-    right: -130px; }
-
-  .slick-next::before {
-    font-size: 75px; }
-
-  .slick-prev {
-    left: -130px;
-    z-index: 1; }
-
-  .slick-prev::before {
-    font-size: 75px; }
-
-  .mobile-markers {
-    position: absolute;
-    bottom: 0;
-    background: #2e3742;
-    padding: 20px 45px;
-    width: 100%;
-    z-index: 10000000;
-    left: 0; } }
-@media screen and (max-width: 768px) {
-  .marker-in-text {
-    width: 265px;
-    /* Must match Js */
-    height: 150px; }
-    .marker-in-text textarea {
-      width: 210px; }
-
-  .original-text {
-    padding: 10px 15px 75px 0px; }
-
-  .header {
-    margin-top: 10px; }
-    .header h2 {
-      font-size: 50%; }
-    .header h1 {
-      font-size: 1.6rem; }
-
-  .mobile-menu .half-menu {
-    width: 50%;
-    float: left;
-    background: grey;
-    cursor: pointer; }
-    .mobile-menu .half-menu a {
-      color: white;
-      font-weight: bold;
-      display: block;
-      padding: 10px 13px; }
-      .mobile-menu .half-menu a:hover {
-        text-decoration: none; }
-    .mobile-menu .half-menu.active {
-      box-shadow: inset 0 -3px 0 #FFF; }
-
-  .marker {
-    float: left; }
-    .marker img {
-      width: 30px; }
-
-  .list-inline-item .right {
-    float: right;
-    margin-left: 12px; }
-  .list-inline-item .theme {
-    margin-top: 0;
-    color: white;
-    font-weight: bold; }
-  .list-inline-item .markers-remaining {
-    color: white; }
-
-  .original-text {
-    height: 50vh; }
-    .original-text .content-height {
-      height: 47vh; }
-
-  .delete-pin {
-    padding-top: 0; }
-
-  .card {
-    height: 250px;
-    min-height: 250px; } }
-  @media screen and (max-width: 768px) and (max-width: 767px) {
-    .card .close-icon {
-      position: absolute;
-      right: 0px;
-      cursor: pointer;
-      top: 0px;
-      filter: drop-shadow(1px 1px 1px black);
-      z-index: 10000000000; } }
-  @media screen and (max-width: 768px) and (max-width: 767px) {
-    .card .close-icon img {
-      width: 42px;
-      height: 42px; } }
+/*# sourceMappingURL=main.css.map */
