@@ -302,7 +302,7 @@ Annotator = (function() {
             pin.removeClass().addClass('pin-visible marker-in-text');
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
-            pin.append('<textarea placeholder="Write your note here..." autofocus></textarea>');
+            pin.append('<textarea placeholder="Write your note here..." ></textarea>');
             pin.append('<span class="delete-btn"></span>');
 
             findPinPosition(pin);
@@ -315,7 +315,7 @@ Annotator = (function() {
             sendGoogleAnalyticsEvent("Markup", "add");
 
             setTimeout(function(){
-              pin.find('textarea').focus();
+              pin.find('textarea').click().focus();
             }, 500);
           }
 
@@ -562,7 +562,7 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
 
       setTimeout(function(){
-        pin.find('textarea').focus();
+        pin.find('textarea').click().focus();
       }, 500);
     };
 
