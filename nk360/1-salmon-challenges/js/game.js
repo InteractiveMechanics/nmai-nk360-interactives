@@ -938,7 +938,7 @@ Game = (function() {
           $('.quiz-detail').text(result);
         }
 
-        $('.quiz-options').data('answered', true);
+        $('.quiz-options').attr('data-answered', true);
 
         setTimeout(function(){
           $('.quiz-detail').removeClass('hidden').addClass('show');
