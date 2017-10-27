@@ -90,7 +90,7 @@ Puzzle = (function() {
         });
 
          $('.droppable-widget').droppable({
-            tolerance: 'pointer',
+            tolerance: 'touch',
             drop: function( event, ui ) {
                 
 
