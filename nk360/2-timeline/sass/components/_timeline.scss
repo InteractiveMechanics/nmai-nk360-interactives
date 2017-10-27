@@ -379,9 +379,6 @@
         display: inline-block;
         }
     }
-    @media screen and ($screen-xs) and ($screen-landscape) {
-        top: 60%;
-    }
 }
 
 
@@ -483,6 +480,11 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 154px;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
     @media screen and ($screen-xs) and ($screen-portrait) {
         height: 286px;
     }

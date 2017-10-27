@@ -11,8 +11,8 @@
     @include screen-xs {
     	display: none;
     }
-    @include screen-md {
-    	margin-top: 3%;
+    @media screen and ($screen-md) and ($screen-landscape) {
+        margin-top: 1%;
     }
 
 }

@@ -560,9 +560,9 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #droppable-container {
       display: none; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
     #droppable-container {
-      margin-top: 3%; } }
+      margin-top: 1%; } }
 
 #era-label-start {
   width: 125px;
@@ -1130,9 +1130,6 @@ div[id^="era-block"] {
         background-position: center center;
         background-repeat: no-repeat;
         display: inline-block; } }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
-    #prev-btn, #next-btn {
-      top: 60%; } }
 
 #next-btn {
   right: 12px;
@@ -1216,6 +1213,9 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper[data-era="1"][data-timeline="3"] {
       height: 154px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="1"][data-timeline="3"] {
+      height: 286px; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .sm-label-wrapper[data-era="1"][data-timeline="3"] {
       height: 286px; } }
@@ -1329,10 +1329,10 @@ div[id^="era-block"] {
       top: 25px; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .modal-dialog {
-      width: 90%;
-      max-width: 90vw;
+      top: 50px;
+      width: 75vw;
       height: calc(90vh - 114px);
-      left: 5vw; } }
+      left: 12.5vw; } }
 
 .modal-header {
   flex-direction: column;
@@ -1341,7 +1341,11 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .modal-header {
       height: auto;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      padding-top: 10px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-header h3 {
+      font-size: 1.3rem; } }
 
 .modal-content {
   background: url("../assets/text-card-pnw@2x.png");
