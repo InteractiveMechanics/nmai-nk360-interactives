@@ -11,6 +11,12 @@ body {
     height: auto;
     position: relative;
     display:block;
+
+    img {
+        max-height: 250px;
+        text-align: center;
+        margin: 0 auto;
+    }
   }
 }
 .game {
@@ -359,10 +365,13 @@ body {
       padding: 30px 20px;
     }
 
-    @media screen and (max-width: 767px) and ($screen-landscape) {
+    @media screen and ($screen-xs) and ($screen-landscape) {
       padding:30px;
       overflow-y: auto;
       height: 90%;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+      padding:20px;
     }
 
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
@@ -413,6 +422,10 @@ body {
       padding-left: 5%;
       display: inline-block;
       float:left;
+      
+      p {
+        font-size: 0.7rem;
+      }
     }
 
   }
@@ -461,9 +474,9 @@ body {
 .activity-menu-wrapper .icon.icon-restart {
   background-image: url(../../shared/lib/im/images/icon-restart.svg); }
 .activity-menu-wrapper .icon.icon-pause {
-  background-image: url(../../shared/lib/im/images/icon-pause.svg); }
-.activity-menu-wrapper .icon.icon-play {
   background-image: url(../../shared/lib/im/images/icon-play.svg); }
+.activity-menu-wrapper .icon.icon-play {
+  background-image: url(../../shared/lib/im/images/icon-pause.svg); }
 
 #congrats-instructions {
     font-family: 'Open Sans';
@@ -507,6 +520,9 @@ body {
         img {
           margin:80px 0;
 
+          @media screen and ($screen-md) and ($screen-landscape) {
+            margin: 10px 0;
+          }
           @media (max-width: 800px) {
             margin:30px 0;
           }

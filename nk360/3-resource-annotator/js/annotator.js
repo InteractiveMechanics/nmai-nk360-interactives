@@ -382,6 +382,7 @@ Annotator = (function() {
       
       //print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
+      print.find('.caption-text').html(objItem.caption);
       print.find('.paraphrased-text').html(objItem.paraphrase);
 
       // Add updated content
@@ -418,7 +419,9 @@ Annotator = (function() {
         i++;
       });
 
-
+      if(objItem.caption) {
+        print.find('.print-caption').removeClass('print-hidden');
+      }
       
       if(objItem.question_text) {
         print.find('.print-discussion').removeClass('print-hidden');
@@ -592,7 +595,7 @@ Annotator = (function() {
         });
       }
 
-      if(window.outerWidth > 992) {
+      if($(window).width() > 992) {
         $('.show-left-screen').removeClass('hidden-mobile');
         var markers = $.templates("#itemMarkerItems");
         var markersOutput = markers.render(objItem.themes);
@@ -623,7 +626,7 @@ Annotator = (function() {
       // Initialize tooltips again
       $('[data-toggle="tooltip"]').tooltip();
 
-      if(window.outerWidth <= 992) {
+      if($(window).width() <= 992) {
         var markers = $.templates("#itemMarkerItems");
         var markersOutput = markers.render(objItem.themes);
         $("#MobileMarker").html(markersOutput);
