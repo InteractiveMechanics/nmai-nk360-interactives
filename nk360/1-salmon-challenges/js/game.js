@@ -14,7 +14,7 @@ Game = (function() {
       sectionLength: 0,
       sectionOffset: 0,
       position: 0,
-      salmonCount: 3,
+      salmonCount: 2,
       backgroundSpeed: 0,
       midgroundSpeed: .1,
       foregroundSpeed: 1,

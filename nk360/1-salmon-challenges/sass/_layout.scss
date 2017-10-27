@@ -61,6 +61,10 @@ body {
     @media only screen and ($screen-xs) and ($screen-landscape) {
         top: 30% !important;
     }
+
+    @media only screen and ($screen-xs) and ($screen-portrait) {
+        top: 35% !important;
+    }
 }
 .sonic-effect {
     left: 250% !important;

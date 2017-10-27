@@ -374,6 +374,9 @@ body .photo-container {
   @media only screen and (max-width: 767px) and (orientation: landscape) {
     .rising-water {
       top: 30% !important; } }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .rising-water {
+      top: 35% !important; } }
 
 .sonic-effect {
   left: 250% !important; }
