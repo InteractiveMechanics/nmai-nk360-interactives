@@ -1,7 +1,7 @@
 .progress-wrapper {
     position: absolute;
     z-index: 5;
-    bottom: 135px;
+    bottom: 150px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -9,6 +9,11 @@
     height: 6px;
     border-radius: 99px;
     background-color: #fff;
+
+    @media only screen and ($screen-xs) and ($screen-landscape) { 
+      width:70%;
+      bottom: 90px;
+    }
 }
 
 .fish-outline {

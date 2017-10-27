@@ -135,11 +135,12 @@ Game = (function() {
         return;
       }
 
-      var isPlaying = $('#pause-icon').hasClass('icon-play');
+      var isPlayingVisible = $('.icon-play').is(':visible');
 
-      if(isPlaying) {
+      if(isPlayingVisible) {
         settings.pause = false;
-        $('#pause-icon').removeClass('icon-play').addClass('icon-pause');
+        $('.icon-play').hide();
+        $('.icon-pause').show();
         $('#SelectedSalmon').css('animation-play-state', 'paused');
         $('.hotspot').css('animation-play-state', 'paused');
         $('.waves').css('animation-play-state', 'paused');
@@ -147,7 +148,8 @@ Game = (function() {
         $('.waves-2').css('animation-play-state', 'paused');
       } else {
         settings.pause = true;
-        $('#pause-icon').removeClass('icon-pause').addClass('icon-play');
+        $('.icon-play').show();
+        $('.icon-pause').hide();
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').css('animation-play-state', 'running');
         $('.waves').css('animation-play-state', 'running');
@@ -398,9 +400,9 @@ Game = (function() {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
         if((encounters[i].trigger_location - 200) == current_position) {
-          //settings.pause = false;
-          //createForcedEncounterSlider(encounters[i]);
-          console.log(encounters[i].cards[0].title)
+          settings.pause = false;
+          createForcedEncounterSlider(encounters[i]);
+          //alert(encounters[i].cards[0].title)
         }
       };
     };
@@ -416,22 +418,23 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 12840) {
+            if (current_position < 17840) {
 
                 if(checkEncounters(current_position)) {
 
                 };
 
-                if(current_position == 8600) {
+                if(current_position == 12500) {
+                  $('.number-of-salmon').addClass('rising-water');
                   $('#SelectedSalmon').addClass('rising-water');
                 }
 
                 settings.position -= settings.speed;
-                //$('.game-world').css('left', settings.position + 'px');
+                $('.game-world').css('left', settings.position + 'px');
             
-                settings.backgroundPosition -= 3.25;
-                settings.midgroundPosition -= 3.9;
-                settings.foregroundPosition -= 3.5;
+                /*settings.backgroundPosition -= 0;
+                settings.midgroundPosition -= .1;
+                settings.foregroundPosition -= .5;
                 
                 settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
                 settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
@@ -442,7 +445,7 @@ Game = (function() {
                 {
                   var _left = parseInt(menus[i].style.left) - 4;
                   menus[i].style.left = _left + "px";
-                }
+                }*/
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
@@ -474,6 +477,7 @@ Game = (function() {
               $('.waves-2').css('display', 'none');
 
               $('#SelectedSalmon').addClass('sonic-effect');
+              $('.number-of-salmon').addClass('sonic-effect');
 
               sendGoogleAnalyticsEvent("End game", "complete");
 
@@ -934,7 +938,7 @@ Game = (function() {
           $('.quiz-detail').text(result);
         }
 
-        $('.quiz-options').data('answered', true);
+        $('.quiz-options').attr('data-answered', true);
 
         setTimeout(function(){
           $('.quiz-detail').removeClass('hidden').addClass('show');

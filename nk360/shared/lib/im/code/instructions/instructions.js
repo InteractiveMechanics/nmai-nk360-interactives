@@ -22,10 +22,9 @@ Instructions = (function() {
         sendAnalyticsEvent('Instructions', 'open');
     }
     var closeInstructions = function() {
-        var that = $(this);
-        $(this).removeClass('show');
+        $('#instructions').removeClass('show');
         setTimeout(function() {
-            that.addClass('hidden');
+            $('#instructions').addClass('hidden');
         }, 500);
 
         sendAnalyticsEvent('Instructions', 'close');

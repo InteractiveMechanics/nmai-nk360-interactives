@@ -338,8 +338,7 @@ main {
   height: 100%; }
   @media screen and (max-width: 767px) {
     main {
-      overflow: auto;
-      -webkit-overflow-scrolling: touch; } }
+      overflow: auto; } }
 
 #static-ui .print-preview-btn {
   position: absolute;

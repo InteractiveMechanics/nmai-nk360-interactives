@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick.css" />
     <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick-theme.css" />
     <link rel="stylesheet" href="/nk360/shared/lib/im/css/animate/animate.css" />
-    
     <link rel="stylesheet" href="/nk360/shared/lib/im/code/upperleftmenu/menu.css" />
 
     <!-- Include project stylesheets -->
@@ -34,7 +33,6 @@
     
     <!-- For development only, comment for distribution -->
     <link rel="stylesheet" href="./css/theme-pnw.css" />
-    <!-- <link rel="stylesheet" href="./css/theme-np.css" /> -->
 
     <!-- For production build -->
     <!-- build:template:dist 
@@ -42,23 +40,26 @@
     /build -->
 
     <script type="text/javascript">
-      window.onclick = blowBubbles;
-      function blowBubbles(evt) {
-          var bubbleContainer = document.getElementById('bubbles');
-          var x = evt.pageX;
-          var y = evt.pageY;
-          var number = Math.floor((Math.random() * 6) + 2);
-          bubbleContainer.innerHTML = "";
-          bubbleContainer.style.top = (y - 50) + "px";
-          bubbleContainer.style.left = (x - 50) + "px";
-          for(i=0; i<number; i++){
-              var size = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
-              var speed = Math.random() + 0.5;
-              var bx = Math.floor((Math.random() * 100) + 1);
-              var by = Math.floor((Math.random() * 100) + 1);
-              bubbleContainer.insertAdjacentHTML('beforeend', 
-                  '<div class="bubble" style="width:'+size+'px;height:'+size+'px;top:'+by+'px;left:'+bx+'px;-webkit-animation-duration:'+speed+'s"></div>');
-          }
+
+      if(window.innerWidth > 768) {
+        window.onclick = blowBubbles;
+        function blowBubbles(evt) {
+            var bubbleContainer = document.getElementById('bubbles');
+            var x = evt.pageX;
+            var y = evt.pageY;
+            var number = Math.floor((Math.random() * 6) + 2);
+            bubbleContainer.innerHTML = "";
+            bubbleContainer.style.top = (y - 50) + "px";
+            bubbleContainer.style.left = (x - 50) + "px";
+            for(i=0; i<number; i++){
+                var size = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+                var speed = Math.random() + 0.5;
+                var bx = Math.floor((Math.random() * 100) + 1);
+                var by = Math.floor((Math.random() * 100) + 1);
+                bubbleContainer.insertAdjacentHTML('beforeend', 
+                    '<div class="bubble" style="width:'+size+'px;height:'+size+'px;top:'+by+'px;left:'+bx+'px;-webkit-animation-duration:'+speed+'s"></div>');
+            }
+        }
       }
     </script>
 
@@ -69,6 +70,7 @@
             0% { transform: translateY(0); opacity: 1; }
             100% { transform: translateY(-200px); opacity: 0; }
         }
+
     </style>
 </head>
 <body>
@@ -166,7 +168,7 @@
           <div class="slider">
 
             <div class="text-center">
-              <p class="all-caps">You've encountered an obstacle</p>
+              <p class="all-caps letter-spacing-1">You've encountered an obstacle</p>
               <h2 class="">Manmade Dam</h2>
               <hr />
 
@@ -332,7 +334,7 @@
               <img src="./assets/congrats-screen@2x.png" class="img-fluid" width="55%" alt="Salmon" title="Salmon" />
             </div>
 
-            <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue this activity">Continue</a>
+            <a class="btn btn-success btn-lg" id="close-congrats-screen" title="Continue">Continue</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -449,13 +451,14 @@
         <div>
 
           {{if sub_title}}
-            <p class="text-center all-caps">{{:sub_title}}</p>
+            <p class="text-center all-caps letter-spacing-1">{{:sub_title}}</p>
+          {{/if}}
+          {{if title}}
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           <div class="card-body">
-            {{if title}}
-              <h3 class="text-center">{{:title}}</h3>
-            {{/if}}
+            
 
             {{if heading}}
               <h1>{{:heading}}</h1>
@@ -467,7 +470,7 @@
               <div class="card-image">
                 <div class="photo-container">
                     <img src="{{:thumb}}" class="img-fluid" />
-                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:credit}}">
                     </div>
                 </div>
               </div>
@@ -503,14 +506,13 @@
         <div>
 
           {{if sub_title}}
-            <p class="text-center all-caps">{{:sub_title}}</p>
+            <p class="text-center all-caps letter-spacing-1">{{:sub_title}}</p>
+          {{/if}}
+          {{if title}}
+            <h3 class="text-center">{{:title}}</h3>
           {{/if}}
 
           <div class="card-body">
-
-            {{if title}}
-              <h3 class="text-center">{{:title}}</h3>
-            {{/if}}
 
             {{if heading}}
               <h1>{{:heading}}</h1>
@@ -522,7 +524,7 @@
               <div class="card-image">
                 <div class="photo-container">
                     <img src="{{:thumb}}" class="img-fluid" />
-                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:caption}}">
+                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:credit}}">
                     </div>
                 </div>
               </div>
@@ -534,6 +536,7 @@
             {{/if}}
 
             {{if body}}
+              <hr />
               <p>
                 {{:body}}
               </p>
@@ -566,26 +569,26 @@
     <script id="quizSlideTemplate" type="text/x-jsrender">
 
         <div>
+            {{if sub_title}}
+              <p class="text-center all-caps letter-spacing-1">{{:sub_title}}</p>
+            {{/if}}
+
+            {{if title}}
+              <h3 class="text-center">{{:title}}</h3>
+            {{/if}}
+
 
           <div class="card-body">
 
             <div class="text-center">
-              
-              {{if sub_title}}
-                <p class="text-center all-caps">{{:sub_title}}</p>
-              {{/if}}
-
-              {{if title}}
-                <h3 class="text-center">{{:title}}</h3>
-              {{/if}}
-
+        
               <hr />
 
               {{if heading}}
                 <h3>{{:heading}}</h3>
               {{/if}}
               
-              <p class="all-caps">
+              <p class="all-caps letter-spacing-1">
                 Pick one option to proceed
               </p>
 

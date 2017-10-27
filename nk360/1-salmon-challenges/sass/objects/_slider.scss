@@ -1,9 +1,12 @@
 .slick-slide {
-    margin: 0px 20px;
-    width: 342px;
+    margin: 0;
+    width: 380px;
       
-    @media (max-width: 767px) { 
-        width:310px;
+    @media screen and ($screen-xs) and ($screen-portrait){ 
+        width: 300px;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        width: 380px;
     }
 
     img {
@@ -24,6 +27,10 @@
     width: 100px;
     height: 100px;
     transition: 0.5s all;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        display: none !important;
+    }
 }
 
 .slick-prev:before,
@@ -106,6 +113,10 @@
     padding: 0;
     margin: 0 auto;
     bottom: -80px;
+
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        display: none !important;
+    }
 
     > li {
         display: inline-block;
