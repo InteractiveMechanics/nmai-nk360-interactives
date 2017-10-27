@@ -590,6 +590,7 @@ Game = (function() {
     }
 
     var startGame = function() {
+        $('.hotspot').css('animation-play-state', 'running');
         setTimeout(function () {
             requestAnimationFrame(updateWorld);
         }, 1000/60);

@@ -787,8 +787,8 @@ transform: none !important;*/
     -ms-animation: none !important;
     animation: none !important; } }
 .waves {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 100%;
@@ -797,8 +797,8 @@ transform: none !important;*/
   top: 150px; }
 
 .waves-1 {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 150%;
@@ -807,8 +807,8 @@ transform: none !important;*/
   top: 325px; }
 
 .waves-2 {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 120%;
@@ -818,7 +818,7 @@ transform: none !important;*/
 
 @keyframes move-waves {
   100% {
-    background-position: -6034px; } }
+    background-position: -6174px; } }
 
 @keyframes left-to-right {
   100% {
