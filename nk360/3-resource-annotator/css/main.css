@@ -386,6 +386,9 @@ body {
       @media screen and (max-width: 767px) and (orientation: portrait) {
         body .text-overlay h3 {
           line-height: 20vh; } }
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        body .text-overlay h3 {
+          line-height: 40vh; } }
   body .info {
     margin-top: 20px; }
   @media screen and (max-width: 767px) {
@@ -406,6 +409,9 @@ body {
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .photo {
       height: 20vh; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .photo {
+      height: 100%; } }
   .photo .photo-overlay {
     background: #016A87;
     position: absolute;
@@ -439,6 +445,9 @@ small,
       height: 68vh;
       width: 86%;
       margin-top: 0; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .annotation-screen {
+      margin-top: 0px; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .annotation-screen {
       height: 35vh;
@@ -457,6 +466,10 @@ small,
       .annotation-screen .annotation-item {
         height: 68vh;
         width: 100%; } }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      .annotation-screen .annotation-item {
+        height: 42vh;
+        width: 100%; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .annotation-screen .annotation-item {
         height: 58vh;
@@ -466,6 +479,13 @@ small,
       @media screen and (max-width: 767px) and (orientation: portrait) {
         .annotation-screen .annotation-item .top {
           height: 20vh; } }
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        .annotation-screen .annotation-item .top {
+          height: 100%;
+          width: 33%;
+          display: inline-block;
+          vertical-align: top;
+          position: relative; } }
     .annotation-screen .annotation-item .bottom {
       padding: 20px 8% 0;
       height: 50vh; }
@@ -475,6 +495,14 @@ small,
       @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
         .annotation-screen .annotation-item .bottom {
           height: 43vh; } }
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        .annotation-screen .annotation-item .bottom {
+          padding: 15px;
+          height: 100%;
+          width: 66%;
+          display: inline-block;
+          vertical-align: top;
+          overflow: hidden; } }
       @media screen and (max-width: 767px) and (orientation: portrait) {
         .annotation-screen .annotation-item .bottom {
           height: 38vh; } }
@@ -487,6 +515,11 @@ small,
         @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
           .annotation-screen .annotation-item .bottom .body {
             height: 30vh; } }
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+          .annotation-screen .annotation-item .bottom .body {
+            height: 15vh;
+            margin-bottom: 10px;
+            overflow-y: auto; } }
         @media screen and (max-width: 767px) and (orientation: portrait) {
           .annotation-screen .annotation-item .bottom .body {
             height: 20vh; } }
@@ -496,6 +529,13 @@ small,
         margin: 0 auto;
         left: 8%;
         right: 8%; }
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+          .annotation-screen .annotation-item .bottom .button {
+            position: relative;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0; } }
     .annotation-screen .annotation-item .col-no-padding {
       padding: 0; }
   .annotation-screen .copyright {
@@ -547,6 +587,9 @@ small,
   @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
     .original-text {
       height: 61vh; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .original-text {
+      height: auto; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .original-text {
       height: 37vh;
@@ -558,6 +601,10 @@ small,
     @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
       .original-text .content-height {
         max-height: 62vh; } }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      .original-text .content-height {
+        max-height: none;
+        margin-bottom: 200px; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .original-text .content-height {
         max-height: 30vh; } }
@@ -600,6 +647,10 @@ small,
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .original-text-detail .top {
         height: 28vh; } }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      .original-text-detail .top {
+        height: auto;
+        margin-bottom: 200px; } }
 
 .dotted {
   font-weight: bold; }
@@ -644,6 +695,9 @@ small,
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .mobile-menu {
       width: 100%; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .mobile-menu {
+      width: 90%; } }
   .mobile-menu .half-menu {
     width: 49%;
     display: inline-block;
@@ -700,8 +754,18 @@ small,
   z-index: 100; }
   #lost-progress h1, #lost-progress h4 {
     color: white; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    #lost-progress h1 {
+      font-size: 2.4rem; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    #lost-progress h1 {
+      font-size: 3rem; } }
   #lost-progress h4 {
     margin-bottom: 20px; }
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      #lost-progress h4 {
+        font-size: 0.8rem;
+        margin-bottom: 10px; } }
   #lost-progress .instructions-container {
     z-index: 101;
     position: relative;
@@ -713,11 +777,19 @@ small,
     @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
       #lost-progress .progress-options {
         margin: 50px auto 0; } }
+    @media screen and (max-width: 767px) {
+      #lost-progress .progress-options {
+        margin-top: 20px; } }
     #lost-progress .progress-options .btn-lg {
       width: 325px;
       border-color: white;
       display: block;
       margin-bottom: 20px; }
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        #lost-progress .progress-options .btn-lg {
+          display: inline-block;
+          margin: 10px;
+          font-size: 1.2rem; } }
       #lost-progress .progress-options .btn-lg:hover {
         color: #2e3742 !important;
         border-color: white;

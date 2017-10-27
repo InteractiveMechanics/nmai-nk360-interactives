@@ -1,0 +1,30 @@
+body {
+	background: url('/nk360/shared/lib/im/images/pnw/bkgr-pnw@2x.png');
+	background-size: cover;
+}
+.header {
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        max-width: 340px !important;
+    }
+
+    h1 {
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            font-size: 1.8rem !important;
+        }
+    }
+}
+.btn {
+	
+	i {
+	  path {
+	    fill:#2E3742;
+	  }
+	}
+	&:hover {
+		i {
+		  path {
+		    fill:#FFF;
+		  }
+		}
+	}
+}
