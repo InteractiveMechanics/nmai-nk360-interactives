@@ -20,10 +20,10 @@
 	}
 
 	@media screen and ($screen-xs) and ($screen-landscape) {
-		width: 90%;
-		max-width: 90vw;
+		top: 50px;
+		width: 75vw;
     	height: calc(90vh - 114px);
-    	left: 5vw;
+    	left: 12.5vw;
 	}
 }
 
@@ -34,6 +34,13 @@
 	@media screen and ($screen-xs) and ($screen-landscape) {
 		height: auto;
     	margin-bottom: 40px;
+    	padding-top: 10px;
+	}
+	h3 {
+		@media screen and ($screen-xs) and ($screen-landscape) {
+			font-size: 1.3rem;
+		}
+
 	}
 
 }
