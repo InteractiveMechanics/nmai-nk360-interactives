@@ -101,6 +101,11 @@
                 font-family: 'Open Sans', serif;
                 text-transform: uppercase;
             }
+            .paper-preview-article {
+                > p {
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
 
@@ -172,17 +177,22 @@
         align-content: flex-start;
         position: relative;
         max-height: 1200px;
+        overflow: hidden;
 
         @media screen and ($screen-xs) {
             max-height: 1400px;
         }
 
         > * {
-            width: 30%;
+            width: 31%;
             margin-right: 3%;
         }
         > .featured {
-            //width: 63%;
+            //width: 64%;
+
+            figure .image-wrapper img {
+                //max-height: 300px;
+            }
         }
         > p:empty {
             display: none;
@@ -201,7 +211,7 @@
             border: none;
 
             p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 line-height: 1.6;
                 margin-bottom: 5px;
             }
@@ -210,6 +220,7 @@
                 padding: 0;
                 height: auto;
                 color: $midgray;
+                font-size: 60%;
 
                 em {
                     font-style: italic;
