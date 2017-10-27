@@ -207,16 +207,7 @@ Detail = (function() {
                 }
             });
             
-            // $('.draggable-holder').draggable({
-            //     axis: 'y',
-            //     appendTo: 'body',
-            //     tolerance: 'touch',
-            //     snap: '.droppable-widget',
-            //     revert: 'invalid',
-            //     snapMode: 'interior',
-            //     snapTolerance: 10
-
-            // });
+           
         }
 
         $('.droppable-widget').droppable({

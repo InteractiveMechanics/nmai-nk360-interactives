@@ -870,10 +870,11 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     .transition-content-wrapper {
       width: 90%;
-      height: auto; } }
+      height: 100%; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .transition-content-wrapper {
-      height: auto; } }
+      height: auto;
+      padding-top: calc(5% + 64px); } }
 
 .timeline-wrapper {
   position: absolute;
@@ -1248,14 +1249,27 @@ div[id^="era-block"] {
     .modal-dialog {
       width: 80%;
       left: 10%;
-      top: 5%;
+      top: calc(5% + 66px);
       margin: 0px;
       height: auto; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-dialog {
+      max-height: calc(90vh - 115px); } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-dialog {
+      width: 90%;
+      max-width: 90vw;
+      height: calc(90vh - 114px);
+      left: 5vw; } }
 
 .modal-header {
   flex-direction: column;
   border-bottom: none;
   padding: 40px 20px 20px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-header {
+      height: auto;
+      margin-bottom: 40px; } }
 
 .modal-content {
   background: url("../assets/text-card-pnw@2x.png");
@@ -1263,6 +1277,12 @@ div[id^="era-block"] {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 650px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-content {
+      max-height: calc(90vh - 115px); } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-content {
+      max-height: calc(90vh - 115px); } }
   @media (max-width: 767px) {
     .modal-content {
       min-height: initial; } }
@@ -1272,6 +1292,9 @@ div[id^="era-block"] {
   .modal-body p {
     font-size: 14px;
     margin-top: 20px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-body {
+      height: auto; } }
   @media (max-width: 767px) {
     .modal-body {
       max-height: 60vh;
@@ -1310,8 +1333,9 @@ div[id^="era-block"] {
   top: 0%; }
   @media (max-width: 767px) {
     .close[data-dismiss="modal"] {
-      left: 91%;
       top: -20px;
+      right: -20px;
+      left: initial;
       background: black;
       border-radius: 50%; } }
 

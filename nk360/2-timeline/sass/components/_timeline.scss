@@ -64,10 +64,11 @@
     }
     @include screen-xs {
         width: 90%;
-        height: auto;
+        height: 100%;
     }
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: auto;
+        padding-top: calc(5% + 64px);
 
     }
 }
