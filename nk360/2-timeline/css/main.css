@@ -373,6 +373,10 @@ div[id^="era-block"] {
         left: 0%;
         top: 43%;
         padding: 0px 30px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      div[id^="era-block"] .era-content-wrapper {
+        top: 33%;
+        height: auto; } }
     @media screen and (max-width: 767px) and (orientation: landscape) {
       div[id^="era-block"] .era-content-wrapper {
         top: 20%;
@@ -380,6 +384,9 @@ div[id^="era-block"] {
         width: 80%;
         height: 60%;
         left: 10%; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+      div[id^="era-block"] .era-content-wrapper {
+        height: 60%; } }
 
 .heading-wrapper {
   margin-bottom: 80px;
@@ -407,6 +414,9 @@ div[id^="era-block"] {
     line-height: 1;
     z-index: 2;
     text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4); }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .heading-wrapper {
+      margin-top: 30px; } }
 
 .heading-wrapper[data-era="1"] {
   background: url("../../shared/lib/im/images/pnw/splash-01.svg");
@@ -533,9 +543,6 @@ div[id^="era-block"] {
   position: relative;
   width: 100vw;
   user-select: none; }
-  @media (max-width: 767px) {
-    #explore {
-      height: calc(100vh - 50px); } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     #explore {
       user-select: initial; } }
@@ -553,9 +560,9 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #droppable-container {
       display: none; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
     #droppable-container {
-      margin-top: 3%; } }
+      margin-top: 1%; } }
 
 #era-label-start {
   width: 125px;
@@ -860,6 +867,9 @@ div[id^="era-block"] {
       .transition-content-wrapper .btn-wrapper {
         flex-direction: column;
         margin-top: 0px; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      .transition-content-wrapper .btn-wrapper {
+        padding-bottom: 160px; } }
     @media screen and (max-width: 767px) and (orientation: landscape) {
       .transition-content-wrapper .btn-wrapper {
         flex-direction: row;
@@ -870,10 +880,18 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     .transition-content-wrapper {
       width: 90%;
-      height: auto; } }
+      height: 100%; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .transition-content-wrapper {
+      height: auto;
+      padding-top: calc(5% + 64px); } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .transition-content-wrapper {
-      height: auto; } }
+      height: auto;
+      padding-top: calc(5% + 64px); } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .transition-content-wrapper {
+      height: calc(100vh - 114px); } }
 
 .timeline-wrapper {
   position: absolute;
@@ -890,6 +908,15 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .timeline-track {
       bottom: 119px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .timeline-track {
+      bottom: 197px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .timeline-track {
+      bottom: 187px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .timeline-track {
+      bottom: 187px; } }
 
 .timeline-track[data-era="1"] {
   width: 95%;
@@ -1090,12 +1117,10 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #prev-btn img, #next-btn img {
       display: none; } }
-  @media (max-width: 480px) {
-    #prev-btn, #next-btn {
-      top: 75%; } }
   @media (max-width: 767px) {
     #prev-btn, #next-btn {
-      left: 0px; }
+      left: 0px;
+      top: 35%; }
       #prev-btn:before, #next-btn:before {
         content: "";
         background: url("../../shared/lib/im/images/icon-prev.svg");
@@ -1105,9 +1130,6 @@ div[id^="era-block"] {
         background-position: center center;
         background-repeat: no-repeat;
         display: inline-block; } }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
-    #prev-btn, #next-btn {
-      top: 60%; } }
 
 #next-btn {
   right: 12px;
@@ -1144,6 +1166,15 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .lg-label-wrapper {
       bottom: 20px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .lg-label-wrapper {
+      bottom: 100px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .lg-label-wrapper {
+      bottom: 100px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .lg-label-wrapper {
+      bottom: 100px; } }
 
 .sm-label {
   font-family: "Archer Pro", serif;
@@ -1170,30 +1201,72 @@ div[id^="era-block"] {
     .sm-label-wrapper {
       height: 100px;
       width: 200px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .sm-label-wrapper {
+      height: 132px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .sm-label-wrapper {
+      height: 122px; } }
 
 .sm-label-wrapper[data-era="1"][data-timeline="3"] {
   height: 346px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper[data-era="1"][data-timeline="3"] {
       height: 154px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="1"][data-timeline="3"] {
+      height: 286px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="1"][data-timeline="3"] {
+      height: 286px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .sm-label-wrapper[data-era="1"][data-timeline="3"] {
+      height: 286px; } }
 
 .sm-label-wrapper[data-era="1"][data-timeline="5"] {
   height: 346px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper[data-era="1"][data-timeline="5"] {
       height: 154px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="1"][data-timeline="5"] {
+      height: 286px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="1"][data-timeline="5"] {
+      height: 296px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .sm-label-wrapper[data-era="1"][data-timeline="5"] {
+      height: 286px; } }
 
 .sm-label-wrapper[data-era="2"][data-timeline="2"] {
   height: 346px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper[data-era="2"][data-timeline="2"] {
       height: 154px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="2"][data-timeline="2"] {
+      height: 286px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="2"][data-timeline="2"] {
+      height: 296px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .sm-label-wrapper[data-era="2"][data-timeline="2"] {
+      height: 286px; } }
 
 .sm-label-wrapper[data-era="3"][data-timeline="3"] {
   height: 346px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper[data-era="3"][data-timeline="3"] {
       height: 154px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="3"][data-timeline="3"] {
+      height: 286px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .sm-label-wrapper[data-era="3"][data-timeline="3"] {
+      height: 296px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .sm-label-wrapper[data-era="3"][data-timeline="3"] {
+      height: 286px; } }
 
 .lg-label-1 {
   left: 60px; }
@@ -1248,14 +1321,31 @@ div[id^="era-block"] {
     .modal-dialog {
       width: 80%;
       left: 10%;
-      top: 5%;
+      top: calc(5% + 66px);
       margin: 0px;
       height: auto; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-dialog {
+      top: 25px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-dialog {
+      top: 50px;
+      width: 75vw;
+      height: calc(90vh - 114px);
+      left: 12.5vw; } }
 
 .modal-header {
   flex-direction: column;
   border-bottom: none;
   padding: 40px 20px 20px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-header {
+      height: auto;
+      margin-bottom: 40px;
+      padding-top: 10px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-header h3 {
+      font-size: 1.3rem; } }
 
 .modal-content {
   background: url("../assets/text-card-pnw@2x.png");
@@ -1263,6 +1353,12 @@ div[id^="era-block"] {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 650px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-content {
+      max-height: calc(90vh - 115px); } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-content {
+      max-height: calc(90vh - 115px); } }
   @media (max-width: 767px) {
     .modal-content {
       min-height: initial; } }
@@ -1272,6 +1368,9 @@ div[id^="era-block"] {
   .modal-body p {
     font-size: 14px;
     margin-top: 20px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-body {
+      height: auto; } }
   @media (max-width: 767px) {
     .modal-body {
       max-height: 60vh;
@@ -1310,8 +1409,9 @@ div[id^="era-block"] {
   top: 0%; }
   @media (max-width: 767px) {
     .close[data-dismiss="modal"] {
-      left: 91%;
       top: -20px;
+      right: -20px;
+      left: initial;
       background: black;
       border-radius: 50%; } }
 

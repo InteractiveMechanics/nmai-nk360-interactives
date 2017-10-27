@@ -374,6 +374,9 @@ body .photo-container {
   @media only screen and (max-width: 767px) and (orientation: landscape) {
     .rising-water {
       top: 30% !important; } }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .rising-water {
+      top: 35% !important; } }
 
 .sonic-effect {
   left: 250% !important; }
@@ -546,30 +549,39 @@ body .photo-container {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
+
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
+
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
+
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
+
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
+
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
+
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
+
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
+
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
+
 .hotspot {
   cursor: pointer;
   width: 87px;
@@ -593,10 +605,13 @@ body .photo-container {
 @keyframes stretch {
   0% {
     transform: scale(1); }
+
   50% {
     transform: scale(0.8); }
+
   100% {
     transform: scale(1); } }
+
 #select-fish {
   position: fixed;
   width: 100%;
@@ -772,8 +787,8 @@ transform: none !important;*/
     -ms-animation: none !important;
     animation: none !important; } }
 .waves {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 100%;
@@ -782,8 +797,8 @@ transform: none !important;*/
   top: 150px; }
 
 .waves-1 {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 150%;
@@ -792,8 +807,8 @@ transform: none !important;*/
   top: 325px; }
 
 .waves-2 {
-  width: 431px;
-  height: 61px;
+  width: 441px;
+  height: 62px;
   background: url(../assets/sprite-sheets/waves.png) no-repeat;
   animation: move-waves 1.5s steps(14) infinite, left-to-right 15s steps(100) infinite;
   margin-left: 120%;
@@ -803,10 +818,12 @@ transform: none !important;*/
 
 @keyframes move-waves {
   100% {
-    background-position: -6034px; } }
+    background-position: -6174px; } }
+
 @keyframes left-to-right {
   100% {
     margin-left: -431px; } }
+
 .number-of-salmon {
   position: fixed;
   top: 47%;
@@ -1295,6 +1312,10 @@ hr {
     .progress-wrapper {
       width: 70%;
       bottom: 90px; } }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .progress-wrapper {
+      width: 70%;
+      bottom: 90px; } }
 
 .fish-outline {
   background: url("../assets/prog-bar-fish@2x.png") no-repeat center center;
@@ -1320,8 +1341,7 @@ hr {
   background-size: contain !important;
   height: 55px;
   z-index: 87;
-  opacity: 0.5;
-  filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.35)); }
+  opacity: 0.5; }
 
 .position-1-progress {
   background: url("../assets/prog-bar-ocean@2x.png") no-repeat center center;
@@ -1404,5 +1424,3 @@ hr {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
-
-/*# sourceMappingURL=main.css.map */

@@ -53,6 +53,9 @@
             flex-direction: column;
             margin-top: 0px;
         }
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            padding-bottom: 160px;
+        }
         @media screen and ($screen-xs) and ($screen-landscape) {
             flex-direction: row;
             padding-bottom: 160px;
@@ -64,11 +67,22 @@
     }
     @include screen-xs {
         width: 90%;
-        height: auto;
+        height: 100%;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: auto;
+        padding-top: calc(5% + 64px);
+    }
+
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: auto;
+        padding-top: calc(5% + 64px);
 
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: calc(100vh - 114px);
     }
 }
 
@@ -87,6 +101,15 @@
     position: absolute;
     @media screen and ($screen-xs) and ($screen-landscape) {
         bottom: 119px;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        bottom: 197px;
+    }
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        bottom: 187px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        bottom: 187px;
     }
 }
 
@@ -341,11 +364,10 @@
             display: none;
         }
     }
-    @include screen-xxs {
-        top: 75%;
-    }
+
     @include screen-xs {
         left: 0px;
+        top: 35%;
         &:before {
         content: "";
         background: url('../../shared/lib/im/images/icon-prev.svg');
@@ -356,9 +378,6 @@
         background-repeat: no-repeat;
         display: inline-block;
         }
-    }
-    @media screen and ($screen-xs) and ($screen-landscape) {
-        top: 60%;
     }
 }
 
@@ -406,6 +425,17 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         bottom: 20px;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        bottom: 100px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        bottom: 100px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        bottom: 100px;
+    }
 }
 
 
@@ -435,6 +465,13 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 100px;
         width: 200px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 132px
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 122px;
     }  
 }
 
@@ -443,6 +480,17 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 154px;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
 }
 
 .sm-label-wrapper[data-era="1"][data-timeline="5"] {
@@ -450,6 +498,19 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 154px;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
+    
 }
 
 .sm-label-wrapper[data-era="2"][data-timeline="2"] {
@@ -457,12 +518,37 @@
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 154px;
     }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
 }
 
 .sm-label-wrapper[data-era="3"][data-timeline="3"] {
     height: 346px;
     @media screen and ($screen-xs) and ($screen-landscape) {
        height: 154px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
     }
 }
 

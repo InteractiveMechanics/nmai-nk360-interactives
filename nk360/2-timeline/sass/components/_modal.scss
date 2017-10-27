@@ -10,9 +10,20 @@
 	@include screen-xs {
 		width: 80%;
     	left: 10%;
-    	top: 5%;
+    	top: calc(5% + 66px);
     	margin: 0px;
     	height: auto;
+	}
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		top: 25px;
+	}
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		top: 50px;
+		width: 75vw;
+    	height: calc(90vh - 114px);
+    	left: 12.5vw;
 	}
 }
 
@@ -20,6 +31,18 @@
 	flex-direction: column;
 	border-bottom: none;
 	padding: 40px 20px 20px;
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		height: auto;
+    	margin-bottom: 40px;
+    	padding-top: 10px;
+	}
+	h3 {
+		@media screen and ($screen-xs) and ($screen-landscape) {
+			font-size: 1.3rem;
+		}
+
+	}
+
 }
 
 .modal-content {
@@ -28,6 +51,15 @@
     background-position: center;
     background-repeat: no-repeat;
     min-height: 650px;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+     	max-height: calc(90vh - 115px);
+     }
+
+     @media screen and ($screen-xs) and ($screen-landscape) {
+     	max-height: calc(90vh - 115px);
+     }
+
     @include screen-xs {
     	min-height: initial;
     }
@@ -39,6 +71,10 @@
 		font-size: 14px;
 		margin-top: 20px;
 	}
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		height: auto;
+	}
+
 	@include screen-xs {
 		max-height: 60vh;
     	overflow: scroll;
@@ -86,8 +122,9 @@
 	left: 105%;
 	top: 0%;
 	@include screen-xs {
-		left: 91%;
     	top: -20px;
+    	right: -20px;
+    	left: initial;
     	background: black;
     	border-radius: 50%;
 	}

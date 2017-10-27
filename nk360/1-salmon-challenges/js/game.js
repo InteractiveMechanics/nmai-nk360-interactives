@@ -227,6 +227,7 @@ Game = (function() {
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
+      $('.hotspot').css('animation-play-state', 'paused');
     }
 
     var getCityEncounter = function() {
@@ -590,6 +591,7 @@ Game = (function() {
     }
 
     var startGame = function() {
+        $('.hotspot').css('animation-play-state', 'running');
         setTimeout(function () {
             requestAnimationFrame(updateWorld);
         }, 1000/60);
@@ -760,6 +762,7 @@ Game = (function() {
       if(cards.length == 1) {
         $('.before-indicator').removeClass('card-before');
         $('.after-indicator').removeClass('card-after');
+        $('.close-icon').css('opacity', 1);
       }
 
       //Slick slider call if multiple slides
@@ -836,6 +839,13 @@ Game = (function() {
     }
 
     var showIntro = function () {
+      var isPaused = $('.icon-pause').is(':visible');
+      alert(isPaused);
+
+      if(isPaused) {
+        return;
+      } 
+
       settings.pause = false;
       $('#instructions').data('instructionsclicked', true);
       $('#SelectedSalmon').css('animation-play-state', 'paused');
@@ -960,6 +970,9 @@ Game = (function() {
         $('.waves').css('animation-play-state', 'running');
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
+        //$(this).addClass('close-faded');
+
+        $(this).css('opacity', 0);
       } 
 
       var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');
