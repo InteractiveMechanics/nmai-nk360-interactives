@@ -16,7 +16,7 @@
 	}
 
 	@media screen and ($screen-xs) and ($screen-portrait) {
-		max-height: calc(90vh - 115px);
+		top: 25px;
 	}
 
 	@media screen and ($screen-xs) and ($screen-landscape) {
