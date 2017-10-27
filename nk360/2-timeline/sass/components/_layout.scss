@@ -43,12 +43,19 @@ div[id^="era-block"] {
 		    top: 43%;
 		    padding: 0px 30px;
 	    }
+	    @media screen and ($screen-xs) and ($screen-portrait) {
+	    	top: 33%;
+	    	height: auto;
+	    }
 	    @media screen and ($screen-xs) and ($screen-landscape) {
         	top: 20%;
 		    padding: 0px 30px;
 		    width: 80%;
 		    height: 60%;
 		    left: 10%;
+    	}
+    	@media screen and ($screen-md) and ($screen-landscape) {
+    		height: 60%;
     	}
 
 	}
@@ -85,6 +92,10 @@ div[id^="era-block"] {
 		text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
 
 	}
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		margin-top: 30px;
+	}
+
 
 }
 
@@ -253,9 +264,6 @@ div[id^="era-block"] {
 	position: relative;
 	width: 100vw;
 	user-select: none;
-	@include screen-xs {
-		height: calc(100vh - 50px);
-	}
 	@media screen and ($screen-xs) and ($screen-landscape) {
 		user-select: initial;
 	}
