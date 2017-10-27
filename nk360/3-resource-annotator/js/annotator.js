@@ -84,6 +84,9 @@ Annotator = (function() {
       }
     }
 
+    var focusOnTextArea = function() {
+      $(this).focus();
+    }
     var bindEvents = function() {
         $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
         $('body').on('click tap', '.icon-home', showLostProgress);
@@ -97,6 +100,7 @@ Annotator = (function() {
 
         $('body').on('click tap', '.half-menu', mobileMenuClicked);
 
+        $('body').on('click tap', 'textarea', focusOnTextArea);
         window.onbeforeprint = function() {
           sendGoogleAnalyticsEvent("Print preview", "open");
         }
@@ -562,9 +566,7 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
 
       setTimeout(function(){
-        $('TextAreaFocus').click(function(){
-          pin.find('textarea').focus();
-        });
+        pin.find('textarea').focus();
       }, 500);
     };
 
