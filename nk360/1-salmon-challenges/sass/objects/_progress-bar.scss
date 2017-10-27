@@ -14,6 +14,11 @@
       width:70%;
       bottom: 90px;
     }
+
+    @media only screen and ($screen-xs) and ($screen-portrait) { 
+      width:70%;
+      bottom: 90px;
+    }
 }
 
 .fish-outline {
