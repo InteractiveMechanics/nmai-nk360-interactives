@@ -562,7 +562,9 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
 
       setTimeout(function(){
-        pin.find('textarea').focus();
+        $('TextAreaFocus').click(function(){
+          pin.find('textarea').focus();
+        });
       }, 500);
     };
 
