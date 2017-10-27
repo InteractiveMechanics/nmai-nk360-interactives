@@ -315,7 +315,7 @@ Annotator = (function() {
             sendGoogleAnalyticsEvent("Markup", "add");
 
             setTimeout(function(){
-              pin.find('textarea').click().focus();
+              pin.find('textarea').focus();
             }, 500);
           }
 
@@ -562,7 +562,7 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
 
       setTimeout(function(){
-        pin.find('textarea').click().focus();
+        pin.find('textarea').focus();
       }, 500);
     };
 
