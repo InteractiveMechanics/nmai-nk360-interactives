@@ -93,7 +93,7 @@ h4 {
 .card {
   background: url("../assets/card-pnw@2x.png");
   background-size: contain;
-  background-color: #eaeaea; }
+  background-color: #ffffff; }
 
 /**
  * This file includes Pacific Northwest theme styles for the modal.
@@ -109,14 +109,6 @@ h4 {
 .modal-title {
   font-family: "Archer Pro", serif;
   font-size: 1.7em; }
-
-.dropped {
-  background: #a8bd46;
-  opacity: 0.6; }
-  .dropped:after {
-    content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
-    position: relative;
-    left: -25%; }
 
 /**
  * This file includes Pacific Northwest theme styles for the intro and learning points modals.

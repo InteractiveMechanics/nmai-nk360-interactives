@@ -26,6 +26,9 @@
 .modal-dialog {
 	height: 90vh;
 	max-width: 400px; // originally 500px
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		margin: 20px;
+	}
 }
 
 .modal-header {
@@ -45,6 +48,20 @@
 	p {
 		margin-top: 20px;
 	}
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		padding: 0px 30px 30px;
+		margin-bottom: 60px;
+		overflow-y: scroll;
+
+	} 
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		height: 75%;
+		overflow-y: scroll;
+		margin-bottom: 10px;
+
+	} 
+
 }
 
 .close[data-dismiss="modal"] {
@@ -82,18 +99,27 @@
     display: block;
     left: 0px;
     width: 100%;
-    @include screen-xs {
+    @include screen-ltlg {
     	display: none;
     }
+    
 }
 
 .lg-wrapper-card {
 	position: relative;
 }
 
+.lg-backdrop {
+	@include screen-xs {
+		z-index: 1050;
+	}
+
+
+}
+
 #mobile-btn-wrapper {
 	display: none;
-	@include screen-xs {
+	@include screen-ltlg {
 		display: block;
 	}
 	.droppable-widget {
