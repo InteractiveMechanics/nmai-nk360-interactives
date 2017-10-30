@@ -19,6 +19,9 @@
 	height: 85%;
 	max-height: 550px;
 	cursor: move;
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		max-height: 600px;
+	}
 }
 
 

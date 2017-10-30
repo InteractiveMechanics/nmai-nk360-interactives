@@ -13,6 +13,9 @@
 	@media screen and ($screen-xs) and ($screen-portrait) {
 		background-size: 100%;
 	}
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		background-size: 100%;
+	}
 }
 
 .modal-title {

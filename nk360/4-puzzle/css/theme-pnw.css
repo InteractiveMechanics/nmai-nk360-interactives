@@ -105,6 +105,12 @@ h4 {
   background-size: 90%;
   background-position: center center;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-content {
+      background-size: 100%; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .modal-content {
+      background-size: 100%; } }
 
 .modal-title {
   font-family: "Archer Pro", serif;

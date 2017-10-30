@@ -62,11 +62,12 @@
         position: relative;
         left: -25%;
     }
-    @include screen-xs {
+    @include screen-ltlg {
         &:after {
             content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
             position: absolute;
             left: 65%;
         }
     }
+
 }

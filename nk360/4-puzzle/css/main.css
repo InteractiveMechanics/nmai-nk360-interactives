@@ -822,7 +822,7 @@ span[data-toggle="tooltip"] {
     content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
     position: relative;
     left: -25%; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .dropped:after {
       content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
       position: absolute;
@@ -844,6 +844,9 @@ span[data-toggle="tooltip"] {
   height: 85%;
   max-height: 550px;
   cursor: move; }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .modal-content {
+      max-height: 600px; } }
 
 .modal-dialog {
   height: 90vh;
