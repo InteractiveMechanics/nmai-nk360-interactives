@@ -238,7 +238,6 @@ Game = (function() {
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
-      $('.hotspot').css('animation-play-state', 'paused');
     }
 
     /**
