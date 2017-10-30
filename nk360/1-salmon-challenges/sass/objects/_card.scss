@@ -43,10 +43,11 @@
     		height: 42vh;
     	}
         @media screen and ($screen-xs) and ($screen-portrait) and (min-height: 667px) {
-            max-height: 55vh;
+            max-height: 60vh;
         }
         @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 666px) {
-            max-height: 300px;
+            max-height: 58vh;
+
         }
     }
 	.slick-slide {
@@ -55,12 +56,17 @@
         @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 666px) {
             &:first-of-type {
                 .card-body {
-                    max-height: 52vh;
+                    max-height: 54vh;
                 }
             }
             &:last-of-type {
                 .card-body {
-                    max-height: 44vh;
+                    max-height: 42vh;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -190,6 +196,7 @@
     }
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: auto;
+        padding-bottom: 80px;
     }
 
     h3 {
