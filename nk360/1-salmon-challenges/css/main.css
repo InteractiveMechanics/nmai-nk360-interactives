@@ -1321,7 +1321,7 @@ hr {
   @media only screen and (max-width: 767px) and (orientation: portrait) {
     .progress-wrapper {
       width: 70%;
-      bottom: 90px; } }
+      bottom: 125px; } }
 
 .fish-outline {
   background: url("../assets/prog-bar-fish@2x.png") no-repeat center center;
