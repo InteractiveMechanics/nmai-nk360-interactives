@@ -12,8 +12,6 @@
     "grunt-contrib-connect": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-processhtml": "latest",
-    "grunt-contrib-symlink": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-concat": "latest"
+    "grunt-contrib-uglify": "latest"
   }
 }

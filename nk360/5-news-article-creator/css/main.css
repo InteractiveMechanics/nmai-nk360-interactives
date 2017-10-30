@@ -884,6 +884,8 @@ main {
     #print-preview .print-preview-container.modern .paper-preview-cost {
       font-family: 'Open Sans', serif;
       text-transform: uppercase; }
+    #print-preview .print-preview-container.modern .paper-preview-article > p {
+      font-size: 0.8rem; }
   #print-preview .paper-preview-header {
     height: 100px;
     margin-bottom: 15px; }
@@ -937,12 +939,13 @@ main {
     align-items: flex-start;
     align-content: flex-start;
     position: relative;
-    max-height: 1200px; }
+    max-height: 1200px;
+    overflow: hidden; }
     @media screen and (max-width: 767px) {
       #print-preview .paper-preview-article {
         max-height: 1400px; } }
     #print-preview .paper-preview-article > * {
-      width: 30%;
+      width: 31%;
       margin-right: 3%; }
     #print-preview .paper-preview-article > p:empty {
       display: none; }
@@ -957,14 +960,15 @@ main {
       font-style: italic;
       border: none; }
       #print-preview .paper-preview-article blockquote p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.6;
         margin-bottom: 5px; }
       #print-preview .paper-preview-article blockquote .blockquote-footer {
         background: none;
         padding: 0;
         height: auto;
-        color: #9eb2c1; }
+        color: #9eb2c1;
+        font-size: 60%; }
         #print-preview .paper-preview-article blockquote .blockquote-footer em {
           font-style: italic; }
     #print-preview .paper-preview-article figure .image-wrapper {
@@ -1082,23 +1086,23 @@ main {
       padding: 0;
       z-index: 10; }
     #print-preview .paper-preview-article {
-      max-height: 800px; }
+      max-height: 850px; }
       #print-preview .paper-preview-article > p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         line-height: 1.4;
         text-align: justify; }
       #print-preview .paper-preview-article blockquote {
-        font-size: 1rem; }
+        font-size: 0.9rem; }
         #print-preview .paper-preview-article blockquote p {
-          font-size: 1rem;
+          font-size: 0.9rem;
           line-height: 1.4; }
         #print-preview .paper-preview-article blockquote .blockquote-footer {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           line-height: 1.4; }
       #print-preview .paper-preview-article figure .image-wrapper img {
-        max-height: 250px; }
+        max-height: 200px; }
       #print-preview .paper-preview-article figure figcaption {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         margin-top: 5px; } }
 
 /*# sourceMappingURL=main.css.map */

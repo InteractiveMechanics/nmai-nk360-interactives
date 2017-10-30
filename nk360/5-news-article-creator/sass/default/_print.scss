@@ -37,22 +37,22 @@
             z-index: 10;
         }
         .paper-preview-article {
-            max-height: 800px;
+            max-height: 850px;
     
             > p {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 line-height: 1.4;
                 text-align: justify;
             }
             blockquote {
-                font-size: 1rem;
+                font-size: 0.9rem;
     
                 p {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     line-height: 1.4;
                 }
                 .blockquote-footer {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                     line-height: 1.4;
                 }
             }
@@ -60,11 +60,11 @@
             figure {
                 .image-wrapper {
                     img {
-                        max-height: 250px;
+                        max-height: 200px;
                     }
                 }
                 figcaption {
-                    font-size: 0.65rem;
+                    font-size: 0.6rem;
                     margin-top: 5px;
                 }
             }
