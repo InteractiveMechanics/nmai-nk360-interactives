@@ -549,30 +549,39 @@ body .photo-container {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
+
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
+
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
+
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
+
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
+
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
+
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
+
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
+
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
+
 .hotspot {
   cursor: pointer;
   width: 87px;
@@ -596,10 +605,13 @@ body .photo-container {
 @keyframes stretch {
   0% {
     transform: scale(1); }
+
   50% {
     transform: scale(0.8); }
+
   100% {
     transform: scale(1); } }
+
 #select-fish {
   position: fixed;
   width: 100%;
@@ -693,13 +705,13 @@ body .photo-container {
         background-size: contain; } }
 
 .activity-menu-wrapper .icon.icon-restart {
-  background-image: url(../../shared/lib/im/images/icon-restart.svg); }
+  background-image: url(/nk360/shared/lib/im/images/icon-restart.svg); }
 
 .activity-menu-wrapper .icon.icon-pause {
-  background-image: url(../../shared/lib/im/images/icon-play.svg); }
+  background-image: url(/nk360/shared/lib/im/images/icon-play.svg); }
 
 .activity-menu-wrapper .icon.icon-play {
-  background-image: url(../../shared/lib/im/images/icon-pause.svg); }
+  background-image: url(/nk360/shared/lib/im/images/icon-pause.svg); }
 
 #congrats-instructions {
   font-family: 'Open Sans';
@@ -815,9 +827,11 @@ transform: none !important;*/
 @keyframes move-waves {
   100% {
     background-position: -6174px; } }
+
 @keyframes left-to-right {
   100% {
     margin-left: -431px; } }
+
 .number-of-salmon {
   position: fixed;
   top: 47%;
@@ -1373,7 +1387,7 @@ hr {
   @media only screen and (max-width: 767px) and (orientation: portrait) {
     .progress-wrapper {
       width: 70%;
-      bottom: 130px; } }
+      bottom: 140px; } }
 
 .fish-outline {
   background: url("../assets/prog-bar-fish@2x.png") no-repeat center center;
@@ -1482,5 +1496,3 @@ hr {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
-
-/*# sourceMappingURL=main.css.map */
