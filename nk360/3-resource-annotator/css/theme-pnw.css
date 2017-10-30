@@ -113,7 +113,7 @@ body {
   background: url(/nk360/shared/lib/im/images/pnw/text-card-pnw@2x.png) white !important;
   background-size: 400px 600px !important;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     .slider-card {
       background-size: 400px 500px !important; } }
   @media (max-width: 767px) {

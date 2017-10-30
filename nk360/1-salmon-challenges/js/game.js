@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 4,
+      speed: 100,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -401,8 +401,8 @@ Game = (function() {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
         if((encounters[i].trigger_location - 200) == current_position) {
-          settings.pause = false;
-          createForcedEncounterSlider(encounters[i]);
+          //settings.pause = false;
+          //createForcedEncounterSlider(encounters[i]);
           //alert(encounters[i].cards[0].title)
         }
       };
@@ -419,7 +419,7 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 17840) {
+            if (current_position < 16840) {
 
                 if(checkEncounters(current_position)) {
 
@@ -433,7 +433,7 @@ Game = (function() {
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
             
-                /*settings.backgroundPosition -= 0;
+                settings.backgroundPosition -= 0;
                 settings.midgroundPosition -= .1;
                 settings.foregroundPosition -= .5;
                 
@@ -446,7 +446,7 @@ Game = (function() {
                 {
                   var _left = parseInt(menus[i].style.left) - 4;
                   menus[i].style.left = _left + "px";
-                }*/
+                }
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {

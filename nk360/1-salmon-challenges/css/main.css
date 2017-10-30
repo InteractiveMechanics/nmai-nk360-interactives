@@ -753,7 +753,9 @@ body .photo-container {
           margin: 30px 0; } }
 
 .quiz-detail {
-  font-weight: bold; }
+  font-weight: bold;
+  bottom: 0;
+  text-align: center; }
 
 .solution-text {
   font-weight: bold; }
@@ -928,17 +930,20 @@ hr {
       height: 42vh; } }
   @media screen and (max-width: 767px) and (orientation: portrait) and (min-height: 667px) {
     .spawn-death-slider-wrapper .card-body {
-      max-height: 55vh; } }
+      max-height: 60vh; } }
   @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
     .spawn-death-slider-wrapper .card-body {
-      max-height: 300px; } }
+      max-height: 58vh; } }
 .spawn-death-slider-wrapper .slick-slide {
   margin: 0 0; }
   @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
     .spawn-death-slider-wrapper .slick-slide:first-of-type .card-body {
-      max-height: 52vh; }
+      max-height: 54vh; }
     .spawn-death-slider-wrapper .slick-slide:last-of-type .card-body {
-      max-height: 44vh; } }
+      max-height: 42vh; }
+      .spawn-death-slider-wrapper .slick-slide:last-of-type .card-body p {
+        padding: 0;
+        margin: 0; } }
 
 .card {
   background: #FFFFFF;
@@ -1039,7 +1044,8 @@ hr {
       margin-bottom: 10px; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .card-body {
-      height: auto; } }
+      height: auto;
+      padding-bottom: 80px; } }
   @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
     .card-body h3 {
       font-size: 1.5rem; } }
