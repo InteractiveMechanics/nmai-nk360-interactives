@@ -874,6 +874,9 @@ hr {
 .btn {
   border-color: white !important; }
 
+.state-paused {
+  animation-play-state: paused; }
+
 .btn:hover, .btn:focus, .btn:active {
   background-color: white !important;
   color: #2e3742 !important;
