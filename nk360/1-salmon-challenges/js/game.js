@@ -840,7 +840,6 @@ Game = (function() {
 
     var showIntro = function () {
       var isPaused = $('.icon-pause').is(':visible');
-      alert(isPaused);
 
       if(isPaused) {
         return;
@@ -970,9 +969,16 @@ Game = (function() {
         $('.waves').css('animation-play-state', 'running');
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
-        //$(this).addClass('close-faded');
 
         $(this).css('opacity', 0);
+
+        var className = settings.fishSelection + '-' + settings.salmonCount;
+        $('#SelectedSalmon').removeClass(className);
+
+        setTimeout(function(){
+          $('#SelectedSalmon').addClass(className);
+        }, 10);
+        
       } 
 
       var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');
@@ -992,6 +998,17 @@ Game = (function() {
 
       lastCard = null;
       $('.number-of-salmon').text(settings.salmonCount);
+
+      if(!isFaded && isSlider) {
+        
+        var className = settings.fishSelection + '-' + settings.salmonCount;
+        $('#SelectedSalmon').removeClass(className);
+        
+        setTimeout(function(){
+          $('#SelectedSalmon').addClass(className);
+        }, 10);
+        
+      } 
     }
 
     
