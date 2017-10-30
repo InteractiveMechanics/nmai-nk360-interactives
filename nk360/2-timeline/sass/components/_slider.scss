@@ -23,7 +23,7 @@
 	left: 25px;
 	&:before {
 		content: "";
-		background: url('../../shared/lib/im/images/icon-prev.svg');
+		background: url('/nk360/shared/lib/im/images/icon-prev.svg');
 		width: 100px;
 		height: 100px;
 		background-size: contain;
@@ -50,7 +50,7 @@
 	right: 25px;
 	&:before {
 		content: "";
-		background: url('../../shared/lib/im/images/icon-next.svg');
+		background: url('/nk360/shared/lib/im/images/icon-next.svg');
 		width: 100px;
 		height: 100px;
 		background-size: contain;
