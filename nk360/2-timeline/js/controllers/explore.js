@@ -4,11 +4,22 @@ Explore = (function() {
         bindEvents();
     }
 
+
+    /**
+    * Hides the transition overlay 
+    * @param no param
+    * @return {string|int|array} returns nothing
+    **/
     var hideExploreTransition = function() {
         $('.transition-overlay').addClass('animated fadeOut hidden');
     }
 
-    //TODO account for window resize
+    
+    /**
+    * Scrolls the timeline to the left.  If the amount of timeline to be scrolled is greater than the width of the screen, it scrolls left by the width of the screen; if not, it scrolls by the remaining amount to te scrolled.  If the button is click tapped and there is no remaining amount to scroll, the button is disabled. 
+    * @param click tap event
+    * @return {string|int|array} returns nothing
+    **/
     var advancePrevBtn = function(event) {
         event.preventDefault();
         var timelineLeft = $('.timeline-wrapper').position().left;
@@ -33,6 +44,12 @@ Explore = (function() {
         }
     }
 
+
+     /**
+    * Scrolls the timeline to the right.  If the amount of timeline to be scrolled is greater than the width of the screen, it scrolls left by the width of the screen; if not, it scrolls by the remaining amount to te scrolled.  If the button is click tapped and there is no remaining amount to scroll, the button is disabled. 
+    * @param click tap event
+    * @return {string|int|array} returns nothing
+    **/
     var advanceNextBtn = function(event) {
         event.preventDefault();
         var windowWidth = $(window).width(); // 1397px
@@ -61,7 +78,11 @@ Explore = (function() {
     }
 
 
-
+    /**
+    * Displays the modal for the moment in the timline.
+    * @param no param
+    * @return {string|int|array} returns nothing
+    **/
     var getMomentDetails = function() {
         var era = $(this).attr('data-era');
         var moment = $(this).attr('data-timeline');

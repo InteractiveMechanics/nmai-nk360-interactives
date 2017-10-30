@@ -9,6 +9,12 @@ Detail = (function() {
         bindEvents();
     }
 
+
+    /**
+    * Displays the Detail Screen by hiding the Selection screen and rendering data for the appropriate era.  It also calls the function that builds the drag-and-drop game and the function that shuffles the draggable elements.
+    * @param takes no arguments
+    * @return {string|int|array} does not return anything.  
+    **/
     var displayDetailScreen = function() {
         var id = $(this).attr('data-timeline');
     	$('#selection').addClass('hidden animated fadeOut');
@@ -21,6 +27,12 @@ Detail = (function() {
         sendAnalyticsScreen('Builder screen - ' + id);
     }
 
+
+    /**
+    * Shuffles the draggable elements (aka moments)
+    * @param moments
+    * @return {string|int|array} an array of the shuffled moments  
+    **/
     var randomMoments = function(moments) {
         var newMoments = [];
         $.each(moments, function(key, val){
@@ -30,6 +42,12 @@ Detail = (function() {
         return newMoments;
     }
 
+
+    /**
+    * Gets the length of the number of dropped elements and compares that to the total number of droppable elememnts.  If the two numbers are equal, it displays the Explore screen
+    * @param takes no parameters
+    * @return {string|int|array} returns nothing; calls the function that displays the Explore screen if the number of dropped elements equals the number of droppable elements
+    **/
     var countDroppedEls = function() {
         if (!$('#detail').hasClass('hidden')) {
             var era = $('#droppable-container').attr('data-era');
@@ -43,24 +61,14 @@ Detail = (function() {
         }
     }
 
-    var setupTimelineScroll = function() {
-        var windowWidth = $(window).width();
-        if (windowWidth >= 1024) {
-            var containX1 = $('.timeline-wrapper').parent().offset().left;
-            var containY1 = $('.timeline-wrapper').parent().offset().top;
-            var containX2 =  ($(".timeline-wrapper").parent().outerWidth() + $(".timeline-wrapper").parent().offset().left - Detail.timelineWidth);
-            var containY2 =  ($(".timeline-wrapper").parent().outerHeight() +  $(".timeline-wrapper").parent().offset().top - $('.timeline-wrapper').outerHeight()); 
 
-
-            $('.timeline-wrapper').draggable({
-                axis: 'x',
-                containment: [containX1, containY1, containX2, containY1]
-            }); 
-        } 
-    }     
-
+    
    
-
+    /**
+    * This displays the Explore screen based on the designated era. It hides/shows the appropriate eras and, this is important, determines the width of the timeline.  Hides other screen.  Is called when the user click taps the Start This Timeline or View My Timeline buttons.
+    * @param the value of the data attribute data-era, which is an integer
+    * @return {string|int|array} returns nothing; displays the Explore screen if the number of dropped elements equals the number of droppable elements
+    **/
     var displayExploreScreen = function(era) {
        
         //this is for 'view my timeline'
@@ -87,7 +95,6 @@ Detail = (function() {
                 sendAnalyticsScreen('Explore screen - era 3');
             }
         } else {
-            console.log('era is defined. it is ' + era);
             $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').html($.templates('#complete-template').render(data.eras[era-1]));
             if (era == 1) {
@@ -120,30 +127,55 @@ Detail = (function() {
     }
 
 
-
+    /**
+    * Displays the modal with the appropriate data.  Hides any tooltips that are currently showing.
+    * @param two parameters, the era, from data-era, and the moment, data-timeline.  both are integeters 
+    * @return {string|int|array} returns nothing
+    **/
     var displayModal = function(era, moment) {
         $("#correct-answer").html($.templates("#modal-template").render(data.eras[era-1].Moments[moment-1])).modal('show');
         $('[data-toggle=tooltip]').tooltip('hide');
         sendAnalyticsEvent('Timeline Entry', 'open');
     }
 
+    /**
+    * Re-opens the modal after the draggable has already been dropped
+    * @param no parameters
+    * @return {string|int|array} returns nothing
+    **/
     var reopenModal = function() {
         var moment = $(this).attr('data-timeline');
         var era = $('#droppable-container').attr('data-era');
         displayModal(era, moment);
     } 
 
+    /**
+    * Hides the modal
+    * @param no parameters
+    * @return {string|int|array} returns nothing
+    **/
     var hideModal = function() {
         $('#correct-answer').modal('hide');
         sendAnalyticsEvent('Timeline Entry', 'open');
 
     }
 
+
+    /**
+    * Shows the modal, called if data has already been rendered into the modal and modal just needs to be shown
+    * @param no parameters
+    * @return {string|int|array} returns nothing
+    **/
     var showModal = function() {
         $('#correct-answer').modal('show');
     }
 
     
+    /**
+    * Gets the value of the data-attribute data-timeline and hides the appoprirate text, which is displayed next to the draggable element (thumbnail img) - this happens while the draggable element is actively dragging
+    * @param the value of the data-timeline attribute, which is an integer
+    * @return {string|int|array} returns nothing
+    **/
     var hideText = function(id) {
        var id = $(this).attr('data-timeline');
        $('.draggable-widget').tooltip('hide');
@@ -152,7 +184,11 @@ Detail = (function() {
 
     }
 
-
+    /**
+    * Gets the value of the data-attribute data-tmeline and shows the apprpriate text, this may happen when the draggable element is no longer actively dragging and has reverted to its original location without being dropped
+    * @param the value of the data-timeline attribute, which is an integer
+    * @return {string|int|array} returns nothing
+    **/
     var showText = function(id) {
         var id = $(this).attr('data-timeline');
         if ($(this).hasClass('dragged')) {
@@ -167,7 +203,11 @@ Detail = (function() {
 
     
    
-
+    /**
+    * Builds the appropriate game by getting the width of the window and if it is large enough, displays a drag-and-drop game, if the width of the window is less than or equal to 768 the game is a sortable.  Designates actions to take palce if elements are placed in the appropriate spot or not and shows and hides tooltips as appropriate.
+    * @param the value of the data-timeline attribute, which is an integer
+    * @return {string|int|array} returns nothing
+    **/
     var buildGame = function(id) {
         var windowWidth = $(window).width();
 
