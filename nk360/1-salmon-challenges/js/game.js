@@ -238,7 +238,7 @@ Game = (function() {
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
-      $('.hotspot').addClass('state-paused');
+      //$('.hotspot').addClass('state-paused');
     }
 
     /**
@@ -651,7 +651,7 @@ Game = (function() {
     }
 
     var startGame = function() {
-        $('.hotspot').removeClass('state-paused');
+        //$('.hotspot').removeClass('state-paused');
         setTimeout(function () {
             requestAnimationFrame(updateWorld);
         }, 1000/60);
