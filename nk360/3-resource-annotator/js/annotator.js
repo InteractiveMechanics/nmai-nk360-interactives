@@ -1,5 +1,5 @@
 Annotator = (function() {
-    var AnnotatorData = JSON.parse('{ "themes": [ { "title": "Rights", "tooltip_text": "Rights are special benefits", "count": 5, "highlight_color": "#FF0000" }, { "title": "Responsibilities", "tooltip_text": "Responsibilities are moral duties", "count": 2, "highlight_color": "#0000FF" } ], "sources": [ { "id": 1, "title": "Darrin Old Coyote (Crow)", "image_url": "", "image_caption": "", "image_credit": "", "body": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition. It wasn’t about, one day they woke up and said, from now on we’re going to be warriors . . . they wanted to protect their homeland from being invaded by whoever it was—whether it be Blackfeet to the north or the Arapahos and Sioux—and so they basically had to train themselves to become warriors. And for Indian people, warriors meant protecting. Protecting the family, protecting the home. And they would be the front lines, protecting their homeland and what they believed in. And they never backed down.”", "source": "Darrin Old Coyote (Crow), NMAI Interview, August 2016", "caption": "Darrin Old Coyote was the twenty-first chairman of the Crow Nation. His Apsáalooke name is Ishbilxe Itche and he is a member of the Piegan clan and a child of the Ties in a Bundle and Whistling Water clans. As a tribal chairman, Mr. Old Coyote has a deep commitment to building the tribal economy and strengthening Crow sovereignty.", "audio_url": "", "video_url": "", "source_type": "Quote", "excerpt": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition.”", "thumbnail_image": "http://via.placeholder.com/1280x720", "question_text": "According to Darrin Old Coyote, what qualities do Crow Nation leaders exhibit?" }, { "id": 2, "title": "Crow Fair", "image_url": "http://via.placeholder.com/1280x720", "image_caption": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.", "image_credit": "Crow Nation women on horseback at Crow Fair (above); Honor Guard of Crow Nation Veterans (below). Photographs by Tina Pelletier, courtesy of Pasqua First Nation and Métis community of Ste. Madelaine", "body": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.", "source": "", "caption": "", "audio_url": "", "video_url": "", "source_type": "Image", "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native people and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.", "thumbnail_image": "http://via.placeholder.com/1280x720", "question_text": "Why might the Crow Nation choose to honor veterans so prominently at Crow Fair?" }, { "id": 3, "title": "Dr. Joseph Medicine Crow", "image_url": "http://via.placeholder.com/1280x720", "image_caption": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.", "image_credit": "Dr. Joseph Medicine Crow shows a drum to President Barack Obama and First Lady Michelle Obama during a reception for recipients and their families in the Blue Room of the White House, August 12, 2009. Photograph by Pete Souza", "body": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.", "source": "", "caption": "", "audio_url": "", "video_url": "", "source_type": "Image", "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.", "thumbnail_image": "http://via.placeholder.com/1280x720", "question_text": "<p>What responsibilities and values are reflected in the four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>" }, { "id": 4, "title": "Pipe", "image_url": "http://via.placeholder.com/1280x720", "image_caption": "", "image_credit": "Pipe bowl and pipestem, Crow. Catlinite/pipestone. Montana. NMAI 012599", "body": "<p>“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared. After all, the two Arapahoe’s intent was to retrieve horses some Crows had taken from them.</p><p>However, these two nations understood the bundle’s import, which included a pipe:</p><p>He [Sharp Nose] had a [piece of] red flannel and mixed the tobacco and willow bark and tallow [fat] and put it in a dried bladder and then in the red flannel. That is a “sacred bundle.” All tribes respect that....This sacred bundle is used to make peace and to make relationships among the Indians.</p><p>In an elaborate welcoming ceremony that followed Sharp Nose’s and Big Plume’s initial contact with the Crow, the Crow leadership supplied the two Arapahoe with meaningful gifts and nourishment. Thereafter, the Crow offered them a pipe, asking, ‘What are you? Where did you come from? What business have you? Why do you bring this sacred bundle? Tell us nothing but the truth. You have smoked the peace pipe and must tell the truth.’</p><p> The two Arapahoe explained their purpose for coming into Crow country. They had risked their lives coming to the Crow Nation but the sacred bundle and pipe signaled to everyone the Arapahoe peaceful intention. The Crow not only returned the horses but they also reciprocated the gesture. . . and when the welcome concluded, an Arapahoe leader extended his hand in friendship to the Crow man, gave him the pipe of peace and said, ‘Hereafter we will be friends.’”</p>", "source": "Raymond J. DeMallie, ed., The Sixth Grandfather: Black Elk’s Teaching Given to John G. Neihardt (Lincoln: University of Nebraska Press, 1984), 83.", "caption": "In this passage from The Sixth Grandfather: Black Elk’s Teachings Given to John G. Neihardt, Black Elk (Oglala Lakota) recounts a story that involves how, with the use of a pipe and a sacred bundle, the Crow and Arapahoe Nations established peace.", "audio_url": "", "video_url": "", "source_type": "Image/Passage", "excerpt": "“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared.”", "thumbnail_image": "http://via.placeholder.com/1280x720", "question_text": "<p>According to this story, why is the pipe significant to the Arapahoe and Crow Nations?</p><p>How did the Crow and Arapahoe practice diplomacy in this story?</p>" } ] }');
+    var AnnotatorData;
 
     var hasShownThemeCard = false;
     var markersDefault = {
@@ -43,15 +43,15 @@ Annotator = (function() {
           }
         }
       }
-      
+
     }
 
-    var markerArray = [ 
-      './assets/marker-01@2x.png', 
+    var markerArray = [
+      './assets/marker-01@2x.png',
       './assets/marker-02@2x.png',
-      './assets/marker-03@2x.png', 
+      './assets/marker-03@2x.png',
       './assets/marker-04@2x.png',
-      './assets/marker-05@2x.png', 
+      './assets/marker-05@2x.png',
     ]
 
     var printEvent = window.matchMedia('print');
@@ -101,6 +101,7 @@ Annotator = (function() {
         $('body').on('click tap', '.half-menu', mobileMenuClicked);
 
         $('body').on('click tap', 'textarea', focusOnTextArea);
+
         window.onbeforeprint = function() {
           sendGoogleAnalyticsEvent("Print preview", "open");
         }
@@ -110,21 +111,21 @@ Annotator = (function() {
 
 
         printEvent.addListener(function(printEnd) {
-          if (!printEnd.matches) {
+          if (!printEnd.matches) { 
               sendGoogleAnalyticsEvent("Print preview", "closed");
           };
         });
 
-        $('body').click(function (event) 
+        $('body').click(function (event)
         {
            if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text')) {
              $( ".pin-visible" ).each(function(  ) {
                 hidePin($(this));
               });
-           }     
+           }
         });
 
-        
+
 
         createSlider();
         createThemeObj();
@@ -135,15 +136,15 @@ Annotator = (function() {
         $('[data-toggle="tooltip"]').tooltip();
     };
 
-    var sendGoogleAnalyticsEvent = function() {
-      
+    var sendGoogleAnalyticsEvent = function(type, action) {
+      sendAnalyticsEvent(type, action);
     }
 
     var printPage = function() {
       if(!$(this).hasClass('disabled')) {
         window.print();
       }
-    } 
+    }
 
     var showIntro = function() {
       if(!hasShownThemeCard) {
@@ -181,7 +182,7 @@ Annotator = (function() {
 
     var getMarker = function() {
       var marker = markerArray[Math.floor(Math.random() * markerArray.length)];
-      
+
       var index = markerArray.indexOf(marker);
       if (index > -1) {
         markerArray.splice(index, 1);
@@ -265,6 +266,17 @@ Annotator = (function() {
       });
     }
 
+    function mouseCoords(ev){
+        // from http://www.webreference.com/programming/javascript/mk/column2/
+        if(ev.pageX || ev.pageY){
+            return {x:ev.pageX, y:ev.pageY};
+        }
+        return {
+            x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+            y:ev.clientY + document.body.scrollTop  - document.body.clientTop
+        };
+    }
+
     var droppableEvent = function(words) {
       // Make words on the left droppable
       words.droppable({
@@ -285,6 +297,23 @@ Annotator = (function() {
               'top': '',
             });
             pin.appendTo($(this));
+
+            // If the pin has been dropped in the image, change the coordinates to %
+           if($(this).hasClass('photo-container')) {
+             var imgCoord = $(this).offset();
+             var mouseCoord = mouseCoords(event);
+             var x = mouseCoord.x - imgCoord.left;
+             var y = mouseCoord.y - imgCoord.top;
+             var xPerc = 100 * x / $(this).width();
+             var yPerc = 100 * y / $(this).height();
+
+             pin.css({
+               'left': xPerc + '%',
+               'top': yPerc + '%',
+             });
+
+             findPinPosition(pin);
+           }
           }
           // If the marker comes from the right, create the correct HTML structure and decrement the available resources
           else {
@@ -297,8 +326,6 @@ Annotator = (function() {
 
             pin.data('marker', dataMaker);
 
-            console.log($('.marker-in-text'));
-
             $( ".pin-visible" ).each(function(  ) {
               hidePin($(this));
             });
@@ -309,6 +336,21 @@ Annotator = (function() {
             pin.append('<textarea placeholder="Write your note here..." ></textarea>');
             pin.append('<span class="delete-btn"></span>');
 
+            // If the pin has been dropped in the image, change the coordinates to %
+           if($(this).hasClass('photo-container')) {
+             var imgCoord = $(this).offset();
+             var mouseCoord = mouseCoords(event);
+             var x = mouseCoord.x - imgCoord.left;
+             var y = mouseCoord.y - imgCoord.top;
+             var xPerc = 100 * x / $(this).width();
+             var yPerc = 100 * y / $(this).height();
+
+             pin.css({
+               'left': xPerc + '%',
+               'top': yPerc + '%',
+             });
+           }
+
             findPinPosition(pin);
 
             $('.marker-in-text').each(function() {
@@ -317,10 +359,6 @@ Annotator = (function() {
             });
 
             sendGoogleAnalyticsEvent("Markup", "add");
-
-            setTimeout(function(){
-              pin.find('textarea').focus();
-            }, 500);
           }
 
           // When a marker is moved to another position, make it draggable
@@ -329,10 +367,11 @@ Annotator = (function() {
             cursor: 'move',
             // If not hovering droppable words, go back to the original position
             stop: function(event, ui) {
+              /*
               pin.css({
                 'left': '',
                 'top': '',
-              });
+              });*/
 
               findPinPosition(pin);
 
@@ -340,7 +379,7 @@ Annotator = (function() {
                 if($(this).is(pin)) return;
                 hidePin($(this));
               });
-              
+
               showPin(pin);
 
             }
@@ -393,7 +432,7 @@ Annotator = (function() {
       print.find('.print-info').html('');
       print.find('.print-notes ul').html('');
       print.find('.marker-in-text .number').remove();
-      
+
       //print.find('.caption-text').html(objItem.caption);
       print.find('.discussion-text').html(objItem.question_text);
       print.find('.caption-text').html(objItem.caption);
@@ -436,7 +475,7 @@ Annotator = (function() {
       if(objItem.caption) {
         print.find('.print-caption').removeClass('print-hidden');
       }
-      
+
       if(objItem.question_text) {
         print.find('.print-discussion').removeClass('print-hidden');
       }
@@ -473,67 +512,98 @@ Annotator = (function() {
     }
 
     var findPinPosition = function(pin) {
+      var hide = pin.hasClass('pin-hidden');
+      if(hide) {
+        pin.find('*').not('img').show();
+        return;
+      }
+
       var width = pin.closest('.scrollbar-design').outerWidth();
       var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
 
-      // Special case for featured image
-      if(pin.parent().hasClass('photo-container')) {
-        var top = 30;
-        if(pin.hasClass('pin-hidden')) {
-          top = 158;
-        }
+      if(pin.parent().hasClass('photo-container') == false) {
         pin.css({
-          'left': parseInt(pin.parent().width() / 2) - 50,
-          'top': top,
+          'left': 0,
+          'margin-left': '',
         });
         pin.find('img').css({
-          'left': modalWidth - parseInt(pin.find('img').width()) + 10
+          'top': ''
         });
-        pin.removeClass('left-flipped').addClass('right-flipped');
       }
-      //Default behaviour for words
       else {
         pin.css({
-          'left': 0
+          'margin-left': 0
         });
-        
-        width = pin.closest('.scrollbar-design').outerWidth();
-        scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+        pin.find('img').css({
+          'left': 0,
+          'top': -60
+        });
+      }
 
-        var height = pin.closest('.scrollbar-design').outerHeight();
-        var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
-        
-        /*if(height < 300) {
+      width = pin.closest('.scrollbar-design').outerWidth();
+      scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+
+      var height = pin.closest('.scrollbar-design').outerHeight();
+      var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+
+      //console.log(width + " " + scroll);
+
+      if(width + 1 < scroll) {
+        if(pin.parent().hasClass('photo-container') == false) {
           pin.css({
-            'left': '',
-            'top': 50
+            'left': -320 + parseInt(pin.parent().width()),
+            'bottom': 60
+            //'top': ''
+          });
+        }
+
+        if(pin.parent().hasClass('photo-container')) {
+          pin.css({
+            'margin-left': -320
           });
           pin.find('img').css({
-            'top': -75
-          });
-        }*/
-
-        if(width < scroll) {
-          pin.css({
             'left': '',
-            'bottom': -modalWidth + parseInt(pin.parent().height())
+            'right': 0
           });
-          pin.find('img').css({
-            'bottom': modalWidth - parseInt(pin.find('img').width()) + 10
-          });
-          pin.removeClass('left-flipped').addClass('right-flipped');
         }
         else {
+          pin.find('img').css({
+            'bottom': -50,
+            'left': 320 - parseInt(pin.find('img').width()) + 10
+          });
+        }
+
+        pin.removeClass('left-flipped').addClass('right-flipped');
+      }
+      else {
+        if(pin.parent().hasClass('photo-container') == false) {
           pin.css({
-            'left': 0
+            'left': 0,
+            'bottom': 60
+          });
+        }
+
+        if(pin.parent().hasClass('photo-container')) {
+          pin.css({
+            'margin-left': 0
           });
           pin.find('img').css({
-            'left': -10,
-            'right': ''
+            'right': '',
+            'left': 0
           });
-          pin.removeClass('right-flipped').addClass('left-flipped');
         }
+        else {
+          pin.find('img').css({
+            'left': -10,
+            'bottom': -50,
+          });
+        }
+
+        pin.removeClass('right-flipped').addClass('left-flipped');
       }
+
+      if(hide)
+          pin.find('*').not('img').hide();
     }
 
     var deletePin = function(pin) {
@@ -560,14 +630,12 @@ Annotator = (function() {
 
       pin.find('*').not('img').finish().show().animate({
         'opacity': 1,
-      }, 250);
+      }, 250, function(){
+        pin.find('textarea').focus();
+      });
 
       pin.css("background-color", "rgba(221, 221, 221, 1)");
       pin.css("border-color", "rgba(204, 204, 204, 1)");
-
-      setTimeout(function(){
-        pin.find('textarea').focus();
-      }, 500);
     };
 
     var hidePin = function(pin) {
@@ -616,14 +684,14 @@ Annotator = (function() {
         $(".desktop-markers").html(markersOutput);
       }
 
-      
-      
+
+
 
       setTimeout(function(){
         $('.markers-container').addClass('animated pulse');
-        
+
       }, 1800);
-      
+
       $('.markers-container').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         for(var i = 0; i < markersInJSON.length; i++) {
           var id = markersInJSON[i].theme_id;
@@ -634,7 +702,7 @@ Annotator = (function() {
             $(this).addClass('animated bounce');
             next();
           });
-        }   
+        }
       });
 
       // Initialize tooltips again

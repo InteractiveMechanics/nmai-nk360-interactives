@@ -3,11 +3,11 @@
     background-size: 400px 600px !important;
     background-repeat:no-repeat;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and ($screen-ltlg) {
     	background-size: 400px 500px !important;
     }
 
-    @media (max-width: 767px) { 
+    @media ($screen-xs) { 
         background-size: 370px 480px !important;
     }
 }

@@ -9,6 +9,12 @@
 	background-size: 90%;
 	background-position: center center;
 	background-repeat: no-repeat;
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		background-size: 100%;
+	}
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		background-size: 100%;
+	}
 }
 
 .modal-title {
@@ -16,14 +22,6 @@
 	font-size: 1.7em;
 }
 
-.dropped {
-	background: #a8bd46;
-    opacity: 0.6;
-    &:after {
-    	content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
-    	position: relative;
-    	left: -25%;
-	}
-}
+
 
 

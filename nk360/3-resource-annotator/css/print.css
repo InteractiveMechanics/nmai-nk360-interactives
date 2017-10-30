@@ -1,118 +1,122 @@
 @media print {
-    /* styles go here */
+/* styles go here */
+
+@page {
+    size: auto;
+    /* auto is the initial value */
+    /* this affects the margin in the printer settings */
+
+    margin: 25mm 25mm 25mm 25mm;
+}
+.black-text {
+    color: black !important;
+    font-size: 75% !important;
+}
+.mobile-menu {
+    display: none;
+}
+body,
+html {
+    overflow: visible !important;
+    height: auto !important;
+    background: white;
+}
+body {
+    background: white !important;
+    margin: 0;
+}
+.marker img {
+    height: 75px;
+}
+.module-menu-wrapper {
+    display: none;
+}
+.print-view {
+    display: block !important;
+}
+.activity-menu-wrapper {
+    display: none;
+}
+header {
+    display: none;
+}
+footer {
+    display: none !important;
+}
+.fixed-bottom {
+    display: none !important;
+}
+.fixed-bottom img {
+    display: none;
+}
+.fixed-bottom ul {
+    display: none;
+}
+#instructions {
+    display: none;
+}
+#lost-progress {
+    display: none;
+}
+.annotation-screen {
+    display: none;
+}
+.photo-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.photo-container .marker-in-text {
+
+}
+.photo-container .marker-in-text > img {
     
-    @page {
-        size: auto;
-        /* auto is the initial value */
-        /* this affects the margin in the printer settings */
-        
-        margin: 25mm 25mm 25mm 25mm;
-    }
-    .black-text {
-        color: black !important;
-        font-size: 75% !important;
-    }
-    .mobile-menu {
-        display: none;
-    }
-    body,
-    html {
-        overflow: visible !important;
-        height: auto !important;
-        background: white;
-    }
-    body {
-        background: white !important;
-        margin: 0;
-    }
-    .marker img {
-        height: 75px;
-    }
-    .module-menu-wrapper {
-        display: none;
-    }
-    .print-view {
-        display: block !important;
-    }
-    .activity-menu-wrapper {
-        display: none;
-    }
-    header {
-        display: none;
-    }
-    footer {
-        display: none !important;
-    }
-    .fixed-bottom {
-        display: none !important;
-    }
-    .fixed-bottom img {
-        display: none;
-    }
-    .fixed-bottom ul {
-        display: none;
-    }
-    #instructions {
-        display: none;
-    }
-    #lost-progress {
-        display: none;
-    }
-    .annotation-screen {
-        display: none;
-    }
-    .photo-container .marker-in-text {
-        left: 50% !important;
-    }
-    .photo-container .marker-in-text > img {
-        left: 0 !important;
-    }
-    .photo-container .marker-in-text .number {
-        left: 12px !important;
-    }
-    .print-notes ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    .theme-print-view {
-        margin: 30px 0;
-        padding: 0;
-        width: 100%;
-    }
-    .theme-print-view li {
-        list-style: none;
-        display: inline-block;
-        width: 180px;
-        text-align: center;
-    }
-    .print-notes ul li {
-        list-style: none;
-    }
-    .note-pin {
-        width: 100px;
-        float: left;
-    }
-    .note-text {
-        width: 600px;
-        float: left;
-    }
-    .note-area {
-        margin: 20px 0;
-    }
-    [data-gallery] {
-        display: none;
-    }
-    .print-hidden {
-        display: none !important;
-    }
-    .marker-in-text .number {
-        position: absolute;
-        top: -19px;
-        left: -4px;
-        font-size: 13px;
-        color: #000;
-        font-weight: bold;
-        font-style: normal;
-        line-height: 1.5;
-    }
+}
+.photo-container .marker-in-text .number {
+    left: 12px !important;
+}
+.print-notes ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.theme-print-view {
+    margin: 30px 0;
+    padding: 0;
+    width: 100%;
+}
+.theme-print-view li {
+    list-style: none;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+}
+.print-notes ul li {
+    list-style: none;
+}
+.note-pin {
+    width: 100px;
+    float: left;
+}
+.note-text {
+    width: 600px;
+    float: left;
+}
+.note-area {
+    margin: 20px 0;
+}
+[data-gallery] {
+    display: none;
+}
+.print-hidden {
+    display: none !important;
+}
+.marker-in-text .number {
+    position: absolute;
+    top: -19px;
+    left: -4px;
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.5;
+}

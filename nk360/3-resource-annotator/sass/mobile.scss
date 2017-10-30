@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and ($screen-ltmd) {
 	.annotation-screen {
 		width:95%;
 		.annotation-item {
@@ -90,7 +90,7 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and ($screen-xs) {
 
 	.marker-in-text {
 	  width: 265px; /* Must match Js */
@@ -179,7 +179,7 @@
 		height:250px;
 		min-height:250px;
 		.close-icon {
-			@media (max-width: 767px) {
+			@media ($screen-xs) {
 			    position: absolute;
 			    right: 0px;
 			    cursor: pointer;
@@ -189,7 +189,7 @@
 			}
 
 			img {
-				@media (max-width: 767px) {
+				@media ($screen-xs) {
 					width:42px;
 					height:42px;
 				}

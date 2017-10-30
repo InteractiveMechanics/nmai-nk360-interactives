@@ -15,7 +15,7 @@
     z-index: 1052;
     position: absolute;
     bottom: 60px;
-    @include screen-xs {
+    @include screen-ltlg {
         display: none;
     }
 }
@@ -51,5 +51,23 @@
 .answered {
 	transform: scale(0.20, 0.20) !important;
     cursor: move;
+
+}
+
+.dropped {
+    background: #a8bd46;
+    opacity: 0.6;
+    &:after {
+        content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+        position: relative;
+        left: -25%;
+    }
+    @include screen-ltlg {
+        &:after {
+            content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+            position: absolute;
+            left: 65%;
+        }
+    }
 
 }

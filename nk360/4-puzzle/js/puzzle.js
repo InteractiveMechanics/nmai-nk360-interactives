@@ -396,6 +396,7 @@ Puzzle = (function() {
 
             mobileDraggable.addClass('dragged animated');
             $(this).addClass('dropped');
+            hideTooltip();
             setTimeout(function() {$('#card-modal').modal('hide').removeClass('fadeIn').addClass('animated');}, 1000);
             showComplete();
         } else {
@@ -417,7 +418,7 @@ Puzzle = (function() {
     **/ 
     var checkWindowWidth = function() {
         var windowWidth = $( window ).width();
-        if (windowWidth >= 768) {
+        if (windowWidth >= 1199) {
             $('.draggable-widget').draggable('enable');
         } else {
             $('.draggable-widget').draggable('disable');

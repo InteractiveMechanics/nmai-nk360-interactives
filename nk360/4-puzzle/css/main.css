@@ -107,7 +107,8 @@ footer {
   left: 0;
   color: white;
   z-index: 1000;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   #instructions .instructions-container {
     z-index: 101;
     position: relative;
@@ -195,6 +196,10 @@ span[data-toggle="tooltip"] {
       span[data-toggle="tooltip"]:after {
         content: none;
         display: none; } }
+  .lg span[data-toggle="tooltip"] {
+    color: white; }
+    .lg span[data-toggle="tooltip"]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-definition-white.svg"); }
 
 [data-pronounce] {
   border: 1px solid #D67169;
@@ -228,6 +233,10 @@ span[data-toggle="tooltip"] {
       [data-pronounce]:after {
         content: none;
         display: none; } }
+  .lg [data-pronounce] {
+    color: white; }
+    .lg [data-pronounce]:after {
+      background-image: url("/nk360/shared/lib/im/images/icon-audio-white.svg"); }
 
 .btn {
   background-color: transparent;
@@ -470,7 +479,7 @@ span[data-toggle="tooltip"] {
     @media (max-width: 767px) {
       .intro-card .text-wrapper,
       .learning-points-card .text-wrapper {
-        height: 80%;
+        height: 60%;
         overflow: scroll; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .intro-card,
@@ -562,13 +571,21 @@ span[data-toggle="tooltip"] {
   width: 40%;
   height: auto;
   margin-top: 80px; }
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .puzzle-img-wrapper,
     .lg-puzzle-wrapper {
       left: 0px;
       width: 100vw;
       overflow: initial;
       margin-top: 30px;
+      height: auto; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .puzzle-img-wrapper,
+    .lg-puzzle-wrapper {
+      left: 20%;
+      width: 60%;
+      margin-top: 30px;
+      overflow: initial;
       height: auto; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .puzzle-img-wrapper,
@@ -600,7 +617,8 @@ span[data-toggle="tooltip"] {
   transition: 0.5s all ease-in-out; }
   .card:hover {
     z-index: 2;
-    box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5); }
+    box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5);
+    cursor: pointer; }
   @media (max-width: 767px) {
     .card {
       width: 123px;
@@ -770,7 +788,7 @@ span[data-toggle="tooltip"] {
   z-index: 1052;
   position: absolute;
   bottom: 60px; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     #droppable-wrapper {
       display: none; } }
 
@@ -797,6 +815,19 @@ span[data-toggle="tooltip"] {
   transform: scale(0.2, 0.2) !important;
   cursor: move; }
 
+.dropped {
+  background: #a8bd46;
+  opacity: 0.6; }
+  .dropped:after {
+    content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
+    position: relative;
+    left: -25%; }
+  @media (max-width: 1199px) {
+    .dropped:after {
+      content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
+      position: absolute;
+      left: 65%; } }
+
 /**
  * This file includes default styles for the card modal, which uses the Bootstrap modal.  The intro and learning card modals are  not based on the Bootstrap modal; those styles are in intro.scss
  * Include each file for this specific instance.
@@ -813,10 +844,16 @@ span[data-toggle="tooltip"] {
   height: 85%;
   max-height: 550px;
   cursor: move; }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .modal-content {
+      max-height: 600px; } }
 
 .modal-dialog {
   height: 90vh;
   max-width: 400px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-dialog {
+      margin: 20px; } }
 
 .modal-header {
   flex-direction: column;
@@ -831,6 +868,16 @@ span[data-toggle="tooltip"] {
     display: block; }
   .modal-body p {
     margin-top: 20px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-body {
+      padding: 0px 30px 30px;
+      margin-bottom: 60px;
+      overflow-y: scroll; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .modal-body {
+      height: 75%;
+      overflow-y: scroll;
+      margin-bottom: 10px; } }
 
 .close[data-dismiss="modal"] {
   position: absolute;
@@ -863,16 +910,20 @@ span[data-toggle="tooltip"] {
   display: block;
   left: 0px;
   width: 100%; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .modal-footer-message {
       display: none; } }
 
 .lg-wrapper-card {
   position: relative; }
 
+@media (max-width: 767px) {
+  .lg-backdrop {
+    z-index: 1050; } }
+
 #mobile-btn-wrapper {
   display: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     #mobile-btn-wrapper {
       display: block; } }
   #mobile-btn-wrapper .droppable-widget {
