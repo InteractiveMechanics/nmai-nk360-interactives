@@ -38,7 +38,6 @@ module.exports = function(grunt) {
             dist: {
                 files: [
                     {expand: true, src: ['css/**'], dest: '../' + grunt.option('dir')},
-                    {expand: true, src: ['js/**'], dest: '../' + grunt.option('dir')},
                     {expand: true, src: ['assets/**'], dest: '../' + grunt.option('dir')},
                     {expand: true, src: ['data/**'], dest: '../' + grunt.option('dir')},
                 ]
@@ -60,13 +59,11 @@ module.exports = function(grunt) {
             },
         },
         uglify: {
-            options: {
-			    mangle: false
-		    },
             dist: {
                 files: [{
+                    expand: true,
                     cwd: 'js',
-                    src: '**/*.js',
+                    src: '*.js',
                     dest: '../' + grunt.option('dir') + '/js'
                 }]
             }
@@ -80,7 +77,6 @@ module.exports = function(grunt) {
     grunt.loadTasks('../node_modules/grunt-contrib-jshint/tasks');
 
     grunt.loadTasks('../node_modules/grunt-contrib-copy/tasks');
-    grunt.loadTasks('../node_modules/grunt-contrib-symlink/tasks');
     grunt.loadTasks('../node_modules/grunt-processhtml/tasks');
     grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
