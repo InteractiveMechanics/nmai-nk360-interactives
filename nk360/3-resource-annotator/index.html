@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="The National Museum of the American Indian">
+    <meta name="description" content="Annotate like a pro. Use this interactive tool to select, highlight, and mark up sections of a source that correspond to one or more themes.">
+    
+    <title>Resource Annotator Tool - Native Knowledge 360&deg;</title>
+
+    <meta property="og:title" content="Resource Annotator Tool - Native Knowledge 360&deg;" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Annotate like a pro. Use this interactive tool to select, highlight, and mark up sections of a source that correspond to one or more themes." />
+    <meta property="og:image" content="./assets/sharing-img-annotator.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+  
+    <!-- Include shared stylesheets -->
+    <link rel="stylesheet" href="/nk360//shared/lib/im/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/lightgallery/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/js/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/nk360/shared/lib/im/css/animate/animate.css" />
+    
+    <link rel="stylesheet" href="/nk360/shared/lib/im/code/upperleftmenu/menu.css" />
+
+    <!-- Include project stylesheets -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/print.css" />
+    
+    <!-- For development only, comment for distribution -->
+    <!--<link rel="stylesheet" href="./css/theme-pnw.css" />-->
+    <link rel="stylesheet" href="./css/theme-np.css" />
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <link rel="stylesheet" href="./css/theme-<%= theme %>.css" />
+    /build -->
+
+</head>
+<body>
+    <!-- Google Analytics tracking script -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-28789452-3', 'auto');
+      ga('set', 'appName', 'ResourceAnnotator');
+      ga('send', 'pageview');
+    </script>
+
+
+    <!-- Common interactive elements -->
+    <div class="module-menu-wrapper">
+      <div class="abs top left module-menu">
+        <div id="showLeft"> 
+          <div class="nk360-back-arrow">
+            <svg x="0px" y="0px" width="23px" height="41px" viewBox="0 0 23 41" style="enable-background:new 0 0 23 41;" xml:space="preserve">
+              <path class="st3" d="M18.856,2.383C19.102,2.128,19.408,2,19.744,2c0.339,0,0.644,0.128,0.888,0.383c0.489,0.51,0.489,1.339,0,1.85
+              L5.028,20.502l15.604,16.264c0.489,0.512,0.489,1.344,0,1.852c-0.489,0.51-1.286,0.51-1.776,0L2.367,21.426
+              c-0.489-0.51-0.489-1.34,0-1.85L18.856,2.383z"/>
+            </svg>  
+          </div>
+          
+          <div class="nk360-logo">
+            <img class="black-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-black-menu.png" alt="NK 360 black and white logo" />
+            <img class="color-logo" src="/nk360/shared/lib/im/code/upperleftmenu/NK360-logo-color-menu.png" alt="NK 360 color logo" />
+          </div>
+        </div>
+      
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left menu-items" id="cbp-spmenu-s1">
+          <a href="#" title="Native Knowledge 360&deg; Home">
+            <svg id="home-icon" x="0px" y="0px" width="28px" height="26px" viewBox="0 0 28 26" style="enable-background:new 0 0 23 26;" xml:space="preserve"><path class="st3" d="M20.406,12.869c-0.296,0-0.536,0.238-0.536,0.531v9.455h-5.76v-5.936c0-0.293-0.24-0.53-0.536-0.53H9.369
+            c-0.296,0-0.536,0.237-0.536,0.53v4.705c0,0.294,0.24,0.531,0.536,0.531c0.297,0,0.537-0.238,0.537-0.531v-4.175h3.132v5.405H3.074
+      V9.865l8.398-6.653l8.599,6.813c0.231,0.183,0.57,0.147,0.756-0.083c0.186-0.229,0.147-0.562-0.084-0.746l-8.936-7.08
+      c-0.195-0.156-0.475-0.156-0.67,0l-8.936,7.08C2.074,9.297,2,9.449,2,9.61v13.773c0,0.293,0.24,0.531,0.537,0.531h17.869
+      c0.297,0,0.537-0.238,0.537-0.531V13.4C20.943,13.107,20.703,12.869,20.406,12.869L20.406,12.869z"/></svg>
+            <div>Native Knowledge<br />360&deg; Home</div>
+          </a>
+          <a href="#" title="Return to American Indian Removal Lesson">
+            <svg id="return-icon" x="0px" y="0px" width="28px" height="17px" viewBox="0 0 28 17" style="enable-background:new 0 0 28 17;" xml:space="preserve"><path class="st3" d="M20.248,4.678H3.779l2.067-1.852c0.204-0.182,0.204-0.478,0-0.66c-0.204-0.182-0.534-0.182-0.737,0L2.156,4.811
+      C2.147,4.819,2.138,4.828,2.13,4.836C2.049,4.918,2,5.026,2,5.145c0,0.153,0.083,0.289,0.209,0.374l2.9,2.597
+      c0.203,0.183,0.533,0.183,0.737,0c0.204-0.182,0.204-0.478,0-0.66L3.788,5.611h16.46c2.587,0,4.69,1.885,4.69,4.203
+      c0,2.316-2.104,4.201-4.69,4.201H2.521C2.233,14.016,2,14.226,2,14.482c0,0.258,0.233,0.468,0.521,0.468h17.727
+      c3.161,0,5.733-2.305,5.733-5.136C25.981,6.981,23.409,4.678,20.248,4.678L20.248,4.678z"/>
+            </svg>
+            <div>Return to American<br />Indian Removal<br />Lesson</div>
+          </a>  
+        </nav>
+      </div>
+    </div>
+    <div class="activity-menu-wrapper">
+        <div class="abs top right">
+            <a class="icon icon-print print-notes disabled" title="Print this Activity"></a>
+            <a class="icon icon-home disabled" title="Back to Home Screen"></a>
+            
+            <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
+        </div>
+    </div>
+    <footer class="fixed-bottom d-flex justify-content-between">
+        <img src="/nk360/shared/lib/im/images/logo.svg" alt="Smithsonian National Museum of the American Indian" title="Smithsonian National Museum of the American Indian" />
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://www.si.edu/privacy/?external" target="_blank">Privacy</a></li>
+            <li class="list-inline-item"><a href="http://www.si.edu/termsofuse/?external" target="_blank">Terms of Use</a></li>
+            <li class="list-inline-item hidden-xs-down"><a href="#" id="footer-credits" data-content="" tabindex="-1">Credits</a></li>
+            <li class="list-inline-item">&copy; 2017 Smithsonian Institution</li>
+        </ul>
+    </footer>
+
+
+    <!--intro slider-->
+    <div class="intro-slider-wrapper hidden">
+    
+      <div class="card-wrapper">
+        
+        <div class="card">
+          <p></p>
+        </div>
+         
+        <div class="card">
+          <p></p>
+        </div>
+          
+        <div class="card slider-card">
+
+          <div class="close-icon faded">
+            <img src="/nk360/shared/lib/im/images/icon-close.svg" width="70">
+          </div>
+
+          <section class="intro-slider">
+            
+            <div>
+              <p class="text-center page-title all-caps letter-spacing-1"></p>
+              <h3 class="text-center theme-name black-text"></h3>
+
+
+              <p class="intro-text">
+                
+              </p>
+            </div>
+            
+          </section>
+        </div>
+
+      </div>
+
+      <div class="overlay"></div>
+    </div>
+
+    <div id="instructions" class="fade show">
+        <div class="container instructions-container">
+            <h4 class="all-caps letter-spacing-1">How to Play This Activity</h4>
+            <h1>Resource Annotator</h1>
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-6">
+                    <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
+                    <h2>Select Your Resource</h2>
+                    <p>
+                        Select a historical image or text to annotate from the selection of source materials provided.
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <img src="./assets/instructions-02@2x.png" width="75%" alt="Add your annotations" title="Add your annotations" />
+                    <h2>Add Your Annotations</h2>
+                    <p>
+                        Drag and drop themed pins onto the source where you wish to add an annotation.
+                    </p>
+                </div>
+            </div>
+            <a class="btn btn-lg btn-white" id="close-instructions" title="Continue this activity"><strong>Continue the Activity</strong></a>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <div id="lost-progress" class="fade hidden">
+        <div class="container instructions-container">
+            <h4 class="all-caps letter-spacing-1">
+              Are you sure you want to choose another resource? 
+            </h4>
+
+            <h1 class="all-caps letter-spacing-1">
+              Your work will not be saved.
+            </h1>
+
+            <div class="text-center progress-options">
+              <a class="btn btn-lg btn-white reload-page" title="Choose another resource">Choose another resource</a>
+              <a class="btn btn-lg btn-white print-notes" title="Review your notes">Review your notes</a>
+              <a class="btn btn-lg btn-white" id="close-porgess" title="Cancel">Cancel</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <!-- Main interactive-specific content -->
+    <main>
+
+      <header class="header text-center">
+        <h2 class="letter-spacing-1 all-caps page-title">Homelands, Kinship, &amp; Nationhood</h2>
+        <h1 class="theme-name"></h1>
+      </header>
+
+        <section class="print-view">
+
+          <div class="row">
+
+            <div class="col-12">
+
+              <div class="print-photo">
+                <div class="photo-container print-hidden"></div>
+                <div class="print-info print-hidden" style="overflow:visible;"></div>
+                <div class="more-info">
+
+                </div>
+              </div>
+
+
+              <div class="print-paraphrased print-hidden" style="overflow:visible;">
+
+                <h3 class="yellow-underline">
+                  Paraphrased Text
+                </h3>
+
+                <p class="original-text-info paraphrased-text">
+                  
+                </p>
+
+              </div>
+
+              <div class="">
+
+                <!--<div class="additional-content">
+                  <h3 class="yellow-underline">
+                    Additional Content
+                  </h3>
+                </div>-->
+
+                <div class="print-caption print-hidden">
+                  <h3 class="yellow-underline">Caption</h3>
+                  <p class="caption-text">
+                    
+                  </p>
+                </div>
+
+                <div class="print-discussion print-hidden">
+                  <h3 class="yellow-underline">Discussion Questions</h3>
+                  <p class="discussion-text">
+                   
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="print-themes" style="overflow:visible;">
+
+                  <h3 class="yellow-underline">
+                    Themes
+                  </h3>
+
+                  <ul class="theme-print-view">
+
+                  </ul>
+
+              </div>
+
+
+              <div class="print-notes print-hidden" style="overflow:visible;">
+                  <h3 class="yellow-underline">
+                    Notes
+                  </h3>
+                  <ul>
+
+                  </ul>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </section>
+
+
+        <section class="mobile-menu hidden-mobile">
+          <div class="half-menu active" data-page="content">
+             <a href="javascript:void(0);" class="show-additional-content">Content</a>
+          </div>
+
+          <div class="half-menu" data-page="view">
+             <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+          </div>
+
+          <br style="clear:left;" />
+          <!--<div class="container-fluid">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
+              </div>
+
+              <div class="col-6">
+                <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
+              </div>
+
+            </div>
+          </div>-->
+        </section>
+
+        <section class="annotation-screen">
+          
+          <!-- Slider starts here -->
+
+            <div class="annotation-slider-screen show">
+
+              <section id="annotation-slider" class="regular slider">
+                
+
+              </section>
+
+            </div> 
+
+            <!-- end of slider screen -->
+
+
+
+            <!-- notes screen starts here -->
+
+            <div class="annotation-notes-screen hidden">
+
+              <div class="row">
+
+                <div class="col-md-12 col-lg-4 show-right-screen">
+
+                  <div id="item-left" class="original-text-detail">
+
+                  </div>
+
+                  <div class="text-center print-button hidden-md-down">
+
+                    <a class="btn btn-success btn-lg print-notes" title="Print your notes">
+                      <strong>Print Your Notes</strong>
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-12 col-lg-8 show-left-screen hidden-mobile">
+                  
+                  <div class="original-text">
+
+                    <div class="content-height scrollbar-design">
+
+                      
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <section class="mobile-markers hidden-mobile">
+                <ul id="MobileMarker" class="list-inline" style="margin-bottom:0;">
+                </ul>
+              </section>
+
+            </div>
+
+            <!-- note screens ends -->
+
+
+
+        </section>
+
+    </main>
+
+    <script id="itemLeftTemplate" type="text/x-jsrender">
+        
+        <div class="original-text-right">
+          <div class="row">
+
+            <div class="col-12">
+              <div class="outer-top">
+               <div class="top scrollbar-design">
+
+                    {{if caption}}
+                      <h3>Caption</h3>
+                      <p>
+                        {{:caption}}
+                      </p>
+                    {{/if}}
+
+                    {{if question_text}}
+                      <h3>Discussion Questions</h3>
+                      <p>
+                        {{:question_text}}
+                      </p>
+                    {{/if}}
+
+
+                    {{if audio_url && video_url}}
+
+                      <h3>External Links</h3>
+                      <h3>
+                        {{if audio_url}}
+                        <a href="{{:audio_url}}" class="link-color">
+                          Listen to Passage
+                        </a>
+                        {{/if}}
+
+                        {{if video_url}}
+                          <a href="{{:video_url}}" class="link-color">
+                            Watch the Video
+                          </a>
+                        {{/if}}
+                      </h3>
+
+                    {{/if}}
+               </div>
+             </div>
+
+               <div class="bottom markers-container hidden-md-down">
+                  <h3>
+                    Drag and drop to add annotation
+                  </h3>
+
+                  <ul class="list-inline desktop-markers" style="margin-bottom:0;">
+
+                      
+
+                    </ul>
+               </div>
+            </div>
+
+          </div>
+        </div>
+    </script>
+
+
+    <script id="itemMarkerItems" type="text/x-jsrender">
+      <li id="{{:title}}" class="list-inline-item">
+        <div class="marker">
+          <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
+        </div>
+        <div class="right">
+          <div class="theme">
+            {{:title}} <!--<span class="defintions-icon"></span>-->
+          </div>
+          <div class="markers-remaining"></div>
+        </div>
+
+        <br style="clear:both;" />
+      </li>
+    </script>
+
+    <script id="itemRightTemplate" type="text/x-jsrender">
+
+        {{if paraphrase}}
+        <h3>
+          <a href="javascript:void(0);" class="summary-link link-color">Paraphrased Text</a>
+        </h3> 
+        {{/if}}
+
+        {{if image_url}}
+          <div class="photo-container" style="display:block;">
+              <img src="{{:image_url}}" class="img-fluid" />
+              <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}" data-gallery-credit="{{:image_credit}}"></div>
+          </div>
+        {{/if}}
+
+        <div class="info">
+
+          {{if image_credit}}
+          <p class="copyright">
+              {{:image_credit}}
+          </p>
+          {{/if}}
+
+          {{if body}}
+          <h3 class="yellow-underline">
+            Text
+          </h3>
+
+          <p class="original-text-info">
+            {{:body}}
+          </p>
+          {{/if}}
+
+
+          {{if caption}}
+            <p class="original-text-info">
+              {{:caption}}
+            </p>
+          {{/if}}
+
+
+          {{if source}}
+            <p class="original-text-info">
+              {{:source}}
+            </p>
+          {{/if}}
+
+        </div>
+
+        {{if paraphrase}}
+          <div id="paraphrased">
+            <h3 class="yellow-underline">
+              Paraphrased Text
+            </h3>
+
+            <p class="original-text-info">
+              {{:paraphrase}}
+            </p>
+          </div>
+        {{/if}}
+    </script>
+
+    <script id="printListItems" type="text/x-jsrender">
+
+      {{for themes}}
+
+        <li >
+          <div class="marker">
+            <img src="{{:marker_image}}"/>
+          </div>
+          <div class="theme">
+            {{:title}}
+          </div>
+        </li>
+
+      {{/for}}
+    </script>
+
+    <script id="sliderTemplate" type="text/x-jsrender">
+      <div>    
+        <div class="annotation-item">
+          <div class="col-12 col-no-padding">
+            
+            <div class="top">
+              <div class="photo">
+                <div class="photo-overlay"></div>
+
+                {{if thumbnail_image}}
+                  <img src="{{:thumbnail_image}}" class="img-fluid" alt="{{:title}} photo" title="{{:title}} photo">
+                {{else}}
+                  <img src="./assets/thumbnail-default@2x.jpg" class="img-fluid" />
+                {{/if}}
+              </div>
+
+              <div class="text-overlay all-caps"><h3>{{:source_type}}</h3></div>
+            </div>
+
+            <div class="bottom">
+               
+                <div class="body">
+                    {{:excerpt}}
+                </div>
+
+                <div class="button">
+
+                    <a href="javascript:void(0);" class="btn btn-block btn-success" data-annotationid="{{:id}}">
+                        <strong>Mark-up this material <i class="" style="
+    padding-left: 5px;
+"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="19.2px" height="19.2px" viewBox="0 0 19.2 19.2" style="enable-background:new 0 0 19.2 19.2;" xml:space="preserve">
+<defs>
+</defs>
+<g id="Mark-up_Btn_3_copy">
+  <path class="st0" d="M17.9,1.2c-1.7-1.7-4.3-1.7-6,0l-11,11c-0.1,0.1-0.1,0.2-0.2,0.3l-0.8,6c0,0.2,0,0.3,0.2,0.5
+    c0.1,0.1,0.2,0.2,0.4,0.2c0,0,0,0,0.1,0l3.6-0.5c0.3,0,0.5-0.3,0.5-0.6c0-0.3-0.3-0.5-0.6-0.5L1.2,18l0.6-4.2l4.4,4.4
+    c0.1,0.1,0.2,0.2,0.4,0.2c0.1,0,0.3-0.1,0.4-0.2l11-11c0.8-0.8,1.2-1.9,1.2-3C19.2,3.1,18.7,2,17.9,1.2L17.9,1.2z M12.2,2.6L14,4.4
+    l-10,10l-1.8-1.8L12.2,2.6z M6.6,17l-1.8-1.8l10-10L16.6,7L6.6,17z M17.4,6.2L13,1.8c0.6-0.5,1.3-0.7,2-0.7c0.8,0,1.6,0.3,2.2,0.9
+    c0.6,0.6,0.9,1.4,0.9,2.2C18.1,5,17.8,5.7,17.4,6.2L17.4,6.2z M17.4,6.2"></path>
+</g>
+</svg></i></strong>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+  </script>
+
+
+
+    
+    <!-- Include jquery, jquery ui, touchpunch -->
+    <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jsrender/jsrender.min.js"></script>
+
+    <!-- Include bootstrap -->
+    <script src="/nk360/shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Include lightGallery -->
+    <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Include slick -->
+    <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
+
+    <!-- Include shared code -->
+    <script src="/nk360/shared/lib/im/code/analytics.js"></script>
+    <script src="/nk360/shared/lib/im/code/audio/audio.js"></script>
+    <script src="/nk360/shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="/nk360/shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="/nk360/shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
+
+    <!-- Third Party Code -->
+    <script src="./js/findAndReplaceDOMText.js"></script>
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = './data/m3a1.json';</script>
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
+
+    <!-- Include project specific code/files -->
+    <script src="./js/annotator.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/init.js"></script>
+</body>
+</html>

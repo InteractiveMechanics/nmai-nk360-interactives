@@ -1,0 +1,327 @@
+/**
+ * This file includes all of the default styling for the draggable and droppable elements. 
+**/
+
+
+
+#droppable-container {
+	align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px;
+    color: $primary;
+    background-color: rgba(9, 74, 113, 0.35);
+    border-radius: 52px;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.20);
+    margin-top: 2.5%;
+    @include screen-xs {
+    	display: none;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        margin-top: 1%;
+    }
+
+}
+
+#era-label-start {
+	width: 125px;
+	text-align: right;
+}
+
+
+.droppable-widget {
+	border: 1px solid $primary;
+	border-radius: 50%;
+	height: 82px;
+	margin: 0px 10px;
+	width: 82px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $primary;
+	font-size: 13px;
+	text-align: center;
+	@include screen-sm {
+		height: 70px;
+		width: 70px;
+	}
+}
+
+[data-toggle="tooltip"] {
+	border-bottom: none;
+}
+
+.draggable-holder {
+	margin-left: 20px;
+	height: $moment-height;
+
+	@include screen-xs {
+		margin: 25px 0px;
+		height: 75px;
+	}
+
+
+	@include screen-sm {
+		margin: 5px 0px;
+		height: 90px;
+	}
+	
+}
+
+#draggable-wrapper {
+	position: relative;
+	display: flex;
+	width: 90%;
+	left: 5%;
+	height: 50%;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		width: 75%;
+    	left: 7.5%;
+	}
+
+	@include screen-xs {
+		height: auto;
+    	padding-bottom: 100px;
+	}
+}
+
+.draggable-widget {
+	background-color: rgba(9, 74, 113, 0.5);
+    height: $moment-height;
+    width: $moment-width;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    margin: 0px 20px;
+    padding: 15px 15px 15px 52px;
+    text-align: left;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 300;
+	img {
+		height: 82px;
+		width: 82px;
+		border: 3px solid white;
+		border-radius: 50%;
+		cursor: hand;
+  		cursor: -webkit-grab;
+  		cursor: grab;
+  		transition: all 0.5s ease-in-out;
+	}
+	div {
+		font-size: 13px;
+		flex: 1;
+		-webkit-touch-callout: none; /* iOS Safari */
+    	-webkit-user-select: none; /* Safari */
+     	-khtml-user-select: none; /* Konqueror HTML */
+       	-moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+		p {
+			margin-bottom: 0px;
+			@include screen-xs {
+    			overflow: hidden;
+			}
+			@include screen-sm {
+				height: 70px;
+				overflow: hidden;
+			}
+			
+		}
+		@include screen-xxs {
+			font-size: 12px;
+		}
+	}
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		height: 100px;
+		padding: 5px 5px 5px 35px;
+		width: 100%;
+	}
+	
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		height: 95px;
+	    padding: 5px 15px 5px 35px;
+	    width: 385px;
+	}
+	@include screen-sm {
+		height: 90px;
+		padding: 5px 5px 5px 52px;
+	}
+	
+}
+
+.draggable-img {
+	height: 82px;
+	width: 82px;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin-left: 3px;
+	cursor: hand;
+  	cursor: -webkit-grab;
+  	cursor: grab;	
+  	z-index: 3;
+  	&:hover, &:focus {
+  		animation: pulse 1s infinite;
+  	}
+  	@include screen-xs {
+  		height: 50px;
+  		width: 50px;
+  	}
+  	@include screen-sm {
+  		height: 70px;
+  		width: 70px;
+  	}
+
+}
+
+.draggable-img-wrapper {
+	left: -23px;
+	top: -$moment-height;
+	height: 82px;
+	width: 82px;
+
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		top: -100px;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		left: -7px;
+	}
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		top: -95px;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		left: -7px;
+	}
+
+	@include screen-sm {
+		top: -90px;
+		height: 70px;
+		width: 70px;
+		position: relative;
+		left: -7px;
+	}
+}
+
+.draggable-overlay {
+	background: #a8bd46;
+    opacity: 0.7;
+    height: 82px;
+    width: 82px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    &:after {
+    	content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+    	height: 82px;
+    	width: 82px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	@include screen-sm {
+    		height: 70px;
+    		width: 70px;
+    	}
+    }
+    @include screen-sm {
+    	height: 70px;
+    	width: 70px;
+    }
+}
+
+.draggable-widget.dragged {
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	height: auto;
+	width: auto;
+	z-index: -1;
+	cursor: pointer;
+	.draggable-text {
+		display: none;
+	}
+}
+
+
+//active class for draggable
+.ui-draggable-dragging {
+	cursor: hand;
+	cursor: grabbing;
+	cursor: -webkit-grabbing !important;
+	z-index: 2;
+}
+
+.draggable-text.active {
+	display: none;
+	z-index: -2;
+	@include screen-xs {
+		display: initial;
+		z-index: initial;
+	}
+
+}
+
+.draggable-widget.active {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.dragged {
+	.draggable-img {
+		margin-left: 0px;
+	}
+}
+
+
+.tooltip-inner {
+	background-color: $accent;
+	border-radius: 0.15rem;
+	font-weight: 300;
+	&::before {
+		border-top-color: $accent !important;
+	}
+}
+
+.sortableEl-disabled {
+	.draggable-widget {
+		background-color: rgba(168, 189, 70, 0.7);
+	}
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
+      box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 0 rgba( 255, 255, 255, 0);
+  }
+}

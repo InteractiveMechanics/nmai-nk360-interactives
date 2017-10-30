@@ -1,0 +1,112 @@
+.intro-slider-wrapper {
+    .overlay {
+        z-index: 70;
+    }
+}
+.card {
+    background: #FFFFFF;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-sizing: border-box;
+    padding: 20px 48px;
+    min-height: 600px;
+
+    &:before {
+        background: #CABDB6;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        left: -5px;
+        top: 4px;
+        transform: rotate(-2.5deg);
+    }
+
+    @media screen and ($screen-ltlg) {
+        min-height: 500px;
+    }
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        cursor: pointer;
+
+        @media screen and ($screen-xs) {
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+            z-index: 101;
+        }
+
+        img {
+        	@media screen and ($screen-xs) {
+        		width:42px;
+        		height:42px;
+        	}
+        }
+    }
+    .page-title {
+        font-size: 0.8rem;
+    }
+}
+.card-wrapper {
+    z-index: 101;
+    position: relative;
+    & > {
+        .card {
+            transition: top 0.3s ease, left 0.3s ease;
+            width: 393px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-top: 100px;
+            &:hover {
+                -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
+                box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
+            }
+
+            @media screen and ($screen-md) and ($screen-landscape) {
+                margin-top: 60px;
+            }
+            @media screen and ($screen-xs) and ($screen-landscape) {
+                margin-top: 40px;
+            }
+            @media screen and ($screen-xs) and ($screen-portrait) {
+                width: 360px;
+                margin-top: 40px;
+            }
+        }
+    }
+    .card-before {
+        opacity: .3;
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    .card-after {
+        left: 0px;
+        background: white;
+        top: 0px;
+        opacity: .3;
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+.card {
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    position: absolute;
+    width: 93%;
+    height: 580px;
+    @media screen and (max-width: 1100px) {
+        height: 490px;
+    }
+}

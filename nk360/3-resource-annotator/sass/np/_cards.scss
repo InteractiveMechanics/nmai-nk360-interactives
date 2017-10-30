@@ -1,0 +1,13 @@
+.slider-card {
+    background: url(/nk360/shared/lib/im/images/np/text-card-np-watermark@2x.png) white !important;
+    background-size: 400px 600px !important;
+    background-repeat:no-repeat;
+
+    @media screen and ($screen-ltlg) {
+    	background-size: 400px 500px !important;
+    }
+
+    @media ($screen-xs) { 
+        background-size: 370px 480px !important;
+    }
+}

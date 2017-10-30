@@ -1,0 +1,49 @@
+[data-pronounce] {
+    border: 1px solid #D67169;
+    border-radius: 4px;
+    padding: 1px 3px;
+    transition: $transition;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover, &:focus, &:active {
+        background-color: #D67169;
+        color: white;
+
+        &:after {
+            background-image: url('/nk360/shared/lib/im/images/icon-audio-white.svg');
+        }
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        background-image: url('/nk360/shared/lib/im/images/icon-audio.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-left: 5px;
+        vertical-align: middle;
+        transition: $transition;
+    }
+
+    @media print {
+        border: none;
+        padding: none;
+        border-radius: none;
+    
+        &:after {
+            content: none;
+            display: none;
+        }
+    }
+
+    .lg & {
+        color: white;
+
+        &:after {
+            background-image: url('/nk360/shared/lib/im/images/icon-audio-white.svg');
+        }
+    }
+}

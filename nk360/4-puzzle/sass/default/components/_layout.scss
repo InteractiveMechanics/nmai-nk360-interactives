@@ -1,0 +1,52 @@
+/**
+ * This file includes a few miscellaneous styles. 
+**/
+
+
+.icon-definition {
+	fill: white;
+	height: 18px;
+	position: relative;
+    bottom: -2px;
+    left: -11px;
+}
+
+
+.popover {
+	background-color: #ec5343;
+	color: white;
+}
+
+
+.popover-title {
+	display: none;
+}
+
+
+.popover.popover-top::after, 
+.popover.bs-tether-element-attached-bottom::after {
+	border-top-color:  #ec5343;
+}
+
+.btn-wrapper {
+	display: flex;
+}
+
+.zoom-icon {
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	right: 15px;
+    bottom: 15px;
+}
+
+.puzzle-img-zoom-icon {
+	width: 100%;
+    position: relative;
+    display: block;
+    text-align: right;
+    top: -40px;
+    right: 15px;
+
+}
+

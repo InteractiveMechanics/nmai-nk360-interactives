@@ -1,0 +1,33 @@
+/**
+ * This file includes Northern Plains theme styles for the modal.
+ * 
+**/
+
+
+.modal-content {
+	background: url('/nk360/shared/lib/im/images/np/text-card-np@2x.png');
+	background-color: white;
+	background-size: 90%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		background-size: 100%;
+	}
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		background-size: 100%;
+	}
+}
+
+.modal-title {
+	font-size: 30px;
+    margin-top: 25px;
+}
+
+.modal-footer-message {
+	bottom: 50px;
+}
+
+
+.modal-img-wrapper {
+	background-color: $midgray;
+}

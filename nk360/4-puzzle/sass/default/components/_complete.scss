@@ -1,0 +1,73 @@
+/**
+ * This file includes all of the default styling for the 'puzzle complete' overlay.
+ * 
+**/
+
+
+#complete-overlay {
+	height: 100vh;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.85);
+	.text-wrapper {
+		color: white;
+		width: 40%;
+		left: 30%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    	height: 100%;
+    	h1 {
+    		font-size: 50px;
+    		letter-spacing: 2px;
+    		margin-bottom: 40px;
+    		@include screen-xs {
+    			font-size: 35px;
+   				margin-bottom: 20px;
+    		}
+    	}
+    	p {
+    		margin-bottom: 80px;
+    		text-align: center;
+    		line-height: 1.9;
+    		font-weight: 300;
+    		@include screen-xs {
+    			margin-bottom: 10px;
+    		}
+    	}
+
+    	@include screen-md {
+    		left: 25%;
+    		width: 50%;
+    	}
+
+    	@include screen-sm {
+    		left: 20%;
+    		width: 60%;
+    	}
+    	@include screen-xs {
+    		width: 80%;
+		    left: 10%;
+		    height: 80%;
+		    top: 10%;
+    	}
+	}
+	.btn-wrapper {
+		button {
+			margin: 15px; 
+			color: white;
+		}
+		@include screen-xs {
+			width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		}
+	}
+
+}
+
+

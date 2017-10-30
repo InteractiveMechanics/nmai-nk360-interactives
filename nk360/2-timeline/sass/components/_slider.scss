@@ -1,0 +1,102 @@
+/**
+ * This file includes all of the styles for the slider that is used on the selection screen.  It is active only on viewports equal to or smaller than 991px. It is based on the Slick Slider. The scrollable timeline does not use a slider. Styles for that component are in timeline.scss. 
+**/
+
+
+
+.slick-prev,
+.slick-next {
+	width: 100px;
+	height: 100px;
+	z-index: 1;
+	@include screen-xs {
+		width: 50px;
+		height: 50px;
+	}
+	@include screen-sm {
+		width: 75px;
+		height: 75px;
+	}
+}
+
+.slick-prev {
+	left: 25px;
+	&:before {
+		content: "";
+		background: url('/nk360/shared/lib/im/images/icon-prev.svg');
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: inline-block;
+	}
+	@include screen-xs {
+		left: -5px;
+		&:before {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	@include screen-sm {
+		&:before {
+			width: 75px;
+			height: 75px;
+		}
+	}
+}
+
+.slick-next {
+	right: 25px;
+	&:before {
+		content: "";
+		background: url('/nk360/shared/lib/im/images/icon-next.svg');
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: inline-block;
+		
+	}
+	@include screen-xs {
+		right: -5px;
+		&:before {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	@include screen-sm {
+		&:before {
+			width: 75px;
+			height: 75px;
+		}
+	}
+}
+
+.slick-dots li button {
+	&:before {
+		content: '';
+    	background-color: black;
+    	border-radius: 50%;
+    	width: 30px;
+    	height: 30px;
+	}
+
+	@include screen-ltmd {
+		&:before {
+			width: 15px;
+			height: 15px;
+		}
+	}
+
+}
+
+.slick-dots {
+	bottom: 75px;
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		bottom: 115px;
+	}
+}
+
+

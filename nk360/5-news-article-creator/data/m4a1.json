@@ -1,0 +1,105 @@
+{
+    "title": "News Article Creator",
+    "returnTo": {
+        "title": "Pacific Northwest Fish Wars Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian.<br>Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>.",
+    "question": "What kinds of actions can lead to justice?",
+    "paperTitle": "The Independent Observer",
+    "paperImageTraditional": "./assets/header/masthead-traditional.png",
+    "paperImageModern": "./assets/header/masthead-modern.png",
+    "images": [
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Muckleshoot_protest_.jpg",
+            "url": "./assets/imgs/m4a1/full-Muckleshoot_protest_.jpg",
+            "caption": "Muckleshoot Protest",
+            "credit": "Photograph by Larry Dion, 1966, courtesy of Seattle Times"
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Fish-In.jpg",
+            "url": "./assets/imgs/m4a1/full-Fish-In.jpg",
+            "caption": "Billy Frank, Jr. fishing the Nisqually River in 1973 in an act of civil disobedience.",
+            "credit": "Photograph by Tom Thompson, NWIFC."
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Marlon-Brando.jpg",
+            "url": "./assets/imgs/m4a1/full-Marlon-Brando.jpg",
+            "caption": "Robert Satiacum and Marlon Brando, a well-known actor and celebrity, shortly before they were arrested in a 1964 protest.",
+            "credit": "Photograph by Richard Heyza, courtesy of Seattle Times"
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Indian-Voice-Cartoon.jpg",
+            "url": "./assets/imgs/m4a1/full-Indian-Voice-Cartoon.JPG",
+            "caption": "Indian Civil Rights Hearings, November 1977.",
+            "credit": "Cartoon by Indian Voice, Small Tribes Organization of Western Washington. <a href='http://depts.washington.edu/civilr/CRcommission.htm' target='_blank'>Source</a>"
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Boldt-Effigy.jpg",
+            "url": "./assets/imgs/m4a1/full-Boldt-Effigy.jpg",
+            "credit": "Photograph by staff photographer Matt McVay, Seattle Times, September 11, 1977"
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-nwifc-logo.jpg",
+            "url": "./assets/imgs/m4a1/full-nwifc-logo.jpg",
+            "caption": "Seal of the Northwest Fisheries Commission."
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-CRITFC-Seal.jpg",
+            "url": "./assets/imgs/m4a1/full-CRITFC-Seal.jpg",
+            "caption": "Seal of the Columbia Inter-Tribal Fish Commission."
+        },
+        {
+            "thumb": "./assets/imgs/m4a1/sm-Tulalip-Tribes.jpg",
+            "url": "./assets/imgs/m4a1/full-Tulalip-Tribes.jpg",
+            "caption": "Tulalip youth drum during the First Salmon Ceremony, 2016.",
+            "credit": "Photo courtesy of the NWIFC and the State of Our Watersheds Report from the Snohomish River Basin."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "I think it was really helping out one another. Reaching out to the other tribes, how are we going to help? Having that connection, because of the age-old relationship between the tribes that we’ve always had. . . . I saw it as a coalition, letting the non-tribal people know why we were doing this.",
+            "source": "Carol Craig (Yakama), NMAI Interview, August 2016"
+        },
+        {
+            "text": "We went... church to church, organization to organization, we taught people about the Constitution because they didn’t know that. They didn’t know that these treaties were backed by the United States Constitution.",
+            "source": "Elizabeth Furse, former U.S. Representative from Oregon, NMAI Interview, August 2016"
+        },
+        {
+            "text": "Once somebody stood up to the state of Washington, the gaming department, the state fisheries—you knew you were going to get beat up. You knew you were going to go to jail. You knew this was going to happen.",
+            "source": "Don McCloud (Puyallup), NMAI Interview, July 2016"
+        },
+        {
+            "text": "There had been a lot of public attention to the case because of some wonderful, wonderful photographs. They were broadcast or circulated throughout the world, not only in the United States. So there was attention being paid to it.",
+            "source": "John Platt, NMAI Interview, August 2016"
+        },
+        {
+            "text": "... there was an outcry, a national and international outcry. And the federal government, who had never protected us, were humiliated and called to task.",
+            "source": "Ramona Bennett (Puyallup), NMAI Interview, July 2016"
+        },
+        {
+            "text": "Yeah, well, the Boldt Decision, it was very difficult because there was just this intensity of hate. People would spit on you. And yell at you, and call you names.",
+            "source": "Mel Moon (Quileute), NMAI Interview, July 2016"
+        },
+        {
+            "text": "And what Judge Boldt did and what the Supreme Court did was not give rights in those cases, they affirmed them. In other words, they said these rights are there.",
+            "source": "Elizabeth Furse, former U.S. Representative from Oregon, NMAI Interview, August 2017"
+        },
+        {
+            "text": "Now the tribes are finally being acknowledged as comanagers of the fisheries resources.",
+            "source": "Carol Craig (Yakama), NMAI Interview, August 2016"
+        },
+        {
+            "text": "It’s pretty impressive what people have done in such a short time period. And really a lot of that is tied to the Boldt Decision in us being able to provide for ourselves again, which has been guaranteed in our treaties since the 1850s.",
+            "source": "Willard Bill Jr. (Muckleshoot), NMAI Interview, August 2016"
+        },
+        {
+            "text": "Despite massive harvest reductions, strategic use of hatcheries, and a huge financial investment in habitat restoration efforts over the past 40 years, the State of Our Watersheds report shows that we are failing to turn the tide on salmon recovery.",
+            "source": "2012 State of Our Watersheds Report, Northwest Indian Fisheries Commission, Olympia, WA"
+        },
+        {
+            "text": "The Boldt Decision came down and all of a sudden people said, ‘I am going fishing,’ and they did. Pretty soon another dash of cold water comes down, and that dash of cold water was that they ran out of fish.",
+            "source": "Wallace Heath, Lummi Aquaculture Project, from roundtable discussion on the Boldt Decision at Northwest Indian College, July 2005"
+        }
+    ]
+}

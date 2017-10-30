@@ -1,0 +1,278 @@
+/**
+ * This file includes all of the general layout styles. 
+**/
+
+
+#selection {
+	height: 100vh;
+	width: 100vw;
+	background: white;
+}
+
+.era-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+div[id^="era-block"] {
+	flex: 1;
+	display: flex;
+	height: 100vh;
+	align-items: flex-end;
+
+	img {
+		position: absolute;
+	}
+	
+	.era-content-wrapper {
+		text-align: center;
+		width: 100%;
+		height: 46%;
+	    display: flex;
+	    flex-direction: column;
+	    padding: 0px 60px 80px 60px;
+	    position: relative;
+	    @include screen-sm {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 80%;
+		    left: 10%;
+		    top: 46%;
+		    padding-bottom: 0px;
+	    }
+	    @include screen-xs {
+	    	height: 39%;
+		    justify-content: space-between;
+		    width: 100%;
+		    left: 0%;
+		    top: 43%;
+		    padding: 0px 30px;
+	    }
+	    @media screen and ($screen-xs) and ($screen-portrait) {
+	    	top: 33%;
+	    	height: auto;
+	    }
+	    @media screen and ($screen-xs) and ($screen-landscape) {
+        	top: 20%;
+		    padding: 0px 30px;
+		    width: 80%;
+		    height: 60%;
+		    left: 10%;
+    	}
+    	@media screen and ($screen-md) and ($screen-landscape) {
+    		height: 60%;
+    	}
+
+	}
+}
+
+.heading-wrapper {
+	margin-bottom: 80px;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('/nk360/shared/lib/im/images/pnw/splash-01.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	img {
+		position: absolute;
+		@include screen-xs {
+			width: 80%;
+		}
+		@include screen-md {
+			width: 90%;
+		}
+	}
+
+	h1 {
+		color: white;
+		margin: 0px;
+		padding: 0px;
+		line-height: 1;
+		z-index: 2;
+		text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+
+	}
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		margin-top: 30px;
+	}
+
+
+}
+
+
+
+
+.heading-wrapper[data-era="1"] {
+	background: url('/nk360/shared/lib/im/images/pnw/splash-01.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	h1 {
+		position: relative;
+		top: 10px;
+		@include screen-xs {
+			font-size: 3em;
+		}
+	}
+}
+
+
+.heading-wrapper[data-era="2"] {
+	background: url('/nk360/shared/lib/im/images/pnw/splash-02.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.heading-wrapper[data-era="3"] {
+	background: url('/nk360/shared/lib/im/images/pnw/splash-03.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+
+#era-block-1 {
+	background:  url('../assets/timeline-segment-overlay-bg01@2x.png'), url('../assets/timeline-segment-bg01@2x.jpg');
+	background-size: cover, cover;
+	button {
+		&:hover, &:active {
+			color:  $primary !important;
+		}
+	}
+	@media screen and ($screen-xs) and ($screen-landscape) {
+        background-position: center;
+    }
+
+
+}
+
+#era-block-2 {
+	background:  url('../assets/timeline-segment-bg02@2x.jpg');
+	background-size: cover;
+	opacity: 0.35;
+	transition: 0.5s all ease-in-out;
+	button {
+		&:hover, &:active {
+			color:  $accent !important;
+		}
+	}
+
+}
+
+#era-block-2.active {
+	background:  url('../assets/timeline-segment-overlay-bg02@2x.png'), url('../assets/timeline-segment-bg02@2x.jpg');
+	opacity: 1.0;
+	background-size: cover, cover;
+}
+
+#era-block-3 {
+	background: url('../assets/timeline-segment-bg03@2x.jpg');
+	background-size: cover;
+	opacity: 0.35;
+	button {
+		&:hover, &:active {
+			color:  $secondary !important;
+		}
+	}
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		background-position: center;
+	}
+
+}
+
+#era-block-3.active {
+	background:  url('../assets/timeline-segment-overlay-bg03@2x.png'), url('../assets/timeline-segment-bg03@2x.jpg');
+	opacity: 1.0;
+	background-size: cover, cover;
+}
+
+
+.start-timeline-btn, 
+.view-timeline-btn {
+	font-weight: 700;
+}
+
+
+
+#detail {
+	background: url('../assets/bkgr-pnw@2x.png');
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	user-select: none;
+	.heading-wrapper {
+
+		position: relative;
+		top: 17px;
+		h1 {
+			@include screen-ltmd {
+				font-size: 2.3em;
+			}
+			@include screen-md {
+				font-size: 2.4em;
+			}
+		}
+		@include screen-xs {
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 50px 0px 0px;
+		    height: 152px;
+		}
+		@include screen-sm {
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 50px 0px 0px;
+		    height: 152px;	
+		}
+		@include screen-md {
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 0px;
+		    height: 152px;
+		}
+		@media screen and ($screen-xs) and ($screen-landscape) {
+			display: inline-flex;
+		    width: auto;
+		    padding: 0px;
+		    margin: 0px;
+		    height: 150px;
+
+		}
+	}
+	@include screen-xs {
+		user-select: initial;
+		overflow-y: scroll;
+		height: calc(100vh - 50px);
+	}
+
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		user-select: initial;
+		overflow-y: scroll;
+	}
+}
+
+#explore {
+	background: #a9a9ab;
+	height: 100vh;
+	position: relative;
+	width: 100vw;
+	user-select: none;
+	@media screen and ($screen-xs) and ($screen-landscape) {
+		user-select: initial;
+	}
+}
+
+
+

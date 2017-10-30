@@ -1,0 +1,45 @@
+footer {
+    color: white;
+    height: 50px;
+    background: black;
+    background: rgba(0,0,0,0.8);
+    font-size: 0.7rem;
+    padding: 11px;
+
+    &.transparent {
+        background: transparent;
+    }
+
+    img {
+        height: 34px;
+        position: relative;
+        top: -4px;
+
+        @media screen and ($screen-xs) {
+            display: none;
+        }
+    }
+
+    ul {
+        margin-top: 6px;
+
+        li {
+            font-family: $sans-serif;
+
+            &:not(:last-child):after {
+                content: '|';
+                margin: 0 0 0 10px;
+                opacity: 0.5;
+            }
+
+            a {
+                color: white;
+                font-family: $sans-serif;
+
+                &:hover, &:focus, &:active {
+                    color: white;
+                }
+            }
+        }
+    }
+}

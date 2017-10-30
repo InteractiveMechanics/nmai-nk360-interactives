@@ -1,0 +1,73 @@
+/**
+ * This file includes default styles for draggable and droppable elements, except for the draggable modal.  Styles for the draggable modal are in the modal partial
+**/
+
+
+
+
+#droppable-wrapper {
+	width: 70%;
+    display: flex;
+    justify-content: space-between;
+    left: 15%;
+    position: relative;
+    margin-top: 35px;
+    z-index: 1052;
+    position: absolute;
+    bottom: 60px;
+    @include screen-ltlg {
+        display: none;
+    }
+}
+
+.droppable-widget {
+	font-weight: 600;
+    color: white;
+    border: 3px solid white;
+    background-color: rgba(1, 106, 135, 0.65);
+   	width: 25%;
+    text-align: center;
+    padding: 6px;
+    transition: all 0.5s linear;
+    &:hover, &:active, &:visited {
+        border: 3px solid white;
+
+    }
+    &:after {
+        content: '';
+    }
+}
+
+
+
+.draggable-widget {
+	transition: $transition;
+}
+
+
+//active class for draggable
+.ui-draggable-dragging,
+.dragged
+.answered {
+	transform: scale(0.20, 0.20) !important;
+    cursor: move;
+
+}
+
+.dropped {
+    background: #a8bd46;
+    opacity: 0.6;
+    &:after {
+        content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+        position: relative;
+        left: -25%;
+    }
+    @include screen-ltlg {
+        &:after {
+            content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+            position: absolute;
+            left: 65%;
+        }
+    }
+
+}

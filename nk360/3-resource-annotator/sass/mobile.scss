@@ -1,0 +1,199 @@
+@media screen and ($screen-ltmd) {
+	.annotation-screen {
+		width:95%;
+		.annotation-item {
+			width:100%;
+			height:67.5vh;
+
+			.top {
+				height: 21vh;
+
+				.photo {
+					img {
+						height:21vh !important;
+					}
+				}
+
+				.photo-overlay {
+					height:21vh;
+
+
+				}
+			}
+
+			.bottom {
+				height:47.5vh;
+
+				.body {
+					height:33vh;
+				}
+
+				.button {
+					background:#FFF;
+					bottom:15px;
+				}
+			}
+		}
+	}
+
+	footer {
+		z-index:-1;
+	}
+
+	.card-wrapper {
+		& > {
+			.card {
+				width:350px;
+				margin-top:60px;
+			}
+		}
+	}
+
+	.card {
+		height: 490px;
+		min-height:490px;
+		.close-icon { 
+			top:-30px;
+			right:-30px;
+		}
+	}
+
+	.slider-card {
+		background-repeat:no-repeat !important;
+	}
+
+	.slick-next {
+		right:-130px;
+	}
+
+	.slick-next::before {
+		font-size:75px;
+	}
+
+	.slick-prev {
+	    left: -130px;
+    	z-index: 1;
+	}
+
+	.slick-prev::before {
+		font-size:75px;
+	}
+
+	.mobile-markers {
+		position:absolute;
+		bottom:0;
+		background:#2e3742; 
+		padding:20px 45px;
+		width:100%;
+		z-index:10000000;
+		left:0;
+	}
+}
+
+@media screen and ($screen-xs) {
+
+	.marker-in-text {
+	  width: 265px; /* Must match Js */
+	  height:150px;
+
+	  textarea {
+		width: 210px;
+	  }
+	}
+	
+	.original-text {
+		padding:10px 15px 75px 0px;
+	}
+	.header {
+		margin-top:10px;
+
+		h2 {
+			font-size:50%;
+		}
+
+		h1 {
+			font-size:1.6rem;
+		}
+	}
+
+	.mobile-menu {
+		.half-menu {
+			width:50%;
+			float:left;
+			background:grey;
+			cursor:pointer;
+
+			a {
+				color:white;
+				font-weight:bold;
+				display: block;
+    			padding: 10px 13px;
+
+				&:hover {
+					text-decoration:none;
+				}
+			}
+
+			&.active {
+				box-shadow:inset 0 -3px 0 #FFF;
+			}
+		}
+	}
+	.marker {
+		float:left;
+		img {
+		    width: 30px;
+		}
+	} 
+
+	.list-inline-item {
+		.right {
+			float:right;
+			margin-left:12px;
+		}
+
+		.theme {
+			margin-top:0;
+			color:white;
+			font-weight:bold;
+		}
+
+		.markers-remaining {
+			color:white;
+		}
+	}
+
+	.original-text {
+		height:50vh;
+
+		.content-height {
+			height:47vh
+		}
+	}
+
+	.delete-pin {
+		padding-top:0;
+	}
+
+	.card {
+		height:250px;
+		min-height:250px;
+		.close-icon {
+			@media ($screen-xs) {
+			    position: absolute;
+			    right: 0px;
+			    cursor: pointer;
+			    top: 0px;
+			    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+			    z-index: 10000000000;
+			}
+
+			img {
+				@media ($screen-xs) {
+					width:42px;
+					height:42px;
+				}
+			}
+		}
+	}
+}

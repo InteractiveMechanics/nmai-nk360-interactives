@@ -1,0 +1,100 @@
+{
+    "title": "Resource Annotator",
+    "page_title": "Northern Plains History & Culture: Northern Cheyenne Nation",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for the theme.",
+	"themes": [
+	    {
+	    	"title": "Relationships to the Land",
+	    	"tooltip_text": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful).",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    }
+    ],
+	"sources": [
+		{
+			"id": 1,
+		    "title": "Bear Butte",
+		    "image_url": "./assets/imgs/m1a2/full-source-1.jpg",
+		    "image_caption": "",
+		    "image_credit": "Photo by Doug McMains, 2016",
+		    "body": "<span data-toggle=“tooltip” title=“An important religious site for Northern Plains Nations long before Europeans and Americans reached South Dakota.”>Bear Butte</span>, in South Dakota, is a site of spiritual importance where Sweet Medicine, the <span data-pronounce='../shared/lib/im/audio/PL_Cheyenne.mp3'>Cheyenne</span> prophet, received instructions relating to the leadership and organization of the Tsistsistas (Cheyenne Nation) government, including the council of forty-four chiefs, the military societies, the Sacred Arrows, and all related organizations and ceremonies.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "Bear Butte, in South Dakota, is a site of spiritual importance where Sweet Medicine, the Cheyenne prophet, received instructions relating to the leadership and organization of the Tsistsistas (Cheyenne Nation) government, including the council of forty-four chiefs, the military societies, the Sacred Arrows, and all related organizations and ceremonies.",
+		    "thumbnail_image": "./assets/imgs/m1a2/med-source-1.jpg",
+		    "question_text": "How do places that hold religious or spiritual significance affect a people’s relationship with their homelands?"
+		},
+		{
+			"id": 2,
+		    "title": "Northern Cheyenne Women",
+		    "image_url": "./assets/imgs/m1a2/full-source-2.jpg",
+		    "image_caption": "",
+		    "image_credit": "Lame Deer, Northern Cheyenne Reservation, Montana, ca 1910. Photograph by Elizabeth Custis Grinnell, NMAI N13541",
+		    "body": "<span data-pronounce='../shared/lib/im/audio/PL_Cheyenne.mp3'>Cheyenne</span> people possessed an extensive knowledge of botany. People harvested plants for food, medicine, ceremony, and other uses. This knowledge was based on an understanding of the season and manner in which the plant was to be harvested, prepared, and used, as well as <span data-toggle=“tooltip” title='Culturally-based ceremonies and respectful behavior practiced in meetings within or between nations.'>cultural protocols</span> to be observed. Women often harvested plants together and were accompanied by children. Children then learned through observation and participation.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "Cheyenne people possessed an extensive knowledge of botany. People harvested plants for food, medicine, ceremony, and other uses. This knowledge was based on an understanding of the season and manner in which the plant was to be harvested, prepared, and used, as well as cultural protocols to be observed. Women often harvested plants together and were accompanied by children. Children then learned through observation and participation.",
+		    "thumbnail_image": "./assets/imgs/m1a2/med-source-2.jpg",
+		    "question_text": "<p>How might such extensive knowledge of botany contribute to the relationship a person has with the land?</p><p>What was one way that the Cheyenne educated their children about the things they needed to know as adults?</p>"
+		},
+		{
+			"id": 3,
+		    "title": "Tichkematse drawing of two Cheyenne men hunting buffalo, 1879",
+		    "image_url": "./assets/imgs/m1a2/full-source-3.jpg",
+		    "image_caption": "Bison (buffalo) were the heart of the Cheyenne economy. A buffalo cow could yield 500 pounds of food as well as resources for robes, tipi covers, and other necessities. Buffalo populations in the mid-nineteenth century were estimated at thirty to sixty 62]million. Buffalo are also spiritually important to the Cheyenne Nation; there are accounts that describe the buffalo helping Cheyenne warriors during battle.",
+		    "image_credit": "",
+		    "body": "Bison (buffalo) were the heart of the Cheyenne economy. A buffalo cow could yield 500 pounds of food as well as resources for robes, tipi covers, and other necessities. Buffalo populations in the mid-nineteenth century were estimated at thirty to sixty 62]million. Buffalo are also spiritually important to the Cheyenne Nation; there are accounts that describe the buffalo helping Cheyenne warriors during battle.",
+		    "source": "Gilbert King, “Where the Buffalo No Longer Roamed,” Smithsonian Magazine, July 17, 2012.",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "Bison (buffalo) were the heart of the <span data-pronounce='../shared/lib/im/audio/PL_Cheyenne.mp3'>Cheyenne</span> economy. A buffalo cow could yield 500 pounds of food as well as resources for robes, tipi covers, and other necessities. Buffalo populations in the mid-nineteenth century were estimated at thirty to sixty 62]million. Buffalo are also spiritually important to the Cheyenne Nation; there are accounts that describe the buffalo helping Cheyenne warriors during battle.",
+		    "thumbnail_image": "./assets/imgs/m1a2/med-source-3.jpg",
+		    "question_text": "How did the Cheyenne Nation’s relationship with buffalo go beyond meeting daily needs?"
+		},
+		{
+			"id": 4,
+		    "title": "Fort Robinson",
+		    "image_url": "./assets/imgs/m1a2/full-source-4.jpg",
+		    "image_caption": "",
+		    "image_credit": "Photo by Doug McMains, 2016",
+		    "body": "After having been forced by the U.S. government to relocate to the Southern <span data-pronounce='../shared/lib/im/audio/PL_Cheyenne.mp3'>Cheyenne</span> reservation in Oklahoma, a group of Northern Cheyenne attempted to return to their homelands in Montana in September 1878. Many of them were captured, imprisoned at Fort Robinson, and killed when they attempted to escape.“I will never forget finding myself standing in front of a marker near Fort Robinson, Nebraska. On that cold winter day I read in horror about our relatives who, in the middle of a freezing 1879 winter, laid their very lives on the line in order to fight their way home 400 miles away…It was at that very moment I realized the sacrifice our Cheyenne ancestors paid with their very lives in order that we might have one another, our culture and our beautiful homeland.” —Major Robinson, Northern Cheyenne Tribe",
+		    "source": "Major Robinson, Western Heritage Center, Billings, MT http://www.ywhc.org/index.php?p=84",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "After having been forced by the U.S. government to relocate to the Southern Cheyenne reservation in Oklahoma, a group of Northern Cheyenne attempted to return to their homelands in Montana in September 1878. Many of them were captured, imprisoned at Fort Robinson, and killed when they attempted to escape.",
+		    "thumbnail_image": "./assets/imgs/m1a2/med-source-4.jpg",
+		    "question_text": "What evidence is offered from this quote about the importance of homelands to Cheyenne families and cultures?"
+		},
+		{
+			"id": 5,
+		    "title": "Fort Robinson Run",
+		    "image_url": "./assets/imgs/m1a2/full-source-5.jpg",
+		    "image_caption": "",
+		    "image_credit": "Photography by Jesse A. Short Bull, courtesy of Billings Gazette",
+		    "body": "Every January young Northern <span data-pronounce='../shared/lib/im/audio/PL_Cheyenne.mp3'>Cheyenne</span> students run a seven-day, 400-mile journey from Fort Robinson, Nebraska, to their reservation in Montana. This event is called the Fort Robinson Spiritual Run and it commemorates the “Fort Robinson Outbreak of 1879,” when their Cheyenne ancestors attempted to escape imprisonment and punishment at Fort Robinson. Every January young Northern Cheyenne students run a seven-day, 400-mile journey from Fort Robinson, Nebraska, to their reservation in Montana. This event is called the Fort Robinson Spiritual Run and it commemorates the “Fort Robinson Outbreak of 1879,” when their Cheyenne ancestors attempted to escape imprisonment and punishment at Fort Robinson.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Images",
+		    "excerpt": "",
+		    "thumbnail_image": "./assets/imgs/m1a2/med-source-5.jpg",
+		    "question_text": "<p>Can you think of people in your life who have sacrificed for their family or community?</p><p>How would you choose to honor their sacrifice?</p>"
+		}
+	],
+    "returnTo": {
+        "title": "Northern Plains Culture Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian.<br>Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+}

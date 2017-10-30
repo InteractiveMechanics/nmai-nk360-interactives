@@ -1,0 +1,73 @@
+@media print {
+    .module-menu-wrapper,
+    .activity-menu-wrapper,
+    .fixed-bottom,
+    .overlay,
+    #footer,
+    #print,
+    #static-ui,
+    #navigation,
+    #instructions,
+    #step-by-step-cards {
+        display: none !important;
+    }
+    
+    html,
+    body {
+        background: white;
+        overflow: auto;
+        height: auto;
+        -webkit-print-color-adjust: exact;
+    }
+
+    #print-preview {
+        opacity: 1 !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        display: block !important;
+    
+        .print-preview-container {
+            width: 100%;
+            margin: 0;
+            position: relative;
+            background: white;
+            padding: 0;
+            z-index: 10;
+        }
+        .paper-preview-article {
+            max-height: 850px;
+    
+            > p {
+                font-size: 0.7rem;
+                line-height: 1.4;
+                text-align: justify;
+            }
+            blockquote {
+                font-size: 0.9rem;
+    
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                }
+                .blockquote-footer {
+                    font-size: 0.7rem;
+                    line-height: 1.4;
+                }
+            }
+    
+            figure {
+                .image-wrapper {
+                    img {
+                        max-height: 200px;
+                    }
+                }
+                figcaption {
+                    font-size: 0.6rem;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

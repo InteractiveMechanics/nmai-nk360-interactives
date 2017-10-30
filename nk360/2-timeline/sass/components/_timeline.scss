@@ -1,0 +1,616 @@
+/**
+ * This file includes all of the styles for the scrollable timeline. It does not use Slick Slider. 
+**/
+
+
+.timeline-bkgr {
+    height: 100%;
+}
+
+
+.transition-overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        overflow-y: scroll;
+    }
+}
+
+.transition-content-wrapper {
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 25px;
+    h1 {
+        margin: 20px 0px;
+        font-family: $headline-accent;
+        font-size: 4.0em;
+        @include screen-xs {
+            font-size: 2em;
+        }
+    }
+    h6 {
+        font-size: 0.75em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    p {
+        font-weight: 300;
+        margin-top: 20px;
+        line-height: 1.9;
+        padding: 0px 25px;
+    }
+    .btn-wrapper {
+        display: flex;
+        margin-top: 60px;
+        @include screen-xs {
+            flex-direction: column;
+            margin-top: 0px;
+        }
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            padding-bottom: 160px;
+        }
+        @media screen and ($screen-xs) and ($screen-landscape) {
+            flex-direction: row;
+            padding-bottom: 160px;
+        }
+        .btn {
+            margin: 20px;
+            font-weight: 400;
+        }
+    }
+    @include screen-xs {
+        width: 90%;
+        height: 100%;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: auto;
+        padding-top: calc(5% + 64px);
+    }
+
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        height: auto;
+        padding-top: calc(5% + 64px);
+
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: calc(100vh - 114px);
+    }
+}
+
+.timeline-wrapper {
+    position: absolute;
+    height: 103%;
+    width: 4800px;
+    overflow: auto;
+    background: url('../assets/timeline-full@2x.jpg');
+    background-size: cover;
+}
+
+.timeline-track {
+    border-bottom: 1px solid #deded1;
+    bottom: 137px; //17%
+    position: absolute;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 119px;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        bottom: 197px;
+    }
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        bottom: 187px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        bottom: 187px;
+    }
+}
+
+
+.timeline-track[data-era="1"] {
+    width: 95%;
+    left: 60px;
+}
+
+.timeline-track[data-era="2"],
+.timeline-track[data-era="3"] {
+    width: 100%;
+
+}
+
+.timeline-item-wrapper {
+    position: absolute;
+}
+
+.era-container {
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+}
+
+
+
+.era-container[data-era="1"] {
+    left: 0px;
+    width: 2140px;
+}
+
+.era-container[data-era="2"] {
+    left: 1780px;
+    width: 1720px;
+}
+
+.era-container[data-era="3"] {
+    left: 3340px;
+    width: 1460px;
+}
+
+
+
+
+.timeline-item {
+    background-color: #678da0;
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    text-align: initial;
+    width: $moment-width;
+    height: $moment-height;
+    z-index: 3;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0px;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+       width: auto;
+    }
+
+}
+
+.timeline-item-wrapper[data-era="1"][data-timeline="1"] {
+    left: 60px;
+    bottom: $timeline-bottom;
+    z-index: 5;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+}
+
+.timeline-item-wrapper[data-era="1"][data-timeline="2"] {
+    left: 750px;
+    bottom: $timeline-bottom;
+    z-index: 4;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+    
+}
+
+.timeline-item-wrapper[data-era="1"][data-timeline="3"] {
+    left: 1000px;
+    bottom: $timeline-bottom-alt;
+    z-index: 3;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 190px;
+    }
+}
+
+.timeline-item-wrapper[data-era="1"][data-timeline="4"] {
+    left: 1430px;
+    bottom: $timeline-bottom;
+    z-index: 2;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+    
+}
+
+.timeline-item-wrapper[data-era="1"][data-timeline="5"] {
+   left: 1715px;
+   bottom: $timeline-bottom-alt;
+   z-index: 1;
+   @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 190px;
+    }
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="1"] {
+    left: 65px;
+    bottom: $timeline-bottom;
+    z-index: 1;
+   @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="2"] {
+   left: 340px;
+   bottom: $timeline-bottom-alt;
+   @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 190px;
+    }
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="3"] {
+    left: 825px;
+    bottom: $timeline-bottom;
+    z-index: 1;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+    
+}
+
+.timeline-item-wrapper[data-era="2"][data-timeline="4"] {
+    left: 1320px;
+    bottom: $timeline-bottom;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+    
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="1"] {
+    left: 90px;
+    bottom: $timeline-bottom;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="2"] {
+    left: 505px;
+    bottom: $timeline-bottom;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+
+}
+
+.timeline-item-wrapper[data-era="3"][data-timeline="3"] {
+    left: 685px;
+    bottom: $timeline-bottom-alt;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 190px;
+    }
+}
+
+//this is the last item on the timeline and has a unique style 
+.timeline-item-wrapper[data-era="3"][data-timeline="4"] {
+    left: 945px; //1270
+    bottom: $timeline-bottom;
+    .timeline-item {
+        .timeline-btn-text-wrapper {
+            padding: 15px 52px 15px 12px;
+        }
+        .timeline-btn-img {
+            left: auto;
+            right: -33px;
+        }
+        .sm-label-wrapper {
+            border-left: none;
+            border-right: 2px dotted #dedede;
+            width: 100%;
+            text-align: right;
+            h4 {
+                left: auto;
+                display: block;
+                right: -16px;
+                width: 100%;
+            }
+        }
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 136px;
+    }
+
+
+}
+
+
+
+.timeline-btn-img {
+    height: 82px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0px;
+    width: 82px;
+    position: absolute;
+    top: 0px;
+    left: -38px;
+    z-index: 2;
+}
+
+.timeline-btn-text-wrapper {
+    font-weight: 300;
+    color: white;
+    overflow: hidden;
+    padding: 10px 10px 10px 52px;
+    height: 115px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+       display: none;
+    }
+}
+
+
+#prev-btn {
+    left: 12px;
+    position: absolute;
+    top: 40%;
+    border: none;
+    z-index: 3;
+    transition: 0.5 opacity ease-in-out;
+    &:hover, &:active, &:focus {
+        background: transparent !important;
+        opacity: 0.7;
+    }
+    img {
+        @include screen-xs {
+            display: none;
+        }
+    }
+
+    @include screen-xs {
+        left: 0px;
+        top: 35%;
+        &:before {
+        content: "";
+        background: url('/nk360/shared/lib/im/images/icon-prev.svg');
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        }
+    }
+}
+
+
+#next-btn {
+    @extend #prev-btn;
+    right: 12px;
+    left: auto;
+    @include screen-xs {
+        right: 0px;
+        &:before {
+            content: "";
+            background: url('/nk360/shared/lib/im/images/icon-next.svg');
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+    }
+
+}
+
+.disabled {
+    opacity: 0.25 !important;
+}
+
+.lg-label-wrapper {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    padding-left: 0px;
+    li {
+        display: inline;
+        h2 {
+            color: #deded1;
+            display: inline;
+            font-family: $headline;
+            position: absolute;
+            bottom: 14px;
+
+        }
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        bottom: 20px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        bottom: 100px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        bottom: 100px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        bottom: 100px;
+    }
+}
+
+
+.sm-label {
+    font-family: $headline-accent;
+    position: relative;
+    top: 32px;
+    left: -8px;
+    color: #deded1;
+}
+
+.sm-label-wrapper {
+    position: absolute;
+    height: 182px;
+    border-left: 4px dotted #deded1;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 2px;
+    top: 42px;
+    left: 0px;
+    h4 {
+        display: inline;
+        position: relative;
+        font-family: $headline-accent;
+        font-size: 1.5rem;
+    } 
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        height: 100px;
+        width: 200px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 132px
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 122px;
+    }  
+}
+
+.sm-label-wrapper[data-era="1"][data-timeline="3"] {
+    height: 346px;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        height: 154px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
+}
+
+.sm-label-wrapper[data-era="1"][data-timeline="5"] {
+    height: 346px;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        height: 154px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
+    
+}
+
+.sm-label-wrapper[data-era="2"][data-timeline="2"] {
+    height: 346px;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        height: 154px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
+}
+
+.sm-label-wrapper[data-era="3"][data-timeline="3"] {
+    height: 346px;
+    @media screen and ($screen-xs) and ($screen-landscape) {
+       height: 154px;
+    }
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 286px;
+    }
+
+    @media screen and ($screen-sm) and ($screen-portrait) {
+        height: 296px;
+    }
+
+    @media screen and ($screen-md) and ($screen-landscape) {
+        height: 286px;
+    }
+}
+
+.lg-label-1 {
+    left: 60px;
+}
+
+.lg-label-2 {
+    left: 475px;
+}
+
+.lg-label-3 {
+    left: 940px;
+}
+
+.lg-label-4 {
+    left: 1845px;
+}
+
+
+.lg-label-5 {
+    left: 3100px;
+}
+
+.lg-label-6 {
+    left: 4275px;
+}
+
+.lg-label-7{
+    left: 4625px;
+}
+
+.lg-label-4[data-era="2"] {
+    left: 3000px;
+}
+
+.lg-label-5[data-era="2"] {
+    left: 3400px;
+}
+
+.lg-label-1[data-era="3"] {
+    left: 3000px
+}
+
+.lg-label-2[data-era="3"] {
+    left: 3400px;
+}
+
+.lg-label-3[data-era="3"] {
+    left: 3700px;
+}
+
+.lg-label-4[data-era="3"] {
+    left: 4000px;
+}
+
+.lg-label-5[data-era="3"] {
+    left: 4400px;
+}
+

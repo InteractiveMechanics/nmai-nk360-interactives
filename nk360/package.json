@@ -1,0 +1,17 @@
+{
+  "name": "NK360_Interactives",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "latest",
+    "grunt": "latest",
+    "jshint-stylish": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-processhtml": "latest",
+    "grunt-contrib-uglify": "latest"
+  }
+}

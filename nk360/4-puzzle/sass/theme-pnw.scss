@@ -1,0 +1,13 @@
+/**
+ * This file loads all Sass files to be compiled by Grunt.
+ * Include each file for this specific instance.
+*/
+
+@import '../../shared/lib/im/sass/base/variables';
+@import '../../shared/lib/im/sass/_theme-pnw';
+
+@import 'pnw/card';
+@import 'pnw/modal';
+@import 'pnw/intro';
+@import 'pnw/complete';
+@import 'pnw/puzzle';

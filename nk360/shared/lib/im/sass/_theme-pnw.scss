@@ -1,0 +1,139 @@
+// Colors
+$primary:           #006986;    // Blue-green darker
+$secondary:         #a8bd46;    // Green
+$accent:            #ec5343;    // Red-orange
+
+$lightaccent:       #d4edea;    // Light blue
+$midaccent:         #9eb2c1;    // Mid blue-gray
+
+$btnaccent:         #2E3742;    // Deep blue
+
+
+// Typography
+@font-face {
+    font-family: "Ludicrous";
+    font-weight: normal;
+    font-style: normal;
+    src: url('/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.eot?') format('eot'), 
+         url('/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.woff') format('woff'), 
+         url('/nk360/shared/lib/im/fonts/ludicrous/Ludicrous.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Archer Pro";
+    font-weight: normal;
+    font-style: normal;
+    src: url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.eot?') format('eot'), 
+         url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.woff') format('woff'), 
+         url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Archer Pro";
+    font-weight: bold;
+    font-style: normal;
+    src: url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.eot?') format('eot'), 
+         url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.woff') format('woff'), 
+         url('/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.ttf') format('truetype');
+}
+
+$sans-serif:        'Open Sans', sans-serif;
+$headline:          'Ludicrous', serif;
+$headline-accent:   'Archer Pro', serif;
+
+
+
+// Typography styling
+h1 {
+    font-size: 3.6rem;
+    font-family: $headline;
+}
+h2 {
+    font-family: $headline-accent;
+    color: $primary;
+}
+h3 {
+    font-family: $headline-accent;
+}
+h4 {
+    font-size: 1rem;
+}
+h5 {
+
+}
+h6 {
+
+}
+
+.header {
+    max-width: 540px;
+    margin: 10px auto 0;
+    background-image: url('/nk360/shared/lib/im/images/pnw/splash-04.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px 0 0;
+    max-height: 85px;
+    margin-bottom: 25px;
+
+    @media screen and ($screen-ltmd) and ($screen-portrait) {
+        margin: 60px auto 0;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        margin: 20px auto 0;
+        max-width: 300px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        font-weight: normal;
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    }
+    h2 {
+        font-family: $headline-accent;
+        font-size: 0.8rem;
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    }
+}
+
+
+// Button styles
+.btn {
+    border-color: $btnaccent;
+    color: $btnaccent;
+
+    &:hover, &:focus, &:active {
+        background-color: $btnaccent;
+        border-color: $btnaccent;
+        color: white !important;
+    }
+    &.btn-white {
+        border-color: white;
+        color: white;
+
+        &:hover, &:focus, &:active {
+            color: $btnaccent !important;
+            background-color: white;
+            border-color: white;
+        }
+    }
+    &.active {
+        border-color: $btnaccent;
+        background-color: $btnaccent;
+        color: white !important;
+        opacity: 1;
+
+        &:hover, &:focus, &:active {
+            color: white !important;
+            background-color: $btnaccent;
+            border-color: $btnaccent;
+            opacity: 0.65;
+        }
+    }
+}

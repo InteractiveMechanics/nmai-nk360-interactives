@@ -1,0 +1,35 @@
+body {
+	background: url('/nk360/shared/lib/im/images/np/bkgr-np@2x.png');
+	background-size: cover;
+
+	.annotation-screen {
+	    margin:50px auto 0 !important;
+	}
+}
+.header {
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        max-width: 340px !important;
+    }
+
+    h1 {
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            font-size: 1.8rem !important;
+        }
+    }
+}
+.btn {
+	
+	i {
+	  path {
+	    fill:#301c18;
+	  }
+	}
+	&:hover {
+		i {
+		  path {
+		    fill:#FFF;
+		  }
+		}
+	}
+}
+

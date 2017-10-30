@@ -1,0 +1,30 @@
+/**
+ * This file loads all Sass files to be compiled by Grunt.
+ * Include each file for this specific instance.
+*/
+
+@import '../../shared/lib/im/sass/base/variables';
+@import '../../shared/lib/im/sass/base/helpers';
+@import '../../shared/lib/im/sass/base/typography';
+@import '../../shared/lib/im/sass/base/mixins';
+
+@import '../../shared/lib/im/sass/components/layout';
+@import '../../shared/lib/im/sass/components/header';
+@import '../../shared/lib/im/sass/components/footer';
+@import '../../shared/lib/im/sass/components/instructions';
+@import '../../shared/lib/im/sass/components/tooltips';
+@import '../../shared/lib/im/sass/components/audio';
+@import '../../shared/lib/im/sass/components/buttons';
+@import '../../shared/lib/im/sass/components/menu';
+@import '../../shared/lib/im/sass/components/gallery';
+
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/mixins';
+
+@import 'components/layout';
+@import 'components/dragdrop';
+@import 'components/timeline';
+@import	'components/modal';
+@import 'components/slider';

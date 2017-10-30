@@ -1,0 +1,26 @@
+/**
+ * This file includes Northern Plains theme styles for the intro and learning points modals.
+ * 
+**/
+
+
+.intro-card,
+.learning-points-card  {
+	background: url('/nk360/shared/lib/im/images/np/text-card-np@2x.png');
+	background-size: 95%;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	.header-wrapper {
+		h1 {
+			font-family: $headline;
+			font-size: 30px;
+    		margin-top: 20px;
+		}
+	}
+
+	@media screen and ($screen-sm) and ($screen-portrait) {
+		margin-top: 30px;
+		background-size: 100%;
+	}
+}
