@@ -1,7 +1,7 @@
 Game = (function() {
     //positions: [0, 4320, 8640, -1],
     var settings = {
-      speed: 100,
+      speed: 4,
       position: 0,
       fishSelection: null,
       pause: true,
@@ -44,6 +44,10 @@ Game = (function() {
     var randomNumberArray = [];
     var PositionArray = [];
 
+    /**
+      * Initializer for the salmon challenges interactive
+      * @param {array} data holds the content data for this interactive
+    */
     var init = function(data) {
         $('.icon-pause').hide();
         gameData = data;
@@ -68,6 +72,10 @@ Game = (function() {
         $('#select-fish').removeClass('hidden').addClass('show');
       }
     }
+
+    /**
+      * Binds all events for the salmon interactive, sets the tooltip then initializes the game
+    */
 
     var bindEvents = function() {
         $('body').on('click tap', '#show-instructions', showIntro);
@@ -94,6 +102,12 @@ Game = (function() {
         initGame();
     }
 
+    /**
+      * Initializer for the salmon challenges interactive
+      * @param {string} [name] the name querystring
+      * @param {string} [url] THe page url
+      * @return null if no param, or the value of the request querystring
+    */
     var getParameterByName = function(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
@@ -104,6 +118,9 @@ Game = (function() {
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
+    /**
+      * Handler for the pause and play icon click
+    */
     var hitPause = function() {
       var isPlayingVisible = $('.icon-play').is(':visible');
 
@@ -129,59 +146,53 @@ Game = (function() {
       }
     }
 
+    /**
+      * Handler for the pause and play event via the space bar
+      * @param {event} [e] keyevent that was pressed
+    */
     var hitPauseSpaceBar = function(e) {
 
       if(e.keyCode != 32) {
         return;
       }
 
-      var isPlayingVisible = $('.icon-play').is(':visible');
-
-      if(isPlayingVisible) {
-        settings.pause = false;
-        $('.icon-play').hide();
-        $('.icon-pause').show();
-        $('#SelectedSalmon').css('animation-play-state', 'paused');
-        $('.hotspot').css('animation-play-state', 'paused');
-        $('.waves').css('animation-play-state', 'paused');
-        $('.waves-1').css('animation-play-state', 'paused');
-        $('.waves-2').css('animation-play-state', 'paused');
-      } else {
-        settings.pause = true;
-        $('.icon-play').show();
-        $('.icon-pause').hide();
-        $('#SelectedSalmon').css('animation-play-state', 'running');
-        $('.hotspot').css('animation-play-state', 'running');
-        $('.waves').css('animation-play-state', 'running');
-        $('.waves-1').css('animation-play-state', 'running');
-        $('.waves-2').css('animation-play-state', 'running');
-        requestAnimationFrame(updateWorld);
-      }
+      hitPause();
     }
 
+    /**
+      * Restarts the interactives 
+    */
     var restartSalmonChallenges = function() {
       window.location.reload();
     }
 
+    /**
+      * Restarts the interactives but adds a skip query param for the intructions in the beginning.
+    */
     var restartSalmonChallengesSkipInstructions = function() {
       window.location.href = window.location.pathname + "?instructions=false";
     }
 
+    /**
+      * sets the data and creates the HTML views for the intro cards, hotsopts, and random encounters
+    */
     var setData = function() {
       setIntroCard();
-      setObstacles();
       setRandomEncounters();
     }
 
+    /**
+      * Creates the Intro Slider HTML
+    */
     var setIntroCard = function() {
       var sliderTemplate = $.templates("#introSliderTemplate");
       var sliderTemplateHTMLOutput = sliderTemplate.render(gameData.intro_cards);
       $(".intro-slider").html(sliderTemplateHTMLOutput);
     }
 
-    var setObstacles = function() {
-    }
-
+    /**
+      * Creates an array of ecounters from the salmon challenge data
+    */
     var setRandomEncounters = function() {
       var encounters = gameData.random;
 
@@ -230,6 +241,10 @@ Game = (function() {
       $('.hotspot').css('animation-play-state', 'paused');
     }
 
+    /**
+      * Gets a random city encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getCityEncounter = function() {
       var x = getRandomValue(settings.cityStart, settings.cityEnd);
       var y = getRandomValue(150, window.innerHeight - 200);
@@ -242,6 +257,10 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Gets a random ocean encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getOceanEncounter = function() {
       var x = getRandomValue(settings.oceanStart, settings.oceanEnd);
       var y = getRandomValue(150, window.innerHeight - 200);
@@ -254,6 +273,10 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Gets a random wilderness encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getWildernessEncounters = function() {
       var x = getRandomValue(settings.wildernessStart, settings.wildernessEnd);
       var y = getRandomValue(150, window.innerHeight - 200);
@@ -266,6 +289,11 @@ Game = (function() {
       return encounter;
     };
 
+
+    /**
+      * Gets a random encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getRandomEncounters = function() {
       var x = getRandomValue(400, 11150);
       var y = getRandomValue(150, window.innerHeight - 200);
@@ -278,6 +306,11 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Find a random item in an array and if it's not in use returns it else keeps searching
+      * @param {array}, the array to get the random result from
+      * @return the random item in array
+    */
     var getRandomArrayItem = function(encounters){
       var encounter = encounters[Math.floor(Math.random() * encounters.length)];
       if (encounter.alreadyUsing) {
@@ -286,6 +319,11 @@ Game = (function() {
       return encounter;
     }
 
+    /**
+      * Creates an hotspot html view based on the passed param.
+      * @param {object} the encounter to make a hotspot view from
+      * @return the html view
+    */
     var createHotspotHTML = function(encounter) {
       var hotspotTemplate = $.templates("#hotspotTemplate");
       var hotSpotHTMLOutput = hotspotTemplate.render(encounter);
@@ -293,10 +331,11 @@ Game = (function() {
       return hotSpotHTMLOutput;
     }
 
-    var createCityEncounters = function() {
-
-    }
-
+    /**
+      * Find a random item in an array and if it's not in use returns it else keeps searching
+      * @param {array}, the array to get the random result from
+      * @return the random item in array
+    */
     var getRandomValue = function(min,max) {
       var number = Math.floor(Math.random() * (max - min + 1) + min);
       var isUnique = true;
@@ -316,6 +355,10 @@ Game = (function() {
       }
     }
 
+    /**
+      * Gets a random city encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getCityEncounter = function() {
       var position = getRandomPositon(settings.cityStart, settings.cityEnd, 150, window.innerHeight - 200);
       var encounter = getRandomArrayItem(cityEncounters);
@@ -327,6 +370,10 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Gets a random ocean encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getOceanEncounter = function() {
       var position = getRandomPositon(settings.oceanStart, settings.oceanEnd, 150, window.innerHeight - 200);
       var encounter = getRandomArrayItem(oceanEncounters);
@@ -338,6 +385,10 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Gets a random wilderness encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getWildernessEncounters = function() {
       var position = getRandomPositon(settings.wildernessStart, settings.wildernessEnd, 150, window.innerHeight - 200);
       var encounter = getRandomArrayItem(wildernessEncounters);
@@ -349,6 +400,10 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Gets a random encounter and sets it's left and bottom value to random numbers
+      * @return the random ecounter
+    */
     var getRandomEncounters = function() {
       var position = getRandomPositon(400, 11150, 150, window.innerHeight - 200);
       var encounter = getRandomArrayItem(randomEncounters);
@@ -360,6 +415,11 @@ Game = (function() {
       return encounter;
     };
 
+    /**
+      * Creates a hotspot position and checks if that position is unique 
+      * @param {array}, 
+      * @return the random item in array
+    */
     var getRandomPositon = function(xMin, xMax, yMin, yMax) {
       var xNumber = Math.floor(Math.random() * (xMax - xMin + 1) + xMin);
       var yNumber = Math.floor(Math.random() * (yMax - yMin + 1) + yMin);
@@ -433,7 +493,7 @@ Game = (function() {
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
             
-                settings.backgroundPosition -= 0;
+                /*settings.backgroundPosition -= 0;
                 settings.midgroundPosition -= .1;
                 settings.foregroundPosition -= .5;
                 
@@ -446,7 +506,7 @@ Game = (function() {
                 {
                   var _left = parseInt(menus[i].style.left) - 4;
                   menus[i].style.left = _left + "px";
-                }
+                }*/
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
