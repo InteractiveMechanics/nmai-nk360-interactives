@@ -130,7 +130,7 @@ h4 {
 .intro-card,
 .learning-points-card {
   background: url("/nk360/shared/lib/im/images/np/text-card-np@2x.png");
-  background-size: 100%;
+  background-size: 95%;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -142,7 +142,8 @@ h4 {
   @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
     .intro-card,
     .learning-points-card {
-      margin-top: 30px; } }
+      margin-top: 30px;
+      background-size: 100%; } }
 
 /**
  * This file includes Northern Plains theme styles for the 'puzzle complete' overlay.
