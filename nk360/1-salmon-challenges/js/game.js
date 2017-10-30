@@ -920,7 +920,8 @@ Game = (function() {
         if(add_fish) {
           addFish();
 
-          $(this).addClass('correct');
+          $('.answer-false').addClass('wrong');
+          $('.answer-true').addClass('correct');
 
           $('.quiz-detail').text(result);
 
@@ -932,7 +933,7 @@ Game = (function() {
         if(lose_fish) {
           loseFish();
 
-          $(this).addClass('wrong');
+          $('.answer-false').addClass('wrong');
           $('.answer-true').addClass('correct');
 
           $('.quiz-detail').text(result);
@@ -942,7 +943,7 @@ Game = (function() {
         }
 
         if(!add_fish && !add_fish) {
-          $(this).addClass('wrong');
+          $('.answer-false').addClass('wrong');
           $('.answer-true').addClass('correct');
 
           $('.quiz-detail').text(result);

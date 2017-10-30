@@ -549,39 +549,30 @@ body .photo-container {
 @keyframes one-steelhead-fish-swimming {
   100% {
     background-position: -1974px; } }
-
 @keyframes two-steelhead-fish-swimming {
   100% {
     background-position: -3724px; } }
-
 @keyframes three-steelhead-fish-swimming {
   100% {
     background-position: -5138px; } }
-
 @keyframes one-chinook-fish-swimming {
   100% {
     background-position: -2072px; } }
-
 @keyframes two-chinook-fish-swimming {
   100% {
     background-position: -3808px; } }
-
 @keyframes three-chinook-fish-swimming {
   100% {
     background-position: -5236px; } }
-
 @keyframes one-sockeye-fish-swimming {
   100% {
     background-position: -2142px; } }
-
 @keyframes two-sockeye-fish-swimming {
   100% {
     background-position: -3878px; } }
-
 @keyframes three-sockeye-fish-swimming {
   100% {
     background-position: -5306px; } }
-
 .hotspot {
   cursor: pointer;
   width: 87px;
@@ -605,13 +596,10 @@ body .photo-container {
 @keyframes stretch {
   0% {
     transform: scale(1); }
-
   50% {
     transform: scale(0.8); }
-
   100% {
     transform: scale(1); } }
-
 #select-fish {
   position: fixed;
   width: 100%;
@@ -753,7 +741,15 @@ body .photo-container {
           margin: 30px 0; } }
 
 .quiz-detail {
-  font-weight: bold; }
+  font-weight: bold;
+  bottom: 0;
+  text-align: center; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .quiz-detail {
+      position: relative !important; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .quiz-detail {
+      position: relative !important; } }
 
 .solution-text {
   font-weight: bold; }
@@ -819,11 +815,9 @@ transform: none !important;*/
 @keyframes move-waves {
   100% {
     background-position: -6174px; } }
-
 @keyframes left-to-right {
   100% {
     margin-left: -431px; } }
-
 .number-of-salmon {
   position: fixed;
   top: 47%;
@@ -926,19 +920,8 @@ hr {
   @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
     .spawn-death-slider-wrapper .card-body {
       height: 42vh; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) and (min-height: 667px) {
-    .spawn-death-slider-wrapper .card-body {
-      max-height: 55vh; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
-    .spawn-death-slider-wrapper .card-body {
-      max-height: 300px; } }
 .spawn-death-slider-wrapper .slick-slide {
   margin: 0 0; }
-  @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
-    .spawn-death-slider-wrapper .slick-slide:first-of-type .card-body {
-      max-height: 52vh; }
-    .spawn-death-slider-wrapper .slick-slide:last-of-type .card-body {
-      max-height: 44vh; } }
 
 .card {
   background: #FFFFFF;
@@ -954,6 +937,11 @@ hr {
     left: -5px;
     top: 4px;
     transform: rotate(-2.5deg); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      .card:before {
+        display: none; } }
+  .card.before-indicator, .card.after-indicator {
+    display: none; }
   .card .close-icon {
     position: absolute;
     right: -100px;
@@ -1029,17 +1017,13 @@ hr {
     .card-body {
       height: 57vh;
       margin-bottom: 10px; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) and (min-height: 667px) {
-    .card-body {
-      height: 55vh;
-      margin-bottom: 10px; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
-    .card-body {
-      height: 48vh;
-      margin-bottom: 10px; } }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .card-body {
       height: auto; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .card-body {
+      height: auto;
+      padding-bottom: 80px; } }
   @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 666px) {
     .card-body h3 {
       font-size: 1.5rem; } }
@@ -1060,6 +1044,11 @@ hr {
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       margin-bottom: 50px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .card-wrapper {
+      height: auto;
+      bottom: auto;
+      margin-bottom: 40px; } }
   .card-wrapper .overlay {
     z-index: 196; }
   .card-wrapper > .card {
@@ -1076,7 +1065,10 @@ hr {
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .card-wrapper > .card {
         width: 340px;
-        top: 40px; } }
+        top: 40px;
+        height: auto;
+        margin-bottom: 80px;
+        position: relative; } }
     @media screen and (max-width: 767px) and (orientation: landscape) {
       .card-wrapper > .card {
         top: 20px;
@@ -1092,6 +1084,9 @@ hr {
     -o-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      .card-wrapper .card-before {
+        display: none; } }
   .card-wrapper .card-after {
     left: 0px;
     background: white;
@@ -1101,6 +1096,9 @@ hr {
     -o-transform: rotate(2deg);
     -ms-transform: rotate(2deg);
     transform: rotate(2deg); }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      .card-wrapper .card-after {
+        display: none; } }
   .card-wrapper .card-image {
     background-color: #9eb2c1;
     max-height: 250px; }
@@ -1182,9 +1180,21 @@ hr {
 
 .slick-prev {
   left: -120px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-prev {
+      left: -10px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-prev {
+      left: -10px; } }
 
 .slick-next {
   right: -120px; }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-next {
+      right: -10px; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-next {
+      right: -10px; } }
 
 .slick-prev,
 .slick-next {
@@ -1194,7 +1204,19 @@ hr {
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .slick-prev,
     .slick-next {
-      display: none !important; } }
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      top: 45%;
+      filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.75));
+      opacity: 1 !important; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-prev,
+    .slick-next {
+      position: fixed;
+      top: 45%;
+      filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.75));
+      opacity: 1 !important; } }
 
 .slick-prev:before,
 .slick-next:before {
@@ -1203,12 +1225,32 @@ hr {
 .slick-prev:hover,
 .slick-next:hover {
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-prev:hover,
+    .slick-next:hover {
+      filter: drop-shadow(0 0 8px black); } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-prev:hover,
+    .slick-next:hover {
+      filter: drop-shadow(0 0 8px black); } }
 
 .slick-prev:hover {
   left: -130px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-prev:hover {
+      left: -10px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-prev:hover {
+      left: -10px; } }
 
 .slick-next:hover {
   right: -130px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-next:hover {
+      right: -10px; } }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-next:hover {
+      right: -10px; } }
 
 .slick-prev:before {
   font-family: 'slick';
@@ -1217,9 +1259,14 @@ hr {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../../shared/lib/im/images/icon-prev.svg") no-repeat;
+  background: url("/nk360/shared/lib/im/images/icon-prev.svg") no-repeat;
   color: transparent;
   background-size: contain; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-prev:before {
+      width: 60px;
+      height: 60px;
+      display: block; } }
 
 .slick-next:before {
   font-family: 'slick';
@@ -1227,9 +1274,14 @@ hr {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("../../shared/lib/im/images/icon-next.svg") no-repeat;
+  background: url("/nk360/shared/lib/im/images/icon-next.svg") no-repeat;
   color: transparent;
   background-size: contain; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .slick-next:before {
+      width: 60px;
+      height: 60px;
+      display: block; } }
 
 /*
 .slick-dots {
@@ -1270,6 +1322,9 @@ hr {
   margin: 0 auto;
   bottom: -80px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
+    .slick-dots {
+      display: none !important; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .slick-dots {
       display: none !important; } }
   .slick-dots > li {
@@ -1424,3 +1479,5 @@ hr {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 45px 43px; } }
+
+/*# sourceMappingURL=main.css.map */

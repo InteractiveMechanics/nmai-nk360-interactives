@@ -477,6 +477,13 @@ body {
     font-weight: bold;
     bottom: 0;
     text-align: center;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        position: relative !important;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        position: relative !important;
+    }
 }
 .solution-text {
     font-weight: bold;

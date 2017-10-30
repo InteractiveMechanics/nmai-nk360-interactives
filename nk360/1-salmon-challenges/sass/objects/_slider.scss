@@ -16,10 +16,24 @@
 
 .slick-prev {
     left: -120px;
+
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        left: -10px;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        left: -10px;
+    }
 }
 
 .slick-next {
     right: -120px;
+
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        right: -10px;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        right: -10px;
+    }
 }
 
 .slick-prev,
@@ -29,26 +43,58 @@
     transition: 0.5s all;
 
     @media screen and ($screen-xs) and ($screen-portrait) {
-        display: none !important;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        top: 45%;
+        filter: drop-shadow(0 0 8px rgba(0,0,0,0.75));
+        opacity: 1 !important;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        position: fixed;
+        top: 45%;
+        filter: drop-shadow(0 0 8px rgba(0,0,0,0.75));
+        opacity: 1 !important;
     }
 }
 
 .slick-prev:before,
 .slick-next:before {
-    font-size:100px;
+    font-size: 100px;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        filter: drop-shadow(0 0 8px rgba(0,0,0,1));
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        filter: drop-shadow(0 0 8px rgba(0,0,0,1));
+    }
 }
 
 .slick-prev:hover {
     left: -130px;
+    
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        left: -10px;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        left: -10px;
+    }
 }
 
 .slick-next:hover {
     right: -130px;
+    
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        right: -10px;
+    }
+    @media screen and ($screen-xs) and ($screen-landscape) {
+        right: -10px;
+    }
 }
 
 .slick-prev:before {
@@ -58,9 +104,15 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('../../shared/lib/im/images/icon-prev.svg') no-repeat;
+    background: url('/nk360/shared/lib/im/images/icon-prev.svg') no-repeat;
     color: transparent;
     background-size:contain;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        width: 60px;
+        height: 60px;
+        display: block;
+    }
 }
 
 
@@ -70,9 +122,15 @@
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url('../../shared/lib/im/images/icon-next.svg') no-repeat;
+    background: url('/nk360/shared/lib/im/images/icon-next.svg') no-repeat;
     color: transparent;
     background-size:contain;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        width: 60px;
+        height: 60px;
+        display: block;
+    }
 }
 /*
 .slick-dots {
@@ -115,6 +173,9 @@
     bottom: -80px;
 
     @media screen and ($screen-xs) and ($screen-landscape) {
+        display: none !important;
+    }
+    @media screen and ($screen-xs) and ($screen-portrait) {
         display: none !important;
     }
 

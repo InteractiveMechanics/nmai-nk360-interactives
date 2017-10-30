@@ -42,34 +42,9 @@
         @media screen and ($screen-sm) and ($screen-portrait) {
     		height: 42vh;
     	}
-        @media screen and ($screen-xs) and ($screen-portrait) and (min-height: 667px) {
-            max-height: 60vh;
-        }
-        @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 666px) {
-            max-height: 58vh;
-
-        }
     }
 	.slick-slide {
 		margin:0 0;
-
-        @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 666px) {
-            &:first-of-type {
-                .card-body {
-                    max-height: 54vh;
-                }
-            }
-            &:last-of-type {
-                .card-body {
-                    max-height: 42vh;
-
-                    p {
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-            }
-        }
 	}
 
 }
@@ -89,6 +64,14 @@
         left: -5px;
         top: 4px;
         transform: rotate(-2.5deg);
+
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            display: none;
+        }
+    }
+    &.before-indicator,
+    &.after-indicator {
+        display: none;
     }
   
     .close-icon {
@@ -186,13 +169,8 @@
 		height: 57vh;
         margin-bottom: 10px;
 	}
-    @media screen and ($screen-xs) and ($screen-portrait) and (min-height: 667px) {
-        height: 55vh;
-        margin-bottom: 10px;
-    }
-    @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 666px) {
-        height: 48vh;
-        margin-bottom: 10px;
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: auto;
     }
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: auto;
@@ -225,6 +203,11 @@
         -webkit-overflow-scrolling: touch;
         margin-bottom: 50px;
     }
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: auto;
+        bottom: auto;
+        margin-bottom: 40px;
+    }
 
     .overlay {
         z-index:196;
@@ -248,7 +231,9 @@
             @media screen and ($screen-xs) and ($screen-portrait) { 
                 width: 340px;
                 top: 40px;
-                //bottom: 90px;
+                height: auto;
+                margin-bottom: 80px;
+                position: relative;
             }
             @media screen and ($screen-xs) and ($screen-landscape) {
                 top: 20px;
@@ -271,6 +256,10 @@
         -o-transform: rotate(-2deg);
         -ms-transform: rotate(-2deg);
         transform: rotate(-2deg);
+
+        @media screen and ($screen-xs) and ($screen-portrait) { 
+            display: none;
+        }
     }
 
     .card-after {
@@ -282,6 +271,10 @@
 	    -o-transform: rotate(2deg);
 	    -ms-transform: rotate(2deg);
 	    transform: rotate(2deg);
+
+        @media screen and ($screen-xs) and ($screen-portrait) { 
+            display: none;
+        }
 	}
     .card-image {
         background-color: $midgray;
