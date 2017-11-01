@@ -69,12 +69,7 @@ Puzzle = (function() {
     **/
     var buildGame = function() {
 
-        // $('.lg-wrapper-card').lightGallery({
-        //     controls: true
-        // });
-
-
-
+        
          $('.draggable-widget').draggable({
             snap: '.droppable-widget',
             revert: 'invalid',
@@ -332,6 +327,7 @@ Puzzle = (function() {
         $('.droppable-widget').tooltip({
             trigger: 'hover focus'
         });
+
         
     }
 
@@ -412,7 +408,6 @@ Puzzle = (function() {
     }
 
     /**
-    * Enables or disables draggable elements based on window width
     * @param {int} takes no arguments
     * @return {} doesn't return anything but manipulates the DOM 
     **/ 
@@ -420,8 +415,10 @@ Puzzle = (function() {
         var windowWidth = $( window ).width();
         if (windowWidth >= 1199) {
             $('.draggable-widget').draggable('enable');
+            $('body').css('cursor', 'initial');
         } else {
             $('.draggable-widget').draggable('disable');
+            $('body').css('cursor', 'pointer');
         }
     }
 

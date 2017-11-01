@@ -368,12 +368,12 @@ span[data-toggle="tooltip"] {
   font-family: "Archer Pro";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
+  src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Book.ttf") format("truetype"); }
 @font-face {
   font-family: "Archer Pro";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("../fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("../fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
+  src: url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.eot?") format("eot"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.woff") format("woff"), url("/nk360/shared/lib/im/fonts/archer-pro/ArcherPro-Semibold.ttf") format("truetype"); }
 /**
  * This file includes a few miscellaneous styles. 
 **/
@@ -587,17 +587,18 @@ span[data-toggle="tooltip"] {
       margin-top: 30px;
       overflow: initial;
       height: auto; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
     .puzzle-img-wrapper,
     .lg-puzzle-wrapper {
       left: 12%;
       width: 75%;
-      margin-top: 150px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+      margin-top: 100px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
     .puzzle-img-wrapper,
     .lg-puzzle-wrapper {
       left: 25%;
-      width: 50%; } }
+      width: 50%;
+      margin-top: 40px; } }
 
 .puzzle-img {
   width: 100%;
@@ -878,6 +879,14 @@ span[data-toggle="tooltip"] {
       height: 75%;
       overflow-y: scroll;
       margin-bottom: 10px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .modal-body {
+      margin-bottom: 70px;
+      overflow-y: scroll; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+    .modal-body {
+      margin-bottom: 70px;
+      overflow-y: scroll; } }
 
 .close[data-dismiss="modal"] {
   position: absolute;
@@ -925,7 +934,8 @@ span[data-toggle="tooltip"] {
   display: none; }
   @media (max-width: 1199px) {
     #mobile-btn-wrapper {
-      display: block; } }
+      display: block;
+      margin-top: 25px; } }
   #mobile-btn-wrapper .droppable-widget {
     width: auto; }
 
