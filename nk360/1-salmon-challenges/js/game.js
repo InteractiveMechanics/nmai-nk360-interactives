@@ -238,7 +238,7 @@ Game = (function() {
 
       var hotspotHTML = createHotspotHTML(arr);
       $('.encounters').html(hotspotHTML);
-      //$('.hotspot').addClass('state-paused');
+      $('.hotspot').addClass('state-paused');
     }
 
     /**
@@ -645,9 +645,6 @@ Game = (function() {
         
         sliderTemplateHTMLOutput += getInformationCardHTML(cards[i]);
 
-        console.log(getInformationCardHTML(cards[i]));
-
-        
       };
 
       $(".spawn-death-slider").html(sliderTemplateHTMLOutput);
@@ -682,7 +679,7 @@ Game = (function() {
       * The start fuction call to start the Salmon Challenges interactive/game
     */
     var startGame = function() {
-        //$('.hotspot').removeClass('state-paused');
+        $('.hotspot').removeClass('state-paused');
         setTimeout(function () {
             requestAnimationFrame(updateWorld);
         }, 1000/60);

@@ -884,7 +884,7 @@ hr {
   border-color: white !important; }
 
 .state-paused {
-  animation-play-state: paused; }
+  -webkit-animation: none !important; }
 
 .btn:hover, .btn:focus, .btn:active {
   background-color: white !important;
