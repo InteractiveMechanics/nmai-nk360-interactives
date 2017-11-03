@@ -129,7 +129,7 @@ Game = (function() {
         $('.icon-play').hide();
         $('.icon-pause').show();
         $('#SelectedSalmon').css('animation-play-state', 'paused');
-        $('.hotspot').css('animation-play-state', 'paused');
+        $('.hotspot').addClass('state-paused');
         $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
@@ -138,7 +138,7 @@ Game = (function() {
         $('.icon-play').show();
         $('.icon-pause').hide();
         $('#SelectedSalmon').css('animation-play-state', 'running');
-        $('.hotspot').css('animation-play-state', 'running');
+        $('.hotspot').removeClass('state-paused');
         $('.waves').css('animation-play-state', 'running');
       $('.waves-1').css('animation-play-state', 'running');
       $('.waves-2').css('animation-play-state', 'running');
@@ -548,7 +548,7 @@ Game = (function() {
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
-              $('.hotspot').css('animation-play-state', 'paused');
+              $('.hotspot').addClass('state-paused');
               $('.waves').css('display', 'none');
               $('.waves-1').css('display', 'none');
               $('.waves-2').css('display', 'none');
@@ -739,7 +739,7 @@ Game = (function() {
     */
     var setCloseIcon = function() {
       $('#SelectedSalmon').css('animation-play-state', 'paused');
-      $('.hotspot').css('animation-play-state', 'paused');
+      $('.hotspot').addClass('state-paused');
       $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
@@ -973,7 +973,7 @@ Game = (function() {
       settings.pause = false;
       $('#instructions').data('instructionsclicked', true);
       $('#SelectedSalmon').css('animation-play-state', 'paused');
-      $('.hotspot').css('animation-play-state', 'paused');
+      $('.hotspot').addClass('state-paused');
       $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
@@ -993,7 +993,7 @@ Game = (function() {
       settings.pause = false;
       $('#instructions').data('instructionsclicked', true);
       $('#SelectedSalmon').css('animation-play-state', 'paused');
-      $('.hotspot').css('animation-play-state', 'paused');
+      $('.hotspot').addClass('state-paused');
       $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
@@ -1011,7 +1011,7 @@ Game = (function() {
         settings.pause = true;
         $('#instructions').data('instructionsclicked', false);
         $('#SelectedSalmon').css('animation-play-state', 'running');
-        $('.hotspot').css('animation-play-state', 'running');
+        $('.hotspot').removeClass('state-paused');
         $('.waves').css('animation-play-state', 'running');
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
@@ -1128,7 +1128,7 @@ Game = (function() {
         requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
-        $('.hotspot').css('animation-play-state', 'running');
+        $('.hotspot').removeClass('state-paused');
         $('.waves').css('animation-play-state', 'running');
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
