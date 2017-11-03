@@ -95,8 +95,8 @@
         <div class="abs top right">
             <!-- <a class="icon icon-home" title="Back to Home Screen"></a> -->
             <!-- <a class="icon icon-print" title="Print this Activity"></a> -->
-            <a class="icon icon-info" title="Show Instructions" id="show-instructions"></a>
-            <a href="./assets/placeholder_download.pdf" class="icon icon-print hidden"  title="Print" id="puzzle-download" download></a>
+            <a class="icon icon-info" title="Show Instructions" id="show-instructions" tabindex="0"></a>
+            <span id="puzzle-download-wrapper" class="hidden"></span>
         </div>
     </div>
     <footer class="fixed-bottom d-flex justify-content-between">
@@ -124,7 +124,7 @@
                     <p>Drag and drop the statement cards and sort them into the appropriate categories, revealing the hidden picture underneath.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue this Activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="0">Continue this Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -132,6 +132,12 @@
 
     <!-- Main interactive-specific content -->
     <main>
+
+    <!-- download template -->
+    <script id="download-template" type="text/x-jsrender">
+        <a href="{{:Download}}" class="icon icon-print"  title="Print" id="puzzle-download" download></a>
+    </script>
+
 
 
     <!-- intro template -->
@@ -146,7 +152,7 @@
                 {{if IntroImage}}
                 <div style="position: relative;" class="modal-img-wrapper">
                     <img src="{{:IntroImage}}" class="modal-img intro-img" alt="{{:IntroCaption}}" title="{{:IntroCaption}}"/>
-                    <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}"></div>
+                    <div data-gallery data-gallery-image="{{:FullIntroImage}}" data-gallery-caption="{{:IntroCaption}}" data-gallery-credit="{{:IntroCredit}}" tabindex="0"></div>
                 </div>
                         
                 <small class="modal-caption">{{:IntroCaption}}</small>
@@ -189,7 +195,7 @@
                 <div class="lg-wrapper-puzzle" style="position: relative;">
                     
                     <img class="puzzle-img" src="{{:Image}}" alt="{{:Caption}}" title="{{:Caption}}" />
-                    <div data-gallery data-gallery-image="{{:FullImage}}" data-gallery-caption="{{:Caption}}" data-gallery-credit="{{:Credit}}"></div>
+                    <div data-gallery data-gallery-image="{{:FullImage}}" data-gallery-caption="{{:Caption}}" data-gallery-credit="{{:Credit}}" tabindex="0"></div>
                    
                 </div>
             
@@ -213,7 +219,7 @@
 
         {{for Themes}}
 
-        <div class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}" data-animation="false">{{:title}}
+        <button class="droppable-widget" data-theme="{{:id}}" data-toggle="tooltip" data-placement="top" title="{{:definition}}" data-animation="false" tabindex="">{{:title}}
 
             <svg class="icon-definition" version="1.1"
          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -239,7 +245,7 @@
             </svg>
 
 
-        </div>
+        </button>
 
         {{/for}}
 
@@ -391,7 +397,7 @@
 
     <section id="droppable-wrapper" class="hidden"></section>
 
-    <div class="modal fade" id="card-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="card-modal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-animation="false">
         <div class="modal-dialog draggable-widget" data-theme="{{:themes}}" role="document">
         </div>
     </div> <!-- /.modal -->

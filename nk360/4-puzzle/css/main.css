@@ -821,8 +821,7 @@ span[data-toggle="tooltip"] {
   opacity: 0.6; }
   .dropped:after {
     content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");
-    position: relative;
-    left: -25%; }
+    position: absolute; }
   @media (max-width: 1199px) {
     .dropped:after {
       content: url("/nk360/shared/lib/im/images/icon-checkmark.svg");

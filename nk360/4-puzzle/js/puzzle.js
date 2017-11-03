@@ -21,7 +21,7 @@ Puzzle = (function() {
         if (numberDropped == numberCards) {
             $('#droppable-wrapper').addClass('hidden animated fadeOut');
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
-            $('#puzzle-download').removeClass('hidden');
+            $('#puzzle-download-wrapper').removeClass('hidden');
             $('.puzzle-img-zoom-icon').removeClass('hidden');
             sendAnalyticsEvent('Puzzle', 'complete');
         }
@@ -70,7 +70,7 @@ Puzzle = (function() {
     var buildGame = function() {
 
         
-         $('.draggable-widget').draggable({
+        $('.draggable-widget').draggable({
             snap: '.droppable-widget',
             revert: 'invalid',
             snapMode: 'interior',
@@ -85,7 +85,7 @@ Puzzle = (function() {
         });
 
          $('.droppable-widget').droppable({
-            tolerance: 'touch',
+            tolerance: 'pointer',
             drop: function( event, ui ) {
                 
 
@@ -100,7 +100,6 @@ Puzzle = (function() {
               
               
                     if(contains.call(draggableElArray, droppableNumber)) {
-                        ui.draggable.addClass('dragged');
                         ui.draggable.draggable('option', 'revert', 'invalid');
                         var cardNumber = ui.draggable.data('card');
                         $('.card[data-card="' + cardNumber + '"]').addClass('hidden animated fadeOut answered');
@@ -171,8 +170,10 @@ Puzzle = (function() {
     **/  
     var showModal = function() {
         sendAnalyticsEvent('Puzzle', 'open');
+        $('.card').attr('tabindex', -1);
+        $('.droppable-widget').attr('tabindex', '1');
         var numberDropped = $('.answered').length;
-        var numberCards = $('.card').length
+        var numberCards = $('.card').length;
 
         if (numberDropped < numberCards) {
             showTooltip();
@@ -263,6 +264,8 @@ Puzzle = (function() {
     var hideDroppables = function() {
         $('#droppable-wrapper').removeClass('fadeIn').addClass('animated fadeOut');
         $('.droppable-widget').tooltip('hide');
+        $('.card').attr('tabindex', 0);
+        $('.droppable-widget').attr('tabindex', -1);
         clearTimeout(hidePopoverTimeout);
         hidePopover();
     }
@@ -421,8 +424,9 @@ Puzzle = (function() {
             $('body').css('cursor', 'pointer');
         }
     }
-
    
+
+
 
 
     var bindEvents = function() {
