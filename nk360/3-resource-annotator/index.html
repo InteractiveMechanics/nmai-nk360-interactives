@@ -294,20 +294,7 @@
              <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
           </div>
 
-          <br style="clear:left;" />
-          <!--<div class="container-fluid">
-            <div class="row">
-
-              <div class="col-6">
-                <a href="javascript:void(0);" class="show-additional-content">Additional Content</a>
-              </div>
-
-              <div class="col-6">
-                <a href="javascript:void(0);" class="show-annotation-view">Annotation View</a>
-              </div>
-
-            </div>
-          </div>-->
+          <br class="clear-left" />
         </section>
 
         <section class="annotation-screen">
@@ -366,7 +353,7 @@
               </div>
 
               <section class="mobile-markers hidden-mobile">
-                <ul id="MobileMarker" class="list-inline" style="margin-bottom:0;">
+                <ul id="MobileMarker" class="list-inline margin-bottom-none">
                 </ul>
               </section>
 
@@ -430,7 +417,7 @@
                     Drag and drop to add annotation
                   </h3>
 
-                  <ul class="list-inline desktop-markers" style="margin-bottom:0;">
+                  <ul class="list-inline desktop-markers margin-bottom-none">
 
                       
 
@@ -455,7 +442,7 @@
           <div class="markers-remaining"></div>
         </div>
 
-        <br style="clear:both;" />
+        <br class="clear-both" />
       </li>
     </script>
 
@@ -468,7 +455,7 @@
         {{/if}}
 
         {{if image_url}}
-          <div class="photo-container" style="display:block;">
+          <div class="photo-container display-block">
               <img src="{{:image_url}}" class="img-fluid" />
               <div data-gallery data-gallery-image="{{:image_url}}" data-gallery-caption="{{:image_caption}}" data-gallery-credit="{{:image_credit}}"></div>
           </div>
@@ -565,9 +552,7 @@
                 <div class="button">
 
                     <a href="javascript:void(0);" class="btn btn-block btn-success" data-annotationid="{{:id}}">
-                        <strong>Mark-up this material <i class="" style="
-    padding-left: 5px;
-"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="19.2px" height="19.2px" viewBox="0 0 19.2 19.2" style="enable-background:new 0 0 19.2 19.2;" xml:space="preserve">
+                        <strong>Mark-up this material <i class="marker-icon-svg"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="19.2px" height="19.2px" viewBox="0 0 19.2 19.2" style="enable-background:new 0 0 19.2 19.2;" xml:space="preserve">
 <defs>
 </defs>
 <g id="Mark-up_Btn_3_copy">

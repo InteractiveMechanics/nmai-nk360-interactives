@@ -7,7 +7,7 @@ Game = (function() {
       pause: true,
       started: false,
       $world: $('.game-world'),
-      positions: [0, 5320, 9640, -1],
+      positions: [0, 5020, 9040, -1],
       leg: 0,
       $progress: $('.progressb'),
       scaling: 0,
@@ -451,12 +451,19 @@ Game = (function() {
       }
     }
 
+    /**
+      * Shows the game complete victory slider when the user clears the victory modal at the end of the game
+    */
     var closeCongratsScreen = function() {
       $('#congrats-instructions').removeClass('show').addClass('hidden');
 
       showVictorySlider();
     }
 
+    /**
+      * Checks the current position and sees if there's a forced encounter at that point
+      * @param {current_position}, the current position of where you are in the game
+    */
     var checkEncounters = function(current_position) {
       var encounters = gameData.forced;
       for (var i = 0; i < encounters.length; i++) {
@@ -468,10 +475,19 @@ Game = (function() {
       };
     };
 
+    /**
+      * Send events to Google Analytics for events and actions we want to capture with Salmon Challenges
+      * @param {string}, heading of the event that we are looking to capture
+      * @param {string}, action of the event we are looking to capture
+      * @param {string}, label of the event we are looking to capture
+    */
     var sendGoogleAnalyticsEvent = function(heading, action, label) {
       sendAnalyticsEvent(heading, action, label);
     }
 
+    /**
+      * Handles the game logic for moving the backgrounds, hotspots, and progress bar movement
+    */
     var updateWorld = function() {
         var totalPos = 0, prevPos = 0;
 
@@ -479,7 +495,7 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 16840) {
+            if (current_position < 14340) {
 
                 if(checkEncounters(current_position)) {
 
@@ -493,7 +509,7 @@ Game = (function() {
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
             
-                /*settings.backgroundPosition -= 0;
+                settings.backgroundPosition -= 0;
                 settings.midgroundPosition -= .1;
                 settings.foregroundPosition -= .5;
                 
@@ -504,9 +520,9 @@ Game = (function() {
                 var menus = document.getElementsByClassName("hotspot");
                 for (var i = menus.length - 1; i >= 0; i--)
                 {
-                  var _left = parseInt(menus[i].style.left) - 4;
+                  var _left = parseInt(menus[i].style.left) - 3.5;
                   menus[i].style.left = _left + "px";
-                }*/
+                }
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
@@ -551,6 +567,9 @@ Game = (function() {
         }
     };
 
+    /**
+      * Shows the game over modal when the user completes the Salmon Challenges Game
+    */
     var showGameOverScreen = function() {
       var isShowing = $('.intro-slider-wrapper').hasClass('show');
       if(!isShowing) {
@@ -559,6 +578,9 @@ Game = (function() {
       }
     }
 
+    /**
+      * Shows and creates the end game slider when you complete Salmon Challenges
+    */
     var showVictorySlider = function() {
       var isShowing = $('.intro-slider-wrapper').hasClass('show');
       if(!isShowing) {
@@ -567,6 +589,9 @@ Game = (function() {
       }
     }
 
+    /**
+      * Creates the game completition slider for salmon challenges
+    */
     var setVictorySlider = function() {
       if($('.spawn-death-slider').hasClass('slick-initialized')) {
         $('.spawn-death-slider').slick('unslick'); 
@@ -605,6 +630,9 @@ Game = (function() {
       }, 500);
     }
 
+    /**
+      * Creates the html for the game completition slider for Salmon Challenges
+    */
     var setGameOverSlider = function() {
       var sliderTemplate = $.templates("#introSliderTemplate");
       var sliderTemplateHTMLOutput = ""; sliderTemplate.render(gameData.death_cards);
@@ -650,6 +678,9 @@ Game = (function() {
 
     }
 
+    /**
+      * The start fuction call to start the Salmon Challenges interactive/game
+    */
     var startGame = function() {
         //$('.hotspot').removeClass('state-paused');
         setTimeout(function () {
@@ -657,11 +688,18 @@ Game = (function() {
         }, 1000/60);
     };
 
+    /**
+      * Fires the game start function call.
+    */
     var initGame = function() {
       $('.start button').on('click', startGame);
     };
 
 
+    /**
+      * After the user has selected the salmon, and starts the activity we will hide the 
+      * salmon selection screen and start the game.
+    */
     var hideSelectSalmon = function() {
       var isFaded = $('#close-select-fish').hasClass('faded');
 
@@ -674,6 +712,10 @@ Game = (function() {
       }
     }
 
+    /**
+      * Allows the user to select the salmon they which to use during Salmon Challenges. The salmon that 
+      * weren't selected becomed faded and the button becomes active
+    */
     var selectSalmon = function() {
       var _this = $(this);
       var fish = _this.data('fish');
@@ -694,6 +736,10 @@ Game = (function() {
       settings.started = true;
     }
 
+    /**
+      * Handles the close icon logic for the cards and will pause the running animations because
+      * while a card is up all animation aren't supposed to be running
+    */
     var setCloseIcon = function() {
       $('#SelectedSalmon').css('animation-play-state', 'paused');
       $('.hotspot').css('animation-play-state', 'paused');
@@ -705,6 +751,12 @@ Game = (function() {
       }
     }
 
+    /**
+      * Handler function for when a user clicks a hotspot. The close icon display/view is reseted and 
+      * we check to see that the hotspot wasn't already clicked. and that a slider is already showing. 
+      * If we pass all the checks we will find out what hotspot was clicked then display the right random 
+      * ecounter card.
+    */
     var hotspotClicked = function() {
       if(!settings.pause) {
         return;
@@ -754,6 +806,11 @@ Game = (function() {
       }
     }
 
+    /**
+      * Creates the slider of a forced encounter which is an encounter that 
+      * happens at a specific position. 
+      * @param {array}, contains the data for the encounter we want to create
+    */
     var createForcedEncounterSlider = function(encounter) {
       setCloseIcon();
 
@@ -808,6 +865,12 @@ Game = (function() {
       sendGoogleAnalyticsEvent("Encounter", "Forced encounter - " + cards[0].title);
     }
 
+
+    /**
+      * Creates the slider of a random encounter which is an encounter that 
+      * happens when a hotspot item was clicked
+      * @param {array}, contains the data for the encounter we want to create
+    */
     var createEncounterSlider = function(encounter) {
       var sliderHTML = "";
       var cards = encounter.cards;
@@ -849,12 +912,18 @@ Game = (function() {
       }
     }
 
+    /**
+      * Increases the current salmon count by 1 unless the current number of salmon is 5
+    */
     var addFish = function() {
       if(settings.salmonCount < 5) {
         updateFish(1);
       }
     }
 
+    /**
+      * Decreases the current salmon count by 1 unless the current number of salmon is 0
+    */
     var loseFish = function() {
       if(settings.salmonCount < 0) {
         
@@ -863,6 +932,10 @@ Game = (function() {
       }
     }
 
+    /**
+      * Updates the current salmon count and also updates the salmon view with one more or less fish
+      * @param {int}, the number value of which the current number of Salmon will get increased or decreased by
+    */
     var updateFish = function(value) {
       var val = settings.salmonCount + value;
       var fishType = settings.fishSelection + '-';
@@ -873,6 +946,10 @@ Game = (function() {
       settings.salmonCount = val;
     }
 
+    /**
+      * Generates the Information Card HTML view
+      * @param {array}, contains an object literal of the current card
+    */
     var getInformationCardHTML = function(card) {
       var template = $.templates("#informationSlideTemplate");
       var output = template.render(card);
@@ -880,6 +957,10 @@ Game = (function() {
       return output;
     }
 
+    /**
+      * Generates the Quiz Card HTML view for the slider
+      * @param {array}, contains an object literal of the current card
+    */
     var getQuizCardHTML = function(card) {
       var template = $.templates("#quizSlideTemplate");
       var output = template.render(card);
@@ -887,6 +968,9 @@ Game = (function() {
       return output;
     }
     
+    /**
+      * Function call for when the querystring to skip the instruction is present in the URL
+    */
     var noIntro = function() {
       $('#select-fish').removeClass('hidden').addClass('show');
       settings.pause = false;
@@ -898,6 +982,10 @@ Game = (function() {
       $('.waves-2').css('animation-play-state', 'paused');
     }
 
+    /**
+      * Similar to noIntro() but the querystring isn't present and we have a handler that checks to see if the
+      * the game is paused
+    */
     var showIntro = function () {
       var isPaused = $('.icon-pause').is(':visible');
 
@@ -916,6 +1004,9 @@ Game = (function() {
 
 
 
+    /**
+      * Creates the salmon challenge introduction slider
+    */
     var showIntroModal = function() {
       var instructionsClicked = $('#instructions').data('instructionsclicked');
 
@@ -960,6 +1051,9 @@ Game = (function() {
       }
     }
 
+    /**
+      * Shows the salmon selection screen to the user
+    */
     var showSalmonSelection = function() {
       $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
       setTimeout(function(){
@@ -967,6 +1061,12 @@ Game = (function() {
       }, 100);
     }
 
+
+    /**
+      * Functions the handles the logic for the quiz card. Makes sure the quiz isn't answered first.
+      * Checks to see what the result of the answer that was selected and calls the appropriate add or 
+      * lose fish method.
+    */
     var quizHandler = function () {
       var isAlreadyAnswered = $('.quiz-options').data('answered');
       if(!isAlreadyAnswered) {
@@ -1017,6 +1117,11 @@ Game = (function() {
       }
     }
 
+    /**
+      * Close icon handler for the cards and sliders with Salmon Challenges. 
+      * Checks to see if the slider is showing and if the close icon isn't faded, if so
+      * the animations start back up running and the overlay, slider/card disappears.
+    */
     var closePopup = function () {
       var isFaded = $(this).hasClass('close-faded');
       var isSlider = $('.slider-wrapper').hasClass('show');

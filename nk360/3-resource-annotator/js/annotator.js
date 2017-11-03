@@ -20,12 +20,29 @@ Annotator = (function() {
       bindEvents();
     }
 
+    var modalWidth = 275;
+
+    var markerArray = [
+      './assets/marker-01@2x.png',
+      './assets/marker-02@2x.png',
+      './assets/marker-03@2x.png',
+      './assets/marker-04@2x.png',
+      './assets/marker-05@2x.png',
+    ]
+
+    var printEvent = window.matchMedia('print');
+
+    /**
+      * Handler that allows the user to bypass the instructions when they go to the source 
+      * selection screen
+    */
     var skipInstructions = function() {
       window.location.href = window.location.pathname + "?instructions=false";
     }
-
-    var modalWidth = 275;
-
+    
+    /**
+      * Creates the comma separated of themes for top heading
+    */
     var createHeading = function() {
       var arr = markersInJSON;
 
@@ -46,16 +63,9 @@ Annotator = (function() {
 
     }
 
-    var markerArray = [
-      './assets/marker-01@2x.png',
-      './assets/marker-02@2x.png',
-      './assets/marker-03@2x.png',
-      './assets/marker-04@2x.png',
-      './assets/marker-05@2x.png',
-    ]
-
-    var printEvent = window.matchMedia('print');
-
+    /**
+      * Hnadler to shows the annotation view when on mobile
+    */
     var showView = function() {
       var isShowing = $('.show-right-screen').is(":Visible");
       if(isShowing) {
@@ -64,6 +74,9 @@ Annotator = (function() {
       }
     };
 
+    /**
+      * Handler to show the additional content view when on mobile
+    */
     var showContent = function() {
        var isShowing = $('.show-left-screen').is(":Visible");
        if(isShowing) {
@@ -72,6 +85,9 @@ Annotator = (function() {
        }
     };
 
+    /**
+      * Click handler function for the mobile menu on the annotation screen
+    */
     var mobileMenuClicked = function () {
       $('.half-menu').removeClass('active');
       $(this).addClass('active');
@@ -84,6 +100,9 @@ Annotator = (function() {
       }
     }
 
+    /**
+      * Handler that focus the textarea with a pin, when it shows up on the screen
+    */
     var focusOnTextArea = function() {
       $(this).focus();
     }
@@ -140,12 +159,18 @@ Annotator = (function() {
       sendAnalyticsEvent(type, action);
     }
 
+    /**
+      * Handler that launch the print view for the users device
+    */
     var printPage = function() {
       if(!$(this).hasClass('disabled')) {
         window.print();
       }
     }
 
+    /**
+      * Shows the intro theme card after the user clears the instructions
+    */
     var showIntro = function() {
       if(!hasShownThemeCard) {
         $('.intro-slider-wrapper').removeClass('hidden').addClass('show');
@@ -153,15 +178,24 @@ Annotator = (function() {
       }
     }
 
+    /**
+      * Handler to close the theme popup that appears in the beginning of the interactive
+    */
     var closePopup = function() {
       $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
       sendAnalyticsScreen("Selection screen");
     }
 
+    /**
+      * Handler to scroll down to the paraphrased item in the annotation screen
+    */
     var paraphrasedClicked = function() {
       $(".content-height").animate({ scrollTop: $('#paraphrased').offset().top }, 1000);
     }
 
+    /**
+      * Gets the theme items and creates the JSON obj which will be used for the markers
+    */
     var createThemeObj = function(){
       var themes = AnnotatorData.themes;
 
@@ -180,6 +214,10 @@ Annotator = (function() {
       };
     };
 
+    /**
+      * Gets a random marker from an array then deletes it so it won't be selected twice
+      *
+    */
     var getMarker = function() {
       var marker = markerArray[Math.floor(Math.random() * markerArray.length)];
 
@@ -191,12 +229,19 @@ Annotator = (function() {
       return marker;
     }
 
+    /**
+      * Loads the template with the theme card, heading, and page title on launch
+    */
     var loadTemplate = function() {
       $('.intro-text').text(AnnotatorData.introduction);
       $('.theme-name').text(heading);
       $('.page-title').text(AnnotatorData.page_title);
     };
 
+    /**
+      * Starts the pin setup for Resource Annotator. Adds all the annotation text with span and class which
+      * will be used to make the area droppable. Sets the markers and their count. 
+    */
     var pinSetup = function() {
 
       var info = $('.info');
@@ -236,6 +281,10 @@ Annotator = (function() {
 
     };
 
+
+    /**
+      * Sets the draggable and droppable targets for the annotation sreen
+    */
     var draggableSetup = function() {
       var markers = $('.marker');
       var words = $('.pin-drop');
@@ -244,6 +293,9 @@ Annotator = (function() {
       droppableEvent(words);
     }
 
+    /**
+      * Sets all the markers for the current annotation item to be draggable 
+    */
     var draggableEvent = function(markers) {
       markers.draggable({
         containment: 'window',
@@ -266,6 +318,10 @@ Annotator = (function() {
       });
     }
 
+    /**
+      * Gets the mouse coords which will be used for the marker dragging on the image.
+      * @param {event} [ev] the fired mouse event
+    */
     function mouseCoords(ev){
         // from http://www.webreference.com/programming/javascript/mk/column2/
         if(ev.pageX || ev.pageY){
@@ -277,6 +333,11 @@ Annotator = (function() {
         };
     }
 
+    /**
+      * Sets all the words for the current annotation item in the original text and below area to be 
+      * droppable
+      * @param {string} [words] the name querystring
+    */
     var droppableEvent = function(words) {
       // Make words on the left droppable
       words.droppable({
@@ -423,6 +484,12 @@ Annotator = (function() {
       }); /** End of droppable **/
     }
 
+    /**
+      * Fires every time a pin is dropped or text is added in the textarea and will create the new
+      * view of the print layout
+      * @param {string} [words] the name querystring
+      * @return null if no param, or the value of the request querystring
+    */
     var setupPrintLayout = function() {
       var print = $('.print-view');
       var original = $('.original-text');
@@ -502,6 +569,13 @@ Annotator = (function() {
       }
     }
 
+    /**
+      * Creates the HTML for the notes print section
+      * @param {string} [src] the image of the marker chose for the note
+      * @param {string} [note] the note in the textarea
+      * @param {int} [num] the number of the note
+      * @return the HTML of the note with the theme being used
+    */
     var noteHTMLSnippet = function(src, note, num) {
 
       return '<div class="note-area">' +
@@ -511,6 +585,10 @@ Annotator = (function() {
               '</div><br style="clear:both;" />';
     }
 
+    /**
+      * Finds the positions of the pin that is being dragged and sets the popup box location and width and height
+      * @param {obj} selected pin item that is being moved
+    */
     var findPinPosition = function(pin) {
       var hide = pin.hasClass('pin-hidden');
       if(hide) {
@@ -545,8 +623,6 @@ Annotator = (function() {
 
       var height = pin.closest('.scrollbar-design').outerHeight();
       var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
-
-      //console.log(width + " " + scroll);
 
       if(width + 1 < scroll) {
         if(pin.parent().hasClass('photo-container') == false) {
@@ -606,6 +682,10 @@ Annotator = (function() {
           pin.find('*').not('img').hide();
     }
 
+    /**
+      * Handler to delete a pin that has been placed on the annotation screen
+      * @param {obj} the pin to be deleted
+    */
     var deletePin = function(pin) {
       pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Delete</button><button class="btn btn-white undo-delete">Cancel</button></div>');
 
@@ -624,6 +704,10 @@ Annotator = (function() {
       });
     }
 
+    /**
+      * Handler to show a pin that has been placed on the annotation screen
+      * @param {obj} the pin and popup view to be displayed
+    */
     var showPin = function(pin) {
       pin.removeClass('pin-hidden').addClass('pin-visible');
       findPinPosition(pin);
@@ -638,6 +722,10 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
     };
 
+    /**
+      * Handler to hide a pin that has been placed on the annotation screen and hides the textarea and button too
+      * @param {obj} the pin and popup view to be hidden
+    */
     var hidePin = function(pin) {
       pin.find('*').not('img').finish().animate({
         'opacity': 0,
@@ -651,6 +739,9 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 0)");
     }
 
+    /*
+     * Handler that launch the annotation screen view based on the sourced item that was clicked
+    */
     var openNotesScreen = function() {
 
       var annotationID = $(this).data('annotationid');
@@ -720,117 +811,119 @@ Annotator = (function() {
       pinSetup();
   }
 
-    var getItemByAnnotationId = function(id) {
-      var jsonObj = AnnotatorData.sources;
-      for (var i = 0; i < jsonObj.length; i++) {
-        if(jsonObj[i].id == id) {
-          return jsonObj[i];
-        }
-      };
+  /*
+   * Handler to get the annotation item that was selected
+   * @param {int} the id of the source annotation item that was selected
+  */
+  var getItemByAnnotationId = function(id) {
+    var jsonObj = AnnotatorData.sources;
+    for (var i = 0; i < jsonObj.length; i++) {
+      if(jsonObj[i].id == id) {
+        return jsonObj[i];
+      }
+    };
 
-      return null;
-    }
+    return null;
+  }
 
+  /*
+   * Creates the slider with the sources for the Resource Annotator with the adaptive breakpoints
+  */
+  var createSlider = function() {
+    var sliderTemplate = $.templates("#sliderTemplate");
+    var sliderTemplateHTMLOutput = sliderTemplate.render(AnnotatorData.sources);
+    $("#annotation-slider").html(sliderTemplateHTMLOutput);
 
-
-    var createSlider = function() {
-      var sliderTemplate = $.templates("#sliderTemplate");
-      var sliderTemplateHTMLOutput = sliderTemplate.render(AnnotatorData.sources);
-      $("#annotation-slider").html(sliderTemplateHTMLOutput);
-
-      $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        responsive: [
-          {
-            breakpoint: 1600,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 750,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
+    $(".regular").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
           }
-        ]
-      });
-    }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
 
-    var showLostProgress = function() {
-      if(!$(this).hasClass('disabled')) {
-        $('#lost-progress').removeClass('hidden').addClass('show');
-      }
+  /*
+   * Displays the lost progress modal to the user
+  */
+  var showLostProgress = function() {
+    if(!$(this).hasClass('disabled')) {
+      $('#lost-progress').removeClass('hidden').addClass('show');
     }
+  }
 
-    var hideLostProgress = function() {
-      $('#lost-progress').removeClass('show').addClass('hidden');
-    }
+  /*
+   * Hides the lost progress modal to the user
+  */
+  var hideLostProgress = function() {
+    $('#lost-progress').removeClass('show').addClass('hidden');
+  }
 
-    var reloadPage = function() {
-      location.reload();
-    }
+  /*
+   * Reloads the Resource Annotator page
+  */
+  var reloadPage = function() {
+    location.reload();
+  }
+  
+  /*
+   * Changes the text displayed to the user that shows how many resources are available for a marker
+   * @param {marker} the current theme's marker
+   * @param {int} the amount of markers remaining for this theme
+  */
+  var setMarkerRemaining = function(marker, amount) {
+    marker.find('.markers-remaining').html(amount + ' remaining');
+  }
 
-    var createCookie = function() {
-      var expires = "";
-      if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + (days*24*60*60*1000));
-          expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + value + expires + "; path=/";
-    }
+  /*
+   * Returns how many resources are still available for a marker
+   * @param {marker} the current theme's marker
+  */
+  var getMarkerRemaining = function(marker) {
+    var rawText = marker.find('.markers-remaining').html();
+    return parseInt(rawText);
+  }
 
-    var readCookie = function() {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0;i < ca.length;i++) {
-          var c = ca[i];
-          while (c.charAt(0)==' ') c = c.substring(1,c.length);
-          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
-      return null;
-    }
+  /**
+    * Initializer for the salmon challenges interactive
+    * @param {string} [name] the name querystring
+    * @param {string} [url] THe page url
+    * @return null if no param, or the value of the request querystring
+  */
+  var getParameterByName = function(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
 
-    // setMarkerRemaining changes the text displayed to the user that shows how many resources are available for a marker
-    var setMarkerRemaining = function(marker, amount) {
-      marker.find('.markers-remaining').html(amount + ' remaining');
-    }
-
-    // getMarkerRemaining returns how many resources are still available for a marker
-    var getMarkerRemaining = function(marker) {
-      var rawText = marker.find('.markers-remaining').html();
-      return parseInt(rawText);
-    }
-
-    /*var sendAnalyticsScreen = function(foo, bar, foo) {
-      //todo
-    }*/
-
-    var getParameterByName = function(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    return {
-        init: init
-    }
+  return {
+      init: init
+  }
 })();
