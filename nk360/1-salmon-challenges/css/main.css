@@ -352,7 +352,7 @@ body .photo-container {
       background: url("../assets/bkgr.png") no-repeat;
       z-index: 1;
       background-size: cover;
-      width: 18000px !important; }
+      width: 16400px !important; }
     .game .game-world .game-world__foreground {
       background: url("../assets/foregr.png") no-repeat;
       z-index: 3;
