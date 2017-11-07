@@ -1035,6 +1035,7 @@ main {
     .ql-container.ql-snow {
       height: 250px; } }
 
+.ql-clipboard,
 .ql-editor {
   font-size: 1.0rem;
   -webkit-user-select: auto;
