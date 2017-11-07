@@ -551,7 +551,6 @@ small,
       font-size: .5rem; } }
 
 .markers-remaining {
-  font-family: "Archer Pro", serif;
   color: black;
   letter-spacing: .5px;
   text-align: center; }
@@ -921,8 +920,7 @@ small,
 
 .delete-pin span {
   display: block;
-  margin-top: 30px;
-  font-family: "Open Sans"; }
+  margin-top: 30px; }
 
 .delete-pin .btn {
   border-color: white;
@@ -952,6 +950,24 @@ small,
 
 .pin-visible img {
   opacity: 1 !important; }
+
+.display-block {
+  display: block; }
+
+.marker-icon-svg {
+  padding-left: 5px; }
+
+.clear-left {
+  clear: left; }
+
+.clear-right {
+  clear: right; }
+
+.clear-both {
+  clear: both; }
+
+.margin-bottom-none {
+  margin-bottom: none; }
 
 .scrollbar-design::-webkit-scrollbar-track {
   background-color: #e0e1e2; }
@@ -1163,5 +1179,3 @@ small,
   @media screen and (max-width: 1100px) {
     .card {
       height: 490px; } }
-
-/*# sourceMappingURL=main.css.map */

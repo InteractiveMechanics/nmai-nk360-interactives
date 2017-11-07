@@ -82,7 +82,7 @@
 }
 
 
-@media (max-width: 1440px) {
+@media ($screen-ltxl) {
   .fish-outline {
     background-size: 66px 39px;
     top: -32px;
@@ -115,7 +115,7 @@
   }
 }
 
-@media (max-width: 990px) {
+@media ($screen-ltmd) {
   .fish-outline {
     background-size: 45px 32px;
     top: -27px;

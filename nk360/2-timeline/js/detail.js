@@ -101,7 +101,6 @@ Detail = (function() {
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
                 Detail.timelineWidth = 2143;
-                setupTimelineScroll();
                 sendAnalyticsScreen('Explore screen - era 1');               
                 
 
@@ -109,13 +108,11 @@ Detail = (function() {
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
-                setupTimelineScroll();
                 sendAnalyticsScreen('Explore screen - era 2');
 
             } else {
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
-                setupTimelineScroll();
                 sendAnalyticsScreen('Explore screen - era 3');
             }
         }
