@@ -39,6 +39,14 @@ Annotator = (function() {
     var skipInstructions = function() {
       window.location.href = window.location.pathname + "?instructions=false";
     }
+
+     /**
+      * Handler that allows the user to bypass the instructions when they go to the source 
+      * selection screen
+    */
+    var skipInstructionsEnter = function() {
+      window.location.href = window.location.pathname + "?instructions=false";
+    }
     
     /**
       * Creates the comma separated of themes for top heading
@@ -109,12 +117,16 @@ Annotator = (function() {
     var bindEvents = function() {
         $('body').on('click tap', '.annotation-slider-screen .btn-success', openNotesScreen);
         $('body').on('click tap', '.icon-home', showLostProgress);
+        $('body').on('keypress', '.icon-home', showLostProgressEnter);
         $('body').on('click tap', '#instructions', showIntro);
         $('body').on('click tap', '.close-icon', closePopup);
+        $('body').on('keypress', '.close-icon', closePopupEnter);
         $('body').on('click tap', '.summary-link', paraphrasedClicked);
-        $('body').on('click tap', '.print-notes', printPage);
 
+        $('body').on('click tap', '.print-notes', printPage);
+        $('body').on('keypress', '.print-notes', printPageEnter);
         $('body').on('click tap', '.reload-page', skipInstructions);
+        $('body').on('keypress', '.reload-page', skipInstructionsEnter);
         $('body').on('click tap', '#close-porgess', hideLostProgress);
 
         $('body').on('click tap', '.half-menu', mobileMenuClicked);
@@ -169,12 +181,22 @@ Annotator = (function() {
     }
 
     /**
+      * Handler that launch the print view for the users device
+    */
+    var printPageEnter = function() {
+      if(!$(this).hasClass('disabled')) {
+        window.print();
+      }
+    }
+
+    /**
       * Shows the intro theme card after the user clears the instructions
     */
     var showIntro = function() {
       if(!hasShownThemeCard) {
         $('.intro-slider-wrapper').removeClass('hidden').addClass('show');
         hasShownThemeCard = true;
+        $('.close-icon').attr('tabindex', 1);
       }
     }
 
@@ -182,6 +204,18 @@ Annotator = (function() {
       * Handler to close the theme popup that appears in the beginning of the interactive
     */
     var closePopup = function() {
+      $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
+      sendAnalyticsScreen("Selection screen");
+    }
+
+    /**
+      * Handler to close the theme popup that appears in the beginning of the interactive
+    */
+    var closePopupEnter = function(e) {
+
+      if(e.keyCode != 13) {
+        return;
+      }
       $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
       sendAnalyticsScreen("Selection screen");
     }
@@ -215,17 +249,12 @@ Annotator = (function() {
     };
 
     /**
-      * Gets a random marker from an array then deletes it so it won't be selected twice
+      * Gets a marker from an array then deletes it so it won't be selected twice
       *
     */
     var getMarker = function() {
-      var marker = markerArray[Math.floor(Math.random() * markerArray.length)];
-
-      var index = markerArray.indexOf(marker);
-      if (index > -1) {
-        markerArray.splice(index, 1);
-      }
-
+      var marker = markerArray[0];
+      markerArray.shift();
       return marker;
     }
 
@@ -709,17 +738,19 @@ Annotator = (function() {
       * @param {obj} the pin and popup view to be displayed
     */
     var showPin = function(pin) {
-      pin.removeClass('pin-hidden').addClass('pin-visible');
-      findPinPosition(pin);
+      //if(window.innerWidth > 600) {
+        pin.removeClass('pin-hidden').addClass('pin-visible');
+        findPinPosition(pin);
 
-      pin.find('*').not('img').finish().show().animate({
-        'opacity': 1,
-      }, 250, function(){
-        pin.find('textarea').focus();
-      });
+        pin.find('*').not('img').finish().show().animate({
+          'opacity': 1,
+        }, 250, function(){
+          pin.find('textarea').focus();
+        });
 
-      pin.css("background-color", "rgba(221, 221, 221, 1)");
-      pin.css("border-color", "rgba(204, 204, 204, 1)");
+        pin.css("background-color", "rgba(221, 221, 221, 1)");
+        pin.css("border-color", "rgba(204, 204, 204, 1)");
+      //}
     };
 
     /**
@@ -864,12 +895,31 @@ Annotator = (function() {
         }
       ]
     });
+
+    var $carousel = $('.regular');
+    $(document).on('keydown', function(e) {
+        if(e.keyCode == 37) {
+            $carousel.slick('slickPrev');
+        }
+        if(e.keyCode == 39) {
+            $carousel.slick('slickNext');
+        }
+    });
   }
 
   /*
    * Displays the lost progress modal to the user
   */
   var showLostProgress = function() {
+    if(!$(this).hasClass('disabled')) {
+      $('#lost-progress').removeClass('hidden').addClass('show');
+    }
+  }
+
+  /*
+   * Displays the lost progress modal to the user
+  */
+  var showLostProgressEnter = function() {
     if(!$(this).hasClass('disabled')) {
       $('#lost-progress').removeClass('hidden').addClass('show');
     }
