@@ -421,6 +421,11 @@ Annotator = (function() {
             });
 
             pin.removeClass().addClass('pin-visible marker-in-text');
+
+            if(window.innerWidth < 600) {
+              pin.addClass('fixed-bottom-marker');
+            }
+
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
             pin.append('<textarea placeholder="Write your note here..." ></textarea>');
@@ -752,7 +757,7 @@ Annotator = (function() {
       pin.css("border-color", "rgba(204, 204, 204, 1)");
       
       if(window.innerWidth < 600) {
-        //pin.addClass('fixed-bottom-marker');
+        pin.addClass('fixed-bottom-marker');
       }
     };
 
@@ -770,7 +775,7 @@ Annotator = (function() {
       });
 
       if(window.innerWidth < 600) {
-       // pin.removeClass('fixed-bottom-marker');
+        pin.removeClass('fixed-bottom-marker');
       }
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
