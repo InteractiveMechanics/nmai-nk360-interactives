@@ -738,19 +738,22 @@ Annotator = (function() {
       * @param {obj} the pin and popup view to be displayed
     */
     var showPin = function(pin) {
-      //if(window.innerWidth > 600) {
-        pin.removeClass('pin-hidden').addClass('pin-visible');
-        findPinPosition(pin);
 
-        pin.find('*').not('img').finish().show().animate({
-          'opacity': 1,
-        }, 250, function(){
-          pin.find('textarea').focus();
-        });
+      pin.removeClass('pin-hidden').addClass('pin-visible');
+      findPinPosition(pin);
 
-        pin.css("background-color", "rgba(221, 221, 221, 1)");
-        pin.css("border-color", "rgba(204, 204, 204, 1)");
-      //}
+      pin.find('*').not('img').finish().show().animate({
+        'opacity': 1,
+      }, 250, function(){
+        pin.find('textarea').focus();
+      });
+
+      pin.css("background-color", "rgba(221, 221, 221, 1)");
+      pin.css("border-color", "rgba(204, 204, 204, 1)");
+      
+      if(window.innerWidth < 600) {
+        //pin.addClass('fixed-bottom-marker');
+      }
     };
 
     /**
@@ -765,6 +768,10 @@ Annotator = (function() {
         pin.removeClass('pin-visible').addClass('pin-hidden');
         findPinPosition(pin);
       });
+
+      if(window.innerWidth < 600) {
+       // pin.removeClass('fixed-bottom-marker');
+      }
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
       pin.css("border-color", "rgba(204, 204, 204, 0)");

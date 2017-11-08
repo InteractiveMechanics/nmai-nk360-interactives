@@ -71,13 +71,13 @@ body {
 }
 
 .rising-water-number {
-    top: 20% !important;
+    top: 16% !important;
     @media only screen and ($screen-xs) and ($screen-landscape) {
-        top: 28% !important;
+        top: 26% !important;
     }
 
     @media only screen and ($screen-xs) and ($screen-portrait) {
-        top: 33% !important;
+        top: 31% !important;
     }
 }
 .sonic-effect {
