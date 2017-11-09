@@ -3,7 +3,10 @@ $(function() {
      * Universal function to activate the lightGallery
      */
 
-    $(document).on('click tap', '[data-gallery]', function(){
+    $(document).on('keypress', '[data-gallery]', function(e){ if(e.which == 13){ $(this).click(); }});
+    $(document).on('click tap', '[data-gallery]', generateLightGallery);
+
+    function generateLightGallery(){
         var credit = '';
         var caption = '';
 
@@ -33,5 +36,5 @@ $(function() {
         });
         
         sendAnalyticsEvent('Lightbox', 'open');
-    });
+    }
 });

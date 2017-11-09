@@ -341,7 +341,7 @@ body .photo-container {
   .game .game-world {
     height: 100vh;
     min-width: 100vh;
-    width: 17000px !important;
+    width: 20000px !important;
     position: relative; }
     .game .game-world .game-world__background, .game .game-world .game-world__midground, .game .game-world .game-world__foreground {
       position: absolute;
@@ -352,17 +352,17 @@ body .photo-container {
       background: url("../assets/bkgr.png") no-repeat;
       z-index: 1;
       background-size: cover;
-      width: 16400px !important; }
+      /*width: 16800px !important;*/ }
     .game .game-world .game-world__foreground {
       background: url("../assets/foregr.png") no-repeat;
       z-index: 3;
       background-size: cover;
-      width: 18000px !important; }
+      /*width: 18000px !important;*/ }
     .game .game-world .game-world__midground {
       background: url("../assets/midgr.png") no-repeat;
       z-index: 2;
       background-size: cover;
-      width: 18500px !important; }
+      /*width: 18500px !important;*/ }
 
 #SelectedSalmon {
   position: fixed;
@@ -380,6 +380,15 @@ body .photo-container {
   @media only screen and (max-width: 767px) and (orientation: portrait) {
     .rising-water {
       top: 35% !important; } }
+
+.rising-water-number {
+  top: 16% !important; }
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    .rising-water-number {
+      top: 26% !important; } }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .rising-water-number {
+      top: 31% !important; } }
 
 .sonic-effect {
   left: 250% !important; }

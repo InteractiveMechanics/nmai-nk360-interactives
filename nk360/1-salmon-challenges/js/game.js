@@ -82,7 +82,7 @@ Game = (function() {
         $('body').on('click tap', '#instructions', showIntroModal);
         $('body').on('click tap', '.get-started', showSalmonSelection);
         $('body').on('click tap', '#close-select-fish', hideSelectSalmon);
-        $('body').on('click tap', '.fish-row .col', selectSalmon);
+        $('body').on('click tap enter', '.fish-row .col', selectSalmon);
         $('body').on('click tap', '.hotspot', hotspotClicked);
         $('body').on('click tap', '.quiz-options button', quizHandler);
         $('body').on('click tap', '.close-icon', closePopup);
@@ -94,6 +94,9 @@ Game = (function() {
         $('body').on('click tap', '.restart-skip-intro', restartSalmonChallengesSkipInstructions);
         $('body').keyup(hitPauseSpaceBar);
 
+        $('body').on('keypress', '.fish-row .col', selectSalmonEnter);
+        $('body').on('keypress', '#close-select-fish', hideSelectSalmonEnter);
+        $('body').on('keydown', '.close-icon', closePopupEnter);
         
 
         // Initialize tooltips again
@@ -466,8 +469,13 @@ Game = (function() {
     */
     var checkEncounters = function(current_position) {
       var encounters = gameData.forced;
+      var minusValue = 200;
+      if(window.innerWidth < 769) {
+        var minusValue = -100;
+      }
+
       for (var i = 0; i < encounters.length; i++) {
-        if((encounters[i].trigger_location - 200) == current_position) {
+        if((encounters[i].trigger_location - minusValue) == current_position) {
           settings.pause = false;
           createForcedEncounterSlider(encounters[i]);
           //alert(encounters[i].cards[0].title)
@@ -495,34 +503,19 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 14340) {
+            if (current_position < 17040) {
 
                 if(checkEncounters(current_position)) {
 
                 };
 
                 if(current_position == 12500) {
-                  $('.number-of-salmon').addClass('rising-water');
+                  $('.number-of-salmon').addClass('rising-water-number');
                   $('#SelectedSalmon').addClass('rising-water');
                 }
 
                 settings.position -= settings.speed;
                 $('.game-world').css('left', settings.position + 'px');
-            
-                settings.backgroundPosition -= 0;
-                settings.midgroundPosition -= .1;
-                settings.foregroundPosition -= .5;
-                
-                settings.$background.css("transform", "translate(" + settings.backgroundPosition + "px,0)");
-                settings.$midground.css("transform", "translate(" + settings.midgroundPosition + "px,0)");
-                settings.$foreground.css("transform", "translate(" + settings.foregroundPosition + "px,0)");
-
-                var menus = document.getElementsByClassName("hotspot");
-                for (var i = menus.length - 1; i >= 0; i--)
-                {
-                  var _left = parseInt(menus[i].style.left) - 3.5;
-                  menus[i].style.left = _left + "px";
-                }
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
@@ -710,6 +703,30 @@ Game = (function() {
     }
 
     /**
+      * After the user has selected the salmon, and starts the activity we will hide the 
+      * salmon selection screen and start the game.
+    */
+    var hideSelectSalmonEnter = function(e) {
+
+      if(e.keyCode != 13) {
+        return;
+      }
+
+      var isFaded = $('#close-select-fish').hasClass('faded');
+
+      if(!isFaded) {
+        sendGoogleAnalyticsEvent("Salmon selected", settings.fishSelection);
+        $('#select-fish').removeClass('show').addClass('hidden');
+        $('.number-of-salmon').text(settings.salmonCount);
+        $('.number-of-salmon').css('opacity', .8);
+        startGame();
+
+        $('.fish-row .col').prop('tabIndex', -1);
+        $(this).prop('tabIndex', -1);
+      }
+    }
+
+    /**
       * Allows the user to select the salmon they which to use during Salmon Challenges. The salmon that 
       * weren't selected becomed faded and the button becomes active
     */
@@ -731,6 +748,37 @@ Game = (function() {
       $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);
 
       settings.started = true;
+    }
+
+    /**
+      * Allows the user to select the salmon they which to use during Salmon Challenges. The salmon that 
+      * weren't selected becomed faded and the button becomes active
+    */
+    var selectSalmonEnter = function(e) {
+
+      if(e.keyCode != 13) {
+        return;
+      }
+
+      var _this = $(this);
+      var fish = _this.data('fish');
+      settings.fishSelection = fish.toLowerCase();
+
+      $('.fish-row .col').addClass('faded');
+      $('.fish-row .col').removeClass('selected');
+
+      $('.fish-row .col img').removeClass('animated pulse');
+      _this.removeClass('faded');
+      _this.addClass('selected');
+
+      _this.find('img').addClass('animated pulse');
+
+      $('#close-select-fish').removeClass('faded');
+      $('#SelectedSalmon').removeClass().addClass(settings.fishSelection + '-' + settings.salmonCount);
+
+      settings.started = true;
+
+      $('#close-select-fish').attr('tabindex', 4);
     }
 
     /**
@@ -856,6 +904,16 @@ Game = (function() {
               $('.slider .slick-next').show();
             }
         });
+
+        var $carousel = $('.slider');
+        $(document).on('keydown', function(e) {
+            if(e.keyCode == 37) {
+                $carousel.slick('slickPrev');
+            }
+            if(e.keyCode == 39) {
+                $carousel.slick('slickNext');
+            }
+        });
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
@@ -977,6 +1035,8 @@ Game = (function() {
       $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
+
+      $('#close-instructions').attr('tabindex', -1);
     }
 
     /**
@@ -997,6 +1057,8 @@ Game = (function() {
       $('.waves').css('animation-play-state', 'paused');
       $('.waves-1').css('animation-play-state', 'paused');
       $('.waves-2').css('animation-play-state', 'paused');
+
+      $('#close-instructions').attr('tabindex', -1);
     }
 
 
@@ -1030,12 +1092,22 @@ Game = (function() {
             variableWidth: true
           });
 
+          var $carousel = $('.intro-slider');
+          $(document).on('keydown', function(e) {
+              if(e.keyCode == 37) {
+                  $carousel.slick('slickPrev');
+              }
+              if(e.keyCode == 39) {
+                  $carousel.slick('slickNext');
+              }
+          });
+
           $('.intro-slider').on('afterChange', function(e, slick, currentSlide){
               if(slick.slideCount == currentSlide + 1) {
                 
                 $('.close-icon').removeClass('close-faded');
                 $('.intro-slider .slick-next').hide();
-
+                $('.intro-slider-wrapper .close-icon').attr('tabindex', 5);
               }
 
               if(slick.slideCount > currentSlide + 1) {
@@ -1111,6 +1183,8 @@ Game = (function() {
           $('.quiz-detail').removeClass('hidden').addClass('show');
           $('.close-icon').removeClass('close-faded');
         }, 200);
+
+        $('.slider-wrapper .close-icon').attr('tabindex', 5);
       }
     }
 
@@ -1120,6 +1194,67 @@ Game = (function() {
       * the animations start back up running and the overlay, slider/card disappears.
     */
     var closePopup = function () {
+      var isFaded = $(this).hasClass('close-faded');
+      var isSlider = $('.slider-wrapper').hasClass('show');
+      if(!isFaded && isSlider) {
+        $('.slider-wrapper').removeClass('show').addClass('hidden');
+        settings.pause = true;
+        requestAnimationFrame(updateWorld);
+
+        $('#SelectedSalmon').css('animation-play-state', 'running');
+        $('.hotspot').removeClass('state-paused');
+        $('.waves').css('animation-play-state', 'running');
+        $('.waves-1').css('animation-play-state', 'running');
+        $('.waves-2').css('animation-play-state', 'running');
+
+        $(this).css('opacity', 0);
+
+        var className = settings.fishSelection + '-' + settings.salmonCount;
+        $('#SelectedSalmon').removeClass(className);
+
+        setTimeout(function(){
+          $('#SelectedSalmon').addClass(className);
+        }, 10);
+        
+      } 
+
+      var isIntroSlider = $('.intro-slider-wrapper').hasClass('show');
+      if(!isFaded && isIntroSlider) {
+        $('.intro-slider-wrapper').removeClass('show').addClass('hidden');
+        showSalmonSelection();
+      }
+      if(lastCard) {
+        if(lastCard.cards[0].lose_fish) {
+          loseFish();
+        }
+
+        if(lastCard.cards[0].add_fish) {
+          addFish();
+        }
+      }
+
+      lastCard = null;
+      $('.number-of-salmon').text(settings.salmonCount);
+
+      if(!isFaded && isSlider) {
+        
+        var className = settings.fishSelection + '-' + settings.salmonCount;
+        $('#SelectedSalmon').removeClass(className);
+        
+        setTimeout(function(){
+          $('#SelectedSalmon').addClass(className);
+        }, 10);
+        
+      } 
+    }
+
+    /**
+      * Close icon handler for the cards and sliders with Salmon Challenges. 
+      * Checks to see if the slider is showing and if the close icon isn't faded, if so
+      * the animations start back up running and the overlay, slider/card disappears.
+    */
+    var closePopupEnter = function (e) {
+
       var isFaded = $(this).hasClass('close-faded');
       var isSlider = $('.slider-wrapper').hasClass('show');
       if(!isFaded && isSlider) {

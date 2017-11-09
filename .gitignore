@@ -1,6 +1,7 @@
 .sass-cache/
 *.css.map
 .DS_Store
+Icon
 
 git-automation.sh
 installer.phar
@@ -39,4 +40,5 @@ pnw1-puzzle
 pnw2-timeline
 pnw2-markup1
 pnw2-markup2
+pnw2-markup3
 pnw2-news
