@@ -122,7 +122,7 @@
                     <p>Learn more about the timeline entries, including videos and images.</p>
                 </div>
             </div>
-            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity">Continue the Activity</a>
+            <a class="btn btn-success btn-lg btn-white" id="close-instructions" title="Continue this activity" tabindex="0">Continue the Activity</a>
         </div>
         <div class="overlay"></div>
     </div>
@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="draggable-img-wrapper" data-timeline={{:id}}>
-                    <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element">
+                    <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element" tabindex="0">
                     <div class="draggable-overlay hidden" data-timeline={{:id}}></div>
                 </div>
                 
@@ -219,7 +219,7 @@
                                     
                                     <div style="position: relative;" class="modal-img-wrapper">
                                         <img src="{{:image}}" />
-                                        <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}"></div>
+                                        <div data-gallery data-gallery-image="{{:fullimage}}" data-gallery-caption="{{:caption}}" data-gallery-credit="{{:credit}}" tabindex="0"></div>
                                     </div>
 
                                      <figcaption class="caption">{{:caption}}</figcaption>
@@ -246,7 +246,7 @@
                     <h1>Timeline Complete</h1>
                     <p>You’ve completed this timeline segment. Explore the timeline entries and then go back to learn more about the Fish Wars.</p>
                     <div class="btn-wrapper">
-                        <button class="btn btn-lg btn-white" id="back-to-module-btn">Back to Lesson</button>
+                        <a href="" class="btn btn-lg btn-white" id="back-to-module-btn">Back to Lesson</a>
                         <button class="btn btn-lg btn-white" id="explore-btn">Explore Timeline</button>
                     </div>
             </div>

@@ -16,7 +16,9 @@ Detail = (function() {
     * @return {string|int|array} does not return anything.  
     **/
     var displayDetailScreen = function() {
+        Init.getEra();
         var id = $(this).attr('data-timeline');
+        Init.updateURL(id);
     	$('#selection').addClass('hidden animated fadeOut');
         $("#detail").html($.templates("#detail-template").render(data.eras[id-1]));
         var newMoments = randomMoments(data.eras[id-1].Moments);
@@ -70,7 +72,9 @@ Detail = (function() {
     * @return {string|int|array} returns nothing; displays the Explore screen if the number of dropped elements equals the number of droppable elements
     **/
     var displayExploreScreen = function(era) {
-       
+        if ($('.icon-home').hasClass('hidden')) {
+            $('.icon-home').removeClass('hidden');
+        }
         //this is for 'view my timeline'
         if (era !== null && typeof era === 'object') {
             var era = $(this).attr('data-timeline');
@@ -78,19 +82,28 @@ Detail = (function() {
             $('.transition-overlay').addClass('hidden');
 
              if (era == 1) {
+                var lessonPlan2 = 'http://nmai.si.edu/nk360/resources/American-Indian-Removal-What-Does-It-Mean-Remove-People.cshtml';
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
+                $('#back-to-module-btn').attr('href', lessonPlan2);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan2);
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');
 
             } else if (era == 2) {
+                lessonPlan3 = 'http://nmai.si.edu/nk360/resources/American-Indian-Perspectives-on-Thanksgiving.cshtml';
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
+                $('#back-to-module-btn').attr('href', lessonPlan3);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan3);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
             } else {
-                $('.timeline-wrapper').css('left', -3340)
+                  var lessonPlanComplete = 'http://nmai.si.edu/nk360/resources/American-Indian-Responses-to-Environmental-Challenges.cshtml';
+                $('.timeline-wrapper').css('left', -3340);
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlanComplete);
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 3');
             }
@@ -98,21 +111,30 @@ Detail = (function() {
             $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').html($.templates('#complete-template').render(data.eras[era-1]));
             if (era == 1) {
+                var lessonPlan2 = 'http://nmai.si.edu/nk360/resources/American-Indian-Removal-What-Does-It-Mean-Remove-People.cshtml';
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
+                $('#back-to-module-btn').attr('href', lessonPlan2);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan2);
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');               
                 
 
             } else if (era == 2) {
+                var lessonPlan3 = 'http://nmai.si.edu/nk360/resources/American-Indian-Perspectives-on-Thanksgiving.cshtml';
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
+                $('#back-to-module-btn').attr('href', lessonPlan3);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan3);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
             } else {
+                var lessonPlanComplete = 'http://nmai.si.edu/nk360/resources/American-Indian-Responses-to-Environmental-Challenges.cshtml';
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
+                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlanComplete);
                 sendAnalyticsScreen('Explore screen - era 3');
             }
         }
