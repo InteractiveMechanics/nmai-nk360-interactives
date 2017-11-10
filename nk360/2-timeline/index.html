@@ -149,10 +149,36 @@
                 <div class="draggable-img-wrapper" data-timeline={{:id}}>
                     <img class="draggable-img" data-timeline="{{:id}}" src="{{:thumbnail}}" alt="thumbnail image for this draggable element" tabindex="0">
                     <div class="draggable-overlay hidden" data-timeline={{:id}}></div>
+                    <div class="accessible-droppables-container hidden" data-timeline={{:id}} ></div>
                 </div>
                 
             </div>
+            
 
+
+        </script>
+
+        <script id="accessible-droppables-template" type="text/x-jsrender">
+
+            {{for Moments ~startDate=StartDate ~endDate=EndDate}}
+        
+            {{if #index == 0}}         
+                 <div class="accessible-droppable" data-timeline="{{:id}}" tabindex="0">
+                   <small>{{:~startDate}}</small>
+                </div>
+            {{else #index+1 == #get("array").data.length}}
+                <div class="accessible-droppable" data-timeline="{{:id}}" tabindex="0">
+                   <small>{{:~endDate}}</small>
+                </div>
+            {{else}}
+                <div class="accessible-droppable" data-timeline="{{:id}}" tabindex="0">
+                    <small>{{:year}}</small>                
+                </div>
+            {{/if}}
+
+            
+           
+            {{/for}}
 
 
         </script>
@@ -246,8 +272,8 @@
                     <h1>Timeline Complete</h1>
                     <p>You’ve completed this timeline segment. Explore the timeline entries and then go back to learn more about the Fish Wars.</p>
                     <div class="btn-wrapper">
-                        <a href="" class="btn btn-lg btn-white" id="back-to-module-btn">Back to Lesson</a>
-                        <button class="btn btn-lg btn-white" id="explore-btn">Explore Timeline</button>
+                        <a href="" class="btn btn-lg btn-white" id="back-to-module-btn" tabindex="1">Back to Lesson</a>
+                        <button class="btn btn-lg btn-white" id="explore-btn" tabindex="1">Explore Timeline</button>
                     </div>
             </div>
 
