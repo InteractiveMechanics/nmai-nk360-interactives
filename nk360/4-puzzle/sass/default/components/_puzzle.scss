@@ -58,14 +58,15 @@
 	    height: auto;
     }
 
-    @include screen-sm {
+    @media screen and ($screen-sm) and ($screen-portrait) {
     	left: 12%;
     	width: 75%;
-    	margin-top: 150px;
+    	margin-top: 100px;
     }
-    @include screen-md {
+    @media screen and ($screen-md) and ($screen-landscape) {
     	left: 25%;
     	width: 50%;
+    	margin-top: 40px;
     }
 }
 

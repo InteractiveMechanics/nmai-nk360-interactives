@@ -351,15 +351,18 @@ body .photo-container {
       bottom: 0;
       background: url("../assets/bkgr.png") no-repeat;
       z-index: 1;
-      background-size: cover; }
+      background-size: cover;
+      /*width: 16800px !important;*/ }
     .game .game-world .game-world__foreground {
       background: url("../assets/foregr.png") no-repeat;
       z-index: 3;
-      background-size: cover; }
+      background-size: cover;
+      /*width: 18000px !important;*/ }
     .game .game-world .game-world__midground {
       background: url("../assets/midgr.png") no-repeat;
       z-index: 2;
-      background-size: cover; }
+      background-size: cover;
+      /*width: 18500px !important;*/ }
 
 #SelectedSalmon {
   position: fixed;
@@ -378,6 +381,15 @@ body .photo-container {
     .rising-water {
       top: 35% !important; } }
 
+.rising-water-number {
+  top: 16% !important; }
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    .rising-water-number {
+      top: 26% !important; } }
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .rising-water-number {
+      top: 31% !important; } }
+
 .sonic-effect {
   left: 250% !important; }
 
@@ -386,7 +398,7 @@ body .photo-container {
   height: 54px;
   background: url(../assets/sprite-sheets/steelhead-0.png) no-repeat;
   animation: one-steelhead-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .steelhead-1 {
       width: 141px;
       height: 54px;
@@ -397,7 +409,7 @@ body .photo-container {
   height: 56px;
   background: url(../assets/sprite-sheets/steelhead-1.png) no-repeat;
   animation: two-steelhead-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .steelhead-2 {
       width: 141px;
       height: 54px;
@@ -408,7 +420,7 @@ body .photo-container {
   height: 74px;
   background: url(../assets/sprite-sheets/steelhead-2.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .steelhead-3 {
       width: 141px;
       height: 54px;
@@ -419,7 +431,7 @@ body .photo-container {
   height: 97px;
   background: url(../assets/sprite-sheets/steelhead-3.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .steelhead-4 {
       width: 141px;
       height: 54px;
@@ -430,7 +442,7 @@ body .photo-container {
   height: 97px;
   background: url(../assets/sprite-sheets/steelhead-4.png) no-repeat;
   animation: three-steelhead-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .steelhead-5 {
       width: 141px;
       height: 54px;
@@ -441,7 +453,7 @@ body .photo-container {
   height: 49px;
   background: url(../assets/sprite-sheets/chinook-0.png) no-repeat;
   animation: one-chinook-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .chinook-1 {
       width: 146px;
       height: 49px;
@@ -452,7 +464,7 @@ body .photo-container {
   height: 52px;
   background: url(../assets/sprite-sheets/chinook-1.png) no-repeat;
   animation: two-chinook-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .chinook-2 {
       width: 146px;
       height: 49px;
@@ -463,7 +475,7 @@ body .photo-container {
   height: 71px;
   background: url(../assets/sprite-sheets/chinook-2.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .chinook-3 {
       width: 146px;
       height: 49px;
@@ -474,7 +486,7 @@ body .photo-container {
   height: 94px;
   background: url(../assets/sprite-sheets/chinook-3.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .chinook-4 {
       width: 146px;
       height: 49px;
@@ -485,7 +497,7 @@ body .photo-container {
   height: 94px;
   background: url(../assets/sprite-sheets/chinook-4.png) no-repeat;
   animation: three-chinook-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .chinook-5 {
       width: 146px;
       height: 49px;
@@ -496,7 +508,7 @@ body .photo-container {
   height: 62px;
   background: url(../assets/sprite-sheets/sockeye-0.png) no-repeat;
   animation: one-sockeye-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .sockeye-1 {
       width: 152px;
       height: 62px;
@@ -507,7 +519,7 @@ body .photo-container {
   height: 63px;
   background: url(../assets/sprite-sheets/sockeye-1.png) no-repeat;
   animation: two-sockeye-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .sockeye-2 {
       width: 152px;
       height: 62px;
@@ -518,7 +530,7 @@ body .photo-container {
   height: 80px;
   background: url(../assets/sprite-sheets/sockeye-2.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .sockeye-3 {
       width: 152px;
       height: 62px;
@@ -529,7 +541,7 @@ body .photo-container {
   height: 102px;
   background: url(../assets/sprite-sheets/sockeye-3.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .sockeye-4 {
       width: 152px;
       height: 62px;
@@ -540,7 +552,7 @@ body .photo-container {
   height: 102px;
   background: url(../assets/sprite-sheets/sockeye-4.png) no-repeat;
   animation: three-sockeye-fish-swimming 1s steps(14) infinite; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .sockeye-5 {
       width: 152px;
       height: 62px;
@@ -648,7 +660,7 @@ body .photo-container {
 
 .fish-row {
   margin-bottom: 30px; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .fish-row {
       margin-bottom: 15px; }
       .fish-row .col {
@@ -684,7 +696,7 @@ body .photo-container {
   .fish-row img {
     padding: 50px;
     cursor: pointer; }
-    @media (max-width: 990px) {
+    @media (max-width: 991px) {
       .fish-row img {
         padding: 0;
         background-position-y: 0;
@@ -698,7 +710,7 @@ body .photo-container {
     background: url("../assets/selection-active@2x.png") no-repeat;
     background-size: contain;
     background-position-y: 25px; }
-    @media (max-width: 990px) {
+    @media (max-width: 991px) {
       .fish-row .selected img {
         background-position-y: 0;
         background-position-x: 10px;
@@ -852,7 +864,7 @@ transform: none !important;*/
   display: none;
   transition: top 3s, left 10s;
   z-index: 11; }
-  @media (max-width: 990px) {
+  @media (max-width: 991px) {
     .number-of-salmon {
       display: block; } }
 
@@ -881,7 +893,7 @@ hr {
   border-color: white !important; }
 
 .state-paused {
-  animation-play-state: paused; }
+  -webkit-animation: none !important; }
 
 .btn:hover, .btn:focus, .btn:active {
   background-color: white !important;
@@ -1440,7 +1452,7 @@ hr {
 .position-4-progress.highlight {
   opacity: 1; }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .fish-outline {
     background-size: 66px 39px;
     top: -32px;
@@ -1468,7 +1480,7 @@ hr {
   .position-4-progress {
     background: url("../assets/prog-bar-spawn@2x.png") no-repeat center center;
     background-size: 85px 81px; } }
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .fish-outline {
     background-size: 45px 32px;
     top: -27px;

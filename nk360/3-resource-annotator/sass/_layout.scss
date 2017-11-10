@@ -42,10 +42,7 @@ body {
     }
     h3 {
         color: #006986;
-        //font-family: "Archer Pro", serif;
-        span {
-            //font-family: "Archer Pro", serif;
-        }
+        
         &.yellow-underline {
             display: inline-block;
             border-bottom: 3px solid #f6b851;
@@ -271,7 +268,6 @@ small,
     }
 }
 .markers-remaining {
-    font-family: "Archer Pro", serif;
     color: black;
     letter-spacing: .5px;
     text-align: center;
@@ -641,6 +637,10 @@ small,
     left: 0;
     font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+
+    @media screen and ($screen-xxs) {
+        height:100px;
+    }
 }
 .marker-in-text.visible {
     z-index: 3;
@@ -713,7 +713,6 @@ small,
 .delete-pin span {
     display: block;
     margin-top: 30px;
-    font-family: "Open Sans";
 }
 .delete-pin {
     .btn {
@@ -751,6 +750,26 @@ small,
     }
 }
 
-#MobileMarker {
-    
+.display-block {
+    display:block;
+}
+
+.marker-icon-svg {
+    padding-left: 5px;
+}
+
+.clear-left {
+    clear:left;
+}
+
+.clear-right {
+    clear:right;
+}
+
+.clear-both {
+    clear:both;
+}
+
+.margin-bottom-none {
+    margin-bottom:none;
 }

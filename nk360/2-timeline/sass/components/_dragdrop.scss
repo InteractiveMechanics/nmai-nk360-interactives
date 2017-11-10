@@ -167,7 +167,7 @@
   	cursor: grab;	
   	z-index: 3;
   	&:hover, &:focus {
-  		animation: pulse 1s infinite;
+  		animation: pulse 1.5s infinite;
   	}
   	@include screen-xs {
   		height: 50px;
@@ -300,12 +300,50 @@
 	}
 }
 
+.accessible-droppables-container {
+	height: auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+    position: absolute;
+    left: 43px;
+    top: 115px;
+    padding: 10px 0px;
+    z-index: 2;
+    width: auto;
+    display: flex;
+}
+
+.accessible-droppable {
+	@extend .droppable-widget;
+	height: 70px;
+	width: 70px;
+}
+
+.dropped-accessible {
+	background: #a8bd46;
+    opacity: 0.7;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+     &:after {
+    	content: url('/nk360/shared/lib/im/images/icon-checkmark.svg');
+    	height: 82px;
+    	width: 82px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	position: absolute;
+    }
+}
+
+
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
   70% {
-      -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+      -webkit-box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
   }
   100% {
       -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
@@ -313,12 +351,12 @@
 }
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
   }
   70% {
-      -moz-box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
-      box-shadow: 0 0 0 7px rgba( 255, 255, 255, 0);
+      -moz-box-shadow: 0 0 0 8px rgba( 255, 255, 255, 0);
+      box-shadow: 0 0 0 8px rgba( 255, 255, 255, 0);
   }
   100% {
       -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);

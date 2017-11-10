@@ -1,6 +1,10 @@
 body {
 	background: url('/nk360/shared/lib/im/images/pnw/bkgr-pnw@2x.png');
 	background-size: cover;
+
+	@media screen and ($screen-xs) {
+    	margin:0px auto 0 !important;
+    }
 }
 .header {
     @media screen and ($screen-xs) and ($screen-portrait) {

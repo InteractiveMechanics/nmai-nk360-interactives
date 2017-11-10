@@ -19,6 +19,7 @@ Init = (function() {
         $('#droppable-wrapper').html($.templates('#droppable-template').render(data.puzzles[0]));
         $('#complete-overlay').html($.templates('#complete-template').render(data.puzzles[0]));
         $('#learning-points').html($.templates('#learning-points-template').render(data.puzzles[0]));
+        $('#puzzle-download-wrapper').html($.templates('#download-template').render(data.puzzles[0]));
         Puzzle.buildGame();
         setHeaderTooltip();
     }
