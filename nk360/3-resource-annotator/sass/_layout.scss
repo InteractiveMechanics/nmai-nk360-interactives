@@ -638,7 +638,7 @@ small,
     font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
-    @media screen and ($screen-xs) {
+    @media screen and ($screen-xxs) {
         height:100px;
     }
 }
