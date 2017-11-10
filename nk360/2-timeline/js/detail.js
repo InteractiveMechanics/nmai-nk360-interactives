@@ -93,7 +93,7 @@ Detail = (function() {
 
             } else if (era == 2) {
                 // Change this URL for ?era=2
-                lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 $('#back-to-module-btn').attr('href', lessonPlan2);
@@ -135,7 +135,7 @@ Detail = (function() {
 
             } else if (era == 2) {
                 // Change this URL for ?era=2
-                lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 $('#back-to-module-btn').attr('href', lessonPlan2);
