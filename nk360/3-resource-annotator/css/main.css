@@ -856,6 +856,9 @@ small,
   left: 0;
   font-size: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
+  @media screen and (max-width: 767px) {
+    .marker-in-text {
+      height: 100px; } }
 
 .marker-in-text.visible {
   z-index: 3; }
