@@ -64,6 +64,7 @@ Init = (function() {
     };
 
     var isSelectionScreen = function() {
+        // TODO remove this code prior to deployment
         updateURL(2);
     	if ($('#selection').hasClass('hidden')) {
     		$('.icon-home').removeClass('hidden');
