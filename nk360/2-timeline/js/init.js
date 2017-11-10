@@ -64,14 +64,11 @@ Init = (function() {
     };
 
     var isSelectionScreen = function() {
-        // TODO remove this code prior to deployment
-        updateURL(2);
     	if ($('#selection').hasClass('hidden')) {
     		$('.icon-home').removeClass('hidden');
 
     	} else {
     		$('.icon-home').addClass('hidden');
-            //var myEra = getParameterByName('era');
             if (myEra == 2) {
                 displayEra2();
             } else if (myEra == 3) {
@@ -86,7 +83,6 @@ Init = (function() {
     }
 
     var displayEra2 = function() {
-        //var myEra = getParameterByName('era');
         if ($('.era-block[data-era="1"]').hasClass('completed') || myEra == 2) {
             $('.era-block[data-era="1"]').addClass('completed');
             $('.completed').find('.start-timeline-btn').addClass('hidden');
