@@ -113,6 +113,7 @@ Init = (function() {
 
     var displayEra2 = function() {
         if (myEra == 2 && !$('.era-block[data-era="2"]').hasClass('completed')) {
+            // Change this URL for ?era=2
             var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
             $('#return-to-lesson-link').attr('href', lessonPlan2);
 
@@ -123,6 +124,7 @@ Init = (function() {
             $('.era-block[data-era="2"]').addClass('active');
 
         } else if (myEra == 2 && $('.era-block[data-era="2"]').hasClass('completed')) {
+            // Change this URL for ?era=2
             var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
             $('#return-to-lesson-link').attr('href', lessonPlan2);
 
@@ -195,6 +197,7 @@ Init = (function() {
         init: init,
         isSelectionScreen: isSelectionScreen,
         getEra: getEra,
-        updateURL: updateURL
+        updateURL: updateURL, 
+        getParameterByName: getParameterByName
     }
 })();

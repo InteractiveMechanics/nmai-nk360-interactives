@@ -32,7 +32,7 @@ Detail = (function() {
 
     /**
     * Shuffles the draggable elements (aka moments)
-    * @param moments
+    * @param moments - an object
     * @return {string|int|array} an array of the shuffled moments  
     **/
     var randomMoments = function(moments) {
