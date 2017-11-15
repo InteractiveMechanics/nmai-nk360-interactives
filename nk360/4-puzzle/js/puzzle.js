@@ -448,6 +448,7 @@ Puzzle = (function() {
     return {
         init: init,
         buildGame: buildGame,
-        showComplete: showComplete
+        showComplete: showComplete,
+        contains: contains
     }
 })();
