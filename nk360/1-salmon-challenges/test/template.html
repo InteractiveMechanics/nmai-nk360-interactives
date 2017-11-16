@@ -56,7 +56,7 @@
         });
 
         QUnit.test('Skip intstuctions if param false', function (assert) {
-            var url = "http://nmai.interactivemechanics.com/nk360/1-salmon-challenges/?instructions=false";
+            var url = "http://www.nmail.org/nk360/1-salmon-challenges/?instructions=false";
             assert.equal(Game.getParameterByName('instructions', url), "false", 'boolean');
         });
 

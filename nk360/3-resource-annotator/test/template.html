@@ -15,11 +15,66 @@
 
     <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
     <script src="function.js"></script>
+
+
+    <!-- Include jquery, jquery ui, touchpunch -->
+    <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jsrender/jsrender.min.js"></script>
+
+    <!-- Include bootstrap -->
+    <script src="/nk360/shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Include lightGallery -->
+    <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Include slick -->
+    <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
+
+    <!-- Include shared code -->
+    <script src="/nk360/shared/lib/im/code/analytics.js"></script>
+    <script src="/nk360/shared/lib/im/code/audio/audio.js"></script>
+    <script src="/nk360/shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="/nk360/shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="/nk360/shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
+
+    <!-- Third Party Code -->
+    <script src="../js/findAndReplaceDOMText.js"></script>
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = '../data/m1a1.json';</script>
+
+    <!-- For production build -->
+    <!-- build:template:dist 
+        <script>var jsondata = './data/<%= json %>.json';</script>
+    /build -->
+
+    <!-- Include project specific code/files -->
+    <script src="../js/annotator.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/init.js"></script>
+
+
     <script>
         // Insert QUnit tests here
-        QUnit.test( "a basic test example", function( assert ) {
-            var value = "hello";
-            assert.equal( value, "hello", "We expect value to be hello" );
+        QUnit.test('Skip intstuctions if param false', function (assert) {
+            var url = "http://www.nmail.org/nk360/3-resource-annotator/?instructions=false";
+            assert.equal(Annotator.getParameterByName('instructions', url), "false", 'boolean');
+        });
+
+        QUnit.test('Gets the first marker item in the array', function (assert) {
+            assert.equal(Annotator.getMarker(), './assets/marker-01@2x.png', 'string');
+        });
+
+        QUnit.test('Width of the textarea modal (275)', function (assert) {
+            assert.equal(Annotator.getModalWidth(), 275, 'integer');
+        });
+
+        QUnit.test('Number of possible markers per Resource Annotator', function (assert) {
+            assert.equal(Annotator.getNumberOfMarkers(), 5, 'integer');
         });
     </script>
 
