@@ -82,24 +82,30 @@ Detail = (function() {
             $('.transition-overlay').addClass('hidden');
 
              if (era == 1) {
+                var lessonPlan1 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars-tactics/index.html';
+                $('#back-to-module-btn').attr('href', lessonPlan1);
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');
 
             } else if (era == 2) {
+                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
             } else if (era == 3) {
-                $('.timeline-wrapper').css('left', -3340);
+                var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
                 $('#back-to-module-btn').attr('href', lessonPlan3);
-                $('#return-to-lesson-link').attr('href', lessonPlan3);
+                $('.timeline-wrapper').css('left', -3340);
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 3');
             } else {
+                var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
                 $('.timeline-wrapper').css('left', -3340);
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 4');
@@ -109,22 +115,30 @@ Detail = (function() {
             $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').html($.templates('#complete-template').render(data.eras[era-1]));
             if (era == 1) {
+                var lessonPlan1 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars-tactics/index.html';
+                $('#back-to-module-btn').attr('href', lessonPlan1);
                 $('.era-container[data-era="2"]').addClass('hidden');
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');               
                 
 
             } else if (era == 2) {
+                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
             } else if (era == 3) {
+                var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan3);
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
                 sendAnalyticsScreen('Explore screen - era 3');
             } else {
+                var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
                 $('.timeline-wrapper').css('left', -3340);
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 4');
