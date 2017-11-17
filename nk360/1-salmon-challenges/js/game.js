@@ -1309,8 +1309,28 @@ Game = (function() {
       } 
     }
 
+    /**
+      * Returns the progress section value
+      * @param {integer} index of the array we want to check
+      * @return 3 the start of the game
+    */
+    var getProgressBarPositionsAtIndex = function(index) {
+      return settings.positions[index];
+    }
+
+    /**
+      * Returns the amont of salmon you start with at the beginning of the game
+      * @return 3 the start of the game
+    */
+    var getStartingSalmonCount = function() {
+      return settings.salmonCount;
+    }
     
     return {
-        init: init
+        init: init,
+        getParameterByName: getParameterByName,
+        getProgressBarPositionsAtIndex: getProgressBarPositionsAtIndex,
+        getStartingSalmonCount: getStartingSalmonCount
+
     }
 })();

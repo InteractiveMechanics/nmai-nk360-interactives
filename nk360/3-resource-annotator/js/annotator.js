@@ -985,7 +985,30 @@ Annotator = (function() {
       return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
 
+  /**
+    * Return the modal width
+    * @return int the value  should be 275
+  */
+
+  var getModalWidth = function() {
+    return modalWidth;
+  }
+
+  /**
+    * Return the modal width
+    * @return int the value  should be 275
+  */
+
+  var getNumberOfMarkers = function() {
+    return markerArray.length;
+  }
+
+
   return {
-      init: init
+      init: init,
+      getParameterByName: getParameterByName,
+      getMarker: getMarker,
+      getModalWidth: getModalWidth,
+      getNumberOfMarkers: getNumberOfMarkers
   }
 })();

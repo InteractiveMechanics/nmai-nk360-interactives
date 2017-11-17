@@ -4,6 +4,13 @@ Detail = (function() {
 
     var tooltipShowTimeout;
     var tooltipHideTimeout;
+    var lessonPlan1 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars-tactics/index.html';
+    var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+    var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
+    var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+
+
+
 
 	var init = function() {
         bindEvents();
@@ -32,7 +39,7 @@ Detail = (function() {
 
     /**
     * Shuffles the draggable elements (aka moments)
-    * @param moments
+    * @param moments - an object
     * @return {string|int|array} an array of the shuffled moments  
     **/
     var randomMoments = function(moments) {
@@ -82,60 +89,58 @@ Detail = (function() {
             $('.transition-overlay').addClass('hidden');
 
              if (era == 1) {
-                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan1);
                 $('.era-container[data-era="2"]').addClass('hidden');
                 $('.era-container[data-era="3"]').addClass('hidden');
-                $('#back-to-module-btn').attr('href', lessonPlan2);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan2);
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');
 
             } else if (era == 2) {
-                lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
-                $('#back-to-module-btn').attr('href', lessonPlan3);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan3);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
-            } else {
-                  var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+            } else if (era == 3) {
+                $('#back-to-module-btn').attr('href', lessonPlan3);
                 $('.timeline-wrapper').css('left', -3340);
-                $('#back-to-module-btn').attr('href', lessonPlanComplete);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlanComplete);
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 3');
+            } else {
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
+                $('.timeline-wrapper').css('left', -3340);
+                Detail.timelineWidth = 4800;
+                sendAnalyticsScreen('Explore screen - era 4');
+
             }
         } else {
             $('#explore').html($.templates("#explore-template").render(data));
             $('.transition-overlay').html($.templates('#complete-template').render(data.eras[era-1]));
             if (era == 1) {
-                var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan1);
                 $('.era-container[data-era="2"]').addClass('hidden');
-                $('.era-container[data-era="3"]').addClass('hidden');
-                $('#back-to-module-btn').attr('href', lessonPlan2);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan2);
                 Detail.timelineWidth = 2143;
                 sendAnalyticsScreen('Explore screen - era 1');               
                 
 
             } else if (era == 2) {
-                var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
+                $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
-                $('#back-to-module-btn').attr('href', lessonPlan3);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlan3);
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
-            } else {
-                var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+            } else if (era == 3) {
+                $('#back-to-module-btn').attr('href', lessonPlan3);
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
-                $('#back-to-module-btn').attr('href', lessonPlanComplete);
-                $('a[title="Return to American Indian Removal Lesson"]').attr('href', lessonPlanComplete);
                 sendAnalyticsScreen('Explore screen - era 3');
+            } else {
+                $('#back-to-module-btn').attr('href', lessonPlanComplete);
+                $('.timeline-wrapper').css('left', -3340);
+                Detail.timelineWidth = 4800;
+                sendAnalyticsScreen('Explore screen - era 4');
             }
         }
         $('#explore').removeClass('animated fadeIn hidden');
