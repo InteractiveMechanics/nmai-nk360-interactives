@@ -62,7 +62,7 @@ Annotator = (function() {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
-            heading += " & " + arr[i].theme_id;
+            heading += " and " + arr[i].theme_id;
           } else {
             heading += arr[i].theme_id + ", ";
           }
