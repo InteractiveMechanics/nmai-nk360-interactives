@@ -239,7 +239,8 @@ Annotator = (function() {
         var obj = {
           "theme_id": themes[i].title,
           "count": themes[i].count,
-          "marker_image": marker_image
+          "marker_image": marker_image,
+          "tooltip": themes[i].tooltip_text
         };
 
         themes[i].marker_image = marker_image
