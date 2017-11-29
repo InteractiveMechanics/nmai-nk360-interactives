@@ -1179,7 +1179,7 @@ Game = (function() {
           $('.quiz-detail').text(result);
         }
 
-        $('.quiz-options').attr('data-answered', true);
+        $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
           $('.quiz-detail').removeClass('hidden').addClass('show');
