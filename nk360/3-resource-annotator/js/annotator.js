@@ -330,6 +330,7 @@ Annotator = (function() {
       markers.draggable({
         containment: 'window',
         helper: 'clone',
+        cursorAt: { left: 30, top: 70 },
         cursor: 'move',
         appendTo: 'body',
         // If there are no more pins available
