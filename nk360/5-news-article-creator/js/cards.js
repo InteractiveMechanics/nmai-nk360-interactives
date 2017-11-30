@@ -264,6 +264,7 @@ Cards = (function() {
      */
     var removeQuoteFromArray = function(id) {
         Cards.quotes.splice(id, 1);
+        return true;
     }
 
     /**
@@ -412,6 +413,7 @@ Cards = (function() {
             $('.article-word-count').removeClass('error');
             $('.article-word-count').text(count + ' words');
         }
+        return count;
     }
 
     /**
@@ -445,6 +447,7 @@ Cards = (function() {
     return {
         init: init,
         addQuoteToArray: addQuoteToArray,
+        removeQuoteFromArray: removeQuoteFromArray,
         getEditorTextLength: getEditorTextLength,
         getEditorContents: getEditorContents,
         getTheme: getTheme,
@@ -452,6 +455,7 @@ Cards = (function() {
         getHeadline: getHeadline,
         getImages: getImages,
         getQuotes: getQuotes,
-        getFeatured: getFeatured
+        getFeatured: getFeatured,
+        updateWordCount: updateWordCount
     }
 })();

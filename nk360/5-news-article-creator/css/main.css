@@ -911,7 +911,8 @@ main {
     text-overflow: ellipsis;
     width: 100%;
     font-size: 42px;
-    line-height: 1; }
+    line-height: 1;
+    overflow-x: hidden; }
     @media screen and (min-width: 992px) and (max-width: 1199px) {
       #print-preview .paper-preview-headline {
         font-size: 40px;
@@ -931,7 +932,9 @@ main {
           font-size: 60px; } }
   #print-preview .paper-preview-masthead {
     margin-bottom: 10px;
-    font-style: italic; }
+    font-style: italic;
+    overflow-x: hidden;
+    text-overflow: ellipsis; }
   #print-preview .paper-preview-article {
     display: flex;
     flex-direction: column;
@@ -952,7 +955,8 @@ main {
     #print-preview .paper-preview-article > p {
       font-size: 0.9rem;
       line-height: 1.8;
-      text-align: justify; }
+      text-align: justify;
+      word-break: break-word; }
     #print-preview .paper-preview-article blockquote {
       padding: 0;
       margin-bottom: 10px;
