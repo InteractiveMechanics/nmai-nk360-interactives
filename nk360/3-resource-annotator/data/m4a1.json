@@ -26,7 +26,8 @@
 		    "source_type": "Image/Article",
 		    "excerpt": "Major opponents to treaty fishing rights were hunting and fishing organizations, not just the state of Washington's fisheries and game departments.",
 		    "thumbnail_image": "./assets/imgs/m4a1/med-source-1.jpg",
-		    "question_text": "<p>What was at stake for the sport fishers as a result of the Boldt Decision?</p><p>How might education about treaty rights impact the viewpoints of the non-Indian fishers in this article?</p>"
+		    "question_text": "<p>What was at stake for the sport fishers as a result of the Boldt Decision?</p><p>How might education about treaty rights impact the viewpoints of the non-Indian fishers in this article?</p>",
+		    "resource_caption": ""
 		},
 		{
 			"id": 2,
@@ -42,7 +43,8 @@
 		    "source_type": "Quote",
 		    "excerpt": "‘We aren't going to sell your fishermen gasoline anymore from our docks. We aren't going to supply ice for the fish that you take into the hulls of your boats.’ And so there was all these things and the state of Washington stood behind them on that, saying, ‘Well, the Boldt Decision isn't really in effect until the Supreme Court upholds it.”",
 		    "thumbnail_image": "",
-		    "question_text": "Does the state of Washington have an obligation to prevent discriminatory actions such as the one described here? Why or why not?"
+		    "question_text": "Does the state of Washington have an obligation to prevent discriminatory actions such as the one described here? Why or why not?",
+		    "resource_caption": ""
 		},
 		{
 			"id": 3,
@@ -58,7 +60,8 @@
 		    "source_type": "Image",
 		    "excerpt": "Indian Voice, published by the Small Tribes Organization of Western Washington in Federal Way, raised the alarm about the backlash, as did other Native publications. This cartoon is from the November 1977 issue. 'Belloni' refers to Robert C. Belloni, the federal court judge who reaffirmed treaty fishing rights and ruled that tribes were guaranteed to their 'fair share' in his 1968 ruling in Sohappy v. Smith.",
 		    "thumbnail_image": "./assets/imgs/m4a1/med-source-3.jpg",
-		    "question_text": "<p>What does the cartoon imply about the impact of tribal vs. commercial fishing?</p><p>What is the central message of the cartoon?</p>"
+		    "question_text": "<p>What does the cartoon imply about the impact of tribal vs. commercial fishing?</p><p>What is the central message of the cartoon?</p>",
+		    "resource_caption": ""
 		},
 		{
 			"id": 4,
@@ -74,7 +77,8 @@
 		    "source_type": "Quote",
 		    "excerpt": "“Yeah, well, the Boldt Decision, it was very difficult because there was just this intensity of hate. People would spit on you. And yell at you, and call you names.”",
 		    "thumbnail_image": "",
-		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect? </p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>"
+		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect? </p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>",
+		    "resource_caption": ""
 		},
 		{
 			"id": 5,
@@ -90,7 +94,8 @@
 		    "source_type": "Image",
 		    "excerpt": "Hatred and outrage were expressed in a variety of ways and in a variety of places. The Boldt effigy was hung outside the federal courthouse where Judge Boldt presided.",
 		    "thumbnail_image": "./assets/imgs/m4a1/med-source-5.jpg",
-		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect?</p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>"
+		    "question_text": "<p>How might effigies like this impact the communities, both Indian and non-Indian, in which Boldt’s ruling took effect?</p><p>What potential consequences—both positive and negative—might come from publicizing these images in a regional newspaper like the Seattle Times?</p>",
+		    "resource_caption": ""
 		}
 		
 	],

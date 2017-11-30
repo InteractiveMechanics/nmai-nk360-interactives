@@ -31,7 +31,8 @@
 		    "source_type": "Quote",
 		    "excerpt": "“The Crow Nation, we’re Apsáalooke Nation. That’s what we refer to ourselves as, Apsáalooke. The Apsáalooke, we come from a warrior tradition.”",
 		    "thumbnail_image": "",
-		    "question_text": "According to Darrin Old Coyote, what qualities do Crow Nation leaders exhibit?"
+		    "question_text": "According to Darrin Old Coyote, what qualities do Crow Nation leaders exhibit?",
+		    "resource_caption": ""
 		},
 		{
 			"id": 2,
@@ -47,7 +48,8 @@
 		    "source_type": "Image",
 		    "excerpt": "Crow veterans hold a place of honor at Crow Fair opening ceremonies. Held on the Crow Reservation in Montana every summer, Crow Fair is the largest annual gathering of Native People and Nations in the U.S. The year 2018 will mark the 100th anniversary of the event, which lasts for four days and features a powwow, parade, rodeo, and horse races. It attracts more than 50,000 spectators and participants each year.",
 		    "thumbnail_image": "./assets/imgs/m1a1/med-source-2.jpg",
-		    "question_text": "In what ways does the Crow Nation honor veterans during Crow Fair?"
+		    "question_text": "In what ways does the Crow Nation honor veterans during Crow Fair?",
+		    "resource_caption": ""
 		},
 		{
 			"id": 3,
@@ -63,7 +65,8 @@
 		    "source_type": "Image",
 		    "excerpt": "The late Joseph Medicine Crow was his tribe’s historian of distinction. Mr. Medicine Crow performed the four deeds necessary to become a Crow Chief during World War II: He captured a well-guarded horse; took an enemy’s weapon; counted coup on (struck) the enemy; and led a successful war party and returned home safely.",
 		    "thumbnail_image": "./assets/imgs/m1a1/med-source-3.jpg",
-		    "question_text": "<p>What responsibilities and values can be inferred from four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>"
+		    "question_text": "<p>What responsibilities and values can be inferred from four deeds necessary to become a Crow Chief?</p><p>What honors and distinctions might come as a result of accomplishing these deeds?</p>",
+		    "resource_caption": ""
 		},
 		{
 			"id": 4,
@@ -79,7 +82,8 @@
 		    "source_type": "Image/Passage",
 		    "excerpt": "“Sharp Nose, an Arapahoe citizen, made a sacred bundle and with his pipe in hand approached a Crow community, not knowing whether he or his brother-in-law Big Plume would be spared.”",
 		    "thumbnail_image": "./assets/imgs/m1a1/med-source-4.jpg",
-		    "question_text": "<p>According to this story, why is the pipe significant to the Arapahoe and Crow Nations?</p><p>How did the Crow and Arapahoe practice diplomacy in this story?</p>"
+		    "question_text": "<p>According to this story, why is the pipe significant to the Arapahoe and Crow Nations?</p><p>How did the Crow and Arapahoe practice diplomacy in this story?</p>",
+		    "resource_caption": ""
 		}
 	],
     "returnTo": {
