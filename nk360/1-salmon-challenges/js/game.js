@@ -7,7 +7,7 @@ Game = (function() {
       pause: true,
       started: false,
       $world: $('.game-world'),
-      positions: [0, 5520, 9540, -1],
+      positions: [0, 5520, 9840, -1],
       leg: 0,
       $progress: $('.progressb'),
       scaling: 0,
@@ -503,11 +503,11 @@ Game = (function() {
 
           if(settings.pause) {
             var current_position = -settings.position;
-            if (current_position < 17040) {
+            if (current_position < 17440) {
 
-              if(checkEncounters(current_position)) {
+              //if(checkEncounters(current_position)) {
 
-              };
+              //};
 
                 if(current_position == 12500) {
                   $('.number-of-salmon').addClass('rising-water-number');
