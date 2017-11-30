@@ -7,7 +7,7 @@ Game = (function() {
       pause: true,
       started: false,
       $world: $('.game-world'),
-      positions: [0, 5520, 9840, -1],
+      positions: [0, 5820, 10840, -1],
       leg: 0,
       $progress: $('.progressb'),
       scaling: 0,
