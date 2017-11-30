@@ -7,7 +7,7 @@ Game = (function() {
       pause: true,
       started: false,
       $world: $('.game-world'),
-      positions: [0, 5020, 9040, -1],
+      positions: [0, 5520, 9540, -1],
       leg: 0,
       $progress: $('.progressb'),
       scaling: 0,
@@ -505,7 +505,7 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 17040) {
 
-                if(checkEncounters(current_position)) {
+               if(checkEncounters(current_position)) {
 
                 };
 
@@ -515,7 +515,9 @@ Game = (function() {
                 }
 
                 settings.position -= settings.speed;
-                $('.game-world').css('left', settings.position + 'px');
+                //s$('.game-world').css('left', settings.position + 'px');
+                $('.game-world').css("transform", "translate(" + settings.position + "px,0)");
+
                 
                 settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
@@ -1177,7 +1179,7 @@ Game = (function() {
           $('.quiz-detail').text(result);
         }
 
-        $('.quiz-options').attr('data-answered', true);
+        $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
           $('.quiz-detail').removeClass('hidden').addClass('show');

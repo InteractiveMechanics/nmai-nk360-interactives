@@ -170,7 +170,7 @@
                     <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
                     <h2>Select Your Resource</h2>
                     <p>
-                        Select a historical image or text to annotate from the selection of source materials provided.
+                        Select a source to annotate from selection of materials provided.
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -447,8 +447,8 @@
           <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
         </div>
         <div class="right">
-          <div class="theme">
-            {{:title}} <!--<span class="defintions-icon"></span>-->
+          <div class="theme" data-toggle="tooltip" title="{{:tooltip_text}}">
+            {{:title}} <span class="defintions-icon"></span>
           </div>
           <div class="markers-remaining"></div>
         </div>
@@ -488,13 +488,6 @@
           <p class="original-text-info">
             {{:body}}
           </p>
-          {{/if}}
-
-
-          {{if caption}}
-            <p class="original-text-info">
-              {{:caption}}
-            </p>
           {{/if}}
 
 

@@ -62,7 +62,7 @@ Annotator = (function() {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
-            heading += " & " + arr[i].theme_id;
+            heading += " and " + arr[i].theme_id;
           } else {
             heading += arr[i].theme_id + ", ";
           }
@@ -239,7 +239,8 @@ Annotator = (function() {
         var obj = {
           "theme_id": themes[i].title,
           "count": themes[i].count,
-          "marker_image": marker_image
+          "marker_image": marker_image,
+          "tooltip": themes[i].tooltip_text
         };
 
         themes[i].marker_image = marker_image
@@ -329,6 +330,7 @@ Annotator = (function() {
       markers.draggable({
         containment: 'window',
         helper: 'clone',
+        cursorAt: { left: 30, top: 70 },
         cursor: 'move',
         appendTo: 'body',
         // If there are no more pins available
