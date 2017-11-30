@@ -505,9 +505,9 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 17440) {
 
-              //if(checkEncounters(current_position)) {
+              if(checkEncounters(current_position)) {
 
-              //};
+              };
 
                 if(current_position == 12500) {
                   $('.number-of-salmon').addClass('rising-water-number');
