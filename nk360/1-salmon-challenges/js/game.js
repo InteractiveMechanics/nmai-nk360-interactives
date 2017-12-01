@@ -505,14 +505,14 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 17440) {
 
-              if(checkEncounters(current_position)) {
+             /* if(checkEncounters(current_position)) {
 
               };
 
                 if(current_position == 12500) {
                   $('.number-of-salmon').addClass('rising-water-number');
                   $('#SelectedSalmon').addClass('rising-water');
-                }
+                }*/
 
                 settings.position -= settings.speed;
                 //s$('.game-world').css('left', settings.position + 'px');
@@ -538,7 +538,7 @@ Game = (function() {
                 settings.$progress.css("width", totalPos);*/
                 requestAnimationFrame(updateWorld);
             } else {
-              $('.fishes-left').text(settings.salmonCount);
+              /*$('.fishes-left').text(settings.salmonCount);
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
@@ -550,14 +550,14 @@ Game = (function() {
               $('#SelectedSalmon').addClass('sonic-effect');
               $('.number-of-salmon').addClass('sonic-effect');
 
-              sendGoogleAnalyticsEvent("End game", "complete");
+              sendGoogleAnalyticsEvent("End game", "complete");*/
 
 
             }
           }
 
         } else {
-          showGameOverScreen();
+          /*showGameOverScreen();*/
         }
     };
 
