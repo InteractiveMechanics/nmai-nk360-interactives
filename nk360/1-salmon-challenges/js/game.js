@@ -675,7 +675,7 @@ Game = (function() {
     */
     var startGame = function() {
         $('.hotspot').removeClass('state-paused');
-        setTimeout(function () {
+        setInterval(function () {
             //requestAnimationFrame(updateWorld);
             updateWorld();
         }, 1000/60);
