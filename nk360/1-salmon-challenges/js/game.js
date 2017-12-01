@@ -515,8 +515,8 @@ Game = (function() {
                 }
 
                 settings.position -= settings.speed;
-                //s$('.game-world').css('left', settings.position + 'px');
-                $('.game-world').css("transform", "translate(" + settings.position + "px,0)");
+                $('.game-world').css('left', settings.position + 'px');
+                //$('.game-world').css("transform", "translate(" + settings.position + "px,0)");
 
                 
                 settings.positions.forEach(function(pos, index) {
