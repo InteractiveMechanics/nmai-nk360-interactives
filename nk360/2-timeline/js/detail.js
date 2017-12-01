@@ -4,10 +4,10 @@ Detail = (function() {
 
     var tooltipShowTimeout;
     var tooltipHideTimeout;
-    var lessonPlan1 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars-tactics/index.html';
-    var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
-    var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
-    var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+    var lessonPlan1 = '/nk360/pnw-fish-wars/index.cshtml#issues';
+    var lessonPlan2 = '/nk360/pnw-fish-wars/index.cshtml#court';
+    var lessonPlan3 = '/nk360/pnw-fish-wars/index.cshtml#resolved';
+    var lessonPlanComplete = '/nk360/pnw-fish-wars/index.cshtml#summative';
 
 
 
