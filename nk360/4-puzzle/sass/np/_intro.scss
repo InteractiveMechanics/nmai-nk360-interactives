@@ -24,6 +24,11 @@
 		background-size: 100%;
 	}
 
+	@media screen and (min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) {
+		min-height: 50%;
+		height: auto;
+	}
+
 }
 
 .learning-points-card {
@@ -35,11 +40,27 @@
 			@media screen and ($screen-sm) and ($screen-portrait) {
 				margin-top: 0px;
 			}
+
+			@media screen and (min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) {
+				margin-top: 55px;
+			}
 		}
+
+
 	}
 
 	@media screen and ($screen-md) and ($screen-landscape) {
 		top: 2.5%;
 	}
 
+}
+
+.intro-card {
+	background-size: 90% 100%;
+	.text-wrapper {
+		@media screen and (min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) {
+				margin-bottom: 20px;
+			}
+
+	}
 }
