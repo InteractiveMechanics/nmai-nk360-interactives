@@ -145,7 +145,7 @@ Game = (function() {
         $('.waves').css('animation-play-state', 'running');
       $('.waves-1').css('animation-play-state', 'running');
       $('.waves-2').css('animation-play-state', 'running');
-        //requestAnimationFrame(updateWorld);
+        requestAnimationFrame(updateWorld);
       }
     }
 
@@ -505,20 +505,19 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 17440) {
 
-              /*if(checkEncounters(current_position)) {
+              if(checkEncounters(current_position)) {
 
-              };*/
+              };
 
-                /*if(current_position == 12500) {
+                if(current_position == 12500) {
                   $('.number-of-salmon').addClass('rising-water-number');
                   $('#SelectedSalmon').addClass('rising-water');
-                }*/
+                }
 
                 settings.position -= settings.speed;
-                $('.game-world').css('left', settings.position + 'px');
-                //$('.game-world').css("transform", "translate(" + settings.position + "px,0)");
+                //s$('.game-world').css('left', settings.position + 'px');
+                $('.game-world').css("transform", "translate(" + settings.position + "px,0)");
 
-                
                 /*settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
                         pos = (window.innerWidth / 2);
@@ -537,9 +536,9 @@ Game = (function() {
                     prevPos = pos;
                 });
                 settings.$progress.css("width", totalPos);*/
-                //requestAnimationFrame(updateWorld);
+                requestAnimationFrame(updateWorld);
             } else {
-              /*$('.fishes-left').text(settings.salmonCount);
+              $('.fishes-left').text(settings.salmonCount);
               $('.encounters-hit').text(settings.encounterSeen);
               $('#congrats-instructions').removeClass('hidden').addClass('show');
               $('#SelectedSalmon').css('animation-play-state', 'paused');
@@ -552,7 +551,7 @@ Game = (function() {
               $('.number-of-salmon').addClass('sonic-effect');
 
               sendGoogleAnalyticsEvent("End game", "complete");
-*/
+
 
             }
           }
@@ -675,9 +674,8 @@ Game = (function() {
     */
     var startGame = function() {
         $('.hotspot').removeClass('state-paused');
-        setInterval(function () {
-            //requestAnimationFrame(updateWorld);
-            updateWorld();
+        setTimeout(function () {
+            requestAnimationFrame(updateWorld);
         }, 1000/60);
     };
 
@@ -1081,7 +1079,7 @@ Game = (function() {
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
 
-        //requestAnimationFrame(updateWorld);
+        requestAnimationFrame(updateWorld);
       };
 
       if(!settings.started) {
@@ -1202,7 +1200,7 @@ Game = (function() {
       if(!isFaded && isSlider) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
-        //requestAnimationFrame(updateWorld);
+        requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').removeClass('state-paused');
@@ -1263,7 +1261,7 @@ Game = (function() {
       if(!isFaded && isSlider) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
-        //requestAnimationFrame(updateWorld);
+        requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').removeClass('state-paused');
