@@ -22,7 +22,7 @@ Puzzle = (function() {
             $('#droppable-wrapper').addClass('hidden animated fadeOut');
             $('#complete-overlay').removeClass('hidden').addClass('animated fadeIn');
             $('#puzzle-download-wrapper').removeClass('hidden');
-            $('.puzzle-img-zoom-icon').removeClass('hidden');
+            $('[data-gallery]').removeClass('hidden');
             sendAnalyticsEvent('Puzzle', 'complete');
         }
     }
@@ -73,13 +73,13 @@ Puzzle = (function() {
         $('.draggable-widget').draggable({
             snap: '.droppable-widget',
             revert: 'invalid',
-            snapMode: 'interior',
-            snapTolerance: 10,
+            snapMode: 'both',
+            //snapTolerance: 100,
             greedy: false,
             start: function(event, ui) { 
                 $(this).draggable("option", "cursorAt", {
                     left: Math.floor(this.clientWidth / 2),
-                    top: Math.floor(this.clientHeight / 2)
+                    bottom: Math.floor(this.clientHeight / 2) - 50
                 }); 
             }
         });
@@ -431,6 +431,8 @@ Puzzle = (function() {
 
     var bindEvents = function() {
         $(document).ready(checkWindowWidth);
+        $(window).on('resize', checkWindowWidth);
+        $(window).on('orientationchange', checkWindowWidth);
         $(document).on('click tap', '.card[data-card]', showModal);
         $(document).on('click tap', '#explore-img-btn', exploreImg);
     	$(document).on('click tap', '#read-more-btn', showLearningPts);

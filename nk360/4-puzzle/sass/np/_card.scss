@@ -5,6 +5,7 @@
 
 .card {
 	background: url('../assets/card-np@2x.png');
-	background-size: contain;
+	background-size: cover;
 	background-color: #ffffff;
+	background-repeat: no-repeat;
 }

@@ -11,6 +11,10 @@
 	top: 0px;
 	width: 100vw;
 	background: rgba(0, 0, 0, 0.85);
+
+	@include screen-xxs {
+		height: calc(100% + 60px);
+	}
 	.text-wrapper {
 		color: white;
 		width: 40%;
@@ -55,6 +59,10 @@
 		    height: 80%;
 		    top: 10%;
     	}
+
+    	@include screen-xxs {
+    		height: initial;
+    	}
 	}
 	.btn-wrapper {
 		button {
@@ -66,7 +74,12 @@
 		    display: flex;
 		    flex-direction: column;
 		}
+
+		@include screen-xxs {
+			margin-bottom: 60px;
+		}
 	}
+
 
 }
 

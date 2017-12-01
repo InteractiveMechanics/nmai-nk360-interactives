@@ -93,8 +93,9 @@ h4 {
 **/
 .card {
   background: url("../assets/card-np@2x.png");
-  background-size: contain;
-  background-color: #ffffff; }
+  background-size: cover;
+  background-color: #ffffff;
+  background-repeat: no-repeat; }
 
 /**
  * This file includes Northern Plains theme styles for the modal.
@@ -144,6 +145,11 @@ h4 {
     .learning-points-card {
       margin-top: 30px;
       background-size: 100%; } }
+  @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) {
+    .intro-card,
+    .learning-points-card {
+      min-height: 50%;
+      height: auto; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .learning-points-card .header-wrapper {
@@ -151,9 +157,18 @@ h4 {
 @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
   .learning-points-card .header-wrapper h1 {
     margin-top: 0px; } }
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) {
+  .learning-points-card .header-wrapper h1 {
+    margin-top: 55px; } }
 @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
   .learning-points-card {
     top: 2.5%; } }
+
+.intro-card {
+  background-size: 90% 100%; }
+  @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) {
+    .intro-card .text-wrapper {
+      margin-bottom: 20px; } }
 
 /**
  * This file includes Northern Plains theme styles for the 'puzzle complete' overlay.

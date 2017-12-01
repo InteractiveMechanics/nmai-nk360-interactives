@@ -606,8 +606,8 @@ span[data-toggle="tooltip"] {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); }
 
 .card {
-  width: 175px;
-  height: 250px;
+  width: 30.5%;
+  height: 64.57%;
   background: url("../assets/card-generic@2x.png");
   background-size: contain;
   background-color: white;
@@ -620,10 +620,6 @@ span[data-toggle="tooltip"] {
     z-index: 2;
     box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5);
     cursor: pointer; }
-  @media (max-width: 767px) {
-    .card {
-      width: 123px;
-      height: 175px; } }
 
 .card[data-card="1"] {
   top: 0px;
@@ -640,63 +636,49 @@ span[data-toggle="tooltip"] {
       left: -60px; } }
 
 .card[data-card="2"] {
-  top: -15px;
-  left: 133px;
+  top: -3.874%;
+  left: 23.187%;
   transform: rotate(56deg); }
   .card[data-card="2"]:hover {
     transform: rotate(56deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="2"] {
-      top: -15px;
-      left: 83px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="2"] {
       top: -33px;
       left: 18px; } }
 
 .card[data-card="3"] {
-  top: -39px;
-  left: 292px;
+  top: -10.073%;
+  left: 50.907%;
   transform: rotate(90deg); }
   .card[data-card="3"]:hover {
     transform: rotate(90deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="3"] {
-      left: 240px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="3"] {
       left: 200px; } }
 
 .card[data-card="4"] {
-  top: -31px;
-  left: 412px;
+  top: 8.006%;
+  left: 71.828%;
   transform: rotate(-39deg); }
   .card[data-card="4"]:hover {
     transform: rotate(-39deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="4"] {
-      top: 41px;
-      left: 252px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="4"] {
       left: 375px; } }
 
 .card[data-card="5"] {
-  top: 165px;
-  left: 407px;
+  top: 42.617%;
+  left: 70.956%;
   transform: rotate(18deg); }
   .card[data-card="5"]:hover {
     transform: rotate(18deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="5"] {
-      left: 246px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="5"] {
       left: 350px; } }
 
 .card[data-card="6"] {
-  top: 206px;
-  left: 212px;
+  top: 53.206%;
+  left: 36.959%;
   transform: rotate(90deg); }
   .card[data-card="6"]:hover {
     transform: rotate(90deg) scale(1.15, 1.15); }
@@ -706,66 +688,49 @@ span[data-toggle="tooltip"] {
 
 .card[data-card="7"] {
   transform: rotate(-70deg);
-  top: 93px;
-  left: 207px; }
+  top: 24.0203%;
+  left: 36.088%; }
   .card[data-card="7"]:hover {
     transform: rotate(-70deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="7"] {
-      left: 150px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="7"] {
       left: 160px; } }
 
 .card[data-card="8"] {
-  top: 154px;
-  left: -6px;
+  top: 39.776%;
+  left: -1.046%;
   transform: rotate(-17deg); }
   .card[data-card="8"]:hover {
     transform: rotate(-17deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="8"] {
-      left: 2px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .card[data-card="8"] {
       left: -17px;
       transform: rotate(15deg); } }
 
 .card[data-card="9"] {
-  top: -50px;
-  left: 425px;
+  top: -12.914%;
+  left: 74.094%;
   transform: rotate(-18deg); }
   .card[data-card="9"]:hover {
     transform: rotate(-18deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="9"] {
-      top: 207px;
-      left: 93px; } }
 
 .card[data-card="10"] {
-  top: -86px;
-  left: 29px;
+  top: 22.212%;
+  left: 5.056%;
   transform: rotate(109deg); }
   .card[data-card="10"]:hover {
     transform: rotate(109deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="10"] {
-      top: 297px;
-      left: 175px; } }
 
 .card[data-card="11"] {
-  top: 253px;
-  left: 390px;
+  top: 65.345%;
+  left: 67.992%;
   transform: rotate(46deg); }
   .card[data-card="11"]:hover {
     transform: rotate(46deg) scale(1.15, 1.15); }
-  @media (max-width: 767px) {
-    .card[data-card="11"] {
-      left: 275px; } }
 
 .card[data-card="12"] {
-  top: 253px;
-  left: -23px;
+  top: 65.345%;
+  left: -4.01%;
   transform: rotate(-60deg); }
   .card[data-card="12"]:hover {
     transform: rotate(-60deg) scale(1.15, 1.15); }
@@ -836,9 +801,6 @@ span[data-toggle="tooltip"] {
   opacity: 0.65 !important;
   z-index: 1000;
   position: fixed; }
-
-.modal {
-  top: 20px; }
 
 .modal-content {
   height: 85%;
@@ -949,6 +911,9 @@ span[data-toggle="tooltip"] {
   top: 0px;
   width: 100vw;
   background: rgba(0, 0, 0, 0.85); }
+  @media (max-width: 480px) {
+    #complete-overlay {
+      height: calc(100% + 60px); } }
   #complete-overlay .text-wrapper {
     color: white;
     width: 40%;
@@ -989,6 +954,9 @@ span[data-toggle="tooltip"] {
         left: 10%;
         height: 80%;
         top: 10%; } }
+    @media (max-width: 480px) {
+      #complete-overlay .text-wrapper {
+        height: initial; } }
   #complete-overlay .btn-wrapper button {
     margin: 15px;
     color: white; }
@@ -997,5 +965,8 @@ span[data-toggle="tooltip"] {
       width: 100%;
       display: flex;
       flex-direction: column; } }
+  @media (max-width: 480px) {
+    #complete-overlay .btn-wrapper {
+      margin-bottom: 60px; } }
 
 /*# sourceMappingURL=main.css.map */
