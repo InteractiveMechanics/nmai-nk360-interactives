@@ -519,7 +519,7 @@ Game = (function() {
                 //$('.game-world').css("transform", "translate(" + settings.position + "px,0)");
 
                 
-                settings.positions.forEach(function(pos, index) {
+                /*settings.positions.forEach(function(pos, index) {
                     if (0 === pos) {
                         pos = (window.innerWidth / 2);
                     }
@@ -536,7 +536,7 @@ Game = (function() {
                     }
                     prevPos = pos;
                 });
-                settings.$progress.css("width", totalPos);
+                settings.$progress.css("width", totalPos);*/
                 //requestAnimationFrame(updateWorld);
             } else {
               /*$('.fishes-left').text(settings.salmonCount);
