@@ -145,7 +145,7 @@ Game = (function() {
         $('.waves').css('animation-play-state', 'running');
       $('.waves-1').css('animation-play-state', 'running');
       $('.waves-2').css('animation-play-state', 'running');
-        requestAnimationFrame(updateWorld);
+        //requestAnimationFrame(updateWorld);
       }
     }
 
@@ -537,7 +537,7 @@ Game = (function() {
                     prevPos = pos;
                 });
                 settings.$progress.css("width", totalPos);
-                requestAnimationFrame(updateWorld);
+                //requestAnimationFrame(updateWorld);
             } else {
               $('.fishes-left').text(settings.salmonCount);
               $('.encounters-hit').text(settings.encounterSeen);
@@ -676,7 +676,8 @@ Game = (function() {
     var startGame = function() {
         $('.hotspot').removeClass('state-paused');
         setTimeout(function () {
-            requestAnimationFrame(updateWorld);
+            //requestAnimationFrame(updateWorld);
+            updateWorld();
         }, 1000/60);
     };
 
@@ -1080,7 +1081,7 @@ Game = (function() {
         $('.waves-1').css('animation-play-state', 'running');
         $('.waves-2').css('animation-play-state', 'running');
 
-        requestAnimationFrame(updateWorld);
+        //requestAnimationFrame(updateWorld);
       };
 
       if(!settings.started) {
@@ -1201,7 +1202,7 @@ Game = (function() {
       if(!isFaded && isSlider) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
-        requestAnimationFrame(updateWorld);
+        //requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').removeClass('state-paused');
@@ -1262,7 +1263,7 @@ Game = (function() {
       if(!isFaded && isSlider) {
         $('.slider-wrapper').removeClass('show').addClass('hidden');
         settings.pause = true;
-        requestAnimationFrame(updateWorld);
+        //requestAnimationFrame(updateWorld);
 
         $('#SelectedSalmon').css('animation-play-state', 'running');
         $('.hotspot').removeClass('state-paused');
