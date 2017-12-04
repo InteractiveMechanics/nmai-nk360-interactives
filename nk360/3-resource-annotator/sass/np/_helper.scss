@@ -11,13 +11,18 @@ body {
 	}
 }
 .header {
+
+
     @media screen and ($screen-xs) and ($screen-portrait) {
         max-width: 340px !important;
+        margin-top:45px !important;
+        background:none !important;
+        padding-bottom:10px !important;
     }
 
     h1 {
         @media screen and ($screen-xs) and ($screen-portrait) {
-            font-size: 1.8rem !important;
+            font-size: 1.2rem !important;
         }
     }
 }

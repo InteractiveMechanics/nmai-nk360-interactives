@@ -621,6 +621,12 @@ Annotator = (function() {
               '</div><br style="clear:both;" />';
     }
 
+    var offsetTop = function(pin) {
+      var containerTop = pin.closest('.original-text').offset().top;
+      var pinTop = pin.offset().top;
+      return pinTop - containerTop;
+    }
+
     /**
       * Finds the positions of the pin that is being dragged and sets the popup box location and width and height
       * @param {obj} selected pin item that is being moved
@@ -659,6 +665,14 @@ Annotator = (function() {
 
       var height = pin.closest('.scrollbar-design').outerHeight();
       var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+
+      var verticalFlip = offsetTop(pin) < 44 && pin.parent().hasClass('photo-container') == false && !pin.closest('.original-text').find('.photo-container').length;
+      if(verticalFlip) {
+        pin.addClass('vertical-flip');
+      }
+      else {
+        //pin.removeClass('vertical-flip');
+      }
 
       if(width + 1 < scroll) {
         if(pin.parent().hasClass('photo-container') == false) {
@@ -855,6 +869,8 @@ Annotator = (function() {
 
       pinSetup();
   }
+
+
 
   /*
    * Handler to get the annotation item that was selected

@@ -856,7 +856,7 @@ small,
   left: 0;
   font-size: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 480px) {
     .marker-in-text {
       height: 100px; } }
 
