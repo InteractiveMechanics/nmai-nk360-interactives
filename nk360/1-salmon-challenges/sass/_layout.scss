@@ -343,12 +343,19 @@ body {
         @media screen and (max-width: 1025px) {
             padding: 30px 20px;
         }
+
+        @media screen and (max-width: 1366px) {
+            overflow-y: auto;
+            height: 90%;
+        }
+
         @media screen and ($screen-xs) and ($screen-landscape) {
             padding: 30px;
             overflow-y: auto;
             height: 90%;
             -webkit-overflow-scrolling: touch;
         }
+
         @media screen and ($screen-xs) and ($screen-portrait) {
             padding: 20px;
             overflow-y: auto;
