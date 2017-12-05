@@ -940,6 +940,9 @@ div[id^="era-block"] {
   overflow: auto;
   background: url("../assets/timeline-full@2x.jpg");
   background-size: cover; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .timeline-wrapper {
+      background-size: contain; } }
 
 .timeline-track {
   border-bottom: 1px solid #deded1;
@@ -1082,6 +1085,7 @@ div[id^="era-block"] {
 
 .timeline-item-wrapper[data-era="3"][data-timeline="2"] {
   left: 505px;
+  z-index: 3;
   bottom: 232px; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .timeline-item-wrapper[data-era="3"][data-timeline="2"] {
@@ -1089,7 +1093,8 @@ div[id^="era-block"] {
 
 .timeline-item-wrapper[data-era="3"][data-timeline="3"] {
   left: 685px;
-  bottom: 396px; }
+  bottom: 396px;
+  z-index: 1; }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .timeline-item-wrapper[data-era="3"][data-timeline="3"] {
       bottom: 190px; } }
@@ -1104,7 +1109,7 @@ div[id^="era-block"] {
     right: -33px; }
   .timeline-item-wrapper[data-era="3"][data-timeline="4"] .timeline-item .sm-label-wrapper {
     border-left: none;
-    border-right: 2px dotted #dedede;
+    border-right: 4px dotted #dedede;
     width: 100%;
     text-align: right; }
     .timeline-item-wrapper[data-era="3"][data-timeline="4"] .timeline-item .sm-label-wrapper h4 {
@@ -1237,6 +1242,9 @@ div[id^="era-block"] {
     position: relative;
     font-family: "Archer Pro", serif;
     font-size: 1.5rem; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .sm-label-wrapper {
+      height: 125px; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .sm-label-wrapper {
       height: 100px;
@@ -1381,6 +1389,9 @@ div[id^="era-block"] {
   flex-direction: column;
   border-bottom: none;
   padding: 40px 20px 20px; }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .modal-header {
+      flex: 1 0 auto; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .modal-header {
       height: auto;

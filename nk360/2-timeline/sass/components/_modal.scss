@@ -36,11 +36,17 @@
 	flex-direction: column;
 	border-bottom: none;
 	padding: 40px 20px 20px;
+	
+	@media screen and ($screen-xs) and ($screen-portrait) {
+		flex: 1 0 auto;
+	}
+
 	@media screen and ($screen-xs) and ($screen-landscape) {
 		height: auto;
     	margin-bottom: 40px;
     	padding-top: 10px;
 	}
+
 	h3 {
 		@media screen and ($screen-xs) and ($screen-landscape) {
 			font-size: 1.3rem;
