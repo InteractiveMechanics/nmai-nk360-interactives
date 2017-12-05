@@ -4,6 +4,8 @@ Explore = (function() {
         bindEvents();
     }
 
+    var stopClick = false;
+
 
     /**
     * Hides the transition overlay 
@@ -24,23 +26,37 @@ Explore = (function() {
         event.preventDefault();
         var timelineLeft = $('.timeline-wrapper').position().left;
         var windowWidth = $(window).width();
+
+        if (stopClick) return;
+        stopClick = true;
+
         if (timelineLeft < 0 && -timelineLeft >= windowWidth) {
             $('#prev-btn').removeClass('disabled');
             $('#next-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "+=" + windowWidth 
-            }, "fast");
+            }, 500, "linear", function() {
+                stopClick = false;
+            });
+            console.log('this is the if statement for prev ' + timelineLeft);
         } else if (timelineLeft < 0) {
             $('#prev-btn').removeClass('disabled');
             $('#next-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "+=" + -timelineLeft 
-            }, "fast");
-
-            setTimeout(function() { $('#prev-btn').addClass('disabled'); }, 500);
-        } else {
+            }, 500, "linear",  function() {
+                stopClick = false;
+            });
+            setTimeout(function() { $('#prev-btn').addClass('disabled'); }, 100); //500
+            console.log('this is the else if statement ' + timelineLeft);
+        } else if (timelineLeft == 0) {
             $('#prev-btn').addClass('disabled');
-            $('#next-btn').removeClass('disabled');  
+            $('#next-btn').removeClass('disabled'); 
+            console.log('this if timelineLeft is zero ' + timelineLeft) 
+            stopClick = false;
+        } else {
+            console.log('this is the else statement for prev');
+            stopClick = false;
         }
     }
 
@@ -54,24 +70,39 @@ Explore = (function() {
         event.preventDefault();
         var windowWidth = $(window).width(); // 1397px
         var timelineLeft = $('.timeline-wrapper').position().left;
-        var leftToScroll = Detail.timelineWidth + timelineLeft - windowWidth;
+        var timelineWidth = Detail.timelineWidth;
+        var leftToScroll = timelineWidth + timelineLeft - windowWidth;
+        
+        if (stopClick) return;
+        stopClick = true;
        
-        if (windowWidth < Detail.timelineWidth && leftToScroll >= windowWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
+       
+        if (windowWidth < timelineWidth && leftToScroll >= windowWidth) { // 0 < 2143; 1397 < 2143; 2974 !< 2143
             $('#next-btn').removeClass('disabled');
             $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "-=" + windowWidth 
-            }, "fast");
+            }, 500, "swing", function() {
+                stopClick = false;
+            });
+            console.log('this is the if ' + leftToScroll);
         } else if (leftToScroll > 0) {
             $('#next-btn').removeClass('disabled');
             $('#prev-btn').removeClass('disabled');
             $('.timeline-wrapper').animate({
                 left: "-=" + leftToScroll
-            }, "fast");
-            setTimeout(function() { $('#next-btn').addClass('disabled'); }, 500);
-        } else {
+            }, 500, "linear", function() {
+                stopClick = false;
+            });
+            setTimeout(function() { $('#next-btn').addClass('disabled'); }, 100); //500
+            console.log('this is the first else ' + leftToScroll);
+        } else if (leftToScroll <= 0) {
             $('#next-btn').addClass('disabled'); 
             $('#prev-btn').removeClass('disabled');
+            console.log('this is if leftToScroll is zero' + leftToScroll);
+            stopClick = false;
+        } else {
+            console.log('this is the else' + leftToScroll);
         }
       
         
