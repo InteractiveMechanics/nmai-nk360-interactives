@@ -18,9 +18,6 @@ Game = (function() {
       backgroundSpeed: 0,
       midgroundSpeed: .1,
       foregroundSpeed: 1,
-      $background: $('.game-world .game-world__background'),
-      $midground: $('.game-world .game-world__midground'),
-      $foreground: $('.game-world .game-world__foreground'),
       backgroundPosition: 0,
       midgroundPosition: 0,
       foregroundPosition: 0,
@@ -505,9 +502,9 @@ Game = (function() {
             var current_position = -settings.position;
             if (current_position < 17440) {
 
-              if(checkEncounters(current_position)) {
+              /*if(checkEncounters(current_position)) {
 
-              };
+              };*/
 
                 if(current_position == 12500) {
                   $('.number-of-salmon').addClass('rising-water-number');
@@ -515,7 +512,6 @@ Game = (function() {
                 }
 
                 settings.position -= settings.speed;
-                //s$('.game-world').css('left', settings.position + 'px');
                 $('.game-world').css("transform", "translate3d(" + settings.position + "px,0,0)");
 
                 settings.positions.forEach(function(pos, index) {
