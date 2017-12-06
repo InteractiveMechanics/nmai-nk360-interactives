@@ -108,6 +108,9 @@ body {
 .btn:hover i path {
   fill: #FFF; }
 
+h3 span {
+  font-family: "Archer Pro", serif; }
+
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #006986; }

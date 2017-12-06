@@ -32,7 +32,8 @@
 			"source_type": "",
 			"excerpt": "",
 			"thumbnail_image": "http://via.placeholder.com/1280x720",
-			"question_text": ""
+			"question_text": "",
+			"resource_caption": ""
 		}
 	],
     "returnTo": {

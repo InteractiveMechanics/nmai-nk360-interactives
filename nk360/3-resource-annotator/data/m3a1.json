@@ -38,7 +38,8 @@
 		    "source_type": "Images",
 		    "excerpt": "<p>Salmon roasting at Makah Days, a period of celebration during which Makah citizens gather to honor thousands of years of customs and traditions as well as the anniversary of becoming United States citizens in 1924 under the American Indian Citizenship Act.</p><p>Makah Days in the mid-1950s. Native Nations of the Pacific Northwest use cedar skewers to pierce, roast, and smoke salmon filets over open pit fires.</p>",
 		    "thumbnail_image": "./assets/imgs/m3a1/med-source-1.jpg",
-		    "question_text": "What is the importance to individuals and communities in maintaining traditional salmon cooking methods?"
+		    "question_text": "What is the importance to individuals and communities in maintaining traditional salmon cooking methods?",
+		    "resource_caption": ""
 		},
 
 		{
@@ -55,7 +56,8 @@
 		    "source_type": "Images",
 		     "excerpt": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
 		    "thumbnail_image": "./assets/imgs/m3a1/med-source-2.jpg",
-		    "question_text": "How do these resources reflect the historical and contemporary importance of salmon fishing to the cultures, communities, and identities of coastal Native Nations?"
+		    "question_text": "How do these resources reflect the historical and contemporary importance of salmon fishing to the cultures, communities, and identities of coastal Native Nations?",
+		    "resource_caption": ""
 		},
 
 		{
@@ -72,7 +74,8 @@
 		    "source_type": "Quote",
 		    "excerpt": "“We’ve been out on boats all our lives; my dad was a fisherman when he was young; . . . we grew up here on the water, we grew up on boats. It seemed like we were fishing everywhere we went. We’d always throw a hook in the water somewhere, whether it’s in a lake or along the river, or wherever we went.”",
 		    "thumbnail_image": "",
-		    "question_text": "What does Ronnie Wilson’s quote tell you about the significance of fishing to him and his family?"
+		    "question_text": "What does Ronnie Wilson’s quote tell you about the significance of fishing to him and his family?",
+		    "resource_caption": ""
 		}
 
 	],

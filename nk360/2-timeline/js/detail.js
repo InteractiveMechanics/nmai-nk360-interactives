@@ -4,10 +4,10 @@ Detail = (function() {
 
     var tooltipShowTimeout;
     var tooltipHideTimeout;
-    var lessonPlan1 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars-tactics/index.html';
-    var lessonPlan2 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/backlash.cshtml';
-    var lessonPlan3 = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/justice.cshtml';
-    var lessonPlanComplete = 'http://nmai-webdev01.si.edu:84/nk360/pnw-fish-wars/index.cshtml#summative';
+    var lessonPlan1 = '/nk360/pnw-fish-wars/index.cshtml#issues';
+    var lessonPlan2 = '/nk360/pnw-fish-wars/index.cshtml#court';
+    var lessonPlan3 = '/nk360/pnw-fish-wars/index.cshtml#resolved';
+    var lessonPlanComplete = '/nk360/pnw-fish-wars/index.cshtml#summative';
 
 
 
@@ -99,6 +99,7 @@ Detail = (function() {
                 $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
+                $('#prev-btn').removeClass('disabled');
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
@@ -106,10 +107,12 @@ Detail = (function() {
                 $('#back-to-module-btn').attr('href', lessonPlan3);
                 $('.timeline-wrapper').css('left', -3340);
                 Detail.timelineWidth = 4800;
+                $('#prev-btn').removeClass('disabled');
                 sendAnalyticsScreen('Explore screen - era 3');
             } else {
                 $('#back-to-module-btn').attr('href', lessonPlanComplete);
                 $('.timeline-wrapper').css('left', -3340);
+                $('#prev-btn').removeClass('disabled');
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 4');
 
@@ -128,6 +131,7 @@ Detail = (function() {
                 $('#back-to-module-btn').attr('href', lessonPlan2);
                 $('.era-container[data-era="3"]').addClass('hidden');
                 $('.timeline-wrapper').css('left', -1780);
+                 $('#prev-btn').removeClass('disabled');
                 Detail.timelineWidth = 3500;
                 sendAnalyticsScreen('Explore screen - era 2');
 
@@ -135,10 +139,12 @@ Detail = (function() {
                 $('#back-to-module-btn').attr('href', lessonPlan3);
                 Detail.timelineWidth = 4800;
                 $('.timeline-wrapper').css('left', -3340);
+                $('#prev-btn').removeClass('disabled');
                 sendAnalyticsScreen('Explore screen - era 3');
             } else {
                 $('#back-to-module-btn').attr('href', lessonPlanComplete);
                 $('.timeline-wrapper').css('left', -3340);
+                $('#prev-btn').removeClass('disabled');
                 Detail.timelineWidth = 4800;
                 sendAnalyticsScreen('Explore screen - era 4');
             }
@@ -375,6 +381,10 @@ Detail = (function() {
         }
     }
 
+    var hideTitleOnHover = function(e) {
+        e.preventDefault();
+    }
+
 
     var bindEvents = function() {
         $(document).on('click tap', '.start-timeline-btn[data-timeline]', displayDetailScreen);
@@ -388,7 +398,7 @@ Detail = (function() {
         $(document).on('keyup', '.dropped-accessible[data-timeline]', accessibleModal);
         $(document).on('onBeforeOpen.lg', hideModal);
         $(document).on('onBeforeClose.lg', showModal);   
-
+        $(document).on('mouseenter', '.draggable-widget', hideTitleOnHover);
     }
 
     

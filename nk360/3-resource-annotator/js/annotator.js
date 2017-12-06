@@ -62,7 +62,7 @@ Annotator = (function() {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
-            heading += " & " + arr[i].theme_id;
+            heading += " and " + arr[i].theme_id;
           } else {
             heading += arr[i].theme_id + ", ";
           }
@@ -239,7 +239,8 @@ Annotator = (function() {
         var obj = {
           "theme_id": themes[i].title,
           "count": themes[i].count,
-          "marker_image": marker_image
+          "marker_image": marker_image,
+          "tooltip": themes[i].tooltip_text
         };
 
         themes[i].marker_image = marker_image
@@ -329,6 +330,7 @@ Annotator = (function() {
       markers.draggable({
         containment: 'window',
         helper: 'clone',
+        cursorAt: { left: 30, top: 70 },
         cursor: 'move',
         appendTo: 'body',
         // If there are no more pins available
@@ -619,6 +621,12 @@ Annotator = (function() {
               '</div><br style="clear:both;" />';
     }
 
+    var offsetTop = function(pin) {
+      var containerTop = pin.closest('.original-text').offset().top;
+      var pinTop = pin.offset().top;
+      return pinTop - containerTop;
+    }
+
     /**
       * Finds the positions of the pin that is being dragged and sets the popup box location and width and height
       * @param {obj} selected pin item that is being moved
@@ -657,6 +665,14 @@ Annotator = (function() {
 
       var height = pin.closest('.scrollbar-design').outerHeight();
       var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+
+      var verticalFlip = offsetTop(pin) < 44 && pin.parent().hasClass('photo-container') == false && !pin.closest('.original-text').find('.photo-container').length;
+      if(verticalFlip) {
+        pin.addClass('vertical-flip');
+      }
+      else {
+        //pin.removeClass('vertical-flip');
+      }
 
       if(width + 1 < scroll) {
         if(pin.parent().hasClass('photo-container') == false) {
@@ -791,6 +807,10 @@ Annotator = (function() {
       objItem = getItemByAnnotationId(annotationID);
       objItem.themes = AnnotatorData.themes;
 
+      if(objItem.image_url == "") {
+        $('.original-text .content-height').css('min-height', '60vh');
+      }
+
       var itemLeftTemplate = $.templates("#itemLeftTemplate");
       var itemLeftTemplateOutput = itemLeftTemplate.render(objItem);
       $("#item-left").html(itemLeftTemplateOutput);
@@ -853,6 +873,8 @@ Annotator = (function() {
 
       pinSetup();
   }
+
+
 
   /*
    * Handler to get the annotation item that was selected

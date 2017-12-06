@@ -198,6 +198,11 @@
     bottom: 0; 
     right: 0;
 
+    @media screen and (max-width: 1280px) {
+        overflow-y: auto;
+        height: 90%;
+    }
+
     @media screen and ($screen-xs) and ($screen-landscape) {
         overflow: auto;
         -webkit-overflow-scrolling: touch;

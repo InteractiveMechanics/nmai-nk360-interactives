@@ -100,15 +100,21 @@ body {
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .header {
-    max-width: 340px !important; } }
+    max-width: 340px !important;
+    margin-top: 45px !important;
+    background: none !important;
+    padding-bottom: 10px !important; } }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .header h1 {
-    font-size: 1.8rem !important; } }
+    font-size: 1.2rem !important; } }
 
 .btn i path {
   fill: #301c18; }
 .btn:hover i path {
   fill: #FFF; }
+
+h3 span {
+  font-family: "Geared Slab", serif; }
 
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {

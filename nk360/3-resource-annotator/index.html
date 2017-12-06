@@ -48,6 +48,13 @@
         position: fixed;
         z-index: 10000;
       }
+
+      .marker-in-text.vertical-flip {
+        top: 30px;
+      }
+      .marker-in-text.vertical-flip img {
+        top: -80px;
+      }
     </style>
 </head>
 <body>
@@ -170,7 +177,7 @@
                     <img src="./assets/instructions-01@2x.png" width="75%" alt="Select your resource" title="Select your resource" />
                     <h2>Select Your Resource</h2>
                     <p>
-                        Select a historical image or text to annotate from the selection of source materials provided.
+                        Select a source to annotate from selection of materials provided.
                     </p>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -447,8 +454,8 @@
           <img src="{{:marker_image}}" data-pinname="{{:title}}" width="60%" alt="{{:title}} annotation marker" title="{{:title}} annotation marker" />
         </div>
         <div class="right">
-          <div class="theme">
-            {{:title}} <!--<span class="defintions-icon"></span>-->
+          <div class="theme" data-toggle="tooltip" title="{{:tooltip_text}}">
+            {{:title}} <span class="defintions-icon"></span>
           </div>
           <div class="markers-remaining"></div>
         </div>
@@ -490,13 +497,11 @@
           </p>
           {{/if}}
 
-
-          {{if caption}}
+          {{if resource_caption}}
             <p class="original-text-info">
-              {{:caption}}
+              {{:resource_caption}}
             </p>
           {{/if}}
-
 
           {{if source}}
             <p class="original-text-info">
@@ -504,19 +509,21 @@
             </p>
           {{/if}}
 
+
+          {{if paraphrase}}
+            <div id="paraphrased">
+              <h3 class="yellow-underline">
+                Paraphrased Text
+              </h3>
+
+              <p class="original-text-info">
+                {{:paraphrase}}
+              </p>
+            </div>
+          {{/if}}
+
+
         </div>
-
-        {{if paraphrase}}
-          <div id="paraphrased">
-            <h3 class="yellow-underline">
-              Paraphrased Text
-            </h3>
-
-            <p class="original-text-info">
-              {{:paraphrase}}
-            </p>
-          </div>
-        {{/if}}
     </script>
 
     <script id="printListItems" type="text/x-jsrender">
@@ -617,7 +624,7 @@
     <!-- Third Party Code -->
     <script src="./js/findAndReplaceDOMText.js"></script>
     <!-- For development only, comment for distribution -->
-    <script>var jsondata = './data/m1a1.json';</script>
+    <script>var jsondata = './data/m2a1.json';</script>
 
     <!-- For production build -->
     <!-- build:template:dist 

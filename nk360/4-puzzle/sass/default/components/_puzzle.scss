@@ -77,8 +77,10 @@
 }
 
 .card {
-	width: 175px;
-	height: 250px;
+	//width: 175px;
+	//height: 250px;
+	width: 30.5%;
+	height: 64.57%;
 	background: url('../assets/card-generic@2x.png');
 	background-size: contain;
 	background-color: white;
@@ -92,10 +94,10 @@
 		box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5);
 		cursor: pointer;
 	}
-	@include screen-xs {
-		width: 123px;
-		height: 175px;
-	}
+	// @include screen-xs {
+	// 	width: 123px;
+	// 	height: 175px;
+	// }
 }
 
 .card[data-card="1"] {
@@ -115,16 +117,15 @@
 }
 
 .card[data-card="2"] {
-	top: -15px;
-    left: 133px;
+	//top: -15px;
+    //left: 133px;
+    top: -3.874%;
+    left: 23.187%;
     transform: rotate(56deg);
     &:hover {
 		transform: rotate(56deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		top: -15px;
-    	left: 83px;
-	}
+	
 	@include screen-md {
 		top: -33px;
     	left: 18px;
@@ -132,54 +133,55 @@
 }
 
 .card[data-card="3"] {
-	top: -39px;
-    left: 292px;
+	//top: -39px;
+    //left: 292px;
+    top: -10.073%;
+    left: 50.907%;
     transform: rotate(90deg);
     &:hover {
 		transform: rotate(90deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		left: 240px;
-	}
+	
 	@include screen-md {
 		left: 200px;
 	}
 }
 
 .card[data-card="4"] {
-	top: -31px;
-    left: 412px;
+	//top: -31px;
+    //left: 412px;
+    top: 8.006%;
+    left: 71.828%;
     transform: rotate(-39deg);
     &:hover {
 		transform: rotate(-39deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		top: 41px;
-    	left: 252px;
-	}
+	
 	@include screen-md {
 		left: 375px;
 	}
 }
 
 .card[data-card="5"] {
-	top: 165px;
-    left: 407px;
+	//top: 165px;
+    //left: 407px;
+    top: 42.617%;
+    left: 70.956%;
     transform: rotate(18deg);
     &:hover {
 		transform: rotate(18deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		left: 246px;
-	}
+	
 	@include screen-md {
 		left: 350px;
 	}
 }
 
 .card[data-card="6"] {
-	top: 206px;
-    left: 212px;
+	//top: 206px;
+    //left: 212px;
+    top: 53.206%;
+    left: 36.959%;
     transform: rotate(90deg);
     &:hover {
 		transform: rotate(90deg) scale(1.15, 1.15);	
@@ -192,29 +194,29 @@
 
 .card[data-card="7"] {
 	transform: rotate(-70deg);
-    top: 93px;
-    left: 207px;
+    //top: 93px;
+    //left: 207px;
+    top: 24.0203%;
+    left: 36.088%;
     &:hover {
 		transform: rotate(-70deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		left: 150px;
-	}
+
 	@include screen-md {
 		left: 160px;
 	}
 }
 
 .card[data-card="8"] {
-	top: 154px;
-    left: -6px;
+	//top: 154px;
+    //left: -6px;
+    top: 39.776%;
+    left: -1.046%;
     transform: rotate(-17deg);
     &:hover {
 		transform: rotate(-17deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		left: 2px;
-	}
+	
 	@include screen-md {
 		left: -17px;
     	transform: rotate(15deg);
@@ -222,47 +224,47 @@
 }
 
 .card[data-card="9"] {
-	top: -50px;
-    left: 425px;
+	//top: -50px;
+    //left: 425px;
+    top: -12.914%;
+    left: 74.094%;
     transform: rotate(-18deg);
     &:hover {
 		transform: rotate(-18deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		top: 207px;
-    	left: 93px;
-	}
+	
 }
 
 .card[data-card="10"] {
-	top: -86px;
-    left: 29px;
+	//top: -86px;
+    //left: 29px;
+    top: 22.212%;
+    left: 5.056%;
     transform: rotate(109deg);
     &:hover {
 		transform: rotate(109deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		top: 297px;
-    	left: 175px;
-	}
+	
 }
 
 .card[data-card="11"] {
-	top: 253px;
-    left: 390px;
+	//top: 253px;
+    //left: 390px;
+    top: 65.345%;
+    left: 67.992%;
     transform: rotate(46deg);
     &:hover {
 		transform: rotate(46deg) scale(1.15, 1.15);	
 	}
-	@include screen-xs {
-		left: 275px;
-	}
+	
 
 }
 
 .card[data-card="12"] {
-	top: 253px;
-    left: -23px;
+	//top: 253px;
+    //left: -23px;
+    top: 65.345%;
+    left: -4.01%;
     transform: rotate(-60deg);
     &:hover {
 		transform: rotate(-60deg) scale(1.15, 1.15);	

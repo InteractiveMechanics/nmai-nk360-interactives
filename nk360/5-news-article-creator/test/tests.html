@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>QUnit - [function] Tests</title>
+    <title>QUnit - #5 News Article Creator Tests</title>
   
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.0.css">
 </head>
@@ -10,8 +10,10 @@
  
     <div id="qunit"></div>
     <div id="qunit-fixture">
-        <!-- Insert DOM tests here -->
+        <div id="text-editor"></div>
     </div>
+
+    <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
 
     <!-- Include jquery, jquery ui, touchpunch -->
     <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
@@ -26,6 +28,9 @@
     <!-- Include lightGallery -->
     <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
 
+    <!-- Include Quill -->
+    <script src="/nk360/shared/lib/im/js/quilljs/quill.min.js"></script>
+
     <!-- Include slick -->
     <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
 
@@ -38,46 +43,29 @@
     <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
     <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
 
-    <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
-    <!--<script src="function.js"></script>-->
-
-    <!-- For development only, comment for distribution -->
-    <script>var jsondata = '../data/m3a1.json';</script>
-
-    <!-- Include project specific code/files -->
-    <script src="../js/game.js"></script>
+    <script>var jsondata = '../data/m2a1.json';</script>
     <script src="../js/app.js"></script>
     <script src="../js/init.js"></script>
+    <script src="../js/cards.js"></script>
+    <script src="../js/print.js"></script>
     <script>
         // Insert QUnit tests here
-        QUnit.test( "a basic test example", function( assert ) {
-            var value = "hello";
-            assert.equal( value, "hello", "We expect value to be hello" );
+        QUnit.test( "Add Quote to Array", function( assert ) {
+            assert.ok( Cards.addQuoteToArray(1), true, "Value added" );
+            assert.ok( Cards.addQuoteToArray(2), true, "Value added" );
+            assert.ok( Cards.addQuoteToArray(3), true, "Value added" );
+            assert.ok( Cards.addQuoteToArray(4), true, "Value added" );
         });
-
-        QUnit.test('Skip intstuctions if param false', function (assert) {
-            var url = "http://www.nmail.org/nk360/1-salmon-challenges/?instructions=false";
-            assert.equal(Game.getParameterByName('instructions', url), "false", 'boolean');
+        QUnit.test( "Remove Quotes to Array", function( assert ) {
+            assert.ok( Cards.removeQuoteFromArray(1), true, "Value removed" );
+            assert.ok( Cards.removeQuoteFromArray(2), true, "Value removed" );
+            assert.ok( Cards.removeQuoteFromArray(4), true, "Value removed" );
         });
-
-        QUnit.test('Ocean Area Progress Bar Start Position', function (assert) {
-            assert.equal(Game.getProgressBarPositionsAtIndex(0), 0, 'integer');
+        QUnit.test( "Get quote array value", function( assert ) {
+            assert.equal( Cards.getQuotes(), Cards.quotes, "Value added" );
         });
-
-        QUnit.test('City Area Progress Bar Start Position', function (assert) {
-            assert.equal(Game.getProgressBarPositionsAtIndex(1), 5020, 'integer');
-        });
-
-        QUnit.test('Wilderness Area Progress Bar Start Position', function (assert) {
-            assert.equal(Game.getProgressBarPositionsAtIndex(2), 9040, 'integer');
-        });
-
-        QUnit.test('Invalid Progress Bar Start Position', function (assert) {
-            assert.equal(Game.getProgressBarPositionsAtIndex(5), null, null);
-        });
-
-        QUnit.test('Amount of salmon you start with in the beginning (3)', function (assert) {
-            assert.equal(Game.getStartingSalmonCount(), 3, 'integer');
+        QUnit.test( "Update word count", function( assert ) {
+            assert.equal( Cards.updateWordCount(), 1, "Word count is 1" );
         });
     </script>
 

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit - #1 Salmon Challenge Tests</title>
+  
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.0.css">
+</head>
+<body>
+ 
+    <div id="qunit"></div>
+    <div id="qunit-fixture">
+        <!-- Insert DOM tests here -->
+    </div>
+
+    <!-- Include jquery, jquery ui, touchpunch -->
+    <script src="/nk360/shared/lib/im/js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui/jquery-ui.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jqueryui-touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/jsrender/jsrender.min.js"></script>
+
+    <!-- Include bootstrap -->
+    <script src="/nk360/shared/lib/im/js/tether/tether.min.js"></script>
+    <script src="/nk360/shared/lib/im/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Include lightGallery -->
+    <script src="/nk360/shared/lib/im/js/lightgallery/js/lightgallery-all.min.js"></script>
+
+    <!-- Include slick -->
+    <script src="/nk360/shared/lib/im/js/slick/slick.min.js"></script>
+
+    <!-- Include shared code -->
+    <script src="/nk360/shared/lib/im/code/analytics.js"></script>
+    <script src="/nk360/shared/lib/im/code/audio/audio.js"></script>
+    <script src="/nk360/shared/lib/im/code/tooltips/tooltips.js"></script>
+    <script src="/nk360/shared/lib/im/code/instructions/instructions.js"></script>
+    <script src="/nk360/shared/lib/im/code/lightbox/lightbox.js"></script>
+    <script src="/nk360/shared/lib/im/code/upperleftmenu/menu.js"></script>
+    <script src="/nk360/shared/lib/im/code/credits/credits.js"></script>
+
+    <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
+    <!--<script src="function.js"></script>-->
+
+    <!-- For development only, comment for distribution -->
+    <script>var jsondata = '../data/m3a1.json';</script>
+
+    <!-- Include project specific code/files -->
+    <script src="../js/game.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/init.js"></script>
+    <script>
+        // Insert QUnit tests here
+        QUnit.test('Skip intstuctions if param false', function (assert) {
+            var url1 = "http://www.nmail.org/nk360/1-salmon-challenges/?instructions=false";
+            var url2 = "http://www.nmail.org/nk360/1-salmon-challenges/?instructions=true";
+            var url3 = "http://www.nmail.org/nk360/1-salmon-challenges/";
+
+            assert.equal(Game.getParameterByName('instructions', url1), "false", 'Value as false');
+            assert.equal(Game.getParameterByName('instructions', url2), "true", 'Value as true');
+            assert.equal(Game.getParameterByName('instructions', url3), null, 'null value');
+        });
+
+        QUnit.test('Ocean Area Progress Bar Start Position', function (assert) {
+            assert.equal(Game.getProgressBarPositionsAtIndex(0), 0, 'Value as 0');
+        });
+
+        QUnit.test('City Area Progress Bar Start Position', function (assert) {
+            assert.equal(Game.getProgressBarPositionsAtIndex(1), 5020, 'Value as 5020');
+        });
+
+        QUnit.test('Wilderness Area Progress Bar Start Position', function (assert) {
+            assert.equal(Game.getProgressBarPositionsAtIndex(2), 9040, 'Value as 9040');
+        });
+
+        QUnit.test('Invalid Progress Bar Start Position', function (assert) {
+            assert.equal(Game.getProgressBarPositionsAtIndex(4), null, 'Value as null');
+            assert.equal(Game.getProgressBarPositionsAtIndex(5), null, 'Value as null');
+        });
+
+        QUnit.test('Amount of salmon you start with in the beginning (3)', function (assert) {
+            assert.equal(Game.getStartingSalmonCount(), 3, 'Value as 3');
+        });
+    </script>
+
+</body>
+</html>

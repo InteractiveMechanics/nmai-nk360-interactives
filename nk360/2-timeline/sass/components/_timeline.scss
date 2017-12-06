@@ -98,6 +98,9 @@
     overflow: auto;
     background: url('../assets/timeline-full@2x.jpg');
     background-size: cover;
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        background-size: contain;
+    }
 }
 
 .timeline-track {
@@ -272,6 +275,7 @@
 
 .timeline-item-wrapper[data-era="3"][data-timeline="2"] {
     left: 505px;
+    z-index: 3;
     bottom: $timeline-bottom;
     @media screen and ($screen-xs) and ($screen-landscape) {
         bottom: 136px;
@@ -282,6 +286,7 @@
 .timeline-item-wrapper[data-era="3"][data-timeline="3"] {
     left: 685px;
     bottom: $timeline-bottom-alt;
+    z-index: 1;
     @media screen and ($screen-xs) and ($screen-landscape) {
         bottom: 190px;
     }
@@ -301,7 +306,7 @@
         }
         .sm-label-wrapper {
             border-left: none;
-            border-right: 2px dotted #dedede;
+            border-right: 4px dotted #dedede;
             width: 100%;
             text-align: right;
             h4 {
@@ -467,6 +472,11 @@
         font-family: $headline-accent;
         font-size: 1.5rem;
     } 
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: 125px;
+    }
+
     @media screen and ($screen-xs) and ($screen-landscape) {
         height: 100px;
         width: 200px;
