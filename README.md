@@ -58,6 +58,19 @@ Here are all of the `grunt dist` commands you will need to run (by activity):
 - News Article: `grunt dist --dir=plains2-news --theme=np --json=m2a1`
 - News Article: `grunt dist --dir=pnw2-news --theme=pnw --json=m4a1`
 
+##### Back to Lesson Paths
+After running `grunt dist`, update the "Back to Lesson" paths to (not timeline):
+- pnw1-salmon: /nk360/pnw-history-culture/#sq2 // Return to Pacific Northwest History and Cultures Lesson
+- plains1-markup1: /nk360/plains-belonging-homelands/crow-nation.cshtml // Return to Case Study
+- plains1-markup2: /nk360/plains-belonging-homelands/northern-cheyenne.cshtml // Return to Case Study
+- plains2-markup1: /nk360/plains-treaties/index.cshtml#sq1 // Return to Northern Plains Treaties Lesson
+- pnw1-markup1: /nk360/pnw-history-culture-regions/pacific-coast.cshtml // Return to Case Study
+- pnw2-markup1: /nk360/pnw-fish-wars/backlash.cshtml // Return to Case Study
+- pnw2-markup2: /nk360/pnw-fish-wars/justice.cshtml // Return to Case Study
+- plains1-puzzle: /nk360/plains-belonging/index.cshtml#summative // Return to Northern Plains History and Cultures Lesson
+- pnw1-puzzle: /nk360/pnw-history-culture/#summative // Return to Pacific Northwest History and Cultures Lesson
+- plains2-news: /nk360/plains-treaties/index.cshtml#summative // Return to Northern Plains Treaties Lesson
+- pnw2-news: /nk360/pnw-fish-wars // Return to Pacific Northwest Fish Wars Lesson
 
 ##### Commenting
 As you go, be sure to comment your code to make sure it's clear. Write a short description of all functions (even if they seem obvious) and define each Sass file at the top of the file with a short description of what you might find in that folder. Use the following comment format where possible (include a short description of the function/file, and where appropriate, define the arguments and returned values):
