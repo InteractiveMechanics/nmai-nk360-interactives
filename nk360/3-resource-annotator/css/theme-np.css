@@ -113,6 +113,9 @@ body {
 .btn:hover i path {
   fill: #FFF; }
 
+h3 span {
+  font-family: "Geared Slab", serif; }
+
 .slick-dots > li.slick-active > a,
 .slick-dots > li.slick-active > button {
   background-color: #677c4a; }
