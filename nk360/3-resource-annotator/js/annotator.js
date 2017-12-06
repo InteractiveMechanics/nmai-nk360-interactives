@@ -807,6 +807,10 @@ Annotator = (function() {
       objItem = getItemByAnnotationId(annotationID);
       objItem.themes = AnnotatorData.themes;
 
+      if(objItem.image_url == "") {
+        $('.original-text .content-height').css('min-height', '60vh');
+      }
+
       var itemLeftTemplate = $.templates("#itemLeftTemplate");
       var itemLeftTemplateOutput = itemLeftTemplate.render(objItem);
       $("#item-left").html(itemLeftTemplateOutput);
