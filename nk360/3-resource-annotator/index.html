@@ -509,19 +509,21 @@
             </p>
           {{/if}}
 
+
+          {{if paraphrase}}
+            <div id="paraphrased">
+              <h3 class="yellow-underline">
+                Paraphrased Text
+              </h3>
+
+              <p class="original-text-info">
+                {{:paraphrase}}
+              </p>
+            </div>
+          {{/if}}
+
+
         </div>
-
-        {{if paraphrase}}
-          <div id="paraphrased">
-            <h3 class="yellow-underline">
-              Paraphrased Text
-            </h3>
-
-            <p class="original-text-info">
-              {{:paraphrase}}
-            </p>
-          </div>
-        {{/if}}
     </script>
 
     <script id="printListItems" type="text/x-jsrender">
