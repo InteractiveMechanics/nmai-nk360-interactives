@@ -549,6 +549,22 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: landscape) {
     #explore {
       user-select: initial; } }
+  @media (max-width: 767px) {
+    #explore {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 767px) {
+  #instructions-img-01,
+  #instructions-text-01,
+  #instructions-img-02 {
+    display: none; } }
+
+@media (min-width: 768px) {
+  #instructions-img-01-mobile,
+  #instructions-text-01-mobile,
+  #instructions-img-02-mobile {
+    display: none; } }
 
 /**
  * This file includes all of the default styling for the draggable and droppable elements. 
@@ -636,7 +652,8 @@ div[id^="era-block"] {
   text-align: left;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   color: white;
-  font-weight: 300; }
+  font-weight: 300;
+  pointer-events: none; }
   .draggable-widget img {
     height: 82px;
     width: 82px;
@@ -943,6 +960,23 @@ div[id^="era-block"] {
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .timeline-wrapper {
       background-size: contain; } }
+  @media (max-width: 767px) {
+    .timeline-wrapper {
+      overflow: hidden; } }
+
+@media (max-width: 767px) {
+  .timeline-wrapper-mobile-era1 {
+    width: 2143px; } }
+
+@media (max-width: 767px) {
+  .timeline-wrapper-mobile-era2 {
+    width: 3500px; } }
+
+@media (max-width: 767px) {
+  .timeline-wrapper-mobile-era3,
+  .timeline-wrapper-mobile-era4 {
+    width: 4800px;
+    left: -3340px; } }
 
 .timeline-track {
   border-bottom: 1px solid #deded1;
@@ -1165,7 +1199,8 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #prev-btn, #next-btn {
       left: 0px;
-      top: 35%; }
+      top: 35%;
+      display: none; }
       #prev-btn:before, #next-btn:before {
         content: "";
         background: url("/nk360/shared/lib/im/images/icon-prev.svg");
@@ -1181,7 +1216,8 @@ div[id^="era-block"] {
   left: auto; }
   @media (max-width: 767px) {
     #next-btn {
-      right: 0px; }
+      right: 0px;
+      display: none; }
       #next-btn:before {
         content: "";
         background: url("/nk360/shared/lib/im/images/icon-next.svg");
