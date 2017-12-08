@@ -109,12 +109,14 @@
 .timeline-wrapper-mobile-era1 {
     @include screen-xs {
         width: 2143px;
+        left: 0 !important;
     }
 }
 
 .timeline-wrapper-mobile-era2 {
      @include screen-xs {
         width: 3500px;
+        left: 0 !important;
     }
 }
 
@@ -122,7 +124,8 @@
 .timeline-wrapper-mobile-era4 {
     @include screen-xs {
         width: 4800px;
-        left: -3340px;
+        right: initial;
+        left: 0 !important;
     }
 }
 

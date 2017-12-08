@@ -12,7 +12,23 @@ Explore = (function() {
     * @return {string|int|array} returns nothing
     **/
     var hideExploreTransition = function() {
+        var era = $('.transition-content-wrapper').attr('data-era');
+        var windowWidth = $(window).width();
+        
         $('.transition-overlay').addClass('animated fadeOut hidden');
+        
+        if (windowWidth <= 768) {
+            if (era == 1) {
+                $('#explore').scrollLeft(0);
+            } else if (era ==2) {
+                $('#explore').scrollLeft(1780);
+            } else if (era == 3) {
+                $('#explore').scrollLeft(3340);
+            } else if (era ==4) {
+                $('#explore').scrollLeft(3340);
+            }
+        }
+
     }
 
     
@@ -22,7 +38,7 @@ Explore = (function() {
     * @return {string|int|array} returns nothing
     **/
     var advancePrevBtn = function(event) {
-        //event.preventDefault();
+        event.preventDefault();
         var timelineLeft = $('.timeline-wrapper').position().left;
         var windowWidth = $(window).width();
 
@@ -66,7 +82,7 @@ Explore = (function() {
     * @return {string|int|array} returns nothing
     **/
     var advanceNextBtn = function(event) {
-        //event.preventDefault();
+        event.preventDefault();
         var windowWidth = $(window).width(); // 1397px
         var timelineLeft = $('.timeline-wrapper').position().left;
         var timelineWidth = Detail.timelineWidth;

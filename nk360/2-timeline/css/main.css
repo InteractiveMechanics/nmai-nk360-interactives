@@ -552,6 +552,7 @@ div[id^="era-block"] {
   @media (max-width: 767px) {
     #explore {
       overflow-x: auto;
+      overflow-y: hidden;
       -webkit-overflow-scrolling: touch; } }
 
 @media (max-width: 767px) {
@@ -966,17 +967,20 @@ div[id^="era-block"] {
 
 @media (max-width: 767px) {
   .timeline-wrapper-mobile-era1 {
-    width: 2143px; } }
+    width: 2143px;
+    left: 0 !important; } }
 
 @media (max-width: 767px) {
   .timeline-wrapper-mobile-era2 {
-    width: 3500px; } }
+    width: 3500px;
+    left: 0 !important; } }
 
 @media (max-width: 767px) {
   .timeline-wrapper-mobile-era3,
   .timeline-wrapper-mobile-era4 {
     width: 4800px;
-    left: -3340px; } }
+    right: initial;
+    left: 0 !important; } }
 
 .timeline-track {
   border-bottom: 1px solid #deded1;
