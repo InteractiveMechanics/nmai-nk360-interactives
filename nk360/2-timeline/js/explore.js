@@ -5,8 +5,7 @@ Explore = (function() {
     }
 
     var stopClick = false;
-
-
+   
     /**
     * Hides the transition overlay 
     * @param no param
@@ -23,7 +22,7 @@ Explore = (function() {
     * @return {string|int|array} returns nothing
     **/
     var advancePrevBtn = function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         var timelineLeft = $('.timeline-wrapper').position().left;
         var windowWidth = $(window).width();
 
@@ -67,7 +66,7 @@ Explore = (function() {
     * @return {string|int|array} returns nothing
     **/
     var advanceNextBtn = function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         var windowWidth = $(window).width(); // 1397px
         var timelineLeft = $('.timeline-wrapper').position().left;
         var timelineWidth = Detail.timelineWidth;
@@ -127,7 +126,6 @@ Explore = (function() {
         $(document).on('click tap', '#next-btn', advanceNextBtn);
         $(document).on('click tap', '.timeline-item', getMomentDetails);
     }
-
 
     
 

@@ -272,7 +272,24 @@ div[id^="era-block"] {
 	@media screen and ($screen-xs) and ($screen-landscape) {
 		user-select: initial;
 	}
+	@include screen-xs {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
+#instructions-img-01,
+#instructions-text-01,
+#instructions-img-02 {
+	@include screen-xs {
+		display: none;
+	}
+}
 
-
+#instructions-img-01-mobile,
+#instructions-text-01-mobile,
+#instructions-img-02-mobile {
+	@include screen-gtxs {
+		display: none;
+	}
+}
