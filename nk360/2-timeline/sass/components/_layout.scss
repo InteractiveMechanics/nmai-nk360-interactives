@@ -274,6 +274,7 @@ div[id^="era-block"] {
 	}
 	@include screen-xs {
 		overflow-x: auto;
+		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
 	}
 }
