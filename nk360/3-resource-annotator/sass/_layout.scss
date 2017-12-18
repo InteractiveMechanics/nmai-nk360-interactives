@@ -308,7 +308,7 @@ small,
         height: auto;
     }
     @media screen and ($screen-xs) and ($screen-portrait) {
-        height: 100vh;
+        height: 69vh;
         padding: 25px;
     }
 
@@ -661,8 +661,26 @@ small,
     font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
-    @media screen and ($screen-xxs) {
-        height:100px;
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        height: auto;
+        background: transparent !important;
+        box-shadow: none;
+    }
+
+    .mobile-text-container {
+        height: 100%;
+
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            position: fixed;
+            left: 30px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+            padding: 15px;
+            height: 180px;
+            z-index: 10000;
+            top: 150px;
+            right: 30px;
+        }
     }
 }
 .marker-in-text.visible {
@@ -691,6 +709,11 @@ small,
     height: 100%;
     float: left;
     width: 250px;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        width: 240px;
+        margin-right: 10px;
+    }
 }
 .marker-in-text .delete-btn {
     float: right;
@@ -708,6 +731,31 @@ small,
     }
     &:after {
         content: 'Delete';
+        display: block;
+        top: 38px;
+        left: -2px;
+        position: absolute;
+        font-size: 0.8rem;
+    }
+}
+.marker-in-text .close-btn {
+    float: right;
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-image: url('../assets/icon-close.svg');
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    margin-top: 30px;
+    transition: all 0.0s;
+
+    &:hover, &:active {
+        opacity: 0.5;
+    }
+    &:after {
+        content: 'Close';
         display: block;
         top: 38px;
         left: -2px;
@@ -736,6 +784,11 @@ small,
     font-weight: bold;
     font-style: normal;
     padding-top: 25px;
+
+    @media screen and ($screen-xs) and ($screen-portrait) {
+        margin-top: -15px;
+        margin-left: -15px;
+    }
 }
 .delete-pin span {
     display: block;
