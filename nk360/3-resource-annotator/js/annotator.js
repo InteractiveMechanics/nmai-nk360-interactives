@@ -62,7 +62,7 @@ Annotator = (function() {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
-            heading += " and " + arr[i].theme_id;
+            heading += ", and " + arr[i].theme_id;
           } else {
             heading += arr[i].theme_id + ", ";
           }
@@ -149,7 +149,7 @@ Annotator = (function() {
 
         $('body').click(function (event)
         {
-           if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text')) {
+           if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text') && !$(event.target).is('.undo-delete')) {
              $( ".pin-visible" ).each(function(  ) {
                 hidePin($(this));
               });
@@ -751,6 +751,7 @@ Annotator = (function() {
 
       pin.find('.undo-delete').click(function() {
         pin.find('.delete-pin').remove();
+        pin.find('textarea').focus();
       });
     }
 

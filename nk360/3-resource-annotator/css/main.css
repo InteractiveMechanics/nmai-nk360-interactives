@@ -541,7 +541,7 @@ small,
     margin: 12px 0; }
 
 .theme {
-  font-style: bold;
+  font-weight: bold;
   color: black;
   letter-spacing: .5px;
   font-size: .8rem;
@@ -553,7 +553,8 @@ small,
 .markers-remaining {
   color: black;
   letter-spacing: .5px;
-  text-align: center; }
+  text-align: center;
+  font-size: .8rem; }
   @media screen and (max-width: 1199px) {
     .markers-remaining {
       font-size: .6rem; } }
@@ -833,9 +834,6 @@ small,
   width: 325px; }
 
 /** Pins **/
-.pin-drop.ui-droppable-hover {
-  background: yellow; }
-
 .pin-drop {
   position: relative;
   display: inline-block; }
@@ -907,6 +905,8 @@ small,
 .marker-in-text.pin-hidden {
   height: 0 !important;
   padding: 0 !important; }
+  .marker-in-text.pin-hidden .delete-btn, .marker-in-text.pin-hidden textarea {
+    display: none !important; }
 
 .delete-pin {
   width: 100%;
@@ -1182,3 +1182,5 @@ small,
   @media screen and (max-width: 1100px) {
     .card {
       height: 490px; } }
+
+/*# sourceMappingURL=main.css.map */

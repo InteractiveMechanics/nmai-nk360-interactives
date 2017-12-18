@@ -54,12 +54,12 @@ h4 {
     font-size: 2.1rem;
     font-weight: normal;
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); }
   .header h2 {
     font-family: "Archer Pro", serif;
     font-size: 0.8rem;
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); }
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.75); }
 
 .btn {
   border-color: #2E3742;
@@ -134,6 +134,10 @@ h4 {
 
 .modal-img-wrapper {
   background-color: #9eb2c1; }
+
+.subheader li {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.75); }
 
 /**
  * This file includes Northern Plains theme styles for the 'puzzle complete' overlay.

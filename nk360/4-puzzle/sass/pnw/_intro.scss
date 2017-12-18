@@ -22,3 +22,9 @@
 .modal-img-wrapper {
 	background-color: $midgray;
 }
+.subheader {
+	li {
+		color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+	}
+}

@@ -170,6 +170,9 @@ h4 {
     .intro-card .text-wrapper {
       margin-bottom: 20px; } }
 
+.subheader li {
+  color: black; }
+
 /**
  * This file includes Northern Plains theme styles for the 'puzzle complete' overlay.
  * 

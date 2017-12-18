@@ -258,7 +258,7 @@ small,
     }
 }
 .theme {
-    font-style: bold;
+    font-weight: bold;
     color: black;
     letter-spacing: .5px;
     font-size: .8rem;
@@ -271,6 +271,8 @@ small,
     color: black;
     letter-spacing: .5px;
     text-align: center;
+    font-size: .8rem;
+
     @media screen and ($screen-ltlg) {
         font-size: .6rem;
     }
@@ -612,7 +614,7 @@ small,
 /** Pins **/
 
 .pin-drop.ui-droppable-hover {
-    background: yellow;
+    //background: yellow;
 }
 .pin-drop {
     position: relative;
@@ -696,6 +698,10 @@ small,
     //width: 0 !important;
     height: 0 !important;
     padding: 0 !important;
+
+    .delete-btn, textarea {
+        display: none !important;
+    }
 }
 .delete-pin {
     width: 100%;
