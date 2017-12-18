@@ -149,7 +149,7 @@ small,
         margin-top: 0px;
     }
     @media screen and ($screen-xs) and ($screen-portrait) {
-        height: 35vh;
+        height: auto;
         width: 100%;
         margin-top: 0px;
     }
@@ -173,7 +173,7 @@ small,
             width: 100%;
         }
         @media screen and ($screen-xs) and ($screen-portrait) {
-            height: 58vh;
+            height: 56vh;
             width: 100%;
         }
 
@@ -209,7 +209,7 @@ small,
                 overflow: hidden;
             }
             @media screen and ($screen-xs) and ($screen-portrait) {
-                height: 38vh;
+                height: 37vh;
             }
 
             .body {
@@ -229,7 +229,7 @@ small,
                     overflow-y: auto;
                 }
                 @media screen and ($screen-xs) and ($screen-portrait) {
-                    height: 20vh;
+                    height: 18vh;
                 }
             }
             .button {
@@ -308,7 +308,7 @@ small,
         height: auto;
     }
     @media screen and ($screen-xs) and ($screen-portrait) {
-        height: 37vh;
+        height: 100vh;
         padding: 25px;
     }
 
@@ -326,7 +326,8 @@ small,
             margin-bottom: 200px;
         }
         @media screen and ($screen-xs) and ($screen-portrait) {
-            max-height: 30vh;
+            max-height: 57vh;
+            padding-bottom: 140px;
         }
     }
 }
@@ -395,9 +396,27 @@ small,
 	width:100%;
 	z-index: 99;
 	left:0;
+    transition: 0.5s all;
+
+    &.display-mobile-markers {
+        transform: translateY(115px);
+    }
+
+    .toggle-mobile-markers {
+        position: absolute;
+        top: -29px;
+        background: rgba(46, 55, 66, 0.85);
+        padding: 5px 10px;
+        color:white;
+        text-decoration: none;
+    }
 
     @media screen and ($screen-xs) and ($screen-portrait) {
         padding: 15px 15px 0;
+
+        ul {
+            margin-bottom: 0;
+        }
     }
 
     ul { text-align: center; }
@@ -432,17 +451,19 @@ small,
 
     @media screen and ($screen-xs) and ($screen-portrait) {
         width: 100%;
+        margin-top: 65px;
     }
     @media screen and ($screen-xs) and ($screen-landscape) {
         width: 90%;
     }
 
     .half-menu {
-        width: 49%;
+        width: 49.5%;
         display: inline-block;
         border-bottom: 4px solid transparent;
         padding: 12px 16px;
         color: white;
+        text-align: center;
         font-weight: bold;
         font-size: 1rem;
         background: rgba(0,0,0,0.05);

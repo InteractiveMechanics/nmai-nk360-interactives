@@ -132,6 +132,7 @@ Annotator = (function() {
         $('body').on('click tap', '.half-menu', mobileMenuClicked);
 
         $('body').on('click tap', 'textarea', focusOnTextArea);
+        $('body').on('click tap', '.toggle-mobile-markers', toggleMobileMarkers);
 
         window.onbeforeprint = function() {
           sendGoogleAnalyticsEvent("Print preview", "open");
@@ -166,6 +167,20 @@ Annotator = (function() {
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
     };
+
+
+    /**
+      * Click handler function for the mobile toggle markers panel
+    */
+    var toggleMobileMarkers = function () {
+      if ($(this).parent().hasClass('display-mobile-markers')) {
+        $(this).text('HIDE');
+        $(this).parent().removeClass('display-mobile-markers');
+      } else {
+        $(this).text('SHOW');
+        $(this).parent().addClass('display-mobile-markers');
+      }
+    }
 
     var sendGoogleAnalyticsEvent = function(type, action) {
       sendAnalyticsEvent(type, action);
@@ -237,6 +252,7 @@ Annotator = (function() {
 
         var marker_image = getMarker();
         var obj = {
+          "theme_safe": makeSafeForCSS(themes[i].title),
           "theme_id": themes[i].title,
           "count": themes[i].count,
           "marker_image": marker_image,
@@ -310,6 +326,15 @@ Annotator = (function() {
       setupPrintLayout();
 
     };
+
+    function makeSafeForCSS(name) {
+        return name.replace(/[^a-z0-9]/g, function(s) {
+            var c = s.charCodeAt(0);
+            if (c == 32) return '-';
+            if (c >= 65 && c <= 90) return '_' + s.toLowerCase();
+            return '__' + ('000' + c.toString(16)).slice(-4);
+        });
+    }
 
 
     /**
@@ -839,7 +864,9 @@ Annotator = (function() {
         $(".desktop-markers").html(markersOutput);
       }
 
-
+      $('.header').addClass('hidden-xs-down');
+      $('.icon-print').removeClass('hidden-xs-down');
+      $('.icon-home').removeClass('hidden-xs-down');
 
 
       setTimeout(function(){

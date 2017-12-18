@@ -112,9 +112,8 @@
     </div>
     <div class="activity-menu-wrapper">
         <div class="abs top right">
-            <a class="icon icon-print print-notes disabled" title="Print this Activity" tabindex="0"></a>
-            <a class="icon icon-home disabled" title="Back to Home Screen" tabindex="0"></a>
-            
+            <a class="icon icon-print print-notes disabled hidden-xs-down" title="Print this Activity" tabindex="0"></a>
+            <a class="icon icon-home disabled hidden-xs-down" title="Back to Home Screen" tabindex="0"></a>
             <a class="icon icon-info" title="Show Instructions" id="show-instructions" tabindex="0"></a>
         </div>
     </div>
@@ -371,6 +370,7 @@
               </div>
 
               <section class="mobile-markers hidden-mobile">
+                <a class="toggle-mobile-markers" href="#">HIDE</a>
                 <ul id="MobileMarker" class="list-inline margin-bottom-none">
                 </ul>
               </section>
@@ -455,7 +455,7 @@
         </div>
         <div class="right">
           <div class="theme" data-toggle="tooltip" title="{{:tooltip_text}}">
-            {{:title}} <span class="defintions-icon"></span>
+            {{:title}} <span class="defintions-icon hidden-xs-down"></span>
           </div>
           <div class="markers-remaining"></div>
         </div>

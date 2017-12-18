@@ -447,7 +447,7 @@ small,
       margin-top: 0px; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .annotation-screen {
-      height: 35vh;
+      height: auto;
       width: 100%;
       margin-top: 0px; } }
   .annotation-screen .annotation-item {
@@ -469,7 +469,7 @@ small,
         width: 100%; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .annotation-screen .annotation-item {
-        height: 58vh;
+        height: 56vh;
         width: 100%; } }
     .annotation-screen .annotation-item .top {
       height: 25vh; }
@@ -502,7 +502,7 @@ small,
           overflow: hidden; } }
       @media screen and (max-width: 767px) and (orientation: portrait) {
         .annotation-screen .annotation-item .bottom {
-          height: 38vh; } }
+          height: 37vh; } }
       .annotation-screen .annotation-item .bottom .body {
         height: 36vh;
         overflow-y: auto;
@@ -520,7 +520,7 @@ small,
             overflow-y: auto; } }
         @media screen and (max-width: 767px) and (orientation: portrait) {
           .annotation-screen .annotation-item .bottom .body {
-            height: 20vh; } }
+            height: 18vh; } }
       .annotation-screen .annotation-item .bottom .button {
         position: absolute;
         bottom: 25px;
@@ -590,7 +590,7 @@ small,
       height: auto; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .original-text {
-      height: 37vh;
+      height: 100vh;
       padding: 25px; } }
   .original-text .content-height {
     max-height: 70vh;
@@ -606,7 +606,8 @@ small,
         margin-bottom: 200px; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .original-text .content-height {
-        max-height: 30vh; } }
+        max-height: 57vh;
+        padding-bottom: 140px; } }
 
 .markers-container {
   padding: 25px;
@@ -665,10 +666,22 @@ small,
   padding: 20px 50px 0;
   width: 100%;
   z-index: 99;
-  left: 0; }
+  left: 0;
+  transition: 0.5s all; }
+  .mobile-markers.display-mobile-markers {
+    transform: translateY(115px); }
+  .mobile-markers .toggle-mobile-markers {
+    position: absolute;
+    top: -29px;
+    background: rgba(46, 55, 66, 0.85);
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none; }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .mobile-markers {
-      padding: 15px 15px 0; } }
+      padding: 15px 15px 0; }
+      .mobile-markers ul {
+        margin-bottom: 0; } }
   .mobile-markers ul {
     text-align: center; }
   .mobile-markers li {
@@ -694,16 +707,18 @@ small,
   box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.3); }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .mobile-menu {
-      width: 100%; } }
+      width: 100%;
+      margin-top: 65px; } }
   @media screen and (max-width: 767px) and (orientation: landscape) {
     .mobile-menu {
       width: 90%; } }
   .mobile-menu .half-menu {
-    width: 49%;
+    width: 49.5%;
     display: inline-block;
     border-bottom: 4px solid transparent;
     padding: 12px 16px;
     color: white;
+    text-align: center;
     font-weight: bold;
     font-size: 1rem;
     background: rgba(0, 0, 0, 0.05); }
