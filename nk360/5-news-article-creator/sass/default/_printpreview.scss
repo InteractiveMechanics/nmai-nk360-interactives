@@ -111,7 +111,7 @@
 
     .paper-preview-header {
         height: 100px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
 
         .paper-preview-title {
             max-height: 60px;
@@ -137,29 +137,28 @@
         }
     }
     .paper-preview-headline {
-        height: 100px;
-        margin-bottom: 10px;
+        height: 80px;
+        //margin-bottom: 10px;
         text-overflow: ellipsis;
         width: 100%;
-        font-size: 42px;
+        font-size: 38px;
         line-height: 1;
         overflow-x: hidden;
 
         @media screen and ($screen-md) {
-            font-size: 40px;
-            height: 96px;
+            font-size: 36px;
         }
         @media screen and ($screen-xs) {
-            font-size: 36px;
+            font-size: 34px;
         }
 
         &.large {
-            font-size: 68px;
+            font-size: 64px;
             height: 76px;
             overflow: visible;
             
             @media screen and ($screen-md) {
-                font-size: 66px;
+                font-size: 62px;
             }
             @media screen and ($screen-xs) {
                 font-size: 60px;
