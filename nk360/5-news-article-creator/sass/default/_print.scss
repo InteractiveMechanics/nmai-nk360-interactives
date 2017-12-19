@@ -20,6 +20,8 @@
         -webkit-print-color-adjust: exact;
     }
 
+    @page { size: 8.5in 11in; margin: 0.25in; }
+
     #print-preview {
         opacity: 1 !important;
         position: relative;
@@ -36,8 +38,15 @@
             padding: 0;
             z-index: 10;
         }
+        .paper-preview-masthead {
+            page-break-after: avoid;
+        }
         .paper-preview-article {
-            max-height: 850px;
+            page-break-before: avoid;
+            page-break-after: avoid;
+            page-break-inside: auto;
+            max-height: 740px;
+            overflow-y: visible;
     
             > p {
                 font-size: 0.7rem;

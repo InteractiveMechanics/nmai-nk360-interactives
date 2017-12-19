@@ -101,7 +101,35 @@
     @media screen and ($screen-xs) and ($screen-portrait) {
         background-size: contain;
     }
+    @include screen-xs {
+        overflow: hidden;
+    }
 }
+
+.timeline-wrapper-mobile-era1 {
+    @include screen-xs {
+        width: 2143px;
+        left: 0 !important;
+    }
+}
+
+.timeline-wrapper-mobile-era2 {
+     @include screen-xs {
+        width: 3500px;
+        left: 0 !important;
+    }
+}
+
+.timeline-wrapper-mobile-era3,
+.timeline-wrapper-mobile-era4 {
+    @include screen-xs {
+        width: 4800px;
+        right: initial;
+        left: 0 !important;
+    }
+}
+
+
 
 .timeline-track {
     border-bottom: 1px solid #deded1;
@@ -378,6 +406,7 @@
     @include screen-xs {
         left: 0px;
         top: 35%;
+        display: none;
         &:before {
         content: "";
         background: url('/nk360/shared/lib/im/images/icon-prev.svg');
@@ -398,6 +427,7 @@
     left: auto;
     @include screen-xs {
         right: 0px;
+        display: none;
         &:before {
             content: "";
             background: url('/nk360/shared/lib/im/images/icon-next.svg');

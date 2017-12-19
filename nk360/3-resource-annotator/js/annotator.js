@@ -62,7 +62,7 @@ Annotator = (function() {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
-            heading += " and " + arr[i].theme_id;
+            heading += ", and " + arr[i].theme_id;
           } else {
             heading += arr[i].theme_id + ", ";
           }
@@ -132,6 +132,7 @@ Annotator = (function() {
         $('body').on('click tap', '.half-menu', mobileMenuClicked);
 
         $('body').on('click tap', 'textarea', focusOnTextArea);
+        $('body').on('click tap', '.toggle-mobile-markers', toggleMobileMarkers);
 
         window.onbeforeprint = function() {
           sendGoogleAnalyticsEvent("Print preview", "open");
@@ -147,9 +148,8 @@ Annotator = (function() {
           };
         });
 
-        $('body').click(function (event)
-        {
-           if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text')) {
+        $('body').click(function (event) {
+           if(!$(event.target).closest('.marker-in-text').length && !$(event.target).is('.marker-in-text') && !$(event.target).is('.undo-delete')) {
              $( ".pin-visible" ).each(function(  ) {
                 hidePin($(this));
               });
@@ -166,6 +166,29 @@ Annotator = (function() {
         // Initialize tooltips again
         $('[data-toggle="tooltip"]').tooltip();
     };
+
+
+    /**
+      * Click handler function for the mobile toggle markers panel
+    */
+    var toggleMobileMarkers = function () {
+      if ($(this).parent().hasClass('display-mobile-markers')) {
+        $(this).text('HIDE');
+        $(this).parent().removeClass('display-mobile-markers');
+      } else {
+        $(this).text('SHOW');
+        $(this).parent().addClass('display-mobile-markers');
+      }
+    }
+    /**
+      * Close handler function for the mobile markers panel
+    */
+    var closeMobileMarkers = function () {
+        if (!$('mobile-markers').hasClass('display-mobile-markers')) {
+            $('.toggle-mobile-markers').text('SHOW');
+            $('.mobile-markers').addClass('display-mobile-markers');
+        }
+    }
 
     var sendGoogleAnalyticsEvent = function(type, action) {
       sendAnalyticsEvent(type, action);
@@ -237,6 +260,7 @@ Annotator = (function() {
 
         var marker_image = getMarker();
         var obj = {
+          "theme_safe": makeSafeForCSS(themes[i].title),
           "theme_id": themes[i].title,
           "count": themes[i].count,
           "marker_image": marker_image,
@@ -311,6 +335,15 @@ Annotator = (function() {
 
     };
 
+    function makeSafeForCSS(name) {
+        return name.replace(/[^a-z0-9]/g, function(s) {
+            var c = s.charCodeAt(0);
+            if (c == 32) return '-';
+            if (c >= 65 && c <= 90) return '_' + s.toLowerCase();
+            return '__' + ('000' + c.toString(16)).slice(-4);
+        });
+    }
+
 
     /**
       * Sets the draggable and droppable targets for the annotation sreen
@@ -335,6 +368,7 @@ Annotator = (function() {
         appendTo: 'body',
         // If there are no more pins available
         start: function(event, ui) {
+          closeMobileMarkers();
           var m = $(this).parent();
           var val = getMarkerRemaining(m);
           if(val == 0) {
@@ -424,14 +458,9 @@ Annotator = (function() {
 
             pin.removeClass().addClass('pin-visible marker-in-text');
 
-            if(window.innerWidth < 600) {
-              pin.addClass('fixed-bottom-marker');
-            }
-
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
-            pin.append('<textarea placeholder="Write your note here..." ></textarea>');
-            pin.append('<span class="delete-btn"></span>');
+            pin.append('<div class="mobile-text-container"><textarea placeholder="Write your note here..." ></textarea><span class="delete-btn"></span><span class="close-btn visible-xs"></span></div>');
 
             // If the pin has been dropped in the image, change the coordinates to %
            if($(this).hasClass('photo-container')) {
@@ -490,6 +519,10 @@ Annotator = (function() {
           // When the user clicks on "Delete"
           pin.find('.delete-btn').click(function() {
             deletePin(pin);
+          });
+
+          pin.find('.close-btn').click(function() {
+            hidePin(pin);
           });
 
           // Hide or show the content when the user clicks on the pin icon
@@ -737,7 +770,7 @@ Annotator = (function() {
       * @param {obj} the pin to be deleted
     */
     var deletePin = function(pin) {
-      pin.append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Delete</button><button class="btn btn-white undo-delete">Cancel</button></div>');
+      pin.find('.mobile-text-container').append('<div class="delete-pin"><span>Permanently delete this note?</span><button class="btn btn-white confirm-delete">Delete</button><button class="btn btn-white undo-delete">Cancel</button></div>');
 
       pin.find('.confirm-delete').click(function() {
         var id = pin.data('marker');
@@ -749,8 +782,9 @@ Annotator = (function() {
         sendGoogleAnalyticsEvent("Markup", "delete");
       });
 
-      pin.find('.undo-delete').click(function() {
+      pin.find('.undo-delete').on('click tap', function() {
         pin.find('.delete-pin').remove();
+        pin.find('textarea').focus();
       });
     }
 
@@ -763,7 +797,7 @@ Annotator = (function() {
       pin.removeClass('pin-hidden').addClass('pin-visible');
       findPinPosition(pin);
 
-      pin.find('*').not('img').finish().show().animate({
+      pin.find('.mobile-text-container').finish().show().animate({
         'opacity': 1,
       }, 250, function(){
         pin.find('textarea').focus();
@@ -771,10 +805,7 @@ Annotator = (function() {
 
       pin.css("background-color", "rgba(221, 221, 221, 1)");
       pin.css("border-color", "rgba(204, 204, 204, 1)");
-      
-      if(window.innerWidth < 600) {
-        pin.addClass('fixed-bottom-marker');
-      }
+
     };
 
     /**
@@ -782,17 +813,17 @@ Annotator = (function() {
       * @param {obj} the pin and popup view to be hidden
     */
     var hidePin = function(pin) {
-      pin.find('*').not('img').finish().animate({
+      pin.removeClass('pin-visible').addClass('pin-hidden').find('.mobile-text-container').hide();
+      findPinPosition(pin);
+      /*
+      pin.find('.mobile-text-container').finish().animate({
         'opacity': 0,
       }, 250, function() {
-        $(this).hide();
+        pin.find('.mobile-text-container').hide();
         pin.removeClass('pin-visible').addClass('pin-hidden');
         findPinPosition(pin);
       });
-
-      if(window.innerWidth < 600) {
-        pin.removeClass('fixed-bottom-marker');
-      }
+      */
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
       pin.css("border-color", "rgba(204, 204, 204, 0)");
@@ -838,7 +869,9 @@ Annotator = (function() {
         $(".desktop-markers").html(markersOutput);
       }
 
-
+      $('.header').addClass('hidden-xs-down');
+      $('.icon-print').removeClass('hidden-xs-down');
+      $('.icon-home').removeClass('hidden-xs-down');
 
 
       setTimeout(function(){

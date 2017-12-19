@@ -9,7 +9,7 @@ Game = (function() {
       $world: $('.game-world'),
       positions: [0, 5820, 10840, -1],
       leg: 0,
-      $progress: $('.progressb'),
+      $progress: $('.progressb .fish-outline'),
       scaling: 0,
       sectionLength: 0,
       sectionOffset: 0,
@@ -531,7 +531,7 @@ Game = (function() {
                     }
                     prevPos = pos;
                 });
-                settings.$progress.css("width", totalPos);
+                settings.$progress.css("transform", 'translateX(' + totalPos + 'px)');
                 requestAnimationFrame(updateWorld);
             } else {
               $('.fishes-left').text(settings.salmonCount);

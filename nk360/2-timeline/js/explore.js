@@ -5,15 +5,30 @@ Explore = (function() {
     }
 
     var stopClick = false;
-
-
+   
     /**
     * Hides the transition overlay 
     * @param no param
     * @return {string|int|array} returns nothing
     **/
     var hideExploreTransition = function() {
+        var era = $('.transition-content-wrapper').attr('data-era');
+        var windowWidth = $(window).width();
+        
         $('.transition-overlay').addClass('animated fadeOut hidden');
+        
+        if (windowWidth <= 768) {
+            if (era == 1) {
+                $('#explore').scrollLeft(0);
+            } else if (era ==2) {
+                $('#explore').scrollLeft(1780);
+            } else if (era == 3) {
+                $('#explore').scrollLeft(3340);
+            } else if (era ==4) {
+                $('#explore').scrollLeft(3340);
+            }
+        }
+
     }
 
     
@@ -127,7 +142,6 @@ Explore = (function() {
         $(document).on('click tap', '#next-btn', advanceNextBtn);
         $(document).on('click tap', '.timeline-item', getMomentDetails);
     }
-
 
     
 
