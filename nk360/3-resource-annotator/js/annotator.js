@@ -813,13 +813,17 @@ Annotator = (function() {
       * @param {obj} the pin and popup view to be hidden
     */
     var hidePin = function(pin) {
+      pin.removeClass('pin-visible').addClass('pin-hidden').find('.mobile-text-container').hide();
+      findPinPosition(pin);
+      /*
       pin.find('.mobile-text-container').finish().animate({
         'opacity': 0,
       }, 250, function() {
-        $(this).hide();
+        pin.find('.mobile-text-container').hide();
         pin.removeClass('pin-visible').addClass('pin-hidden');
         findPinPosition(pin);
       });
+      */
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
       pin.css("border-color", "rgba(204, 204, 204, 0)");

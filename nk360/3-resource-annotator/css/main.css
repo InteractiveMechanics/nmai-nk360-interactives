@@ -961,7 +961,7 @@ small,
 .marker-in-text.pin-hidden {
   height: 0 !important;
   padding: 0 !important; }
-  .marker-in-text.pin-hidden .delete-btn, .marker-in-text.pin-hidden textarea {
+  .marker-in-text.pin-hidden .mobile-text-container, .marker-in-text.pin-hidden .delete-btn, .marker-in-text.pin-hidden textarea {
     display: none !important; }
 
 .delete-pin {
