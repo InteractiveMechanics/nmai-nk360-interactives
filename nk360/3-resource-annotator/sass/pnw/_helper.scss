@@ -9,11 +9,17 @@ body {
 .header {
     @media screen and ($screen-xs) and ($screen-portrait) {
         max-width: 340px !important;
+        background-position: top center !important;
     }
 
     h1 {
         @media screen and ($screen-xs) and ($screen-portrait) {
             font-size: 1.8rem !important;
+        }
+    }
+    h2 {
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            max-width: 90%;
         }
     }
 }

@@ -57,8 +57,19 @@ Annotator = (function() {
       if(arr.length == 1) {
         heading =  arr[0].theme_id;
       }
+      
+      if(arr.length == 2) {
+        for (var i = 0; i < arr.length; i++) {
+          if( i == arr.length - 1) {
+            heading = heading.substring(0, heading.length - 2);
+            heading += " and " + arr[i].theme_id;
+          } else {
+            heading += arr[i].theme_id + ", ";
+          }
+        }
+      }
 
-      if(arr.length > 1) {
+      if(arr.length > 2) {
         for (var i = 0; i < arr.length; i++) {
           if( i == arr.length - 1) {
             heading = heading.substring(0, heading.length - 2);
@@ -360,27 +371,55 @@ Annotator = (function() {
       * Sets all the markers for the current annotation item to be draggable 
     */
     var draggableEvent = function(markers) {
-      markers.draggable({
-        containment: 'window',
-        helper: 'clone',
-        cursorAt: { left: 30, top: 70 },
-        cursor: 'move',
-        appendTo: 'body',
-        // If there are no more pins available
-        start: function(event, ui) {
-          closeMobileMarkers();
-          var m = $(this).parent();
-          var val = getMarkerRemaining(m);
-          if(val == 0) {
-            m.find('.markers-remaining').css('color', 'red');
-            setTimeout(function() {
-              m.find('.markers-remaining').css('color', '');
-            }, 1000);
-            $('body').css('cursor', '');
-            return false;
-          }
-        }
-      });
+      if ($(window).width() > 767) {
+          markers.draggable({
+            containment: 'window',
+            helper: 'clone',
+            cursorAt: { left: 30, top: 70 },
+            cursor: 'move',
+            appendTo: 'body',
+            // If there are no more pins available
+            start: function(event, ui) {
+              closeMobileMarkers();
+              $(this).removeClass('pin-visible').addClass('pin-hidden');
+
+              var m = $(this).parent();
+              var val = getMarkerRemaining(m);
+              if(val == 0) {
+                m.find('.markers-remaining').css('color', 'red');
+                setTimeout(function() {
+                  m.find('.markers-remaining').css('color', '');
+                }, 1000);
+                $('body').css('cursor', '');
+                return false;
+              }
+            }
+          });
+      } else {
+          markers.draggable({
+            containment: 'window',
+            helper: 'clone',
+            cursorAt: { left: 10, top: 50 },
+            cursor: 'move',
+            appendTo: 'body',
+            // If there are no more pins available
+            start: function(event, ui) {
+              closeMobileMarkers();
+              $(this).removeClass('pin-visible').addClass('pin-hidden');
+              
+              var m = $(this).parent();
+              var val = getMarkerRemaining(m);
+              if(val == 0) {
+                m.find('.markers-remaining').css('color', 'red');
+                setTimeout(function() {
+                  m.find('.markers-remaining').css('color', '');
+                }, 1000);
+                $('body').css('cursor', '');
+                return false;
+              }
+            }
+          });
+      }
     }
 
     /**
@@ -419,8 +458,8 @@ Annotator = (function() {
             var visibility = pin.hasClass('pin-visible') ? 'pin-visible' : 'pin-hidden';
             pin.removeClass().addClass('marker-in-text ' + visibility);
             pin.css({
-              'left': '',
-              'top': '',
+              'left': 'auto',
+              'top': 'auto',
             });
             pin.appendTo($(this));
 
@@ -430,6 +469,7 @@ Annotator = (function() {
              var mouseCoord = mouseCoords(event);
              var x = mouseCoord.x - imgCoord.left;
              var y = mouseCoord.y - imgCoord.top;
+
              var xPerc = 100 * x / $(this).width();
              var yPerc = 100 * y / $(this).height();
 
@@ -460,7 +500,7 @@ Annotator = (function() {
 
             pin.appendTo($(this));
             pin.find('img').removeAttr('width');
-            pin.append('<div class="mobile-text-container"><textarea placeholder="Write your note here..." ></textarea><span class="delete-btn"></span><span class="close-btn visible-xs"></span></div>');
+            pin.append('<div class="mobile-text-container"><textarea placeholder="Write your note here..." ></textarea><div class="mobile-btn-group"><span class="delete-btn"></span><span class="close-btn visible-xs"></span></div></div>');
 
             // If the pin has been dropped in the image, change the coordinates to %
            if($(this).hasClass('photo-container')) {
@@ -677,16 +717,12 @@ Annotator = (function() {
       if(pin.parent().hasClass('photo-container') == false) {
         pin.css({
           'left': 0,
-          'margin-left': '',
         });
         pin.find('img').css({
           'top': ''
         });
       }
       else {
-        pin.css({
-          'margin-left': 0
-        });
         pin.find('img').css({
           'left': 0,
           'top': -60
@@ -712,14 +748,10 @@ Annotator = (function() {
           pin.css({
             'left': -320 + parseInt(pin.parent().width()),
             'bottom': 60
-            //'top': ''
           });
         }
 
         if(pin.parent().hasClass('photo-container')) {
-          pin.css({
-            'margin-left': -320
-          });
           pin.find('img').css({
             'left': '',
             'right': 0
@@ -743,9 +775,6 @@ Annotator = (function() {
         }
 
         if(pin.parent().hasClass('photo-container')) {
-          pin.css({
-            'margin-left': 0
-          });
           pin.find('img').css({
             'right': '',
             'left': 0
