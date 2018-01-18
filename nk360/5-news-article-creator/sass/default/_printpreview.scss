@@ -172,22 +172,27 @@
         text-overflow: ellipsis;
     }
     .paper-preview-article {
+        /*
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: flex-start;
+        */
+
         position: relative;
-        max-height: 1200px;
-        overflow: hidden;
+        //max-height: 1100px;
+        overflow-x: hidden;
 
         @media screen and ($screen-xs) {
-            max-height: 1400px;
+            //max-height: 1300px;
         }
 
         > * {
             width: 31%;
-            margin-right: 3%;
+            margin-right: 2%;
+            display: block;
+            float: left;
+            vertical-align: top;
+            height: 100%;
         }
         > .featured {
             //width: 64%;
@@ -196,11 +201,11 @@
                 //max-height: 300px;
             }
         }
-        > p:empty {
+        p:empty {
             display: none;
         }
         
-        > p {
+        p {
             font-size: 0.9rem;
             line-height: 1.8;
             text-align: justify;

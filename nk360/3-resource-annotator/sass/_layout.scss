@@ -634,8 +634,8 @@ small,
 }
 /** Pins **/
 
-.pin-drop.ui-droppable-hover {
-    //background: yellow;
+.pin-drop:not(.photo-container).ui-droppable-hover {
+    background: yellow;
 }
 .pin-drop {
     position: relative;

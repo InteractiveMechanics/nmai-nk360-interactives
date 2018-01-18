@@ -75,13 +75,17 @@ Print = (function() {
         var quotes = Cards.getQuotes();
         var featured = Cards.getFeatured();
 
+        var content = [];
+
         // Then generate the newspaper
         buildMasthead(theme);
         $('.print-preview-container').removeClass('traditional modern');
         $('.print-preview-container').addClass(theme);
-        $('.paper-preview-article').html(article);
         $('.paper-preview-masthead .byline').text(masthead);
+        $('.paper-preview-article .article-col').html('');
         buildHeadline(headline);
+
+        content = article.split('<break>');
         
         $.each(images, function(key, val){
             if (val){
@@ -109,9 +113,9 @@ Print = (function() {
                 html += '</figure>';
     
                 if (featured == val.id){
-                    $('.paper-preview-article').first('p').prepend(html);
+                    content.unshift(html);
                 } else {
-                    $('.paper-preview-article').append(html);
+                    content.push(html);
                 }
             }
         });
@@ -127,7 +131,25 @@ Print = (function() {
                 }
                 html += '</blockquote>';
     
-                $('.paper-preview-article').append(html);
+                content.push(html);
+            }
+        });
+
+        var contentCount = 0;
+        console.log(content.length);
+        console.log(content);
+
+        $.each(content, function(key, val){
+            if (val !== '<p></p>'){
+                if (contentCount < Math.ceil((content.length-1)/3)){
+                    $('.article-col-1').append(val);
+                } else if (contentCount < Math.ceil((content.length-1)/3)*2){
+                    $('.article-col-2').append(val);
+                } else {
+                    $('.article-col-3').append(val);
+                }
+                contentCount++;
+                console.log(contentCount);
             }
         });
     }
@@ -183,7 +205,7 @@ Print = (function() {
             $.each(splitStr, function( index, value ) {
                 if (value.length > 1){
                     newStr += value;
-                    newStr += '</p><p>';
+                    newStr += '</p><break><p>';
                 }
             });
             return newStr;

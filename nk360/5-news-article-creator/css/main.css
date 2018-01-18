@@ -934,23 +934,23 @@ main {
     overflow-x: hidden;
     text-overflow: ellipsis; }
   #print-preview .paper-preview-article {
+    /*
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    */
     position: relative;
-    max-height: 1200px;
-    overflow: hidden; }
-    @media screen and (max-width: 767px) {
-      #print-preview .paper-preview-article {
-        max-height: 1400px; } }
+    overflow-x: hidden; }
     #print-preview .paper-preview-article > * {
       width: 31%;
-      margin-right: 3%; }
-    #print-preview .paper-preview-article > p:empty {
+      margin-right: 2%;
+      display: block;
+      float: left;
+      vertical-align: top;
+      height: 100%; }
+    #print-preview .paper-preview-article p:empty {
       display: none; }
-    #print-preview .paper-preview-article > p {
+    #print-preview .paper-preview-article p {
       font-size: 0.9rem;
       line-height: 1.8;
       text-align: justify;
@@ -1099,7 +1099,7 @@ main {
       page-break-inside: auto;
       max-height: 740px;
       overflow-y: visible; }
-      #print-preview .paper-preview-article > p {
+      #print-preview .paper-preview-article p {
         font-size: 0.7rem;
         line-height: 1.4;
         text-align: justify; }
