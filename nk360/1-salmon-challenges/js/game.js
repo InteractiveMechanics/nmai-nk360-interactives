@@ -506,7 +506,7 @@ Game = (function() {
 
               };
 
-                if(current_position == 12500) {
+                if(current_position == 11750) {
                   $('.number-of-salmon').addClass('rising-water-number');
                   $('#SelectedSalmon').addClass('rising-water');
                 }
@@ -966,9 +966,7 @@ Game = (function() {
       * Increases the current salmon count by 1 unless the current number of salmon is 5
     */
     var addFish = function() {
-      if(settings.salmonCount < 5) {
         updateFish(1);
-      }
     }
 
     /**
@@ -990,7 +988,11 @@ Game = (function() {
       var val = settings.salmonCount + value;
       var fishType = settings.fishSelection + '-';
       var removedClass = fishType + settings.salmonCount;
-      var addedClass = fishType + val;
+      if (val > 5) {
+        var addedClass = fishType + 5;
+      } else {
+        var addedClass = fishType + val;
+      }
 
       $('#SelectedSalmon').removeClass(removedClass).addClass(addedClass);
       settings.salmonCount = val;
@@ -1175,7 +1177,7 @@ Game = (function() {
         $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
-          $('.quiz-detail').removeClass('hidden').addClass('show');
+          $('.quiz-detail').removeClass('invisible').addClass('show');
           $('.close-icon').removeClass('close-faded');
         }, 200);
 

@@ -469,12 +469,12 @@
               <div class="card-image">
                 <div class="photo-container">
                     <img src="{{:thumb}}" alt="{{:title}}" title="{{:title}}" class="img-fluid" />
-                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:credit}}"tabindex="0">
+                    <div data-gallery data-gallery-image="{{:image}}" data-gallery-caption="{{:credit}}" tabindex="-1">
                     </div>
                 </div>
               </div>
 
-              <p class="image-credit">
+              <p class="image-credit" tabindex="-1">
                 {{:credit}}
               </p>
 
@@ -605,7 +605,7 @@
             </div>
           </div>
 
-          <p class="hidden quiz-detail">
+          <p class="invisible quiz-detail">
               
           </p>
 
