@@ -102,7 +102,7 @@ h4 {
  * 
 **/
 .modal-content {
-  background: url("/nk360/shared/lib/im/images/np/text-card-np@2x.png");
+  background: url("/nk360/shared/lib/im/images/np/text-card-np-watermark@2x.png");
   background-color: white;
   background-size: 90%;
   background-position: center center;
@@ -115,8 +115,7 @@ h4 {
       background-size: 100%; } }
 
 .modal-title {
-  font-size: 30px;
-  margin-top: 25px; }
+  font-size: 30px; }
 
 .modal-footer-message {
   bottom: 50px; }
@@ -130,7 +129,7 @@ h4 {
 **/
 .intro-card,
 .learning-points-card {
-  background: url("/nk360/shared/lib/im/images/np/text-card-np@2x.png");
+  background: url("/nk360/shared/lib/im/images/np/text-card-np-watermark@2x.png");
   background-size: 95%;
   background-color: #ffffff;
   background-repeat: no-repeat;

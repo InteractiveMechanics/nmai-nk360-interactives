@@ -634,8 +634,8 @@ small,
 }
 /** Pins **/
 
-.pin-drop.ui-droppable-hover {
-    //background: yellow;
+.pin-drop:not(.photo-container).ui-droppable-hover {
+    background: yellow;
 }
 .pin-drop {
     position: relative;
@@ -665,6 +665,13 @@ small,
         height: auto;
         background: transparent !important;
         box-shadow: none;
+    }
+
+    .photo-container &.left-flipped {
+        margin-left: -30px !important;
+    }
+    .photo-container &.pin-visible.right-flipped {
+        margin-left: -310px !important;
     }
 
     .mobile-text-container {
@@ -697,6 +704,10 @@ small,
     
     //filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
     z-index: 4;
+
+    @media screen and ($screen-xs) {
+        width: 30px;
+    }
 }
 .hidden-mobile {
     display: none;
@@ -711,21 +722,26 @@ small,
     width: 250px;
 
     @media screen and ($screen-xs) and ($screen-portrait) {
-        width: 240px;
+        width: 220px;
         margin-right: 10px;
     }
 }
-.marker-in-text .delete-btn {
+.marker-in-text .mobile-btn-group {
     float: right;
     width: 35px;
-    height: 35px;
-    display: block;
+}
+.marker-in-text .delete-btn {
+    width: 35px;
+    height: 52px;
+    display: block !important;
     background-image: url('../assets/icon-trash.svg');
-    background-size: cover;
+    background-size: 35px;
+    background-repeat: no-repeat;
     cursor: pointer;
     position: relative;
     opacity: 1;
     transition: all 0.0s;
+
     &:hover, &:active {
         opacity: 0.5;
     }
@@ -739,16 +755,16 @@ small,
     }
 }
 .marker-in-text .close-btn {
-    float: right;
     width: 35px;
-    height: 35px;
-    display: block;
+    height: 52px;
+    display: block !important;
     background-image: url('../assets/icon-close.svg');
-    background-size: cover;
+    background-size: 35px;
+    background-repeat: no-repeat;
     cursor: pointer;
     position: relative;
     opacity: 1;
-    margin-top: 30px;
+    margin-top: 15px;
     transition: all 0.0s;
 
     &:hover, &:active {
@@ -764,11 +780,11 @@ small,
     }
 }
 .marker-in-text.pin-hidden {
-    //width: 0 !important;
+    width: 0 !important;
     height: 0 !important;
     padding: 0 !important;
 
-    .mobile-text-container, .delete-btn, textarea {
+    *:not(img) {
         display: none !important;
     }
 }

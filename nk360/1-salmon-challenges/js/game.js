@@ -93,7 +93,9 @@ Game = (function() {
 
         $('body').on('keypress', '.fish-row .col', selectSalmonEnter);
         $('body').on('keypress', '#close-select-fish', hideSelectSalmonEnter);
-        $('body').on('keydown', '.close-icon', closePopupEnter);
+        $('body').on('keypress', '#close-congrats-screen', closeCongratsScreen);
+        $('body').on('keypress', '.close-icon', closePopupEnter);
+        
         
 
         // Initialize tooltips again
@@ -455,6 +457,10 @@ Game = (function() {
       * Shows the game complete victory slider when the user clears the victory modal at the end of the game
     */
     var closeCongratsScreen = function() {
+      if(e.keyCode != 13) {
+        return;
+      }
+
       $('#congrats-instructions').removeClass('show').addClass('hidden');
 
       showVictorySlider();
@@ -506,7 +512,7 @@ Game = (function() {
 
               };
 
-                if(current_position == 12500) {
+                if(current_position > 11750) {
                   $('.number-of-salmon').addClass('rising-water-number');
                   $('#SelectedSalmon').addClass('rising-water');
                 }
@@ -900,6 +906,7 @@ Game = (function() {
             }
         });
 
+        /*
         var $carousel = $('.slider');
         $(document).on('keydown', function(e) {
             if(e.keyCode == 37) {
@@ -909,6 +916,7 @@ Game = (function() {
                 $carousel.slick('slickNext');
             }
         });
+        */
       }
 
       $('.slider-wrapper').removeClass('hidden').addClass('show');
@@ -966,9 +974,7 @@ Game = (function() {
       * Increases the current salmon count by 1 unless the current number of salmon is 5
     */
     var addFish = function() {
-      if(settings.salmonCount < 5) {
         updateFish(1);
-      }
     }
 
     /**
@@ -990,7 +996,11 @@ Game = (function() {
       var val = settings.salmonCount + value;
       var fishType = settings.fishSelection + '-';
       var removedClass = fishType + settings.salmonCount;
-      var addedClass = fishType + val;
+      if (val > 5) {
+        var addedClass = fishType + 5;
+      } else {
+        var addedClass = fishType + val;
+      }
 
       $('#SelectedSalmon').removeClass(removedClass).addClass(addedClass);
       settings.salmonCount = val;
@@ -1087,6 +1097,7 @@ Game = (function() {
             variableWidth: true
           });
 
+          /*
           var $carousel = $('.intro-slider');
           $(document).on('keydown', function(e) {
               if(e.keyCode == 37) {
@@ -1096,6 +1107,7 @@ Game = (function() {
                   $carousel.slick('slickNext');
               }
           });
+          */
 
           $('.intro-slider').on('afterChange', function(e, slick, currentSlide){
               if(slick.slideCount == currentSlide + 1) {
@@ -1175,7 +1187,7 @@ Game = (function() {
         $('.quiz-options').data('answered', true);
 
         setTimeout(function(){
-          $('.quiz-detail').removeClass('hidden').addClass('show');
+          $('.quiz-detail').removeClass('invisible').addClass('show');
           $('.close-icon').removeClass('close-faded');
         }, 200);
 
@@ -1249,6 +1261,9 @@ Game = (function() {
       * the animations start back up running and the overlay, slider/card disappears.
     */
     var closePopupEnter = function (e) {
+      if(e.keyCode != 13) {
+        return;
+      }
 
       var isFaded = $(this).hasClass('close-faded');
       var isSlider = $('.slider-wrapper').hasClass('show');
