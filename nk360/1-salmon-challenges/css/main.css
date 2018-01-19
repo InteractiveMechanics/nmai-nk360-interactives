@@ -1238,6 +1238,10 @@ hr {
   width: 100px;
   height: 100px;
   transition: 0.5s all; }
+  .slick-prev:focus,
+  .slick-next:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color; }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .slick-prev,
     .slick-next {
