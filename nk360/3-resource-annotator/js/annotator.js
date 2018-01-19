@@ -381,7 +381,6 @@ Annotator = (function() {
             // If there are no more pins available
             start: function(event, ui) {
               closeMobileMarkers();
-              $(this).removeClass('pin-visible').addClass('pin-hidden');
 
               var m = $(this).parent();
               var val = getMarkerRemaining(m);
@@ -405,7 +404,6 @@ Annotator = (function() {
             // If there are no more pins available
             start: function(event, ui) {
               closeMobileMarkers();
-              $(this).removeClass('pin-visible').addClass('pin-hidden');
               
               var m = $(this).parent();
               var val = getMarkerRemaining(m);
@@ -528,28 +526,69 @@ Annotator = (function() {
           }
 
           // When a marker is moved to another position, make it draggable
-          pin.draggable({
-            containment: 'document',
-            cursor: 'move',
-            // If not hovering droppable words, go back to the original position
-            stop: function(event, ui) {
-              /*
-              pin.css({
-                'left': '',
-                'top': '',
-              });*/
-
-              findPinPosition(pin);
-
-              $('.marker-in-text').each(function() {
-                if($(this).is(pin)) return;
-                hidePin($(this));
+          if ($(window).width() > 767) {
+              pin.draggable({
+                containment: 'window',
+                cursor: 'move',
+                cursorAt: { left: 15, top: 35 },
+                appendTo: 'body',
+                start: function(event, ui) {
+                    hidePin($(this));
+                    $(this).find('img').css({
+                        'left': -10,
+                        'top': -30
+                    })
+                },
+                
+                // If not hovering droppable words, go back to the original position
+                stop: function(event, ui) {
+                  /*
+                  pin.css({
+                    'left': '',
+                    'top': '',
+                  });*/
+    
+                  findPinPosition(pin);
+    
+                  $('.marker-in-text').each(function() {
+                    if($(this).is(pin)) return;
+                    hidePin($(this));
+                  });
+    
+                  showPin(pin);
+    
+                }
               });
-
-              showPin(pin);
-
-            }
-          });
+          } else {
+            pin.draggable({
+                containment: 'window',
+                cursor: 'move',
+                cursorAt: { left: 10, top: 50 },
+                //appendTo: 'body',
+                start: function(event, ui) {
+                    hidePin($(this));
+                },
+                
+                // If not hovering droppable words, go back to the original position
+                stop: function(event, ui) {
+                  /*
+                  pin.css({
+                    'left': '',
+                    'top': '',
+                  });*/
+    
+                  findPinPosition(pin);
+    
+                  $('.marker-in-text').each(function() {
+                    if($(this).is(pin)) return;
+                    hidePin($(this));
+                  });
+    
+                  showPin(pin);
+    
+                }
+              });
+          }
 
           // Unbind old listeners
           pin.find('button').off('click');
@@ -707,13 +746,14 @@ Annotator = (function() {
     var findPinPosition = function(pin) {
       var hide = pin.hasClass('pin-hidden');
       if(hide) {
-        pin.find('*').not('img').show();
+
         return;
       }
 
       var width = pin.closest('.scrollbar-design').outerWidth();
       var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
 
+      // if NOT over the image
       if(pin.parent().hasClass('photo-container') == false) {
         pin.css({
           'left': 0,
