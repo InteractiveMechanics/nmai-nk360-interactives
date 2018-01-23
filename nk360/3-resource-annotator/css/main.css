@@ -595,6 +595,7 @@ small,
   .original-text .content-height {
     max-height: 70vh;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 10px 0;
     -webkit-overflow-scrolling: touch; }
     @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
@@ -879,8 +880,9 @@ small,
       box-shadow: none; } }
   .photo-container .marker-in-text.left-flipped {
     margin-left: -30px !important; }
-  .photo-container .marker-in-text.pin-visible.right-flipped {
-    margin-left: -310px !important; }
+  .photo-container .marker-in-text.right-flipped {
+    margin-left: -320px !important;
+    width: 320px !important; }
   .marker-in-text .mobile-text-container {
     height: 100%; }
     @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -907,7 +909,12 @@ small,
   z-index: 4; }
   @media screen and (max-width: 767px) {
     .marker-in-text img {
-      width: 30px; } }
+      width: 30px;
+      left: -10px !important; } }
+
+@media screen and (max-width: 767px) {
+  .marker-in-text.pin-hidden img {
+    top: -10px !important; } }
 
 .hidden-mobile {
   display: none; }
