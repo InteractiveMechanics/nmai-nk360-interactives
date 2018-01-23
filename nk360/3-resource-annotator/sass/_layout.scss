@@ -315,6 +315,7 @@ small,
     .content-height {
         max-height: 70vh;
         overflow-y: auto;
+        overflow-x: hidden;
         padding: 0 10px 0;
         -webkit-overflow-scrolling: touch;
 
@@ -670,8 +671,9 @@ small,
     .photo-container &.left-flipped {
         margin-left: -30px !important;
     }
-    .photo-container &.pin-visible.right-flipped {
-        margin-left: -310px !important;
+    .photo-container &.right-flipped {
+        margin-left: -320px !important;
+        width: 320px !important;
     }
 
     .mobile-text-container {
@@ -707,8 +709,15 @@ small,
 
     @media screen and ($screen-xs) {
         width: 30px;
+        left: -10px !important;
     }
 }
+.marker-in-text.pin-hidden img {
+    @media screen and ($screen-xs) {
+        top: -10px !important;
+    }
+}
+
 .hidden-mobile {
     display: none;
 }

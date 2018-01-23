@@ -20,7 +20,7 @@ Annotator = (function() {
       bindEvents();
     }
 
-    var modalWidth = 275;
+    var modalWidth = 320;
 
     var markerArray = [
       './assets/marker-01@2x.png',
@@ -380,7 +380,6 @@ Annotator = (function() {
             appendTo: 'body',
             // If there are no more pins available
             start: function(event, ui) {
-              closeMobileMarkers();
 
               var m = $(this).parent();
               var val = getMarkerRemaining(m);
@@ -471,6 +470,11 @@ Annotator = (function() {
              var xPerc = 100 * x / $(this).width();
              var yPerc = 100 * y / $(this).height();
 
+             if ($(window).width() <= 767) {
+                xPerc = 100 * (x-10) / $(this).width();
+                yPerc = 100 * (y-30) / $(this).height();
+             }
+
              pin.css({
                'left': xPerc + '%',
                'top': yPerc + '%',
@@ -509,6 +513,11 @@ Annotator = (function() {
              var xPerc = 100 * x / $(this).width();
              var yPerc = 100 * y / $(this).height();
 
+             if ($(window).width() <= 767) {
+                xPerc = 100 * (x-2) / $(this).width();
+                yPerc = 100 * (y-40) / $(this).height();
+             }
+
              pin.css({
                'left': xPerc + '%',
                'top': yPerc + '%',
@@ -524,14 +533,13 @@ Annotator = (function() {
 
             sendGoogleAnalyticsEvent("Markup", "add");
           }
-
-          // When a marker is moved to another position, make it draggable
+          
           if ($(window).width() > 767) {
               pin.draggable({
-                containment: 'window',
+                //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 15, top: 35 },
-                appendTo: 'body',
+                //appendTo: 'body',
                 start: function(event, ui) {
                     hidePin($(this));
                     $(this).find('img').css({
@@ -547,8 +555,7 @@ Annotator = (function() {
                     'left': '',
                     'top': '',
                   });*/
-    
-                  findPinPosition(pin);
+                  
     
                   $('.marker-in-text').each(function() {
                     if($(this).is(pin)) return;
@@ -556,14 +563,14 @@ Annotator = (function() {
                   });
     
                   showPin(pin);
-    
+                  findPinPosition(pin);
                 }
               });
           } else {
             pin.draggable({
-                containment: 'window',
+                //containment: 'window',
                 cursor: 'move',
-                cursorAt: { left: 10, top: 50 },
+                cursorAt: { left: 10, top: 30 },
                 //appendTo: 'body',
                 start: function(event, ui) {
                     hidePin($(this));
@@ -571,21 +578,14 @@ Annotator = (function() {
                 
                 // If not hovering droppable words, go back to the original position
                 stop: function(event, ui) {
-                  /*
-                  pin.css({
-                    'left': '',
-                    'top': '',
-                  });*/
-    
-                  findPinPosition(pin);
-    
+        
                   $('.marker-in-text').each(function() {
                     if($(this).is(pin)) return;
                     hidePin($(this));
                   });
     
                   showPin(pin);
-    
+                  findPinPosition(pin);
                 }
               });
           }
@@ -612,7 +612,7 @@ Annotator = (function() {
             else {
               //todo
               $('.marker-in-text').each(function() {
-                if($(this).is(pin)) return;
+                //if($(this).is(pin)) return;
                 hidePin($(this));
               });
 
@@ -746,92 +746,116 @@ Annotator = (function() {
     var findPinPosition = function(pin) {
       var hide = pin.hasClass('pin-hidden');
       if(hide) {
-
         return;
       }
 
-      var width = pin.closest('.scrollbar-design').outerWidth();
-      var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+      if ($(window).width() > 767) {
+          var width = pin.closest('.scrollbar-design').outerWidth();
+          var scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+    
+          // if NOT over the image
+          /*
+          if(pin.parent().hasClass('photo-container') == false) {
+            pin.css({
+              'left': 0,
+            });
+            pin.find('img').css({
+              'top': ''
+            });
+          }
+          else {
+            pin.find('img').css({
+              'left': 0,
+              'top': -60
+            });
+          }
+          */
+    
+          width = pin.closest('.scrollbar-design').outerWidth();
+          scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+          offset = pin.closest('.original-text').offset().left;
+    
+          var height = pin.closest('.scrollbar-design').outerHeight();
+          var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+    
+          var verticalFlip = offsetTop(pin) < 44 && pin.parent().hasClass('photo-container') == false && !pin.closest('.original-text').find('.photo-container').length;
+          if(verticalFlip) {
+            pin.addClass('vertical-flip');
+          }
+          else {
+            //pin.removeClass('vertical-flip');
+          }
 
-      // if NOT over the image
-      if(pin.parent().hasClass('photo-container') == false) {
-        pin.css({
-          'left': 0,
-        });
-        pin.find('img').css({
-          'top': ''
-        });
-      }
-      else {
-        pin.find('img').css({
-          'left': 0,
-          'top': -60
-        });
-      }
+          if((pin.offset().left - offset - 40) > (width / 2)) {
+            // If over the width threshold, switch things around
 
-      width = pin.closest('.scrollbar-design').outerWidth();
-      scroll = pin.closest('.scrollbar-design').prop('scrollWidth');
+            if(pin.parent().hasClass('photo-container') == false) {
+              if(verticalFlip) {
+                pin.css({
+                  'left': -320 + parseInt(pin.parent().width()),
+                  'bottom': 60,
+                  'top': 10
+                });
+              } else {
+                pin.css({
+                  'left': -320 + parseInt(pin.parent().width()),
+                  'bottom': 60,
+                });
+              }
+              pin.find('img').css({
+                'bottom': -50,
+                'top': '',
+                'left': 320 - parseInt(pin.find('img').width()) + 10
+              });
+            } else {
+              pin.find('img').css({
+                'left': '',
+                'right': -10,
+                'top': -60
+              });
+            }
+    
+            if (!pin.hasClass('right-flipped')){
+                pin.removeClass('left-flipped').addClass('right-flipped');
+            }
 
-      var height = pin.closest('.scrollbar-design').outerHeight();
-      var scrollHeight = pin.closest('.scrollbar-design').prop('scrollHeight');
+          } else {
+            // If less than the width threshold, use the default
 
-      var verticalFlip = offsetTop(pin) < 44 && pin.parent().hasClass('photo-container') == false && !pin.closest('.original-text').find('.photo-container').length;
-      if(verticalFlip) {
-        pin.addClass('vertical-flip');
-      }
-      else {
-        //pin.removeClass('vertical-flip');
-      }
-
-      if(width + 1 < scroll) {
-        if(pin.parent().hasClass('photo-container') == false) {
-          pin.css({
-            'left': -320 + parseInt(pin.parent().width()),
-            'bottom': 60
-          });
+            if(pin.parent().hasClass('photo-container') == false) {
+              if(verticalFlip) {
+                pin.css({
+                  'left': 0,
+                  'bottom': 60,
+                  'top': 10
+                });
+              } else {
+                pin.css({
+                  'left': 0,
+                  'bottom': 60,
+                });
+              }
+              pin.find('img').css({
+                'top': '',
+                'left': -10,
+                'bottom': -50,
+              });
+            } else {
+              pin.find('img').css({
+                'right': '',
+                'left': 0,  
+                'top': -60
+              });
+            }
+            
+            if (!pin.hasClass('left-flipped')){
+                pin.removeClass('right-flipped').addClass('left-flipped');
+            }
+          }
+    
+          if(hide)
+              pin.find('*').not('img').hide();
         }
-
-        if(pin.parent().hasClass('photo-container')) {
-          pin.find('img').css({
-            'left': '',
-            'right': 0
-          });
-        }
-        else {
-          pin.find('img').css({
-            'bottom': -50,
-            'left': 320 - parseInt(pin.find('img').width()) + 10
-          });
-        }
-
-        pin.removeClass('left-flipped').addClass('right-flipped');
-      }
-      else {
-        if(pin.parent().hasClass('photo-container') == false) {
-          pin.css({
-            'left': 0,
-            'bottom': 60
-          });
-        }
-
-        if(pin.parent().hasClass('photo-container')) {
-          pin.find('img').css({
-            'right': '',
-            'left': 0
-          });
-        }
-        else {
-          pin.find('img').css({
-            'left': -10,
-            'bottom': -50,
-          });
-        }
-
-        pin.removeClass('right-flipped').addClass('left-flipped');
-      }
-
-      if(hide)
-          pin.find('*').not('img').hide();
     }
 
     /**
@@ -864,7 +888,7 @@ Annotator = (function() {
     var showPin = function(pin) {
 
       pin.removeClass('pin-hidden').addClass('pin-visible');
-      findPinPosition(pin);
+      //findPinPosition(pin);
 
       pin.find('.mobile-text-container').finish().show().animate({
         'opacity': 1,
@@ -883,16 +907,7 @@ Annotator = (function() {
     */
     var hidePin = function(pin) {
       pin.removeClass('pin-visible').addClass('pin-hidden').find('.mobile-text-container').hide();
-      findPinPosition(pin);
-      /*
-      pin.find('.mobile-text-container').finish().animate({
-        'opacity': 0,
-      }, 250, function() {
-        pin.find('.mobile-text-container').hide();
-        pin.removeClass('pin-visible').addClass('pin-hidden');
-        findPinPosition(pin);
-      });
-      */
+      //findPinPosition(pin);
 
       pin.css("background-color", "rgba(221, 221, 221, 0)");
       pin.css("border-color", "rgba(204, 204, 204, 0)");
