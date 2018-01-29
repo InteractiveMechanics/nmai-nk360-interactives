@@ -295,8 +295,9 @@ body {
 }
 .hotspot {
     cursor: pointer;
-    width: 87px;
-    height: 87px;
+    width: 117px;
+    height: 117px;
+    padding: 15px;
     position: absolute;
     text-align: center;
     display: -webkit-box;
@@ -311,7 +312,8 @@ body {
     z-index: 9;
     background: url(../assets/icon@2x.png) no-repeat;
     animation: stretch 2.25s infinite;
-    background-size: contain;
+    background-size: 87px;
+    background-position: center center;
 }
 @keyframes stretch {
     0% {
