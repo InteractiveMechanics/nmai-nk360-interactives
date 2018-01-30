@@ -39,13 +39,12 @@
             z-index: 10;
         }
         .paper-preview-masthead {
-            page-break-after: avoid;
+            //page-break-after: avoid;
         }
         .paper-preview-article {
             page-break-before: avoid;
-            page-break-after: avoid;
+            page-break-after: auto;
             page-break-inside: auto;
-            max-height: 740px;
             overflow-y: visible;
     
             p {

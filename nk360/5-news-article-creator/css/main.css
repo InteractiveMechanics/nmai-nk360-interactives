@@ -939,19 +939,22 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     */
+    page-break-inside: auto;
     position: relative;
     overflow-x: hidden; }
     #print-preview .paper-preview-article > * {
-      width: 31%;
-      margin-right: 2%;
+      width: 30%;
+      margin-right: 3%;
       display: block;
       float: left;
       vertical-align: top;
-      height: 100%; }
+      height: 100%;
+      page-break-inside: auto;
+      page-break-after: auto; }
     #print-preview .paper-preview-article p:empty {
       display: none; }
     #print-preview .paper-preview-article p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.8;
       text-align: justify;
       word-break: break-word; }
@@ -1091,13 +1094,10 @@ main {
       background: white;
       padding: 0;
       z-index: 10; }
-    #print-preview .paper-preview-masthead {
-      page-break-after: avoid; }
     #print-preview .paper-preview-article {
       page-break-before: avoid;
-      page-break-after: avoid;
+      page-break-after: auto;
       page-break-inside: auto;
-      max-height: 740px;
       overflow-y: visible; }
       #print-preview .paper-preview-article p {
         font-size: 0.7rem;

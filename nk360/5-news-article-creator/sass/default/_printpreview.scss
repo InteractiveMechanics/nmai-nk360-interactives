@@ -178,6 +178,7 @@
         flex-wrap: wrap;
         */
 
+        page-break-inside: auto;
         position: relative;
         //max-height: 1100px;
         overflow-x: hidden;
@@ -187,12 +188,14 @@
         }
 
         > * {
-            width: 31%;
-            margin-right: 2%;
+            width: 30%;
+            margin-right: 3%;
             display: block;
             float: left;
             vertical-align: top;
             height: 100%;
+            page-break-inside: auto;
+            page-break-after: auto;
         }
         > .featured {
             //width: 64%;
@@ -206,7 +209,7 @@
         }
         
         p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.8;
             text-align: justify;
             word-break: break-word;
