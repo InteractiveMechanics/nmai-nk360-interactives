@@ -531,6 +531,7 @@ Annotator = (function() {
               hidePin($(this));
             });
 
+            pin.find('textarea').focus();
             sendGoogleAnalyticsEvent("Markup", "add");
           }
           
@@ -539,6 +540,7 @@ Annotator = (function() {
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 15, top: 35 },
+                cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
                     hidePin($(this));
@@ -571,6 +573,7 @@ Annotator = (function() {
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 10, top: 30 },
+                cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
                     hidePin($(this));
