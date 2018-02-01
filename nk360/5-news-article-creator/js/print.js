@@ -82,7 +82,10 @@ Print = (function() {
         $('.print-preview-container').removeClass('traditional modern');
         $('.print-preview-container').addClass(theme);
         $('.paper-preview-masthead .byline').text(masthead);
+        
+        $('.paper-preview-article').removeClass('featured-image');
         $('.paper-preview-article .article-col').html('');
+        $('.paper-preview-article .featured').remove();
         buildHeadline(headline);
 
         content = article.split('<break>');
@@ -113,7 +116,7 @@ Print = (function() {
                 html += '</figure>';
     
                 if (featured == val.id){
-                    content.unshift(html);
+                    $('.paper-preview-article').addClass('featured-image').prepend(html);
                 } else {
                     content.push(html);
                 }
@@ -136,22 +139,32 @@ Print = (function() {
         });
 
         var contentCount = 0;
-        console.log(content.length);
-        console.log(content);
-
         $.each(content, function(key, val){
-            if (val !== '<p></p>'){
-                if (contentCount < Math.ceil((content.length-1)/3)){
-                    $('.article-col-1').append(val);
-                } else if (contentCount < Math.ceil((content.length-1)/3)*2){
-                    $('.article-col-2').append(val);
-                } else {
-                    $('.article-col-3').append(val);
+            if ($('.paper-preview-article').find('.featured').length > 0){
+                if (val !== '<p></p>'){
+                    if (contentCount < Math.ceil((content.length - 1)/3)){
+                        $('.article-col-2').append(val);
+                    } else if (contentCount < Math.ceil((content.length - 1)/3)*2){
+                        $('.article-col-3').append(val);
+                    } else {
+                        $('.article-col-1').append(val);
+                    }
+                    contentCount++;
                 }
-                contentCount++;
-                console.log(contentCount);
+            } else {
+                if (val !== '<p></p>'){
+                    if (contentCount < Math.ceil((content.length - 1)/3)){
+                        $('.article-col-1').append(val);
+                    } else if (contentCount < Math.ceil((content.length - 1)/3)*2){
+                        $('.article-col-2').append(val);
+                    } else {
+                        $('.article-col-3').append(val);
+                    }
+                    contentCount++;
+                }
             }
         });
+        console.log(content, contentCount);
     }
 
     /**
