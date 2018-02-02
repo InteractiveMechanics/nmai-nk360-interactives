@@ -1,6 +1,6 @@
 {
     "title": "Resource Annotator",
-    "page_title": "Pacific Northwest History and Cultures: Coastal Region",
+    "page_title": "Coastal Region",
     "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for each theme.",
 	"themes": [
 	    {
@@ -53,7 +53,7 @@
 		    "caption": "",
 		    "audio_url": "",
 		    "video_url": "",
-		    "source_type": "Images",
+		    "source_type": "Objects",
 		     "excerpt": "<p>Image 1: Native peoples engineered a variety of tools and techniques to harvest salmon. The hook-and-line method reflects the sustainable practice of taking enough fish for a family or community while leaving healthy, sustainable amounts of fish to spawn and migrate.</p><p>Image 2: A typical problem with certain kinds of modern nets is that they can be far too large and catch many non-commercial fish. This small Quileute set net, however, was made to target specific types and sizes of fish.</p>",
 		    "thumbnail_image": "./assets/imgs/m3a1/med-source-2.jpg",
 		    "question_text": "How do these resources reflect the historical and contemporary importance of salmon fishing to the cultures, communities, and identities of coastal Native Nations?",
@@ -67,15 +67,15 @@
 		    "image_caption": "",
 		    "image_credit": "",
 		    "body": "“We’ve been out on boats all our lives; my dad was a fisherman when he was young; . . . we grew up here on the water, we grew up on boats. It seemed like we were fishing everywhere we went. We’d always throw a hook in the water somewhere, whether it’s in a lake or along the river, or wherever we went.”",
-		    "source": "Ronnie Wilson (Makah), NMAI Interview, July 2016",
-		    "caption": "Ronnie Wilson’s family has fished in the Pacific Ocean for generations. Salmon and other types of fishing define his identity as a <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Makah.mp3'>Makah</span> citizen and maintain the continuity of thousands of years of cultural traditions.",
+		    "source": "<b>Credit: </b>Ronnie Wilson (Makah), NMAI Interview, July 2016",
+		    "caption": "",
 		    "audio_url": "",
 		    "video_url": "",
 		    "source_type": "Quote",
 		    "excerpt": "“We’ve been out on boats all our lives; my dad was a fisherman when he was young; . . . we grew up here on the water, we grew up on boats. It seemed like we were fishing everywhere we went. We’d always throw a hook in the water somewhere, whether it’s in a lake or along the river, or wherever we went.”",
 		    "thumbnail_image": "",
 		    "question_text": "What does Ronnie Wilson’s quote tell you about the significance of fishing to him and his family?",
-		    "resource_caption": ""
+		    "resource_caption": "<b>Caption: </b>Ronnie Wilson’s family has fished in the Pacific Ocean for generations. Salmon and other types of fishing define his identity as a <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Makah.mp3'>Makah</span> citizen and maintain the continuity of thousands of years of cultural traditions."
 		}
 
 	],
