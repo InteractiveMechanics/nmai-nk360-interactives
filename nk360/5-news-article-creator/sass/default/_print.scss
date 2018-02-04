@@ -52,13 +52,23 @@
                 font-size: 0.7rem;
                 line-height: 1.3;
                 text-align: justify;
+
+                @supports (-ms-ime-align: auto) {
+                    font-size: 0.6rem;
+                }
             }
             blockquote {
                 font-size: 0.9rem;
+                page-break-before: avoid;
     
                 p {
                     font-size: 1rem;
                     line-height: 1.3;
+
+                    @supports (-ms-ime-align: auto) {
+                        font-size: 0.8rem;
+                        line-height: 1.2;
+                    }
                 }
                 .blockquote-footer {
                     font-size: 0.7rem;

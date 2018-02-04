@@ -951,16 +951,18 @@ main {
       vertical-align: top;
       page-break-inside: auto;
       page-break-after: auto; }
-    #print-preview .paper-preview-article.featured-image .article-col-1 {
-      height: 0; }
-    #print-preview .paper-preview-article.featured-image .article-col-2 {
-      clear: left; }
+    #print-preview .paper-preview-article.featured-image {
+      overflow-y: visible; }
+      #print-preview .paper-preview-article.featured-image .article-col-1 {
+        height: 0; }
+      #print-preview .paper-preview-article.featured-image .article-col-2 {
+        clear: left; }
     #print-preview .paper-preview-article .featured {
       width: 63%; }
     #print-preview .paper-preview-article p:empty {
       display: none; }
     #print-preview .paper-preview-article p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       line-height: 1.8;
       text-align: justify;
       word-break: break-word; }
@@ -1115,11 +1117,19 @@ main {
         font-size: 0.7rem;
         line-height: 1.3;
         text-align: justify; }
+        @supports (-ms-ime-align: auto) {
+          #print-preview .paper-preview-article p {
+            font-size: 0.6rem; } }
       #print-preview .paper-preview-article blockquote {
-        font-size: 0.9rem; }
+        font-size: 0.9rem;
+        page-break-before: avoid; }
         #print-preview .paper-preview-article blockquote p {
           font-size: 1rem;
           line-height: 1.3; }
+          @supports (-ms-ime-align: auto) {
+            #print-preview .paper-preview-article blockquote p {
+              font-size: 0.8rem;
+              line-height: 1.2; } }
         #print-preview .paper-preview-article blockquote .blockquote-footer {
           font-size: 0.7rem;
           line-height: 1.4; }
