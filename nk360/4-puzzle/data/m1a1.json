@@ -19,7 +19,7 @@
             "IntroCredit": "Photograph by Edward S. Curtis, courtesy of the Library of Congress, 89707042",
             "IntroPrompt": "Twelve cards show selected sources from the inquiry. Match each source to its corresponding theme and reveal an iconic image.",
             "IntroImage": "./assets/imgs/m1a1/intro-card-image.jpg",
-            "FullIntroImage": "../assets/imgs/m1a1/full-intro-card-image.jpg", 
+            "FullIntroImage": "./assets/imgs/m1a1/full-intro-card-image.jpg", 
             "LearningPoints": "Diversity exists among Native Nations of the Northern Great Plains; however, shared values such as belonging to the land, caring for your community, and exercising responsibilities to your nation are expressed in unique ways among nations.",
             "LearningPointsPrompt": "Now you are ready to begin constructing an argument that addresses the compelling question. Go back and select sources from the inquiry that best support your argument.",
             "Download": "",
@@ -86,7 +86,7 @@
                     "caption": "",
                     "body": "“Well, I think the connection for my generation and my father's generation is the connection to the land . . . this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong. My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”",
                     "credit": "Marilyn Hudson, Three Affiliated Tribes of Fort Berthold. NMAI Interview",
-                    "incorrect": "Try again. Think about how the authors describe He Sapa (the Black Hills) and why that is significant.",
+                    "incorrect": "Try again. Think about the relationship that Marilyn Hudson describes in this quote.",
                     "themes": [1]
                 },
                 {
@@ -109,7 +109,7 @@
                     "fullimage": "",
                     "caption": "Caption for Card 6",
                     "body": " “Clan uncle? His responsibility is to help his clan nephew physically and spiritually, mostly spiritually—that he will live a long life. Be prosperous. Be a good warrior and have all the things that he needs to survive on this earth.”",
-                    "credit": "Grant Bull Tail (Crow), NMAI Interview, 2016",
+                    "credit": "Grant Bulltail (Crow), NMAI Interview, 2016",
                     "incorrect": "Try again. According to this quote, what is the significance of the relationship between a Crow clan uncle and his nephew?",
                     "themes": [2]
                 },
@@ -133,7 +133,7 @@
                     "fullimage": "",
                     "caption": "",
                     "body": "The Hidatsa people . . . maintain their clan system, so anybody in that clan . . . you would be a brother or a sister. . . and that always followed your mother [mother’s side of the family].”",
-                    "credit": "Credit for Card 8",
+                    "credit": "Loren Yellow Bird (Hidatsa and Arikara) Three Affiliated Tribes of Fort Berthold, ND. NMAI Interview 2016",
                     "incorrect": "Try again. Why would it be important to the Hidatsa to maintain a system in which roles of brothers and sisters are valued?",
                     "themes": [2]
                 },

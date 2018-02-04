@@ -75,7 +75,6 @@ module.exports = function(grunt) {
     grunt.loadTasks('../node_modules/grunt-contrib-jshint/tasks');
 
     grunt.loadTasks('../node_modules/grunt-contrib-copy/tasks');
-    grunt.loadTasks('../node_modules/grunt-contrib-symlink/tasks');
     grunt.loadTasks('../node_modules/grunt-processhtml/tasks');
     grunt.loadTasks('../node_modules/grunt-contrib-uglify/tasks');
     
