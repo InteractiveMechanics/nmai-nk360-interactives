@@ -319,6 +319,9 @@ span[data-toggle="tooltip"] {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
+html {
+  touch-action: manipulation; }
+
 body .image-credit {
   color: #888;
   margin: 10px 0;

@@ -1,3 +1,7 @@
+html {
+    touch-action: manipulation;
+}
+
 body {
     font-size: 1rem;
     @media screen and ($screen-ltxl) {
@@ -754,7 +758,7 @@ small,
     width: 35px;
 }
 .marker-in-text .delete-btn {
-    width: 35px;
+    width: 40px;
     height: 52px;
     display: block !important;
     background-image: url('../assets/icon-trash.svg');
@@ -778,7 +782,7 @@ small,
     }
 }
 .marker-in-text .close-btn {
-    width: 35px;
+    width: 40px;
     height: 52px;
     display: block !important;
     background-image: url('../assets/icon-close.svg');

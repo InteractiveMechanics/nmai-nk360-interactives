@@ -319,6 +319,9 @@ span[data-toggle="tooltip"] {
     cursor: pointer;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75)); }
 
+html {
+  touch-action: manipulation; }
+
 body {
   font-size: 1rem; }
   @media screen and (max-width: 1439px) {
@@ -944,7 +947,7 @@ small,
   width: 35px; }
 
 .marker-in-text .delete-btn {
-  width: 35px;
+  width: 40px;
   height: 52px;
   display: block !important;
   background-image: url("../assets/icon-trash.svg");
@@ -965,7 +968,7 @@ small,
     font-size: 0.8rem; }
 
 .marker-in-text .close-btn {
-  width: 35px;
+  width: 40px;
   height: 52px;
   display: block !important;
   background-image: url("../assets/icon-close.svg");

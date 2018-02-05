@@ -1,0 +1,87 @@
+{
+    "title": "Resource Annotator",
+    "page_title": "Colunbia River Region",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for each theme.",
+	"themes": [
+	    {
+	    	"title": "Identity",
+	    	"tooltip_text": "The qualities and beliefs of an individual.",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    },
+	    {
+	    	"title": "Culture",
+	    	"tooltip_text": "Shared beliefs, traditions, and practices of a group.",
+	    	"count": 5,
+			"highlight_color": "#0000FF"
+	    },
+	    {
+	    	"title": "Community",
+	    	"tooltip_text": "A feeling of wanting to be with other people or of caring about the other people in a group.",
+	    	"count": 5,
+			"highlight_color": "#0000FF"
+	    }
+    ],
+
+	"sources": [
+		{
+			"id": 1,
+		    "title": "Celilo Falls",
+		    "image_url": "./assets/imgs/m3a3/full-source-1.jpg",
+		    "image_caption": "",
+		    "image_credit": "<p>Image 1: Indians fishing at Celilo Falls, ca. 1900. NMAI P23273</p><p>Image 2: Photograph by Jonathan Modie, 2007, courtesy of the Columbia River Intertribal Fish Commission</p>",
+		    "body": "<p>Image 1: <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Celilo.mp3'>Celilo</span> means “echo of water on rocks” in the <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Sahaptin.mp3'>Sahaptin</span> language. At the falls, fish were so abundant that people said you could walk across the river on their backs. Many Native Nations, travelling from as far away as the Dakotas, Alaska, and Northern California, gathered at Celilo Falls to trade goods and fish.</p><p>Image 2: Leonard Dave, of the Yakama Nation fishes on the <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Klickitat.mp3'>Klickitat</span>, a <span data-toggle='tooltip' title='A river or stream flowing into a larger river or lake.'>tributary</span> of the Columbia River. The Klickitat, a tributary of the Columbia River, is one of the few places in Washington State where Yakama tribal members still fish for salmon with <span data-toggle='tooltip' title='A small fishing net with a long handle.'>dip nets</span> on platforms.</p>",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Images",
+		    "excerpt": "<p>Image 1: Celilo means “echo of water on rocks” in the Sahaptin language. At the falls, fish were so abundant that people said you could walk across the river on their backs. Many Native Nations, travelling from as far away as the Dakotas, Alaska, and Northern California, gathered at Celilo Falls to trade goods and fish.</p><p>Image 2: Leonard Dave, of the Yakama Nation fishes on the Klickitat, a tributary of the Columbia River. The Klickitat, a tributary of the Columbia River, is one of the few places in Washington State where Yakama tribal members still fish for salmon with dip nets on platforms.</p>",
+		    "thumbnail_image": "./assets/imgs/m3a3/med-source-1.jpg",
+		    "question_text": "Discuss the significance of Celilo Falls to the Native Nations of the Pacific Northwest. What must Celilo have been like to draw so many people from so far away?",
+			"resource_caption": ""
+		},
+
+		{
+			"id": 2,
+		    "title": "Fishing",
+		    "image_url": "./assets/imgs/m3a3/full-source-2.jpg",
+		    "image_caption": "",
+		    "image_credit": "<p>Tutuni (Confederated Tribes of <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Siletz.mp3'>Siletz</span>) fish trap, 1900–1910. Siletz Reservation, Oregon. NMAI 047528</p>",
+		    "body": "<p><span data-toggle='tooltip' title='Fishing nets that are anchored at the bottom of a body of water.'>Set nets</span> like this one were used to catch salmon. When salmon swim through the hoop, they are trapped in the net.</p>",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Object",
+		    "excerpt": "<p>Set nets like this one were used to catch salmon. When salmon swim through the hoop, they are trapped in the net.</p>",
+		    "thumbnail_image": "./assets/imgs/m3a3/med-source-2.jpg",
+		    "question_text": "What does the design of set nets indicate about traditional Native knowledge of fish characteristics and behaviors?",
+			"resource_caption": ""
+		},
+
+		{
+			"id": 3,
+		    "title": "Michael Marchand",
+		    "image_url": "",
+		    "image_caption": "",
+		    "image_credit": "",
+		    "body": "“Salmon has always been essential to our life. We all had jobs to do and most of them centered around salmon. . . . [Salmon] provided everything they needed to live. . . . All their religion and food was salmon. It was the basis for everything.”",
+		    "source": "<b>Credit: </b>Michael Marchand (Confederated Tribes of Colville Reservation), NMAI Interview, July 2016",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Quote",
+		    "excerpt": "“Salmon has always been essential to our life. We all had jobs to do and most of them centered around salmon. . . . [Salmon] provided everything they needed to live. . . . All their religion and food was salmon. It was the basis for everything.”",
+		    "thumbnail_image": "",
+		    "question_text": "What does Michael Marchand mean when he says, “Salmon has always been essential to our life”?",
+			"resource_caption": "<b>Caption: </b>Michael Marchand is an enrolled member of the Confederated Tribes of the <span data-pronounce='/nk360/shared/lib/im/audio/PNW_Colville.mp3'>Colville</span> Reservation. He and his family have fished along the Columbia River for generations."
+		}
+
+	],
+    "returnTo": {
+        "title": "Pacific Northwest Culture Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian.<br>Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+}

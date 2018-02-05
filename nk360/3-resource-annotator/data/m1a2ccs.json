@@ -1,0 +1,122 @@
+{
+    "title": "Resource Annotator",
+    "page_title": "Crow Nation",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for the theme.",
+	"themes": [
+	    {
+	    	"title": "Relationships-Land",
+	    	"tooltip_text": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful).",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    }
+    ],
+	"sources": [
+		{
+			"id": 1,
+		    "title": "Pryor Mountains",
+		    "image_url": "./assets/imgs/m1a2ccs/full-source-1.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>Looking at the Pryor Mountains from Deaver, Wyoming</i>, January 1, 2006. Photograph by Betty Jo Tindle. [CC BY-SA 3.0]",
+		    "body": "“All the mountain ranges in the territory of the Apsáalooke (<span data-pronounce='/nk360/shared/lib/im/audio/PL_Crow.mp3'>Crow</span>) Nation are sacred because that is where First Maker travels as he watches his creation.” —Letter to Custer National Forest from George Reed, former Chairman of Crow Cultural Committee,  2007.<br />http://www.pryormountains.org/wp-content/uploads/2012/05/George-Reed-Ltr.pdf",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "“All the mountain ranges in the territory of the Apsáalooke (Crow) Nation are sacred because that is where First Maker travels as he watches his creation.” —Letter to Custer National Forest from George Reed, former Chairman of Crow Cultural Committee,  2007. <br />http://www.pryormountains.org/wp-content/uploads/2012/05/George-Reed-Ltr.pdf",
+		    "thumbnail_image": "./assets/imgs/m1a2ccs/med-source-1.jpg",
+		    "question_text": "Describe several qualities about a place that could make it feel holy or sacred.",
+			"resource_caption": ""
+		},
+		{
+			"id": 2,
+		    "title": "Yellowstone River",
+		    "image_url": "./assets/imgs/m1a2ccs/full-source-2.jpg",
+		    "image_caption": "",
+		    "image_credit": "<em>Yellowstone River near Livingston, Montana</em>, August 2016. Photograph by Bill Campbell, courtesy of © Bill Campbell.",
+		    "body": "The Yellowstone River and its nearby lands are important to the history and culture of the Crow people. The Crow still remember the places where important events occurred long ago and where sacred sites are located along the river.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "The Yellowstone River and its nearby lands are important to the history and culture of the Crow people. The Crow still remember the places where important events occurred long ago and where sacred sites are located along the river.",
+		    "thumbnail_image": "./assets/imgs/m1a2ccs/med-source-2.jpg",
+		    "question_text": "What resources would a river like the Yellowstone provide?",
+			"resource_caption": ""
+		},
+		{
+			"id": 3,
+		    "title": "Tipi Rings",
+		    "image_url": "./assets/imgs/m1a2ccs/full-source-3.jpg",
+		    "image_caption": "<em>Tipi Rings in Bighorn Mountains</em>, Photographs by Peter de Lory, Courtesy of Peter de Lory © peterdelory.com",
+		    "image_credit": "Peter Nabokov, ed., <em>Two Leggings: The Making of a Crow Warrior</em> (Lincoln: University of Nebraska Press, 1967.)",
+		    "body": "The Four Tipi Poles of the Crow Nation “I have but one tipi. It has but four poles. It is held to the ground by big rocks. My east lodge pole touches the ground at the Black Hills, my south, the ground at the headwaters of the Wind River, my west, the snow capped Absaroke and <span data-pronounce='/nk360/shared/lib/im/audio/PL_Beartooth.mp3'>Beartooth</span> Ranges, the north lodge pole resting on the <span data-pronounce='/nk360/shared/lib/im/audio/PL_Bearpaw.mp3'>Bearpaw</span> Mountains.” —Two Leggings, Crow",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "The Four Tipi Poles of the Crow Nation “I have but one tipi. It has but four poles. It is held to the ground by big rocks. My east lodge pole touches the ground at the Black Hills, my south, the ground at the headwaters of the Wind River, my west, the snow capped Absaroke and Beartooth Ranges, the north lodge pole resting on the Bearpaw Mountains.” —Two Leggings, Crow",
+		    "thumbnail_image": "./assets/imgs/m1a2ccs/med-source-3.jpg",
+		    "question_text": "Can you find the geographic features that Two Leggings mentions on a map? What cultural object does Two Leggings use to describe the range of historical Crow lands? What is important about the use of that object?",
+			"resource_caption": ""
+		},
+		{
+			"id": 4,
+		    "title": "Headdress",
+		    "image_url": "./assets/imgs/m1a2ccs/full-source-4.jpg",
+		    "image_caption": "",
+		    "image_credit": "<em>Crow men wearing feather headdresses in parade formation.</em> NMAI P22474",
+		    "body": "The <span data-pronounce='/nk360/shared/lib/im/audio/PL_Crow.mp3'>Crow</span> Nation was famous for having some of the largest horse herds on the northern Great Plains. Crow artists created elaborate horse <span data-toggle='tooltip' title='Cultural dress, often worn during ceremonies.'>regalia</span> to honor horses. Mounted parades, such as the one here, were an important part of fairs, rodeos, and other events where the Crow and other Northern Great Plains Nations could proclaim their identity.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Images",
+		    "excerpt": "The Crow Nation was famous for having some of the largest horse herds on the northern Great Plains. Crow artists created elaborate horse regalia to honor horses. Mounted parades, such as the one here, were an important part of fairs, rodeos, and other events where the Crow and other Northern Great Plains Nations could proclaim their identity.",
+		    "thumbnail_image": "./assets/imgs/m1a2ccs/med-source-4.jpg",
+		    "question_text": "Why do you think the Crow people found it important to honor their horses?",
+			"resource_caption": ""
+		},
+		{
+			"id": 5,
+		    "title": "Miss Tiny Tot",
+		    "image_url": "./assets/imgs/m1a2ccs/full-source-5.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>Miss Tiny Tot Crow Nation at the Crow Nation opening parade</i>, 2014. Photograph by Emil Her Many Horses, NMAI",
+		    "body": "Every August, the <span data-pronounce='/nk360/shared/lib/im/audio/PL_Crow.mp3'>Crow</span> Nation hosts the Crow Fair on their lands in Montana. It is one of the largest Native gatherings in the country and attracts more than 50,000 participants and spectators from around the world. The fair opens with a parade, in which participants dress themselves and their horses in elaborate regalia that reflects their culture and their homelands.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Images",
+		    "excerpt": "Every August, the Crow Nation hosts the Crow Fair on their lands in Montana. It is one of the largest Native gatherings in the country and attracts more than 50,000 participants and spectators from around the world. The fair opens with a parade, in which participants dress themselves and their horses in elaborate regalia that reflects their culture and their homelands.",
+		    "thumbnail_image": "./assets/imgs/m1a2ccs/med-source-5.jpg",
+		    "question_text": "How do the activities of the Crow Fair reflect the continuity of Crow culture and the ongoing relationship to homelands?",
+			"resource_caption": ""
+		},
+		{
+			"id": 6,
+		    "title": "Michael Marchand",
+		    "image_url": "",
+		    "image_caption": "",
+		    "image_credit": "",
+		    "body": "“The Crow country is in exactly the right place. It has snowy mountains, sunny plains, all kinds of climates and good things for every season. When the summer heat scorches the prairies you can draw up under the mountains where the air is sweet and cool, the grass fresh, and the bright streams come tumbling out of the snow banks. There you can hunt the elk, the deer, and the antelope when their skins are fit for dressing. There you will find plenty of white bears and mountain sheep. In the autumn, when your horses are strong and fat from the mountain pastures, you can go down into the plains and hunt the buffalo or trap beaver in the streams. And when winter comes on you can take shelter in the woody bottoms along the rivers.  There you will find buffalo meat for yourselves and cottonwood bark for your horses. Or you may winter in the Wind River valley where there is salt weed in abundance. The Crow country is exactly at the right place. Everything good is to be found there. There is no country like the Crow country.”",
+		    "source": "<b>Credit: </b>Crow Chief Eelápuash Speech to Rocky Mountain Fur Company",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Quote",
+		    "excerpt": "“The Crow country is in exactly the right place. It has snowy mountains, sunny plains, all kinds of climates and good things for every season. When the summer heat scorches the prairies you can draw up under the mountains where the air is sweet and cool, the grass fresh, and the bright streams come tumbling out of the snow banks. There you can hunt the elk, the deer, and the antelope when their skins are fit for dressing. There you will find plenty of white bears and mountain sheep. In the autumn, when your horses are strong and fat from the mountain pastures, you can go down into the plains and hunt the buffalo or trap beaver in the streams. And when winter comes on you can take shelter in the woody bottoms along the rivers.  There you will find buffalo meat for yourselves and cottonwood bark for your horses. Or you may winter in the Wind River valley where there is salt weed in abundance. The Crow country is exactly at the right place. Everything good is to be found there. There is no country like the Crow country.”",
+		    "thumbnail_image": "",
+		    "question_text": "<p>Can you identify and describe a place that feels like it is “in exactly the right place”? What makes that place special to you?</p><p>How might this Crow leader respond to another Native Nation competing for the homeland he describes? What do you believe is worth fighting for?</p>",
+			"resource_caption": "<b>Caption: </b>Washington Irving, “Account of the country as rendered by Arapooish, a Crow chief, to Mr. Robert Campbell, of the Rocky Mountain Fur Company.” In <i>The Adventures of Captain Bonneville, U.S.A. in the Rocky Mountains and Far West</i> (New York: G. P. Putnam and Son, 1868)."
+		}
+	],
+    "returnTo": {
+        "title": "Northern Plains Culture Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian.<br>Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+}

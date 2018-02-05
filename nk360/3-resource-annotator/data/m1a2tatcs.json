@@ -1,0 +1,122 @@
+{
+    "title": "Resource Annotator",
+    "page_title": "Three Affiliated Tribes Region",
+    "introduction": "Use the annotator tool to mark up each source and caption. You can use up to five pins for the theme.",
+	"themes": [
+	    {
+	    	"title": "Relationships-Land",
+	    	"tooltip_text": "Native Nations of the Northern Great Plains have reciprocal relationships with the land. These relationships can be physical (how the land provides for you), emotional (memories you associate with a place), or spiritual (respectful).",
+	    	"count": 5,
+			"highlight_color": "#FF0000"
+	    }
+    ],
+	"sources": [
+		{
+			"id": 1,
+		    "title": "Missouri River",
+		    "image_url": "./assets/imgs/m1a2tatcs/full-resource-1.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>The curving little Missouri River under blue skies at Theodore Roosevelt National Park, North Dakota.</i> Photograph courtesy of  https://www.goodfreephotos.com/ ",
+		    "body": "The Missouri River banks provided fertile soil for gardens and the river itself offered a means of transportation.",
+		    "source": "<b>Credit: </b>Craig Howe, Lydia Whirlwind Soldier, and Lanniko L. Lee, eds., <i>He Sapa Woihanble: Black Hills Dreams</i> (St. Paul: Living Justice Press, 2011) 4",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "The Missouri River banks provided fertile soil for gardens and the river itself offered a means of transportation.",
+		    "thumbnail_image": "./assets/imgs/m1a2tatcs/med-source-1.jpg",
+		    "question_text": "In what ways would living on the Missouri River impact the quality of life for the Mandan, Hidatsa, and Arikara?",
+			"resource_caption": ""
+		},
+		{
+			"id": 2,
+		    "title": "Hidatsa Village",
+		    "image_url": "./assets/imgs/m1a2tatcs/full-source-2.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>Hidatsa Village, Earth-covered Lodges, on the Knife River</i>, 1832. Painting by George Catlin, courtesy of  Smithsonian American Art Museum, 1985.66.383",
+		    "body": "“Our people lived along the river. And when you came into an <span data-pronounce='/nk360/shared/lib/im/audio/PL_Arikara.mp3'>Arikara</span> village, what you would see is many of the earth lodges facing the center. And in the center of that village, you would see a big lodge, which was our medicine lodge.”",
+		    "source": "<b>Credit: </b>Loren Yellow Bird, Hidatsa and Arikara, Three Affiliated Tribes of Fort Berthold, ND. NMAI Interview, August 2016 ",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "“Our people lived along the river. And when you came into an Arikara village, what you would see is many of the earth lodges facing the center. And in the center of that village, you would see a big lodge, which was our medicine lodge.”",
+		    "thumbnail_image": "./assets/imgs/m1a2tatcs/med-source-2.jpg",
+		    "question_text": "<p>Earth lodges were a more long-lasting type of housing than the tipis of other northern Great Plains cultures.</p><p>How was the earth lodge a source of shelter and ceremony for the Mandan, Hidatsa, and Arikara?</p>",
+			"resource_caption": ""
+		},
+		{
+			"id": 3,
+		    "title": "Marilyn Hudson",
+		    "image_url": "",
+		    "image_caption": "",
+		    "image_credit": "",
+		    "body": "<p>“Well, I think the connection for my generation and my father's generation is the connection to the land...this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong.</p><p>My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”</p>",
+		    "source": "<b>Credit: </b>Marilyn Hudson, Three Affiliated Tribes of Fort Berthold. NMAI Interview",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Quote",
+		    "excerpt": "<p>“Well, I think the connection for my generation and my father's generation is the connection to the land...this is what sustains us, this is what provides for us. This is what makes us alive. So the connection between the person and the land was extremely strong.</p><p>My father owned 160 acres of farmland close to the river. And that's where we were raised and they had this great, great attachment to it because it nourished them.”</p>",
+		    "thumbnail_image": "",
+		    "question_text": "Compare how Marilyn describes her connection to the land with the relationship you have with important places. What is similar? What is different?",
+			"resource_caption": "<b>Caption: </b>Marilyn Hudson (<span data-pronounce='/nk360/shared/lib/im/audio/PL_Mandan.mp3'>Mandan</span> and <span data-pronounce='/nk360/shared/lib/im/audio/PL_Hidatsa.mp3'>Hidatsa</span>) of the Three Affiliated Tribes of Fort Berthold, North Dakota, reflects on her family’s land."
+		},
+		{
+			"id": 4,
+		    "title": "Hidatsa earth lodge",
+		    "image_url": "./assets/imgs/m1a2tatcs/full-source-4.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>Model of a Hidatsa earth lodge built in 1995 at the Knife River Indian Villages National Park, North Dakota</i>. Photo credited to National Park Service",
+		    "body": " “We thought an earth lodge was alive and had a spirit like a human body, and that its front was like a face, with the door for a mouth.”",
+		    "source": "<b>Credit: </b><i>The Way to Independence: Memories of a Hidatsa Indian Family, 1840-1920</i>, Minnesota Historical Society Press, 1987, p 13.",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": " “We thought an earth lodge was alive and had a spirit like a human body, and that its front was like a face, with the door for a mouth.”",
+		    "thumbnail_image": "./assets/imgs/m1a2tatcs/med-source-4.jpg",
+		    "question_text": "<p>Earth lodges were a more long-lasting type of housing than the tipis of other northern Great Plains cultures.</p><p>How was the earth lodge a source of shelter and ceremony for the Mandan, Hidatsa, and Arikara?</p>",
+			"resource_caption": ""
+		},
+		{
+			"id": 5,
+		    "title": "Women braiding corn",
+		    "image_url": "./assets/imgs/m1a2tatcs/full-source-5.jpg",
+		    "image_caption": "",
+		    "image_credit": "<i>Women braiding corn for drying in Maxidiwiac's (Buffalo Bird Woman) garden</i>, 1909. Photograph by Gilbert Wilson",
+		    "body": "People of the Three Affiliated Tribes belonged to their abundant farm lands. Dark and nutrient rich soil and access to plenty of water allowed <span data-pronounce='/nk360/shared/lib/im/audio/PL_Mandan.mp3'>Mandan</span>, <span data-pronounce='/nk360/shared/lib/im/audio/PL_Hidatsa.mp3'>Hidatsa</span>, and <span data-pronounce='/nk360/shared/lib/im/audio/PL_Arikara.mp3'>Arikara</span> farmers to successfully raise corn, beans, sunflowers, tobacco, pumpkins, and squash. Their fields were cultivated using rakes made from deer antlers and hoes made of bison or elk shoulder bones. Gardeners sang special songs, such as “The Corn is My Pleasure,” and completed other cultural protocols to encourage the growth and health of their crops. Boys had the job of keeping birds away from the precious foods and seeds. Surplus crops were stored in underground pits so they could be used later or traded to other tribes.",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "People of the Three Affiliated Tribes belonged to their abundant farm lands. Dark and nutrient rich soil and access to plenty of water allowed Mandan, Hidatsa, and Arikara farmers to successfully raise corn, beans, sunflowers, tobacco, pumpkins, and squash. Their fields were cultivated using rakes made from deer antlers and hoes made of bison or elk shoulder bones. Gardeners sang special songs, such as “The Corn is My Pleasure,” and completed other cultural protocols to encourage the growth and health of their crops. Boys had the job of keeping birds away from the precious foods and seeds. Surplus crops were stored in underground pits so they could be used later or traded to other tribes.",
+		    "thumbnail_image": "./assets/imgs/m1a2tatcs/med-source-5.jpg",
+		    "question_text": "Can you think of any activity that is more closely connected to the land than farming?",
+			"resource_caption": ""
+		},
+		{
+			"id": 6,
+		    "title": "Garden project",
+		    "image_url": "./assets/imgs/m1a2tatcs/full-source-6.jpg",
+		    "image_caption": "",
+		    "image_credit": "Photograph courtesy of Bernadine Young Bird, Hidatsa.",
+		    "body": "<p>“My garden project is called Arugadi da Maaguc—Returning to Our Gardens.  I used the traditional Hidatsa gardening style as described by Buffalo Bird Woman a Hidatsa woman.  We began planting in April with the sunflowers and adding beans, squash and corn the following month.  The garden was planted on a one naxxu or one Indian acre which measured out to be 9 rows four feet apart. Corn was planted first, beans in between the corn rows and the squash on around the corn rows. The garden was beautiful and very bountiful.</p><p>The creator gave us a wonderful garden . . . The people of the Nueta, Hidatsa and Sahnish are very resilient and persistent . . . On one of our Earth Lodge Village walls located east of the Hidatsa traditional garden you see the words, “ We are still here.” and so we are.”</p>",
+		    "source": "",
+		    "caption": "",
+		    "audio_url": "",
+		    "video_url": "",
+		    "source_type": "Image",
+		    "excerpt": "<p>“My garden project is called Arugadi da Maaguc—Returning to Our Gardens.  I used the traditional Hidatsa gardening style as described by Buffalo Bird Woman a Hidatsa woman.  We began planting in April with the sunflowers and adding beans, squash and corn the following month.  The garden was planted on a one naxxu or one Indian acre which measured out to be 9 rows four feet apart. Corn was planted first, beans in between the corn rows and the squash on around the corn rows. The garden was beautiful and very bountiful.</p><p>The creator gave us a wonderful garden . . . The people of the Nueta, Hidatsa and Sahnish are very resilient and persistent . . . On one of our Earth Lodge Village walls located east of the Hidatsa traditional garden you see the words, “ We are still here.” and so we are.”</p>",
+		    "thumbnail_image": "./assets/imgs/m1a2tatcs/med-source-6.jpg",
+		    "question_text": "Why might different generations gather together to learn about traditional ways of growing fruits and vegetables?",
+			"resource_caption": ""
+		}
+	],
+    "returnTo": {
+        "title": "Northern Plains Culture Lesson",
+        "url": "http://nmai.si.edu/nk360"
+    },
+    "credits": "Created by the National Museum of the American Indian.<br>Designed and developed by <a href=\"http://www.interactivemechanics.com\" target=\"_blank\">Interactive Mechanics</a>."
+}
