@@ -337,9 +337,11 @@ Annotator = (function() {
 
       // Adapt position of the pins on window resize
       $(window).resize(function() {
-        $('.marker-in-text').each(function() {
-          findPinPosition($(this));
-        })
+        if (!$('body').hasClass('browser-android')) {
+            $('.marker-in-text').each(function() {
+              findPinPosition($(this));
+            });
+        }
       });
 
       setupPrintLayout();
