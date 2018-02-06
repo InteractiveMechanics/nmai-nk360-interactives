@@ -144,6 +144,10 @@ small,
         height: 68vh;
         width: 86%;
     }
+    @media screen and ($screen-sm) and ($screen-landscape) {
+        width: 86%;
+        margin-top: 0;
+    }
     @media screen and ($screen-sm) and ($screen-portrait) {
         height: 68vh;
         width: 86%;
@@ -404,13 +408,29 @@ small,
 	left:0;
     transition: 0.5s all;
 
+    @media screen and ($screen-xs) {
+        bottom: 50px;
+    }
+    @media screen and ($screen-xxs) {
+        bottom: 48px;
+    }
+
     &.display-mobile-markers {
         transform: translateY(115px);
     }
     
     .browser-android &.display-mobile-markers {
-        @media screen and ($screen-landscape) {
-            transform: translateY(140px) !important;
+        @media screen and ($screen-sm) and ($screen-portrait) {
+            transform: translateY(135px) !important;
+        }
+        @media screen and ($screen-sm) and ($screen-landscape) {
+            transform: translateY(200px) !important;
+        }
+        @media screen and ($screen-xs) and ($screen-landscape) {
+            transform: translateY(125px) !important;
+        }
+        @media screen and ($screen-xxs) and ($screen-landscape) {
+            transform: translateY(200px) !important;
         }
     }
 
@@ -424,7 +444,7 @@ small,
         text-decoration: none;
     }
 
-    @media screen and ($screen-xs) and ($screen-portrait) {
+    @media screen and ($screen-xs) {
         padding: 15px 15px 0;
 
         ul {
@@ -437,7 +457,7 @@ small,
         margin: 0 10px !important;
         text-align: center;
 
-        @media screen and ($screen-xs) and ($screen-portrait) {
+        @media screen and ($screen-xs) {
             margin: 0 5px !important;
         }
         
@@ -451,6 +471,9 @@ small,
             
             @media screen and ($screen-xs) and ($screen-portrait) {
                 font-size: 0.8rem;
+            }
+            @media screen and ($screen-xxs) {
+                font-size: 0.7rem;
             }
         }
     }
@@ -469,6 +492,15 @@ small,
     @media screen and ($screen-xs) and ($screen-landscape) {
         width: 100%;
     }
+    @media screen and ($screen-xxs) {
+        margin-top: 60px;
+    }
+
+    .browser-android & {
+        @media screen and ($screen-xs) and ($screen-portrait) {
+            margin-top: 0;
+        }
+    }
 
     .half-menu {
         width: 49.5%;
@@ -483,6 +515,10 @@ small,
 
         @media screen and ($screen-xs) and ($screen-landscape) {
 
+        }
+        @media screen and ($screen-xxs) {
+            width: 49%;
+            font-size: 0.7rem;
         }
 
         a {
@@ -713,6 +749,10 @@ small,
         @media screen and ($screen-xs) and ($screen-landscape) {
             top: 75px;
         }
+        @media screen and ($screen-xxs) {
+            top: 50px;
+            z-index: 999999999;
+        }
     }
 }
 .marker-in-text.visible {
@@ -862,7 +902,13 @@ small,
     padding: 10px;
     padding-top: 0;
 
+    @media screen and ($screen-sm) {
+        display: none !important;
+    }
     @media screen and ($screen-xs) {
+        display: none !important;
+    }
+    @media screen and ($screen-xxs) {
         display: none !important;
     }
     @media screen and ($screen-ltlg) {

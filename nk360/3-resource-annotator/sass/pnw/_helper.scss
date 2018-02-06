@@ -20,6 +20,7 @@ body {
     h2 {
         @media screen and ($screen-xs) and ($screen-portrait) {
             max-width: 90%;
+            margin: 0 auto;
         }
     }
 }
