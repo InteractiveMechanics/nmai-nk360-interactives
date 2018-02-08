@@ -93,7 +93,7 @@ Game = (function() {
 
         $('body').on('keypress', '.fish-row .col', selectSalmonEnter);
         $('body').on('keypress', '#close-select-fish', hideSelectSalmonEnter);
-        $('body').on('keypress', '#close-congrats-screen', closeCongratsScreen);
+        $('body').on('keypress', '#close-congrats-screen', closeCongratsScreenEnter);
         $('body').on('keypress', '.close-icon', closePopupEnter);
         
         
@@ -457,6 +457,12 @@ Game = (function() {
       * Shows the game complete victory slider when the user clears the victory modal at the end of the game
     */
     var closeCongratsScreen = function() {
+      $('#congrats-instructions').removeClass('show').addClass('hidden');
+
+      showVictorySlider();
+    }
+
+    var closeCongratsScreenEnter = function(e) {
       if(e.keyCode != 13) {
         return;
       }
