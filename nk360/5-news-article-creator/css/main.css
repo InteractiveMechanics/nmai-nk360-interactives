@@ -2,7 +2,7 @@
  * This file loads all Sass files to be compiled by Grunt.
  * Include each file for this specific instance.
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:300,700");
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.85);
@@ -76,6 +76,10 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   font-size: 0.7rem;
   padding: 11px; }
+  @media screen and (max-width: 480px) {
+    footer {
+      font-size: 0.6rem;
+      height: 48px; } }
   footer.transparent {
     background: transparent; }
   footer img {
@@ -876,9 +880,11 @@ main {
       #print-preview .print-preview-container.traditional figure figcaption em {
         font-family: 'Times New Roman', serif; }
     #print-preview .print-preview-container.modern .paper-preview-headline {
-      font-family: 'Open Sans Condensed', 'Impact';
+      font-family: 'Open Sans Condensed', Impact;
       font-weight: bold;
       line-height: 0.9; }
+      #print-preview .print-preview-container.modern .paper-preview-headline.large {
+        line-height: 1.2; }
     #print-preview .print-preview-container.modern .paper-preview-masthead {
       font-family: 'Open Sans', serif; }
     #print-preview .print-preview-container.modern .paper-preview-date,
@@ -957,8 +963,6 @@ main {
         height: 0; }
       #print-preview .paper-preview-article.featured-image .article-col-2 {
         clear: left; }
-    #print-preview .paper-preview-article .featured {
-      width: 63%; }
     #print-preview .paper-preview-article p:empty {
       display: none; }
     #print-preview .paper-preview-article p {
@@ -988,7 +992,7 @@ main {
       text-align: center;
       background: #f1f2f2; }
       #print-preview .paper-preview-article figure .image-wrapper img {
-        max-height: 400px;
+        max-height: 300px;
         max-width: 100%; }
     #print-preview .paper-preview-article figure figcaption {
       font-size: 0.8rem;
@@ -1020,11 +1024,11 @@ main {
 
 @supports (-ms-ime-align: auto) {
   .print-preview-container.modern .paper-preview-headline {
-    font-family: 'Impact' !important;
+    font-family: Impact !important;
     font-weight: normal !important; } }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .print-preview-container.modern .paper-preview-headline {
-    font-family: 'Impact' !important;
+    font-family: Impact !important;
     font-weight: normal !important; } }
 .form-control {
   padding: 1rem 1.25rem;

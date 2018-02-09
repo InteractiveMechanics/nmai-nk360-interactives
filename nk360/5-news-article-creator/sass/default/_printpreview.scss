@@ -90,9 +90,13 @@
         }
         &.modern {
             .paper-preview-headline {
-                font-family: 'Open Sans Condensed', 'Impact';
+                font-family: 'Open Sans Condensed', Impact;
                 font-weight: bold;
                 line-height: 0.9;
+
+                &.large {
+                    line-height: 1.2;
+                }
             }
             .paper-preview-masthead {
                 font-family: 'Open Sans', serif;
@@ -211,8 +215,7 @@
         }
 
         .featured {
-            width: 63%;
-
+            // width: 63%;
         }
         p:empty {
             display: none;
@@ -255,7 +258,7 @@
                 background: $lightgray;
             
                 img {
-                    max-height: 400px;
+                    max-height: 300px;
                     max-width: 100%;
                 }
             }
@@ -299,7 +302,7 @@
     .print-preview-container {
         &.modern {
             .paper-preview-headline {
-                font-family: 'Impact' !important;
+                font-family: Impact !important;
                 font-weight: normal !important;
             }
         }
@@ -309,7 +312,7 @@
     .print-preview-container {
         &.modern {
             .paper-preview-headline {
-                font-family: 'Impact' !important;
+                font-family: Impact !important;
                 font-weight: normal !important;
             }
         }

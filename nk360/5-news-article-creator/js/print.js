@@ -83,9 +83,9 @@ Print = (function() {
         $('.print-preview-container').addClass(theme);
         $('.paper-preview-masthead .byline').text(masthead);
         
-        $('.paper-preview-article').removeClass('featured-image');
+        //$('.paper-preview-article').removeClass('featured-image');
         $('.paper-preview-article .article-col').html('');
-        $('.paper-preview-article .featured').remove();
+        //$('.paper-preview-article .featured').remove();
         buildHeadline(headline);
 
         content = article.split('<break>');
@@ -116,7 +116,8 @@ Print = (function() {
                 html += '</figure>';
     
                 if (featured == val.id){
-                    $('.paper-preview-article').addClass('featured-image').prepend(html);
+                    //$('.paper-preview-article').addClass('featured-image').prepend(html);
+                    content.unshift(html);
                 } else {
                     content.push(html);
                 }
@@ -140,6 +141,7 @@ Print = (function() {
 
         var contentCount = 0;
         $.each(content, function(key, val){
+            /*
             if ($('.paper-preview-article').find('.featured').length > 0){
                 if (val !== '<p></p>'){
                     if (contentCount < Math.ceil((content.length - 1)/3)){
@@ -152,6 +154,7 @@ Print = (function() {
                     contentCount++;
                 }
             } else {
+            */
                 if (val !== '<p></p>'){
                     if (contentCount < Math.ceil((content.length - 1)/3)){
                         $('.article-col-1').append(val);
@@ -162,9 +165,9 @@ Print = (function() {
                     }
                     contentCount++;
                 }
-            }
+            //}
         });
-        console.log(content, contentCount);
+        //console.log(content, contentCount);
     }
 
     /**
