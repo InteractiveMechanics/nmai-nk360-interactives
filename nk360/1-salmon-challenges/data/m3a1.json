@@ -328,9 +328,9 @@
 						},
 						{
 							"options": "Storm drain runoff",
-							"result": "Correct: City storm drains carry pollutants like motor oils and trash into rivers. Lose one fish.",
-							"lose_fish": true,
-							"add_fish": false
+							"result": "Correct: City storm drains carry pollutants like motor oils and trash into rivers. Gain one fish.",
+							"lose_fish": false,
+							"add_fish": true
 						},
 						{
 							"options": "Predatory sharks",

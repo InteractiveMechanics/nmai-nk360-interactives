@@ -389,7 +389,7 @@ Cards = (function() {
      */
     var toggleFeatured = function() {
         var id = $(this).parent().parent().parent().data('id');
-        console.log(Cards.featured, id);
+        //console.log(Cards.featured, id);
 
         $('.featured').removeClass('active');
         if (parseInt(Cards.featured) == id) {
