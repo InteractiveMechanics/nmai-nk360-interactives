@@ -399,7 +399,7 @@ small,
 }
 
 .mobile-markers {
-	position:absolute;
+	position:fixed;
 	bottom:50px;
 	background: rgba(#2e3742, 0.85); 
 	padding:20px 50px 0;
@@ -493,12 +493,15 @@ small,
         width: 100%;
     }
     @media screen and ($screen-xxs) {
-        margin-top: 60px;
+        margin-top: 75px;
     }
 
     .browser-android & {
         @media screen and ($screen-xs) and ($screen-portrait) {
             margin-top: 0;
+        }
+        @media screen and ($screen-xxs) {
+            margin-top: 60px;
         }
     }
 
@@ -704,7 +707,7 @@ small,
     /* Must match Js */
     
     height: 200px;
-    z-index: 2;
+    z-index: 5;
     bottom: 40px;
     left: 0;
     font-size: 15px;
@@ -732,8 +735,8 @@ small,
     .mobile-text-container {
         height: 100%;
         display: flex;
-            justify-content: center;
-            align-content: stretch;
+        justify-content: center;
+        align-content: stretch;
 
         @media screen and ($screen-xs) {
             position: fixed;
@@ -742,21 +745,22 @@ small,
             box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
             padding: 15px;
             height: 180px;
-            z-index: 10000;
+            z-index: 999999;
             top: 150px;
             right: 30px;
         }
         @media screen and ($screen-xs) and ($screen-landscape) {
             top: 75px;
         }
-        @media screen and ($screen-xxs) {
-            top: 50px;
-            z-index: 999999999;
+        .browser-android & {
+            @media screen and ($screen-xxs) {
+                top: 50px;
+            }
         }
     }
 }
-.marker-in-text.visible {
-    z-index: 3;
+.marker-in-text.pin-visible {
+    z-index: 6;
 }
 .marker-in-text img {
     width: 50px;
@@ -768,7 +772,7 @@ small,
     cursor: pointer;
     
     //filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
-    z-index: 4;
+    //z-index: 4;
 
     @media screen and ($screen-xs) {
         width: 30px;

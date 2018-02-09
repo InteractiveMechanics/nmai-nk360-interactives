@@ -382,6 +382,7 @@ Annotator = (function() {
             appendTo: 'body',
             // If there are no more pins available
             start: function(event, ui) {
+              closeMobileMarkers();
 
               var m = $(this).parent();
               var val = getMarkerRemaining(m);
@@ -542,6 +543,7 @@ Annotator = (function() {
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 15, top: 35 },
+                delay: 500,
                 cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
@@ -575,6 +577,7 @@ Annotator = (function() {
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 10, top: 30 },
+                delay: 500,
                 cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
