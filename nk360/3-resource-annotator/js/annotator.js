@@ -539,11 +539,11 @@ Annotator = (function() {
           }
           
           if ($(window).width() > 767) {
+            if (!$('body').hasClass('browser-android')) {
               pin.draggable({
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 15, top: 35 },
-                delay: 500,
                 cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
@@ -572,12 +572,47 @@ Annotator = (function() {
                   findPinPosition(pin);
                 }
               });
+            } else {
+              pin.draggable({
+                //containment: 'window',
+                cursor: 'move',
+                cursorAt: { left: 15, top: 35 },
+                cancel: '.mobile-text-container',
+                delay: 300,
+                //appendTo: 'body',
+                start: function(event, ui) {
+                    hidePin($(this));
+                    $(this).find('img').css({
+                        'left': -10,
+                        'top': -30
+                    })
+                },
+                
+                // If not hovering droppable words, go back to the original position
+                stop: function(event, ui) {
+                  /*
+                  pin.css({
+                    'left': '',
+                    'top': '',
+                  });*/
+                  
+    
+                  $('.marker-in-text').each(function() {
+                    if($(this).is(pin)) return;
+                    hidePin($(this));
+                  });
+    
+                  showPin(pin);
+                  findPinPosition(pin);
+                }
+              });
+            }
           } else {
             pin.draggable({
                 //containment: 'window',
                 cursor: 'move',
                 cursorAt: { left: 10, top: 30 },
-                delay: 500,
+                delay: 300,
                 cancel: '.mobile-text-container',
                 //appendTo: 'body',
                 start: function(event, ui) {
