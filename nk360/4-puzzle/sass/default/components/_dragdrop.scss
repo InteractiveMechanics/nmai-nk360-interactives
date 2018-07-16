@@ -36,6 +36,10 @@
     &:after {
         content: '';
     }
+    @include screen-gtmd {
+        padding: 6px 0px;
+        height: 10vh;
+    }
 }
 
 

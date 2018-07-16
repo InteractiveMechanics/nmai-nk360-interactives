@@ -76,6 +76,10 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   font-size: 0.7rem;
   padding: 11px; }
+  @media screen and (max-width: 480px) {
+    footer {
+      font-size: 0.6rem;
+      height: 48px; } }
   footer.transparent {
     background: transparent; }
   footer img {
@@ -771,6 +775,10 @@ span[data-toggle="tooltip"] {
     border: 3px solid white; }
   .droppable-widget:after {
     content: ''; }
+  @media (min-width: 1200px) {
+    .droppable-widget {
+      padding: 6px 0px;
+      height: 10vh; } }
 
 .draggable-widget {
   transition: all 0.5s; }
