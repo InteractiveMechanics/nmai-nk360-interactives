@@ -144,6 +144,12 @@ small,
         height: 68vh;
         width: 86%;
     }
+    
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        height: 65vh;
+        width: 86%;
+    }
     @media screen and ($screen-sm) and ($screen-landscape) {
         width: 86%;
         margin-top: 0;
@@ -173,6 +179,10 @@ small,
         @media screen and ($screen-md) and ($screen-landscape) {
             height: 68vh;
         }
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            height: 60vh;
+        }
         @media screen and ($screen-sm) and ($screen-portrait) {
             height: 68vh;
             width: 100%;
@@ -186,11 +196,22 @@ small,
             width: 100%;
         }
 
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 420px) {
+            height: 50vh;
+            width: 100%;
+        }
+
         .top {
             height: 25vh;
 
             @media screen and ($screen-xs) and ($screen-portrait) {
                 height: 20vh;
+            }
+
+            // Added to address warranty issues on July 17, 2018
+            @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 420px) {
+                height: 25vh;
             }
             @media screen and ($screen-xs) and ($screen-landscape) {
                 height: 100%;
@@ -199,12 +220,23 @@ small,
                 vertical-align: top;
                 position: relative;
             }
+
+            .photo {
+                // Added to address warranty issues on July 17, 2018
+                @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 420px) {
+                    height: 25vh;
+                }
+            }
         }
         .bottom {
             padding: 20px 8% 0;
             height: 50vh;
             @media screen and ($screen-md) and ($screen-landscape) {
                 height: 43vh;
+            }
+            // Added to address warranty issues on July 17, 2018
+            @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+                height: 38vh;
             }
             @media screen and ($screen-sm) and ($screen-portrait) {
                 height: 43vh;
@@ -220,6 +252,10 @@ small,
             @media screen and ($screen-xs) and ($screen-portrait) {
                 height: 37vh;
             }
+            // Added to address warranty issues on July 17, 2018
+            @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 420px) {
+                height: 25vh;
+            }
 
             .body {
                 height: 36vh;
@@ -228,6 +264,10 @@ small,
 
                 @media screen and ($screen-md) and ($screen-landscape) {
                     height: 26vh;
+                }
+                // Added to address warranty issues on July 17, 2018
+                @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+                    height: 13vh;
                 }
                 @media screen and ($screen-sm) and ($screen-portrait) {
                     height: 30vh;
@@ -239,6 +279,10 @@ small,
                 }
                 @media screen and ($screen-xs) and ($screen-portrait) {
                     height: 18vh;
+                }
+                // Added to address warranty issues on July 17, 2018
+                @media screen and ($screen-xs) and ($screen-portrait) and (max-height: 420px) {
+                    height: 0;
                 }
             }
             .button {
@@ -285,6 +329,10 @@ small,
     @media screen and ($screen-ltlg) {
         font-size: .6rem;
     }
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        font-size: .5rem;
+    }
 }
 .pin-image {
     display: inline-block;
@@ -310,6 +358,10 @@ small,
     @media screen and ($screen-md) and ($screen-landscape) {
         height: 70vh;
     }
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        height: 60vh;
+    }
     @media screen and ($screen-sm) and ($screen-portrait) {
         height: 61vh;
     }
@@ -331,6 +383,10 @@ small,
         @media screen and ($screen-md) and ($screen-landscape) {
             max-height: 62vh;
         }
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            max-height: 53vh;
+        }
         @media screen and ($screen-xs) and ($screen-landscape) {
             max-height: none;
             margin-bottom: 200px;
@@ -344,6 +400,11 @@ small,
 .markers-container {
     padding: 25px;
     background: rgba(12, 92, 154, 0.30);
+
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        padding: 20px;
+    }
 }
 .original-text .photo {
     max-height: 350px;
@@ -359,6 +420,10 @@ small,
     @media screen and ($screen-ltlg) {
         margin-top: 20px;
     }
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        display: none !important;
+    }
 }
 .original-text-detail {
     box-shadow: rgba(0, 00, 0, 0.35) 4px 2px 10px 0;
@@ -367,11 +432,19 @@ small,
         @media screen and ($screen-ltlg) {
             font-size: 1.25rem;
         }
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            font-size: 1rem;
+        }
     }
     .outer-top {
         padding: 25px;
         background: white;
 
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            padding: 20px;
+        }
         @media screen and ($screen-xs) and ($screen-portrait) {
             height: 37vh;
         }
@@ -382,6 +455,10 @@ small,
         background: white;
         -webkit-overflow-scrolling: touch;
 
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            height: 16vh;
+        }
         @media screen and ($screen-xs) and ($screen-portrait) {
             height: 28vh;
         }
@@ -661,12 +738,18 @@ small,
 .markers-container {
     .list-inline {
         margin: 30px 0 45px;
+
         @media screen and ($screen-ltmd) {
             overflow-x: auto;
         }
         @media screen and ($screen-md) and ($screen-landscape) {
             margin: 15px 0;
         }
+        // Added to address warranty issues on July 17, 2018
+        @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+            margin: 5px 0;
+        }
+            
         .list-inline-item {
             margin-right: 7px;
             text-align: center;
@@ -906,6 +989,10 @@ small,
     padding: 10px;
     padding-top: 0;
 
+    // Added to address warranty issues on July 17, 2018
+    @media screen and ($screen-md) and ($screen-landscape) and (max-height: 650px) {
+        display: none !important;
+    }
     @media screen and ($screen-sm) {
         display: none !important;
     }
