@@ -444,6 +444,10 @@ small,
     .annotation-screen {
       height: 68vh;
       width: 86%; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .annotation-screen {
+      height: 65vh;
+      width: 86%; } }
   @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .annotation-screen {
       width: 86%;
@@ -471,6 +475,9 @@ small,
     @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
       .annotation-screen .annotation-item {
         height: 68vh; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+      .annotation-screen .annotation-item {
+        height: 60vh; } }
     @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
       .annotation-screen .annotation-item {
         height: 68vh;
@@ -483,11 +490,18 @@ small,
       .annotation-screen .annotation-item {
         height: 56vh;
         width: 100%; } }
+    @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 420px) {
+      .annotation-screen .annotation-item {
+        height: 50vh;
+        width: 100%; } }
     .annotation-screen .annotation-item .top {
       height: 25vh; }
       @media screen and (max-width: 767px) and (orientation: portrait) {
         .annotation-screen .annotation-item .top {
           height: 20vh; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 420px) {
+        .annotation-screen .annotation-item .top {
+          height: 25vh; } }
       @media screen and (max-width: 767px) and (orientation: landscape) {
         .annotation-screen .annotation-item .top {
           height: 100%;
@@ -495,12 +509,18 @@ small,
           display: inline-block;
           vertical-align: top;
           position: relative; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 420px) {
+        .annotation-screen .annotation-item .top .photo {
+          height: 25vh; } }
     .annotation-screen .annotation-item .bottom {
       padding: 20px 8% 0;
       height: 50vh; }
       @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
         .annotation-screen .annotation-item .bottom {
           height: 43vh; } }
+      @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+        .annotation-screen .annotation-item .bottom {
+          height: 38vh; } }
       @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
         .annotation-screen .annotation-item .bottom {
           height: 43vh; } }
@@ -515,6 +535,9 @@ small,
       @media screen and (max-width: 767px) and (orientation: portrait) {
         .annotation-screen .annotation-item .bottom {
           height: 37vh; } }
+      @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 420px) {
+        .annotation-screen .annotation-item .bottom {
+          height: 25vh; } }
       .annotation-screen .annotation-item .bottom .body {
         height: 36vh;
         overflow-y: auto;
@@ -522,6 +545,9 @@ small,
         @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
           .annotation-screen .annotation-item .bottom .body {
             height: 26vh; } }
+        @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+          .annotation-screen .annotation-item .bottom .body {
+            height: 13vh; } }
         @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
           .annotation-screen .annotation-item .bottom .body {
             height: 30vh; } }
@@ -533,6 +559,9 @@ small,
         @media screen and (max-width: 767px) and (orientation: portrait) {
           .annotation-screen .annotation-item .bottom .body {
             height: 18vh; } }
+        @media screen and (max-width: 767px) and (orientation: portrait) and (max-height: 420px) {
+          .annotation-screen .annotation-item .bottom .body {
+            height: 0; } }
       .annotation-screen .annotation-item .bottom .button {
         position: absolute;
         bottom: 25px;
@@ -570,6 +599,9 @@ small,
   @media screen and (max-width: 1199px) {
     .markers-remaining {
       font-size: .6rem; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .markers-remaining {
+      font-size: .5rem; } }
 
 .pin-image {
   display: inline-block;
@@ -594,6 +626,9 @@ small,
   @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
     .original-text {
       height: 70vh; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .original-text {
+      height: 60vh; } }
   @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
     .original-text {
       height: 61vh; } }
@@ -613,6 +648,9 @@ small,
     @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
       .original-text .content-height {
         max-height: 62vh; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+      .original-text .content-height {
+        max-height: 53vh; } }
     @media screen and (max-width: 767px) and (orientation: landscape) {
       .original-text .content-height {
         max-height: none;
@@ -625,6 +663,9 @@ small,
 .markers-container {
   padding: 25px;
   background: rgba(12, 92, 154, 0.3); }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .markers-container {
+      padding: 20px; } }
 
 .original-text .photo {
   max-height: 350px;
@@ -639,6 +680,9 @@ small,
   @media screen and (max-width: 1199px) {
     .print-button {
       margin-top: 20px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .print-button {
+      display: none !important; } }
 
 .original-text-detail {
   box-shadow: rgba(0, 0, 0, 0.35) 4px 2px 10px 0; }
@@ -647,9 +691,15 @@ small,
     @media screen and (max-width: 1199px) {
       .original-text-detail h3 {
         font-size: 1.25rem; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+      .original-text-detail h3 {
+        font-size: 1rem; } }
   .original-text-detail .outer-top {
     padding: 25px;
     background: white; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+      .original-text-detail .outer-top {
+        padding: 20px; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .original-text-detail .outer-top {
         height: 37vh; } }
@@ -658,6 +708,9 @@ small,
     overflow-y: auto;
     background: white;
     -webkit-overflow-scrolling: touch; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+      .original-text-detail .top {
+        height: 16vh; } }
     @media screen and (max-width: 767px) and (orientation: portrait) {
       .original-text-detail .top {
         height: 28vh; } }
@@ -882,6 +935,9 @@ small,
   @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
     .markers-container .list-inline {
       margin: 15px 0; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .markers-container .list-inline {
+      margin: 5px 0; } }
   .markers-container .list-inline .list-inline-item {
     margin-right: 7px;
     text-align: center;
@@ -1075,6 +1131,9 @@ small,
   background-size: contain;
   padding: 10px;
   padding-top: 0; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) and (max-height: 650px) {
+    .defintions-icon {
+      display: none !important; } }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .defintions-icon {
       display: none !important; } }
